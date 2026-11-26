@@ -24,10 +24,10 @@ Non servono account, connessione Internet, installazione o CDN. Il carattere usa
 
 ## Modalità
 
-- **Missione Open Day**: prologo dimostrativo in sviluppo, con i quattro protagonisti, platform orizzontale, logica, basket, pianoforte, calcio e scelta di sicurezza digitale.
-- **Campagna completa**: non ancora implementata; il menu la indica correttamente come prossimamente.
+- **Missione Open Day**: esperienza autonoma con i quattro protagonisti, platform, logica, basket, pianoforte, calcio e scelta di sicurezza digitale.
+- **Avventura completa**: campagna a cinque capitoli, con scenari digitali stilizzati, salti sopra varchi, frammenti collezionabili e sfide su file/cartelle, fogli di calcolo, verifica delle fonti e privacy.
 
-La specifica richiede demo rifinita da 7–10 minuti e campagna di almeno 30 minuti. Questa build è l’avvio di quel lavoro, non la consegna finale.
+Il progetto resta aperto e in sviluppo continuativo: il lavoro prosegue sulla build esistente, senza stop di fase. I flussi principali hanno un test automatico headless; durata effettiva, test browser cross-device e playtest con visitatori restano da verificare. Non dichiariamo completati i requisiti di 7–10 minuti per la demo e 30 minuti per la campagna finché non saranno misurati e rifiniti.
 
 ## Struttura
 
@@ -37,7 +37,8 @@ La specifica richiede demo rifinita da 7–10 minuti e campagna di almeno 30 min
 - `CONTROLLI.md` — scheda comandi e istruzioni postazione.
 - `ASSET_CREDITS.md` — provenienza e licenze.
 - `TEST_REPORT.md` — verifiche realizzate e lavoro rimanente.
+- `tests/smoke.cjs` — test headless senza dipendenze per i flussi demo/campagna (`node tests/smoke.cjs`).
 
 ## Stato GitHub
 
-Repository di destinazione: [dreamer2664/openday](https://github.com/dreamer2664/openday), branch `main`. La prima versione locale è in preparazione. Il token personale non va inserito nei file del progetto, negli URL Git, nei log o nei commit; l’eventuale credenziale resta fuori dal repository con permessi locali ristretti.
+Repository di destinazione: [dreamer2664/openday](https://github.com/dreamer2664/openday), branch `main`. La build aggiornata viene versionata in commit incrementali. Il token personale non va inserito nei file del progetto, negli URL Git, nei log o nei commit; l’eventuale credenziale resta fuori dal repository con permessi locali ristretti.

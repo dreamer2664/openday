@@ -2,7 +2,7 @@
 
 ## Stato del progetto
 
-**Build 0.1 · prototipo narrativo giocabile.** Questa fase realizza apertura, presentazione dei quattro protagonisti, sezione platform, tre micro-sfide e scelta di sicurezza digitale con risultato. Non è ancora la campagna completa da 30 minuti né la demo Open Day rifinita e temporizzata a 7–10 minuti richiesta dalla specifica. I capitoli futuri e la verifica con playtester restano lavoro da fare.
+**Progetto in sviluppo continuativo.** La build ora include sia la missione Open Day sia un percorso campagna con cinque capitoli giocabili in progressione: facciata/ingresso, corridoio digitale delle cartelle, foglio di calcolo, verifica delle fonti e regia finale. I livelli aggiuntivi hanno sfide EIPASS-style a scelta, piattaforme elevate e frammenti collezionabili; i luoghi virtuali sono dichiarati interpretazioni di gioco, non ricostruzioni certificate di spazi interni reali. Il lavoro prosegue sulla rifinitura, la durata misurata, l’audio e i test; non considerare concluso il progetto.
 
 ## Direzione creativa
 
@@ -38,15 +38,15 @@ Le animazioni del prototipo sono pose procedurali (idle/camminata alternata); le
 
 Variabili centralizzate in `game.js`: `flags` per i quattro compagni e terminale; `trust`; `energy` (tre unità); `mode`; `camera`; `player`. Ogni stazione registra il proprio esito e viene letta dal terminale che resta bloccato finché i quattro compagni non sono stati coinvolti. La scelta del quiz cambia energia/feedback e si riflette nel riepilogo. Il tiro assistito costa opportunità narrativa (nessuna penalità), aumenta fiducia; i tiri a tempo sbagliati costano un’unità energia.
 
-## Livelli futuri proposti (non ancora implementati)
+## Campagna implementata e contenuti in espansione
 
-1. **Ingresso e atrio — Il segnale fantasma:** demo Open Day, tutorial organico e prima scelta.
-2. **Corridoio delle cartelle — L’ordine giusto:** platform con file/cartelle, porte e checkpoint.
-3. **Laboratorio digitale — La fonte affidabile:** puzzle di foglio di calcolo/ricerca e verifica delle fonti, da allineare al corso EIPASS reale e a spazi verificati.
-4. **Aula della musica — La nota mancante:** enigma di sequenze/ritmo per Francesco, solo se l’ambiente è documentato o chiaramente immaginario.
-5. **Finale — Open Day in diretta:** prova di squadra, presentazione digitale riparata e finale alternativo secondo fiducia/sicurezza.
+1. **Ingresso — Il segnale fantasma:** missione demo e tutorial, con la sede centrale interpretata sulla base delle foto fornite.
+2. **Corridoio digitale delle cartelle:** piattaforme e frammenti collezionabili; quiz sulla verifica di copie e nomi dei file.
+3. **Foglio impazzito:** scenario digitale stilizzato, piattaforme e domanda sulla formula di somma in un foglio di calcolo.
+4. **Fonte nascosta:** archivio virtuale, collezionabili e scelta sulla verifica della provenienza delle informazioni.
+5. **Open Day in diretta:** missione finale di squadra e controllo di link, permessi e minimizzazione dei dati.
 
-La campagna va dimensionata con sezioni giocabili sostanziali, checkpoint, segreti e percorsi alternativi; la stima dei 30 minuti deve essere misurata con playtest, non dichiarata sulla sola carta.
+I capitoli 2–5 hanno percorsi orizzontali con varchi da saltare, piattaforme sopraelevate, otto frammenti opzionali, checkpoint dal compagno-guida, sfida e console di uscita. Durata di campagna e demo ancora da misurare con utenti: il requisito di 30 minuti non è attestato dalla build corrente. La sezione di Francesco/pianoforte è presente nel capitolo iniziale.
 
 ## Audio
 
