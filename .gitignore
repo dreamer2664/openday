@@ -1,0 +1,15 @@
+# Local secrets and editor files
+.env
+.env.*
+*.pem
+*.key
+.netrc
+github_pat.txt
+uploads/
+.DS_Store
+.vscode/
+.idea/
+node_modules/
+dist/
+build/
+*.log
