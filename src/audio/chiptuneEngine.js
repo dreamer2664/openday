@@ -346,7 +346,7 @@ const TRACKS = {
       "A2", "-", "-", "E2", "F2", "-", "-", "C3",  "C3", "-", "-", "G2", "E2", "-", "-", "R",
       "F2", "-", "-", "C3", "D3", "-", "-", "A2",  "E2", "-", "G2", "-", "C3", "-", "-", "R",
     ],
-    drums: "K...h.K...h.",
+    drums: "K...h.K...h.K...h.K...h.K...h.K...h.K...h.K...h.",
   },
 
   // 7. VITTORIA & EPILOGO A 5 VOCI — Risoluzione calda del Motivo del Casardi

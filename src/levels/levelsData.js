@@ -235,6 +235,7 @@ export function buildCampaignLevels() {
     rows: 18,
   });
   c1_2
+    .addSign(59, 15, "DANIELE [3] + [X]: PASSO DI SALSA sul varco!")
     .plat(10, 13, 5)
     .movingPlat(17, 13, 24, 13, 4, 0.9)
     .pit(16, 10)
@@ -394,6 +395,7 @@ export function buildCampaignLevels() {
     rows: 18,
   });
   c2_3
+    .addSign(67, 15, "DANIELE [3] + [X]: PASSO DI SALSA sul varco!")
     .enemy(14, 16, "spambot", 4)
     .plat(18, 13, 5)
     .plat(25, 10, 5)
@@ -507,6 +509,7 @@ export function buildCampaignLevels() {
     rows: 18,
   });
   c3_3
+    .addSign(25, 15, "DANIELE [3] + [X]: PASSO DI SALSA sul varco!")
     .archProp(6, 16, "trophy", "CENTRO SPORTIVO")
     .spring(10, 15)
     .plat(12, 10, 5)
@@ -583,6 +586,7 @@ export function buildCampaignLevels() {
     rows: 18,
   });
   c4_2
+    .addSign(38, 15, "DANIELE [3] + [X]: PASSO DI SALSA sul varco!")
     .plat(10, 13, 4)
     .harmonicBridge(15, 11, 5)
     .plat(21, 9, 5)
@@ -627,6 +631,7 @@ export function buildCampaignLevels() {
     rows: 18,
   });
   c4_3
+    .addSign(32, 15, "DANIELE [3] + [X]: PASSO DI SALSA sul varco!")
     .crackedWall(12, 13, 3)
     .pit(18, 5)
     .harmonicBridge(18, 15, 5)
@@ -667,6 +672,7 @@ export function buildCampaignLevels() {
     rows: 20,
   });
   c5_1
+    .addSign(64, 16, "DANIELE [3] + [X]: PASSO DI SALSA sul varco!")
     .dialogueTrigger(6, 18, "c5_biblioteca_intro", true)
     .archProp(9, 18, "bust")
     .plat(12, 15, 6)
@@ -770,6 +776,7 @@ export function buildCampaignLevels() {
     rows: 18,
   });
   c6_1
+    .addSign(70, 15, "DANIELE [3] + [X]: PASSO DI SALSA sul varco!")
     .archProp(7, 16, "bust")
     .plat(11, 13, 5)
     .plat(18, 10, 5)
@@ -802,6 +809,7 @@ export function buildCampaignLevels() {
     rows: 17,
   });
   c6_2
+    .addSign(38, 15, "DANIELE [3] + [X]: PASSO DI SALSA sul varco!")
     .plat(10, 12, 5)
     .tokensArc(10, 11, 4)
     .pit(17, 3)

@@ -1607,12 +1607,19 @@ export class SpecialChallengeManager {
       const fill =
         res === "ok" ? "#14532d" : res === "miss" ? "#7f1d1d" : isCur ? "#3b0f2e" : "#151f36";
       drawPixelPanel(ctx, sx, 84, stepW - 4, 34, fill, isCur ? "#ffffff" : col, "#0f172a");
-      drawPixelTextCentered(ctx, DANCE_COMBO_GLYPHS[move] || "?", sx + (stepW - 4) / 2, 90, isCur ? "#ffffff" : col, 1);
-      if (res === "ok") drawPixelText(ctx, "OK", sx + 4, 104, "#4ade80", 1);
-      if (res === "miss") drawPixelText(ctx, "X", sx + 4, 104, "#f87171", 1);
-      // Scorciatoia tasto, centrata e sempre dentro la casella (la stessa che invia il tocco)
-      const stepKeyLabel = { fwd: "SU", back: "GIU", left: "SX", right: "DX", turn: "SAL", clap: "ABI" }[move] || "";
-      drawPixelTextCentered(ctx, stepKeyLabel, sx + (stepW - 4) / 2, 104, "#94a3b8", 1);
+      // v3.1.3 — PRIMA: la casella mostrava due volte lo stesso testo
+      // (glifo "SU" sopra la scorciatoia "SU"). ORA: in alto il TASTO da
+      // premere, in basso l'esito. Il significato dei tasti è nella legenda.
+      const stepKeyLabel = { fwd: "[SU]", back: "[GIU]", left: "[SX]", right: "[DX]", turn: "[SALTA]", clap: "[ABIL]" }[move] || "";
+      drawPixelTextCentered(ctx, stepKeyLabel, sx + (stepW - 4) / 2, 90, isCur ? "#ffffff" : col, 1);
+      if (res === "ok") {
+        drawPixelTextCentered(ctx, "OK!", sx + (stepW - 4) / 2, 104, "#4ade80", 1);
+      } else if (res === "miss") {
+        drawPixelTextCentered(ctx, "ERR", sx + (stepW - 4) / 2, 104, "#f87171", 1);
+      } else if (isCur) {
+        drawPixelTextCentered(ctx, "ORA!", sx + (stepW - 4) / 2, 104, "#fde047", 1);
+      }
+
     });
 
     // Indicatore di tempo: la freccia corrente deve essere premuta prima che la barra si svuoti
