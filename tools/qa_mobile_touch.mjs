@@ -231,20 +231,19 @@ stepFrames(app, 1);
 assert(!app.activeQuiz, "Tocco finale chiude la Postazione EIPASS");
 
 // 7. Test Tocco Diretto su TUTTI e 6 i Minigiochi Arcade!
-// 7a. Pianoforte di Francesco (tasti bianchi + neri, 3 frasi progressive)
-app.minigames.start("piano", { id: "t_p", sequence: [0, 2, 4, 7] }, () => {});
-for (let guard = 0; guard < 900 && app.minigames.isActive(); guard++) {
+// 7a. Ritmo al pianoforte di Francesco: 4 corsie toccabili in fondo allo schermo
+app.minigames.start("piano", { id: "t_p", measures: 2 }, () => {});
+for (let guard = 0; guard < 3000 && app.minigames.isActive(); guard++) {
   const m = app.minigames.active;
   if (!m) break;
-  if (m.demoStep >= 0 || m.doneTimer > 0) { stepFrames(app, 1); continue; }
-  const needKey = m.sequence[m.inputIndex]?.key;
-  const idx = PIANO_CHROMATIC_KEYS.findIndex((k) => k.id === needKey);
-  if (idx < 0) { stepFrames(app, 1); continue; }
-  m.cursor = idx;
-  app.input.justPressed.add("Space");
+  if (m.doneTimer > 0) { stepFrames(app, 1); continue; }
+  const cand = m.notes
+    .filter((n) => !n.hit && Math.abs(n.y - 186) < 9)
+    .sort((a, b) => Math.abs(a.y - 186) - Math.abs(b.y - 186))[0];
+  if (cand) tapCanvas([44, 134, 224, 314][cand.lane] + 40, 224);
   stepFrames(app, 1);
 }
-assert(!app.minigames.isActive(), "Minigioco Pianoforte completabile al 100% (tasti bianchi e neri)!");
+assert(!app.minigames.isActive(), "Minigioco Ritmo al pianoforte completabile col tocco sulle 4 corsie!");
 
 // 7b. Smistatore File SSD
 app.minigames.start("filesorter", { id: "t_fs", count: 4 }, () => {});

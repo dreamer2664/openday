@@ -615,7 +615,12 @@ export class PixelRenderer {
           // v3.1 — DETTAGLI VERI DEL CORRIDOIO DEL CASARDI:
           // colonnina con fontanella (quelle di inizio Novecento), cestino,
           // e una bacheca di istituto con l'avviso dell'Open Day.
-          if (dx % 2 === 0) {
+          // ⚠️ qui NON si può usare `dx % 2`: dx = i*192 - (pxSlow % 192) + 28
+          // cambia parità ad ogni pixel di cammino e faceva lampeggiare gli
+          // arredi (fontanella/cestino si scambiavano ad ogni frame).
+          // La chiave stabile è il pilastro nel mondo: worldCol = i - floor(pxSlow/192)
+          const worldCol = i + Math.floor(pxSlow / 192);
+          if (!(worldCol % 2)) {
             // Fontanella a muro in ghisa (resta sopra il battiscopa, y 150-196)
             ctx.fillStyle = "#8f9aa8";
             ctx.fillRect(dx + 62, 154, 13, 36); // fusto
@@ -644,7 +649,9 @@ export class PixelRenderer {
           }
 
           // BACHECA DI ISTITUTO: vetro, cornice di legno e avvisi spillati
-          // (comunicazioni vere, non decorazioni: Open Day, PON, sportello)
+          // (comunicazioni vere, non decorazioni: Open Day, PON, sportello).
+          // Non su ogni campata: una ogni tre, come in un corridoio vero.
+          if (worldCol % 3 === 0) {
           ctx.fillStyle = "#5b3a24";
           ctx.fillRect(dx + 98, 118, 46, 62);
           ctx.fillStyle = "#8a5f3d";
@@ -672,6 +679,7 @@ export class PixelRenderer {
           // riflesso del vetro
           ctx.fillStyle = "rgba(255,255,255,0.28)";
           ctx.fillRect(dx + 102, 122, 8, 54);
+          }
 
           // CONO DI LUCE della plafoniera sul pavimento
           const glow = ctx.createLinearGradient(0, 150, 0, 250);
@@ -1276,36 +1284,29 @@ export class PixelRenderer {
 
     // Postazioni Minigioco
     for (const mg of world.minigames) {
-      const col =
-        mg.mgType === "basket"
-          ? "#f97316"
-          : mg.mgType === "piano"
-          ? "#38e2d8"
-          : mg.mgType === "athletics" || mg.mgType === "football"
-          ? "#f45565"
-          : mg.mgType === "dance" || mg.mgType === "netdiag"
-          ? "#f472b6"
-          : mg.mgType === "firewall"
-          ? "#a855f7"
-          : mg.mgType === "filesorter"
-          ? "#22d3ee"
-          : "#ffd147";
+      // v3.1.1 — ogni sfida ha il suo colore E la sua etichetta: prima le nuove
+      // sfide (greco, latino, storia, calcio, operazioni a tempo) cadevano tutte
+      // nel caso di default e si presentavano come "MAT".
+      const STATION_STYLE = {
+        basket: { col: "#f97316", tag: "BSK" },
+        piano: { col: "#38e2d8", tag: "KEY" },
+        athletics: { col: "#f45565", tag: "RUN" },
+        football: { col: "#f45565", tag: "RUN" },
+        dance: { col: "#f472b6", tag: "DAN" },
+        netdiag: { col: "#f472b6", tag: "DAN" },
+        firewall: { col: "#a855f7", tag: "FW!" },
+        filesorter: { col: "#22d3ee", tag: "SSD" },
+        math: { col: "#ffd147", tag: "MAT" },
+        mathsprint: { col: "#fbbf24", tag: "CALC" },
+        soccer: { col: "#4ade80", tag: "GOL" },
+        greek: { col: "#38bdf8", tag: "GRK" },
+        latin: { col: "#f472b6", tag: "LAT" },
+        history: { col: "#fde047", tag: "STO" },
+      };
+      const style = STATION_STYLE[mg.mgType] || { col: "#ffd147", tag: "MAT" };
+      const col = style.col;
       drawPixelPanel(ctx, mg.x - 3, mg.y - 10, 28, 28, "#0f172a", mg.done ? "#22c55e" : col, "#1e293b");
-      const tag =
-        mg.mgType === "basket"
-          ? "BSK"
-          : mg.mgType === "piano"
-          ? "KEY"
-          : mg.mgType === "athletics" || mg.mgType === "football"
-          ? "RUN"
-          : mg.mgType === "dance" || mg.mgType === "netdiag"
-          ? "DAN"
-          : mg.mgType === "firewall"
-          ? "FW!"
-          : mg.mgType === "filesorter"
-          ? "SSD"
-          : "MAT";
-      drawPixelText(ctx, mg.done ? "OK!" : tag, mg.x + 2, mg.y, mg.done ? "#4ade80" : col, 1);
+      drawPixelText(ctx, mg.done ? "OK!" : style.tag, mg.x + 1, mg.y, mg.done ? "#4ade80" : col, 1);
     }
 
     // Porte Sotto-Aule / Redazione Pegaso esplorabili (portale in legno con insegna luminosa!)

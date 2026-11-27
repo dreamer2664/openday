@@ -146,10 +146,15 @@ const mkInput = (over = {}) => ({
 {
   const mg = new SpecialChallengeManager(mockAudio, new GameStateManager(), { characters: null });
   mg.state.data.mode = "campaign";
-  for (const seq of [[0, 2, 4, 7], [0, 2, 4, 5, 4, 7], [0, 3, 5, 7, 4]]) {
-    mg.start("piano", { sequence: seq, subtitle: "Prova" }, () => {});
+  // v3.1.1 — il pianoforte è diventato una SFIDA DI RITMO: le note scendono
+  // sulle 4 corsie e si suonano sulla linea. Niente più sequenze da ripetere
+  // a memoria, quindi si verificano la struttura ritmica e il rispetto del config.
+  for (const cfg of [{ subtitle: "Prova" }, { measures: 5, subtitle: "Prova lunga" }]) {
+    mg.start("piano", cfg, () => {});
     const m = mg.active;
-    check(m.sequence.length === seq.length, `piano ${seq.length} note mantenute`, `${m.sequence.length}`);
+    check(m.notes.length >= 6, `ritmo: ${m.notes.length} note generate nella prima misura`);
+    check(m.notes.every((n) => n.lane >= 0 && n.lane <= 3), "ritmo: ogni nota cade in una delle 4 corsie");
+    check((cfg.measures || 3) === m.measures, `ritmo: misure come da config (${m.measures})`);
     check(!!m.subtitle, "il sottotitolo del livello è mostrato");
   }
   // nessun crash dopo l'ultimo giro di danza

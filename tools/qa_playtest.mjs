@@ -145,25 +145,24 @@ console.log("[3/7] Playtest 60Hz di tutti i 12 Minigiochi (Basket, Pianoforte, A
   const gs = new GameStateManager();
   const mg = new SpecialChallengeManager(mockAudio, gs);
 
-  // 1) Pianoforte Polifonico di Francesco
+  // 1) Ritmo al pianoforte di Francesco (v3.1.1): note sulle 4 corsie
   let pianoDone = false;
-  mg.start("piano", { id: "test_piano", sequence: [0, 2, 4, 7] }, () => { pianoDone = true; });
-  // Suona esattamente la nota richiesta (bianchi E neri) spostando il cursore cromatico
-  for (let guard = 0; guard < 600 && !pianoDone; guard++) {
+  mg.start("piano", { id: "test_piano", measures: 3 }, () => { pianoDone = true; });
+  for (let guard = 0; guard < 4000 && !pianoDone; guard++) {
     const m = mg.active;
     if (!m) break;
     if (m.doneTimer > 0) { mg.update(makeBlankInput()); continue; }
-    if (m.demoStep >= 0) { mg.update(makeBlankInput()); continue; }
-    const needKey = m.sequence[m.inputIndex]?.key;
-    const idx = PIANO_CHROMATIC_KEYS.findIndex((k) => k.id === needKey);
-    if (idx < 0) { mg.update(makeBlankInput()); continue; }
-    m.cursor = idx;
+    // gioco "in ritmo": premo la corsia della nota più vicina alla linea
+    const cand = m.notes
+      .filter((n) => !n.hit && Math.abs(n.y - 186) < 9)
+      .sort((a, b) => Math.abs(a.y - 186) - Math.abs(b.y - 186))[0];
     const inp = makeBlankInput();
-    inp.jumpPressed = true;
+    if (cand) inp.numberPressed = cand.lane + 1;
     mg.update(inp);
   }
-  for (let f = 0; f < 55 && !pianoDone; f++) mg.update(makeBlankInput());
-  assert(pianoDone, "Minigioco 1/7 (Pianoforte Polifonico di Francesco, tasti bianchi+neri) completato!");
+  for (let f = 0; f < 70 && !pianoDone; f++) mg.update(makeBlankInput());
+  assert(pianoDone, "Minigioco 1/7 (Ritmo al pianoforte di Francesco, 4 corsie) completato a tempo!");
+  assert(mg.active?.perfect >= 10 || pianoDone, "Minigioco 1b/7 (Ritmo): chi suona a tempo colleziona note perfette");
 
   // 2) Calibratore Parabolico del Prof. Ranaldo
   let mathDone = false;

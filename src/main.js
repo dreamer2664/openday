@@ -129,31 +129,12 @@ export class CasardiGameApp {
         if (this.minigames.isActive()) {
           const m = this.minigames.active;
           if (m.type === "piano") {
-            // Zona RIASCOLTA — identica al rettangolo disegnato (330,41,128,20)
-            if (my >= 41 && my <= 61 && mx >= 330) {
-              this.input.justPressed.add("KeyR");
-            } else if (m.demoStep < 0 && my >= 112 && my <= 210) {
-              // 1) Tasti NERI per primi: sono sopra i bianchi e devono essere toccabili
-              let hitBlack = false;
-              for (const k of m.chromaticKeys || []) {
-                if (!k.isBlack) continue;
-                const kx = 44 + k.whiteSlot * 48;
-                if (mx >= kx && mx <= kx + 28) {
-                  const code = `Key${k.shortcut}`;
-                  this.input.justPressed.add(code);
-                  hitBlack = true;
-                  break;
-                }
-              }
-              // 2) Tasti bianchi (slot 0..7)
-              if (!hitBlack) {
-                for (let k = 0; k < 8; k++) {
-                  const kx = 44 + k * 48;
-                  if (mx >= kx && mx <= kx + 45) {
-                    this.input.justPressed.add(`Digit${k + 1}`);
-                    break;
-                  }
-                }
+            // Ritmo di Francesco: quattro corsie in fondo allo schermo (y 204..244)
+            const lanes = [44, 134, 224, 314];
+            for (let i = 0; i < lanes.length; i++) {
+              if (mx >= lanes[i] && mx <= lanes[i] + 88 && my >= 190 && my <= 246) {
+                this.input.justPressed.add(`Digit${i + 1}`);
+                break;
               }
             }
           } else if (m.type === "filesorter") {

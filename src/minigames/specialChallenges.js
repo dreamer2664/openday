@@ -279,50 +279,38 @@ export class SpecialChallengeManager {
         msg: "SU/GIU: Angolo | Tieni SPAZIO/SALTA (o tocca l'arco) per dosare e tirare",
       };
     } else if (normalizedType === "piano") {
-      // Costruisce i livelli progressivi (compatibile anche con config.sequence numerica)
-      let tiers;
-      if (Array.isArray(config.tiers) && config.tiers.length > 0) {
-        tiers = config.tiers;
-      } else if (Array.isArray(config.sequence) && config.sequence.length > 0) {
-        // QUALSIASI lunghezza (4, 5 o 6 note): la sequenza del livello viene suonata davvero.
-        const mapped = config.sequence.map((idx, i, arr) => ({
-          key: PIANO_SCALE[Math.max(0, Math.min(PIANO_SCALE.length - 1, idx))]?.note || "C4",
-          beats: i === arr.length - 1 ? 2 : 1,
-        }));
-        tiers = [
-          {
-            name: config.subtitle
-              ? "Frase del livello"
-              : `Frase 1 — ${mapped.length} note`,
-            notes: mapped,
-          },
-        ];
-        // Una seconda frase solo se il livello non ne specifica una propria
-        if (mapped.length <= 4) tiers.push(DEFAULT_PIANO_TIERS[1]);
-      } else {
-        tiers = DEFAULT_PIANO_TIERS;
-      }
-
+      // SFIDA DI RITMO: 4 corsie (DO MI SOL DO+), 3 misure sempre più veloci.
+      const measures = config.measures || 3;
       this.active = {
         type: "piano",
         id: config.id || "mg_piano",
-        title: config.title || "FRANCESCO — TASTIERA E RISONANZA",
+        title: config.title || "FRANCESCO — SEGUI IL RITMO",
         subtitle: config.subtitle || "",
-        tiers,
-        tierIdx: 0,
-        sequence: tiers[0].notes,
-        inputIndex: 0,
-        cursor: 0, // indice su PIANO_CHROMATIC_KEYS (0..12)
-        chromaticKeys: PIANO_CHROMATIC_KEYS, // usata dal tocco per i tasti neri
-        demoStep: -1,
-        demoTimer: 0,
+        measures,
+        measureFrames: 200,
+        measureIdx: 0,
+        beatTimer: 200,
+        noteSpeed: 0.6,
+        notes: [],
+        cursor: 0,
+        pressed: [0, 0, 0, 0],
+        hitFlash: [0, 0, 0, 0],
+        perfect: 0,
+        good: 0,
+        miss: 0,
+        notesTotal: 0,
+        streak: 0,
         litKeyId: null,
-        litTimer: 0,
-        mistakes: 0,
+        flashTimer: 0,
+        flashColor: null,
         doneTimer: 0,
-        msg: "Ascolta la frase musicale: tra un istante tocca a te",
+        msg: "Le note scendono: colpisci quando toccano la linea (1-4 o frecce)!",
       };
-      this.triggerPianoDemo();
+      this.spawnPianoMeasure(this.active);
+      // totale note previste, per il verdetto finale
+      let tot = 0;
+      for (let i = 0; i < measures; i++) tot += 6 + i * 2;
+      this.active.notesTotal = tot;
     } else if (normalizedType === "athletics") {
       const distance = config.hard ? 135 : 110;
       const hurdles = config.hard
@@ -665,79 +653,118 @@ export class SpecialChallengeManager {
   }
 
   updatePiano(m, input) {
-    if (m.litTimer > 0) m.litTimer--;
+    if (m.flashTimer > 0) m.flashTimer--;
     if (m.doneTimer > 0) {
       m.doneTimer--;
       if (m.doneTimer === 0) {
         this.state.modifyTrust("francesco", 12);
-        this.state.pushConsequence("Sequenza al pianoforte completata con Francesco", "#38e2d8");
-        this.finish(m.mistakes <= 1);
+        this.state.data.eipassScore = Math.min(100, this.state.data.eipassScore + 4);
+        this.state.pushConsequence(`Ritmo al pianoforte: ${m.perfect} perfette con Francesco`, "#c084fc");
+        this.finish(m.perfect + m.good >= m.notesTotal * 0.6);
       }
       return;
     }
 
-    // Fase 1: Ascolta la dimostrazione con ritmo reale (semiminime e minime)
-    if (m.demoStep >= 0) {
-      m.demoTimer--;
-      if (m.demoTimer <= 0) {
-        if (m.demoStep < m.sequence.length) {
-          const stepNote = m.sequence[m.demoStep];
-          m.litKeyId = stepNote.key;
-          m.litTimer = stepNote.beats > 1 ? 26 : 16;
-          this.audio.playPianoNote(stepNote.key, 0.34 * stepNote.beats);
-          m.demoStep++;
-          m.demoTimer = stepNote.beats > 1 ? 30 : 19;
+    // 1) Le note scendono
+    m.beatTimer -= m.noteSpeed;
+    for (const nm of m.notes) {
+      if (!nm.hit) nm.y += m.noteSpeed;
+    }
+    // 2) Quale corsia viene premuta adesso?
+    let lanePressed = -1;
+    if (input.numberPressed >= 1 && input.numberPressed <= 4) lanePressed = input.numberPressed - 1;
+    if (input.leftPressed) lanePressed = 0;
+    if (input.upPressed) lanePressed = 1;
+    if (input.downPressed) lanePressed = 2;
+    if (input.rightPressed) lanePressed = 3;
+    if (input.jumpPressed || input.confirmPressed || input.specialPressed) lanePressed = m.cursor;
+    if (input.left) m.cursor = 0;
+    if (input.up) m.cursor = 1;
+    if (input.down) m.cursor = 2;
+    if (input.right) m.cursor = 3;
+
+    if (lanePressed >= 0) {
+      m.pressed[lanePressed] = 8;
+      m.litKeyId = PIANO_SCALE[lanePressed].note;
+      this.audio.playPianoNote(PIANO_SCALE[lanePressed].note, 0.22);
+      // cerco la nota più vicina alla linea in quella corsia
+      let best = null;
+      for (const nm of m.notes) {
+        if (nm.hit || nm.lane !== lanePressed) continue;
+        const d = Math.abs(nm.y - 186);
+        if (!best || d < Math.abs(best.y - 186)) best = nm;
+      }
+      if (best && Math.abs(best.y - 186) <= 22) {
+        best.hit = true;
+        m.hitFlash[lanePressed] = 6;
+        if (Math.abs(best.y - 186) <= 9) {
+          m.perfect++;
+          m.streak++;
+          this.audio.playSfx("correct");
+          m.msg = `PERFETTA! ${PIANO_SCALE[lanePressed].solfege}${m.streak >= 3 ? " • serie " + m.streak : ""}`;
         } else {
-          m.demoStep = -1;
-          m.msg = "TOCCA A TE: suona i tasti (bianchi 1-8, neri T Y U I O)";
+          m.good++;
+          m.streak = 0;
+          this.audio.playSfx("blip", 420);
+          m.msg = `BUONA: ${PIANO_SCALE[lanePressed].solfege}, si può fare di meglio.`;
         }
-      }
-      return;
-    }
-
-    if (input.replayPressed) {
-      this.triggerPianoDemo();
-      return;
-    }
-    if (input.leftPressed) {
-      m.cursor = (m.cursor + PIANO_CHROMATIC_KEYS.length - 1) % PIANO_CHROMATIC_KEYS.length;
-      this.audio.playSfx("blip", 350);
-    }
-    if (input.rightPressed) {
-      m.cursor = (m.cursor + 1) % PIANO_CHROMATIC_KEYS.length;
-      this.audio.playSfx("blip", 390);
-    }
-
-    // Tasti rapidi delle note nere (T Y U I O): prima dichiarati nell'interfaccia ma non gestiti.
-    // Niente conflitti: WASD muove, E interagisce, Q cambia eroe, R riascolta.
-    const BLACK_SHORTCUT_CODES = { KeyT: "T", KeyY: "Y", KeyU: "U", KeyI: "I", KeyO: "O" };
-    const pressedCodes = input.justPressed || new Set();
-    for (const [code, label] of Object.entries(BLACK_SHORTCUT_CODES)) {
-      if (pressedCodes.has(code)) {
-        const blackKey = PIANO_CHROMATIC_KEYS.find((k) => k.isBlack && k.shortcut === label);
-        if (blackKey) {
-          m.cursor = PIANO_CHROMATIC_KEYS.findIndex((k) => k.id === blackKey.id);
-          this.playChromaticKey(m, blackKey);
-          return;
-        }
+      } else {
+        m.miss++;
+        m.streak = 0;
+        m.flashColor = "#7f1d1d";
+        m.flashTimer = 8;
+        this.audio.playSfx("wrong");
+        m.msg = "A vuoto! Guarda le note che scendono e colpisci sulla linea.";
       }
     }
 
-    // Tasti rapidi 1-8 per i tasti bianchi
-    if (input.numberPressed >= 1 && input.numberPressed <= 8) {
-      const whiteNote = PIANO_SCALE[input.numberPressed - 1]?.note;
-      const idx = PIANO_CHROMATIC_KEYS.findIndex((k) => k.id === whiteNote);
-      if (idx >= 0) {
-        m.cursor = idx;
-        this.playChromaticKey(m, PIANO_CHROMATIC_KEYS[idx]);
+    // 3) Note mancate (arrivate in fondo senza essere suonate)
+    for (const nm of m.notes) {
+      if (!nm.hit && nm.y > 214) {
+        nm.hit = true;
+        nm.missed = true;
+        m.miss++;
+        m.streak = 0;
+      }
+    }
+
+    // 4) Fine misura: nuova battuta, più veloce, con qualche nota in più
+    if (m.beatTimer <= 0) {
+      m.measureIdx++;
+      if (m.measureIdx >= m.measures) {
+        m.msg = `ESIBIZIONE FINITA! ${m.perfect} perfette, ${m.good} buone, ${m.miss} sbagliate.`;
+        m.doneTimer = 40;
+        this.audio.playSfx("pegaso");
         return;
       }
-    }
-
-    if (input.jumpPressed || input.confirmPressed || input.specialPressed) {
-      this.playChromaticKey(m, PIANO_CHROMATIC_KEYS[m.cursor]);
+      this.spawnPianoMeasure(m);
+      m.msg = `MISURA ${m.measureIdx + 1}: più veloce! Suona le note sulla linea.`;
     }
   }
+
+  /** Genera una battuta di note sulle 4 corsie (DO MI SOL DO+). */
+  spawnPianoMeasure(m) {
+    const mFrames = Math.max(120, 200 - m.measureIdx * 26); // 3,3s → 2,2s
+    const travel = 186 - 66; // dalla cima della pista alla linea d'azione
+    m.measureFrames = mFrames;
+    m.noteSpeed = travel / mFrames;
+    const howMany = 6 + m.measureIdx * 2;
+    m.notes = [];
+    for (let i = 0; i < howMany; i++) {
+      // ogni nota raggiunge la linea al suo "battito"
+      const arriveIn = Math.round(((i + 1) * mFrames) / (howMany + 1));
+      m.notes.push({
+        lane: Math.floor(Math.random() * 4),
+        y: 186 - m.noteSpeed * arriveIn,
+        hit: false,
+        missed: false,
+        big: i % 4 === 3,
+      });
+    }
+    m.beatTimer = mFrames;
+  }
+
+
 
   // ===========================================================================
   // 3. PISTA D'ATLETICA DI RUGGERO — 110M OSTACOLI, RITMO DI CORSA & CRONOMETRO
@@ -1245,109 +1272,76 @@ export class SpecialChallengeManager {
   }
 
   renderPiano(ctx, m) {
-    const isListening = m.demoStep >= 0;
-    // Banner chiarissimo FASE 1 ASCOLTA vs FASE 2 SUONA + Pulsante singolo Riascolta
-    drawPixelPanel(
-      ctx,
-      26,
-      41,
-      292,
-      20,
-      isListening ? "#78350f" : "#064e3b",
-      isListening ? "#fbbf24" : "#34d399",
-      "#0f172a"
-    );
-    drawPixelText(
-      ctx,
-      isListening
-        ? `FASE 1: ASCOLTA  •  Frase ${m.tierIdx + 1}/${m.tiers.length}`
-        : `FASE 2: SUONA TU •  Frase ${m.tierIdx + 1}/${m.tiers.length}`,
-      34,
-      47,
-      "#ffffff",
-      1
-    );
+    // ── SFIDA DI RITMO (v3.1.1) ────────────────────────────────────────────
+    // Le note scendono su 4 corsie e vanno suonate quando toccano la linea:
+    // la melodia la costruisci tu, non c'è più niente da copiare a memoria.
+    const LANE_COLORS = ["#22d3ee", "#a3e635", "#fbbf24", "#f472b6"];
+    const LANE_X = [44, 134, 224, 314];
+    const LANE_W = 88;
+    const HIT_Y = 186;
 
-    // Sottotitolo della prova (prima veniva scartato: ora è leggibile)
-    if (m.subtitle) {
-      drawPixelText(ctx, fitPixelText(m.subtitle, 292 - 8, 1, 1)[0], 34, 52, "#fde68a", 1);
+    drawPixelPanel(ctx, 26, 41, SCREEN_W - 52, 20, "#3b1d4d", "#c084fc", "#0f172a");
+    drawPixelText(ctx, `COLPO SULLA LINEA: ${m.notes.filter((n) => !n.hit).length} NOTE IN ARRIVO`, 34, 47, "#ffffff", 1);
+    drawPixelText(ctx, `MISURA ${m.measureIdx + 1}/${m.measures}`, 348, 47, "#fde047", 1);
+    drawPixelText(ctx, `PERFETTE: ${m.perfect}  BUONE: ${m.good}  SBAGLIATE: ${m.miss}`, 34, 66, "#c4b5fd", 1);
+
+    // Cronometro della misura
+    const beatPct = Math.max(0, Math.min(1, 1 - m.beatTimer / m.measureFrames));
+    ctx.fillStyle = "#2e1065";
+    ctx.fillRect(34, 78, 300, 5);
+    ctx.fillStyle = beatPct > 0.25 ? "#a3e635" : "#f87171";
+    ctx.fillRect(34, 78, Math.round(300 * beatPct), 5);
+    drawPixelText(ctx, `MISURA ${(m.beatTimer / 60).toFixed(1)}s`, 342, 76, "#cbd5e1", 1);
+
+    // Pista: corsie colorate + linea d'arrivo pulsante
+    for (let lane = 0; lane < 4; lane++) {
+      const lx = LANE_X[lane];
+      ctx.fillStyle = "rgba(148,163,184,0.10)";
+      ctx.fillRect(lx, 86, LANE_W, HIT_Y - 86);
+      ctx.fillStyle = LANE_COLORS[lane];
+      ctx.fillRect(lx, 86, 2, HIT_Y - 86);
+      ctx.fillRect(lx + LANE_W - 2, 86, 2, HIT_Y - 86);
+      // cerchio d'azione
+      ctx.strokeStyle = m.hitFlash[lane] > 0 ? "#ffffff" : "rgba(226,232,240,0.55)";
+      ctx.strokeRect(lx + 6, HIT_Y - 11, LANE_W - 12, 22);
+      if (m.hitFlash[lane] > 0) m.hitFlash[lane]--;
+    }
+    ctx.fillStyle = "#e2e8f0";
+    for (let x = 34; x < SCREEN_W - 34; x += 8) ctx.fillRect(x, HIT_Y + 12, 4, 2);
+
+    // Note in discesa
+    for (const nm of m.notes) {
+      if (nm.hit) continue;
+      const lx = LANE_X[nm.lane] + 6;
+      const w = LANE_W - 12;
+      const h = nm.big ? 18 : 13;
+      ctx.fillStyle = "#090d1a";
+      ctx.fillRect(lx - 1, nm.y - h - 1, w + 2, h + 2);
+      ctx.fillStyle = LANE_COLORS[nm.lane];
+      ctx.fillRect(lx, nm.y - h, w, h);
+      ctx.fillStyle = "rgba(255,255,255,0.55)";
+      ctx.fillRect(lx, nm.y - h, w, 2);
+      drawPixelText(ctx, PIANO_SCALE[nm.lane].solfege, lx + 4, nm.y - h + 4, "#0f172a", 1);
     }
 
-    // Pulsante RIASCOLTA in alto a destra: nessun tasto lo copre, zona tocco identica
-    drawPixelPanel(ctx, 330, 41, 128, 20, "#1e293b", "#38bdf8", "#0f172a");
-    drawPixelTextCentered(ctx, "RIASCOLTA [R]", 394, 47, "#bae6fd", 1);
-
-
-    // Spartito / Barra note con indicazione visiva della DURATA (nota corta vs nota lunga 2 battiti!)
-    let sx = 30;
-    m.sequence.forEach((stepNote, i) => {
-      const kInfo = PIANO_CHROMATIC_KEYS.find((k) => k.id === stepNote.key) || PIANO_CHROMATIC_KEYS[0];
-      const w = stepNote.beats > 1 ? 68 : 48;
-      const done = i < m.inputIndex;
-      const activeDemo = m.demoStep - 1 === i && m.demoStep >= 0;
-      const isNext = !isListening && i === m.inputIndex;
-
-      ctx.fillStyle = done ? "#15803d" : activeDemo ? "#ca8a04" : isNext ? "#1e3a8a" : "#1e293b";
-      ctx.fillRect(sx, 67, w, 34);
-      ctx.strokeStyle = isNext ? "#ffd147" : kInfo.color;
-      ctx.strokeRect(sx, 67, w, 34);
-      drawPixelText(ctx, kInfo.solfege, sx + 6, 73, "#ffffff", 1);
-      drawPixelText(ctx, stepNote.beats > 1 ? "LUNGA 2x" : "1 TEMPO", sx + 6, 87, "#fde047", 1);
-      sx += w + 6;
-    });
-
-    // Francesco in ascolto accanto allo spartito
+    // Tastiera a 4 corsie in fondo, con il tasto che si illumina
+    for (let lane = 0; lane < 4; lane++) {
+      const lx = LANE_X[lane];
+      const lit = m.pressed[lane] > 0;
+      if (lit) m.pressed[lane]--;
+      ctx.fillStyle = lit ? LANE_COLORS[lane] : "#f8fafc";
+      ctx.fillRect(lx, HIT_Y + 18, LANE_W, 22);
+      ctx.fillStyle = "#090d1a";
+      ctx.fillRect(lx, HIT_Y + 36, LANE_W, 4);
+      drawPixelTextCentered(ctx, `${lane + 1}`, lx + LANE_W / 2, HIT_Y + 24, lit ? "#0f172a" : "#475569", 1);
+    }
+    // Francesco in primo piano che accompagna
     if (this.sprites && this.sprites.characters) {
-      const pose = m.litTimer > 0 ? 10 : 0;
-      ctx.drawImage(this.sprites.characters, pose * 32, 2 * 36, 32, 36, 418, 66, 32, 36);
+      const pose = m.pressed[0] + m.pressed[1] + m.pressed[2] + m.pressed[3] > 0 ? 10 : 0;
+      ctx.drawImage(this.sprites.characters, pose * 32, 2 * 36, 32, 36, 418, 148, 32, 36);
     }
-
-    // Tastiera realistica: prima gli 8 tasti bianchi, poi i 5 tasti neri sovrapposti e cliccabili!
-    const baseLeft = 44;
-    const whiteW = 48;
-    const whiteY = 110;
-    const whiteH = 108;
-
-    PIANO_CHROMATIC_KEYS.filter((k) => !k.isBlack).forEach((k) => {
-      const kx = baseLeft + k.whiteSlot * whiteW;
-      const isLit = m.litKeyId === k.id && m.litTimer > 0;
-      const isCur = PIANO_CHROMATIC_KEYS[m.cursor]?.id === k.id;
-      const dy = isLit ? 3 : 0;
-
-      ctx.fillStyle = isLit ? k.color : "#f8fafc";
-      ctx.fillRect(kx, whiteY + dy, whiteW - 3, whiteH - dy);
-      ctx.strokeStyle = isCur ? "#ffd147" : "#334155";
-      ctx.lineWidth = isCur ? 2 : 1;
-      ctx.strokeRect(kx, whiteY + dy, whiteW - 3, whiteH - dy);
-
-      drawPixelText(ctx, k.solfege, kx + 10, whiteY + 80, "#090d1a", 1, null);
-      ctx.fillStyle = k.color;
-      ctx.fillRect(kx + 6, whiteY + 92, whiteW - 15, 11);
-      drawPixelText(ctx, k.shortcut, kx + 19, whiteY + 94, "#090d1a", 1, null);
-    });
-
-    PIANO_CHROMATIC_KEYS.filter((k) => k.isBlack).forEach((k) => {
-      const kx = Math.round(baseLeft + k.whiteSlot * whiteW);
-      const bw = 28;
-      const bh = 62;
-      const isLit = m.litKeyId === k.id && m.litTimer > 0;
-      const isCur = PIANO_CHROMATIC_KEYS[m.cursor]?.id === k.id;
-      const dy = isLit ? 2 : 0;
-
-      ctx.fillStyle = isLit ? k.color : "#0f172a";
-      ctx.fillRect(kx, whiteY + dy, bw, bh - dy);
-      ctx.strokeStyle = isCur ? "#ffd147" : "#64748b";
-      ctx.lineWidth = isCur ? 2 : 1;
-      ctx.strokeRect(kx, whiteY + dy, bw, bh - dy);
-      drawPixelText(ctx, k.solfege, kx + 2, whiteY + 40, "#fde047", 1, null);
-      // Scorciatoia del tasto nero: prima non era né scritta né gestita
-      // Fondo del tasto NERO (non colorato): la lettera si legge sempre
-      ctx.fillStyle = isLit ? k.color : "#090d1a";
-      ctx.fillRect(kx + 4, whiteY + 50, bw - 8, 10);
-      drawPixelText(ctx, k.shortcut, kx + 11, whiteY + 51, isLit ? "#090d1a" : k.color, 1, null);
-    });
-    ctx.lineWidth = 1;
   }
+
 
   renderAthletics(ctx, m) {
     // Cielo & Cortile del Casardi sullo sfondo

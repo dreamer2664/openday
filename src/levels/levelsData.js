@@ -42,17 +42,15 @@ export function buildOpenDayLevels() {
     .terminal(60, 15, "qz_phishing_gate", "gate_od1_term")
     .gate(65, 11, 4, "gate_od1_term")
     .addSign(68, 14, "PROF. RANALDO [1] + [X]: Piattaforme paraboliche!")
-    // v3.1 — OPERAZIONI A TEMPO del Prof. Ranaldo: sfida libera, con cancello
-    // opzionale (si apre con la Torre di Hanoi o con [R] se ci si blocca).
-    .minigameStation(71, 15, "mathsprint", { id: "od_mg_math", title: "PROF. RANALDO - OPERAZIONI A TEMPO!" }, "gate_od1_math")
-    .gate(73, 11, 4, "gate_od1_math")
-    // v3.1 — SFIDE CULTURALI LIBERE: greco e storia sui portici d'ingresso
-    .minigameStation(76, 15, "greek", { id: "od_mg_greek", title: "GRECO - RICONOSCI IL VOCABOLO!" })
-    .minigameStation(80, 15, "history", { id: "od_mg_history", title: "STORIA - IL CASARDI E BARLETTA" })
-    .pit(70, 5)
     .tokensArc(70, 11, 3)
-    .enemy(78, 15, "slime", 3)
-    .exitDoor(83, 15, "ENTRA NEI CORRIDOI");
+    // v3.1.1 — le sfide non stanno più AMMASSATE né sopra le fosse:
+    // greco all'ingresso, storia a metà viale, operazioni a tempo dopo la fossa
+    // (il cancello si apre con la Torre di Hanoi oppure con [R] se ci si blocca).
+    .minigameStation(12, 15, "greek", { id: "od_mg_greek", title: "GRECO - RICONOSCI IL VOCABOLO!" })
+    .pit(70, 5)
+    .minigameStation(78, 15, "mathsprint", { id: "od_mg_math", title: "PROF. RANALDO - OPERAZIONI A TEMPO!" })
+    .minigameStation(45, 15, "history", { id: "od_mg_history", title: "STORIA - IL CASARDI E BARLETTA" })
+    .exitDoor(86, 15, "ENTRA NEI CORRIDOI");
   rooms.push(od1);
 
   // ZONA OD-2: Corridoio Giallo-Bianco, Aula 7 Esplorabile & Incontro con Ruggero!
@@ -126,12 +124,12 @@ export function buildOpenDayLevels() {
     .gate(52, 11, 4, "gate_od3_term")
     .banter(54, 15, "francesco", "Sentite il riverbero? Accordiamo la Master Keyboard!")
     .dialogueTrigger(57, 15, "od_meet_daniele", true, "daniele")
-    .pit(56, 3)
-    .spring(60, 14)
-    .plat(62, 9, 6)
-    // v3.1 — LATINO e CALCIO come sfide libere del piano terra
-    .minigameStation(58, 15, "latin", { id: "od_mg_latin", title: "LATINO - FORME E CASI!" })
-    .minigameStation(63, 15, "soccer", { id: "od_mg_soccer", title: "CALCIO - RIGORI AL CORTILE!" })
+    .pit(60, 3)
+    .spring(64, 14)
+    .plat(66, 9, 6)
+    // v3.1.1 — latino lontano dalla fossa, calcio in zona libera prima della festa
+    .minigameStation(30, 15, "latin", { id: "od_mg_latin", title: "LATINO - FORME E CASI!" })
+    .minigameStation(45, 15, "soccer", { id: "od_mg_soccer", title: "CALCIO - RIGORI AL CORTILE!" })
     .minigameStation(66, 15, "dance", { id: "od_mg_dance", title: "DANIELE - SALSA CUBANA SOTTO I PORTICI!" }, "gate_od3_net")
     .gate(71, 11, 4, "gate_od3_net")
     .addSign(70, 14, "Premi [E] sulla Master Keyboard: Enigma di Francesco!")

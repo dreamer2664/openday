@@ -148,7 +148,7 @@ export const CHARACTERS = {
 // ORDINE UFFICIALE DEI 5 SLOT (identico a: tasti 1-5, pillole mobile, striscia eroi e pausa)
 // 1 Carlo · 2 Ranaldo · 3 Daniele · 4 Ruggero · 5 Francesco
 /** Versione del gioco: UNICA fonte di verità, mostrata nel marquee del titolo (§2.4). */
-export const GAME_VERSION = "v3.1.0";
+export const GAME_VERSION = "v3.1.1";
 export const CHAR_ORDER = ["carlo", "ranaldo", "daniele", "ruggero", "francesco"];
 /**
  * Ordine BASE delle pillole eroe e dei tasti 1-5 (§1.10 della review).
