@@ -10,6 +10,10 @@ QUESTION_DEPTH=json.loads((ROOT/'data/question-depth.json').read_text())
 BRANCH_RESPONSES=json.loads((ROOT/'data/branch-responses.json').read_text())
 OUT=ROOT/'data/quizzes'; OUT.mkdir(parents=True,exist_ok=True)
 
+def js_literal(value):
+    serialized=json.dumps(value,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
+    return serialized.replace('\u2028','\\u2028').replace('\u2029','\\u2029')
+
 PHOTO_ITEMS=[
  ('real-01','Gatto domestico a pelo lungo','animali'),('ai-01','Cuffie wireless su fondo chiaro','oggetti'),
  ('real-02','Fiori primaverili davanti a un edificio','natura'),('ai-02','Smartphone color bronzo fotografato dall’alto','oggetti'),
@@ -145,9 +149,12 @@ def photo_quiz():
     for i,(rid,name,summary,nudge) in enumerate(PHOTO_RESULTS):
         results.append({'id':rid,'title':name,'summary':summary,'strength':'Il dato mostra solo quante risposte coincidono con l’etichetta verificata nel campione.','tension':'La confidenza è una stima personale; non è una misura clinica o una prova di competenza universale.','nudge':nudge,'sources':['Benchmark WasItAIGenerated, immagini originali selezionate; provenienza individuale nel manifest.'],'sourceLinks':source_links(slug,{'id':rid}),'match':[],'image':visual(slug,'result',rid,f"Illustrazione originale del risultato: {name}"),'exactCorrect':i})
     (ROOT/'data/human-ai-answer-key.json').write_text(json.dumps(key,ensure_ascii=False,indent=2)+'\n')
+    (ROOT/'data/human-ai-answer-key.js').write_text('window.CASARDI_HUMAN_AI_KEY='+js_literal(key)+';\n')
     return {'id':slug,'title':title,'intro':'Allena lo sguardo senza pretendere che un singolo indizio basti. Prima di iniziare: il campione include immagini sintetiche e fotografie; la provenienza di ciascuna viene svelata solo dopo la tua risposta.','category':'01 · SFIDA VISIVA','binary':True,'dimensions':['accuratezza','calibrazione','miglioramento'],'questions':questions,'results':results,'startQuestion':'Q01','sessionLength':8,'minimumResults':8,'branchQuestions':['Q01','Q06','Q11'],'answerKey':'../data/human-ai-answer-key.json'}
 
 for idx,slug in enumerate(SLUGS,1):
     data=photo_quiz() if slug=='umano-o-ai' else ordinary_quiz(slug,idx)
     (OUT/f'{slug}.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+    bundle='window.CASARDI_QUIZZES=window.CASARDI_QUIZZES||{};window.CASARDI_QUIZZES['+js_literal(slug)+']='+js_literal(data)+';\n'
+    (OUT/f'{slug}.js').write_text(bundle)
     print(slug,len(data['questions']),len(data['results']))

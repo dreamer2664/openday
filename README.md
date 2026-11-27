@@ -1,6 +1,6 @@
 # Casardi Arcade + 8-bit — progetti Open Day
 
-Un catalogo arcade con dieci quiz italiani originali e l’avventura platform preesistente del Liceo Casardi. Interfaccia, dati e immagini di gioco sono locali; non ci sono account, analitiche o risposte salvate. Per usare i quiz serve JavaScript e un server statico locale, perché i dataset vengono caricati come JSON.
+Un catalogo arcade con dieci quiz italiani originali e l’avventura platform preesistente del Liceo Casardi. Interfaccia, dati e immagini di gioco sono locali; non ci sono account, analitiche o risposte salvate. I quiz usano bundle JavaScript locali (nessuna chiamata fetch o API): dopo aver estratto lo ZIP puoi aprire `index.html`; se il browser limita i file locali, avvia il server statico indicato sotto.
 
 ## Avvio
 
@@ -18,10 +18,11 @@ I quiz hanno una sessione standard di otto domande, percorsi ramificati, riprova
 
 - `index.html`, `styles/arcade.css` — home arcade responsive.
 - `quizzes/*.html` — dieci pagine HTML distinte e giocabili.
-- `data/quizzes/*.json` — archivi ramificati a 16 nodi, sei opzioni e trade-off per ogni domanda narrativa, punteggi e risultati.
+- `data/quizzes/*.json` — sorgenti leggibili dei quiz, grafi, sei opzioni, trade-off, feedback e risultati.
+- `data/quizzes/*.js` — bundle locali caricati dalle pagine quiz senza `fetch`, compatibili con l'apertura da cartella estratta.
 - `data/question-depth.json` — vincoli e conseguenze contestuali per ogni domanda narrativa.
 - `data/branch-responses.json` — sei risposte scritte appositamente per ciascuno dei tre snodi di ogni quiz, così il testo cambia con il dilemma e non solo con lo stile.
-- `data/human-ai-answer-key.json` — chiavi e fonti delle immagini fotografiche, caricate dall’interfaccia soltanto dopo la risposta.
+- `data/human-ai-answer-key.json` e `.js` — chiavi/fonti dell’immagine fotografica; il bundle locale viene inserito nella pagina solo dopo la risposta.
 - `data/asset-manifest.json` — manifest unico per cover, fotografie di prova e illustrazioni di domanda/opzione/risultato.
 - `assets/quiz-art/` — SVG originali e locali; il codice generatore è `scripts/build_quiz_art.py`.
 - `assets/human-ai/` — fotografie reali e immagini sintetiche di terzi per la prova.

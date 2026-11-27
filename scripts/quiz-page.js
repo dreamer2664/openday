@@ -11,11 +11,16 @@
   const button=(label,cls,onClick)=>{const b=document.createElement('button');b.type='button';b.className=cls;b.textContent=label;b.addEventListener('click',onClick);return b;};
   let quiz,session,answerKey=null,pending=null,selectedChoice=null,selectedConfidence=null;
   function shell(){app.replaceChildren();}
-  async function loadKey(){
-    if(answerKey)return answerKey;
-    const response=await fetch('../data/human-ai-answer-key.json',{cache:'no-store'});
-    if(!response.ok)throw new Error('Archivio delle fonti non raggiungibile.');
-    answerKey=await response.json();return answerKey;
+  function loadScriptPayload(src,readPayload,message){
+    return new Promise((resolve,reject)=>{
+      const script=document.createElement('script');script.src=src;
+      script.onload=()=>{script.remove();try{const payload=readPayload();if(!payload)throw new Error(message);resolve(payload);}catch(error){reject(error);}};
+      script.onerror=()=>{script.remove();reject(new Error(message));};document.head.append(script);
+    });
+  }
+  function loadKey(){
+    if(answerKey)return Promise.resolve(answerKey);
+    return loadScriptPayload('../data/human-ai-answer-key.js',()=>window.CASARDI_HUMAN_AI_KEY,'Archivio delle fonti non raggiungibile.').then(data=>(answerKey=data));
   }
   function showStart(){
     shell();const panel=document.createElement('section');panel.className='quiz-panel start-panel';panel.setAttribute('aria-labelledby','quiz-title');
@@ -136,5 +141,5 @@
   }
   function resetSession(){session=null;pending=null;selectedChoice=null;selectedConfidence=null;showStart();}
   function showFatal(message){shell();const p=document.createElement('section');p.className='quiz-panel';p.append(text('h1','Ops, qualcosa non va'),text('p',message),link('../index.html#giochi','Torna alla sala giochi','back-link'));app.append(p);}
-  fetch(`../data/quizzes/${encodeURIComponent(slug)}.json`).then(r=>{if(!r.ok)throw new Error('Dati quiz non disponibili.');return r.json();}).then(data=>{quiz=data;const issues=QuizEngine.validate(quiz);if(issues.length)throw new Error(issues.join(' · '));showStart();}).catch(err=>showFatal(err.message));
+  loadScriptPayload(`../data/quizzes/${encodeURIComponent(slug)}.js`,()=>window.CASARDI_QUIZZES&&window.CASARDI_QUIZZES[slug],'Dati quiz non disponibili.').then(data=>{quiz=data;const issues=QuizEngine.validate(quiz);if(issues.length)throw new Error(issues.join(' · '));showStart();}).catch(err=>showFatal(err.message));
 })();

@@ -1,9 +1,13 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const vm = require('node:vm');
 require('../scripts/quiz-engine.js');
 const quizzesDir=path.join(__dirname,'../data/quizzes');
+assert.ok(!/\bfetch\s*\(/.test(fs.readFileSync(path.join(__dirname,'../scripts/quiz-page.js'),'utf8')),'quiz pages must not fetch JSON over file://');
 const key=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/human-ai-answer-key.json'),'utf8'));
+const keyBundle={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../data/human-ai-answer-key.js'),'utf8'),keyBundle);
+assert.equal(JSON.stringify(keyBundle.window.CASARDI_HUMAN_AI_KEY),JSON.stringify(key),'file-protocol photo answer bundle must match the JSON key');
 const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/asset-manifest.json'),'utf8'));
 const manifestById=new Map(manifest.map(x=>[x.id,x]));
 assert.equal(manifestById.size,manifest.length,'manifest asset IDs must be unique');
@@ -50,6 +54,8 @@ function routeSignature(session,quiz){return session.answers.filter(a=>quiz.bran
 for(const file of files){
  const randomResultDistribution={};const routeDistribution={};
  const quiz=JSON.parse(fs.readFileSync(path.join(quizzesDir,file),'utf8'));
+ const bundleContext={window:{}};vm.runInNewContext(fs.readFileSync(path.join(quizzesDir,file.replace(/\.json$/,'.js')),'utf8'),bundleContext);
+ assert.equal(JSON.stringify(bundleContext.window.CASARDI_QUIZZES[quiz.id]),JSON.stringify(quiz),`${file}: local script bundle differs from JSON dataset`);
  const issues=QuizEngine.validate(quiz);assert.deepEqual(issues,[],`${file}: ${issues.join('; ')}`);
  assert.equal(QuizEngine.reachable(quiz).size,16,`${file}: all sixteen nodes must be reachable`);
  for(const q of quiz.questions){
@@ -94,5 +100,5 @@ for(const file of files){
 }
 const report={date:new Date().toISOString().slice(0,10),description:'Simulazioni deterministiche ripetibili; i risultati sono conteggi di test sintetici, non stime di visitatori o validazione psicometrica.',quizzes:reports};
 fs.writeFileSync(path.join(__dirname,'../docs/report-simulazioni.json'),JSON.stringify(report,null,2)+'\n');
-console.log('PASS: dieci dataset, 16 nodi, sei risposte, trade-off e feedback riflessivo per le domande narrative, manifest completo, 8 domande e tutti i risultati raggiungibili.');
+console.log('PASS: dieci quiz, bundle locali senza fetch, 16 nodi, sei risposte, trade-off, feedback e risultati raggiungibili.');
 console.log(JSON.stringify(Object.fromEntries(Object.entries(reports).map(([slug,r])=>[slug,{results:r.results,randomSimulations:r.randomSimulations,distinctRoutes:Object.keys(r.routeDistribution).length}])),null,2));

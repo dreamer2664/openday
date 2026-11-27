@@ -8,6 +8,10 @@
 - “Umano o AI?” mantiene la meccanica specifica di classificazione binaria, confidenza, feedback e attribuzione soltanto dopo la risposta.
 - Asset locali, SVG originali, immagini di prova, metadati e attribuzioni sono raccolti nel manifest.
 
+## Correzione dell'errore “Ops, qualcosa non va”
+
+La causa probabile era il caricamento dei dataset JSON tramite `fetch()`: se la pagina viene aperta da una cartella estratta con protocollo `file://`, il browser può bloccare quelle richieste. I dieci quiz ora hanno bundle JavaScript locali (`data/quizzes/*.js`), caricati come script; la chiave foto/AI usa lo stesso meccanismo soltanto dopo la risposta. Il test confronta ogni bundle con il JSON sorgente e controlla che il client non usi `fetch()`.
+
 ## Approfondimento delle domande
 
 Gli otto quiz non fotografici includono sei scelte plausibili per ciascuno dei 16 item. I tre snodi principali hanno sei testi di risposta scritti sul dilemma specifico (non solo varianti di tono); gli altri item combinano strategie editoriali del quiz e vincoli contestuali. Una nota “In bilico” accompagna ogni item. Dopo ogni scelta, il feedback riflessivo collega l'opzione ai tratti e mostra il ramo successivo. L'ordine delle sei schede varia a ogni domanda. Le strategie aggiunte esplorano punto cieco e test reversibili; margine di rischio e accordi rivedibili; limiti etici e cambiamento di piano; chi paga il costo e come riformare; giustizia e mediazione; controesempio e pratica; controllo delle fonti e costo umano; metodo, supporto e prove di orientamento.
