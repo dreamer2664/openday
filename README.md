@@ -7,6 +7,10 @@ Videogioco originale narrativo-platform a 8-bit realizzato per l'**Open Day del 
 
 **Protagonisti giocabili (5):** **Prof. Ranaldo** *(Matematica)*, **Carlo** *(Basket)*, **Daniele** *(Ballo Latino-Americano)*, **Ruggero** *(Atletica Leggera)* e **Francesco** *(Pianoforte)*.
 
+**Gioca subito dal browser:** https://dreamer2664.github.io/openday/ — build standalone v3.0.1, nessuna installazione.
+
+**Repository:** https://github.com/dreamer2664/openday (sorgente `src/`, strumenti `tools/`, documentazione e storico).
+
 **Build consigliate v3.0:** `AVVIA_GIOCO_PC_V3.html` (postazione Open Day) e `AVVIA_GIOCO_MOBILE_V3.html` (telefono/tablet).
 
 ---
