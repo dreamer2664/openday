@@ -140,7 +140,7 @@ for (const [qId, q] of Object.entries(EIPASS_CHALLENGES)) {
 // -----------------------------------------------------------------------------
 // 3. TEST FRAME-BY-FRAME DEI 6 MINIGIOCHI ARCADE (INCLUSI FIREWALL & SMISTATORE!)
 // -----------------------------------------------------------------------------
-console.log("[3/7] Playtest 60Hz di tutti i 7 Minigiochi (Basket, Pianoforte, Atletica, Danza, Matematica, Firewall, Smistatore)...");
+console.log("[3/7] Playtest 60Hz di tutti i 12 Minigiochi (Basket, Pianoforte, Atletica, Danza, Matematica, Firewall, Smistatore + Operazioni a tempo, Calcio, Greco, Latino, Storia)...");
 {
   const gs = new GameStateManager();
   const mg = new SpecialChallengeManager(mockAudio, gs);
@@ -290,6 +290,82 @@ console.log("[3/7] Playtest 60Hz di tutti i 7 Minigiochi (Basket, Pianoforte, At
     for (let w = 0; w < 36 && !fsDone; w++) mg.update(makeBlankInput());
   }
   assert(fsDone, "Minigioco 7/7 (Smistatore File & Estensioni EIPASS) completato!");
+
+  // ---------------------------------------------------------------------------
+  // v3.1 — LE 5 NUOVE SFIDE (operazioni a tempo, calcio, greco, latino, storia)
+  // ---------------------------------------------------------------------------
+  // 8) OPERAZIONI A TEMPO del Prof. Ranaldo: risolvo a mano i 6 calcoli necessari
+  let sprintDone = false;
+  mg.start("mathsprint", { id: "test_sprint" }, () => { sprintDone = true; });
+  for (let guard = 0; guard < 6000 && !sprintDone; guard++) {
+    const m = mg.active;
+    if (!m) break;
+    if (m.question) {
+      const idx = m.question.options.indexOf(m.question.answer);
+      assert(idx >= 0, "Operazioni a tempo: la risposta esatta è sempre tra le 4 opzioni");
+      m.selected = idx;
+      const inp = makeBlankInput();
+      inp.confirmPressed = true;
+      mg.update(inp);
+      continue;
+    }
+    mg.update(makeBlankInput());
+  }
+  assert(sprintDone, "Sfida v3.1 (Operazioni a tempo del Prof. Ranaldo) completata con risposte esatte e +3s a colpo!");
+
+  // 9) CALCIO: rigori con portiere mobile — tiro nell'angolo lontano dal portiere
+  let soccerDone = false;
+  mg.start("soccer", { id: "test_soccer" }, () => { soccerDone = true; });
+  for (let guard = 0; guard < 4000 && !soccerDone; guard++) {
+    const m = mg.active;
+    if (!m) break;
+    if (!m.ball) {
+      // scelgo la colonna più lontana dal portiere
+      const cols = [168, 240, 312];
+      let best = 0;
+      for (let i = 1; i < 3; i++) if (Math.abs(cols[i] - m.keeperX) > Math.abs(cols[best] - m.keeperX)) best = i;
+      m.aim = best;
+      m.height = Math.abs(88 - m.keeperY) > Math.abs(116 - m.keeperY) ? 1 : 0;
+      const inp = makeBlankInput();
+      inp.confirmPressed = true;
+      mg.update(inp);
+      continue;
+    }
+    mg.update(makeBlankInput());
+  }
+  assert(soccerDone, "Sfida v3.1 (Calcio: rigori al cortile con portiere mobile) completata con 3 gol!");
+
+  // 10-12) GRECO, LATINO, STORIA: banche da 5 domande, 4 estratte, 15s ciascuna
+  for (const cult of ["greek", "latin", "history"]) {
+    let cultDone = false;
+    mg.start(cult, { id: `test_${cult}` }, () => { cultDone = true; });
+    const m0 = mg.active;
+    assert(m0.bank.length === 5, `Sfida ${cult}: banca di 5 domande disponibile`);
+    assert(m0.order.length === 4, `Sfida ${cult}: 4 domande estratte a caso`);
+    for (let guard = 0; guard < 3000 && !cultDone; guard++) {
+      const m = mg.active;
+      if (!m) break;
+      if (!m.answered && !m.doneTimer) {
+        const q = m.bank[m.order[m.qIdx]];
+        m.selected = q.correct;
+        const inp = makeBlankInput();
+        inp.confirmPressed = true;
+        mg.update(inp);
+        continue;
+      }
+      mg.update(makeBlankInput());
+    }
+    assert(cultDone, `Sfida v3.1 (${cult}: 4 domande a tempo) completata con tutte le risposte corrette`);
+  }
+
+  // 13) TEMPO SCADUTO: se non rispondo, la sfida culturale chiude con esito negativo (niente softlock)
+  {
+    let expiredDone = false;
+    mg.start("greek", { id: "test_expire" }, () => { expiredDone = true; });
+    let guard = 0;
+    while (!expiredDone && guard++ < 9000) mg.update(makeBlankInput());
+    assert(expiredDone, "Sfida culturale: il tempo scaduto chiude la sfida senza softlock");
+  }
 }
 
 // -----------------------------------------------------------------------------

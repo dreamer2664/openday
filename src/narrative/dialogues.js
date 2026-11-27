@@ -11,45 +11,45 @@ export const DIALOGUES = {
       {
         speaker: "carlo",
         expr: 2,
-        text: "Prof, guardi il pannello all'ingresso: il controllo accessi si è riavviato da solo e sugli schermi interni girano avvisi che non vengono dalla segreteria.",
+        text: "Prof, il controllo accessi si è riavviato da solo e sugli schermi girano avvisi che non vengono dalla segreteria.",
       },
       {
         speaker: "ranaldo",
         expr: 3,
-        text: "Manca poco all'arrivo delle famiglie per l'Open Day. Niente panico, Carlo: prima capiamo da dove è entrato il blocco, poi interveniamo.",
+        text: "Mancano dieci minuti all'Open Day. Niente panico: prima capiamo da dove è entrato, poi interveniamo.",
       },
       {
         speaker: "sofista",
         expr: 0,
-        text: "Non mi è servito forzare nessuna serratura. È bastato un allegato con scritto 'Orario definitivo' e qualcuno lo ha aperto senza guardare il mittente.",
+        text: "Non ho forzato nessuna serratura: è bastato un allegato con scritto 'Orario definitivo'.",
       },
       {
         speaker: "carlo",
         expr: 4,
-        text: "Daniele e Ruggero sono già al primo piano e Francesco stava preparando il laboratorio multimediale. Se sblocchiamo il portone possiamo raggiungerli.",
+        text: "Daniele e Ruggero sono al primo piano, Francesco in laboratorio. Sblocchiamo il portone e li raggiungiamo.",
       },
       {
         speaker: "ranaldo",
         expr: 4,
-        text: "Scegli tu come procedere qui fuori, Carlo.",
+        text: "Come procediamo, Carlo?",
         choiceId: "od_entry_choice",
         choices: [
           {
-            label: "Controlliamo il registro degli accessi prima di aprire (+Scudo)",
+            label: "Controllo il registro accessi prima di aprire (+Scudo)",
             summary: "Verifica preliminare del registro accessi col Prof. Ranaldo",
             effects: { trust: { ranaldo: 10, carlo: 5, daniele: 5 }, shieldDelta: 1, eipassDelta: 6, flagValue: "logic" },
             worldAction: "open_shortcut_gate",
             next: 5,
           },
           {
-            label: "Attivo il sensore alto della loggia con un tiro da sotto (+Punti)",
+            label: "Attivo il sensore alto con un tiro (+Punti)",
             summary: "Sblocco manuale del sensore alto dall'esterno",
             effects: { trust: { carlo: 12, ranaldo: 4 }, scoreDelta: 250, flagValue: "basket" },
             worldAction: "spawn_bonus_tokens",
             next: 6,
           },
           {
-            label: "Riavviamo la centralina forzando il blocco (-1 Energia)",
+            label: "Riavvio la centralina alla cieca (-1 Energia)",
             summary: "Riavvio forzato della centralina senza diagnosi",
             effects: { trust: { ranaldo: -7, daniele: -4 }, hpDelta: -1, eipassDelta: -6, flagValue: "rush" },
             worldAction: "spawn_guard_drone",
@@ -60,19 +60,19 @@ export const DIALOGUES = {
       {
         speaker: "ranaldo",
         expr: 1,
-        text: "Così si lavora: il varco secondario è libero e abbiamo un margine di protezione in più. Alterniamoci pure lungo la salita.",
+        text: "Così si lavora: varco secondario libero e un margine in più. Alterniamoci.",
         end: true,
       },
       {
         speaker: "carlo",
         expr: 1,
-        text: "Preso al primo tentativo. I sensori alti li sblocco io a rimbalzo; quando manca appoggio sul pavimento pensaci lei, Prof.",
+        text: "Preso al primo tentativo. I sensori alti li sblocco io a rimbalzo, lei pensi agli appoggi.",
         end: true,
       },
       {
         speaker: "ranaldo",
         expr: 2,
-        text: "Forzare un riavvio alla cieca ha fatto scattare l'allarme secondario. Andiamo avanti, ma d'ora in poi leggiamo prima di confermare.",
+        text: "Riavvio alla cieca: allarme secondario. Andiamo avanti, ma leggiamo prima di confermare.",
         end: true,
       },
     ],
@@ -85,7 +85,7 @@ export const DIALOGUES = {
       {
         speaker: "daniele",
         expr: 3,
-        text: "Eccovi! Stavo provando la coreografia per la festa d'istituto, ma la cassa dell'Aula Magna ora sputa fuori un ritmo che non è il nostro: è tutto sfasato di un battito.",
+        text: "Eccovi! Provavo la coreografia, ma la cassa dell'Aula Magna sputa un ritmo sfasato di un battito.",
       },
       {
         speaker: "carlo",
@@ -95,7 +95,7 @@ export const DIALOGUES = {
       {
         speaker: "daniele",
         expr: 1,
-        text: "Perché il segnale corrotto viaggia sul ritmo. Io ballo salsa e bachata da quando ero piccolo: se tengo io il tempo, il rumore non riesce più a entrare. Datemi una mano sulla sequenza e vi apro il passo.",
+        text: "Il segnale corrotto viaggia sul ritmo. Se tengo io il tempo, il rumore non entra: aiutatemi sulla sequenza.",
         end: true,
       },
     ],
@@ -108,7 +108,7 @@ export const DIALOGUES = {
       {
         speaker: "ruggero",
         expr: 4,
-        text: "Meno male che siete saliti. Hanno bloccato la rampa verso il cortile e stavo cercando un passaggio libero di corsa.",
+        text: "Meno male che siete saliti. Hanno bloccato la rampa del cortile e stavo cercando un passaggio libero di corsa.",
       },
       {
         speaker: "carlo",
@@ -118,7 +118,7 @@ export const DIALOGUES = {
       {
         speaker: "ruggero",
         expr: 1,
-        text: "Lasciami tre metri di rincorsa. Se parto in allungo supero gli ostacoli bassi e apro il passaggio verso la pista esterna.",
+        text: "Dammi tre metri di rincorsa: in allungo supero gli ostacoli e apro il passaggio verso la pista.",
         end: true,
       },
     ],
@@ -131,22 +131,22 @@ export const DIALOGUES = {
       {
         speaker: "francesco",
         expr: 0,
-        text: "Finalmente. Qui nel laboratorio tutte le ventitré postazioni mandavano segnali fuori sincrono sulle tastiere MIDI.",
+        text: "Finalmente. Le ventitré postazioni mandavano segnali fuori sincrono sulle tastiere MIDI.",
       },
       {
         // Daniele entra nel gruppo solo più avanti (od_meet_daniele): qui parla il Prof. Ranaldo.
         speaker: "ranaldo",
         expr: 3,
-        text: "Hanno usato il controller principale per bloccare l'accesso all'Aula Magna e stanno provando a sovrascrivere la cartella condivisa. Il battito che sentite viene da lì.",
+        text: "Il controller principale blocca l'Aula Magna e sta sovrascrivendo la cartella condivisa: il battito viene da lì.",
       },
       {
         speaker: "francesco",
         expr: 4,
-        text: "Prima di sbloccare la tastiera maestra conviene mettere al sicuro i file della giornata. Come procediamo?",
+        text: "Prima di sbloccare la tastiera maestra mettiamo al sicuro i file. Come procediamo?",
         choiceId: "od_lab_backup",
         choices: [
           {
-            label: "Isoliamo la cartella e salviamo copia su unità esterna (+EIPASS)",
+            label: "Isolo la cartella e salvo copia esterna (+EIPASS)",
             summary: "Copia di sicurezza su supporto separato prima del ripristino",
             effects: {
               trust: { francesco: 10, daniele: 10, ranaldo: 8, carlo: 5, ruggero: 4 },
@@ -157,7 +157,7 @@ export const DIALOGUES = {
             next: 3,
           },
           {
-            label: "Copiamo solo le presentazioni lasciando la rete aperta (-EIPASS)",
+            label: "Copio solo le slide lasciando la rete aperta (-EIPASS)",
             summary: "Salvataggio parziale senza isolamento della rete",
             effects: {
               trust: { francesco: -4, daniele: -6, ranaldo: -5 },
@@ -173,14 +173,14 @@ export const DIALOGUES = {
       {
         speaker: "francesco",
         expr: 1,
-        text: "Tutto al sicuro. Ora possiamo usare le frequenze di risonanza sui ponti acustici e rimettere in ordine la tastiera principale.",
+        text: "Tutto al sicuro. Ora uso la risonanza sui ponti acustici e rimetto in ordine la tastiera.",
         end: true,
       },
       {
         // Daniele non è ancora stato incontrato in questa zona: la battuta passa a Francesco.
         speaker: "francesco",
         expr: 2,
-        text: "Con la condivisione ancora aperta il blocco si è copiato su un altro nodo, come un errore di accordatura che si propaga a tutta l'orchestra. Chiudiamo subito dalla tastiera.",
+        text: "Con la condivisione aperta il blocco si è copiato su un altro nodo, come un errore di accordatura. Chiudiamo subito.",
         end: true,
       },
     ],
@@ -192,17 +192,17 @@ export const DIALOGUES = {
       {
         speaker: "sofista",
         expr: 0,
-        text: "Siete arrivati in Aula Magna. Eppure sapete già come finisce di solito: basta riempire uno schermo di avvisi convincenti e chiunque smette di verificare.",
+        text: "In Aula Magna, come previsto. Basta riempire uno schermo di avvisi convincenti e nessuno verifica più.",
       },
       {
         speaker: "daniele",
         expr: 4,
-        text: "Solo se nessuno legge i dati reali. Il tuo blocco gira su tre livelli di offuscamento, ma un ritmo sbagliato si sente sempre: non è invincibile.",
+        text: "Solo se nessuno legge i dati veri. Tre livelli di offuscamento, ma un ritmo sbagliato si sente.",
       },
       {
         speaker: "francesco",
         expr: 3,
-        text: "E ogni volta che ripeti uno schema lasci una pausa precisa tra un'ondata e l'altra.",
+        text: "E tra un'ondata e l'altra lasci sempre la stessa pausa.",
       },
       {
         speaker: "ruggero",
@@ -212,7 +212,7 @@ export const DIALOGUES = {
       {
         speaker: "carlo",
         expr: 4,
-        text: "Restiamo lucidi: osserviamo le sue mosse nell'arena di verifica e rispondiamo insieme al momento giusto.",
+        text: "Restiamo lucidi: studiamo le sue mosse e rispondiamo insieme.",
         end: true,
       },
     ],

@@ -44,6 +44,7 @@ const TRACKS = {
   // 1. TEMA PRINCIPALE — Luminoso, cantabile, apertura A + sviluppo B
   main: {
     bpm: 136,
+    pad: true,
     leadWave: "square",
     harmWave: "triangle",
     lead: [
@@ -116,6 +117,7 @@ const TRACKS = {
   // 3. LABORATORIO MULTIMEDIALE — Ritmato, pulito, mai stridente
   lab: {
     bpm: 126,
+    arp: true,
     leadWave: "square",
     harmWave: "triangle",
     lead: [
@@ -142,6 +144,7 @@ const TRACKS = {
   // 4. CORTILE & PISTA ATLETICA — Energico, slanciato, richiama il motivo del Casardi nella sezione B
   sports: {
     bpm: 144,
+    arp: true,
     leadWave: "square",
     harmWave: "square",
     lead: [
@@ -168,6 +171,7 @@ const TRACKS = {
   // 5. BIBLIOTECA & PEGASO — Intimo, contrappuntistico, cameristico
   library: {
     bpm: 110,
+    pad: true,
     leadWave: "triangle",
     harmWave: "square",
     lead: [
@@ -269,9 +273,86 @@ const TRACKS = {
     drums: "KhSKKhSKKhSKKSSS",
   },
 
+  // 6D. CORTILE SPORTIVO (basket & atletica) — energica, giocosa, sincopata
+  courtyard: {
+    bpm: 150,
+    pad: true, arp: true,
+    leadWave: "square",
+    harmWave: "triangle",
+    lead: [
+      "G4", "G4", "C5", "-", "E5", "-", "D5", "C5",  "A4", "-", "C5", "-", "G4", "-", "-", "R",
+      "A4", "A4", "D5", "-", "F5", "-", "E5", "D5",  "B4", "-", "D5", "-", "A4", "-", "-", "R",
+      "C5", "E5", "G5", "-", "A5", "-", "G5", "E5",  "F5", "-", "E5", "-", "D5", "-", "C5", "-",
+      "D5", "E5", "F5", "G5", "A5", "G5", "E5", "C5",  "D5", "-", "G4", "C5", "C5", "-", "-", "R",
+    ],
+    harm: [
+      "E4", "G4", "C5", "G4", "E4", "G4", "C5", "G4",  "F4", "A4", "C5", "A4", "E4", "G4", "C5", "G4",
+      "F4", "A4", "D5", "A4", "F4", "A4", "D5", "A4",  "G4", "B4", "D5", "B4", "F4", "A4", "D5", "A4",
+      "E4", "G4", "C5", "E5", "C5", "G4", "E4", "G4",  "A4", "C5", "F4", "A4", "G4", "B4", "D5", "G4",
+      "F4", "A4", "C5", "F4", "E4", "G4", "C5", "E4",  "G4", "-", "E4", "C4", "E4", "-", "-", "R",
+    ],
+    bass: [
+      "C3", "-", "G2", "-", "C3", "-", "E3", "-",  "F2", "-", "C3", "-", "G2", "-", "B2", "-",
+      "D3", "-", "A2", "-", "D3", "-", "F2", "-",  "G2", "-", "D3", "-", "G2", "-", "B2", "-",
+      "C3", "-", "C3", "E3", "F2", "-", "F2", "A2",  "D3", "-", "D3", "F3", "G2", "-", "G2", "B2",
+      "F2", "-", "F2", "A2", "C3", "-", "G2", "C3",  "G2", "-", "C3", "-", "C3", "-", "-", "R",
+    ],
+    drums: "KhSKKhSKKhSKKShS",
+  },
+
+  // 6E. AULA MAGNA — solenne e teatrale (palco, pianoforte a coda, busti)
+  aulamagna: {
+    bpm: 120,
+    pad: true,
+    leadWave: "triangle",
+    harmWave: "triangle",
+    lead: [
+      "C5", "-", "E5", "G5", "-", "E5", "C5", "-",  "D5", "-", "F5", "A5", "-", "F5", "D5", "-",
+      "E5", "-", "G5", "C6", "-", "G5", "E5", "-",  "F5", "E5", "D5", "B4", "G4", "-", "-", "R",
+      "C5", "-", "G4", "A4", "E5", "-", "D5", "C5",  "A5", "-", "G5", "E5", "D5", "-", "C5", "-",
+      "F5", "-", "E5", "D5", "G5", "-", "B4", "-",  "C5", "-", "G4", "C5", "C5", "-", "-", "R",
+    ],
+    harm: [
+      "G4", "C5", "E4", "G4", "C5", "E4", "G4", "C5",  "A4", "D5", "F4", "A4", "D5", "F4", "A4", "D5",
+      "C5", "E4", "G4", "C5", "E4", "G4", "C5", "E4",  "F4", "A4", "D5", "B4", "D4", "G4", "B4", "D4",
+      "E4", "G4", "C5", "E4", "G4", "C5", "E4", "G4",  "C5", "E5", "G4", "C5", "A4", "C5", "E4", "G4",
+      "A4", "C5", "F4", "A4", "B4", "D5", "G4", "B4",  "E4", "G4", "D4", "G4", "E4", "-", "-", "R",
+    ],
+    bass: [
+      "C3", "-", "C4", "-", "A2", "-", "A3", "-",  "D3", "-", "D4", "-", "G2", "-", "G3", "-",
+      "C3", "-", "C4", "-", "E3", "-", "E2", "-",  "F2", "-", "F3", "-", "G2", "-", "G3", "-",
+      "C3", "-", "C4", "-", "A2", "-", "A3", "-",  "F2", "-", "F3", "-", "C3", "-", "G2", "-",
+      "F2", "-", "A2", "-", "G2", "-", "B2", "-",  "C3", "-", "G2", "C3", "C3", "-", "-", "R",
+    ],
+    drums: "K.h.S.h.K.h.S.h.",
+  },
+
+  // 8. STUDIO / SFIDE CULTURALI (greco, latino, storia, operazioni a tempo):
+  //    tempo lento, clavicembalo, atmosfera da biblioteca antica.
+  study: {
+    bpm: 104,
+    pad: true,
+    leadWave: "square",
+    harmWave: "sine",
+    lead: [
+      "A4", "-", "C5", "-", "E5", "-", "D5", "-",  "C5", "-", "A4", "-", "G4", "-", "-", "R",
+      "F4", "-", "A4", "-", "D5", "-", "C5", "-",  "A4", "-", "G4", "-", "E4", "-", "-", "R",
+    ],
+    harm: [
+      "C5", "E5", "A4", "C5", "E4", "A4", "F4", "A4",  "E4", "G4", "C5", "E5", "C5", "G4", "E4", "G4",
+      "A4", "C5", "F4", "A4", "D5", "F4", "A4", "D5",  "C5", "E4", "G4", "B4", "G4", "E4", "C4", "E4",
+    ],
+    bass: [
+      "A2", "-", "-", "E2", "F2", "-", "-", "C3",  "C3", "-", "-", "G2", "E2", "-", "-", "R",
+      "F2", "-", "-", "C3", "D3", "-", "-", "A2",  "E2", "-", "G2", "-", "C3", "-", "-", "R",
+    ],
+    drums: "K...h.K...h.",
+  },
+
   // 7. VITTORIA & EPILOGO A 5 VOCI — Risoluzione calda del Motivo del Casardi
   victory: {
     bpm: 132,
+    pad: true,
     leadWave: "square",
     harmWave: "triangle",
     lead: [
@@ -463,6 +544,12 @@ export class ChiptuneAudioEngine {
       this.scheduleVoiceNote(track.lead, idx, this.nextStepTime, stepDur, track.leadWave, 0.23);
       this.scheduleVoiceNote(track.harm, idx, this.nextStepTime, stepDur, track.harmWave, 0.13);
       this.scheduleVoiceNote(track.bass, idx, this.nextStepTime, stepDur, "triangle", 0.33);
+      // v3.1 — due strumenti in più per una colonna sonora meno "beep":
+      // pad lungo (4a voce, regge l'accordo) e arpeggio di ottavi (movimento).
+      // Sono opzionali e attivi per traccia (pad: true / arp: true), quindi le
+      // tracce esistenti non cambiano di una nota.
+      if (track.pad) this.schedulePadNote(track.harm, idx, this.nextStepTime, stepDur);
+      if (track.arp) this.scheduleArpeggio(track, idx, this.nextStepTime, stepDur);
       this.scheduleDrum(track.drums[idx % track.drums.length], this.nextStepTime);
 
       this.nextStepTime += stepDur;
@@ -496,6 +583,60 @@ export class ChiptuneAudioEngine {
     g.connect(this.musicGain);
     osc.start(time);
     osc.stop(time + dur + 0.01);
+  }
+
+  /** Pad armonico: accordo tenuto e morbido (2 oscillatori leggermente scordati). */
+  schedulePadNote(seq, idx, time, stepDur) {
+    const token = seq[idx];
+    if (!token || token === "-" || token === "R") return;
+    const freq = NOTE_HZ[token];
+    if (!freq) return;
+    let hold = 1;
+    while (idx + hold < seq.length && seq[idx + hold] === "-") hold++;
+    const dur = stepDur * hold * 2.2; // il pad "sborda" dolcemente sotto la melodia
+    const g = this.ctx.createGain();
+    g.gain.setValueAtTime(0.0001, time);
+    g.gain.linearRampToValueAtTime(0.055, time + dur * 0.35);
+    g.gain.linearRampToValueAtTime(0.0001, time + dur);
+    g.connect(this.musicGain);
+    for (const detune of [-6, 6]) {
+      const osc = this.ctx.createOscillator();
+      osc.type = "sawtooth";
+      osc.frequency.setValueAtTime(freq, time);
+      osc.detune.setValueAtTime(detune, time);
+      const lp = this.ctx.createBiquadFilter();
+      lp.type = "lowpass";
+      lp.frequency.setValueAtTime(1400, time);
+      osc.connect(lp);
+      lp.connect(g);
+      osc.start(time);
+      osc.stop(time + dur + 0.02);
+    }
+  }
+
+  /** Arpeggio di ottavi costruito sull'accordo del basso: dà movimento ritmico. */
+  scheduleArpeggio(track, idx, time, stepDur) {
+    const bass = track.bass[idx];
+    if (!bass || bass === "-" || bass === "R") return;
+    const freq = NOTE_HZ[bass];
+    if (!freq) return;
+    // terza e quinta prendendo l'armonia corrente come riferimento
+    const harm = NOTE_HZ[track.harm[idx]] || freq * 2;
+    const pattern = [freq * 2, harm, freq * 4, harm];
+    pattern.forEach((f, i) => {
+      const t = time + i * (stepDur / 2);
+      const osc = this.ctx.createOscillator();
+      const g = this.ctx.createGain();
+      osc.type = "square";
+      osc.frequency.setValueAtTime(f, t);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.linearRampToValueAtTime(0.038, t + 0.006);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + stepDur * 0.4);
+      osc.connect(g);
+      g.connect(this.musicGain);
+      osc.start(t);
+      osc.stop(t + stepDur * 0.45);
+    });
   }
 
   scheduleDrum(symbol, time) {

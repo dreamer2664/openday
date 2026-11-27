@@ -1,7 +1,7 @@
 # OPERAZIONE EIPASS — IL CASARDI IN 8 BIT
 
 
-> **v3.0.8** — Correzione dei 20 punti reali della review esterna `ERRORI_OPENDay.md`: fossa letale/respawn corretto, pillole eroe mobile riallineate, sinergia di squadra applicata davvero (HP + danno), `F1` come vero toggle anche sul titolo, `[E]` che non fa più due azioni, layout mobile 800×600 e viewport bassi, titoli EIPASS su due righe, contatori HUD, WAV senza offset DC e documentazione allineata.
+> **v3.1.0** — Cinque nuove sfide: **Operazioni a tempo del Prof. Ranaldo** (12 calcoli in 45 secondi, ±3 s a risposta), **Calcio ai rigori** con portiere mobile, **Greco, Latino e Storia** (4 domande a tempo da una banca di 5). Le sfide libere si lanciano anche dal nuovo menu **Pausa → Sfide Libere**, senza aspettare di trovare la stazione nel livello. Colonna sonora ampliata: tre nuove tracce (Cortile sportivo, Aula Magna, Studio) più due strumenti nuovi (pad armonico e arpeggio). Dialoghi dell'Open Day accorciati di circa un minuto e mezzo e testo più veloce. Corridoi più credibili: fontanella, cestino e bacheca di istituto con gli avvisi veri.
 >
 > **v3.0.7** — Ranaldo ridisegnato sulle foto (capelli argento a punte, barba che segue la mascella, maglietta blu navy) e canotta da basket **colorata senza numero** per Carlo.
 >

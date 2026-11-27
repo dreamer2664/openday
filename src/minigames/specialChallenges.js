@@ -9,7 +9,12 @@
 
 import { SCREEN_W, SCREEN_H } from "../config/constants.js";
 import { PIANO_CHROMATIC_KEYS, PIANO_SCALE } from "../audio/chiptuneEngine.js";
-import { drawPixelText, drawPixelTextCentered, drawPixelPanel, fitPixelText } from "../render/pixelFont.js";
+import { drawPixelText, drawPixelTextCentered, drawPixelPanel, fitPixelText, wrapPixelText } from "../render/pixelFont.js";
+
+/** Spezza una domanda in righe che stanno davvero nel pannello (usato dalle sfide culturali). */
+function wrapCulture(text, maxWidthPx) {
+  return wrapPixelText(text, maxWidthPx, 1, true);
+}
 
 // Allegati realistici: la sicurezza dipende da ORIGINE + CONTESTO + VERA ESTENSIONE, mai dal solo ".pdf" o ".docx"
 const SORT_ITEMS = [
@@ -89,6 +94,76 @@ const DEFAULT_PIANO_TIERS = [
       { key: "C5", beats: 2 },
     ],
   },
+];
+
+// ===========================================================================
+// NUOVE SFIDE "CULTURA & SPORT" (v3.1) — libere, non assegnate: greco, latino,
+// storia, calcio + le operazioni a tempo del Prof. Ranaldo (matematica).
+// Il greco, il latino e la storia sono sfide CULTURALI del Liceo Classico:
+// si giocano dal menu pausa ("Sfide Libere") e non appartengono a un eroe.
+// ===========================================================================
+export const FREE_CHALLENGES = [
+  {
+    type: "mathsprint",
+    title: "OPERAZIONI A TEMPO — PROF. RANALDO",
+    sub: "Quante ne risolvi in 45 secondi?",
+    desc: "Calcolo mentale sotto pressione: +3 s se indovini, -3 s se sbagli.",
+  },
+  {
+    type: "soccer",
+    title: "CALCIO — RIGORI AL CORTILE",
+    sub: "Portiere mobile, 3 gol per riattivare la rete",
+    desc: "Il calcio è una sfida libera del cortile, non l'abilità di un eroe.",
+  },
+  {
+    type: "greek",
+    title: "GRECO — RICONOSCI IL VOCABOLO",
+    sub: "Parole del Liceo Classico in caratteri traslitterati",
+    desc: "Scegli il significato giusto: 4 domande, 15 secondi ciascuna.",
+  },
+  {
+    type: "latin",
+    title: "LATINO — FORME E CASI",
+    sub: "Declinazioni e casi della prima e seconda",
+    desc: "Trova la forma corretta o il caso giusto in 4 domande a tempo.",
+  },
+  {
+    type: "history",
+    title: "STORIA — IL CASARDI E BARLETTA",
+    sub: "1932, 1937, il Pegaso e la Sede Centrale",
+    desc: "4 domande verificate sull'istituto, con la stessa logica dei quiz EIPASS.",
+  },
+];
+
+const MATH_SPRINT_OPERATIONS = ["+", "-", "×"];
+
+const SOCCER_GOAL_LABELS = ["in alto a sinistra", "in alto al centro", "in alto a destra", "basso a sinistra", "basso al centro", "basso a destra"];
+
+// Banca domande greco: parole traslitterate (il font pixel 8-bit non ha i glifi greci)
+const GREEK_QUESTIONS = [
+  { word: "logos", q: "Che cosa significa LOGOS?", options: ["Parola, discorso, ragione", "Cavallo", "Città", "Guerra"], correct: 0, hint: "Da qui derivano 'logica' e 'dialogo'." },
+  { word: "polis", q: "Che cosa significa POLIS?", options: ["Mare", "Città-stato", "Fiume", "Esercito"], correct: 1, hint: "Da qui 'politica' e 'metropoli'." },
+  { word: "arche", q: "Che cosa significa ARCHE?", options: ["Fine", "Principio, comando", "Numero", "Notte"], correct: 1, hint: "Da qui 'archetipo' e 'monarchia'." },
+  { word: "sophia", q: "Che cosa significa SOPHIA?", options: ["Forza", "Sapienza", "Bellezza", "Velocità"], correct: 1, hint: "Il Sofista Digitale la usa... male." },
+  { word: "demokratia", q: "Che cosa significa DEMOKRATIA?", options: ["Governo di pochi", "Governo del popolo", "Governo dei re", "Assemblea militare"], correct: 1, hint: "demos + kratos." },
+];
+
+// Banca domande latino: forme e casi
+const LATIN_QUESTIONS = [
+  { word: "rosae", q: "ROSAE (genitivo singolare) significa...", options: ["La rosa (soggetto)", "Della rosa", "Alla rosa", "O rosa!"], correct: 1, hint: "Prima declinazione, genitivo in -ae." },
+  { word: "lupus", q: "LUPUS è...", options: ["Nominativo singolare", "Accusativo plurale", "Ablativo singolare", "Genitivo plurale"], correct: 0, hint: "Seconda declinazione, nominativo in -us." },
+  { word: "puero", q: "PUERO (dativo singolare) significa...", options: ["Il ragazzo", "Al ragazzo", "Del ragazzo", "Ragazzo!"], correct: 1, hint: "Dativo in -o, seconda declinazione." },
+  { word: "urbem", q: "URBEM è...", options: ["Nominativo", "Accusativo singolare", "Vocativo", "Ablativo"], correct: 1, hint: "Accusativo in -em, terza declinazione." },
+  { word: "discipulae", q: "DISCIPULAE può essere...", options: ["Genitivo e dativo singolare", "Solo nominativo", "Accusativo plurale", "Verbo"], correct: 0, hint: "Prima declinazione: -ae è genitivo/dativo singolare e nominativo plurale." },
+];
+
+// Banca domande storia: dati già verificati in RICERCA_CASARDI.md
+const HISTORY_QUESTIONS = [
+  { word: "1937", q: "In che anno viene inaugurato l'edificio di Via d'Aragona 100?", options: ["1924", "1932", "1937", "1945"], correct: 2, hint: "Progetto dell'ing. Arturo Boccassini." },
+  { word: "PEGASO", q: "Che cos'è il PEGASO del Casardi?", options: ["Il giornale d'istituto", "Il nome della palestra", "Un laboratorio", "La squadra di basket"], correct: 0, hint: "Le sue pagine sono i collezionabili del gioco." },
+  { word: "23", q: "Quante postazioni ha il Laboratorio Multimediale della Sede Centrale?", options: ["12", "15", "23", "36"], correct: 2, hint: "C'è anche una master keyboard." },
+  { word: "8000", q: "Quanti volumi conta la Biblioteca del Casardi?", options: ["Circa 1.000", "Oltre 8.000", "Circa 500", "Oltre 30.000"], correct: 1, hint: "Dati della brochure ufficiale." },
+  { word: "1924", q: "In che anno nasce il Regio Liceo-Ginnasio di Barletta, poi intitolato ad A. Casardi?", options: ["1861", "1900", "1924", "1932"], correct: 2, hint: "La delibera per l'edificio arriva nel 1932." },
 ];
 
 // ===========================================================================
@@ -307,6 +382,72 @@ export class SpecialChallengeManager {
         crowd: 0,
         msg: "Preparati: al via ripeti i passi mostrati a ritmo!",
       };
+    } else if (normalizedType === "mathsprint") {
+      this.active = {
+        type: "mathsprint",
+        id: config.id || "mg_mathsprint",
+        title: config.title || "OPERAZIONI A TEMPO — PROF. RANALDO",
+        timeLeft: 45 * 60, // frame (45 secondi)
+        target: 12, // operazioni da risolvere per chiudere la sfida
+        solved: 0,
+        streak: 0,
+        bestStreak: 0,
+        wrong: 0,
+        question: null,
+        selected: 0,
+        flashTimer: 0,
+        flashColor: null,
+        doneTimer: 0,
+        msg: "SX/DX scelgono, INVIO conferma. +3s se giusto, -3s se sbagli!",
+      };
+      this.newSprintQuestion();
+    } else if (normalizedType === "soccer") {
+      this.active = {
+        type: "soccer",
+        id: config.id || "mg_soccer",
+        title: config.title || "CALCIO — RIGORI AL CORTILE",
+        goalsNeeded: config.goalsNeeded || 3,
+        scored: 0,
+        attempts: 0,
+        keeperX: 240,
+        keeperDir: 1,
+        keeperY: 96,
+        aim: 2, // 0..2 colonna
+        height: 0, // 0 = basso, 1 = alto
+        ball: null,
+        netShake: 0,
+        flashTimer: 0,
+        flashColor: null,
+        doneTimer: 0,
+        msg: "SU/GIU: altezza | SX/DX: dove mirare | SPAZIO/INVIO: tira!",
+      };
+    } else if (normalizedType === "greek" || normalizedType === "latin" || normalizedType === "history") {
+      const bank =
+        normalizedType === "greek" ? GREEK_QUESTIONS : normalizedType === "latin" ? LATIN_QUESTIONS : HISTORY_QUESTIONS;
+      const order = bank.map((_, i) => i).sort(() => Math.random() - 0.5).slice(0, 4);
+      this.active = {
+        type: normalizedType,
+        id: config.id || `mg_${normalizedType}`,
+        title:
+          config.title ||
+          (normalizedType === "greek"
+            ? "GRECO — RICONOSCI IL VOCABOLO"
+            : normalizedType === "latin"
+              ? "LATINO — FORME E CASI"
+              : "STORIA — IL CASARDI E BARLETTA"),
+        bank,
+        order,
+        qIdx: 0,
+        selected: 0,
+        right: 0,
+        wrongCount: 0,
+        timeLeft: 15 * 60,
+        answered: false,
+        answerTimer: 0,
+        wasCorrect: false,
+        doneTimer: 0,
+        msg: "SU/GIU: scegli la risposta | INVIO/SPAZIO: conferma (15s per domanda)",
+      };
     } else if (normalizedType === "firewall") {
       this.active = {
         type: "firewall",
@@ -371,6 +512,9 @@ export class SpecialChallengeManager {
     else if (m.type === "dance") this.updateDance(m, input);
     else if (m.type === "firewall") this.updateFirewall(m, input);
     else if (m.type === "filesorter") this.updateFileSorter(m, input);
+    else if (m.type === "mathsprint") this.updateMathSprint(m, input);
+    else if (m.type === "soccer") this.updateSoccer(m, input);
+    else if (m.type === "greek" || m.type === "latin" || m.type === "history") this.updateCulture(m, input);
   }
 
   // ===========================================================================
@@ -1022,6 +1166,9 @@ export class SpecialChallengeManager {
     else if (m.type === "dance") this.renderDance(ctx, m);
     else if (m.type === "firewall") this.renderFirewall(ctx, m);
     else if (m.type === "filesorter") this.renderFileSorter(ctx, m);
+    else if (m.type === "mathsprint") this.renderMathSprint(ctx, m);
+    else if (m.type === "soccer") this.renderSoccer(ctx, m);
+    else if (m.type === "greek" || m.type === "latin" || m.type === "history") this.renderCulture(ctx, m);
 
     ctx.fillStyle = "#090d1a";
     ctx.fillRect(20, SCREEN_H - 31, SCREEN_W - 40, 17);
@@ -1449,6 +1596,420 @@ export class SpecialChallengeManager {
       ctx.drawImage(this.sprites.characters, pose * 32, 4 * 36, 32, 36, 404, 112 - bob, 32, 36);
     }
     drawPixelTextCentered(ctx, "SALSA", 420, 154, "#f472b6", 1);
+  }
+
+  // ===========================================================================
+  // 8. OPERAZIONI A TEMPO — PROF. RANALDO (calcolo mentale, matematica)
+  // ===========================================================================
+  newSprintQuestion() {
+    const m = this.active;
+    if (!m || m.type !== "mathsprint") return;
+    const op = MATH_SPRINT_OPERATIONS[Math.floor(Math.random() * MATH_SPRINT_OPERATIONS.length)];
+    let a = 2 + Math.floor(Math.random() * 12);
+    let b = 2 + Math.floor(Math.random() * 9);
+    if (op === "×") {
+      a = 2 + Math.floor(Math.random() * 9);
+      b = 2 + Math.floor(Math.random() * 8);
+    }
+    // per la sottrazione tengo il risultato sempre positivo (è calcolo mentale, non tranelli)
+    if (op === "-" && b > a) [a, b] = [b, a];
+    const answer = op === "+" ? a + b : op === "-" ? a - b : a * b;
+    const distractors = new Set([answer]);
+    const offsets = [1, -1, 2, -2, 3, -3, 5, -5, 10, -10];
+    while (distractors.size < 4) {
+      const cand = answer + offsets[Math.floor(Math.random() * offsets.length)];
+      if (cand >= 0) distractors.add(cand);
+    }
+    const opts = Array.from(distractors).sort(() => Math.random() - 0.5);
+    m.question = { a, b, op, answer, options: opts };
+    m.selected = 0;
+  }
+
+  updateMathSprint(m, input) {
+    if (m.flashTimer > 0) m.flashTimer--;
+    if (m.doneTimer > 0) {
+      m.doneTimer--;
+      if (m.doneTimer === 0) {
+        const passed = m.solved >= m.target;
+        if (passed) {
+          this.state.modifyTrust("ranaldo", 10);
+          this.state.data.eipassScore = Math.min(100, this.state.data.eipassScore + 6);
+          this.state.pushConsequence(`Operazioni a tempo: ${m.solved} risolte col Prof. Ranaldo`, "#e5a92b");
+        }
+        this.finish(passed);
+      }
+      return;
+    }
+    if (!m.question) {
+      this.newSprintQuestion();
+      return;
+    }
+
+    m.timeLeft--;
+    if (m.timeLeft <= 0) {
+      m.timeLeft = 0;
+      m.msg = `TEMPO SCADUTO! ${m.solved} operazioni risolte.`;
+      this.audio.playSfx("wrong");
+      m.doneTimer = 40;
+      return;
+    }
+
+    if (input.left || input.leftPressed) {
+      if (input.leftPressed) {
+        m.selected = (m.selected + 3) % 4;
+        this.audio.playSfx("blip", 340);
+      }
+    }
+    if (input.rightPressed) {
+      m.selected = (m.selected + 1) % 4;
+      this.audio.playSfx("blip", 380);
+    }
+    if (input.upPressed) {
+      m.selected = (m.selected + 3) % 4;
+      this.audio.playSfx("blip", 360);
+    }
+    if (input.downPressed) {
+      m.selected = (m.selected + 1) % 4;
+      this.audio.playSfx("blip", 360);
+    }
+    if (input.numberPressed >= 1 && input.numberPressed <= 4) {
+      m.selected = input.numberPressed - 1;
+      this.submitSprint(m);
+      return;
+    }
+    if (input.confirmPressed || input.jumpPressed) this.submitSprint(m);
+  }
+
+  submitSprint(m) {
+    const q = m.question;
+    if (!q) return;
+    const picked = q.options[m.selected];
+    if (picked === q.answer) {
+      m.solved++;
+      m.streak++;
+      m.bestStreak = Math.max(m.bestStreak, m.streak);
+      m.timeLeft = Math.min(60 * 60, m.timeLeft + 3 * 60); // +3 secondi
+      m.flashColor = "#14532d";
+      m.flashTimer = 10;
+      this.audio.playSfx("correct");
+      m.msg = `GIUSTO! ${q.a} ${q.op} ${q.b} = ${q.answer} • +3s (serie ${m.streak})`;
+      if (m.solved >= m.target) {
+        m.msg = `OBIETTIVO! ${m.solved} operazioni in poco più di mezzo minuto!`;
+        m.doneTimer = 40;
+        this.audio.playSfx("pegaso");
+        return;
+      }
+    } else {
+      m.wrong++;
+      m.streak = 0;
+      m.timeLeft = Math.max(0, m.timeLeft - 3 * 60); // -3 secondi
+      m.flashColor = "#7f1d1d";
+      m.flashTimer = 10;
+      this.audio.playSfx("wrong");
+      m.msg = `Sbagliato: ${q.a} ${q.op} ${q.b} = ${q.answer}. -3s, riprova!`;
+    }
+    this.newSprintQuestion();
+  }
+
+  renderMathSprint(ctx, m) {
+    ctx.fillStyle = m.flashTimer > 0 && m.flashColor ? m.flashColor : "#0f172a";
+    ctx.fillRect(24, 40, SCREEN_W - 48, 184);
+
+    // Cronometro a barra + secondi
+    const pct = Math.max(0, Math.min(1, m.timeLeft / (60 * 60)));
+    ctx.fillStyle = "#1e293b";
+    ctx.fillRect(34, 46, 300, 8);
+    ctx.fillStyle = pct > 0.35 ? "#4ade80" : "#ef4444";
+    ctx.fillRect(34, 46, Math.round(300 * pct), 8);
+    drawPixelText(ctx, `TEMPO ${(m.timeLeft / 60).toFixed(1)}s`, 342, 46, pct > 0.35 ? "#bbf7d0" : "#fecaca", 1);
+    drawPixelText(ctx, `RISOLTE: ${m.solved}/${m.target}  ERRORI: ${m.wrong}  SERIE: ${m.streak}`, 34, 60, "#fde047", 1);
+
+    const q = m.question;
+    if (!q) return;
+    drawPixelTextCentered(ctx, `${q.a} ${q.op} ${q.b} = ?`, SCREEN_W / 2, 80, "#ffffff", 2);
+
+    q.options.forEach((opt, i) => {
+      const ox = 60 + (i % 2) * 190;
+      const oy = 112 + Math.floor(i / 2) * 40;
+      const sel = i === m.selected;
+      drawPixelPanel(ctx, ox, oy, 170, 30, sel ? "#0369a1" : "#162038", sel ? "#ffd147" : "#475569", "#0f172a");
+      drawPixelText(ctx, `[${i + 1}] ${opt}`, ox + 10, oy + 11, sel ? "#ffffff" : "#cbd5e1", 1);
+    });
+
+    if (this.sprites && this.sprites.characters) {
+      // Prof. Ranaldo (riga 0) in posa determinata: controlla i calcoli
+      ctx.drawImage(this.sprites.characters, 10 * 32, 0, 32, 36, 414, 96, 32, 36);
+    }
+    drawPixelText(ctx, "RANALDO", 408, 134, "#e5a92b", 1);
+  }
+
+  // ===========================================================================
+  // 9. CALCIO — RIGORI AL CORTILE (sfida libera: non è l'abilità di un eroe)
+  // ===========================================================================
+  updateSoccer(m, input) {
+    if (m.flashTimer > 0) m.flashTimer--;
+    if (m.netShake > 0) m.netShake--;
+
+    if (m.doneTimer > 0) {
+      m.doneTimer--;
+      if (m.doneTimer === 0) {
+        this.state.pushConsequence(`Rigori al cortile: ${m.scored}/${m.goalsNeeded} gol`, "#4ade80");
+        this.state.data.score += 200;
+        this.finish(m.scored >= m.goalsNeeded);
+      }
+      return;
+    }
+
+    // Portiere mobile: oscilla tra i pali e si abbassa/alza
+    m.keeperX += m.keeperDir * 1.35;
+    if (m.keeperX < 150 || m.keeperX > 330) m.keeperDir *= -1;
+    m.keeperY += (m.ball ? 0.9 : 0.45) * (m.keeperY > 112 ? -1 : 1);
+    if (m.keeperY < 84) m.keeperY = 84;
+    if (m.keeperY > 124) m.keeperY = 124;
+
+    if (m.restTimer > 0) {
+      m.restTimer--;
+      return;
+    }
+
+    if (!m.ball) {
+      // SX/DX "a scatti" (una pressione = una colonna) oppure tenuti per scorrere
+      if (input.upPressed) m.height = 1;
+      if (input.downPressed) m.height = 0;
+      if (input.leftPressed) m.aim = Math.max(0, m.aim - 1);
+      if (input.rightPressed) m.aim = Math.min(2, m.aim + 1);
+      if (input.left && !input.leftPressed && ++m.aimHold % 14 === 0) m.aim = Math.max(0, m.aim - 1);
+      if (input.right && !input.rightPressed && ++m.aimHold2 % 14 === 0) m.aim = Math.min(2, m.aim + 1);
+      if (input.confirmPressed || input.jumpPressed || input.specialPressed) {
+        m.attempts++;
+        const targetX = 168 + m.aim * 72; // tre colonne della porta
+        const targetY = m.height === 1 ? 88 : 116;
+        m.ball = { x: 240, y: 196, tx: targetX, ty: targetY, t: 0, resolved: false };
+        this.audio.playSfx("football_kick");
+      }
+      return;
+    }
+
+    const b = m.ball;
+    b.t += 0.055;
+    const t = Math.min(1, b.t);
+    b.x = 240 + (b.tx - 240) * t;
+    b.y = 196 + (b.ty - 196) * t - Math.sin(t * Math.PI) * 26;
+
+    if (t >= 1 && !b.resolved) {
+      b.resolved = true;
+      const savedByKeeper = Math.abs(b.tx - m.keeperX) < 40 && Math.abs(b.ty - m.keeperY) < 26;
+      const out = b.tx < 150 || b.tx > 336;
+      if (savedByKeeper || out) {
+        this.audio.playSfx("wrong");
+        m.flashColor = "#7f1d1d";
+        m.flashTimer = 12;
+        m.msg = out ? "FUORI! La mira era troppo larga: riprova." : "PARATA! Il portiere ha letto il tiro: cambia angolo.";
+      } else {
+        m.scored++;
+        m.netShake = 16;
+        m.flashColor = "#14532d";
+        m.flashTimer = 12;
+        this.audio.playSfx("goal");
+        m.msg = `GOL! ${m.scored}/${m.goalsNeeded} — ${SOCCER_GOAL_LABELS[m.height === 1 ? m.aim : 3 + m.aim]}`;
+      }
+      m.ball = null;
+      m.flashTimer = Math.max(m.flashTimer, 12);
+      m.restTimer = 50; // mezzo secondo per leggere l'esito prima del tiro successivo
+      if (m.scored >= m.goalsNeeded) {
+        m.msg = `TRE GOL! Rete del cortile riattivata in ${m.attempts} tiri.`;
+        m.doneTimer = 34;
+      }
+    }
+  }
+
+  renderSoccer(ctx, m) {
+    // Cielo del cortile + prato
+    ctx.fillStyle = "#0c1a33";
+    ctx.fillRect(24, 40, SCREEN_W - 48, 76);
+    ctx.fillStyle = "#14532d";
+    ctx.fillRect(24, 116, SCREEN_W - 48, 108);
+    // Linee del campo
+    ctx.fillStyle = "rgba(248,250,252,0.55)";
+    ctx.fillRect(24, 170, SCREEN_W - 48, 2);
+    ctx.beginPath();
+    ctx.arc(240, 140, 26, 0, Math.PI * 2);
+    ctx.strokeStyle = "rgba(248,250,252,0.55)";
+    ctx.stroke();
+
+    // Porta (tre colonne) con rete che trema sul gol
+    const shake = m.netShake > 0 ? (m.netShake % 2 === 0 ? 1 : -1) : 0;
+    ctx.fillStyle = "#e2e8f0";
+    ctx.fillRect(146 + shake, 78, 4, 52);
+    ctx.fillRect(330 + shake, 78, 4, 52);
+    ctx.fillRect(146 + shake, 78, 188, 3);
+    ctx.strokeStyle = "rgba(226,232,240,0.45)";
+    for (let x = 154; x < 330; x += 12) {
+      ctx.beginPath();
+      ctx.moveTo(x + shake, 81);
+      ctx.lineTo(x + shake, 128);
+      ctx.stroke();
+    }
+    for (let y = 88; y < 128; y += 10) {
+      ctx.beginPath();
+      ctx.moveTo(146 + shake, y);
+      ctx.lineTo(334 + shake, y);
+      ctx.stroke();
+    }
+
+    // Portiere
+    ctx.fillStyle = "#facc15";
+    ctx.fillRect(Math.round(m.keeperX) - 7, Math.round(m.keeperY) - 10, 14, 18);
+    ctx.fillStyle = "#0f172a";
+    ctx.fillRect(Math.round(m.keeperX) - 5, Math.round(m.keeperY) - 16, 10, 6);
+
+    // Mirino
+    if (!m.ball) {
+      const tx = 168 + m.aim * 72;
+      const ty = m.height === 1 ? 88 : 116;
+      ctx.strokeStyle = "#ffd147";
+      ctx.strokeRect(tx - 8, ty - 8, 16, 16);
+      drawPixelTextCentered(ctx, m.height === 1 ? "ALTO" : "BASSO", tx, ty + 12, "#ffd147", 1);
+    }
+
+    // Pallone e rigore
+    const bx = Math.round(m.ball ? m.ball.x : 240);
+    const by = Math.round(m.ball ? m.ball.y : 196);
+    ctx.fillStyle = "#090d1a";
+    ctx.fillRect(bx - 5, by - 5, 10, 10);
+    ctx.fillStyle = "#f8fafc";
+    ctx.fillRect(bx - 4, by - 4, 8, 8);
+
+    drawPixelText(ctx, `GOL: ${m.scored}/${m.goalsNeeded}`, 32, 46, "#ffffff", 1);
+    drawPixelText(ctx, `TIRI: ${m.attempts}`, 32, 58, "#cbd5e1", 1);
+    // Il calcio è una sfida LIBERA: in campo c'è un ragazzo del cortile, non un eroe
+    const kidX = 404;
+    ctx.fillStyle = "#090d1a";
+    ctx.fillRect(kidX - 1, 190, 26, 30);
+    ctx.fillStyle = "#22c55e"; // maglietta della squadra del cortile
+    ctx.fillRect(kidX + 4, 198, 16, 14);
+    ctx.fillStyle = "#f1f5f9"; // pantaloncini
+    ctx.fillRect(kidX + 4, 212, 16, 5);
+    ctx.fillStyle = "#e2b08a"; // testa
+    ctx.fillRect(kidX + 8, 189, 8, 8);
+    ctx.fillStyle = "#3b2416"; // capelli
+    ctx.fillRect(kidX + 8, 187, 8, 3);
+    ctx.fillStyle = "#fbbf24"; // scarpini
+    ctx.fillRect(kidX + 4, 217, 6, 3);
+    ctx.fillRect(kidX + 14, 217, 6, 3);
+    drawPixelText(ctx, "RAGAZZI", kidX - 8, 226, "#86efac", 1);
+  }
+
+  // ===========================================================================
+  // 10. SFIDE CULTURALI LIBERE — GRECO / LATINO / STORIA (Liceo Classico)
+  // ===========================================================================
+  updateCulture(m, input) {
+    if (m.answered) {
+      m.answerTimer--;
+      if (m.answerTimer <= 0) {
+        m.answered = false;
+        m.qIdx++;
+        m.selected = 0;
+        m.timeLeft = 15 * 60;
+        if (m.qIdx >= m.order.length) {
+          m.msg = `Sfida completata: ${m.right}/${m.order.length} risposte corrette.`;
+          m.doneTimer = 40;
+        } else {
+          m.msg = "SU/GIU: scegli la risposta | INVIO: conferma (15s per domanda)";
+        }
+      }
+      return;
+    }
+    if (m.doneTimer > 0) {
+      m.doneTimer--;
+      if (m.doneTimer === 0) {
+        const label = m.type === "greek" ? "Greco" : m.type === "latin" ? "Latino" : "Storia";
+        this.state.data.eipassScore = Math.min(100, this.state.data.eipassScore + m.right * 2);
+        this.state.pushConsequence(`Sfida di ${label}: ${m.right}/${m.order.length} corrette`, "#38e2d8");
+        this.finish(m.right >= 3);
+      }
+      return;
+    }
+
+    const q = m.bank[m.order[m.qIdx]];
+    if (!q) return;
+
+    m.timeLeft--;
+    if (m.timeLeft <= 0) {
+      m.wasCorrect = false;
+      m.wrongCount++;
+      m.answered = true;
+      m.answerTimer = 70;
+      m.msg = `Tempo scaduto! Risposta giusta: ${q.options[q.correct]}`;
+      this.audio.playSfx("wrong");
+      return;
+    }
+
+    if (input.upPressed) {
+      m.selected = (m.selected + q.options.length - 1) % q.options.length;
+      this.audio.playSfx("blip", 340);
+    }
+    if (input.downPressed) {
+      m.selected = (m.selected + 1) % q.options.length;
+      this.audio.playSfx("blip", 360);
+    }
+    if (input.numberPressed >= 1 && input.numberPressed <= q.options.length) {
+      m.selected = input.numberPressed - 1;
+    }
+    if (input.confirmPressed || input.jumpPressed) {
+      m.wasCorrect = m.selected === q.correct;
+      if (m.wasCorrect) {
+        m.right++;
+        this.audio.playSfx("correct");
+        m.msg = `Esatto! ${q.hint}`;
+      } else {
+        m.wrongCount++;
+        this.audio.playSfx("wrong");
+        m.msg = `Non ci siamo: la risposta è "${q.options[q.correct]}". ${q.hint}`;
+      }
+      m.answered = true;
+      m.answerTimer = 80;
+    }
+  }
+
+  renderCulture(ctx, m) {
+    ctx.fillStyle = "#0f172a";
+    ctx.fillRect(24, 40, SCREEN_W - 48, 184);
+
+    // Intestazione della materia con colore dedicato
+    const accent = m.type === "greek" ? "#38bdf8" : m.type === "latin" ? "#f472b6" : "#fde047";
+    drawPixelPanel(ctx, 32, 44, SCREEN_W - 64, 18, "#131d36", accent, "#0f172a");
+    const subjectLabel =
+      m.type === "greek" ? "GRECO • LINGUA E CIVILTA" : m.type === "latin" ? "LATINO • MORFOLOGIA E CASI" : "STORIA • IL CASARDI E BARLETTA";
+    drawPixelText(ctx, subjectLabel, 40, 49, accent, 1);
+    drawPixelText(ctx, `${Math.min(m.qIdx + 1, m.order.length)}/${m.order.length}`, 404, 49, "#cbd5e1", 1);
+
+    const q = m.bank[m.order[m.qIdx]];
+    if (!q) return;
+
+    // Barra del tempo (15 secondi)
+    const pct = Math.max(0, Math.min(1, m.timeLeft / (15 * 60)));
+    ctx.fillStyle = "#1e293b";
+    ctx.fillRect(34, 66, 300, 5);
+    ctx.fillStyle = pct > 0.34 ? accent : "#ef4444";
+    ctx.fillRect(34, 66, Math.round(300 * pct), 5);
+    drawPixelText(ctx, `${(m.timeLeft / 60).toFixed(1)}s`, 342, 64, "#cbd5e1", 1);
+
+    // Parola/domanda
+    drawPixelText(ctx, fitPixelText(q.word, 420, 1, 2)[0], 40, 78, "#ffffff", 2);
+    const qLines = wrapCulture(q.q, 420);
+    qLines.slice(0, 2).forEach((ln, i) => drawPixelText(ctx, ln, 40, 102 + i * 10, "#bae6fd", 1));
+
+    // Opzioni
+    q.options.forEach((opt, i) => {
+      const oy = 130 + i * 20;
+      const sel = i === m.selected;
+      const reveal = m.answered && i === q.correct;
+      const bg = reveal ? "#14532d" : sel ? "#0369a1" : "#162038";
+      const brd = reveal ? "#4ade80" : sel ? "#ffd147" : "#475569";
+      drawPixelPanel(ctx, 36, oy, SCREEN_W - 72, 17, bg, brd, "#0f172a");
+      drawPixelText(ctx, `[${i + 1}] ${fitPixelText(opt, SCREEN_W - 108, 1, 1)[0]}`, 44, oy + 5, sel && !m.answered ? "#ffffff" : "#e2e8f0", 1);
+    });
   }
 
   renderFirewall(ctx, m) {

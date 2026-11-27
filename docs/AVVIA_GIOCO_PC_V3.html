@@ -814,7 +814,7 @@ const CHARACTERS = {
 // ORDINE UFFICIALE DEI 5 SLOT (identico a: tasti 1-5, pillole mobile, striscia eroi e pausa)
 // 1 Carlo · 2 Ranaldo · 3 Daniele · 4 Ruggero · 5 Francesco
 /** Versione del gioco: UNICA fonte di verità, mostrata nel marquee del titolo (§2.4). */
-const GAME_VERSION = "v3.0.8";
+const GAME_VERSION = "v3.1.0";
 const CHAR_ORDER = ["carlo", "ranaldo", "daniele", "ruggero", "francesco"];
 /**
  * Ordine BASE delle pillole eroe e dei tasti 1-5 (§1.10 della review).
@@ -1322,6 +1322,7 @@ const TRACKS = {
   // 1. TEMA PRINCIPALE — Luminoso, cantabile, apertura A + sviluppo B
   main: {
     bpm: 136,
+    pad: true,
     leadWave: "square",
     harmWave: "triangle",
     lead: [
@@ -1394,6 +1395,7 @@ const TRACKS = {
   // 3. LABORATORIO MULTIMEDIALE — Ritmato, pulito, mai stridente
   lab: {
     bpm: 126,
+    arp: true,
     leadWave: "square",
     harmWave: "triangle",
     lead: [
@@ -1420,6 +1422,7 @@ const TRACKS = {
   // 4. CORTILE & PISTA ATLETICA — Energico, slanciato, richiama il motivo del Casardi nella sezione B
   sports: {
     bpm: 144,
+    arp: true,
     leadWave: "square",
     harmWave: "square",
     lead: [
@@ -1446,6 +1449,7 @@ const TRACKS = {
   // 5. BIBLIOTECA & PEGASO — Intimo, contrappuntistico, cameristico
   library: {
     bpm: 110,
+    pad: true,
     leadWave: "triangle",
     harmWave: "square",
     lead: [
@@ -1547,9 +1551,86 @@ const TRACKS = {
     drums: "KhSKKhSKKhSKKSSS",
   },
 
+  // 6D. CORTILE SPORTIVO (basket & atletica) — energica, giocosa, sincopata
+  courtyard: {
+    bpm: 150,
+    pad: true, arp: true,
+    leadWave: "square",
+    harmWave: "triangle",
+    lead: [
+      "G4", "G4", "C5", "-", "E5", "-", "D5", "C5",  "A4", "-", "C5", "-", "G4", "-", "-", "R",
+      "A4", "A4", "D5", "-", "F5", "-", "E5", "D5",  "B4", "-", "D5", "-", "A4", "-", "-", "R",
+      "C5", "E5", "G5", "-", "A5", "-", "G5", "E5",  "F5", "-", "E5", "-", "D5", "-", "C5", "-",
+      "D5", "E5", "F5", "G5", "A5", "G5", "E5", "C5",  "D5", "-", "G4", "C5", "C5", "-", "-", "R",
+    ],
+    harm: [
+      "E4", "G4", "C5", "G4", "E4", "G4", "C5", "G4",  "F4", "A4", "C5", "A4", "E4", "G4", "C5", "G4",
+      "F4", "A4", "D5", "A4", "F4", "A4", "D5", "A4",  "G4", "B4", "D5", "B4", "F4", "A4", "D5", "A4",
+      "E4", "G4", "C5", "E5", "C5", "G4", "E4", "G4",  "A4", "C5", "F4", "A4", "G4", "B4", "D5", "G4",
+      "F4", "A4", "C5", "F4", "E4", "G4", "C5", "E4",  "G4", "-", "E4", "C4", "E4", "-", "-", "R",
+    ],
+    bass: [
+      "C3", "-", "G2", "-", "C3", "-", "E3", "-",  "F2", "-", "C3", "-", "G2", "-", "B2", "-",
+      "D3", "-", "A2", "-", "D3", "-", "F2", "-",  "G2", "-", "D3", "-", "G2", "-", "B2", "-",
+      "C3", "-", "C3", "E3", "F2", "-", "F2", "A2",  "D3", "-", "D3", "F3", "G2", "-", "G2", "B2",
+      "F2", "-", "F2", "A2", "C3", "-", "G2", "C3",  "G2", "-", "C3", "-", "C3", "-", "-", "R",
+    ],
+    drums: "KhSKKhSKKhSKKShS",
+  },
+
+  // 6E. AULA MAGNA — solenne e teatrale (palco, pianoforte a coda, busti)
+  aulamagna: {
+    bpm: 120,
+    pad: true,
+    leadWave: "triangle",
+    harmWave: "triangle",
+    lead: [
+      "C5", "-", "E5", "G5", "-", "E5", "C5", "-",  "D5", "-", "F5", "A5", "-", "F5", "D5", "-",
+      "E5", "-", "G5", "C6", "-", "G5", "E5", "-",  "F5", "E5", "D5", "B4", "G4", "-", "-", "R",
+      "C5", "-", "G4", "A4", "E5", "-", "D5", "C5",  "A5", "-", "G5", "E5", "D5", "-", "C5", "-",
+      "F5", "-", "E5", "D5", "G5", "-", "B4", "-",  "C5", "-", "G4", "C5", "C5", "-", "-", "R",
+    ],
+    harm: [
+      "G4", "C5", "E4", "G4", "C5", "E4", "G4", "C5",  "A4", "D5", "F4", "A4", "D5", "F4", "A4", "D5",
+      "C5", "E4", "G4", "C5", "E4", "G4", "C5", "E4",  "F4", "A4", "D5", "B4", "D4", "G4", "B4", "D4",
+      "E4", "G4", "C5", "E4", "G4", "C5", "E4", "G4",  "C5", "E5", "G4", "C5", "A4", "C5", "E4", "G4",
+      "A4", "C5", "F4", "A4", "B4", "D5", "G4", "B4",  "E4", "G4", "D4", "G4", "E4", "-", "-", "R",
+    ],
+    bass: [
+      "C3", "-", "C4", "-", "A2", "-", "A3", "-",  "D3", "-", "D4", "-", "G2", "-", "G3", "-",
+      "C3", "-", "C4", "-", "E3", "-", "E2", "-",  "F2", "-", "F3", "-", "G2", "-", "G3", "-",
+      "C3", "-", "C4", "-", "A2", "-", "A3", "-",  "F2", "-", "F3", "-", "C3", "-", "G2", "-",
+      "F2", "-", "A2", "-", "G2", "-", "B2", "-",  "C3", "-", "G2", "C3", "C3", "-", "-", "R",
+    ],
+    drums: "K.h.S.h.K.h.S.h.",
+  },
+
+  // 8. STUDIO / SFIDE CULTURALI (greco, latino, storia, operazioni a tempo):
+  //    tempo lento, clavicembalo, atmosfera da biblioteca antica.
+  study: {
+    bpm: 104,
+    pad: true,
+    leadWave: "square",
+    harmWave: "sine",
+    lead: [
+      "A4", "-", "C5", "-", "E5", "-", "D5", "-",  "C5", "-", "A4", "-", "G4", "-", "-", "R",
+      "F4", "-", "A4", "-", "D5", "-", "C5", "-",  "A4", "-", "G4", "-", "E4", "-", "-", "R",
+    ],
+    harm: [
+      "C5", "E5", "A4", "C5", "E4", "A4", "F4", "A4",  "E4", "G4", "C5", "E5", "C5", "G4", "E4", "G4",
+      "A4", "C5", "F4", "A4", "D5", "F4", "A4", "D5",  "C5", "E4", "G4", "B4", "G4", "E4", "C4", "E4",
+    ],
+    bass: [
+      "A2", "-", "-", "E2", "F2", "-", "-", "C3",  "C3", "-", "-", "G2", "E2", "-", "-", "R",
+      "F2", "-", "-", "C3", "D3", "-", "-", "A2",  "E2", "-", "G2", "-", "C3", "-", "-", "R",
+    ],
+    drums: "K...h.K...h.",
+  },
+
   // 7. VITTORIA & EPILOGO A 5 VOCI — Risoluzione calda del Motivo del Casardi
   victory: {
     bpm: 132,
+    pad: true,
     leadWave: "square",
     harmWave: "triangle",
     lead: [
@@ -1740,6 +1821,12 @@ class ChiptuneAudioEngine {
       this.scheduleVoiceNote(track.lead, idx, this.nextStepTime, stepDur, track.leadWave, 0.23);
       this.scheduleVoiceNote(track.harm, idx, this.nextStepTime, stepDur, track.harmWave, 0.13);
       this.scheduleVoiceNote(track.bass, idx, this.nextStepTime, stepDur, "triangle", 0.33);
+      // v3.1 — due strumenti in più per una colonna sonora meno "beep":
+      // pad lungo (4a voce, regge l'accordo) e arpeggio di ottavi (movimento).
+      // Sono opzionali e attivi per traccia (pad: true / arp: true), quindi le
+      // tracce esistenti non cambiano di una nota.
+      if (track.pad) this.schedulePadNote(track.harm, idx, this.nextStepTime, stepDur);
+      if (track.arp) this.scheduleArpeggio(track, idx, this.nextStepTime, stepDur);
       this.scheduleDrum(track.drums[idx % track.drums.length], this.nextStepTime);
 
       this.nextStepTime += stepDur;
@@ -1773,6 +1860,60 @@ class ChiptuneAudioEngine {
     g.connect(this.musicGain);
     osc.start(time);
     osc.stop(time + dur + 0.01);
+  }
+
+  /** Pad armonico: accordo tenuto e morbido (2 oscillatori leggermente scordati). */
+  schedulePadNote(seq, idx, time, stepDur) {
+    const token = seq[idx];
+    if (!token || token === "-" || token === "R") return;
+    const freq = NOTE_HZ[token];
+    if (!freq) return;
+    let hold = 1;
+    while (idx + hold < seq.length && seq[idx + hold] === "-") hold++;
+    const dur = stepDur * hold * 2.2; // il pad "sborda" dolcemente sotto la melodia
+    const g = this.ctx.createGain();
+    g.gain.setValueAtTime(0.0001, time);
+    g.gain.linearRampToValueAtTime(0.055, time + dur * 0.35);
+    g.gain.linearRampToValueAtTime(0.0001, time + dur);
+    g.connect(this.musicGain);
+    for (const detune of [-6, 6]) {
+      const osc = this.ctx.createOscillator();
+      osc.type = "sawtooth";
+      osc.frequency.setValueAtTime(freq, time);
+      osc.detune.setValueAtTime(detune, time);
+      const lp = this.ctx.createBiquadFilter();
+      lp.type = "lowpass";
+      lp.frequency.setValueAtTime(1400, time);
+      osc.connect(lp);
+      lp.connect(g);
+      osc.start(time);
+      osc.stop(time + dur + 0.02);
+    }
+  }
+
+  /** Arpeggio di ottavi costruito sull'accordo del basso: dà movimento ritmico. */
+  scheduleArpeggio(track, idx, time, stepDur) {
+    const bass = track.bass[idx];
+    if (!bass || bass === "-" || bass === "R") return;
+    const freq = NOTE_HZ[bass];
+    if (!freq) return;
+    // terza e quinta prendendo l'armonia corrente come riferimento
+    const harm = NOTE_HZ[track.harm[idx]] || freq * 2;
+    const pattern = [freq * 2, harm, freq * 4, harm];
+    pattern.forEach((f, i) => {
+      const t = time + i * (stepDur / 2);
+      const osc = this.ctx.createOscillator();
+      const g = this.ctx.createGain();
+      osc.type = "square";
+      osc.frequency.setValueAtTime(f, t);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.linearRampToValueAtTime(0.038, t + 0.006);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + stepDur * 0.4);
+      osc.connect(g);
+      g.connect(this.musicGain);
+      osc.start(t);
+      osc.stop(t + stepDur * 0.45);
+    });
   }
 
   scheduleDrum(symbol, time) {
@@ -3098,45 +3239,45 @@ const DIALOGUES = {
       {
         speaker: "carlo",
         expr: 2,
-        text: "Prof, guardi il pannello all'ingresso: il controllo accessi si è riavviato da solo e sugli schermi interni girano avvisi che non vengono dalla segreteria.",
+        text: "Prof, il controllo accessi si è riavviato da solo e sugli schermi girano avvisi che non vengono dalla segreteria.",
       },
       {
         speaker: "ranaldo",
         expr: 3,
-        text: "Manca poco all'arrivo delle famiglie per l'Open Day. Niente panico, Carlo: prima capiamo da dove è entrato il blocco, poi interveniamo.",
+        text: "Mancano dieci minuti all'Open Day. Niente panico: prima capiamo da dove è entrato, poi interveniamo.",
       },
       {
         speaker: "sofista",
         expr: 0,
-        text: "Non mi è servito forzare nessuna serratura. È bastato un allegato con scritto 'Orario definitivo' e qualcuno lo ha aperto senza guardare il mittente.",
+        text: "Non ho forzato nessuna serratura: è bastato un allegato con scritto 'Orario definitivo'.",
       },
       {
         speaker: "carlo",
         expr: 4,
-        text: "Daniele e Ruggero sono già al primo piano e Francesco stava preparando il laboratorio multimediale. Se sblocchiamo il portone possiamo raggiungerli.",
+        text: "Daniele e Ruggero sono al primo piano, Francesco in laboratorio. Sblocchiamo il portone e li raggiungiamo.",
       },
       {
         speaker: "ranaldo",
         expr: 4,
-        text: "Scegli tu come procedere qui fuori, Carlo.",
+        text: "Come procediamo, Carlo?",
         choiceId: "od_entry_choice",
         choices: [
           {
-            label: "Controlliamo il registro degli accessi prima di aprire (+Scudo)",
+            label: "Controllo il registro accessi prima di aprire (+Scudo)",
             summary: "Verifica preliminare del registro accessi col Prof. Ranaldo",
             effects: { trust: { ranaldo: 10, carlo: 5, daniele: 5 }, shieldDelta: 1, eipassDelta: 6, flagValue: "logic" },
             worldAction: "open_shortcut_gate",
             next: 5,
           },
           {
-            label: "Attivo il sensore alto della loggia con un tiro da sotto (+Punti)",
+            label: "Attivo il sensore alto con un tiro (+Punti)",
             summary: "Sblocco manuale del sensore alto dall'esterno",
             effects: { trust: { carlo: 12, ranaldo: 4 }, scoreDelta: 250, flagValue: "basket" },
             worldAction: "spawn_bonus_tokens",
             next: 6,
           },
           {
-            label: "Riavviamo la centralina forzando il blocco (-1 Energia)",
+            label: "Riavvio la centralina alla cieca (-1 Energia)",
             summary: "Riavvio forzato della centralina senza diagnosi",
             effects: { trust: { ranaldo: -7, daniele: -4 }, hpDelta: -1, eipassDelta: -6, flagValue: "rush" },
             worldAction: "spawn_guard_drone",
@@ -3147,19 +3288,19 @@ const DIALOGUES = {
       {
         speaker: "ranaldo",
         expr: 1,
-        text: "Così si lavora: il varco secondario è libero e abbiamo un margine di protezione in più. Alterniamoci pure lungo la salita.",
+        text: "Così si lavora: varco secondario libero e un margine in più. Alterniamoci.",
         end: true,
       },
       {
         speaker: "carlo",
         expr: 1,
-        text: "Preso al primo tentativo. I sensori alti li sblocco io a rimbalzo; quando manca appoggio sul pavimento pensaci lei, Prof.",
+        text: "Preso al primo tentativo. I sensori alti li sblocco io a rimbalzo, lei pensi agli appoggi.",
         end: true,
       },
       {
         speaker: "ranaldo",
         expr: 2,
-        text: "Forzare un riavvio alla cieca ha fatto scattare l'allarme secondario. Andiamo avanti, ma d'ora in poi leggiamo prima di confermare.",
+        text: "Riavvio alla cieca: allarme secondario. Andiamo avanti, ma leggiamo prima di confermare.",
         end: true,
       },
     ],
@@ -3172,7 +3313,7 @@ const DIALOGUES = {
       {
         speaker: "daniele",
         expr: 3,
-        text: "Eccovi! Stavo provando la coreografia per la festa d'istituto, ma la cassa dell'Aula Magna ora sputa fuori un ritmo che non è il nostro: è tutto sfasato di un battito.",
+        text: "Eccovi! Provavo la coreografia, ma la cassa dell'Aula Magna sputa un ritmo sfasato di un battito.",
       },
       {
         speaker: "carlo",
@@ -3182,7 +3323,7 @@ const DIALOGUES = {
       {
         speaker: "daniele",
         expr: 1,
-        text: "Perché il segnale corrotto viaggia sul ritmo. Io ballo salsa e bachata da quando ero piccolo: se tengo io il tempo, il rumore non riesce più a entrare. Datemi una mano sulla sequenza e vi apro il passo.",
+        text: "Il segnale corrotto viaggia sul ritmo. Se tengo io il tempo, il rumore non entra: aiutatemi sulla sequenza.",
         end: true,
       },
     ],
@@ -3195,7 +3336,7 @@ const DIALOGUES = {
       {
         speaker: "ruggero",
         expr: 4,
-        text: "Meno male che siete saliti. Hanno bloccato la rampa verso il cortile e stavo cercando un passaggio libero di corsa.",
+        text: "Meno male che siete saliti. Hanno bloccato la rampa del cortile e stavo cercando un passaggio libero di corsa.",
       },
       {
         speaker: "carlo",
@@ -3205,7 +3346,7 @@ const DIALOGUES = {
       {
         speaker: "ruggero",
         expr: 1,
-        text: "Lasciami tre metri di rincorsa. Se parto in allungo supero gli ostacoli bassi e apro il passaggio verso la pista esterna.",
+        text: "Dammi tre metri di rincorsa: in allungo supero gli ostacoli e apro il passaggio verso la pista.",
         end: true,
       },
     ],
@@ -3218,22 +3359,22 @@ const DIALOGUES = {
       {
         speaker: "francesco",
         expr: 0,
-        text: "Finalmente. Qui nel laboratorio tutte le ventitré postazioni mandavano segnali fuori sincrono sulle tastiere MIDI.",
+        text: "Finalmente. Le ventitré postazioni mandavano segnali fuori sincrono sulle tastiere MIDI.",
       },
       {
         // Daniele entra nel gruppo solo più avanti (od_meet_daniele): qui parla il Prof. Ranaldo.
         speaker: "ranaldo",
         expr: 3,
-        text: "Hanno usato il controller principale per bloccare l'accesso all'Aula Magna e stanno provando a sovrascrivere la cartella condivisa. Il battito che sentite viene da lì.",
+        text: "Il controller principale blocca l'Aula Magna e sta sovrascrivendo la cartella condivisa: il battito viene da lì.",
       },
       {
         speaker: "francesco",
         expr: 4,
-        text: "Prima di sbloccare la tastiera maestra conviene mettere al sicuro i file della giornata. Come procediamo?",
+        text: "Prima di sbloccare la tastiera maestra mettiamo al sicuro i file. Come procediamo?",
         choiceId: "od_lab_backup",
         choices: [
           {
-            label: "Isoliamo la cartella e salviamo copia su unità esterna (+EIPASS)",
+            label: "Isolo la cartella e salvo copia esterna (+EIPASS)",
             summary: "Copia di sicurezza su supporto separato prima del ripristino",
             effects: {
               trust: { francesco: 10, daniele: 10, ranaldo: 8, carlo: 5, ruggero: 4 },
@@ -3244,7 +3385,7 @@ const DIALOGUES = {
             next: 3,
           },
           {
-            label: "Copiamo solo le presentazioni lasciando la rete aperta (-EIPASS)",
+            label: "Copio solo le slide lasciando la rete aperta (-EIPASS)",
             summary: "Salvataggio parziale senza isolamento della rete",
             effects: {
               trust: { francesco: -4, daniele: -6, ranaldo: -5 },
@@ -3260,14 +3401,14 @@ const DIALOGUES = {
       {
         speaker: "francesco",
         expr: 1,
-        text: "Tutto al sicuro. Ora possiamo usare le frequenze di risonanza sui ponti acustici e rimettere in ordine la tastiera principale.",
+        text: "Tutto al sicuro. Ora uso la risonanza sui ponti acustici e rimetto in ordine la tastiera.",
         end: true,
       },
       {
         // Daniele non è ancora stato incontrato in questa zona: la battuta passa a Francesco.
         speaker: "francesco",
         expr: 2,
-        text: "Con la condivisione ancora aperta il blocco si è copiato su un altro nodo, come un errore di accordatura che si propaga a tutta l'orchestra. Chiudiamo subito dalla tastiera.",
+        text: "Con la condivisione aperta il blocco si è copiato su un altro nodo, come un errore di accordatura. Chiudiamo subito.",
         end: true,
       },
     ],
@@ -3279,17 +3420,17 @@ const DIALOGUES = {
       {
         speaker: "sofista",
         expr: 0,
-        text: "Siete arrivati in Aula Magna. Eppure sapete già come finisce di solito: basta riempire uno schermo di avvisi convincenti e chiunque smette di verificare.",
+        text: "In Aula Magna, come previsto. Basta riempire uno schermo di avvisi convincenti e nessuno verifica più.",
       },
       {
         speaker: "daniele",
         expr: 4,
-        text: "Solo se nessuno legge i dati reali. Il tuo blocco gira su tre livelli di offuscamento, ma un ritmo sbagliato si sente sempre: non è invincibile.",
+        text: "Solo se nessuno legge i dati veri. Tre livelli di offuscamento, ma un ritmo sbagliato si sente.",
       },
       {
         speaker: "francesco",
         expr: 3,
-        text: "E ogni volta che ripeti uno schema lasci una pausa precisa tra un'ondata e l'altra.",
+        text: "E tra un'ondata e l'altra lasci sempre la stessa pausa.",
       },
       {
         speaker: "ruggero",
@@ -3299,7 +3440,7 @@ const DIALOGUES = {
       {
         speaker: "carlo",
         expr: 4,
-        text: "Restiamo lucidi: osserviamo le sue mosse nell'arena di verifica e rispondiamo insieme al momento giusto.",
+        text: "Restiamo lucidi: studiamo le sue mosse e rispondiamo insieme.",
         end: true,
       },
     ],
@@ -3842,6 +3983,11 @@ const DIALOGUES = {
 
 
 
+/** Spezza una domanda in righe che stanno davvero nel pannello (usato dalle sfide culturali). */
+function wrapCulture(text, maxWidthPx) {
+  return wrapPixelText(text, maxWidthPx, 1, true);
+}
+
 // Allegati realistici: la sicurezza dipende da ORIGINE + CONTESTO + VERA ESTENSIONE, mai dal solo ".pdf" o ".docx"
 const SORT_ITEMS = [
   {
@@ -3920,6 +4066,76 @@ const DEFAULT_PIANO_TIERS = [
       { key: "C5", beats: 2 },
     ],
   },
+];
+
+// ===========================================================================
+// NUOVE SFIDE "CULTURA & SPORT" (v3.1) — libere, non assegnate: greco, latino,
+// storia, calcio + le operazioni a tempo del Prof. Ranaldo (matematica).
+// Il greco, il latino e la storia sono sfide CULTURALI del Liceo Classico:
+// si giocano dal menu pausa ("Sfide Libere") e non appartengono a un eroe.
+// ===========================================================================
+const FREE_CHALLENGES = [
+  {
+    type: "mathsprint",
+    title: "OPERAZIONI A TEMPO — PROF. RANALDO",
+    sub: "Quante ne risolvi in 45 secondi?",
+    desc: "Calcolo mentale sotto pressione: +3 s se indovini, -3 s se sbagli.",
+  },
+  {
+    type: "soccer",
+    title: "CALCIO — RIGORI AL CORTILE",
+    sub: "Portiere mobile, 3 gol per riattivare la rete",
+    desc: "Il calcio è una sfida libera del cortile, non l'abilità di un eroe.",
+  },
+  {
+    type: "greek",
+    title: "GRECO — RICONOSCI IL VOCABOLO",
+    sub: "Parole del Liceo Classico in caratteri traslitterati",
+    desc: "Scegli il significato giusto: 4 domande, 15 secondi ciascuna.",
+  },
+  {
+    type: "latin",
+    title: "LATINO — FORME E CASI",
+    sub: "Declinazioni e casi della prima e seconda",
+    desc: "Trova la forma corretta o il caso giusto in 4 domande a tempo.",
+  },
+  {
+    type: "history",
+    title: "STORIA — IL CASARDI E BARLETTA",
+    sub: "1932, 1937, il Pegaso e la Sede Centrale",
+    desc: "4 domande verificate sull'istituto, con la stessa logica dei quiz EIPASS.",
+  },
+];
+
+const MATH_SPRINT_OPERATIONS = ["+", "-", "×"];
+
+const SOCCER_GOAL_LABELS = ["in alto a sinistra", "in alto al centro", "in alto a destra", "basso a sinistra", "basso al centro", "basso a destra"];
+
+// Banca domande greco: parole traslitterate (il font pixel 8-bit non ha i glifi greci)
+const GREEK_QUESTIONS = [
+  { word: "logos", q: "Che cosa significa LOGOS?", options: ["Parola, discorso, ragione", "Cavallo", "Città", "Guerra"], correct: 0, hint: "Da qui derivano 'logica' e 'dialogo'." },
+  { word: "polis", q: "Che cosa significa POLIS?", options: ["Mare", "Città-stato", "Fiume", "Esercito"], correct: 1, hint: "Da qui 'politica' e 'metropoli'." },
+  { word: "arche", q: "Che cosa significa ARCHE?", options: ["Fine", "Principio, comando", "Numero", "Notte"], correct: 1, hint: "Da qui 'archetipo' e 'monarchia'." },
+  { word: "sophia", q: "Che cosa significa SOPHIA?", options: ["Forza", "Sapienza", "Bellezza", "Velocità"], correct: 1, hint: "Il Sofista Digitale la usa... male." },
+  { word: "demokratia", q: "Che cosa significa DEMOKRATIA?", options: ["Governo di pochi", "Governo del popolo", "Governo dei re", "Assemblea militare"], correct: 1, hint: "demos + kratos." },
+];
+
+// Banca domande latino: forme e casi
+const LATIN_QUESTIONS = [
+  { word: "rosae", q: "ROSAE (genitivo singolare) significa...", options: ["La rosa (soggetto)", "Della rosa", "Alla rosa", "O rosa!"], correct: 1, hint: "Prima declinazione, genitivo in -ae." },
+  { word: "lupus", q: "LUPUS è...", options: ["Nominativo singolare", "Accusativo plurale", "Ablativo singolare", "Genitivo plurale"], correct: 0, hint: "Seconda declinazione, nominativo in -us." },
+  { word: "puero", q: "PUERO (dativo singolare) significa...", options: ["Il ragazzo", "Al ragazzo", "Del ragazzo", "Ragazzo!"], correct: 1, hint: "Dativo in -o, seconda declinazione." },
+  { word: "urbem", q: "URBEM è...", options: ["Nominativo", "Accusativo singolare", "Vocativo", "Ablativo"], correct: 1, hint: "Accusativo in -em, terza declinazione." },
+  { word: "discipulae", q: "DISCIPULAE può essere...", options: ["Genitivo e dativo singolare", "Solo nominativo", "Accusativo plurale", "Verbo"], correct: 0, hint: "Prima declinazione: -ae è genitivo/dativo singolare e nominativo plurale." },
+];
+
+// Banca domande storia: dati già verificati in RICERCA_CASARDI.md
+const HISTORY_QUESTIONS = [
+  { word: "1937", q: "In che anno viene inaugurato l'edificio di Via d'Aragona 100?", options: ["1924", "1932", "1937", "1945"], correct: 2, hint: "Progetto dell'ing. Arturo Boccassini." },
+  { word: "PEGASO", q: "Che cos'è il PEGASO del Casardi?", options: ["Il giornale d'istituto", "Il nome della palestra", "Un laboratorio", "La squadra di basket"], correct: 0, hint: "Le sue pagine sono i collezionabili del gioco." },
+  { word: "23", q: "Quante postazioni ha il Laboratorio Multimediale della Sede Centrale?", options: ["12", "15", "23", "36"], correct: 2, hint: "C'è anche una master keyboard." },
+  { word: "8000", q: "Quanti volumi conta la Biblioteca del Casardi?", options: ["Circa 1.000", "Oltre 8.000", "Circa 500", "Oltre 30.000"], correct: 1, hint: "Dati della brochure ufficiale." },
+  { word: "1924", q: "In che anno nasce il Regio Liceo-Ginnasio di Barletta, poi intitolato ad A. Casardi?", options: ["1861", "1900", "1924", "1932"], correct: 2, hint: "La delibera per l'edificio arriva nel 1932." },
 ];
 
 // ===========================================================================
@@ -4137,6 +4353,72 @@ class SpecialChallengeManager {
         crowd: 0,
         msg: "Preparati: al via ripeti i passi mostrati a ritmo!",
       };
+    } else if (normalizedType === "mathsprint") {
+      this.active = {
+        type: "mathsprint",
+        id: config.id || "mg_mathsprint",
+        title: config.title || "OPERAZIONI A TEMPO — PROF. RANALDO",
+        timeLeft: 45 * 60, // frame (45 secondi)
+        target: 12, // operazioni da risolvere per chiudere la sfida
+        solved: 0,
+        streak: 0,
+        bestStreak: 0,
+        wrong: 0,
+        question: null,
+        selected: 0,
+        flashTimer: 0,
+        flashColor: null,
+        doneTimer: 0,
+        msg: "SX/DX scelgono, INVIO conferma. +3s se giusto, -3s se sbagli!",
+      };
+      this.newSprintQuestion();
+    } else if (normalizedType === "soccer") {
+      this.active = {
+        type: "soccer",
+        id: config.id || "mg_soccer",
+        title: config.title || "CALCIO — RIGORI AL CORTILE",
+        goalsNeeded: config.goalsNeeded || 3,
+        scored: 0,
+        attempts: 0,
+        keeperX: 240,
+        keeperDir: 1,
+        keeperY: 96,
+        aim: 2, // 0..2 colonna
+        height: 0, // 0 = basso, 1 = alto
+        ball: null,
+        netShake: 0,
+        flashTimer: 0,
+        flashColor: null,
+        doneTimer: 0,
+        msg: "SU/GIU: altezza | SX/DX: dove mirare | SPAZIO/INVIO: tira!",
+      };
+    } else if (normalizedType === "greek" || normalizedType === "latin" || normalizedType === "history") {
+      const bank =
+        normalizedType === "greek" ? GREEK_QUESTIONS : normalizedType === "latin" ? LATIN_QUESTIONS : HISTORY_QUESTIONS;
+      const order = bank.map((_, i) => i).sort(() => Math.random() - 0.5).slice(0, 4);
+      this.active = {
+        type: normalizedType,
+        id: config.id || `mg_${normalizedType}`,
+        title:
+          config.title ||
+          (normalizedType === "greek"
+            ? "GRECO — RICONOSCI IL VOCABOLO"
+            : normalizedType === "latin"
+              ? "LATINO — FORME E CASI"
+              : "STORIA — IL CASARDI E BARLETTA"),
+        bank,
+        order,
+        qIdx: 0,
+        selected: 0,
+        right: 0,
+        wrongCount: 0,
+        timeLeft: 15 * 60,
+        answered: false,
+        answerTimer: 0,
+        wasCorrect: false,
+        doneTimer: 0,
+        msg: "SU/GIU: scegli la risposta | INVIO/SPAZIO: conferma (15s per domanda)",
+      };
     } else if (normalizedType === "firewall") {
       this.active = {
         type: "firewall",
@@ -4201,6 +4483,9 @@ class SpecialChallengeManager {
     else if (m.type === "dance") this.updateDance(m, input);
     else if (m.type === "firewall") this.updateFirewall(m, input);
     else if (m.type === "filesorter") this.updateFileSorter(m, input);
+    else if (m.type === "mathsprint") this.updateMathSprint(m, input);
+    else if (m.type === "soccer") this.updateSoccer(m, input);
+    else if (m.type === "greek" || m.type === "latin" || m.type === "history") this.updateCulture(m, input);
   }
 
   // ===========================================================================
@@ -4852,6 +5137,9 @@ class SpecialChallengeManager {
     else if (m.type === "dance") this.renderDance(ctx, m);
     else if (m.type === "firewall") this.renderFirewall(ctx, m);
     else if (m.type === "filesorter") this.renderFileSorter(ctx, m);
+    else if (m.type === "mathsprint") this.renderMathSprint(ctx, m);
+    else if (m.type === "soccer") this.renderSoccer(ctx, m);
+    else if (m.type === "greek" || m.type === "latin" || m.type === "history") this.renderCulture(ctx, m);
 
     ctx.fillStyle = "#090d1a";
     ctx.fillRect(20, SCREEN_H - 31, SCREEN_W - 40, 17);
@@ -5279,6 +5567,420 @@ class SpecialChallengeManager {
       ctx.drawImage(this.sprites.characters, pose * 32, 4 * 36, 32, 36, 404, 112 - bob, 32, 36);
     }
     drawPixelTextCentered(ctx, "SALSA", 420, 154, "#f472b6", 1);
+  }
+
+  // ===========================================================================
+  // 8. OPERAZIONI A TEMPO — PROF. RANALDO (calcolo mentale, matematica)
+  // ===========================================================================
+  newSprintQuestion() {
+    const m = this.active;
+    if (!m || m.type !== "mathsprint") return;
+    const op = MATH_SPRINT_OPERATIONS[Math.floor(Math.random() * MATH_SPRINT_OPERATIONS.length)];
+    let a = 2 + Math.floor(Math.random() * 12);
+    let b = 2 + Math.floor(Math.random() * 9);
+    if (op === "×") {
+      a = 2 + Math.floor(Math.random() * 9);
+      b = 2 + Math.floor(Math.random() * 8);
+    }
+    // per la sottrazione tengo il risultato sempre positivo (è calcolo mentale, non tranelli)
+    if (op === "-" && b > a) [a, b] = [b, a];
+    const answer = op === "+" ? a + b : op === "-" ? a - b : a * b;
+    const distractors = new Set([answer]);
+    const offsets = [1, -1, 2, -2, 3, -3, 5, -5, 10, -10];
+    while (distractors.size < 4) {
+      const cand = answer + offsets[Math.floor(Math.random() * offsets.length)];
+      if (cand >= 0) distractors.add(cand);
+    }
+    const opts = Array.from(distractors).sort(() => Math.random() - 0.5);
+    m.question = { a, b, op, answer, options: opts };
+    m.selected = 0;
+  }
+
+  updateMathSprint(m, input) {
+    if (m.flashTimer > 0) m.flashTimer--;
+    if (m.doneTimer > 0) {
+      m.doneTimer--;
+      if (m.doneTimer === 0) {
+        const passed = m.solved >= m.target;
+        if (passed) {
+          this.state.modifyTrust("ranaldo", 10);
+          this.state.data.eipassScore = Math.min(100, this.state.data.eipassScore + 6);
+          this.state.pushConsequence(`Operazioni a tempo: ${m.solved} risolte col Prof. Ranaldo`, "#e5a92b");
+        }
+        this.finish(passed);
+      }
+      return;
+    }
+    if (!m.question) {
+      this.newSprintQuestion();
+      return;
+    }
+
+    m.timeLeft--;
+    if (m.timeLeft <= 0) {
+      m.timeLeft = 0;
+      m.msg = `TEMPO SCADUTO! ${m.solved} operazioni risolte.`;
+      this.audio.playSfx("wrong");
+      m.doneTimer = 40;
+      return;
+    }
+
+    if (input.left || input.leftPressed) {
+      if (input.leftPressed) {
+        m.selected = (m.selected + 3) % 4;
+        this.audio.playSfx("blip", 340);
+      }
+    }
+    if (input.rightPressed) {
+      m.selected = (m.selected + 1) % 4;
+      this.audio.playSfx("blip", 380);
+    }
+    if (input.upPressed) {
+      m.selected = (m.selected + 3) % 4;
+      this.audio.playSfx("blip", 360);
+    }
+    if (input.downPressed) {
+      m.selected = (m.selected + 1) % 4;
+      this.audio.playSfx("blip", 360);
+    }
+    if (input.numberPressed >= 1 && input.numberPressed <= 4) {
+      m.selected = input.numberPressed - 1;
+      this.submitSprint(m);
+      return;
+    }
+    if (input.confirmPressed || input.jumpPressed) this.submitSprint(m);
+  }
+
+  submitSprint(m) {
+    const q = m.question;
+    if (!q) return;
+    const picked = q.options[m.selected];
+    if (picked === q.answer) {
+      m.solved++;
+      m.streak++;
+      m.bestStreak = Math.max(m.bestStreak, m.streak);
+      m.timeLeft = Math.min(60 * 60, m.timeLeft + 3 * 60); // +3 secondi
+      m.flashColor = "#14532d";
+      m.flashTimer = 10;
+      this.audio.playSfx("correct");
+      m.msg = `GIUSTO! ${q.a} ${q.op} ${q.b} = ${q.answer} • +3s (serie ${m.streak})`;
+      if (m.solved >= m.target) {
+        m.msg = `OBIETTIVO! ${m.solved} operazioni in poco più di mezzo minuto!`;
+        m.doneTimer = 40;
+        this.audio.playSfx("pegaso");
+        return;
+      }
+    } else {
+      m.wrong++;
+      m.streak = 0;
+      m.timeLeft = Math.max(0, m.timeLeft - 3 * 60); // -3 secondi
+      m.flashColor = "#7f1d1d";
+      m.flashTimer = 10;
+      this.audio.playSfx("wrong");
+      m.msg = `Sbagliato: ${q.a} ${q.op} ${q.b} = ${q.answer}. -3s, riprova!`;
+    }
+    this.newSprintQuestion();
+  }
+
+  renderMathSprint(ctx, m) {
+    ctx.fillStyle = m.flashTimer > 0 && m.flashColor ? m.flashColor : "#0f172a";
+    ctx.fillRect(24, 40, SCREEN_W - 48, 184);
+
+    // Cronometro a barra + secondi
+    const pct = Math.max(0, Math.min(1, m.timeLeft / (60 * 60)));
+    ctx.fillStyle = "#1e293b";
+    ctx.fillRect(34, 46, 300, 8);
+    ctx.fillStyle = pct > 0.35 ? "#4ade80" : "#ef4444";
+    ctx.fillRect(34, 46, Math.round(300 * pct), 8);
+    drawPixelText(ctx, `TEMPO ${(m.timeLeft / 60).toFixed(1)}s`, 342, 46, pct > 0.35 ? "#bbf7d0" : "#fecaca", 1);
+    drawPixelText(ctx, `RISOLTE: ${m.solved}/${m.target}  ERRORI: ${m.wrong}  SERIE: ${m.streak}`, 34, 60, "#fde047", 1);
+
+    const q = m.question;
+    if (!q) return;
+    drawPixelTextCentered(ctx, `${q.a} ${q.op} ${q.b} = ?`, SCREEN_W / 2, 80, "#ffffff", 2);
+
+    q.options.forEach((opt, i) => {
+      const ox = 60 + (i % 2) * 190;
+      const oy = 112 + Math.floor(i / 2) * 40;
+      const sel = i === m.selected;
+      drawPixelPanel(ctx, ox, oy, 170, 30, sel ? "#0369a1" : "#162038", sel ? "#ffd147" : "#475569", "#0f172a");
+      drawPixelText(ctx, `[${i + 1}] ${opt}`, ox + 10, oy + 11, sel ? "#ffffff" : "#cbd5e1", 1);
+    });
+
+    if (this.sprites && this.sprites.characters) {
+      // Prof. Ranaldo (riga 0) in posa determinata: controlla i calcoli
+      ctx.drawImage(this.sprites.characters, 10 * 32, 0, 32, 36, 414, 96, 32, 36);
+    }
+    drawPixelText(ctx, "RANALDO", 408, 134, "#e5a92b", 1);
+  }
+
+  // ===========================================================================
+  // 9. CALCIO — RIGORI AL CORTILE (sfida libera: non è l'abilità di un eroe)
+  // ===========================================================================
+  updateSoccer(m, input) {
+    if (m.flashTimer > 0) m.flashTimer--;
+    if (m.netShake > 0) m.netShake--;
+
+    if (m.doneTimer > 0) {
+      m.doneTimer--;
+      if (m.doneTimer === 0) {
+        this.state.pushConsequence(`Rigori al cortile: ${m.scored}/${m.goalsNeeded} gol`, "#4ade80");
+        this.state.data.score += 200;
+        this.finish(m.scored >= m.goalsNeeded);
+      }
+      return;
+    }
+
+    // Portiere mobile: oscilla tra i pali e si abbassa/alza
+    m.keeperX += m.keeperDir * 1.35;
+    if (m.keeperX < 150 || m.keeperX > 330) m.keeperDir *= -1;
+    m.keeperY += (m.ball ? 0.9 : 0.45) * (m.keeperY > 112 ? -1 : 1);
+    if (m.keeperY < 84) m.keeperY = 84;
+    if (m.keeperY > 124) m.keeperY = 124;
+
+    if (m.restTimer > 0) {
+      m.restTimer--;
+      return;
+    }
+
+    if (!m.ball) {
+      // SX/DX "a scatti" (una pressione = una colonna) oppure tenuti per scorrere
+      if (input.upPressed) m.height = 1;
+      if (input.downPressed) m.height = 0;
+      if (input.leftPressed) m.aim = Math.max(0, m.aim - 1);
+      if (input.rightPressed) m.aim = Math.min(2, m.aim + 1);
+      if (input.left && !input.leftPressed && ++m.aimHold % 14 === 0) m.aim = Math.max(0, m.aim - 1);
+      if (input.right && !input.rightPressed && ++m.aimHold2 % 14 === 0) m.aim = Math.min(2, m.aim + 1);
+      if (input.confirmPressed || input.jumpPressed || input.specialPressed) {
+        m.attempts++;
+        const targetX = 168 + m.aim * 72; // tre colonne della porta
+        const targetY = m.height === 1 ? 88 : 116;
+        m.ball = { x: 240, y: 196, tx: targetX, ty: targetY, t: 0, resolved: false };
+        this.audio.playSfx("football_kick");
+      }
+      return;
+    }
+
+    const b = m.ball;
+    b.t += 0.055;
+    const t = Math.min(1, b.t);
+    b.x = 240 + (b.tx - 240) * t;
+    b.y = 196 + (b.ty - 196) * t - Math.sin(t * Math.PI) * 26;
+
+    if (t >= 1 && !b.resolved) {
+      b.resolved = true;
+      const savedByKeeper = Math.abs(b.tx - m.keeperX) < 40 && Math.abs(b.ty - m.keeperY) < 26;
+      const out = b.tx < 150 || b.tx > 336;
+      if (savedByKeeper || out) {
+        this.audio.playSfx("wrong");
+        m.flashColor = "#7f1d1d";
+        m.flashTimer = 12;
+        m.msg = out ? "FUORI! La mira era troppo larga: riprova." : "PARATA! Il portiere ha letto il tiro: cambia angolo.";
+      } else {
+        m.scored++;
+        m.netShake = 16;
+        m.flashColor = "#14532d";
+        m.flashTimer = 12;
+        this.audio.playSfx("goal");
+        m.msg = `GOL! ${m.scored}/${m.goalsNeeded} — ${SOCCER_GOAL_LABELS[m.height === 1 ? m.aim : 3 + m.aim]}`;
+      }
+      m.ball = null;
+      m.flashTimer = Math.max(m.flashTimer, 12);
+      m.restTimer = 50; // mezzo secondo per leggere l'esito prima del tiro successivo
+      if (m.scored >= m.goalsNeeded) {
+        m.msg = `TRE GOL! Rete del cortile riattivata in ${m.attempts} tiri.`;
+        m.doneTimer = 34;
+      }
+    }
+  }
+
+  renderSoccer(ctx, m) {
+    // Cielo del cortile + prato
+    ctx.fillStyle = "#0c1a33";
+    ctx.fillRect(24, 40, SCREEN_W - 48, 76);
+    ctx.fillStyle = "#14532d";
+    ctx.fillRect(24, 116, SCREEN_W - 48, 108);
+    // Linee del campo
+    ctx.fillStyle = "rgba(248,250,252,0.55)";
+    ctx.fillRect(24, 170, SCREEN_W - 48, 2);
+    ctx.beginPath();
+    ctx.arc(240, 140, 26, 0, Math.PI * 2);
+    ctx.strokeStyle = "rgba(248,250,252,0.55)";
+    ctx.stroke();
+
+    // Porta (tre colonne) con rete che trema sul gol
+    const shake = m.netShake > 0 ? (m.netShake % 2 === 0 ? 1 : -1) : 0;
+    ctx.fillStyle = "#e2e8f0";
+    ctx.fillRect(146 + shake, 78, 4, 52);
+    ctx.fillRect(330 + shake, 78, 4, 52);
+    ctx.fillRect(146 + shake, 78, 188, 3);
+    ctx.strokeStyle = "rgba(226,232,240,0.45)";
+    for (let x = 154; x < 330; x += 12) {
+      ctx.beginPath();
+      ctx.moveTo(x + shake, 81);
+      ctx.lineTo(x + shake, 128);
+      ctx.stroke();
+    }
+    for (let y = 88; y < 128; y += 10) {
+      ctx.beginPath();
+      ctx.moveTo(146 + shake, y);
+      ctx.lineTo(334 + shake, y);
+      ctx.stroke();
+    }
+
+    // Portiere
+    ctx.fillStyle = "#facc15";
+    ctx.fillRect(Math.round(m.keeperX) - 7, Math.round(m.keeperY) - 10, 14, 18);
+    ctx.fillStyle = "#0f172a";
+    ctx.fillRect(Math.round(m.keeperX) - 5, Math.round(m.keeperY) - 16, 10, 6);
+
+    // Mirino
+    if (!m.ball) {
+      const tx = 168 + m.aim * 72;
+      const ty = m.height === 1 ? 88 : 116;
+      ctx.strokeStyle = "#ffd147";
+      ctx.strokeRect(tx - 8, ty - 8, 16, 16);
+      drawPixelTextCentered(ctx, m.height === 1 ? "ALTO" : "BASSO", tx, ty + 12, "#ffd147", 1);
+    }
+
+    // Pallone e rigore
+    const bx = Math.round(m.ball ? m.ball.x : 240);
+    const by = Math.round(m.ball ? m.ball.y : 196);
+    ctx.fillStyle = "#090d1a";
+    ctx.fillRect(bx - 5, by - 5, 10, 10);
+    ctx.fillStyle = "#f8fafc";
+    ctx.fillRect(bx - 4, by - 4, 8, 8);
+
+    drawPixelText(ctx, `GOL: ${m.scored}/${m.goalsNeeded}`, 32, 46, "#ffffff", 1);
+    drawPixelText(ctx, `TIRI: ${m.attempts}`, 32, 58, "#cbd5e1", 1);
+    // Il calcio è una sfida LIBERA: in campo c'è un ragazzo del cortile, non un eroe
+    const kidX = 404;
+    ctx.fillStyle = "#090d1a";
+    ctx.fillRect(kidX - 1, 190, 26, 30);
+    ctx.fillStyle = "#22c55e"; // maglietta della squadra del cortile
+    ctx.fillRect(kidX + 4, 198, 16, 14);
+    ctx.fillStyle = "#f1f5f9"; // pantaloncini
+    ctx.fillRect(kidX + 4, 212, 16, 5);
+    ctx.fillStyle = "#e2b08a"; // testa
+    ctx.fillRect(kidX + 8, 189, 8, 8);
+    ctx.fillStyle = "#3b2416"; // capelli
+    ctx.fillRect(kidX + 8, 187, 8, 3);
+    ctx.fillStyle = "#fbbf24"; // scarpini
+    ctx.fillRect(kidX + 4, 217, 6, 3);
+    ctx.fillRect(kidX + 14, 217, 6, 3);
+    drawPixelText(ctx, "RAGAZZI", kidX - 8, 226, "#86efac", 1);
+  }
+
+  // ===========================================================================
+  // 10. SFIDE CULTURALI LIBERE — GRECO / LATINO / STORIA (Liceo Classico)
+  // ===========================================================================
+  updateCulture(m, input) {
+    if (m.answered) {
+      m.answerTimer--;
+      if (m.answerTimer <= 0) {
+        m.answered = false;
+        m.qIdx++;
+        m.selected = 0;
+        m.timeLeft = 15 * 60;
+        if (m.qIdx >= m.order.length) {
+          m.msg = `Sfida completata: ${m.right}/${m.order.length} risposte corrette.`;
+          m.doneTimer = 40;
+        } else {
+          m.msg = "SU/GIU: scegli la risposta | INVIO: conferma (15s per domanda)";
+        }
+      }
+      return;
+    }
+    if (m.doneTimer > 0) {
+      m.doneTimer--;
+      if (m.doneTimer === 0) {
+        const label = m.type === "greek" ? "Greco" : m.type === "latin" ? "Latino" : "Storia";
+        this.state.data.eipassScore = Math.min(100, this.state.data.eipassScore + m.right * 2);
+        this.state.pushConsequence(`Sfida di ${label}: ${m.right}/${m.order.length} corrette`, "#38e2d8");
+        this.finish(m.right >= 3);
+      }
+      return;
+    }
+
+    const q = m.bank[m.order[m.qIdx]];
+    if (!q) return;
+
+    m.timeLeft--;
+    if (m.timeLeft <= 0) {
+      m.wasCorrect = false;
+      m.wrongCount++;
+      m.answered = true;
+      m.answerTimer = 70;
+      m.msg = `Tempo scaduto! Risposta giusta: ${q.options[q.correct]}`;
+      this.audio.playSfx("wrong");
+      return;
+    }
+
+    if (input.upPressed) {
+      m.selected = (m.selected + q.options.length - 1) % q.options.length;
+      this.audio.playSfx("blip", 340);
+    }
+    if (input.downPressed) {
+      m.selected = (m.selected + 1) % q.options.length;
+      this.audio.playSfx("blip", 360);
+    }
+    if (input.numberPressed >= 1 && input.numberPressed <= q.options.length) {
+      m.selected = input.numberPressed - 1;
+    }
+    if (input.confirmPressed || input.jumpPressed) {
+      m.wasCorrect = m.selected === q.correct;
+      if (m.wasCorrect) {
+        m.right++;
+        this.audio.playSfx("correct");
+        m.msg = `Esatto! ${q.hint}`;
+      } else {
+        m.wrongCount++;
+        this.audio.playSfx("wrong");
+        m.msg = `Non ci siamo: la risposta è "${q.options[q.correct]}". ${q.hint}`;
+      }
+      m.answered = true;
+      m.answerTimer = 80;
+    }
+  }
+
+  renderCulture(ctx, m) {
+    ctx.fillStyle = "#0f172a";
+    ctx.fillRect(24, 40, SCREEN_W - 48, 184);
+
+    // Intestazione della materia con colore dedicato
+    const accent = m.type === "greek" ? "#38bdf8" : m.type === "latin" ? "#f472b6" : "#fde047";
+    drawPixelPanel(ctx, 32, 44, SCREEN_W - 64, 18, "#131d36", accent, "#0f172a");
+    const subjectLabel =
+      m.type === "greek" ? "GRECO • LINGUA E CIVILTA" : m.type === "latin" ? "LATINO • MORFOLOGIA E CASI" : "STORIA • IL CASARDI E BARLETTA";
+    drawPixelText(ctx, subjectLabel, 40, 49, accent, 1);
+    drawPixelText(ctx, `${Math.min(m.qIdx + 1, m.order.length)}/${m.order.length}`, 404, 49, "#cbd5e1", 1);
+
+    const q = m.bank[m.order[m.qIdx]];
+    if (!q) return;
+
+    // Barra del tempo (15 secondi)
+    const pct = Math.max(0, Math.min(1, m.timeLeft / (15 * 60)));
+    ctx.fillStyle = "#1e293b";
+    ctx.fillRect(34, 66, 300, 5);
+    ctx.fillStyle = pct > 0.34 ? accent : "#ef4444";
+    ctx.fillRect(34, 66, Math.round(300 * pct), 5);
+    drawPixelText(ctx, `${(m.timeLeft / 60).toFixed(1)}s`, 342, 64, "#cbd5e1", 1);
+
+    // Parola/domanda
+    drawPixelText(ctx, fitPixelText(q.word, 420, 1, 2)[0], 40, 78, "#ffffff", 2);
+    const qLines = wrapCulture(q.q, 420);
+    qLines.slice(0, 2).forEach((ln, i) => drawPixelText(ctx, ln, 40, 102 + i * 10, "#bae6fd", 1));
+
+    // Opzioni
+    q.options.forEach((opt, i) => {
+      const oy = 130 + i * 20;
+      const sel = i === m.selected;
+      const reveal = m.answered && i === q.correct;
+      const bg = reveal ? "#14532d" : sel ? "#0369a1" : "#162038";
+      const brd = reveal ? "#4ade80" : sel ? "#ffd147" : "#475569";
+      drawPixelPanel(ctx, 36, oy, SCREEN_W - 72, 17, bg, brd, "#0f172a");
+      drawPixelText(ctx, `[${i + 1}] ${fitPixelText(opt, SCREEN_W - 108, 1, 1)[0]}`, 44, oy + 5, sel && !m.answered ? "#ffffff" : "#e2e8f0", 1);
+    });
   }
 
   renderFirewall(ctx, m) {
@@ -5753,6 +6455,13 @@ function buildOpenDayLevels() {
     .terminal(60, 15, "qz_phishing_gate", "gate_od1_term")
     .gate(65, 11, 4, "gate_od1_term")
     .addSign(68, 14, "PROF. RANALDO [1] + [X]: Piattaforme paraboliche!")
+    // v3.1 — OPERAZIONI A TEMPO del Prof. Ranaldo: sfida libera, con cancello
+    // opzionale (si apre con la Torre di Hanoi o con [R] se ci si blocca).
+    .minigameStation(71, 15, "mathsprint", { id: "od_mg_math", title: "PROF. RANALDO - OPERAZIONI A TEMPO!" }, "gate_od1_math")
+    .gate(73, 11, 4, "gate_od1_math")
+    // v3.1 — SFIDE CULTURALI LIBERE: greco e storia sui portici d'ingresso
+    .minigameStation(76, 15, "greek", { id: "od_mg_greek", title: "GRECO - RICONOSCI IL VOCABOLO!" })
+    .minigameStation(80, 15, "history", { id: "od_mg_history", title: "STORIA - IL CASARDI E BARLETTA" })
     .pit(70, 5)
     .tokensArc(70, 11, 3)
     .enemy(78, 15, "slime", 3)
@@ -5833,6 +6542,9 @@ function buildOpenDayLevels() {
     .pit(56, 3)
     .spring(60, 14)
     .plat(62, 9, 6)
+    // v3.1 — LATINO e CALCIO come sfide libere del piano terra
+    .minigameStation(58, 15, "latin", { id: "od_mg_latin", title: "LATINO - FORME E CASI!" })
+    .minigameStation(63, 15, "soccer", { id: "od_mg_soccer", title: "CALCIO - RIGORI AL CORTILE!" })
     .minigameStation(66, 15, "dance", { id: "od_mg_dance", title: "DANIELE - SALSA CUBANA SOTTO I PORTICI!" }, "gate_od3_net")
     .gate(71, 11, 4, "gate_od3_net")
     .addSign(70, 14, "Premi [E] sulla Master Keyboard: Enigma di Francesco!")
@@ -5860,7 +6572,7 @@ function buildOpenDayLevels() {
     name: "Aula Magna — Il Palco dell'Open Day",
     subtitle: "Modalità Open Day (4/4) • Sfida Finale al Sofista Digitale!",
     theme: "aulamagna",
-    music: "boss",
+    music: "aulamagna",
     cols: 52,
     rows: 17,
   });
@@ -6128,7 +6840,7 @@ function buildCampaignLevels() {
     name: "Cap. 3.1 — Campo da Basket all'Aperto",
     subtitle: "La Grande Sfida a Canestro di Carlo!",
     theme: "courtyard",
-    music: "sports",
+    music: "courtyard",
     cols: 110,
     rows: 18,
   });
@@ -6167,7 +6879,7 @@ function buildCampaignLevels() {
     name: "Cap. 3.2 — Piazzale Sportivo: Sfida di Ruggero",
     subtitle: "Dribbling, Muri Incrinati e Tiri all'Incrocio!",
     theme: "courtyard",
-    music: "sports",
+    music: "courtyard",
     cols: 112,
     rows: 18,
   });
@@ -6205,7 +6917,7 @@ function buildCampaignLevels() {
     name: "Cap. 3.3 — Palestra Coperta: Riferimenti Assoluti",
     subtitle: "Modulo 6 Foglio di Calcolo & Sinergia Atletica",
     theme: "courtyard",
-    music: "sports",
+    music: "courtyard",
     cols: 106,
     rows: 18,
   });
@@ -6365,7 +7077,7 @@ function buildCampaignLevels() {
     name: "Cap. 5.1 — Sala degli Ottomila Volumi",
     subtitle: "Scalata verticale tra librerie storiche in mogano e busti classici",
     theme: "library",
-    music: "library",
+    music: "study",
     cols: 106,
     rows: 20,
   });
@@ -6399,7 +7111,7 @@ function buildCampaignLevels() {
     name: "Cap. 5.2 — Mediateca e Redazione di Pegaso",
     subtitle: "Modulo 5 PDF/A & Incontro con Sofia nella Redazione!",
     theme: "library",
-    music: "library",
+    music: "study",
     cols: 108,
     rows: 18,
   });
@@ -8716,6 +9428,67 @@ class PixelRenderer {
           ctx.fillStyle = "rgba(70,50,20,0.13)";
           ctx.fillRect(dx + 56, 234, 44, 5);
 
+          // v3.1 — DETTAGLI VERI DEL CORRIDOIO DEL CASARDI:
+          // colonnina con fontanella (quelle di inizio Novecento), cestino,
+          // e una bacheca di istituto con l'avviso dell'Open Day.
+          if (dx % 2 === 0) {
+            // Fontanella a muro in ghisa (resta sopra il battiscopa, y 150-196)
+            ctx.fillStyle = "#8f9aa8";
+            ctx.fillRect(dx + 62, 154, 13, 36); // fusto
+            ctx.fillStyle = "#c3ccd6";
+            ctx.fillRect(dx + 63, 155, 11, 34); // luce sul fusto
+            ctx.fillStyle = "#e2e8f0";
+            ctx.fillRect(dx + 59, 188, 19, 8); // vasca
+            ctx.fillStyle = "#64748b";
+            ctx.fillRect(dx + 59, 194, 19, 2); // bordo vasca
+            ctx.fillStyle = "#475569";
+            ctx.fillRect(dx + 66, 146, 4, 9); // rubinetto a colonna
+            ctx.fillStyle = "#94a3b8";
+            ctx.fillRect(dx + 66, 146, 9, 3);
+            ctx.fillStyle = "rgba(56,189,248,0.55)";
+            ctx.fillRect(dx + 69, 160, 1, 6); // filo d'acqua
+          } else {
+            // Cestino portarifiuti a pedale accanto alla porta (appoggiato a terra)
+            ctx.fillStyle = "#2f3a4a";
+            ctx.fillRect(dx + 60, 176, 15, 21);
+            ctx.fillStyle = "#3f4c5f";
+            ctx.fillRect(dx + 61, 177, 13, 5);
+            ctx.fillStyle = "#0f172a";
+            ctx.fillRect(dx + 62, 183, 11, 12);
+            ctx.fillStyle = "#64748b";
+            ctx.fillRect(dx + 64, 195, 7, 2); // pedale
+          }
+
+          // BACHECA DI ISTITUTO: vetro, cornice di legno e avvisi spillati
+          // (comunicazioni vere, non decorazioni: Open Day, PON, sportello)
+          ctx.fillStyle = "#5b3a24";
+          ctx.fillRect(dx + 98, 118, 46, 62);
+          ctx.fillStyle = "#8a5f3d";
+          ctx.fillRect(dx + 99, 119, 44, 60);
+          ctx.fillStyle = "#f6f1e3";
+          ctx.fillRect(dx + 102, 122, 38, 54);
+          // avviso OPEN DAY
+          ctx.fillStyle = "#1d4ed8";
+          ctx.fillRect(dx + 105, 125, 32, 12);
+          ctx.fillStyle = "#f8fafc";
+          ctx.fillRect(dx + 107, 128, 22, 2);
+          ctx.fillRect(dx + 107, 132, 16, 2);
+          // volantino sportivo
+          ctx.fillStyle = "#fde047";
+          ctx.fillRect(dx + 105, 141, 15, 14);
+          ctx.fillStyle = "#16a34a";
+          ctx.fillRect(dx + 106, 156, 15, 1);
+          ctx.fillStyle = "#14532d";
+          ctx.fillRect(dx + 109, 143, 7, 7);
+          // comunicato PON
+          ctx.fillStyle = "#e2e8f0";
+          ctx.fillRect(dx + 123, 141, 15, 20);
+          ctx.fillStyle = "#94a3b8";
+          for (let ln = 0; ln < 5; ln++) ctx.fillRect(dx + 125, 144 + ln * 3, 11, 1);
+          // riflesso del vetro
+          ctx.fillStyle = "rgba(255,255,255,0.28)";
+          ctx.fillRect(dx + 102, 122, 8, 54);
+
           // CONO DI LUCE della plafoniera sul pavimento
           const glow = ctx.createLinearGradient(0, 150, 0, 250);
           glow.addColorStop(0, "rgba(255,250,220,0.22)");
@@ -9644,6 +10417,7 @@ class PixelRenderer {
 
 
 
+
 // Ordine righe del portraits_sheet.png (8 righe x 6 espressioni, 64x64):
 // generato da tools/generate_assets.py -> ["ranaldo","carlo","francesco","ruggero","daniele","sofista","sofia","mimmo"]
 const PORTRAIT_ROWS = {
@@ -10285,12 +11059,17 @@ class UIManager {
   // ===========================================================================
   // MENU PAUSA, DOSSIER VARIABILI NARRATIVE, PEGASO E MIXER AUDIO
   // ===========================================================================
-  renderPauseAndDossier(ctx, state, audio, pauseIndex, pauseItems, showControlsModal) {
+  renderPauseAndDossier(ctx, state, audio, pauseIndex, pauseItems, showControlsModal, freeChallengeMenu = null) {
     ctx.fillStyle = "rgba(6, 10, 22, 0.95)";
     ctx.fillRect(0, 0, SCREEN_W, SCREEN_H);
 
     if (showControlsModal) {
       this.renderControlsScreen(ctx, audio);
+      return;
+    }
+
+    if (freeChallengeMenu && freeChallengeMenu.open) {
+      this.renderFreeChallengeMenu(ctx, freeChallengeMenu.index);
       return;
     }
 
@@ -10362,6 +11141,25 @@ class UIManager {
       "#94a3b8",
       1
     );
+  }
+
+  /** Elenco delle sfide libere (greco, latino, storia, calcio, operazioni a tempo). */
+  renderFreeChallengeMenu(ctx, index) {
+    drawPixelPanel(ctx, 10, 10, SCREEN_W - 20, SCREEN_H - 20, "#0d1528", "#38e2d8", "#1e293b");
+    drawPixelText(ctx, "SFIDE LIBERE — CULTURA E SPORT", 22, 19, "#38e2d8", 1);
+    drawPixelText(ctx, "Non servono eroi: sono sfide extra del Liceo Classico.", 22, 31, "#94a3b8", 1);
+
+    FREE_CHALLENGES.forEach((ch, i) => {
+      const y = 46 + i * 34;
+      const sel = i === index;
+      drawPixelPanel(ctx, 20, y, SCREEN_W - 40, 31, sel ? "#0369a1" : "#162038", sel ? "#ffd147" : "#475569", "#0f172a");
+      drawPixelText(ctx, fitPixelText(`${sel ? "▶ " : "  "}${ch.title}`, SCREEN_W - 70, 1, 1)[0], 28, y + 5, sel ? "#ffffff" : "#e2e8f0", 1);
+      drawPixelText(ctx, fitPixelText(ch.sub, SCREEN_W - 70, 1, 1)[0], 28, y + 16, sel ? "#fef08a" : "#94a3b8", 1);
+    });
+
+    const cur = FREE_CHALLENGES[index];
+    if (cur) drawPixelTextCentered(ctx, fitPixelText(cur.desc, SCREEN_W - 60, 1, 1)[0], SCREEN_W / 2, 226, "#9adfd6", 1);
+    drawPixelTextCentered(ctx, "SU/GIU: scegli | INVIO: gioca | P/ESC: torna", SCREEN_W / 2, 244, "#ffd147", 1);
   }
 
   renderControlsScreen(ctx, audio) {
@@ -10546,6 +11344,8 @@ class CasardiGameApp {
     // Scene: 'title' | 'playing' | 'paused' | 'ending'
     this.scene = "title";
     this.showControlsModal = false;
+    // Sotto-menu "Sfide Libere" del menu pausa (greco, latino, storia, calcio, matematica a tempo)
+    this.freeChallengeMenu = { open: false, index: 0 };
     this.titleIndex = 0;
     this.pauseIndex = 0;
 
@@ -10619,6 +11419,8 @@ class CasardiGameApp {
               this.audio.playSfx("confirm");
             } else if (it.id === "team_follow") {
               this.toggleTeamFollow();
+            } else if (it.id === "free_challenges") {
+              this.openFreeChallengeMenu();
             } else {
               this.input.justPressed.add("Enter");
             }
@@ -10706,6 +11508,47 @@ class CasardiGameApp {
                 m.angle = Math.max(32, Math.min(76, Math.round((Math.atan2(dy, dx) * 180) / Math.PI)));
                 m.power = Math.max(35, Math.min(100, Math.round(Math.hypot(dx, dy) / 3.0)));
                 this.audio.playSfx("blip", 360);
+              }
+            }
+          } else if (m.type === "mathsprint") {
+            // Operazioni a tempo: tocco sulle 4 caselle d'angolo della risposta
+            const inRect = (x, y, w, h) => mx >= x && mx <= x + w && my >= y && my <= y + h;
+            for (let i = 0; i < 4; i++) {
+              const ox = 60 + (i % 2) * 190;
+              const oy = 112 + Math.floor(i / 2) * 40;
+              if (inRect(ox, oy, 170, 30)) {
+                this.input.justPressed.add(`Digit${i + 1}`);
+                break;
+              }
+            }
+          } else if (m.type === "soccer") {
+            // Calcio: SX/DX = dove mirare, SU/GIU = altezza, tocco sul pallone o in basso = tira
+            if (!m.ball) {
+              const inRect = (x, y, w, h) => mx >= x && mx <= x + w && my >= y && my <= y + h;
+              if (inRect(224, 180, 32, 32) || my >= 218) {
+                this.input.justPressed.add("Enter");
+              } else if (inRect(146, 76, 60, 56)) {
+                this.input.justPressed.add("ArrowUp");
+              } else if (inRect(274, 76, 62, 56)) {
+                this.input.justPressed.add("ArrowDown");
+              } else if (inRect(46, 76, 96, 56)) {
+                this.input.justPressed.add("ArrowLeft");
+              } else if (inRect(338, 76, 96, 56)) {
+                this.input.justPressed.add("ArrowRight");
+              }
+            }
+          } else if (m.type === "greek" || m.type === "latin" || m.type === "history") {
+            // Sfide culturali: tocco sulla riga della risposta e sul pannello per confermare
+            if (!m.answered && !m.doneTimer) {
+              const q = m.bank[m.order[m.qIdx]];
+              const rows = q ? q.options.length : 4;
+              for (let i = 0; i < rows; i++) {
+                const oy = 130 + i * 20;
+                if (my >= oy && my <= oy + 17 && mx >= 36 && mx <= SCREEN_W - 36) {
+                  this.input.justPressed.add(`Digit${i + 1}`);
+                  this.input.justPressed.add("Enter");
+                  break;
+                }
               }
             }
           } else if (m.type === "math") {
@@ -11048,7 +11891,7 @@ class CasardiGameApp {
     const node = d.currentNode;
 
     if (d.charCount < node.text.length) {
-      d.charCount = Math.min(node.text.length, d.charCount + 1.9);
+      d.charCount = Math.min(node.text.length, d.charCount + 2.6); // v3.1: testo un po' più rapido (dialoghi meno "pesanti")
       d.blipTick++;
       if (d.blipTick % 4 === 0) {
         const freq = CHARACTERS[node.speaker]?.blipFreq || 260;
@@ -11490,6 +12333,7 @@ class CasardiGameApp {
       { id: "music_vol", label: `Volume Musica: ${mPct}% (SX/DX)` },
       { id: "sfx_vol", label: `Volume Effetti: ${sPct}% (SX/DX)` },
       { id: "team_follow", label: `Squadra al Seguito: ${this.state.audioPrefs.followTeam ? "SI" : "NO"}` },
+      { id: "free_challenges", label: "Sfide Libere (Greco, Latino, Storia...)" },
       { id: "controls", label: "Guida Comandi Completa" },
       { id: "restart_room", label: "Ricomincia Zona Corrente" },
       { id: "openday_reset", label: "Reset Nuovo Visitatore Open Day" },
@@ -11497,7 +12341,51 @@ class CasardiGameApp {
     ];
   }
 
+  /** Apre l'elenco delle sfide libere (greco, latino, storia, calcio, matematica a tempo). */
+  openFreeChallengeMenu() {
+    this.freeChallengeMenu.open = true;
+    this.freeChallengeMenu.index = 0;
+    this.audio.playSfx("confirm");
+  }
+
+  /** Lancia una sfida libera dal menu pausa: non serve un eroe, non sblocca cancelli. */
+  startFreeChallenge(idx) {
+    const ch = FREE_CHALLENGES[idx];
+    if (!ch) return;
+    this.freeChallengeMenu.open = false;
+    this.scene = "playing";
+    this.minigames.start(ch.type, { id: `free_${ch.type}`, title: ch.title }, () => {
+      this.scene = "playing";
+      this.state.pushConsequence(`Sfida libera completata: ${ch.title}`, "#38e2d8");
+    });
+    this.audio.playSfx("confirm");
+  }
+
+  updateFreeChallengeMenu() {
+    const n = FREE_CHALLENGES.length;
+    if (this.input.upPressed) {
+      this.freeChallengeMenu.index = (this.freeChallengeMenu.index + n - 1) % n;
+      this.audio.playSfx("blip", 350);
+    }
+    if (this.input.downPressed) {
+      this.freeChallengeMenu.index = (this.freeChallengeMenu.index + 1) % n;
+      this.audio.playSfx("blip", 350);
+    }
+    if (this.input.confirmPressed) {
+      this.startFreeChallenge(this.freeChallengeMenu.index);
+      return;
+    }
+    if (this.input.pausePressed) {
+      this.freeChallengeMenu.open = false;
+      this.audio.playSfx("interact");
+    }
+  }
+
   updatePauseScene() {
+    if (this.freeChallengeMenu.open) {
+      this.updateFreeChallengeMenu();
+      return;
+    }
     if (this.showControlsModal) {
       // Nella guida: SX/DX e SU/GIU regolano i volumi (prima non succedeva nulla)
       if (this.input.leftPressed) {
@@ -11564,6 +12452,7 @@ class CasardiGameApp {
       this.audio.playSfx("confirm");
       if (cur.id === "resume") this.scene = "playing";
       else if (cur.id === "team_follow") this.toggleTeamFollow();
+      else if (cur.id === "free_challenges") this.openFreeChallengeMenu();
       else if (cur.id === "controls") this.showControlsModal = true;
       else if (cur.id === "restart_room") {
         this.scene = "playing";
@@ -11629,7 +12518,8 @@ class CasardiGameApp {
         this.audio,
         this.pauseIndex,
         this.getPauseItems(),
-        this.showControlsModal
+        this.showControlsModal,
+        this.freeChallengeMenu
       );
     }
 

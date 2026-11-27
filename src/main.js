@@ -13,7 +13,7 @@ import { PixelRenderer } from "./render/renderer.js";
 import { UIManager } from "./ui/hudAndMenus.js";
 import { DIALOGUES } from "./narrative/dialogues.js";
 import { EIPASS_CHALLENGES } from "./narrative/eipassQuiz.js";
-import { SpecialChallengeManager } from "./minigames/specialChallenges.js";
+import { SpecialChallengeManager, FREE_CHALLENGES } from "./minigames/specialChallenges.js";
 
 export class CasardiGameApp {
   constructor(canvas) {
@@ -38,6 +38,8 @@ export class CasardiGameApp {
     // Scene: 'title' | 'playing' | 'paused' | 'ending'
     this.scene = "title";
     this.showControlsModal = false;
+    // Sotto-menu "Sfide Libere" del menu pausa (greco, latino, storia, calcio, matematica a tempo)
+    this.freeChallengeMenu = { open: false, index: 0 };
     this.titleIndex = 0;
     this.pauseIndex = 0;
 
@@ -111,6 +113,8 @@ export class CasardiGameApp {
               this.audio.playSfx("confirm");
             } else if (it.id === "team_follow") {
               this.toggleTeamFollow();
+            } else if (it.id === "free_challenges") {
+              this.openFreeChallengeMenu();
             } else {
               this.input.justPressed.add("Enter");
             }
@@ -198,6 +202,47 @@ export class CasardiGameApp {
                 m.angle = Math.max(32, Math.min(76, Math.round((Math.atan2(dy, dx) * 180) / Math.PI)));
                 m.power = Math.max(35, Math.min(100, Math.round(Math.hypot(dx, dy) / 3.0)));
                 this.audio.playSfx("blip", 360);
+              }
+            }
+          } else if (m.type === "mathsprint") {
+            // Operazioni a tempo: tocco sulle 4 caselle d'angolo della risposta
+            const inRect = (x, y, w, h) => mx >= x && mx <= x + w && my >= y && my <= y + h;
+            for (let i = 0; i < 4; i++) {
+              const ox = 60 + (i % 2) * 190;
+              const oy = 112 + Math.floor(i / 2) * 40;
+              if (inRect(ox, oy, 170, 30)) {
+                this.input.justPressed.add(`Digit${i + 1}`);
+                break;
+              }
+            }
+          } else if (m.type === "soccer") {
+            // Calcio: SX/DX = dove mirare, SU/GIU = altezza, tocco sul pallone o in basso = tira
+            if (!m.ball) {
+              const inRect = (x, y, w, h) => mx >= x && mx <= x + w && my >= y && my <= y + h;
+              if (inRect(224, 180, 32, 32) || my >= 218) {
+                this.input.justPressed.add("Enter");
+              } else if (inRect(146, 76, 60, 56)) {
+                this.input.justPressed.add("ArrowUp");
+              } else if (inRect(274, 76, 62, 56)) {
+                this.input.justPressed.add("ArrowDown");
+              } else if (inRect(46, 76, 96, 56)) {
+                this.input.justPressed.add("ArrowLeft");
+              } else if (inRect(338, 76, 96, 56)) {
+                this.input.justPressed.add("ArrowRight");
+              }
+            }
+          } else if (m.type === "greek" || m.type === "latin" || m.type === "history") {
+            // Sfide culturali: tocco sulla riga della risposta e sul pannello per confermare
+            if (!m.answered && !m.doneTimer) {
+              const q = m.bank[m.order[m.qIdx]];
+              const rows = q ? q.options.length : 4;
+              for (let i = 0; i < rows; i++) {
+                const oy = 130 + i * 20;
+                if (my >= oy && my <= oy + 17 && mx >= 36 && mx <= SCREEN_W - 36) {
+                  this.input.justPressed.add(`Digit${i + 1}`);
+                  this.input.justPressed.add("Enter");
+                  break;
+                }
               }
             }
           } else if (m.type === "math") {
@@ -540,7 +585,7 @@ export class CasardiGameApp {
     const node = d.currentNode;
 
     if (d.charCount < node.text.length) {
-      d.charCount = Math.min(node.text.length, d.charCount + 1.9);
+      d.charCount = Math.min(node.text.length, d.charCount + 2.6); // v3.1: testo un po' più rapido (dialoghi meno "pesanti")
       d.blipTick++;
       if (d.blipTick % 4 === 0) {
         const freq = CHARACTERS[node.speaker]?.blipFreq || 260;
@@ -982,6 +1027,7 @@ export class CasardiGameApp {
       { id: "music_vol", label: `Volume Musica: ${mPct}% (SX/DX)` },
       { id: "sfx_vol", label: `Volume Effetti: ${sPct}% (SX/DX)` },
       { id: "team_follow", label: `Squadra al Seguito: ${this.state.audioPrefs.followTeam ? "SI" : "NO"}` },
+      { id: "free_challenges", label: "Sfide Libere (Greco, Latino, Storia...)" },
       { id: "controls", label: "Guida Comandi Completa" },
       { id: "restart_room", label: "Ricomincia Zona Corrente" },
       { id: "openday_reset", label: "Reset Nuovo Visitatore Open Day" },
@@ -989,7 +1035,51 @@ export class CasardiGameApp {
     ];
   }
 
+  /** Apre l'elenco delle sfide libere (greco, latino, storia, calcio, matematica a tempo). */
+  openFreeChallengeMenu() {
+    this.freeChallengeMenu.open = true;
+    this.freeChallengeMenu.index = 0;
+    this.audio.playSfx("confirm");
+  }
+
+  /** Lancia una sfida libera dal menu pausa: non serve un eroe, non sblocca cancelli. */
+  startFreeChallenge(idx) {
+    const ch = FREE_CHALLENGES[idx];
+    if (!ch) return;
+    this.freeChallengeMenu.open = false;
+    this.scene = "playing";
+    this.minigames.start(ch.type, { id: `free_${ch.type}`, title: ch.title }, () => {
+      this.scene = "playing";
+      this.state.pushConsequence(`Sfida libera completata: ${ch.title}`, "#38e2d8");
+    });
+    this.audio.playSfx("confirm");
+  }
+
+  updateFreeChallengeMenu() {
+    const n = FREE_CHALLENGES.length;
+    if (this.input.upPressed) {
+      this.freeChallengeMenu.index = (this.freeChallengeMenu.index + n - 1) % n;
+      this.audio.playSfx("blip", 350);
+    }
+    if (this.input.downPressed) {
+      this.freeChallengeMenu.index = (this.freeChallengeMenu.index + 1) % n;
+      this.audio.playSfx("blip", 350);
+    }
+    if (this.input.confirmPressed) {
+      this.startFreeChallenge(this.freeChallengeMenu.index);
+      return;
+    }
+    if (this.input.pausePressed) {
+      this.freeChallengeMenu.open = false;
+      this.audio.playSfx("interact");
+    }
+  }
+
   updatePauseScene() {
+    if (this.freeChallengeMenu.open) {
+      this.updateFreeChallengeMenu();
+      return;
+    }
     if (this.showControlsModal) {
       // Nella guida: SX/DX e SU/GIU regolano i volumi (prima non succedeva nulla)
       if (this.input.leftPressed) {
@@ -1056,6 +1146,7 @@ export class CasardiGameApp {
       this.audio.playSfx("confirm");
       if (cur.id === "resume") this.scene = "playing";
       else if (cur.id === "team_follow") this.toggleTeamFollow();
+      else if (cur.id === "free_challenges") this.openFreeChallengeMenu();
       else if (cur.id === "controls") this.showControlsModal = true;
       else if (cur.id === "restart_room") {
         this.scene = "playing";
@@ -1121,7 +1212,8 @@ export class CasardiGameApp {
         this.audio,
         this.pauseIndex,
         this.getPauseItems(),
-        this.showControlsModal
+        this.showControlsModal,
+        this.freeChallengeMenu
       );
     }
 

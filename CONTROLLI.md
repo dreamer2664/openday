@@ -59,7 +59,7 @@ Aprendo il gioco su qualsiasi smartphone o tablet, si attiva automaticamente la 
 
 ---
 
-## 3. Comandi nei 6 Minigiochi Arcade & nelle 12 Postazioni Live EIPASS
+## 3. Comandi negli 12 Minigiochi Arcade & nelle 12 Postazioni Live EIPASS
 
 - **Postazioni Interattive EIPASS (12 Simulatori Live):** Usa `Frecce SU / GIÙ` o `1–3` per vedere cambiare **in tempo reale** la formula nel Foglio di Calcolo (`B6`), l'impaginazione della Slide/Documento, l'ispettore Phishing o la Webmail `CCN`; premi `INVIO / SPAZIO` per confermare!
 - **Sfida Basket (Carlo):** `Frecce SU / GIÙ` regola l'angolo; tieni premuto `SPAZIO` o `X` per caricare la potenza e rilascia (o `INVIO` per tiro rapido).
@@ -67,9 +67,16 @@ Aprendo il gioco su qualsiasi smartphone o tablet, si attiva automaticamente la 
 - **Rigori contro il Portiere-Firewall (Ruggero):** `SU / GIÙ` regola l'altezza del tiro mentre il mirino scorre; premi `SPAZIO` o `X` per calciare all'incrocio!
 - **Calibratore Parabolico (Prof. Ranaldo):** `SX / DX` modifica l'apertura `a`, `SU / GIÙ` sposta il vertice `k`; premi `INVIO / SPAZIO` quando la parabola attraversa i 3 nodi ciano.
 - **Scudo Firewall EIPASS (Modulo 4):** `SU / GIÙ` o `1–3` sposta lo scudo tra le 3 corsie di rete per intercettare i pacchetti malware lasciando passare i pacchetti autentici al server!
+- **Operazioni a Tempo — Prof. Ranaldo (v3.1):** 12 calcoli in 45 secondi. `SX / DX` (o `1–4`) sceglie la risposta, `INVIO / SPAZIO` conferma: **+3 secondi** se è giusta, **-3 secondi** se è sbagliata.
+- **Calcio — Rigori al Cortile (v3.1):** `SX / DX` sposta la mira tra le tre colonne della porta, `SU / GIÙ` sceglie alto o basso, `SPAZIO / INVIO` tira. Il portiere si muove: cerca l'angolo lontano. Servono 3 gol.
+- **Greco, Latino, Storia (v3.1):** 4 domande estratte da una banca di 5, **15 secondi a domanda**. `SU / GIÙ` o `1–4` sceglie, `INVIO / SPAZIO` conferma. Le parole greche sono in caratteri traslitterati (`logos`, `polis`, `sophia`).
 - **Smistatore File & Estensioni EIPASS (Moduli 1 & 2):** Premi `Freccia SX / [1]` per archiviare i file sicuri sull'SSD scolastico o `Freccia DX / [2]` per isolare in Quarantena le doppie estensioni `.pdf.exe` / macro sospette!
 
 ---
+
+## 3b. Menu Pausa → Sfide Libere
+
+Da `P / ESC` c'è la voce **Sfide Libere**: si aprono Operazioni a tempo, Calcio, Greco, Latino e Storia (**`SU / GIÙ`** per scorrere, **`INVIO`** per giocare, **`P / ESC`** per tornare). Le stesse sfide compaiono anche nel mondo come stazioni con `[E]`.
 
 ## 4. Controller Gamepad (Xbox / PlayStation / USB Standard)
 

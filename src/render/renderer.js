@@ -612,6 +612,67 @@ export class PixelRenderer {
           ctx.fillStyle = "rgba(70,50,20,0.13)";
           ctx.fillRect(dx + 56, 234, 44, 5);
 
+          // v3.1 — DETTAGLI VERI DEL CORRIDOIO DEL CASARDI:
+          // colonnina con fontanella (quelle di inizio Novecento), cestino,
+          // e una bacheca di istituto con l'avviso dell'Open Day.
+          if (dx % 2 === 0) {
+            // Fontanella a muro in ghisa (resta sopra il battiscopa, y 150-196)
+            ctx.fillStyle = "#8f9aa8";
+            ctx.fillRect(dx + 62, 154, 13, 36); // fusto
+            ctx.fillStyle = "#c3ccd6";
+            ctx.fillRect(dx + 63, 155, 11, 34); // luce sul fusto
+            ctx.fillStyle = "#e2e8f0";
+            ctx.fillRect(dx + 59, 188, 19, 8); // vasca
+            ctx.fillStyle = "#64748b";
+            ctx.fillRect(dx + 59, 194, 19, 2); // bordo vasca
+            ctx.fillStyle = "#475569";
+            ctx.fillRect(dx + 66, 146, 4, 9); // rubinetto a colonna
+            ctx.fillStyle = "#94a3b8";
+            ctx.fillRect(dx + 66, 146, 9, 3);
+            ctx.fillStyle = "rgba(56,189,248,0.55)";
+            ctx.fillRect(dx + 69, 160, 1, 6); // filo d'acqua
+          } else {
+            // Cestino portarifiuti a pedale accanto alla porta (appoggiato a terra)
+            ctx.fillStyle = "#2f3a4a";
+            ctx.fillRect(dx + 60, 176, 15, 21);
+            ctx.fillStyle = "#3f4c5f";
+            ctx.fillRect(dx + 61, 177, 13, 5);
+            ctx.fillStyle = "#0f172a";
+            ctx.fillRect(dx + 62, 183, 11, 12);
+            ctx.fillStyle = "#64748b";
+            ctx.fillRect(dx + 64, 195, 7, 2); // pedale
+          }
+
+          // BACHECA DI ISTITUTO: vetro, cornice di legno e avvisi spillati
+          // (comunicazioni vere, non decorazioni: Open Day, PON, sportello)
+          ctx.fillStyle = "#5b3a24";
+          ctx.fillRect(dx + 98, 118, 46, 62);
+          ctx.fillStyle = "#8a5f3d";
+          ctx.fillRect(dx + 99, 119, 44, 60);
+          ctx.fillStyle = "#f6f1e3";
+          ctx.fillRect(dx + 102, 122, 38, 54);
+          // avviso OPEN DAY
+          ctx.fillStyle = "#1d4ed8";
+          ctx.fillRect(dx + 105, 125, 32, 12);
+          ctx.fillStyle = "#f8fafc";
+          ctx.fillRect(dx + 107, 128, 22, 2);
+          ctx.fillRect(dx + 107, 132, 16, 2);
+          // volantino sportivo
+          ctx.fillStyle = "#fde047";
+          ctx.fillRect(dx + 105, 141, 15, 14);
+          ctx.fillStyle = "#16a34a";
+          ctx.fillRect(dx + 106, 156, 15, 1);
+          ctx.fillStyle = "#14532d";
+          ctx.fillRect(dx + 109, 143, 7, 7);
+          // comunicato PON
+          ctx.fillStyle = "#e2e8f0";
+          ctx.fillRect(dx + 123, 141, 15, 20);
+          ctx.fillStyle = "#94a3b8";
+          for (let ln = 0; ln < 5; ln++) ctx.fillRect(dx + 125, 144 + ln * 3, 11, 1);
+          // riflesso del vetro
+          ctx.fillStyle = "rgba(255,255,255,0.28)";
+          ctx.fillRect(dx + 102, 122, 8, 54);
+
           // CONO DI LUCE della plafoniera sul pavimento
           const glow = ctx.createLinearGradient(0, 150, 0, 250);
           glow.addColorStop(0, "rgba(255,250,220,0.22)");

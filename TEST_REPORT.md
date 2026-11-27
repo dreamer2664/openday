@@ -1,4 +1,21 @@
-# TEST REPORT E AUDIT VISIVO INTEGRALE (v3.0) — OPERAZIONE EIPASS: IL CASARDI IN 8 BIT
+# TEST REPORT E AUDIT VISIVO INTEGRALE (v3.1) — OPERAZIONE EIPASS: IL CASARDI IN 8 BIT
+
+Documento di verifica funzionale, fisica, narrativa, visiva e operativa dell'Edizione Completa **v3.1**.
+
+---
+
+## 0. Aggiornamento v3.1 — nuove sfide, colonna sonora, dialoghi, ambienti
+
+- **5 nuove sfide (12 minigiochi in totale):** *Operazioni a tempo del Prof. Ranaldo* (12 calcoli in 45 s, +3 s/-3 s), *Calcio ai rigori* con portiere mobile (3 gol, mira su 3 colonne × 2 altezze), *Greco*, *Latino*, *Storia* (4 domande estratte da banche di 5, 15 s a domanda, timer visibile, tempo scaduto gestito senza softlock).
+- **Nuovo menu Pausa → Sfide Libere:** ingresso separato alle cinque sfide libere, indipendente dal livello. Verificato: apertura, navigazione `SU/GIU`, avvio, ritorno al gioco.
+- **Stazioni nel mondo:** `od_1` ospita *matematica a tempo* (con cancello dedicato `gate_od1_math`, apribile anche con `[R]`), *greco* e *storia*; `od_3` ospita *latino* e *calcio*. Verificato in browser che ogni stazione mostra `[E] Avvia Sfida!` e apre il minigioco giusto.
+- **Colonna sonora:** tre tracce nuove (`courtyard` 150 BPM, `aulamagna` 120 BPM, `study` 104 BPM) e due strumenti nuovi (pad armonico a due oscillatori scordati, arpeggio di ottavi); pad/arp attivati anche su tema principale, biblioteca, laboratorio, sport e vittoria senza toccare le melodie esistenti. **Verificate 10 tracce in browser reale: 0 errori.**
+- **Dialoghi Open Day accorciati:** da 3.271 a 2.320 caratteri (-951, ≈ -1,1 minuto di lettura) più velocità di scrittura da 1,9 a 2,6 caratteri/frame (≈ -14 s): totale percepito ≈ **-1,7 minuti**, senza toccare la boss fight.
+- **Ambienti più credibili:** corridoio con fontanella in ghisa, cestino a pedale e bacheca di istituto con gli avvisi veri (Open Day, sportello, PON).
+- **Suite v3.1:** playtest **575/575**, testi **341/341**, regressione **195/195**, mobile **30/30**, screenshot desktop/mobile **7/7**.
+
+---
+
 
 Documento di verifica funzionale, fisica, narrativa, visiva (su tutte le **48 scene possibili**) e operativa dell'Edizione Completa **v3.0**.
 

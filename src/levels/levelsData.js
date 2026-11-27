@@ -42,6 +42,13 @@ export function buildOpenDayLevels() {
     .terminal(60, 15, "qz_phishing_gate", "gate_od1_term")
     .gate(65, 11, 4, "gate_od1_term")
     .addSign(68, 14, "PROF. RANALDO [1] + [X]: Piattaforme paraboliche!")
+    // v3.1 — OPERAZIONI A TEMPO del Prof. Ranaldo: sfida libera, con cancello
+    // opzionale (si apre con la Torre di Hanoi o con [R] se ci si blocca).
+    .minigameStation(71, 15, "mathsprint", { id: "od_mg_math", title: "PROF. RANALDO - OPERAZIONI A TEMPO!" }, "gate_od1_math")
+    .gate(73, 11, 4, "gate_od1_math")
+    // v3.1 — SFIDE CULTURALI LIBERE: greco e storia sui portici d'ingresso
+    .minigameStation(76, 15, "greek", { id: "od_mg_greek", title: "GRECO - RICONOSCI IL VOCABOLO!" })
+    .minigameStation(80, 15, "history", { id: "od_mg_history", title: "STORIA - IL CASARDI E BARLETTA" })
     .pit(70, 5)
     .tokensArc(70, 11, 3)
     .enemy(78, 15, "slime", 3)
@@ -122,6 +129,9 @@ export function buildOpenDayLevels() {
     .pit(56, 3)
     .spring(60, 14)
     .plat(62, 9, 6)
+    // v3.1 — LATINO e CALCIO come sfide libere del piano terra
+    .minigameStation(58, 15, "latin", { id: "od_mg_latin", title: "LATINO - FORME E CASI!" })
+    .minigameStation(63, 15, "soccer", { id: "od_mg_soccer", title: "CALCIO - RIGORI AL CORTILE!" })
     .minigameStation(66, 15, "dance", { id: "od_mg_dance", title: "DANIELE - SALSA CUBANA SOTTO I PORTICI!" }, "gate_od3_net")
     .gate(71, 11, 4, "gate_od3_net")
     .addSign(70, 14, "Premi [E] sulla Master Keyboard: Enigma di Francesco!")
@@ -149,7 +159,7 @@ export function buildOpenDayLevels() {
     name: "Aula Magna — Il Palco dell'Open Day",
     subtitle: "Modalità Open Day (4/4) • Sfida Finale al Sofista Digitale!",
     theme: "aulamagna",
-    music: "boss",
+    music: "aulamagna",
     cols: 52,
     rows: 17,
   });
@@ -417,7 +427,7 @@ export function buildCampaignLevels() {
     name: "Cap. 3.1 — Campo da Basket all'Aperto",
     subtitle: "La Grande Sfida a Canestro di Carlo!",
     theme: "courtyard",
-    music: "sports",
+    music: "courtyard",
     cols: 110,
     rows: 18,
   });
@@ -456,7 +466,7 @@ export function buildCampaignLevels() {
     name: "Cap. 3.2 — Piazzale Sportivo: Sfida di Ruggero",
     subtitle: "Dribbling, Muri Incrinati e Tiri all'Incrocio!",
     theme: "courtyard",
-    music: "sports",
+    music: "courtyard",
     cols: 112,
     rows: 18,
   });
@@ -494,7 +504,7 @@ export function buildCampaignLevels() {
     name: "Cap. 3.3 — Palestra Coperta: Riferimenti Assoluti",
     subtitle: "Modulo 6 Foglio di Calcolo & Sinergia Atletica",
     theme: "courtyard",
-    music: "sports",
+    music: "courtyard",
     cols: 106,
     rows: 18,
   });
@@ -654,7 +664,7 @@ export function buildCampaignLevels() {
     name: "Cap. 5.1 — Sala degli Ottomila Volumi",
     subtitle: "Scalata verticale tra librerie storiche in mogano e busti classici",
     theme: "library",
-    music: "library",
+    music: "study",
     cols: 106,
     rows: 20,
   });
@@ -688,7 +698,7 @@ export function buildCampaignLevels() {
     name: "Cap. 5.2 — Mediateca e Redazione di Pegaso",
     subtitle: "Modulo 5 PDF/A & Incontro con Sofia nella Redazione!",
     theme: "library",
-    music: "library",
+    music: "study",
     cols: 108,
     rows: 18,
   });

@@ -15,6 +15,7 @@ import {
   PORTRAIT_SIZE,
 } from "../config/constants.js";
 import { GAME_VERSION } from "../config/constants.js";
+import { FREE_CHALLENGES } from "../minigames/specialChallenges.js";
 import {
   drawPixelText,
   drawPixelTextCentered,
@@ -666,12 +667,17 @@ export class UIManager {
   // ===========================================================================
   // MENU PAUSA, DOSSIER VARIABILI NARRATIVE, PEGASO E MIXER AUDIO
   // ===========================================================================
-  renderPauseAndDossier(ctx, state, audio, pauseIndex, pauseItems, showControlsModal) {
+  renderPauseAndDossier(ctx, state, audio, pauseIndex, pauseItems, showControlsModal, freeChallengeMenu = null) {
     ctx.fillStyle = "rgba(6, 10, 22, 0.95)";
     ctx.fillRect(0, 0, SCREEN_W, SCREEN_H);
 
     if (showControlsModal) {
       this.renderControlsScreen(ctx, audio);
+      return;
+    }
+
+    if (freeChallengeMenu && freeChallengeMenu.open) {
+      this.renderFreeChallengeMenu(ctx, freeChallengeMenu.index);
       return;
     }
 
@@ -743,6 +749,25 @@ export class UIManager {
       "#94a3b8",
       1
     );
+  }
+
+  /** Elenco delle sfide libere (greco, latino, storia, calcio, operazioni a tempo). */
+  renderFreeChallengeMenu(ctx, index) {
+    drawPixelPanel(ctx, 10, 10, SCREEN_W - 20, SCREEN_H - 20, "#0d1528", "#38e2d8", "#1e293b");
+    drawPixelText(ctx, "SFIDE LIBERE — CULTURA E SPORT", 22, 19, "#38e2d8", 1);
+    drawPixelText(ctx, "Non servono eroi: sono sfide extra del Liceo Classico.", 22, 31, "#94a3b8", 1);
+
+    FREE_CHALLENGES.forEach((ch, i) => {
+      const y = 46 + i * 34;
+      const sel = i === index;
+      drawPixelPanel(ctx, 20, y, SCREEN_W - 40, 31, sel ? "#0369a1" : "#162038", sel ? "#ffd147" : "#475569", "#0f172a");
+      drawPixelText(ctx, fitPixelText(`${sel ? "▶ " : "  "}${ch.title}`, SCREEN_W - 70, 1, 1)[0], 28, y + 5, sel ? "#ffffff" : "#e2e8f0", 1);
+      drawPixelText(ctx, fitPixelText(ch.sub, SCREEN_W - 70, 1, 1)[0], 28, y + 16, sel ? "#fef08a" : "#94a3b8", 1);
+    });
+
+    const cur = FREE_CHALLENGES[index];
+    if (cur) drawPixelTextCentered(ctx, fitPixelText(cur.desc, SCREEN_W - 60, 1, 1)[0], SCREEN_W / 2, 226, "#9adfd6", 1);
+    drawPixelTextCentered(ctx, "SU/GIU: scegli | INVIO: gioca | P/ESC: torna", SCREEN_W / 2, 244, "#ffd147", 1);
   }
 
   renderControlsScreen(ctx, audio) {
