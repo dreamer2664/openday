@@ -814,7 +814,7 @@ const CHARACTERS = {
 // ORDINE UFFICIALE DEI 5 SLOT (identico a: tasti 1-5, pillole mobile, striscia eroi e pausa)
 // 1 Carlo · 2 Ranaldo · 3 Daniele · 4 Ruggero · 5 Francesco
 /** Versione del gioco: UNICA fonte di verità, mostrata nel marquee del titolo (§2.4). */
-const GAME_VERSION = "v3.1.1";
+const GAME_VERSION = "v3.1.2";
 const CHAR_ORDER = ["carlo", "ranaldo", "daniele", "ruggero", "francesco"];
 /**
  * Ordine BASE delle pillole eroe e dei tasti 1-5 (§1.10 della review).
@@ -4131,11 +4131,53 @@ const LATIN_QUESTIONS = [
 
 // Banca domande storia: dati già verificati in RICERCA_CASARDI.md
 const HISTORY_QUESTIONS = [
-  { word: "1937", q: "In che anno viene inaugurato l'edificio di Via d'Aragona 100?", options: ["1924", "1932", "1937", "1945"], correct: 2, hint: "Progetto dell'ing. Arturo Boccassini." },
-  { word: "PEGASO", q: "Che cos'è il PEGASO del Casardi?", options: ["Il giornale d'istituto", "Il nome della palestra", "Un laboratorio", "La squadra di basket"], correct: 0, hint: "Le sue pagine sono i collezionabili del gioco." },
-  { word: "23", q: "Quante postazioni ha il Laboratorio Multimediale della Sede Centrale?", options: ["12", "15", "23", "36"], correct: 2, hint: "C'è anche una master keyboard." },
-  { word: "8000", q: "Quanti volumi conta la Biblioteca del Casardi?", options: ["Circa 1.000", "Oltre 8.000", "Circa 500", "Oltre 30.000"], correct: 1, hint: "Dati della brochure ufficiale." },
-  { word: "1924", q: "In che anno nasce il Regio Liceo-Ginnasio di Barletta, poi intitolato ad A. Casardi?", options: ["1861", "1900", "1924", "1932"], correct: 2, hint: "La delibera per l'edificio arriva nel 1932." },
+  {
+    word: "IL PALAZZO",
+    q: "In che anno viene inaugurato l'edificio di Via d'Aragona 100?",
+    options: ["1924", "1932", "1937", "1945"],
+    correct: 2,
+    hint: "Il progetto è dell'ing. Arturo Boccassini.",
+  },
+  {
+    word: "IL GIORNALE",
+    q: "Che cos'è il PEGASO del Casardi?",
+    options: ["Il giornale d'istituto", "Il nome della palestra", "Un laboratorio", "La squadra di basket"],
+    correct: 0,
+    hint: "Le sue pagine sono i collezionabili del gioco.",
+  },
+  {
+    word: "IL LABORATORIO",
+    q: "Quante postazioni ha il Laboratorio Multimediale della Sede Centrale?",
+    options: ["Dodici", "Quindici", "Ventitre", "Trentasei"],
+    correct: 2,
+    hint: "C'è anche una master keyboard.",
+  },
+  {
+    word: "LA BIBLIOTECA",
+    q: "Quanti volumi conta la Biblioteca del Casardi?",
+    options: ["Circa mille", "Oltre ottomila", "Circa cinquecento", "Oltre trentamila"],
+    correct: 1,
+    hint: "Dati della brochure ufficiale.",
+  },
+  {
+    word: "LE ORIGINI",
+    q: "In che anno nasce il Regio Liceo-Ginnasio di Barletta, poi intitolato ad A. Casardi?",
+    options: ["Nel 1861", "Nel 1900", "Nel 1924", "Nel 1932"],
+    correct: 2,
+    hint: "La delibera per l'edificio arriva otto anni dopo.",
+  },
+  {
+    word: "L'INTITOLAZIONE",
+    q: "A chi è intitolato il Liceo Classico di Barletta?",
+    options: [
+      "A un tenente di artiglieria decorato con la Medaglia d'Oro",
+      "A un professore di greco dell'Ottocento",
+      "A un sindaco della città",
+      "A un preside degli anni Trenta",
+    ],
+    correct: 0,
+    hint: "Alfredo Casardi, barlettano, cadde in Spagna durante la guerra civile.",
+  },
 ];
 
 // ===========================================================================
@@ -4381,8 +4423,19 @@ class SpecialChallengeManager {
         msg: "SU/GIU: altezza | SX/DX: dove mirare | SPAZIO/INVIO: tira!",
       };
     } else if (normalizedType === "greek" || normalizedType === "latin" || normalizedType === "history") {
-      const bank =
+      const rawBank =
         normalizedType === "greek" ? GREEK_QUESTIONS : normalizedType === "latin" ? LATIN_QUESTIONS : HISTORY_QUESTIONS;
+      // RIMESCOLO SEMPRE LE RISPOSTE: senza questo passo la risposta esatta
+      // restava nella stessa posizione a ogni partita (e in storia certe
+      // opzioni erano addirittura in ordine cronologico, suggerendo la soluzione).
+      const bank = rawBank.map((item) => {
+        const idxs = item.options.map((_, i) => i).sort(() => Math.random() - 0.5);
+        return {
+          ...item,
+          options: idxs.map((i) => item.options[i]),
+          correct: Math.max(0, idxs.indexOf(item.correct)),
+        };
+      });
       const order = bank.map((_, i) => i).sort(() => Math.random() - 0.5).slice(0, 4);
       this.active = {
         type: normalizedType,
@@ -5945,7 +5998,11 @@ class SpecialChallengeManager {
     const accent = m.type === "greek" ? "#38bdf8" : m.type === "latin" ? "#f472b6" : "#fde047";
     drawPixelPanel(ctx, 32, 44, SCREEN_W - 64, 18, "#131d36", accent, "#0f172a");
     const subjectLabel =
-      m.type === "greek" ? "GRECO • LINGUA E CIVILTA" : m.type === "latin" ? "LATINO • MORFOLOGIA E CASI" : "STORIA • IL CASARDI E BARLETTA";
+      m.type === "greek"
+        ? "GRECO • RICONOSCI IL VOCABOLO"
+        : m.type === "latin"
+          ? "LATINO • FORME E CASI"
+          : "STORIA • IL CASARDI E BARLETTA";
     drawPixelText(ctx, subjectLabel, 40, 49, accent, 1);
     drawPixelText(ctx, `${Math.min(m.qIdx + 1, m.order.length)}/${m.order.length}`, 404, 49, "#cbd5e1", 1);
 
@@ -11930,9 +11987,18 @@ class CasardiGameApp {
     if (!ch) return;
     this.audio.setDucking(true);
     this.audio.playSfx("interact");
+    // v3.1.2 — le opzioni delle 12 postazioni EIPASS erano sempre nello stesso
+    // ordine: la risposta esatta stava sempre al 1° o al 2° posto. Qui si
+    // rimescolano a ogni partita (e con esse l'indice corretto).
+    const ordine = ch.options.map((_, i) => i).sort(() => Math.random() - 0.5);
+    const challenge = {
+      ...ch,
+      options: ordine.map((i) => ch.options[i]),
+      correctIndex: Math.max(0, ordine.findIndex((i) => ch.options[i].correct)),
+    };
     this.activeQuiz = {
       terminal: terminalEntity,
-      challenge: ch,
+      challenge,
       selectedIndex: 0,
       answered: false,
       wasCorrect: false,

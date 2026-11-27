@@ -334,12 +334,32 @@ console.log("[3/7] Playtest 60Hz di tutti i 12 Minigiochi (Basket, Pianoforte, A
   }
   assert(soccerDone, "Sfida v3.1 (Calcio: rigori al cortile con portiere mobile) completata con 3 gol!");
 
-  // 10-12) GRECO, LATINO, STORIA: banche da 5 domande, 4 estratte, 15s ciascuna
+  // 10-12) GRECO, LATINO, STORIA: banche, 4 estratte, 15s ciascuna
+  //   + v3.1.2: nella sfida di storia la riga grande NON deve contenere la risposta
+  {
+    const seenPos = { 0: 0, 1: 0, 2: 0, 3: 0 };
+    for (let run = 0; run < 12; run++) {
+      mg.start("history", { id: "test_hist" }, () => {});
+      const m = mg.active;
+      for (let k = 0; k < m.order.length; k++) {
+        const q = m.bank[m.order[k]];
+        // la risposta esatta non deve comparire nel titolo grande della domanda
+        assert(
+          !q.word.toLowerCase().includes(String(q.options[q.correct]).toLowerCase()),
+          `Storia: la risposta "${q.options[q.correct]}" non è spoilerata nel titolo "${q.word}"`
+        );
+        assert(q.options.length === 4, "Storia: quattro opzioni per domanda");
+        seenPos[q.correct] = (seenPos[q.correct] || 0) + 1;
+      }
+    }
+    const usate = Object.values(seenPos).filter((n) => n > 0).length;
+    assert(usate >= 3, `Storia: la risposta corretta cambia posizione tra le opzioni (posizioni usate: ${usate}/4)`);
+  }
   for (const cult of ["greek", "latin", "history"]) {
     let cultDone = false;
     mg.start(cult, { id: `test_${cult}` }, () => { cultDone = true; });
     const m0 = mg.active;
-    assert(m0.bank.length === 5, `Sfida ${cult}: banca di 5 domande disponibile`);
+    assert(m0.bank.length >= 5, `Sfida ${cult}: banca con almeno 5 domande disponibile`);
     assert(m0.order.length === 4, `Sfida ${cult}: 4 domande estratte a caso`);
     for (let guard = 0; guard < 3000 && !cultDone; guard++) {
       const m = mg.active;

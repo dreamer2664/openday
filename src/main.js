@@ -631,9 +631,18 @@ export class CasardiGameApp {
     if (!ch) return;
     this.audio.setDucking(true);
     this.audio.playSfx("interact");
+    // v3.1.2 — le opzioni delle 12 postazioni EIPASS erano sempre nello stesso
+    // ordine: la risposta esatta stava sempre al 1° o al 2° posto. Qui si
+    // rimescolano a ogni partita (e con esse l'indice corretto).
+    const ordine = ch.options.map((_, i) => i).sort(() => Math.random() - 0.5);
+    const challenge = {
+      ...ch,
+      options: ordine.map((i) => ch.options[i]),
+      correctIndex: Math.max(0, ordine.findIndex((i) => ch.options[i].correct)),
+    };
     this.activeQuiz = {
       terminal: terminalEntity,
-      challenge: ch,
+      challenge,
       selectedIndex: 0,
       answered: false,
       wasCorrect: false,
