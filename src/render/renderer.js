@@ -208,153 +208,317 @@ export class PixelRenderer {
     const pxMid = Math.round(camX * 0.42);
 
     if (theme === "facade") {
-      // Cielo mediterraneo di Barletta a fasce pixel-art nitide
-      ctx.fillStyle = "#2563eb";
-      ctx.fillRect(0, 0, SCREEN_W, 58);
-      ctx.fillStyle = "#3b82f6";
-      ctx.fillRect(0, 58, SCREEN_W, 56);
-      ctx.fillStyle = "#60a5fa";
-      ctx.fillRect(0, 114, SCREEN_W, 64);
-      ctx.fillStyle = "#93c5fd";
-      ctx.fillRect(0, 178, SCREEN_W, SCREEN_H - 178);
+      // =====================================================================
+      // VIALE F. D'ARAGONA 100 — RICOSTRUZIONE DALLE FOTO REALI DEL CASARDI
+      // Cielo di Barletta, avancorpo in travertino con le due colonne cilindriche
+      // che nascono sopra il tetto, loggia con bandiere IT/UE, portale a due
+      // ante di legno con targa "LICEO CLASSICO STATALE A. CASARDI — BARLETTA",
+      // gradini d'ingresso, ali ocra con cornice bordeaux, targhe PON e pini.
+      // =====================================================================
+      const sky = ["#1d4ed8", "#2563eb", "#3b82f6", "#5b9cf8", "#7db4fb", "#a5cdfd"];
+      for (let i = 0; i < 6; i++) {
+        ctx.fillStyle = sky[i];
+        ctx.fillRect(0, i * 24, SCREEN_W, 24);
+      }
+      // Sole alto a destra con alone (come nella foto di giorno)
+      ctx.fillStyle = "rgba(255,255,255,0.16)";
+      ctx.fillRect(392, 4, 70, 70);
+      ctx.fillStyle = "#fff7d6";
+      ctx.fillRect(412, 12, 30, 30);
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(418, 16, 18, 18);
 
-      // Nuvole scolpite con ombra inferiore azzurra
+      // Nuvole sottili a strati (estate pugliese)
       for (let i = 0; i < 5; i++) {
-        const cx = (((i * 145 - Math.round(camX * 0.08)) % 620) + 620) % 620 - 70;
-        const cy = 34 + (i % 2) * 14;
-        ctx.fillStyle = "#dbeafe";
-        ctx.fillRect(cx, cy + 6, 48, 5);
+        const cx = (((i * 158 - Math.round(camX * 0.06)) % 700) + 700) % 700 - 90;
+        const cy = 22 + (i % 3) * 15;
+        ctx.fillStyle = "rgba(219,234,254,0.85)";
+        ctx.fillRect(cx, cy + 7, 56, 4);
         ctx.fillStyle = "#ffffff";
-        ctx.fillRect(cx + 2, cy + 2, 44, 6);
-        ctx.fillRect(cx + 12, cy - 4, 24, 6);
+        ctx.fillRect(cx + 3, cy + 3, 48, 5);
+        ctx.fillRect(cx + 14, cy - 3, 26, 5);
       }
 
-      // FACCIATA RAZIONALISTA DEL CASARDI (1937 - Ing. Arturo Boccassini)
       for (let rep = -1; rep <= 3; rep++) {
         const bx = rep * 440 - (pxSlow % 440);
         const baseY = 58;
 
-        // Ali laterali ocra calda con bugnato leggero e cornicione rosso bordeaux Casardi
-        ctx.fillStyle = "#d8b88c";
-        ctx.fillRect(bx, baseY + 26, 440, 186);
-        ctx.fillStyle = "#c9a677";
-        for (let lineY = baseY + 46; lineY < baseY + 200; lineY += 20) {
+        // ---------------- ALI LATERALI (intonaco ocra + cornice bordeaux) ----------------
+        ctx.fillStyle = "#d9bb91";
+        ctx.fillRect(bx, baseY + 30, 440, 190);
+        // Finto bugnato: righe di intonaco leggermente più scuro
+        ctx.fillStyle = "#cfae83";
+        for (let lineY = baseY + 52; lineY < baseY + 212; lineY += 22) {
           ctx.fillRect(bx, lineY, 440, 1);
         }
+        // Ombra generale in basso (più credibile)
+        ctx.fillStyle = "rgba(90,60,30,0.10)";
+        ctx.fillRect(bx, baseY + 150, 440, 70);
+        // Cornice bordeaux a due fasce + gocciolatoio chiaro
         ctx.fillStyle = "#7c2529";
-        ctx.fillRect(bx, baseY + 18, 440, 8);
-        ctx.fillStyle = "#4c1417";
-        ctx.fillRect(bx, baseY + 26, 440, 3);
+        ctx.fillRect(bx, baseY + 16, 440, 9);
+        ctx.fillStyle = "#9c3a34";
+        ctx.fillRect(bx, baseY + 16, 440, 3);
+        ctx.fillStyle = "#5c1a1d";
+        ctx.fillRect(bx, baseY + 25, 440, 4);
+        ctx.fillStyle = "#eee6d4";
+        ctx.fillRect(bx, baseY + 29, 440, 2);
 
-        // Finestre razionaliste incorniciate in pietra chiara (ben ordinate ai lati delle colonne)
-        for (const wxOff of [22, 76, 326, 380]) {
-          for (const wyOff of [44, 112]) {
-            ctx.fillStyle = "#ede8dc";
-            ctx.fillRect(bx + wxOff - 3, baseY + wyOff - 3, 34, 46);
-            ctx.fillStyle = "#1e293b";
-            ctx.fillRect(bx + wxOff, baseY + wyOff, 28, 40);
-            ctx.fillStyle = "#38bdf8";
-            ctx.fillRect(bx + wxOff + 2, baseY + wyOff + 2, 7, 10);
-            ctx.fillStyle = "#cbd5e1";
-            ctx.fillRect(bx + wxOff + 9, baseY + wyOff, 1, 40);
-            ctx.fillRect(bx + wxOff + 18, baseY + wyOff, 1, 40);
-            ctx.fillRect(bx + wxOff, baseY + wyOff + 13, 28, 1);
-            ctx.fillRect(bx + wxOff, baseY + wyOff + 26, 28, 1);
+        // ---------------- FINESTRE RAZIONALISTE ----------------
+        for (const wxOff of [20, 74, 324, 378]) {
+          for (const wyOff of [46, 114]) {
+            // cornice in travertino chiaro con ombra a destra/basso
+            ctx.fillStyle = "#e9e2d3";
+            ctx.fillRect(bx + wxOff - 4, baseY + wyOff - 4, 37, 50);
+            ctx.fillStyle = "#c6bda9";
+            ctx.fillRect(bx + wxOff + 31, baseY + wyOff - 4, 2, 50);
+            ctx.fillRect(bx + wxOff - 4, baseY + wyOff + 44, 37, 2);
+            // vetro scuro con riflesso del cielo
+            ctx.fillStyle = "#16283f";
+            ctx.fillRect(bx + wxOff, baseY + wyOff, 29, 42);
+            ctx.fillStyle = "#2a4a6b";
+            ctx.fillRect(bx + wxOff, baseY + wyOff, 29, 6);
+            ctx.fillStyle = "#8fc4f0";
+            ctx.fillRect(bx + wxOff + 3, baseY + wyOff + 2, 6, 12);
+            // crociera del serramento
+            ctx.fillStyle = "#cfd8e3";
+            ctx.fillRect(bx + wxOff + 14, baseY + wyOff, 1, 42);
+            ctx.fillRect(bx + wxOff, baseY + wyOff + 15, 29, 1);
+            ctx.fillRect(bx + wxOff, baseY + wyOff + 29, 29, 1);
+            // davanzale
+            ctx.fillStyle = "#f1ebe0";
+            ctx.fillRect(bx + wxOff - 5, baseY + wyOff + 46, 39, 3);
           }
         }
 
-        // Avancorpo centrale monumentale in travertino di Trani
-        ctx.fillStyle = "#e7e1d3";
-        ctx.fillRect(bx + 136, baseY + 6, 168, 204);
-        ctx.fillStyle = "#cfc7b6";
-        ctx.fillRect(bx + 136, baseY + 6, 168, 3);
+        // ---------------- AVANCORPO CENTRALE IN TRAVERTINO ----------------
+        ctx.fillStyle = "#eae4d6";
+        ctx.fillRect(bx + 132, baseY + 2, 176, 212);
+        ctx.fillStyle = "#dfd8c8";
+        ctx.fillRect(bx + 132, baseY + 2, 176, 4);
+        // paramento a lastre (righe orizzontali chiare/scure)
+        for (let ly = baseY + 12; ly < baseY + 210; ly += 14) {
+          ctx.fillStyle = ly % 28 === 0 ? "#e3ddcd" : "#d8d1c0";
+          ctx.fillRect(bx + 132, ly, 176, 1);
+        }
+        // attacco a terra in pietra più scura
+        ctx.fillStyle = "#cfc7b5";
+        ctx.fillRect(bx + 132, baseY + 196, 176, 18);
 
-        // Loggia d'onore superiore incassata con Bandiere IT & UE
-        ctx.fillStyle = "#b5ad9c";
-        ctx.fillRect(bx + 180, baseY + 24, 80, 52);
-        ctx.fillStyle = "#1e293b";
-        ctx.fillRect(bx + 186, baseY + 30, 68, 44);
-        ctx.fillStyle = "#d6cfc0";
-        ctx.fillRect(bx + 207, baseY + 30, 2, 44);
-        ctx.fillRect(bx + 231, baseY + 30, 2, 44);
-
-        // Bandiera Italiana + Bandiera Europea con aste inclinate
-        ctx.fillStyle = "#94a3b8";
-        ctx.fillRect(bx + 201, baseY + 46, 2, 26);
-        ctx.fillRect(bx + 225, baseY + 46, 2, 26);
-        ctx.fillStyle = "#16a34a";
-        ctx.fillRect(bx + 203, baseY + 48, 4, 16);
-        ctx.fillStyle = "#f8fafc";
-        ctx.fillRect(bx + 207, baseY + 48, 4, 16);
-        ctx.fillStyle = "#dc2626";
-        ctx.fillRect(bx + 211, baseY + 48, 4, 16);
-        ctx.fillStyle = "#1d4ed8";
-        ctx.fillRect(bx + 227, baseY + 48, 12, 16);
-        ctx.fillStyle = "#facc15";
-        ctx.fillRect(bx + 231, baseY + 53, 4, 4);
-
-        // Portale monumentale noce scuro + Targa marmorea "LICEO A. CASARDI"
-        ctx.fillStyle = "#2e1a14";
-        ctx.fillRect(bx + 180, baseY + 98, 80, 108);
-        ctx.fillStyle = "#f8fafc";
-        ctx.fillRect(bx + 186, baseY + 104, 68, 15);
-        drawPixelText(ctx, "A. CASARDI", bx + 191, baseY + 108, "#1e293b", 1, null);
-        // Portone vetrato d'ingresso
-        ctx.fillStyle = "#c8a96e";
-        ctx.fillRect(bx + 196, baseY + 125, 48, 78);
-        ctx.fillStyle = "#0f172a";
-        ctx.fillRect(bx + 199, baseY + 128, 19, 72);
-        ctx.fillRect(bx + 222, baseY + 128, 19, 72);
-        ctx.fillStyle = "#38bdf8";
-        ctx.fillRect(bx + 202, baseY + 132, 6, 20);
-        ctx.fillRect(bx + 225, baseY + 132, 6, 20);
-
-        // LE DUE ICONICHE COLONNE CILINDRICHE BIANCHE IN TRAVERTINO!
-        for (const colX of [bx + 140, bx + 264]) {
-          ctx.fillStyle = "#b8b0a0";
-          ctx.fillRect(colX, baseY - 12, 36, 218);
-          ctx.fillStyle = "#ded8ca";
-          ctx.fillRect(colX + 3, baseY - 12, 26, 218);
-          ctx.fillStyle = "#f7f5ef";
-          ctx.fillRect(colX + 7, baseY - 12, 14, 218);
-          ctx.fillStyle = "#ffffff";
-          ctx.fillRect(colX + 10, baseY - 12, 6, 218);
-          // Conci lapidei orizzontali
-          ctx.fillStyle = "#c7bfb0";
-          for (let cy = baseY + 4; cy < baseY + 200; cy += 18) {
-            ctx.fillRect(colX + 1, cy, 34, 1);
-          }
-          // Blocco scultoreo superiore sopra il tetto
-          ctx.fillStyle = "#e5dfd2";
-          ctx.fillRect(colX + 10, baseY - 18, 16, 22);
-          ctx.strokeStyle = "#9e9686";
-          ctx.strokeRect(colX + 10, baseY - 18, 16, 22);
+        // ---------------- LOGGIA SUPERIORE CON LE BANDIERE ----------------
+        // vano incassato con ombra interna
+        ctx.fillStyle = "#b3ab99";
+        ctx.fillRect(bx + 176, baseY + 20, 88, 56);
+        ctx.fillStyle = "#0f1c2b";
+        ctx.fillRect(bx + 180, baseY + 24, 80, 48);
+        // vetrata a due ante
+        ctx.fillStyle = "#1c3450";
+        ctx.fillRect(bx + 180, baseY + 24, 39, 48);
+        ctx.fillRect(bx + 221, baseY + 24, 39, 48);
+        ctx.fillStyle = "#9fc8ec";
+        ctx.fillRect(bx + 183, baseY + 27, 10, 16);
+        ctx.fillRect(bx + 224, baseY + 27, 10, 16);
+        ctx.fillStyle = "#5f7590";
+        ctx.fillRect(bx + 219, baseY + 24, 2, 48);
+        // parapetto in travertino davanti alla loggia
+        ctx.fillStyle = "#efe9db";
+        ctx.fillRect(bx + 176, baseY + 68, 88, 4);
+        ctx.fillStyle = "#cdc5b3";
+        ctx.fillRect(bx + 176, baseY + 72, 88, 2);
+        // aste e bandiere: Tricolore + Europa (attaccate al parapetto, come in foto)
+        ctx.fillStyle = "#8c8577";
+        ctx.fillRect(bx + 196, baseY + 44, 2, 26);
+        ctx.fillRect(bx + 228, baseY + 44, 2, 26);
+        ctx.fillStyle = "#0f8a3c";
+        ctx.fillRect(bx + 198, baseY + 45, 4, 14);
+        ctx.fillStyle = "#f7f9fb";
+        ctx.fillRect(bx + 202, baseY + 45, 4, 14);
+        ctx.fillStyle = "#d31f26";
+        ctx.fillRect(bx + 206, baseY + 45, 4, 14);
+        ctx.fillStyle = "#1338a3";
+        ctx.fillRect(bx + 230, baseY + 45, 14, 14);
+        ctx.fillStyle = "#f7d117";
+        for (let sxi = 0; sxi < 3; sxi++) {
+          ctx.fillRect(bx + 234 + sxi, baseY + 50 + sxi, 6 - sxi * 2, 1);
         }
 
-        // Targhe istituzionali PON/FESR
-        ctx.fillStyle = "#0284c7";
-        ctx.fillRect(bx + 150, baseY + 104, 16, 10);
-        ctx.fillStyle = "#eab308";
-        ctx.fillRect(bx + 150, baseY + 116, 16, 10);
-        ctx.fillStyle = "#16a34a";
-        ctx.fillRect(bx + 274, baseY + 104, 16, 10);
+        // ---------------- PORTALE MONUMENTALE ----------------
+        // cornice in pietra che incornicia il portone
+        ctx.fillStyle = "#cfc7b4";
+        ctx.fillRect(bx + 170, baseY + 84, 100, 126);
+        ctx.fillStyle = "#efe9db";
+        ctx.fillRect(bx + 173, baseY + 87, 94, 120);
+        // targa marmorea con l'intestazione della scuola (testo centrato e dentro la lastra)
+        ctx.fillStyle = "#fbf8f0";
+        ctx.fillRect(bx + 164, baseY + 88, 112, 30);
+        ctx.fillStyle = "#8d8578";
+        ctx.fillRect(bx + 164, baseY + 88, 112, 1);
+        ctx.fillStyle = "#c9c1ae";
+        ctx.fillRect(bx + 164, baseY + 117, 112, 1);
+        const plaqueLines = ["LICEO CLASSICO", "A. CASARDI", "BARLETTA"];
+        plaqueLines.forEach((line, li) => {
+          const lw = measurePixelText(line, 1);
+          drawPixelText(ctx, line, bx + 220 - Math.round(lw / 2), baseY + 91 + li * 8, "#233043", 1, null);
+        });
+
+        // portone di legno a due ante (noce scuro, come nelle foto)
+        ctx.fillStyle = "#3b2417";
+        ctx.fillRect(bx + 178, baseY + 120, 84, 88);
+        ctx.fillStyle = "#2a190f";
+        ctx.fillRect(bx + 178, baseY + 120, 84, 3);
+        for (const doorX of [bx + 180, bx + 222]) {
+          ctx.fillStyle = "#4a2d1c";
+          ctx.fillRect(doorX, baseY + 123, 40, 83);
+          // pannelli e vetrata superiore di ogni anta
+          ctx.fillStyle = "#1c1917";
+          ctx.fillRect(doorX + 4, baseY + 126, 32, 24);
+          ctx.fillStyle = "#4f6b8a";
+          ctx.fillRect(doorX + 5, baseY + 127, 30, 22);
+          ctx.fillStyle = "#7ea0c4";
+          ctx.fillRect(doorX + 7, baseY + 129, 8, 16);
+          ctx.fillStyle = "#3d2415";
+          ctx.fillRect(doorX + 4, baseY + 154, 32, 20);
+          ctx.fillStyle = "#57331f";
+          ctx.fillRect(doorX + 6, baseY + 156, 28, 16);
+          ctx.fillStyle = "#3d2415";
+          ctx.fillRect(doorX + 4, baseY + 178, 32, 24);
+          ctx.fillStyle = "#57331f";
+          ctx.fillRect(doorX + 6, baseY + 180, 28, 20);
+          // maniglia dorata
+          ctx.fillStyle = "#d9b45a";
+          ctx.fillRect(doorX + (doorX === bx + 180 ? 33 : 6), baseY + 160, 2, 4);
+        }
+        ctx.fillStyle = "#1b100a";
+        ctx.fillRect(bx + 219, baseY + 122, 2, 84);
+
+        // ---------------- LE DUE COLONNE CILINDRICHE (firma dell'edificio) ----------------
+        for (const colX of [bx + 132, bx + 268]) {
+          const w = 40;
+          // ombra portata dietro la colonna
+          ctx.fillStyle = "rgba(90,70,40,0.18)";
+          ctx.fillRect(colX + w, baseY + 4, 6, 208);
+          // fusto con modulazione cilindrica a 5 fasce
+          ctx.fillStyle = "#c4bcaa";
+          ctx.fillRect(colX, baseY - 14, w, 220);
+          ctx.fillStyle = "#ded8c9";
+          ctx.fillRect(colX + 4, baseY - 14, w - 8, 220);
+          ctx.fillStyle = "#efeade";
+          ctx.fillRect(colX + 10, baseY - 14, 18, 220);
+          ctx.fillStyle = "#fbf9f2";
+          ctx.fillRect(colX + 14, baseY - 14, 8, 220);
+          // giunti dei rocchi
+          ctx.fillStyle = "#cec6b4";
+          for (let cy = baseY + 2; cy < baseY + 196; cy += 16) {
+            ctx.fillRect(colX + 4, cy, w - 8, 1);
+          }
+          // blocchi scultorei sopra il tetto (le "torri" delle foto)
+          ctx.fillStyle = "#e6e0d2";
+          ctx.fillRect(colX + 8, baseY - 26, 24, 26);
+          ctx.fillStyle = "#f4f0e6";
+          ctx.fillRect(colX + 11, baseY - 26, 12, 26);
+          ctx.fillStyle = "#a79e8c";
+          ctx.fillRect(colX + 8, baseY - 26, 24, 2);
+          ctx.fillStyle = "#b9b1a0";
+          ctx.fillRect(colX + 30, baseY - 26, 2, 26);
+        }
+
+        // ---------------- BALCONCINI CON RINGHIERA SOTTO LE FINESTRE DEL PRIMO PIANO ----------------
+        for (const wxOff of [20, 74, 324, 378]) {
+          const rx = bx + wxOff - 3;
+          // soletta in pietra
+          ctx.fillStyle = "#e6e0d2";
+          ctx.fillRect(rx, baseY + 90, 37, 3);
+          ctx.fillStyle = "#b9b1a0";
+          ctx.fillRect(rx, baseY + 93, 37, 1);
+          // ringhiera a bacchette
+          ctx.fillStyle = "#3a3530";
+          ctx.fillRect(rx, baseY + 96, 37, 1);
+          ctx.fillRect(rx, baseY + 106, 37, 1);
+          for (let rb = 0; rb < 7; rb++) {
+            ctx.fillRect(rx + 2 + rb * 6, baseY + 96, 1, 11);
+          }
+        }
+
+        // ---------------- BACHECA DELLA SCUOLA ACCANTO AL PORTALE ----------------
+        ctx.fillStyle = "#5b3a24";
+        ctx.fillRect(bx + 296, baseY + 140, 40, 30);
+        ctx.fillStyle = "#8a5f3d";
+        ctx.fillRect(bx + 297, baseY + 141, 38, 28);
+        ctx.fillStyle = "#f6f1e3";
+        ctx.fillRect(bx + 300, baseY + 144, 15, 11);
+        ctx.fillRect(bx + 318, baseY + 144, 14, 9);
+        ctx.fillRect(bx + 300, baseY + 158, 22, 9);
+        ctx.fillStyle = "#c0b9a6";
+        ctx.fillRect(bx + 303, baseY + 147, 9, 1);
+        ctx.fillRect(bx + 303, baseY + 150, 7, 1);
+        ctx.fillRect(bx + 321, baseY + 147, 8, 1);
+
+        // ---------------- TARGHE ISTITUZIONALI AI LATI DEL PORTALE ----------------
+        const plates = [
+          [bx + 150, 96, "#1d4ed8", "#f8fafc"],
+          [bx + 150, 112, "#eab308", "#1f2937"],
+          [bx + 292, 96, "#0e7490", "#f8fafc"],
+          [bx + 292, 112, "#16a34a", "#f8fafc"],
+        ];
+        for (const [px0, py0, c1, c2] of plates) {
+          ctx.fillStyle = "#f4efe2";
+          ctx.fillRect(bx + (px0 - bx), baseY + py0 - 1, 18, 13);
+          ctx.fillStyle = c1;
+          ctx.fillRect(bx + (px0 - bx), baseY + py0, 16, 11);
+          ctx.fillStyle = c2;
+          ctx.fillRect(bx + (px0 - bx) + 2, baseY + py0 + 3, 12, 1);
+          ctx.fillRect(bx + (px0 - bx) + 2, baseY + py0 + 6, 9, 1);
+        }
+
+        // ---------------- GRADINI D'INGRESSO ----------------
+        ctx.fillStyle = "#b8b2a2";
+        ctx.fillRect(bx + 158, baseY + 208, 124, 8);
+        ctx.fillStyle = "#d3cdbe";
+        ctx.fillRect(bx + 158, baseY + 208, 124, 3);
+        ctx.fillStyle = "#cdc6b6";
+        ctx.fillRect(bx + 150, baseY + 216, 140, 8);
+        ctx.fillStyle = "#e2ddd0";
+        ctx.fillRect(bx + 150, baseY + 216, 140, 3);
       }
 
-      // Pini marittimi pugliesi ai lati del viale (senza coprire il portale centrale!)
+      // ---------------- MARCIAPIEDE, CANCELLO E PRIMO PIANO ----------------
+      ctx.fillStyle = "#b9b4a6";
+      ctx.fillRect(0, 232, SCREEN_W, 6);
+      ctx.fillStyle = "#a29d90";
+      ctx.fillRect(0, 238, SCREEN_W, 2);
+
+      // Pini marittimi e alberi del viale: chiome a strati con luce dal cielo
       for (let p = -1; p <= 3; p++) {
-        const tx = p * 440 - (pxMid % 440) + 12;
+        const tx = p * 440 - (pxMid % 440) + 8;
+        // tronco con corteccia
         ctx.fillStyle = "#4a3222";
-        ctx.fillRect(tx + 22, 140, 8, 104);
+        ctx.fillRect(tx + 24, 132, 9, 108);
         ctx.fillStyle = "#2e1e14";
-        ctx.fillRect(tx + 27, 140, 3, 104);
+        ctx.fillRect(tx + 29, 132, 4, 108);
+        ctx.fillStyle = "#5c3f2b";
+        ctx.fillRect(tx + 25, 140, 2, 60);
+        // chioma a 4 strati
+        ctx.fillStyle = "#0f3d22";
+        ctx.fillRect(tx - 10, 118, 74, 26);
         ctx.fillStyle = "#14532d";
-        ctx.fillRect(tx - 6, 114, 64, 26);
+        ctx.fillRect(tx - 4, 106, 62, 22);
         ctx.fillStyle = "#166534";
-        ctx.fillRect(tx + 2, 102, 48, 18);
+        ctx.fillRect(tx + 4, 96, 48, 18);
         ctx.fillStyle = "#22c55e";
-        ctx.fillRect(tx + 10, 96, 32, 9);
+        ctx.fillRect(tx + 12, 90, 30, 10);
+        ctx.fillStyle = "#4ade80";
+        ctx.fillRect(tx + 18, 88, 14, 4);
+      }
+      // Ramo d'albero in primo piano (dà profondità, come nella foto dal basso)
+      ctx.fillStyle = "#12341f";
+      ctx.fillRect(0, 0, 26, 4);
+      ctx.fillRect(0, 4, 12, 3);
+      ctx.fillStyle = "#1c4a2c";
+      for (let k = 0; k < 9; k++) {
+        ctx.fillRect(18 + k * 7, 6 + (k % 3) * 3, 6, 2);
       }
     } else if (theme === "corridor") {
+
       // CORRIDOIO STORICO DEL CASARDI — Proporzioni 16-bit armoniose e calde!
       // Controsoffitto scolastico con plafoniere calde
       ctx.fillStyle = "#cbc5b5";
@@ -408,15 +572,52 @@ export class PixelRenderer {
           ctx.fillStyle = "#fef9c3";
           ctx.fillRect(dx + 28, 35, 40, 2);
 
-          // Stampa greca incorniciata nella fascia alta (sempre SOPRA la porta)
+          // Cornice con BUSTO CLASSICO (il Casardi è un liceo classico: marmo, non poster anonimi)
           ctx.fillStyle = "#5c3422";
-          ctx.fillRect(dx + 96, 60, 54, 38);
+          ctx.fillRect(dx + 96, 58, 54, 42);
           ctx.fillStyle = "#f5efe0";
-          ctx.fillRect(dx + 99, 63, 48, 32);
-          ctx.fillStyle = "#94a3b8";
-          ctx.fillRect(dx + 105, 69, 36, 12);
-          ctx.fillStyle = "#cbd5e1";
-          ctx.fillRect(dx + 105, 84, 28, 6);
+          ctx.fillRect(dx + 99, 61, 48, 36);
+          ctx.fillStyle = "#e8e1cf";
+          ctx.fillRect(dx + 101, 63, 44, 32);
+          // nicchia con ombra
+          ctx.fillStyle = "#d6cdb8";
+          ctx.fillRect(dx + 107, 66, 32, 26);
+          // testa e spalle del busto in marmo
+          ctx.fillStyle = "#f8f6ef";
+          ctx.fillRect(dx + 117, 69, 12, 12);
+          ctx.fillRect(dx + 113, 80, 20, 10);
+          ctx.fillStyle = "#cfc7b2";
+          ctx.fillRect(dx + 117, 80, 12, 3);
+          ctx.fillRect(dx + 129, 70, 2, 11);
+          ctx.fillStyle = "#9c9484";
+          ctx.fillRect(dx + 118, 73, 2, 2);
+          ctx.fillRect(dx + 125, 73, 2, 2);
+          // basamento della nicchia
+          ctx.fillStyle = "#b7ae9a";
+          ctx.fillRect(dx + 107, 90, 32, 2);
+
+          // TERMOSIFONO A PARETE (elemento vero dei corridoi italiani)
+          ctx.fillStyle = "#d9d6cc";
+          ctx.fillRect(dx + 58, 208, 40, 26);
+          ctx.fillStyle = "#eeece4";
+          ctx.fillRect(dx + 59, 209, 38, 24);
+          ctx.fillStyle = "#c3c0b5";
+          for (let fin = 0; fin < 8; fin++) {
+            ctx.fillRect(dx + 61 + fin * 4, 211, 2, 20);
+          }
+          ctx.fillStyle = "#b3b0a6";
+          ctx.fillRect(dx + 58, 232, 40, 2);
+
+          // ombra di appoggio del termosifone e zoccolatura
+          ctx.fillStyle = "rgba(70,50,20,0.13)";
+          ctx.fillRect(dx + 56, 234, 44, 5);
+
+          // CONO DI LUCE della plafoniera sul pavimento
+          const glow = ctx.createLinearGradient(0, 150, 0, 250);
+          glow.addColorStop(0, "rgba(255,250,220,0.22)");
+          glow.addColorStop(1, "rgba(255,250,220,0)");
+          ctx.fillStyle = glow;
+          ctx.fillRect(dx + 8, 150, 80, 100);
 
           // ================= PORTE A SOMMESSA (si vede il vano d'ombra!) =============
           const doorTop = 132;

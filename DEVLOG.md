@@ -1,3 +1,27 @@
+## Fase L — Personaggi e facciata dalle foto (v3.0.4, 26/11/2026)
+
+**Richiesta:** «Concentrati sui personaggi molto, puoi migliorarli molto. Poi vedi le foto della scuola e
+migliora i dettagli nel gioco.»
+
+**Metodo:** rigenerazione degli sprite con `tools/generate_assets.py` (nessun refactor del runtime) e
+riscrittura del solo blocco `theme === "facade"` in `renderer.js`.
+
+**Personaggi**
+- Daniele: rimossa l'icona "strumento di rete" (residuo pre-v3) → coppia di note musicali oro/rosa.
+- Aggiunte sopracciglia, guance e luce speculare sui capelli: il volto si legge a risoluzione nativa.
+- Carlo: baffetto ricalibrato sulla foto reale (folto al centro, sottile ai lati).
+
+**Facciata (dalle 2 foto dell'ingresso)**
+- Travertino a lastre, due colonne cilindriche oltre il tetto con blocchi scultorei.
+- Loggia incassata con vetrata e bandiere IT/UE sul parapetto.
+- Portale in legno a due ante con targa marmorea su 3 righe, gradini, targhe PON, bacheca, balconcini.
+- Cielo a fasce, sole, pini stratificati e ramo in primo piano.
+
+**Corridoi**
+- Busti classici in marmo nelle nicchie al posto dei quadri anonimi, termosifoni a parete, coni di luce.
+
+**Verifica:** playtest 511 · testi 341 · regressione 178 · mobile 30 · screenshot 7/7 · 0 errori JS.
+
 ## Fase I — Squadra al seguito (v3.0.3, 26/11/2026)
 
 **Richiesta:** «È fastidioso che i personaggi ti seguono ovunque vai. Aggiungi un toggle all'inizio del gioco

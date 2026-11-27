@@ -1,6 +1,8 @@
 # OPERAZIONE EIPASS — IL CASARDI IN 8 BIT
 
 
+> **v3.0.4** — personaggi rifiniti (Daniele con le note al posto dell'aggeggio di rete, volti più leggibili) e **facciata del Casardi ricostruita sulle foto** (colonne, loggia con bandiere, portale in legno, targa, gradini, bacheca).
+>
 > **v3.0.3** — nuovo toggle **SQUADRA AL SEGUITO** (menu iniziale / pausa / tasto `G`): i compagni non ti pedinano più.
 >
 > **v3.0.2** — comandi PC a posto: cambio eroe con `1`-`5`, `Q`/`TAB`, click sulle pillole dell'HUD o sul compagno, prompt `[E]`; ogni comando della guida ha un tasto (`F1`/`?` = guida, `Y` = schermo intero); mixer attivo nella guida. Vedi `CHANGELOG.md` e `DEVLOG.md`.
@@ -9,7 +11,7 @@ Videogioco originale narrativo-platform a 8-bit realizzato per l'**Open Day del 
 
 **Protagonisti giocabili (5):** **Prof. Ranaldo** *(Matematica)*, **Carlo** *(Basket)*, **Daniele** *(Ballo Latino-Americano)*, **Ruggero** *(Atletica Leggera)* e **Francesco** *(Pianoforte)*.
 
-**Gioca subito dal browser:** https://dreamer2664.github.io/openday/ — build standalone v3.0.3, nessuna installazione.
+**Gioca subito dal browser:** https://dreamer2664.github.io/openday/ — build standalone v3.0.4, nessuna installazione.
 
 **Repository:** https://github.com/dreamer2664/openday (sorgente `src/`, strumenti `tools/`, documentazione e storico).
 

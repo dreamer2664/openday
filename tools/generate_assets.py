@@ -305,8 +305,35 @@ def draw_char_32x36(im, ox, oy, cid, pose):
     else:
         rect(im, ox + 15, hy + 16, 3, 1, SKIN_SH)
 
+    # --- SOPRACCIGLIA (danno carattere al volto anche a 1x) ---
+    brow = hd if cid != "ranaldo" else rgba("#3c4657")
+    if cid == "carlo":
+        brow = None  # la montatura nera spessa sostituisce le sopracciglia (come in foto)
+    if brow is None:
+        pass
+    elif pose == 12:
+        rect(im, ox + 12, hy + 11, 3, 1, brow)
+        rect(im, ox + 18, hy + 11, 3, 1, brow)
+    else:
+        rect(im, ox + 12, hy + 10, 3, 1, brow)
+        rect(im, ox + 18, hy + 10, 3, 1, brow)
+
+    # --- GUANCE: un tocco di rossore da cartone animato (esclusi i frame di danno) ---
+    if pose != 12 and cid not in ("ranaldo",):
+        px(im, ox + 11, hy + 15, rgba("#e08a72"))
+        px(im, ox + 20, hy + 15, rgba("#e08a72"))
+
     # --- CAPIGLIATURA MESSY DIFFERENZIATA ---
     draw_canonical_messy_hair_32(im, ox, hy, hd, hm, hl, cid, hair_bounce)
+
+    # --- LUCE SPECULARE SULLA CAPIGLIATURA (dà volume al ciuffo) ---
+    glint = {(0, 0)}  # segnaposto per leggibilità
+    if cid in ("carlo", "ranaldo", "daniele"):
+        px(im, ox + 15, hy + 3, rgba("#8c8c96") if cid == "ranaldo" else rgba("#4a3d4a"))
+    if cid == "francesco":
+        px(im, ox + 14, hy + 3, rgba("#6f5b80"))
+    if cid == "ruggero":
+        px(im, ox + 16, hy + 2, rgba("#5c3a2c"))
 
     # --- TRATTI FACCIALI ICONICI SULLO SPRITE 32x36 ---
     if cid == "carlo":
@@ -322,9 +349,12 @@ def draw_char_32x36(im, ox, oy, cid, pose):
         if pose != 12:
             px(im, ox + 11, hy + 12, rgba("#bae6fd"))  # riflesso lente sx
             px(im, ox + 18, hy + 12, rgba("#bae6fd"))  # riflesso lente dx
-        # Baffetti neri giovanili sopra il labbro (mento pulito!)
-        rect(im, ox + 14, hy + 15, 5, 1, rgba("#1e181e"))
+        # BAFFETTO nero giovanile (dalla foto: folto al centro, assottigliato ai lati)
+        rect(im, ox + 14, hy + 15, 5, 1, rgba("#1a1420"))
+        px(im, ox + 13, hy + 15, rgba("#2a2230"))
+        px(im, ox + 19, hy + 15, rgba("#2a2230"))
         rect(im, ox + 14, hy + 17, 5, 1, SKIN_MID)  # mento pulito senza barba!
+        # sopracciglia folta già disegnata; lenti con doppio riflesso (vetro reale)
 
     elif cid == "ranaldo":
         # PROF. RANALDO (45 ANNI): barba corta curata sale-e-pepe aderente alla mascella (non barba lunga da 70enne!)
@@ -487,16 +517,27 @@ def draw_char_32x36(im, ox, oy, cid, pose):
                 px(im, gx + i, gy + i, rgba("#fef08a"))
 
     elif cid == "daniele" and pose in (0, 1, 2, 3, 10, 11):
-        # Strumento diagnostico compatto di rete con impulso luminoso ciano!
-        dx_p = ox + 24
-        dy_p = hy + (20 if pose < 10 else 13) - (pose % 2)
-        rect(im, dx_p, dy_p, 6, 7, OUT)
-        rect(im, dx_p + 1, dy_p + 1, 4, 5, rgba("#0f172a"))
-        rect(im, dx_p + 1, dy_p + 1, 4, 3, rgba("#22d3ee"))
-        px(im, dx_p + 2, dy_p + 2, WHITE)
+        # DANIELE = BALLERINO LATINO-AMERICANO: coppia di note musicali dorate che
+        # salgono a tempo + brillio rosa del passo di salsa (niente più aggeggi di rete!)
+        ny = hy + 15 - (pose % 4)
+        nx = ox + 24
+        gold = rgba("#fbbf24")
+        pink = rgba("#f472b6")
+        # nota 1 (croma con bandierina)
+        rect(im, nx + 1, ny + 4, 3, 3, OUT)
+        rect(im, nx + 2, ny + 4, 2, 2, gold)
+        rect(im, nx + 3, ny - 2, 1, 7, gold)
+        px(im, nx + 4, ny - 2, gold)
+        px(im, nx + 5, ny - 1, gold)
+        # nota 2 (più in alto, ritmica)
+        rect(im, nx + 6, ny + 1, 3, 3, OUT)
+        rect(im, nx + 7, ny + 1, 2, 2, pink)
+        rect(im, nx + 8, ny - 5, 1, 7, pink)
+        px(im, nx + 9, ny - 5, pink)
         if pose in (1, 3, 10, 11):
-            px(im, dx_p + 3, dy_p - 2, rgba("#38bdf8"))
-            px(im, dx_p + 5, dy_p - 1, rgba("#67e8f9"))
+            # scintillio del passo di ballo accanto alle scarpe
+            px(im, ox + 4, oy + 33, pink)
+            px(im, ox + 2, oy + 31, WHITE)
 
 
 # ==============================================================================

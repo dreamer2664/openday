@@ -1,5 +1,30 @@
 # CHANGELOG — OPERAZIONE EIPASS: IL CASARDI IN 8 BIT
 
+## v3.0.4 — Personaggi rifiniti e facciata ricostruita dalle foto (26/11/2026)
+
+**Personaggi (sprite 32x36 e ritratti 64x64 rigenerati)**
+- **Daniele**: rimosso il residuo "strumento diagnostico di rete" (era rimasto dall'era pre-ballo).
+  Ora porta **due note musicali dorate e rosa** che salgono a tempo e uno scintillio del passo di salsa.
+- **Volti più leggibili a 1x**: sopracciglia disegnate per ogni eroe (la montatura nera di Carlo le
+  sostituisce, come nella foto reale), guance con un tocco di rossore, **luce speculare sul ciuffo**
+  per dare volume ai capelli.
+- **Carlo**: baffetto più fedele alla fotografia (folto al centro, assottigliato ai lati), mento pulito.
+- Tutti gli altri (Ranaldo, Ruggero, Francesco, Sofia, Mimmo) mantengono identità, palette e proporzioni.
+
+**Facciata della scuola — ricostruita sulle fotografie reali**
+- Avancorpo in **travertino con paramento a lastre** e **due colonne cilindriche** che nascono sopra la
+  copertura con i blocchi scultorei, esattamente come negli scatti.
+- **Loggia superiore incassata** con vetrata a due ante, parapetto in pietra e **bandiere Tricolore + Europa**.
+- **Portale monumentale a due ante in legno scuro** con vetrate, specchiature, maniglie in ottone e
+  **targa marmorea "LICEO CLASSICO / A. CASARDI / BARLETTA"** centrata e leggibile.
+- **Gradini d'ingresso** a due alzate, **targhe PON/FESR blu-giallo-verde** ai lati del portale,
+  **bacheca scolastica** in legno, **balconcini con ringhiera** sotto le finestre del primo piano.
+- Cielo a sei fasce con sole e alone, **pini marittimi a strati** e **ramo in primo piano** per la profondità.
+
+**Corridoi (palette e dettagli)**
+- Al posto dei quadri anonimi: **nicchie con busti classici in marmo** (è un liceo classico).
+- **Termosifoni a parete** con ombra di appoggio, **con spifferi di luce** delle plafoniere sul pavimento.
+
 ## v3.0.3 — Squadra al seguito: opzione (26/11/2026)
 
 - Nuova opzione **SQUADRA AL SEGUITO: SI/NO**, scelta **nel menu iniziale** (terza voce), ripetibile
