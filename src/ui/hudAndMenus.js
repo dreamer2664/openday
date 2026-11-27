@@ -223,8 +223,17 @@ export class UIManager {
       drawPixelText(ctx, `+${d.shield}SC`, 8 + d.maxHp * 13, 9, "#38bdf8", 1);
     }
 
-    // Selettore rapido dei 5 Protagonisti ([1] Ranaldo, [2] Carlo, [3] Daniele, [4] Ruggero, [5] Francesco)
-    const slotOrder = HUD_SLOT_ORDER;
+    // Selettore rapido dei Protagonisti: 1=Carlo, 2=Ranaldo, poi gli altri acquisiti.
+    // Lo stesso ordine usato dai tasti numerici (main.heroSlotOrder), così non si sfalsano.
+    const baseOrder = ["carlo", "ranaldo"];
+    const rosterKey = (d.unlockedChars || []).join(",");
+    if (this._rosterCacheKey !== rosterKey) {
+      this._rosterCacheKey = rosterKey;
+      this._rosterOrder = baseOrder.concat(
+        (d.unlockedChars || []).filter((c) => !baseOrder.includes(c) && CHARACTERS[c])
+      );
+    }
+    const slotOrder = this._rosterOrder;
     const SLOT_W = 42;
     const SLOT_PITCH = 45;
     const SLOT_X0 = 94;
@@ -241,6 +250,11 @@ export class UIManager {
 
       const label = unlocked ? `${idx + 1}:${meta.shortName.slice(0, 3)}` : `${idx + 1}:??`;
       drawPixelText(ctx, label, sx + 2, 6, unlocked ? (active ? "#ffffff" : "#cbd5e1") : "#475569", 1);
+      if (world && unlocked && !active) {
+        // hint discreto: le pillole degli altri compagni si possono cliccare col mouse
+        ctx.fillStyle = "#38bdf8";
+        ctx.fillRect(sx + 3, 21, SLOT_W - 6, 1);
+      }
 
       if (active && world) {
         const ratio = Math.max(0, 1 - world.player.cooldown / meta.cooldownMax);
@@ -725,14 +739,15 @@ export class UIManager {
     drawPixelPanel(ctx, 12, 10, SCREEN_W - 24, SCREEN_H - 20, "#0b1326", "#38bdf8", "#1e293b");
     drawPixelTextCentered(ctx, "COMANDI DI GIOCO & MIXER AUDIO CHIPTUNE", SCREEN_W / 2, 20, "#ffd147", 1);
 
-    // 8 voci: ciascuna su una riga, con descrizione adattata ai pixel disponibili
+    // 11 voci, 16px per riga: ogni descrizione sta su UNA riga del pannello reale
     CONTROLS_HELP.forEach((c, i) => {
-      const y = 36 + i * 20;
+      const y = 30 + i * 16;
       ctx.fillStyle = "#1e293b";
-      ctx.fillRect(24, y, 136, 16);
+      ctx.fillRect(24, y, 136, 14);
       ctx.strokeStyle = "#475569";
-      ctx.strokeRect(24, y, 136, 16);
-      drawPixelText(ctx, measurePixelText(c.keys, 1) > 134 ? c.keys.slice(0, 22) : c.keys, 29, y + 4, "#38bdf8", 1);
+      ctx.strokeRect(24, y, 136, 14);
+      const keysTxt = fitPixelText(c.keys, 130, 1, 1)[0];
+      drawPixelText(ctx, keysTxt, 29, y + 4, "#38bdf8", 1);
       const desc = fitPixelText(c.action, SCREEN_W - 24 - 168 - 8, 1, 1)[0];
       drawPixelText(ctx, desc, 168, y + 4, "#f8fafc", 1);
     });
@@ -743,7 +758,7 @@ export class UIManager {
       ctx,
       `Musica ${mPct}% (SX/DX) | Effetti ${sPct}% (SU/GIU) | [M] Muto: ${audio.muted ? "SI" : "NO"}`,
       SCREEN_W / 2,
-      208,
+      213,
       "#fde047",
       1
     );

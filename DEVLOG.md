@@ -1,3 +1,28 @@
+## Fase H — Comandi PC (v3.0.2, 26/11/2026)
+
+**Sintomo riferito dall'utente:** «Nella modalità PC alcuni comandi non funzionano, come cambiare i
+personaggi, e dei comandi non hanno tasti assegnati».
+
+**Diagnosi (Playwright su `AVVIA_GIOCO_PC_V3.html`)**
+1. In Open Day `unlockedChars = [carlo, ranaldo]`, quindi `3`/`4`/`5` non facevano nulla e sembravano rotti
+   (nessun messaggio, nessun suono).
+2. Il cambio eroe era **invisibile**: nessun compagno veniva disegnato in scena, l'eroe cambiava solo nei dati.
+3. Nella guida comandi aperta dalla pausa, `SU`/`GIU` e `SX`/`DX` non regolavano i volumi (la logica esisteva
+   solo nel modal sui titoli).
+4. Alcune voci elencate non avevano un tasto corrispondente (schermo intero) e `?` non era mappato.
+
+**Interventi**
+- `switchActiveChar()` unico punto di cambio eroe + `checkCompanionSwitch()` ([E], raggio 46 px).
+- Compagni visibili: `syncCompanions()`, `updateCompanions()` (catena con lerp), `drawCompanions()` con aura.
+- Click su pillole HUD (`94 + idx*45`) e click sui compagni in scena.
+- Slot fissi `1=Carlo 2=Ranaldo`, fallback `CHAR_ORDER` e guardia anti-crash sui tasti vuoti.
+- Mixer attivo nella guida; nuovi tasti `F1`/`?` (guida) e `Y` (fullscreen); `CONTROLS_HELP` a 11 voci.
+- Sinergia di squadra con bonus passivi (HP, salto, danno, velocità) applicati a `WorldRuntime`.
+- `src/main.js` importabile da Node; nuovo blocco 14 in `tools/qa_bugfix_regression.mjs` (32 controlli).
+
+**Verifica:** 511 playtest · 30 mobile · 339 testi · 169 regressione · 7 screenshot · 0 errori JS
+su `file://` (PC) con tasti, click HUD, click compagno, `[E]`, `F1`, `Y` e 40 input casuali.
+
 # DEVLOG.md — Registro di Sviluppo e Rifinitura Notturna (Verso v3.0)
 
 ## Fase A — Backup Immutabile e Audit Tecnico dell'Esistente

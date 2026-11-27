@@ -230,6 +230,9 @@ export const CONTROLS_HELP = [
   { keys: "C / L", action: "Assist di squadra di un compagno" },
   { keys: "E / INVIO", action: "Parla, apri porte, usa postazioni" },
   { keys: "1-5 / Q", action: "Cambia eroe tra i membri sbloccati" },
+  { keys: "E (vicino)", action: "Prende in campo il compagno accanto" },
   { keys: "P / ESC  |  V", action: "Pausa e Dossier | [V] filtro CRT" },
   { keys: "M  |  F9", action: "Audio muto | [F9] riavvio rapido" },
+  { keys: "Y", action: "Schermo intero (solo versione PC)" },
+  { keys: "F1  |  ?", action: "Apre o chiude questa guida comandi" },
 ];

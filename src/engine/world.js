@@ -70,6 +70,11 @@ export class WorldRuntime {
     };
 
     this.assistActor = null; // { charId, x, y, facing, ttl }
+    // COMPAGNI NEL MONDO: gli altri eroi sbloccati seguono il giocatore e possono essere
+    // "presi in campo" con [E] o con un tocco. Prima non esistevano e il cambio eroe era invisibile.
+    this.companionActors = [];
+    this.nearestCompanion = null;
+    this.syncCompanions();
     this.activeBanter = null; // { speaker, text, ttl }
 
     this.camera = { x: Math.max(0, sx - 200), y: 0 };
@@ -312,6 +317,45 @@ export class WorldRuntime {
     this.floatingTexts.push({ x, y, text, color, ttl: 54 });
   }
 
+  /** Crea/aggiorna i compagni visibili: uno sprite per ogni eroe sbloccato non attivo. */
+  syncCompanions() {
+    const unlocked = (this.state.data.unlockedChars || []).slice();
+    const active = this.state.data.activeChar;
+    const others = unlocked.filter((c) => c !== active && CHARACTERS[c]);
+    // rimuove chi non è più in squadra
+    this.companionActors = this.companionActors.filter((a) => others.includes(a.charId));
+    for (const cid of others) {
+      if (this.companionActors.some((a) => a.charId === cid)) continue;
+      const idx = this.companionActors.length;
+      this.companionActors.push({
+        charId: cid,
+        x: this.player.x - 26 - idx * 24,
+        y: this.player.y,
+        bob: idx * 10,
+        facing: 1,
+        label: CHARACTERS[cid].shortName,
+      });
+    }
+  }
+
+  /** I compagni seguono con un certo ritardo e non entrano nei muri. */
+  updateCompanions() {
+    this.syncCompanions();
+    const p = this.player;
+    let prevX = p.x;
+    let prevY = p.y;
+    this.companionActors.forEach((a, i) => {
+      const targetX = prevX - 24 * (i + 1);
+      const targetY = prevY;
+      a.x += (targetX - a.x) * 0.08;
+      a.y += (targetY - a.y) * 0.14;
+      a.facing = targetX > a.x ? 1 : -1;
+      a.bob = (a.bob + 1) % 90;
+      prevX = a.x;
+      prevY = a.y;
+    });
+  }
+
   /** Cerca la prima superficie solida sotto (x,y) e ne restituisce la coordinata Y in pixel. */
   findGroundY(x, fromY) {
     const c = Math.floor(x / TILE);
@@ -391,7 +435,7 @@ export class WorldRuntime {
       p.dashTimer--;
       if (p.dashTimer === 0) p.dashing = false;
     }
-    const maxSpd = PHYSICS.baseSpeed * charMeta.speedMult;
+    const maxSpd = PHYSICS.baseSpeed * (charMeta.speedMult + this.synergySpeedBonus);
     const accel = p.onGround ? PHYSICS.groundAccel : PHYSICS.airAccel;
     if (p.dashing) {
       // Mantiene lo slancio dello Scatto Ostacoli consentendo solo il salto sopra gli ostacoli
@@ -417,7 +461,8 @@ export class WorldRuntime {
     else if (p.jumpBuffer > 0) p.jumpBuffer--;
 
     if (p.jumpBuffer > 0 && p.coyote > 0) {
-      p.vy = PHYSICS.baseJump * charMeta.jumpMult;
+      // sinergia di squadra: i compagni sbloccati alleggeriscono un po' il salto
+      p.vy = PHYSICS.baseJump * (charMeta.jumpMult + this.synergyJumpBonus);
       p.onGround = false;
       p.coyote = 0;
       p.jumpBuffer = 0;
@@ -488,6 +533,7 @@ export class WorldRuntime {
       this.triggerSquadAssist(input.up);
     }
 
+    this.updateCompanions();
     this.updateProjectiles();
     this.updateEnemies();
 
@@ -656,6 +702,15 @@ export class WorldRuntime {
       p.vy = 0;
       p.invuln = 65;
     }
+  }
+
+  /** Bonus passivo di squadra: fornito da main.teamSynergy(), 0 se non disponibile. */
+  get synergyJumpBonus() {
+    return this._synergyJumpBonus || 0;
+  }
+
+  get synergySpeedBonus() {
+    return this._synergySpeedBonus || 0;
   }
 
   damagePlayer(amount = 1, knockback = true) {
@@ -1328,6 +1383,15 @@ export class WorldRuntime {
           return;
         }
       }
+    }
+
+    // Compagni di squadra: [E] li porta in campo (prompt a bassa priorità)
+    if (this.nearestCompanion && !this.interactPrompt) {
+      this.interactPrompt = {
+        x: this.nearestCompanion.x - 16,
+        y: this.nearestCompanion.y - 20,
+        text: `[E] Cambia con ${this.nearestCompanion.label}`,
+      };
     }
 
     // Dialoghi

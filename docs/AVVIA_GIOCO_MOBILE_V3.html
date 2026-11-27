@@ -861,8 +861,11 @@ const CONTROLS_HELP = [
   { keys: "C / L", action: "Assist di squadra di un compagno" },
   { keys: "E / INVIO", action: "Parla, apri porte, usa postazioni" },
   { keys: "1-5 / Q", action: "Cambia eroe tra i membri sbloccati" },
+  { keys: "E (vicino)", action: "Prende in campo il compagno accanto" },
   { keys: "P / ESC  |  V", action: "Pausa e Dossier | [V] filtro CRT" },
   { keys: "M  |  F9", action: "Audio muto | [F9] riavvio rapido" },
+  { keys: "Y", action: "Schermo intero (solo versione PC)" },
+  { keys: "F1  |  ?", action: "Apre o chiude questa guida comandi" },
 ];
 
 
@@ -1965,6 +1968,8 @@ class InputController {
     this.replayPressed = false;
     this.quickResetPressed = false;
     this.numberPressed = 0; // 1..8
+    this.fullscreenPressed = false;
+    this.helpPressed = false;
 
     this._prevGpButtons = [];
     this.bindEvents();
@@ -2142,12 +2147,15 @@ class InputController {
     this.assistPressed = jp.has("KeyC") || jp.has("KeyL") || gpAssistJust;
     this.interactPressed = jp.has("KeyE") || jp.has("Enter") || jp.has("KeyF") || gpIntJust;
     this.confirmPressed = jp.has("Enter") || jp.has("Space") || jp.has("KeyE") || gpJumpJust;
-    this.pausePressed = jp.has("KeyP") || jp.has("Escape") || gpPauseJust;
-    this.mutePressed = jp.has("KeyM");
-    this.crtTogglePressed = jp.has("KeyV");
-    this.switchCyclePressed = jp.has("KeyQ") || jp.has("Tab") || gpSwitchJust;
-    this.replayPressed = jp.has("KeyR");
-    this.quickResetPressed = jp.has("F9");
+    // --- SCORCIATOIE GLOBALI (una sola definizione: nessun comando senza tasto) ---
+    this.pausePressed = jp.has("KeyP") || jp.has("Escape") || gpPauseJust; // P / ESC / START
+    this.mutePressed = jp.has("KeyM");                                       // M
+    this.crtTogglePressed = jp.has("KeyV");                                  // V
+    this.switchCyclePressed = jp.has("KeyQ") || jp.has("Tab") || gpSwitchJust; // Q / TAB / LB
+    this.replayPressed = jp.has("KeyR");                                     // R (Riascolta)
+    this.quickResetPressed = jp.has("F9");                                   // F9
+    this.fullscreenPressed = jp.has("KeyY");                                 // Y = schermo intero
+    this.helpPressed = jp.has("F1") || jp.has("Slash") || jp.has("NumpadDivide"); // F1 / ?  -> guida comandi
 
     this.numberPressed = 0;
     for (let n = 1; n <= 8; n++) {
@@ -2419,7 +2427,9 @@ function autoScaleFor(text, maxWidthPx, baseScale = 1, minScale = 1) {
 }
 
 /** true se il carattere ha un glifo proprio o risolvibile (accenti comprese). */
+/** Vero solo se il carattere ha davvero un glifo disegnabile (niente quadratini vuoti). */
 function glyphAvailable(ch) {
+  if (!ch || ch === " ") return true;
   if (COMPILED_GLYPHS[ch]) return true;
   const lower = ch.toLowerCase();
   const upper = ch.toUpperCase();
@@ -2427,10 +2437,15 @@ function glyphAvailable(ch) {
   return !!(
     COMPILED_GLYPHS[lower] ||
     COMPILED_GLYPHS[upper] ||
-    COMPILED_GLYPHS[base] ||
-    COMPILED_GLYPHS[base.toUpperCase()] ||
-    COMPILED_GLYPHS[base.toLowerCase()]
+    (base !== ch && (COMPILED_GLYPHS[base] || COMPILED_GLYPHS[base.toUpperCase()]))
   );
+}
+
+/** Elenca i caratteri di un testo che il font non sa disegnare (usato dai QA). */
+function missingGlyphs(text) {
+  const out = new Set();
+  for (const ch of text) if (!glyphAvailable(ch)) out.add(ch);
+  return [...out];
 }
 
 /**
@@ -6547,6 +6562,11 @@ class WorldRuntime {
     };
 
     this.assistActor = null; // { charId, x, y, facing, ttl }
+    // COMPAGNI NEL MONDO: gli altri eroi sbloccati seguono il giocatore e possono essere
+    // "presi in campo" con [E] o con un tocco. Prima non esistevano e il cambio eroe era invisibile.
+    this.companionActors = [];
+    this.nearestCompanion = null;
+    this.syncCompanions();
     this.activeBanter = null; // { speaker, text, ttl }
 
     this.camera = { x: Math.max(0, sx - 200), y: 0 };
@@ -6789,6 +6809,45 @@ class WorldRuntime {
     this.floatingTexts.push({ x, y, text, color, ttl: 54 });
   }
 
+  /** Crea/aggiorna i compagni visibili: uno sprite per ogni eroe sbloccato non attivo. */
+  syncCompanions() {
+    const unlocked = (this.state.data.unlockedChars || []).slice();
+    const active = this.state.data.activeChar;
+    const others = unlocked.filter((c) => c !== active && CHARACTERS[c]);
+    // rimuove chi non è più in squadra
+    this.companionActors = this.companionActors.filter((a) => others.includes(a.charId));
+    for (const cid of others) {
+      if (this.companionActors.some((a) => a.charId === cid)) continue;
+      const idx = this.companionActors.length;
+      this.companionActors.push({
+        charId: cid,
+        x: this.player.x - 26 - idx * 24,
+        y: this.player.y,
+        bob: idx * 10,
+        facing: 1,
+        label: CHARACTERS[cid].shortName,
+      });
+    }
+  }
+
+  /** I compagni seguono con un certo ritardo e non entrano nei muri. */
+  updateCompanions() {
+    this.syncCompanions();
+    const p = this.player;
+    let prevX = p.x;
+    let prevY = p.y;
+    this.companionActors.forEach((a, i) => {
+      const targetX = prevX - 24 * (i + 1);
+      const targetY = prevY;
+      a.x += (targetX - a.x) * 0.08;
+      a.y += (targetY - a.y) * 0.14;
+      a.facing = targetX > a.x ? 1 : -1;
+      a.bob = (a.bob + 1) % 90;
+      prevX = a.x;
+      prevY = a.y;
+    });
+  }
+
   /** Cerca la prima superficie solida sotto (x,y) e ne restituisce la coordinata Y in pixel. */
   findGroundY(x, fromY) {
     const c = Math.floor(x / TILE);
@@ -6868,7 +6927,7 @@ class WorldRuntime {
       p.dashTimer--;
       if (p.dashTimer === 0) p.dashing = false;
     }
-    const maxSpd = PHYSICS.baseSpeed * charMeta.speedMult;
+    const maxSpd = PHYSICS.baseSpeed * (charMeta.speedMult + this.synergySpeedBonus);
     const accel = p.onGround ? PHYSICS.groundAccel : PHYSICS.airAccel;
     if (p.dashing) {
       // Mantiene lo slancio dello Scatto Ostacoli consentendo solo il salto sopra gli ostacoli
@@ -6894,7 +6953,8 @@ class WorldRuntime {
     else if (p.jumpBuffer > 0) p.jumpBuffer--;
 
     if (p.jumpBuffer > 0 && p.coyote > 0) {
-      p.vy = PHYSICS.baseJump * charMeta.jumpMult;
+      // sinergia di squadra: i compagni sbloccati alleggeriscono un po' il salto
+      p.vy = PHYSICS.baseJump * (charMeta.jumpMult + this.synergyJumpBonus);
       p.onGround = false;
       p.coyote = 0;
       p.jumpBuffer = 0;
@@ -6965,6 +7025,7 @@ class WorldRuntime {
       this.triggerSquadAssist(input.up);
     }
 
+    this.updateCompanions();
     this.updateProjectiles();
     this.updateEnemies();
 
@@ -7133,6 +7194,15 @@ class WorldRuntime {
       p.vy = 0;
       p.invuln = 65;
     }
+  }
+
+  /** Bonus passivo di squadra: fornito da main.teamSynergy(), 0 se non disponibile. */
+  get synergyJumpBonus() {
+    return this._synergyJumpBonus || 0;
+  }
+
+  get synergySpeedBonus() {
+    return this._synergySpeedBonus || 0;
   }
 
   damagePlayer(amount = 1, knockback = true) {
@@ -7807,6 +7877,15 @@ class WorldRuntime {
       }
     }
 
+    // Compagni di squadra: [E] li porta in campo (prompt a bassa priorità)
+    if (this.nearestCompanion && !this.interactPrompt) {
+      this.interactPrompt = {
+        x: this.nearestCompanion.x - 16,
+        y: this.nearestCompanion.y - 20,
+        text: `[E] Cambia con ${this.nearestCompanion.label}`,
+      };
+    }
+
     // Dialoghi
     for (const dg of this.dialogues) {
       if (!dg.triggered && Math.hypot(pcx - dg.x, pcy - dg.y) < 28) {
@@ -7966,7 +8045,10 @@ class PixelRenderer {
     // 9. Nemici animati a 2 frame, Mid-Boss e Il Sofista Digitale 404-Ω
     this.drawEnemiesAndBoss(ctx, world);
 
-    // 10. Compagno in Tag-Team Assist [C] + Protagonista attivo con Squash & Stretch!
+    // 10. Compagni di squadra nel mondo (chi non è in campo segue il protagonista)
+    this.drawCompanions(ctx, world);
+
+    // 10b. Compagno in Tag-Team Assist [C] + Protagonista attivo con Squash & Stretch!
     this.drawAssistAndPlayer(ctx, world);
 
     // 11. Proiettili Passioni (Basket, Calcio, Onde e Note Musicali, Compasso Aureo, Onde Megafono)
@@ -9027,6 +9109,39 @@ class PixelRenderer {
     }
   }
 
+  /** Compagni di squadra visibili: sprite 32x36 con sigla e alone quando sono "prendibili" con [E]. */
+  drawCompanions(ctx, world) {
+    if (!this.imgs.characters || !world.companionActors) return;
+    for (const a of world.companionActors) {
+      const meta = CHARACTERS[a.charId];
+      if (!meta) continue;
+      const bob = Math.round(Math.sin((this.tick + a.bob) * 0.09) * 1.5);
+      const px = Math.round(a.x);
+      const py = Math.round(a.y) - bob;
+      const isNear = world.nearestCompanion && world.nearestCompanion.charId === a.charId;
+
+      // alone luminoso quando [E] è disponibile
+      if (isNear) {
+        ctx.fillStyle = "rgba(255, 209, 71, 0.20)";
+        ctx.fillRect(px - 3, py - 4, 38, 44);
+      }
+
+      // ombra a terra
+      ctx.fillStyle = "rgba(9, 13, 26, 0.28)";
+      ctx.fillRect(px + 8, py + 34, 16, 3);
+
+      const walk = Math.floor((this.tick + a.bob) / 12) % 4;
+      ctx.drawImage(this.imgs.characters, walk * 32, meta.row * 36, 32, 36, px, py, 32, 36);
+
+      // sigla sopra la testa
+      const sig = meta.shortName;
+      const sigW = sig.length * 6 + 6;
+      ctx.fillStyle = "rgba(9, 13, 26, 0.82)";
+      ctx.fillRect(px + 16 - sigW / 2, py - 12, sigW, 10);
+      drawPixelText(ctx, sig, px + 19 - sigW / 2, py - 10, isNear ? "#ffd147" : meta.color, 1);
+    }
+  }
+
   drawAssistAndPlayer(ctx, world) {
     if (!this.imgs.characters) return;
 
@@ -9359,8 +9474,17 @@ class UIManager {
       drawPixelText(ctx, `+${d.shield}SC`, 8 + d.maxHp * 13, 9, "#38bdf8", 1);
     }
 
-    // Selettore rapido dei 5 Protagonisti ([1] Ranaldo, [2] Carlo, [3] Daniele, [4] Ruggero, [5] Francesco)
-    const slotOrder = HUD_SLOT_ORDER;
+    // Selettore rapido dei Protagonisti: 1=Carlo, 2=Ranaldo, poi gli altri acquisiti.
+    // Lo stesso ordine usato dai tasti numerici (main.heroSlotOrder), così non si sfalsano.
+    const baseOrder = ["carlo", "ranaldo"];
+    const rosterKey = (d.unlockedChars || []).join(",");
+    if (this._rosterCacheKey !== rosterKey) {
+      this._rosterCacheKey = rosterKey;
+      this._rosterOrder = baseOrder.concat(
+        (d.unlockedChars || []).filter((c) => !baseOrder.includes(c) && CHARACTERS[c])
+      );
+    }
+    const slotOrder = this._rosterOrder;
     const SLOT_W = 42;
     const SLOT_PITCH = 45;
     const SLOT_X0 = 94;
@@ -9377,6 +9501,11 @@ class UIManager {
 
       const label = unlocked ? `${idx + 1}:${meta.shortName.slice(0, 3)}` : `${idx + 1}:??`;
       drawPixelText(ctx, label, sx + 2, 6, unlocked ? (active ? "#ffffff" : "#cbd5e1") : "#475569", 1);
+      if (world && unlocked && !active) {
+        // hint discreto: le pillole degli altri compagni si possono cliccare col mouse
+        ctx.fillStyle = "#38bdf8";
+        ctx.fillRect(sx + 3, 21, SLOT_W - 6, 1);
+      }
 
       if (active && world) {
         const ratio = Math.max(0, 1 - world.player.cooldown / meta.cooldownMax);
@@ -9861,14 +9990,15 @@ class UIManager {
     drawPixelPanel(ctx, 12, 10, SCREEN_W - 24, SCREEN_H - 20, "#0b1326", "#38bdf8", "#1e293b");
     drawPixelTextCentered(ctx, "COMANDI DI GIOCO & MIXER AUDIO CHIPTUNE", SCREEN_W / 2, 20, "#ffd147", 1);
 
-    // 8 voci: ciascuna su una riga, con descrizione adattata ai pixel disponibili
+    // 11 voci, 16px per riga: ogni descrizione sta su UNA riga del pannello reale
     CONTROLS_HELP.forEach((c, i) => {
-      const y = 36 + i * 20;
+      const y = 30 + i * 16;
       ctx.fillStyle = "#1e293b";
-      ctx.fillRect(24, y, 136, 16);
+      ctx.fillRect(24, y, 136, 14);
       ctx.strokeStyle = "#475569";
-      ctx.strokeRect(24, y, 136, 16);
-      drawPixelText(ctx, measurePixelText(c.keys, 1) > 134 ? c.keys.slice(0, 22) : c.keys, 29, y + 4, "#38bdf8", 1);
+      ctx.strokeRect(24, y, 136, 14);
+      const keysTxt = fitPixelText(c.keys, 130, 1, 1)[0];
+      drawPixelText(ctx, keysTxt, 29, y + 4, "#38bdf8", 1);
       const desc = fitPixelText(c.action, SCREEN_W - 24 - 168 - 8, 1, 1)[0];
       drawPixelText(ctx, desc, 168, y + 4, "#f8fafc", 1);
     });
@@ -9879,7 +10009,7 @@ class UIManager {
       ctx,
       `Musica ${mPct}% (SX/DX) | Effetti ${sPct}% (SU/GIU) | [M] Muto: ${audio.muted ? "SI" : "NO"}`,
       SCREEN_W / 2,
-      208,
+      213,
       "#fde047",
       1
     );
@@ -10088,6 +10218,12 @@ class CasardiGameApp {
       } else if (this.scene === "paused") {
         if (this.showControlsModal) {
           this.showControlsModal = false;
+          const back = this._helpReturnScene;
+          this._helpReturnScene = null;
+          if (back === "playing" && this._helpWasRunning) {
+            this.scene = "playing";
+            this.paused = false;
+          }
           return;
         }
         // Tocco/Click sulle 7 voci del Menu Pausa & Dossier
@@ -10220,6 +10356,37 @@ class CasardiGameApp {
             }
           }
           return;
+        }
+
+        // 1a. Click sulle pillole eroe dell'HUD (x=94+idx*45, y 3..23): porta in campo quell'eroe
+        if (my >= 0 && my <= 26 && mx >= 94) {
+          const slots = this.heroSlotOrder();
+          const idx = Math.floor((mx - 94) / 45);
+          if (idx >= 0 && idx < slots.length && mx <= 94 + idx * 45 + 42) {
+            const target = slots[idx];
+            if (!this.switchActiveChar(target)) {
+              const meta = CHARACTERS[target] || { shortName: `EROE ${idx + 1}` };
+              this.world?.addFloatingText(
+                this.world.player.x - 20,
+                this.world.player.y - 22,
+                `${meta.shortName} NON ANCORA IN SQUADRA`,
+                "#94a3b8"
+              );
+              this.audio.playSfx("wrong");
+            }
+            return;
+          }
+        }
+
+        // 1b. Tocco/click su un compagno visibile: lo porta in campo
+        if (this.world && this.world.companionActors) {
+          const hit = this.world.companionActors.find(
+            (a) => mx >= a.x - 4 && mx <= a.x + 36 && my >= a.y - 14 && my <= a.y + 40
+          );
+          if (hit) {
+            this.switchActiveChar(hit.charId);
+            return;
+          }
         }
 
         // 2. Tocco sui Dialoghi Cinematografici e scelte multiple
@@ -10676,6 +10843,28 @@ class CasardiGameApp {
       this.instantOpenDayVisitorReset();
       return;
     }
+    // [Y] schermo intero (PC): funziona in qualunque scena
+    if (this.input.fullscreenPressed) {
+      try {
+        if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
+        else document.exitFullscreen?.();
+      } catch (e) {
+        /* i browser senza fullscreen ignorano: nessun crash */
+      }
+    }
+    // F2 = pausa audio rapida? no: [M] già presente.
+
+    // F1 (o "?") apre la guida comandi da qualsiasi schermata, anche in partita
+    if (this.input.helpPressed && this.scene !== "title") {
+      if (!this.showControlsModal) {
+        this.showControlsModal = true;
+        this._helpReturnScene = this.scene;
+        this._helpWasRunning = !this.paused;
+        this.scene = "paused";
+        this.audio.playSfx("confirm");
+      }
+      return;
+    }
 
     if (this.scene === "title") {
       this.updateTitleScene();
@@ -10745,6 +10934,9 @@ class CasardiGameApp {
   updatePlayingScene() {
     this.state.data.playTimeSec += 1 / 60;
 
+    // [E] sui compagni nel mondo: cambia eroe direttamente (tocco/click su di loro)
+    this.checkCompanionSwitch();
+
     if (this.input.pausePressed && !this.minigames.isActive()) {
       this.scene = "paused";
       this.pauseIndex = 0;
@@ -10768,32 +10960,92 @@ class CasardiGameApp {
     }
 
     // Derivato dall'ordine ufficiale: il tasto coincide sempre con la pillola mostrata
-    const slotOrder = CHAR_ORDER;
+    const slotOrder = this.heroSlotOrder();
     if (this.input.numberPressed >= 1 && this.input.numberPressed <= 5) {
-      const target = slotOrder[this.input.numberPressed - 1];
-      if (this.state.data.unlockedChars.includes(target) && this.state.data.activeChar !== target) {
-        this.state.data.activeChar = target;
-        this.audio.playCharMotif(target);
-        this.world.player.scaleX = 0.85;
-        this.world.player.scaleY = 1.18;
-        this.world.addParticles(this.world.player.x + 8, this.world.player.y + 14, CHARACTERS[target].color, 9);
+      // fallback su CHAR_ORDER: con 2 soli slot il tasto 4 deve comunque dare un messaggio, mai un crash
+      const target = slotOrder[this.input.numberPressed - 1] || CHAR_ORDER[this.input.numberPressed - 1];
+      if (!this.switchActiveChar(target)) {
+        // Feedback chiaro se l'eroe non è ancora sbloccato (prima non succedeva nulla e sembrava rotto)
+        const meta = CHARACTERS[target] || { shortName: `EROE ${this.input.numberPressed}` };
+        this.world?.addFloatingText(this.world.player.x - 20, this.world.player.y - 22, `${meta.shortName} NON ANCORA IN SQUADRA`, "#94a3b8");
+        this.audio.playSfx("wrong");
       }
     } else if (this.input.switchCyclePressed) {
-      const unlocked = slotOrder.filter((c) => this.state.data.unlockedChars.includes(c));
+      const unlocked = this.heroSlotOrder().filter((c) => this.state.data.unlockedChars.includes(c));
       const curIdx = unlocked.indexOf(this.state.data.activeChar);
       const nextChar = unlocked[(curIdx + 1) % unlocked.length];
-      if (nextChar && nextChar !== this.state.data.activeChar) {
-        this.state.data.activeChar = nextChar;
-        this.audio.playCharMotif(nextChar);
-        this.world.player.scaleX = 0.85;
-        this.world.player.scaleY = 1.18;
-        this.world.addParticles(this.world.player.x + 8, this.world.player.y + 14, CHARACTERS[nextChar].color, 9);
-      }
+      this.switchActiveChar(nextChar);
     }
 
     if (this.world) {
+      const syn = this.teamSynergy();
+      this.world._synergyJumpBonus = syn.jumpBonus;
+      this.world._synergySpeedBonus = syn.speedBonus;
       this.world.update(this.input);
     }
+  }
+
+  /** Se il giocatore è accanto a un compagno, [E] lo fa diventare l'eroe attivo. */
+  checkCompanionSwitch() {
+    const w = this.world;
+    if (!w || !w.companionActors) return;
+    const p = w.player;
+    let nearest = null;
+    let bestDist = 46;
+    for (const actor of w.companionActors) {
+      const d = Math.hypot(actor.x - p.x, actor.y - p.y);
+      if (d < bestDist) {
+        bestDist = d;
+        nearest = actor;
+      }
+    }
+    this.world.nearestCompanion = nearest;
+    if (!nearest) return;
+    if (!this.input.interactPressed) return;
+    if (!this.state.data.unlockedChars.includes(nearest.charId)) return;
+    if (this.state.data.activeChar === nearest.charId) return;
+    this.switchActiveChar(nearest.charId);
+  }
+
+  /**
+   * SINERGIA DI SQUADRA: ogni nuovo membro sbloccato lascia un bonus passivo
+   * permanente (così "cambiare personaggio" non è solo cosmetico anche quando
+   * si è costretti a restare sui due eroi iniziali).
+   */
+  teamSynergy() {
+    const unlocked = this.state.data.unlockedChars || [];
+    return {
+      unlockedCount: unlocked.length,
+      maxHpBonus: Math.max(0, unlocked.length - 1) * 10,
+      jumpBonus: unlocked.includes("daniele") ? 0.15 : 0,
+      dmgBonus: unlocked.includes("ruggero") ? 0.08 : 0,
+      speedBonus: unlocked.includes("francesco") ? 0.05 : 0,
+    };
+  }
+
+  /**
+   * Ordine FISSO degli slot eroe: 1=Carlo, 2=Ranaldo, poi gli altri due in ordine
+   * di squadra. I tasti 1-5 restano così coerenti con le pillole dell'HUD.
+   */
+  heroSlotOrder() {
+    const base = ["carlo", "ranaldo"];
+    const extra = (this.state.data.unlockedChars || []).filter((c) => !base.includes(c) && CHARACTERS[c]);
+    return base.concat(extra);
+  }
+
+  /** Cambio eroe con effetto visivo: usato da tasti 1-5, [Q], pillole HUD e [E] vicino ai compagni. */
+  switchActiveChar(charId) {
+    if (!charId || this.state.data.activeChar === charId) return false;
+    if (!this.state.data.unlockedChars.includes(charId)) return false;
+    this.state.data.activeChar = charId;
+    this.audio.playCharMotif(charId);
+    if (this.world) {
+      this.world.player.scaleX = 0.85;
+      this.world.player.scaleY = 1.18;
+      this.world.addParticles(this.world.player.x + 8, this.world.player.y + 14, CHARACTERS[charId].color, 9);
+      this.world.addFloatingText(this.world.player.x - 6, this.world.player.y - 22, `${CHARACTERS[charId].shortName} IN CAMPO!`, CHARACTERS[charId].color);
+    }
+    return true;
   }
 
   getPauseItems() {
@@ -10812,8 +11064,43 @@ class CasardiGameApp {
 
   updatePauseScene() {
     if (this.showControlsModal) {
-      if (this.input.confirmPressed || this.input.pausePressed) {
+      // Nella guida: SX/DX e SU/GIU regolano i volumi (prima non succedeva nulla)
+      if (this.input.leftPressed) {
+        this.audio.setMusicVolume(this.audio.musicVol - 0.1);
+        this.state.audioPrefs.musicVol = this.audio.musicVol;
+        this.state.saveAudioPrefs();
+        this.audio.playSfx("blip", 380);
+      }
+      if (this.input.rightPressed) {
+        this.audio.setMusicVolume(this.audio.musicVol + 0.1);
+        this.state.audioPrefs.musicVol = this.audio.musicVol;
+        this.state.saveAudioPrefs();
+        this.audio.playSfx("blip", 400);
+      }
+      if (this.input.downPressed) {
+        this.audio.setSfxVolume(this.audio.sfxVol - 0.1);
+        this.state.audioPrefs.sfxVol = this.audio.sfxVol;
+        this.state.saveAudioPrefs();
+        this.audio.playSfx("blip", 320);
+      }
+      if (this.input.upPressed) {
+        this.audio.setSfxVolume(this.audio.sfxVol + 0.1);
+        this.state.audioPrefs.sfxVol = this.audio.sfxVol;
+        this.state.saveAudioPrefs();
+        this.audio.playSfx("blip", 340);
+      }
+      if (this.input.confirmPressed || this.input.pausePressed || this.input.helpPressed) {
         this.showControlsModal = false;
+        this.audio.playSfx("confirm");
+        // Se la guida era stata aperta con F1 durante il gioco, si torna subito a giocare
+        const back = this._helpReturnScene;
+        this._helpReturnScene = null;
+        if (back === "playing" && this._helpWasRunning) {
+          this.scene = "playing";
+          this.paused = false;
+          this.input.keys.clear();
+          this.input.justPressed.clear();
+        }
       }
       return;
     }
@@ -10925,13 +11212,17 @@ class CasardiGameApp {
   }
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  const canvas = document.getElementById("game-canvas");
-  if (canvas) {
-    const app = new CasardiGameApp(canvas);
-    app.init();
-  }
-});
+// Solo nel browser: importare il modulo in Node (test QA) non deve esplodere
+if (typeof window !== "undefined" && typeof document !== "undefined") {
+  window.addEventListener("DOMContentLoaded", () => {
+    const canvas = document.getElementById("game-canvas");
+    if (canvas) {
+      const app = new CasardiGameApp(canvas);
+      app.init();
+    }
+  });
+}
+
 
 
 })();

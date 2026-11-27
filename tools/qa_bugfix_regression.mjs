@@ -298,6 +298,99 @@ const mkInput = (over = {}) => ({
   check(order.join(",") === "CAR,RAN,DAN,RUG,FRA", "sigle HUD nell'ordine dei tasti", order.join(","));
 }
 
+// ---------------------------------------------------------------------------
+// 14. CAMBIO EROE IN PC MODE: tasti, compagni in campo, prompt [E], ogni comando ha un tasto
+// ---------------------------------------------------------------------------
+{
+  const { CasardiGameApp } = await import("../src/main.js");
+  const boot = () => {
+    const state = new GameStateManager();
+    const app = Object.create(CasardiGameApp.prototype);
+    app.state = state;
+    app.audio = { ...mockAudio, musicVol: 0.7, sfxVol: 0.85, playCharMotif() {}, setMusicVolume(v) { this.musicVol = v; }, setSfxVolume(v) { this.sfxVol = v; } };
+    app.input = mkInput();
+    app.levels = buildOpenDayLevels();
+    app.world = new WorldRuntime(app.levels[0], state, app.audio, app.input);
+    app.scene = "playing";
+    app.activeDialogue = null;
+    app.minigames = { isActive: () => false };
+    app.showControlsModal = false;
+    app.addFloatingText = () => {};
+    state.data.unlockedChars = ["carlo", "ranaldo"];
+    state.data.activeChar = "carlo";
+    app.world.syncCompanions();
+    return app;
+  };
+
+  // 14a. slot fissi 1..5 con pochi eroi sbloccati (prima il tasto 4 crashava)
+  const app = boot();
+  check(app.heroSlotOrder().slice(0, 2).join(",") === "carlo,ranaldo", "slot 1 e 2 fissi su Carlo e Ranaldo", app.heroSlotOrder().join(","));
+  let crashed = false;
+  try {
+    app.switchActiveChar("ruggero");
+  } catch (e) {
+    crashed = true;
+  }
+  check(!crashed, "cambio eroe bloccato non lancia eccezioni");
+  check(app.state.data.activeChar === "carlo", "eroe bloccato NON viene messo in campo");
+  check(app.switchActiveChar("ranaldo") === true && app.state.data.activeChar === "ranaldo", "switchActiveChar mette in campo l'eroe sbloccato");
+  check(app.switchActiveChar("ranaldo") === false && app.state.data.activeChar === "ranaldo", "switchActiveChar sull'eroe già attivo ritorna false");
+  check(app.switchActiveChar("carlo") === true && app.state.data.activeChar === "carlo", "si torna su Carlo quando è sbloccato");
+
+  // 14b. i compagni seguono e sono cliccabili/agganggiabili
+  app.world.syncCompanions();
+  check(app.world.companionActors.length >= 1, "c'è almeno un compagno visibile in campo", `${app.world.companionActors.length}`);
+  const comp = app.world.companionActors[0];
+  const px = comp.x;
+  app.world.update(mkInput());
+  check(comp.x !== undefined && Math.abs(comp.x - px) < 40, "il compagno resta agganciato al giocatore");
+  check(app.world.companionActors.every((a) => a.charId !== app.state.data.activeChar), "l'eroe attivo non è anche compagno");
+
+  // 14c. [E] accanto al compagno lo prende in campo
+  const app2 = boot();
+  const c2 = app2.world.companionActors[0];
+  app2.world.player.x = c2.x + 6;
+  app2.world.player.y = c2.y;
+  const wanted = c2.charId;
+  app2.input.interactPressed = true;
+  app2.checkCompanionSwitch();
+  check(app2.state.data.activeChar === wanted, "[E] vicino al compagno cambia eroe", `atteso ${wanted}, attivo ${app2.state.data.activeChar}`);
+
+  // 14d. ogni comando della guida ha un tasto visibile e una descrizione che entra nel pannello
+  const { CONTROLS_HELP } = await import("../src/config/constants.js");
+  check(CONTROLS_HELP.length >= 11, "la guida comandi elenca tutte le azioni", `${CONTROLS_HELP.length}`);
+  check(CONTROLS_HELP.every((c) => c.keys && c.keys.trim().length > 0), "nessun comando senza tasto assegnato");
+  check(CONTROLS_HELP.every((c) => c.action.length <= 36), "descrizioni comandi entro il pannello (<=36)");
+  const keysAll = CONTROLS_HELP.map((c) => c.keys).join(" ");
+  for (const need of ["1-5", "Q", "E / INVIO", "E (vicino)", "F1", "Y", "M", "F9", "ESC", "V", "C", "X", "SPAZIO"]) {
+    check(keysAll.includes(need), `la guida mostra il tasto ${need}`);
+  }
+
+  // 14e. i tasti speciali dell'input sono tutti mappati
+  const { InputController } = await import("../src/config/input.js");
+  const ic2 = new InputController(null);
+  ic2.keys = new Set();
+  ic2.justPressed = new Set(["F1"]);
+  ic2.poll();
+  check(ic2.helpPressed === true, "[F1] apre la guida comandi");
+  ic2.keys = new Set();
+  ic2.justPressed = new Set(["KeyY"]);
+  ic2.poll();
+  check(ic2.fullscreenPressed === true, "[Y] attiva lo schermo intero");
+  ic2.keys = new Set();
+  ic2.justPressed = new Set(["Slash"]);
+  ic2.poll();
+  check(ic2.helpPressed === true, "[?] apre la guida comandi");
+
+  // 14f. sinergia di squadra: i 5 eroi danno bonus passivi reali
+  const app3 = boot();
+  app3.state.data.unlockedChars = ["carlo", "ranaldo", "daniele", "ruggero", "francesco"];
+  const syn = app3.teamSynergy();
+  check(syn.maxHpBonus === 40, "sinergia: +10 HP per ogni compagno sbloccato", `${syn.maxHpBonus}`);
+  check(syn.jumpBonus > 0 && syn.dmgBonus > 0, "sinergia: Daniele e Ruggero danno bonus attivi");
+  check(app3.heroSlotOrder().length === 5, "con 5 eroi sbloccati ci sono 5 slot tasto", `${app3.heroSlotOrder().length}`);
+}
+
 console.log(`\n=== REGRESSIONE ERRORI v3.0.1: ${ok} CONTROLLI OK, ${fails.length} FALLITI ===`);
 for (const f of fails) console.log("  [FAIL] " + f);
 if (fails.length === 0) console.log("  Tutti i bug segnalati risultano corretti.");

@@ -106,7 +106,10 @@ export class PixelRenderer {
     // 9. Nemici animati a 2 frame, Mid-Boss e Il Sofista Digitale 404-Ω
     this.drawEnemiesAndBoss(ctx, world);
 
-    // 10. Compagno in Tag-Team Assist [C] + Protagonista attivo con Squash & Stretch!
+    // 10. Compagni di squadra nel mondo (chi non è in campo segue il protagonista)
+    this.drawCompanions(ctx, world);
+
+    // 10b. Compagno in Tag-Team Assist [C] + Protagonista attivo con Squash & Stretch!
     this.drawAssistAndPlayer(ctx, world);
 
     // 11. Proiettili Passioni (Basket, Calcio, Onde e Note Musicali, Compasso Aureo, Onde Megafono)
@@ -1164,6 +1167,39 @@ export class PixelRenderer {
           drawPixelText(ctx, "STORDITO!", bx + 2, by - 10, "#38bdf8", 1);
         }
       }
+    }
+  }
+
+  /** Compagni di squadra visibili: sprite 32x36 con sigla e alone quando sono "prendibili" con [E]. */
+  drawCompanions(ctx, world) {
+    if (!this.imgs.characters || !world.companionActors) return;
+    for (const a of world.companionActors) {
+      const meta = CHARACTERS[a.charId];
+      if (!meta) continue;
+      const bob = Math.round(Math.sin((this.tick + a.bob) * 0.09) * 1.5);
+      const px = Math.round(a.x);
+      const py = Math.round(a.y) - bob;
+      const isNear = world.nearestCompanion && world.nearestCompanion.charId === a.charId;
+
+      // alone luminoso quando [E] è disponibile
+      if (isNear) {
+        ctx.fillStyle = "rgba(255, 209, 71, 0.20)";
+        ctx.fillRect(px - 3, py - 4, 38, 44);
+      }
+
+      // ombra a terra
+      ctx.fillStyle = "rgba(9, 13, 26, 0.28)";
+      ctx.fillRect(px + 8, py + 34, 16, 3);
+
+      const walk = Math.floor((this.tick + a.bob) / 12) % 4;
+      ctx.drawImage(this.imgs.characters, walk * 32, meta.row * 36, 32, 36, px, py, 32, 36);
+
+      // sigla sopra la testa
+      const sig = meta.shortName;
+      const sigW = sig.length * 6 + 6;
+      ctx.fillStyle = "rgba(9, 13, 26, 0.82)";
+      ctx.fillRect(px + 16 - sigW / 2, py - 12, sigW, 10);
+      drawPixelText(ctx, sig, px + 19 - sigW / 2, py - 10, isNear ? "#ffd147" : meta.color, 1);
     }
   }
 

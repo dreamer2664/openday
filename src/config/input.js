@@ -29,6 +29,8 @@ export class InputController {
     this.replayPressed = false;
     this.quickResetPressed = false;
     this.numberPressed = 0; // 1..8
+    this.fullscreenPressed = false;
+    this.helpPressed = false;
 
     this._prevGpButtons = [];
     this.bindEvents();
@@ -206,12 +208,15 @@ export class InputController {
     this.assistPressed = jp.has("KeyC") || jp.has("KeyL") || gpAssistJust;
     this.interactPressed = jp.has("KeyE") || jp.has("Enter") || jp.has("KeyF") || gpIntJust;
     this.confirmPressed = jp.has("Enter") || jp.has("Space") || jp.has("KeyE") || gpJumpJust;
-    this.pausePressed = jp.has("KeyP") || jp.has("Escape") || gpPauseJust;
-    this.mutePressed = jp.has("KeyM");
-    this.crtTogglePressed = jp.has("KeyV");
-    this.switchCyclePressed = jp.has("KeyQ") || jp.has("Tab") || gpSwitchJust;
-    this.replayPressed = jp.has("KeyR");
-    this.quickResetPressed = jp.has("F9");
+    // --- SCORCIATOIE GLOBALI (una sola definizione: nessun comando senza tasto) ---
+    this.pausePressed = jp.has("KeyP") || jp.has("Escape") || gpPauseJust; // P / ESC / START
+    this.mutePressed = jp.has("KeyM");                                       // M
+    this.crtTogglePressed = jp.has("KeyV");                                  // V
+    this.switchCyclePressed = jp.has("KeyQ") || jp.has("Tab") || gpSwitchJust; // Q / TAB / LB
+    this.replayPressed = jp.has("KeyR");                                     // R (Riascolta)
+    this.quickResetPressed = jp.has("F9");                                   // F9
+    this.fullscreenPressed = jp.has("KeyY");                                 // Y = schermo intero
+    this.helpPressed = jp.has("F1") || jp.has("Slash") || jp.has("NumpadDivide"); // F1 / ?  -> guida comandi
 
     this.numberPressed = 0;
     for (let n = 1; n <= 8; n++) {

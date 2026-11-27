@@ -88,6 +88,12 @@ export class CasardiGameApp {
       } else if (this.scene === "paused") {
         if (this.showControlsModal) {
           this.showControlsModal = false;
+          const back = this._helpReturnScene;
+          this._helpReturnScene = null;
+          if (back === "playing" && this._helpWasRunning) {
+            this.scene = "playing";
+            this.paused = false;
+          }
           return;
         }
         // Tocco/Click sulle 7 voci del Menu Pausa & Dossier
@@ -220,6 +226,37 @@ export class CasardiGameApp {
             }
           }
           return;
+        }
+
+        // 1a. Click sulle pillole eroe dell'HUD (x=94+idx*45, y 3..23): porta in campo quell'eroe
+        if (my >= 0 && my <= 26 && mx >= 94) {
+          const slots = this.heroSlotOrder();
+          const idx = Math.floor((mx - 94) / 45);
+          if (idx >= 0 && idx < slots.length && mx <= 94 + idx * 45 + 42) {
+            const target = slots[idx];
+            if (!this.switchActiveChar(target)) {
+              const meta = CHARACTERS[target] || { shortName: `EROE ${idx + 1}` };
+              this.world?.addFloatingText(
+                this.world.player.x - 20,
+                this.world.player.y - 22,
+                `${meta.shortName} NON ANCORA IN SQUADRA`,
+                "#94a3b8"
+              );
+              this.audio.playSfx("wrong");
+            }
+            return;
+          }
+        }
+
+        // 1b. Tocco/click su un compagno visibile: lo porta in campo
+        if (this.world && this.world.companionActors) {
+          const hit = this.world.companionActors.find(
+            (a) => mx >= a.x - 4 && mx <= a.x + 36 && my >= a.y - 14 && my <= a.y + 40
+          );
+          if (hit) {
+            this.switchActiveChar(hit.charId);
+            return;
+          }
         }
 
         // 2. Tocco sui Dialoghi Cinematografici e scelte multiple
@@ -676,6 +713,28 @@ export class CasardiGameApp {
       this.instantOpenDayVisitorReset();
       return;
     }
+    // [Y] schermo intero (PC): funziona in qualunque scena
+    if (this.input.fullscreenPressed) {
+      try {
+        if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
+        else document.exitFullscreen?.();
+      } catch (e) {
+        /* i browser senza fullscreen ignorano: nessun crash */
+      }
+    }
+    // F2 = pausa audio rapida? no: [M] già presente.
+
+    // F1 (o "?") apre la guida comandi da qualsiasi schermata, anche in partita
+    if (this.input.helpPressed && this.scene !== "title") {
+      if (!this.showControlsModal) {
+        this.showControlsModal = true;
+        this._helpReturnScene = this.scene;
+        this._helpWasRunning = !this.paused;
+        this.scene = "paused";
+        this.audio.playSfx("confirm");
+      }
+      return;
+    }
 
     if (this.scene === "title") {
       this.updateTitleScene();
@@ -745,6 +804,9 @@ export class CasardiGameApp {
   updatePlayingScene() {
     this.state.data.playTimeSec += 1 / 60;
 
+    // [E] sui compagni nel mondo: cambia eroe direttamente (tocco/click su di loro)
+    this.checkCompanionSwitch();
+
     if (this.input.pausePressed && !this.minigames.isActive()) {
       this.scene = "paused";
       this.pauseIndex = 0;
@@ -768,32 +830,92 @@ export class CasardiGameApp {
     }
 
     // Derivato dall'ordine ufficiale: il tasto coincide sempre con la pillola mostrata
-    const slotOrder = CHAR_ORDER;
+    const slotOrder = this.heroSlotOrder();
     if (this.input.numberPressed >= 1 && this.input.numberPressed <= 5) {
-      const target = slotOrder[this.input.numberPressed - 1];
-      if (this.state.data.unlockedChars.includes(target) && this.state.data.activeChar !== target) {
-        this.state.data.activeChar = target;
-        this.audio.playCharMotif(target);
-        this.world.player.scaleX = 0.85;
-        this.world.player.scaleY = 1.18;
-        this.world.addParticles(this.world.player.x + 8, this.world.player.y + 14, CHARACTERS[target].color, 9);
+      // fallback su CHAR_ORDER: con 2 soli slot il tasto 4 deve comunque dare un messaggio, mai un crash
+      const target = slotOrder[this.input.numberPressed - 1] || CHAR_ORDER[this.input.numberPressed - 1];
+      if (!this.switchActiveChar(target)) {
+        // Feedback chiaro se l'eroe non è ancora sbloccato (prima non succedeva nulla e sembrava rotto)
+        const meta = CHARACTERS[target] || { shortName: `EROE ${this.input.numberPressed}` };
+        this.world?.addFloatingText(this.world.player.x - 20, this.world.player.y - 22, `${meta.shortName} NON ANCORA IN SQUADRA`, "#94a3b8");
+        this.audio.playSfx("wrong");
       }
     } else if (this.input.switchCyclePressed) {
-      const unlocked = slotOrder.filter((c) => this.state.data.unlockedChars.includes(c));
+      const unlocked = this.heroSlotOrder().filter((c) => this.state.data.unlockedChars.includes(c));
       const curIdx = unlocked.indexOf(this.state.data.activeChar);
       const nextChar = unlocked[(curIdx + 1) % unlocked.length];
-      if (nextChar && nextChar !== this.state.data.activeChar) {
-        this.state.data.activeChar = nextChar;
-        this.audio.playCharMotif(nextChar);
-        this.world.player.scaleX = 0.85;
-        this.world.player.scaleY = 1.18;
-        this.world.addParticles(this.world.player.x + 8, this.world.player.y + 14, CHARACTERS[nextChar].color, 9);
-      }
+      this.switchActiveChar(nextChar);
     }
 
     if (this.world) {
+      const syn = this.teamSynergy();
+      this.world._synergyJumpBonus = syn.jumpBonus;
+      this.world._synergySpeedBonus = syn.speedBonus;
       this.world.update(this.input);
     }
+  }
+
+  /** Se il giocatore è accanto a un compagno, [E] lo fa diventare l'eroe attivo. */
+  checkCompanionSwitch() {
+    const w = this.world;
+    if (!w || !w.companionActors) return;
+    const p = w.player;
+    let nearest = null;
+    let bestDist = 46;
+    for (const actor of w.companionActors) {
+      const d = Math.hypot(actor.x - p.x, actor.y - p.y);
+      if (d < bestDist) {
+        bestDist = d;
+        nearest = actor;
+      }
+    }
+    this.world.nearestCompanion = nearest;
+    if (!nearest) return;
+    if (!this.input.interactPressed) return;
+    if (!this.state.data.unlockedChars.includes(nearest.charId)) return;
+    if (this.state.data.activeChar === nearest.charId) return;
+    this.switchActiveChar(nearest.charId);
+  }
+
+  /**
+   * SINERGIA DI SQUADRA: ogni nuovo membro sbloccato lascia un bonus passivo
+   * permanente (così "cambiare personaggio" non è solo cosmetico anche quando
+   * si è costretti a restare sui due eroi iniziali).
+   */
+  teamSynergy() {
+    const unlocked = this.state.data.unlockedChars || [];
+    return {
+      unlockedCount: unlocked.length,
+      maxHpBonus: Math.max(0, unlocked.length - 1) * 10,
+      jumpBonus: unlocked.includes("daniele") ? 0.15 : 0,
+      dmgBonus: unlocked.includes("ruggero") ? 0.08 : 0,
+      speedBonus: unlocked.includes("francesco") ? 0.05 : 0,
+    };
+  }
+
+  /**
+   * Ordine FISSO degli slot eroe: 1=Carlo, 2=Ranaldo, poi gli altri due in ordine
+   * di squadra. I tasti 1-5 restano così coerenti con le pillole dell'HUD.
+   */
+  heroSlotOrder() {
+    const base = ["carlo", "ranaldo"];
+    const extra = (this.state.data.unlockedChars || []).filter((c) => !base.includes(c) && CHARACTERS[c]);
+    return base.concat(extra);
+  }
+
+  /** Cambio eroe con effetto visivo: usato da tasti 1-5, [Q], pillole HUD e [E] vicino ai compagni. */
+  switchActiveChar(charId) {
+    if (!charId || this.state.data.activeChar === charId) return false;
+    if (!this.state.data.unlockedChars.includes(charId)) return false;
+    this.state.data.activeChar = charId;
+    this.audio.playCharMotif(charId);
+    if (this.world) {
+      this.world.player.scaleX = 0.85;
+      this.world.player.scaleY = 1.18;
+      this.world.addParticles(this.world.player.x + 8, this.world.player.y + 14, CHARACTERS[charId].color, 9);
+      this.world.addFloatingText(this.world.player.x - 6, this.world.player.y - 22, `${CHARACTERS[charId].shortName} IN CAMPO!`, CHARACTERS[charId].color);
+    }
+    return true;
   }
 
   getPauseItems() {
@@ -812,8 +934,43 @@ export class CasardiGameApp {
 
   updatePauseScene() {
     if (this.showControlsModal) {
-      if (this.input.confirmPressed || this.input.pausePressed) {
+      // Nella guida: SX/DX e SU/GIU regolano i volumi (prima non succedeva nulla)
+      if (this.input.leftPressed) {
+        this.audio.setMusicVolume(this.audio.musicVol - 0.1);
+        this.state.audioPrefs.musicVol = this.audio.musicVol;
+        this.state.saveAudioPrefs();
+        this.audio.playSfx("blip", 380);
+      }
+      if (this.input.rightPressed) {
+        this.audio.setMusicVolume(this.audio.musicVol + 0.1);
+        this.state.audioPrefs.musicVol = this.audio.musicVol;
+        this.state.saveAudioPrefs();
+        this.audio.playSfx("blip", 400);
+      }
+      if (this.input.downPressed) {
+        this.audio.setSfxVolume(this.audio.sfxVol - 0.1);
+        this.state.audioPrefs.sfxVol = this.audio.sfxVol;
+        this.state.saveAudioPrefs();
+        this.audio.playSfx("blip", 320);
+      }
+      if (this.input.upPressed) {
+        this.audio.setSfxVolume(this.audio.sfxVol + 0.1);
+        this.state.audioPrefs.sfxVol = this.audio.sfxVol;
+        this.state.saveAudioPrefs();
+        this.audio.playSfx("blip", 340);
+      }
+      if (this.input.confirmPressed || this.input.pausePressed || this.input.helpPressed) {
         this.showControlsModal = false;
+        this.audio.playSfx("confirm");
+        // Se la guida era stata aperta con F1 durante il gioco, si torna subito a giocare
+        const back = this._helpReturnScene;
+        this._helpReturnScene = null;
+        if (back === "playing" && this._helpWasRunning) {
+          this.scene = "playing";
+          this.paused = false;
+          this.input.keys.clear();
+          this.input.justPressed.clear();
+        }
       }
       return;
     }
@@ -925,10 +1082,14 @@ export class CasardiGameApp {
   }
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  const canvas = document.getElementById("game-canvas");
-  if (canvas) {
-    const app = new CasardiGameApp(canvas);
-    app.init();
-  }
-});
+// Solo nel browser: importare il modulo in Node (test QA) non deve esplodere
+if (typeof window !== "undefined" && typeof document !== "undefined") {
+  window.addEventListener("DOMContentLoaded", () => {
+    const canvas = document.getElementById("game-canvas");
+    if (canvas) {
+      const app = new CasardiGameApp(canvas);
+      app.init();
+    }
+  });
+}
+

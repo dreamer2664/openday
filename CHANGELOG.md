@@ -1,5 +1,30 @@
 # CHANGELOG — OPERAZIONE EIPASS: IL CASARDI IN 8 BIT
 
+## v3.0.2 — Comandi PC: cambio eroe e tasti mancanti (26/11/2026)
+
+**Cambio personaggio in modalità PC (segnalazione principale)**
+- Nuovo `switchActiveChar(charId)` con effetto in campo (squash, particelle, motivo dell'eroe e nota
+  flottante `"<SIGLA> IN CAMPO!"`), usato da **tutti** i canali: tasti `1`-`5`, `Q`/`TAB`, **click sulle
+  pillole dell'HUD** e **click/tap sul compagno** in scena.
+- I compagni sbloccati ora **esistono davvero sullo schermo**: `WorldRuntime.syncCompanions()` /
+  `updateCompanions()` li fanno seguire il giocatore a catena, `drawCompanions()` li disegna con sigla e
+  **aura dorata** quando sono a portata. Prima il cambio era invisibile: si premeva `3` e non succedeva nulla.
+- Accanto a un compagno compare il prompt `[E] Cambia con <SIGLA>` e `E` lo porta in campo.
+- Slot **fissi**: `1=Carlo`, `2=Ranaldo`, poi gli eroi acquisiti. Con pochi eroi sbloccati un tasto
+  "vuoto" ora mostra `<NOME> NON ANCORA IN SQUADRA` + suono invece di non fare nulla (e non crasha più).
+- **Sinergia di squadra**: ogni compagno sbloccato dà bonus passivi reali (+10 HP massimi per membro,
+  Daniele +0.15 al salto, Ruggero +8% danno, Francesco +5% velocità) — cambiare personaggio conta.
+
+**Comandi senza tasto (seconda segnalazione)**
+- Nella guida comandi `SX`/`DX` e `SU`/`GIU` ora regolano davvero musica ed effetti (prima il mixer era
+  indicato ma inerte in pausa).
+- Nuovi tasti globali: **`F1` / `?`** apre e chiude la guida comandi da qualunque schermata (e dalla partita
+  si torna a giocare subito), **`Y`** attiva lo schermo intero.
+- `CONTROLS_HELP` riscritta: **11 voci**, ognuna con tasto visibile e descrizione entro il pannello
+  (`E (vicino)`, `F1 | ?`, `Y` inclusi). Nessun comando elencato senza tasto funzionante.
+- Fix crash: con 2 soli eroi sbloccati il tasto `4`/`5` leggeva un elemento `undefined` di `CHAR_ORDER`.
+- `src/main.js` è ora importabile in Node (guardia su `window`): la regressione può testare l'app vera.
+
 ## v3.0.1 — Fase G: correzione di 31 errori segnalati (26/11/2026)
 
 **Logica e input**

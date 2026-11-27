@@ -1,13 +1,13 @@
 # OPERAZIONE EIPASS — IL CASARDI IN 8 BIT
 
 
-> **v3.0.1** — 31 errori segnalati corretti: input (SU/W e salto), varchi ritmici, quiz, pianoforte, parabola, danza, audio, timer, font e testi. Vedi `CHANGELOG.md` e `DEVLOG.md` (Fase G).
+> **v3.0.2** — comandi PC a posto: cambio eroe con `1`-`5`, `Q`/`TAB`, click sulle pillole dell'HUD o sul compagno, prompt `[E]`; ogni comando della guida ha un tasto (`F1`/`?` = guida, `Y` = schermo intero); mixer attivo nella guida. Vedi `CHANGELOG.md` e `DEVLOG.md`.
 
 Videogioco originale narrativo-platform a 8-bit realizzato per l'**Open Day del Liceo Classico, delle Scienze Umane e Musicale Statale *"Alfredo Casardi"* di Barletta** (Sede Centrale di Via Ferdinando I d'Aragona, 100) come prodotto finale del percorso **EIPASS**.
 
 **Protagonisti giocabili (5):** **Prof. Ranaldo** *(Matematica)*, **Carlo** *(Basket)*, **Daniele** *(Ballo Latino-Americano)*, **Ruggero** *(Atletica Leggera)* e **Francesco** *(Pianoforte)*.
 
-**Gioca subito dal browser:** https://dreamer2664.github.io/openday/ — build standalone v3.0.1, nessuna installazione.
+**Gioca subito dal browser:** https://dreamer2664.github.io/openday/ — build standalone v3.0.2, nessuna installazione.
 
 **Repository:** https://github.com/dreamer2664/openday (sorgente `src/`, strumenti `tools/`, documentazione e storico).
 

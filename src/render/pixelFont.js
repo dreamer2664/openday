@@ -255,7 +255,9 @@ export function autoScaleFor(text, maxWidthPx, baseScale = 1, minScale = 1) {
 }
 
 /** true se il carattere ha un glifo proprio o risolvibile (accenti comprese). */
+/** Vero solo se il carattere ha davvero un glifo disegnabile (niente quadratini vuoti). */
 export function glyphAvailable(ch) {
+  if (!ch || ch === " ") return true;
   if (COMPILED_GLYPHS[ch]) return true;
   const lower = ch.toLowerCase();
   const upper = ch.toUpperCase();
@@ -263,10 +265,15 @@ export function glyphAvailable(ch) {
   return !!(
     COMPILED_GLYPHS[lower] ||
     COMPILED_GLYPHS[upper] ||
-    COMPILED_GLYPHS[base] ||
-    COMPILED_GLYPHS[base.toUpperCase()] ||
-    COMPILED_GLYPHS[base.toLowerCase()]
+    (base !== ch && (COMPILED_GLYPHS[base] || COMPILED_GLYPHS[base.toUpperCase()]))
   );
+}
+
+/** Elenca i caratteri di un testo che il font non sa disegnare (usato dai QA). */
+export function missingGlyphs(text) {
+  const out = new Set();
+  for (const ch of text) if (!glyphAvailable(ch)) out.add(ch);
+  return [...out];
 }
 
 /**
