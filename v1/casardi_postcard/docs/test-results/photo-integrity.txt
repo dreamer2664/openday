@@ -1,0 +1,6 @@
+OK casardi: file locale integro; CC0
+OK pantheon: file locale integro; CC BY-SA 3.0
+OK foro: file locale integro; CC BY-SA 4.0
+OK epidauro: file locale integro; CC BY-SA 4.0
+OK biblioteca: file locale integro; CC BY-SA 4.0
+OK paestum: file locale integro; CC BY-SA 3.0

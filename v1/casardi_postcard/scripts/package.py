@@ -1,0 +1,154 @@
+"""Build/verify the revised Windows + LPC + finished-PNG-QR distribution.
+
+python scripts/package.py --candidate   # before independent extracted smoke
+python scripts/package.py               # final, requires current runtime smoke
+Output: ../Cartolina_Casardi_Windows_LPC_QR_2026-27.zip + SHA-256 sidecar.
+Visitor files and caches are never included. No Windows-native QA is implied.
+"""
+from __future__ import annotations
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import re
+import subprocess
+import sys
+import zipfile
+from PIL import Image,ImageFont
+ROOT=Path(__file__).resolve().parent.parent
+sys.path.insert(0,str(ROOT))
+from scripts.runtime_fingerprint import HTML,EXE,runtime_fingerprint
+from scripts.build_service import source_digest
+OUTPUT=ROOT.parent/'Cartolina_Casardi_Windows_LPC_QR_2026-27.zip'
+MANIFEST=ROOT/'MANIFEST.sha256'
+AUDIT=ROOT/'docs/test-results/package-audit.json'
+OMIT={'__pycache__','.venv','.git','node_modules','.cache','.pytest_cache','build','dist','out','target','.arena'}
+
+
+def sha(data):return hashlib.sha256(data).hexdigest()
+def report(name):return json.loads((ROOT/'docs/test-results'/name).read_text())
+def passed(items):return all(x.get('result',x.get('status'))=='PASS' for x in items)
+
+
+def files():
+    result=[]
+    for p in ROOT.rglob('*'):
+        if not p.is_file():continue
+        rel=p.relative_to(ROOT)
+        if any(part in OMIT for part in rel.parts) or p.suffix in ('.pyc','.part','.zip'):continue
+        if p.name in ('.DS_Store','Thumbs.db'):continue
+        if rel.parts[0]=='var' and rel.as_posix()!='var/README.md':continue
+        result.append(p)
+    return sorted(result)
+
+
+def check(candidate=False):
+    for name in ('README.md','SOURCES_AND_LICENSES.md','ASSET_MATRIX.md','TEST_REPORT.md','LICENSE',HTML,EXE,
+                 'requirements.txt','requirements-lock.txt','requirements-dev.txt','start.sh','start.cmd',
+                 'service/go.mod','service/go.sum','service/vendor/modules.txt',
+                 'docs/GUIDA_OPERATORE.md','docs/GUIDA_RAPIDA.html','docs/GUIDA_RAPIDA.pdf',
+                 'docs/GUIDA_FILE_UNICO_E_TELEFONO.md','docs/SCENE_COMPOSITION.md',
+                 'assets/characters/CREDITI_LPC.txt','assets/licenses/OGA-BY-3.0.txt',
+                 'assets/licenses/dependencies/Go-BSD-3-Clause.txt','assets/licenses/dependencies/skip2-go-qrcode-MIT.txt'):
+        assert (ROOT/name).is_file(),name
+    for directory in ('var/exports','var/qa_exports'):
+        assert not list((ROOT/directory).glob('*.png')) and not list((ROOT/directory).glob('*.part')),'Clear synthetic or visitor exports before packaging.'
+    assert not (ROOT/'var/ultima_cartolina.png').exists()
+    metadata=json.loads((ROOT/'assets/photos/photo_metadata.json').read_text());assert len(metadata)==6
+    for sid,m in metadata.items():
+        p=ROOT/'assets/photos'/sid/'source.jpg';assert sha(p.read_bytes())==m['local_sha256']
+        with Image.open(p) as im:im.verify()
+        with Image.open(ROOT/'assets/nes'/(sid+'.png')) as im:assert im.size==(600,400)
+    for name in ('Cinzel.ttf','EBGaramond.ttf','PressStart2P-Regular.ttf'):
+        p=ROOT/'assets/fonts'/name;ImageFont.truetype(str(p),18)
+        assert p.read_bytes()==(ROOT/'web/static/fonts'/name).read_bytes()
+    pngs=sorted((ROOT/'renders').glob('[A-L]_*.png'));jpgs=sorted((ROOT/'renders').glob('[A-L]_*.jpg'))
+    assert len(pngs)==8 and len(jpgs)==12,(len(pngs),len(jpgs))
+    for p in pngs:
+        with Image.open(p) as im:
+            assert im.size==(3000,2000) and im.format=='PNG'
+            assert 'LICEO ALFREDO CASARDI' in im.info.get('Title','')
+            assert 'PERSONAGGIO MODULARE LPC' in im.info.get('Description','') and 'CC BY-SA 4.0' in im.info.get('Copyright','')
+            assert im.info.get('Source');im.verify()
+    for p in jpgs:
+        with Image.open(p) as im:assert im.size==(1200,800) and im.info.get('comment');im.verify()
+    shot_counts={}
+    for directory,n in (('screenshots-service',7),('screenshots-standalone',6),('screenshots',16)):
+        shots=list((ROOT/'docs'/directory).glob('*.jpg'));assert len(shots)==n
+        for p in shots:
+            with Image.open(p) as im:im.verify()
+        shot_counts[directory]=n
+    unit=(ROOT/'docs/test-results/unit-tests.txt').read_text()
+    assert re.search(r'Ran 34 tests',unit) and unit.strip().endswith('OK') and 'ResourceWarning' not in unit
+    asset=report('asset-audit.json');assert asset['result']=='PASS' and asset['total']==7716 and asset['boundary_touches']==0
+    assert (asset['licensed_parts'],asset['source_pngs_sha256_verified'],asset['definitions_sha256_verified'],asset['pose_atlases_sha256_verified'])==(56,255,56,85)
+    layout=report('layout-audit.json');assert layout['cases']==6048 and layout['outside_inner_frame']==layout['foot_span_overlaps']==0
+    for filename,count in (('browser-tests.json',16),('hd-http-regression.json',12)):
+        data=report(filename);assert len(data['tests'])==count and passed(data['tests']),filename
+    html_hash=sha((ROOT/HTML).read_bytes());built=report('standalone-build.json');browser=report('standalone-browser-tests.json')
+    assert built['sha256']==browser['html_sha256']==html_hash
+    assert len(browser['tests'])==22 and passed(browser['tests']) and not browser['js_errors']
+    assert len(browser['exports'])==12 and passed(browser['exports'])
+    parity=report('browser-sprite-audit.json');assert parity['result']=='PASS' and parity['comparisons']==938 and parity['mismatches']==0
+    for name,digest in parity['source'].items():assert sha((ROOT/name).read_bytes())==digest,name
+    windows=report('windows-build.json');assert windows['result']=='PASS' and windows['sha256']==sha((ROOT/EXE).read_bytes())
+    assert (windows['source_files'],windows['source_sha256'])==source_digest()
+    gotests=(ROOT/'docs/test-results/go-service-tests.txt').read_text()
+    assert len(re.findall(r'^--- PASS: Test',gotests,re.M))==26 and not re.search(r'^FAIL|--- FAIL',gotests,re.M) and '\nPASS\n' in gotests
+    service=report('go-service-browser.json');assert service['result']=='PASS' and service['html_sha256']==html_hash
+    assert len(service['tests'])==15 and passed(service['tests']) and not service['javascript_errors'] and not service['external_hosts']
+    expiry=report('go-real-expiry.json');assert expiry['result']=='PASS' and expiry['configured_ttl_seconds']==300 and expiry['observed_after_seconds']>=300
+    assert len(expiry['expired_routes'])==3 and all(x['status']==410 for x in expiry['expired_routes']) and expiry['service_transfer_removed']
+    # Backend expiry is tied to Go source, not a later cosmetic CSS-only HTML rebuild.
+    assert expiry['go_source_sha256']==windows['source_sha256']
+    launch=report('go-launch-lifecycle.json');assert launch['result']=='PASS' and len(launch['tests'])==7 and passed(launch['tests'])
+    assert launch['go_source_sha256']==windows['source_sha256'] and launch['html_sha256']==html_hash
+    if not candidate:
+        smoke=report('package-smoke.json');n,digest=runtime_fingerprint()
+        assert smoke['result']=='PASS' and (smoke['runtime_files_equal'],smoke['runtime_sha256'])==(n,digest),'Current independently extracted-copy smoke is required.'
+        assert smoke['standalone_html_sha256']==html_hash and smoke['windows_exe_sha256']==windows['sha256']
+        assert len(smoke['checks'])==2 and passed(smoke['checks']) and len(smoke['standalone_file_only_offline'])==2 and passed(smoke['standalone_file_only_offline'])
+        assert smoke['phone_creator_http']==smoke['reset_and_memory_cleanup']==smoke['no_directory_browsing']=='PASS'
+    for directory in ('app','scripts','tests'):
+        for p in (ROOT/directory).glob('*.py'):compile(p.read_text(),str(p),'exec')
+    node='Not installed; not a runtime requirement'
+    try:
+        for p in list((ROOT/'browser').glob('*.js'))+[ROOT/'web/static/app.js',ROOT/'web/static/mobile.js']:
+            subprocess.run(['node','--check',str(p)],check=True,capture_output=True)
+        node='PASS'
+    except FileNotFoundError:pass
+    assert (ROOT/'docs/GUIDA_RAPIDA.pdf').read_bytes().startswith(b'%PDF-')
+    return dict(photo_sources=6,nes_backgrounds=6,lpc_parts=56,source_lpc_pngs=255,hd_png_examples=8,jpg_examples=12,
+                screenshots=shot_counts,unit_tests=34,go_top_level_race_tests=26,service_browser_checks=15,standalone_browser_checks=22,
+                independently_extracted_copy='PENDING: candidate only' if candidate else 'PASS',
+                real_backend_expiry='PASS, 300 actual seconds',native_service_stop='PASS on Linux; not native Windows',
+                source_syntax='PASS',javascript_syntax=node,no_visitor_files='PASS',png_dimensions_and_attribution='PASS',
+                windows_native='NOT TESTED',physical_phone_school_wifi='NOT TESTED')
+
+
+def build(candidate=False):
+    checks=check(candidate)
+    data=dict(result='CANDIDATE' if candidate else 'PASS',date='2026-11-27',revision='3.0 LPC + Windows GUI launcher + genuine finished-PNG QR',
+              archive=OUTPUT.name,preflight=checks,archive_crc='Verified after writing',manifest_sha256='Verified against every included ZIP member',
+              excluded='All var files except README, visitor PNGs, caches, virtualenvs, toolchains and QA Linux binaries.',
+              windows_native='NOT TESTED; only cross-compilation and same-source Linux checks',physical_phone='NOT TESTED — required on school LAN')
+    AUDIT.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+    listing=[p for p in files() if p!=MANIFEST]
+    MANIFEST.write_text(''.join(f'{sha(p.read_bytes())}  {p.relative_to(ROOT).as_posix()}\n' for p in listing))
+    listing=files()
+    with zipfile.ZipFile(OUTPUT,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
+        for p in listing:z.write(p,Path(ROOT.name)/p.relative_to(ROOT))
+    with zipfile.ZipFile(OUTPUT) as z:
+        assert z.testzip() is None,'Corrupt ZIP member'
+        names=z.namelist();assert len(names)==len(set(names))==len(listing)
+        assert all(n.startswith(ROOT.name+'/') and '/..' not in n for n in names)
+        assert not any('/var/' in n and not n.endswith('/var/README.md') for n in names)
+        for line in MANIFEST.read_text().splitlines():
+            digest,relative=line.split('  ',1);assert sha(z.read(ROOT.name+'/'+relative))==digest,relative
+    digest=sha(OUTPUT.read_bytes());OUTPUT.with_suffix('.zip.sha256').write_text(digest+'  '+OUTPUT.name+'\n')
+    print(json.dumps(dict(result='CANDIDATE' if candidate else 'PASS',archive=str(OUTPUT),files=len(listing),bytes=OUTPUT.stat().st_size,sha256=digest,checks=checks),ensure_ascii=False,indent=2))
+
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--candidate',action='store_true',help='Before extracted-copy smoke; NOT final delivery.')
+    build(parser.parse_args().candidate)

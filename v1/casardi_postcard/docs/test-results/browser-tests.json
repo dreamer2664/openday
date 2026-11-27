@@ -1,0 +1,90 @@
+{
+  "browser": "Chromium via Playwright",
+  "date": "2026-11-27",
+  "seconds": 33.3,
+  "tests": [
+    {
+      "test": "six_locations_nes_style_preserved",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "every_creator_category_all_poses_all_expressions",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "eight_companions_variants_poses_and_none",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "back_navigation_preserves_choices",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "png_export_and_independently_decoded_qr",
+      "result": "PASS",
+      "detail": "3000×2000; 0.25 s"
+    },
+    {
+      "test": "second_browser_context_mobile_page_and_png_download",
+      "result": "PASS",
+      "detail": "Emulated viewport; not a physical phone or independent network"
+    },
+    {
+      "test": "direct_save_pc_fallback",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "reset_clears_screen_state_and_revokes_token",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "navigation_cannot_mismatch_an_inflight_export",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "six_photo_locations_unnamed_no_companion_hd_export",
+      "result": "PASS",
+      "detail": "7.19 s"
+    },
+    {
+      "test": "operator_diagnostics_and_real_network_test_qr",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "automatic_return_on_countdown_expiry",
+      "result": "PASS",
+      "detail": "Browser clock advanced by 601 s; backend expiry is tested separately with a controlled clock"
+    },
+    {
+      "test": "layouts_1366x768_1920x1080_720x1000",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "keyboard_activation_alt_navigation_modal_focus_and_escape",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "text_arrow_safety_network_failure_and_reset_retry",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "test": "no_uncaught_javascript_errors_no_external_runtime_requests",
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "javascript_errors": [],
+  "external_runtime_requests": [],
+  "physical_second_device_test": "NOT PERFORMED — required on school Wi-Fi"
+}

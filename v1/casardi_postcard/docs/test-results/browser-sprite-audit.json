@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-27",
+  "result": "PASS",
+  "comparisons": 938,
+  "mismatches": 0,
+  "groups": {
+    "catalogue_geometry": 182,
+    "palette_options": 272,
+    "joint_random_profiles": 400,
+    "all_animal_variants_poses": 84
+  },
+  "seconds": 9.37,
+  "node": "v20.20.2",
+  "input_manifest_sha256": "0fa2d45088813e2fa92abb0a25f44bb5be7ec65446126c705b00c2ae915ee076",
+  "scope": "Exact raw RGBA equality for sprites, not a claim of pixel-identical Canvas/Pillow whole postcards.",
+  "source": {
+    "app/character.py": "d63f3688cd11e0bfbf4c429a6f3374fb0d854d20dcd6ab4dc85a33078f150a3f",
+    "app/cyber_layers.py": "3ce6e2b9351e2a69be5614ff3c60462a2fd1bce40f5b7868b528f6b6d60be769",
+    "app/animals.py": "a434493fb0e1d93c38be8f58a2b784648ebe29edcbf70fd788a8330812188dd4",
+    "browser/lpc.js": "6beff9b87f030f6711d9f34a6b58bb359c28f47e17ed4156f31fe28f1320e91d",
+    "browser/pixels.js": "d0f3700300fdd972c1f9df49a9b195ea77edc7c1d0297682e5c556852958c711",
+    "browser/sprites.js": "aab7f430ecfce5563e217abf56c755cce6920e5cfe2d7089cfdd5ecf6b89866f",
+    "assets/characters/lpc/manifest.json": "7a8fb7ea658d7b9e9547c114975d6521becc7b6857b20c7045cb420ad4534c55"
+  }
+}

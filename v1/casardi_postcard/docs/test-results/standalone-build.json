@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-27",
+  "file": "Cartolina_Casardi_PC_e_Telefono.html",
+  "editions": "One responsive standalone HTML: full desktop and touch-phone creator.",
+  "renderer": "Independent JavaScript + Canvas; artist-drawn LPC indexed atlases + translated original equipment/animals; no Python runtime.",
+  "photos": {
+    "casardi": {
+      "source_sha256": "1f47b2a8d090930bd2057d007596475bfbfe61d7561b78c945392c78d4e1b1ab",
+      "embedded_sha256": "96070bed50aca9a6584509a323698181d9c639b588190118f7a6d30297060254",
+      "embedded_bytes": 54412,
+      "embedded_dimensions": [
+        707,
+        491
+      ],
+      "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
+    },
+    "pantheon": {
+      "source_sha256": "0b8cf198734d128fbff32c0b8feb702a97ff474d94d5aec6ce5e69ab52878b91",
+      "embedded_sha256": "5d9d23c48b69f1bf6c47b699f16fa4d58289de88750d05a5fe5e4f55105c8a99",
+      "embedded_bytes": 1476059,
+      "embedded_dimensions": [
+        3000,
+        2250
+      ],
+      "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
+    },
+    "foro": {
+      "source_sha256": "7bccc901d26fb35695721e6f1fec93181f95deebc5bccec241840c43442d1272",
+      "embedded_sha256": "3f23fa66c234efd2d9eefbce2323f22b9ffdfcf48b18649296e02b33724f502f",
+      "embedded_bytes": 1737224,
+      "embedded_dimensions": [
+        3000,
+        2325
+      ],
+      "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
+    },
+    "epidauro": {
+      "source_sha256": "444370a96346478ed45be428526ab4e7b567926ad003ee1943c62bc0bf733e2a",
+      "embedded_sha256": "71df2d907ec6d808d17242076fa6e439b38b28f8d7ead523e6111c50358b9264",
+      "embedded_bytes": 1708710,
+      "embedded_dimensions": [
+        3000,
+        1997
+      ],
+      "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
+    },
+    "biblioteca": {
+      "source_sha256": "cf048a83eb21b55f843281f5bd56c5b5a745f1f6102c1286a84308d600cdf7ee",
+      "embedded_sha256": "138ab737ed10d036a2a16c80029ff7a85f62af77dbe1e8b1114def902134aa23",
+      "embedded_bytes": 929462,
+      "embedded_dimensions": [
+        3000,
+        2003
+      ],
+      "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
+    },
+    "paestum": {
+      "source_sha256": "a76a08466b950176ff03fc080488716b9aaa5f90ecce12b8d13cc3a6bd2cf91b",
+      "embedded_sha256": "3047cca0c8ceefd2af2729271dd0afc32944fc357dc96e72936c061c7aedc65d",
+      "embedded_bytes": 1218101,
+      "embedded_dimensions": [
+        3000,
+        1839
+      ],
+      "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
+    }
+  },
+  "fonts": {
+    "Cinzel.ttf": {
+      "source_sha256": "f4d83d34d1f6c741193e4acf4b3dff9531e5a67b6aa65228d00a7db72a4e0f34",
+      "embedded_sha256": "d2d5f4c69ad9e359247122d654674f1609a64bbc86cbac5e2a7382c1c7a0ff55",
+      "bytes": 52500,
+      "processing": "WOFF1 subset U+0000–U+052F; layout features and copyright/license preserved.",
+      "internal_name": "Original family name; no Reserved Font Name declared in its OFL notice."
+    },
+    "EBGaramond.ttf": {
+      "source_sha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027",
+      "embedded_sha256": "9cc4e69da75b9cc961e6028b4bac0ef7da077464bee3135cdd9c62c40eb031dc",
+      "bytes": 274804,
+      "processing": "WOFF1 subset U+0000–U+052F; layout features and copyright/license preserved.",
+      "internal_name": "Original family name; no Reserved Font Name declared in its OFL notice."
+    },
+    "PressStart2P-Regular.ttf": {
+      "source_sha256": "034c77f1f05ec89421e4a63f0e3a4ca1ecf852cc6d2bf611f126f275728e017d",
+      "embedded_sha256": "8fdef2c154c718da88681041141e6353cf1639b91308fe7496f79d7dc5a406a9",
+      "bytes": 33884,
+      "processing": "WOFF1 subset U+0000–U+052F; layout features and copyright/license preserved.",
+      "internal_name": "Casardi Pixel"
+    }
+  },
+  "runtime_network": "None",
+  "visitor_storage": "Memory of the open page only; no project persistence.",
+  "qr": "AVVIA_CARTOLINA_WINDOWS.exe serves this full HTML and hosts its actual finished PNG via temporary LAN URL. Raw standalone HTML exports locally without hosting other devices.",
+  "lpc_commit": "86a3719ee4a7e2e9fb27c7c152e29a741d3e930a",
+  "lpc_parts": 56,
+  "lpc_pose_atlases": 85,
+  "bytes": 11185027,
+  "sha256": "00fd5456424fc979423d98283d509be4e0ca753ac54e96ca2e9c8b9cd0dc9081"
+}

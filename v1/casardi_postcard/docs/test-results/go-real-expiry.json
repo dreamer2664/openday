@@ -1,0 +1,28 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "clock": "Real server wall clock, no time travel",
+  "configured_ttl_seconds": 300,
+  "observed_after_seconds": 301.47,
+  "decoded_qr": "PASS",
+  "download_identical_sha256": "0689a6e3b6b8b3ad6d249ff26e28c62a3c91572b16c4189f46dcdc7aabed99e8",
+  "expired_routes": [
+    {
+      "route": "landing",
+      "status": 410
+    },
+    {
+      "route": "/file",
+      "status": 410
+    },
+    {
+      "route": "/image",
+      "status": 410
+    }
+  ],
+  "service_transfer_removed": true,
+  "storage": "Memory only; no PNG is written by the Go service",
+  "environment": "Linux build of the same Go source; QA loopback HTTP, not Windows-native or a physical school phone",
+  "html_sha256": "cd15652094e1a1112fa2bb0221f41fabbe4b280ba7753a030ab31b8cf5561cbe",
+  "go_source_sha256": "5fd5c582ee7f3708770e624fd6fadae2c8ca7a6a3672a737c933f822646cae2d"
+}

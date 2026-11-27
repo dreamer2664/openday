@@ -1,0 +1,14 @@
+# Sostituzione autorizzata della fotografia del Casardi
+
+Questa cartella è intenzionalmente priva di immagini non autorizzate. L'app include già una fotografia autentica d'archivio, con CC0 dichiarata su Wikimedia Commons: **non è una foto attuale né un'immagine ufficiale approvata dalla scuola**.
+
+Se la scuola dispone di una foto migliore:
+1. Conservare qui l'originale e una dichiarazione reale del titolare dei diritti che autorizzi modifica, composizione con personaggi e download delle cartoline, con condizioni compatibili con la distribuzione della composizione come adattamento CC BY-SA 4.0 e con i materiali LPC. Preferire una licenza esplicita compatibile (per esempio CC0 o CC BY-SA 4.0). Non basta trovare un'immagine sul sito istituzionale né un permesso che vieti la redistribuzione necessaria.
+2. Preferire una ripresa orizzontale della facciata con pavimentazione libera, senza minori riconoscibili, almeno 3000 px sul lato lungo. Rimuovere EXIF/GPS dalla copia di distribuzione.
+3. A server fermo, sostituire `assets/photos/casardi/source.jpg`. Aggiornare il record `casardi` di `photo_metadata.json`: autore, fonte, URL originale se esiste, titolo, licenza effettiva, data, dimensioni, lavorazioni e SHA-256. Per materiale riservato usare una descrizione onesta dell'autorizzazione, non attribuire CC0 senza consenso.
+4. Aggiornare `SOURCES_AND_LICENSES.md`; non distribuire nello ZIP un documento con firme o dati personali senza motivo. Per un file locale l'attribuzione può essere testuale: il manutentore deve allora adeguare i link di `mobile.html`/Info se non esiste una pagina pubblica.
+5. Adattare `PHOTO_SCENES['casardi']` in `app/scenes.py`: appoggio, scala, luce, area testo e companion non sono universali. Rivedere anche la ricostruzione NES se cambia inquadratura.
+6. **Rigenerare anche il file unico** con `python scripts/build_standalone.py`: l'HTML contiene una copia incorporata della foto e dei dati di scena; non legge automaticamente `source.jpg`. Il launcher Windows legge l'HTML adiacente e non richiede ricompilazione per una sola modifica della foto. Nel kiosk Python, le miniature hanno una revisione dipendente dai sorgenti/foto; riavviare e verificare la nuova immagine.
+7. Rigenerare esempi e render con `python scripts/render_gallery.py` e `python scripts/build_examples.py`. Eseguire test e nuovo audit dei metadati/hash, controllare le due edizioni e guardare i PNG reali prima dell'evento; aggiornare i report e ricostruire il pacchetto. Non sostituire la fonte durante una sessione di visita.
+
+La licenza della fotografia attuale non si trasferisce automaticamente alla nuova fotografia. Nessuna autorizzazione della scuola è stata inventata o allegata a questo pacchetto.

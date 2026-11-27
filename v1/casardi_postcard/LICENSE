@@ -1,0 +1,32 @@
+MIT License — original application source code only
+
+Copyright (c) 2026 Cartolina Open Day Casardi contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+SCOPE: This license covers original application source code, not third-party
+art, photographs, fonts, vendored libraries or the Go runtime. Modular LPC
+character artwork is NOT all CC0: keep each part's authors and chosen license
+in assets/characters/CREDITI_LPC.txt and its unmodified source metadata. Only
+original Casardi sci-fi equipment and companion drawings are offered under
+CC0 1.0. Delivered postcard compositions and NES background reconstructions
+are offered as CC BY-SA 4.0 adaptations, without relicensing their underlying
+materials. See SOURCES_AND_LICENSES.md for full provenance and notices.
+The school's name is descriptive, not official endorsement or a license to
+any school logo or trademark. No Cyberpunk 2077 or ARK assets are included.

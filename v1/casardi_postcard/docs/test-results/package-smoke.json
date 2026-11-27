@@ -1,0 +1,59 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "procedure": "ZIP extracted outside source tree; its own Go native service built from extracted vendored sources; standalone HTML copied alone and opened file:// with browser network disabled.",
+  "runtime_files_equal": 502,
+  "runtime_sha256": "4d833f4e035aaceccf58ef41b5756ea938852af319dfe622dfb7df01cc9a7be6",
+  "windows_exe_sha256": "fa776b51cf299f2858c24d3cec2b6987609332d643a2aba16d654157e1ff4f90",
+  "standalone_html_sha256": "00fd5456424fc979423d98283d509be4e0ca753ac54e96ca2e9c8b9cd0dc9081",
+  "standalone_file_only_offline": [
+    {
+      "mode": "photo",
+      "result": "PASS",
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "sha256": "144df2521e4c79214a3eb82a1aaa4a8597ebf8ebe596d19470119e05d35c4e0e"
+    },
+    {
+      "mode": "nes",
+      "result": "PASS",
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "sha256": "57b9a3f67ccad9ff907b9847a1ada432bdc6e60a465fd5b2d401d4d6e6682fc6"
+    }
+  ],
+  "phone_creator_http": "PASS",
+  "checks": [
+    {
+      "mode": "photo",
+      "result": "PASS",
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "png_sha256": "144df2521e4c79214a3eb82a1aaa4a8597ebf8ebe596d19470119e05d35c4e0e",
+      "qr_independently_decoded": true,
+      "download_identical_bytes": true,
+      "seconds": 0.16
+    },
+    {
+      "mode": "nes",
+      "result": "PASS",
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "png_sha256": "57b9a3f67ccad9ff907b9847a1ada432bdc6e60a465fd5b2d401d4d6e6682fc6",
+      "qr_independently_decoded": true,
+      "download_identical_bytes": true,
+      "seconds": 0.05
+    }
+  ],
+  "reset_and_memory_cleanup": "PASS",
+  "no_directory_browsing": "PASS",
+  "environment": "Linux + Chromium and loopback QA-only LAN; not clean Windows, a physical phone or the school network."
+}

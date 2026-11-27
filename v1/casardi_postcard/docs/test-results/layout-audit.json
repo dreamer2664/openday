@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-27",
+  "cases": 6048,
+  "outside_inner_frame": 0,
+  "foot_span_overlaps": 0,
+  "failure_examples": [],
+  "foot_overlap_examples": [],
+  "limitation": "Geometry only; cloth/hair extremes are in the separate sprite audit. Does not infer floor perspective or real-photo obstacles."
+}

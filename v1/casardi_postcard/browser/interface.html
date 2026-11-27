@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#172b35">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+kf1sAAAAASUVORK5CYII=">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Cartolina Casardi · PC e telefono · Open Day 2026/27</title>
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<a class="skip" href="#main-content">Vai ai controlli</a>
+<section id="welcome" aria-labelledby="welcome-title">
+ <header class="welcome-top"><span>LICEO ALFREDO CASARDI</span><span>BARLETTA</span></header>
+ <main class="welcome-layout">
+  <div class="welcome-copy">
+   <p class="eyebrow">OPEN DAY 2026/27</p>
+   <h1 id="welcome-title">La tua<br>cartolina.</h1>
+   <p class="lead">Un luogo, il tuo personaggio,<br>un ricordo da portare con te.</p>
+   <p class="intro">Scegli fra sei ambientazioni autentiche e due stili. Crea il tuo avatar pixel art: giacche cyber, equipaggiamento da esplorazione, capelli e accessori modulari. Poi porta con te il PNG.</p>
+   <button class="primary big" id="start" disabled>Preparazione… <span aria-hidden="true">→</span></button>
+   <p class="offline-badge"><span aria-hidden="true">●</span> File unico · PC e telefono · Funziona offline</p>
+   <p id="boot-error" role="alert" hidden></p>
+   <p class="welcome-note">Nessun account, nessun dato inviato. Nome e animale facoltativi. Nessun limite di tempo per creare.</p>
+   <button class="text-button" id="welcome-info">Come aprire e salvare · Fonti e licenze</button>
+  </div>
+  <div class="welcome-art" aria-label="Esempi reali dei due stili">
+   <figure class="sample sample-photo"><img id="sample-photo" alt="Esempio fotografico con la facciata storica del Casardi, un personaggio e un gatto"><figcaption>01 <span>FOTOGRAFICA</span></figcaption></figure>
+   <figure class="sample sample-nes"><img id="sample-nes" alt="Esempio interamente in pixel art con il Casardi e un companion"><figcaption>02 <span>PIXEL ART NES</span></figcaption></figure>
+   <p class="art-caption">3000 × 2000 px <span>·</span> PNG ad alta risoluzione</p>
+  </div>
+ </main>
+ <footer class="welcome-bottom"><span>Edizione autonoma · Tutto è incorporato nel file</span><span>2026 / 27</span></footer>
+</section>
+
+<section id="studio" hidden aria-label="Studio cartoline">
+ <header class="topbar">
+  <a class="wordmark" href="#" id="brand-home" aria-label="Torna all’inizio senza cancellare">LICEO ALFREDO CASARDI<small>OPEN DAY 2026/27 · BARLETTA</small></a>
+  <div class="top-actions"><button class="quiet" id="info">Info</button><button class="quiet" id="reset">Ricomincia</button></div>
+ </header>
+ <nav class="steps" aria-label="Passaggi della cartolina">
+  <button data-step="0"><span>1</span><b>Stile</b></button>
+  <button data-step="1"><span>2</span><b>Luogo</b></button>
+  <button data-step="2"><span>3</span><b>Nome</b></button>
+  <button data-step="3"><span>4</span><b>Personaggio</b></button>
+  <button data-step="4"><span>5</span><b>Companion</b></button>
+  <button data-step="5"><span>6</span><b>Anteprima</b></button>
+ </nav>
+ <div class="studio-grid">
+  <aside class="live-column" aria-label="Personaggio in dettaglio">
+   <div class="live-meta"><span id="live-place">Liceo Alfredo Casardi</span><span id="live-mode">FOTOGRAFICA</span></div>
+   <div id="live-stage" class="live-stage"><img id="live-character" alt="Il tuo personaggio"><img id="live-animal" alt="Il tuo companion" hidden></div>
+   <div class="live-bottom"><p>Vista di dettaglio<span>La scala nel luogo si vede in Anteprima.</span></p><label class="blink"><input id="blink" type="checkbox" checked> Battito delle palpebre</label></div>
+   <div class="edition-note"><span class="little-dot"></span><p>Composizione sul tuo dispositivo.<br><strong>PNG 3000 × 2000</strong>, non uno screenshot.</p></div>
+  </aside>
+  <main id="main-content" class="controls" tabindex="-1">
+   <p class="step-kicker" id="step-kicker">PASSAGGIO 1 DI 6</p>
+   <section class="pane" data-pane="0">
+    <h2>In quale stile?</h2><p class="sub">La scelta vale per tutti i luoghi. Puoi tornare indietro senza perdere i dettagli del personaggio.</p>
+    <div class="style-grid">
+     <button class="choice style-choice" data-mode="photo"><img id="style-photo" alt=""><span class="choice-copy"><strong>Fotografica</strong><span>Il luogo reale, con luce, ombre e colori armonizzati.</span></span></button>
+     <button class="choice style-choice" data-mode="nes"><img class="pixel" id="style-nes" alt=""><span class="choice-copy"><strong>Pixel art NES</strong><span>Architetture e personaggi in un unico mondo di pixel.</span></span></button>
+    </div>
+   </section>
+   <section class="pane" data-pane="1" hidden>
+    <h2>Scegli il luogo.</h2><p class="sub">Sei ambientazioni, tra la scuola e il mondo classico.</p><div class="scene-grid" id="scene-grid"></div><p class="scene-note" id="scene-note"></p>
+   </section>
+   <section class="pane" data-pane="2" hidden>
+    <h2>Vuoi firmarla?</h2><p class="sub">Basta un nome o un nickname. Puoi anche lasciare il campo vuoto.</p>
+    <label class="name-field" for="nickname">Nome o nickname <span>Facoltativo · massimo 28 caratteri</span></label>
+    <input id="nickname" type="text" maxlength="56" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="es. Giulia" aria-describedby="name-note">
+    <p class="hint" id="name-note">Non inserire cognome, contatti o altri dati personali. Il nome comparirà solo nell’immagine che scegli di salvare.</p>
+   </section>
+   <section class="pane" data-pane="3" hidden>
+    <h2 class="creator-title">Il tuo personaggio.</h2>
+    <nav class="tabs" id="tabs" aria-label="Categorie del personaggio">
+     <button data-tab="body">Corpo</button><button data-tab="face">Volto</button><button data-tab="hair">Capelli</button><button data-tab="expression">Espressione</button><button data-tab="top">Sopra</button><button data-tab="bottom">Sotto</button><button data-tab="shoes">Scarpe</button><button data-tab="extras">Accessori</button><button data-tab="pose">Posa</button>
+    </nav>
+    <div id="creator-panes"></div>
+   </section>
+   <section class="pane" data-pane="4" hidden>
+    <h2>In buona compagnia.</h2><p class="sub">Un piccolo animale originale, oppure nessuno: scegli tu.</p><div class="animal-grid" id="animal-grid"></div><div id="companion-options" hidden></div>
+   </section>
+   <section class="pane" data-pane="5" hidden>
+    <h2>La tua cartolina.</h2><p class="sub">Controlla la composizione, poi genera il file ad alta risoluzione.</p>
+    <div class="preview-wrap"><img id="final-preview" alt="Anteprima completa della cartolina"><div class="loading" id="preview-loading" hidden><span class="spinner" aria-hidden="true"></span><span>Composizione dell’anteprima…</span></div></div>
+    <div class="preview-actions"><button class="secondary" id="edit">Modifica</button><button class="primary" id="export" disabled>Genera PNG 3000 × 2000 <span aria-hidden="true">↓</span></button></div>
+    <div id="export-progress" class="export-progress" role="status" hidden><label for="progress">Generazione locale del PNG…</label><progress id="progress" max="1" value="0"></progress><p>Non chiudere la pagina. Puoi annullare con Ricomincia.</p></div>
+    <section class="result" id="result" hidden aria-labelledby="result-title">
+     <p class="eyebrow">FILE PRONTO</p><h3 id="result-title">Portala con te.</h3><p id="file-details" role="status"></p>
+     <section id="transfer-box" class="transfer-box" hidden aria-labelledby="transfer-title">
+      <p class="eyebrow">DAL PC AL TELEFONO</p><h3 id="transfer-title">Scansiona e scarica.</h3>
+      <p id="transfer-status" role="status" aria-live="polite"></p>
+      <div id="transfer-loading" class="transfer-loading" hidden><span class="spinner" aria-hidden="true"></span> Preparazione del QR…</div>
+      <div id="transfer-code" class="transfer-code" hidden><img id="transfer-qr" alt="QR del PNG finale da scaricare sul telefono"><div><strong>Questo QR apre la cartolina già pronta.</strong><p id="transfer-time" class="transfer-time"></p><a id="transfer-link" target="_blank" rel="noopener noreferrer" class="transfer-link"></a><p class="hint">Non si apre? Controlla stessa Wi-Fi, rete privata di Windows e assenza di isolamento tra dispositivi. Il salvataggio sul PC è sempre disponibile sopra.</p></div></div>
+      <button id="transfer-retry" class="secondary" hidden>Crea un nuovo QR per questo PNG</button>
+     </section>
+     <div class="save-actions"><a class="primary" id="save" download="cartolina-casardi.png">Scarica PNG <span aria-hidden="true">↓</span></a><button class="secondary" id="share" hidden>Condividi / Salva…</button><a class="secondary" id="open-image" target="_blank" rel="noopener">Apri l’immagine</a></div>
+     <p class="hint">Su telefono: se il download non parte, apri l’immagine e usa la pressione prolungata o il menu Condividi del browser per salvarla. Le opzioni dipendono dal sistema.</p>
+     <details class="image-fallback"><summary>Mostra il PNG da salvare con pressione prolungata</summary><img id="save-image" alt="PNG finale: tieni premuto per salvarlo sul telefono"></details>
+     <a class="text-button" id="save-credits" download="crediti-cartolina.txt">Scarica anche i crediti di foto e personaggio</a>
+     <p id="transfer-local-only" class="standalone-transfer-note">Stai usando il file autonomo: il PNG è salvabile su questo dispositivo. Per trasferirlo dal PC a un altro telefono con un vero QR, sul PC apri <strong>AVVIA_CARTOLINA_WINDOWS.exe</strong> dal pacchetto completo: si apre lo studio con il servizio locale, senza terminale né Python.</p>
+     <p class="privacy-note" id="result-privacy">Il file viene creato qui, non caricato online. Le copie già scaricate restano sul dispositivo.</p>
+     <button class="secondary new-button" id="new">Ho finito · Nuova cartolina</button>
+    </section>
+   </section>
+  </main>
+ </div>
+ <footer class="navigation"><button class="secondary" id="prev">← <span>Indietro</span></button><p id="navigation-note">Scegli uno stile per iniziare.</p><button class="primary" id="next" disabled>Avanti <span aria-hidden="true">→</span></button></footer>
+</section>
+
+<div class="dialog-backdrop" id="info-dialog" hidden>
+ <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="info-title" tabindex="-1">
+  <header><h2 id="info-title">Informazioni e fonti.</h2><button class="quiet" id="close-info">Chiudi <span aria-hidden="true">×</span></button></header>
+  <div class="info-sections">
+   <section id="service-controls" class="service-controls" hidden>
+    <h3>Servizio dello stand · Rete locale</h3>
+    <p>Il servizio Windows è attivo. Il <strong>QR della cartolina pronta</strong> compare dopo «Genera PNG». La sua copia temporanea esiste solo in memoria, non su disco.</p>
+    <label id="network-select-wrap" for="network-ip">Scheda di rete del PC<select id="network-ip"></select></label>
+    <p id="network-missing" class="hint" hidden>Nessun indirizzo privato rilevato. Collega il PC alla Wi-Fi o al cavo di rete e riapri l’avvio Windows. Internet non è necessario.</p>
+    <details class="creator-qr-info"><summary>QR distinto: creare una nuova cartolina sul telefono</summary><p>Questo apre il creatore completo, <strong>non il PNG già generato</strong>. Il telefono deve restare sulla stessa rete del PC per il primo caricamento.</p><img id="creator-qr" alt="QR del creatore completo per telefono"><a id="creator-link" target="_blank" rel="noopener noreferrer"></a></details>
+    <p class="hint">Alla richiesta di Windows consenti il programma soltanto sulla rete privata della scuola. Non aprire porte sul router. Se la Wi-Fi ospiti isola i dispositivi, chiedi una LAN non isolata all’operatore.</p>
+    <button id="service-stop" class="secondary">Arresta servizio locale</button><p id="service-warning" role="alert" hidden></p>
+   </section>
+   <h3>Un solo file, anche sul telefono</h3>
+   <p>Questa è l’app completa, non una pagina di solo download. Foto, ricostruzioni, sprite, font e licenze sono incorporati. Non servono Python, terminale, installazioni o connessione a Internet.</p>
+   <p><strong>PC:</strong> scarica il file .html, poi aprilo con doppio clic in un browser recente. Se si apre un editor di testo, usa «Apri con» → browser.</p>
+   <p><strong>Telefono:</strong> trasferisci o scarica lo stesso .html e aprilo in un browser capace di eseguire file HTML locali. L’anteprima di un allegato o dell’app File può non eseguire JavaScript, in particolare su iPhone/iPad. Se non compare «Inizia», apri la versione telefono sulla Wi-Fi del PC dello stand: <code>http://IP-DEL-PC:8080/telefono</code>, con il server dello stand avviato. Nessun comando va eseguito sul telefono.</p>
+   <h3>Salvataggio e privacy</h3>
+   <p>Il PNG è composto su un canvas a 3000 × 2000 pixel, indipendente dallo schermo. Gli sprite rimangono nitidi; la versione NES nasce sulla griglia 600 × 400 e viene ingrandita ×5 senza interpolazione.</p>
+   <p>«Condividi / Salva…» compare solo se il browser supporta la condivisione di file. In alternativa usa «Scarica PNG», «Apri l’immagine» o la pressione prolungata sul PNG. Non tutti i browser mobili trattano i file locali nello stesso modo.</p>
+   <p>Nome e scelte restano solo nella memoria della pagina. Non ci sono analytics, cookie, cronologia dei progetti, cloud o salvataggi automatici. «Ricomincia» libera il PNG della pagina e azzera le scelte; non può cancellare le copie già salvate in Download o Foto. La chiusura o ricarica della pagina perde le modifiche.</p>
+   <p><strong>PC Windows dello stand:</strong> estrai tutto lo ZIP e apri <code>AVVIA_CARTOLINA_WINDOWS.exe</code>. Il browser si apre da solo e, dopo la generazione, mostra il QR del PNG. Non servono Python, installazioni o comandi. Il file HTML aperto da solo rimane autonomo, ma non può ospitare un PNG per un altro dispositivo. Il servizio non può eliminare copie già scaricate, né completare un trasferimento se la rete scolastica isola PC e telefoni.</p>
+   <h3>Compatibilità dichiarata</h3>
+   <p>Verificata tramite i test documentati con Chromium, anche con viewport e touch emulati. Un’emulazione non è una prova su un telefono fisico. Safari/iOS, Firefox, hardware touch e Wi-Fi della scuola vanno verificati prima dell’evento. Servono JavaScript, Canvas e memoria sufficiente; sui telefoni meno recenti la generazione può richiedere più tempo.</p>
+   <h3>Fotografie autentiche</h3>
+   <p>Il Casardi è documentato con una foto storica del 1936, nativa 707 × 491 pixel: non è una foto attuale né un’immagine realmente acquisita a 3000 pixel. Le altre fonti incorporate sono ottimizzate in JPEG, lato massimo 3000 pixel, qualità 86. I file originali con hash e i riferimenti completi sono nel pacchetto sorgente.</p>
+   <div id="credits-list"></div>
+   <p>La licenza della fotografia non sostituisce eventuali autorizzazioni per l’uso dei beni culturali o dell’identità dell’istituto. Nessuna autorizzazione per foto tratte dal sito della scuola è presunta. Nessuna affiliazione dei fotografi è implicata.</p>
+   <h3>Codice, disegni e font</h3>
+   <p>Codice originale: MIT. Nuova base dei personaggi: Universal LPC, con veri livelli disegnati da artisti e licenze per parte OGA-BY 3.0 / CC-BY-SA 3.0; <strong>non è tutta CC0</strong>. Crediti completi sotto e nei metadati di ogni PNG. Equipaggiamento fantascientifico originale e companion: CC0. Le ricostruzioni NES e le cartoline composte si distribuiscono come adattamenti CC BY-SA 4.0, conservando crediti e licenze dei riferimenti e dei materiali originali. Nessun personaggio o asset di videogiochi commerciali. Font Cinzel, EB Garamond e Press Start 2P: SIL OFL 1.1, incorporati in WOFF come sottoinsiemi Unicode U+0000–U+052F. Il sottoinsieme modificato di Press Start 2P è rinominato internamente «Casardi Pixel», nel rispetto del nome riservato; i font originali non sono modificati.</p>
+   <details><summary>Autori e licenze delle parti LPC incluse</summary><pre id="lpc-credits" class="lpc-credits"></pre></details>
+   <details><summary>Testi completi delle licenze incorporate</summary><div id="license-texts"></div></details>
+  </div>
+ </section>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden><span></span><button aria-label="Chiudi messaggio">×</button></div>
+<noscript><div class="noscript">Per creare la cartolina occorre aprire questo HTML completo in un browser con JavaScript attivo. L’anteprima statica di un allegato non è sufficiente.</div></noscript>
+<script id="embedded-data" type="application/json">/*__DATA__*/</script>
+<script>/*__SPRITES__*/
+/*__RENDER__*/
+/*__BRIDGE__*/
+/*__APP__*/</script>
+</body>
+</html>

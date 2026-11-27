@@ -1,0 +1,37 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "revision": "3.0 LPC + Windows GUI launcher + genuine finished-PNG QR",
+  "archive": "Cartolina_Casardi_Windows_LPC_QR_2026-27.zip",
+  "preflight": {
+    "photo_sources": 6,
+    "nes_backgrounds": 6,
+    "lpc_parts": 56,
+    "source_lpc_pngs": 255,
+    "hd_png_examples": 8,
+    "jpg_examples": 12,
+    "screenshots": {
+      "screenshots-service": 7,
+      "screenshots-standalone": 6,
+      "screenshots": 16
+    },
+    "unit_tests": 34,
+    "go_top_level_race_tests": 26,
+    "service_browser_checks": 15,
+    "standalone_browser_checks": 22,
+    "independently_extracted_copy": "PASS",
+    "real_backend_expiry": "PASS, 300 actual seconds",
+    "native_service_stop": "PASS on Linux; not native Windows",
+    "source_syntax": "PASS",
+    "javascript_syntax": "PASS",
+    "no_visitor_files": "PASS",
+    "png_dimensions_and_attribution": "PASS",
+    "windows_native": "NOT TESTED",
+    "physical_phone_school_wifi": "NOT TESTED"
+  },
+  "archive_crc": "Verified after writing",
+  "manifest_sha256": "Verified against every included ZIP member",
+  "excluded": "All var files except README, visitor PNGs, caches, virtualenvs, toolchains and QA Linux binaries.",
+  "windows_native": "NOT TESTED; only cross-compilation and same-source Linux checks",
+  "physical_phone": "NOT TESTED — required on school LAN"
+}

@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "upstream_commit": "86a3719ee4a7e2e9fb27c7c152e29a741d3e930a",
+  "cases": {
+    "photo_clothes_build_pose": 720,
+    "photo_hair_hat_pose": 360,
+    "photo_face_traits_expression": 1296,
+    "photo_accessory_held_pose": 1440,
+    "nes_clothes_build_pose": 720,
+    "nes_hair_hat_pose": 360,
+    "nes_face_traits_expression": 1296,
+    "nes_accessory_held_pose": 1440,
+    "animal_variant_pose_style": 84
+  },
+  "total": 7716,
+  "boundary_touches": 0,
+  "boundary_examples": [],
+  "licensed_parts": 56,
+  "source_pngs_sha256_verified": 255,
+  "definitions_sha256_verified": 56,
+  "pose_atlases_sha256_verified": 85,
+  "seconds": 15.72,
+  "limitation": "Renderability, alpha, canvas bounds and recorded hashes only. Incompatible options are normalized/disabled, not claimed as native fits. Visual review covers the delivered sheets, not every Cartesian combination."
+}

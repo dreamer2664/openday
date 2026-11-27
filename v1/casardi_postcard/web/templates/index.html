@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="kiosk-csrf" content="{{ csrf }}">
+<title>Cartolina Open Day 2026/27 · Liceo Alfredo Casardi</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body class="mode-photo">
+
+<!-- ------------------------------------------------------------------ splash -->
+<section id="screen-welcome" class="screen active">
+  <div class="welcome-inner">
+    <p class="eyebrow">Open Day 2026/27 · Barletta</p>
+    <h1>Liceo Alfredo Casardi</h1>
+    <p class="lead">Crea la tua cartolina dell'Open Day: scegli un'ambientazione,
+      costruisci il personaggio e portala via sul telefono.</p>
+    <button class="btn btn-primary btn-xl" id="btn-start" disabled>Preparazione…</button>
+    <p id="boot-error" class="hint" hidden></p>
+    <button class="btn btn-outline" id="btn-retry" hidden>Riprova la connessione</button>
+    <p class="hint">Tempo consigliato: 3–6 minuti · Nessun dato personale richiesto</p>
+  </div>
+</section>
+
+<!-- ------------------------------------------------------------- main studio -->
+<section id="screen-studio" class="screen">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-text">LICEO ALFREDO CASARDI<small>Open Day 2026/27 · Barletta</small></span>
+    </div>
+    <nav class="steps" id="steps" aria-label="Passaggi">
+      <button class="step" data-step="style">1 · Stile</button>
+      <button class="step" data-step="scene">2 · Luogo</button>
+      <button class="step" data-step="name">3 · Nome</button>
+      <button class="step" data-step="character">4 · Personaggio</button>
+      <button class="step" data-step="companion">5 · Companion</button>
+      <button class="step" data-step="preview">6 · Anteprima</button>
+    </nav>
+    <div class="top-actions">
+      <button class="btn btn-ghost" id="btn-info" title="Informazioni e diagnostica">Info</button>
+      <button class="btn btn-ghost" id="btn-reset" title="Prepara il kiosk per il prossimo visitatore">Nuovo visitatore</button>
+    </div>
+  </header>
+
+  <div class="studio">
+    <!-- live preview column -->
+    <aside class="live" aria-label="Anteprima live">
+      <div class="live-stage" id="live-stage">
+        <div class="live-scene" id="live-scene"></div>
+        <img id="live-char" class="live-sprite" alt="Il tuo personaggio">
+        <img id="live-comp" class="live-sprite live-comp" alt="Il tuo companion" hidden>
+      </div>
+      <div class="live-caption" id="live-caption">Personaggio · vista di dettaglio</div>
+      <div class="idle-controls">
+        <label class="switch"><input type="checkbox" id="idle-toggle" checked>
+          <span>Battito delle palpebre</span></label>
+      </div>
+    </aside>
+
+    <!-- controls column -->
+    <div class="panel" id="panel">
+      <!-- STEP: style -->
+      <section class="pane" data-pane="style">
+        <h2>Scegli lo stile della cartolina</h2>
+        <p class="sub">Lo stile si sceglie una volta sola e vale per tutte le ambientazioni.</p>
+        <div class="cards two">
+          <button class="choice big" data-style="photo">
+            <img class="choice-art" src="/static/examples/style-photo.jpg" alt="Esempio di cartolina fotografica con il Liceo Casardi">
+            <h3>Fotografica</h3>
+            <p>La fotografia reale del luogo, con il personaggio integrato in scena
+              attraverso luce, ombre e colore.</p>
+          </button>
+          <button class="choice big" data-style="nes">
+            <img class="choice-art pixel" src="/static/examples/style-nes.png" alt="Esempio di cartolina pixel art con il Liceo Casardi">
+            <h3>Pixel art NES</h3>
+            <p>Il luogo e il personaggio ricostruiti in pixel art originale,
+              tutti nello stesso universo grafico.</p>
+          </button>
+        </div>
+      </section>
+
+      <!-- STEP: scene -->
+      <section class="pane" data-pane="scene">
+        <h2>Dove ti trovi?</h2>
+        <p class="sub">Sei ambientazioni legate al Liceo Classico e alla tradizione greco-romana.</p>
+        <div class="cards scenes" id="scene-grid"></div>
+      </section>
+
+      <!-- STEP: name -->
+      <section class="pane" data-pane="name">
+        <h2>Vuoi firmare la cartolina?</h2>
+        <p class="sub">Nome o nickname facoltativo. Comparirà sulla cartolina sotto la città.</p>
+        <label class="field">
+          <span>Nome o nickname</span>
+          <input id="name-input" type="text" maxlength="28" autocomplete="off"
+                 placeholder="es. Giulia" spellcheck="false">
+        </label>
+        <p class="hint">Puoi anche lasciare il campo vuoto. Non inserire cognome, contatti o altri dati personali.</p>
+      </section>
+
+      <!-- STEP: character -->
+      <section class="pane" data-pane="character">
+        <div class="creator">
+          <nav class="tabs" id="creator-tabs" aria-label="Categorie del personaggio">
+            <button data-tab="body">Corpo</button>
+            <button data-tab="face">Volto</button>
+            <button data-tab="hair">Capelli</button>
+            <button data-tab="expression">Espressione</button>
+            <button data-tab="top">Sopra</button>
+            <button data-tab="bottom">Sotto</button>
+            <button data-tab="shoes">Scarpe</button>
+            <button data-tab="extras">Accessori</button>
+            <button data-tab="pose">Posa</button>
+          </nav>
+          <div class="tab-panes" id="creator-panes"></div>
+        </div>
+      </section>
+
+      <!-- STEP: companion -->
+      <section class="pane" data-pane="companion">
+        <h2>Un companion per la cartolina?</h2>
+        <p class="sub">Un animale accanto al personaggio, oppure nessuno: scegli tu.</p>
+        <div class="cards animals" id="animal-grid"></div>
+        <div id="companion-options" class="companion-options" hidden></div>
+      </section>
+
+      <!-- STEP: preview & export -->
+      <section class="pane" data-pane="preview">
+        <h2>La tua cartolina</h2>
+        <p class="sub">Controlla l'anteprima, poi genera il PNG in alta risoluzione (3000 × 2000).</p>
+        <div class="preview-wrap">
+          <img id="final-preview" alt="Anteprima della cartolina">
+          <div class="preview-loading" id="preview-loading" hidden><span></span><p>Composizione in corso…</p></div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-ghost" id="btn-back-edit">Modifica</button>
+          <button class="btn btn-primary" id="btn-export" disabled>Genera PNG e QR code</button>
+        </div>
+        <div class="result" id="result" hidden>
+          <div class="result-qr">
+            <img id="qr-img" alt="QR code per scaricare la cartolina">
+          </div>
+          <div class="result-text">
+            <h3>Inquadra il QR con il telefono</h3>
+            <p>Collega il telefono alla <strong>stessa rete Wi-Fi</strong> di questo PC,
+              inquadra il codice e scarica la cartolina.</p>
+            <p class="url" id="result-url"></p>
+            <p class="expiry">Il collegamento scade tra <strong id="countdown">10:00</strong>.</p>
+            <div class="actions">
+              <a class="btn btn-ghost" id="btn-save-pc" download="cartolina-casardi.png">Salva sul PC</a>
+              <button class="btn btn-outline" id="btn-new">Ho finito · Nuovo visitatore</button>
+            </div>
+            <p class="hint">«Nuovo visitatore» elimina subito il file e disattiva il collegamento. Attendi di aver completato il download.</p>
+            <a class="credit-link" id="btn-save-credits">Scarica anche i crediti della fotografia</a>
+            <p class="hint" id="qr-fallback" hidden>Il QR non è disponibile: usa «Salva sul PC»
+              e stampa o invia il file manualmente.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <button class="btn btn-ghost back" id="btn-prev">← Indietro</button>
+    <span class="footer-note" id="footer-note"></span>
+    <button class="btn btn-primary next" id="btn-next">Avanti →</button>
+  </footer>
+</section>
+
+<!-- ----------------------------------------------------------------- info -->
+<div class="modal" id="modal-info" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="info-title" tabindex="-1">
+    <h2 id="info-title">Informazioni per l’operatore</h2>
+    <div id="diag" class="diag">Caricamento…</div>
+    <div class="network-check"><img id="network-qr" alt="QR di prova della rete"><p>Prova questo QR con un <strong>secondo dispositivo</strong> sulla stessa Wi-Fi. Una pagina verde conferma la connessione. Il test interno non può confermare l’assenza di isolamento dei client.</p></div>
+    <div class="network-check"><img id="phone-creator-qr" alt="QR per il creatore completo sul telefono"><div><h3>Crea direttamente sul telefono</h3><p>Questo QR apre il <strong>creatore completo</strong> con tutti gli stili, personaggi e companion, non una pagina di solo download. Il PNG viene composto sul telefono.</p><p><a id="phone-creator-link" href="/telefono" target="_blank" rel="noopener">Apri la versione telefono</a></p><p class="hint">Serve la stessa rete locale per aprirla. Una volta caricata, la creazione funziona senza altre richieste al server. Per il file autonomo usa Cartolina_Casardi_PC_e_Telefono.html.</p></div></div>
+    <details><summary>Fotografie, riferimenti e licenze</summary><div id="credits-list"></div><p class="hint">Crediti e licenze delle parti selezionate sono inclusi anche nei metadati del PNG e nella pagina di download. Il Casardi è documentato con una fotografia storica a risoluzione limitata, non una ripresa attuale. Le composizioni sono adattamenti CC BY-SA 4.0; le fotografie mantengono la loro licenza originale.</p></details>
+    <details><summary>Personaggi modulari LPC · Autori e licenze</summary><p>Sprite disegnati dagli artisti di Universal LPC, con equipaggiamento fantascientifico originale Casardi. LPC non è tutto CC0. Nessun asset di Cyberpunk 2077 o ARK. I crediti completi del sottoinsieme incluso sono riportati qui; il PNG attribuisce le sole parti selezionate.</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.6 monospace">{{ lpc_credits }}</pre></details>
+    <div class="actions">
+      <button class="btn btn-ghost" id="btn-diag-refresh">Aggiorna</button>
+      <button class="btn btn-primary" id="btn-info-close">Chiudi</button>
+    </div>
+  </div>
+</div>
+
+<div id="status" class="status" role="status" aria-live="polite" hidden><span></span><button aria-label="Chiudi messaggio">×</button></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

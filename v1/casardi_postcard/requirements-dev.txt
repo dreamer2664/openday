@@ -1,0 +1,7 @@
+# Only for automated QA. Not needed on the stand's PC.
+-r requirements.txt
+playwright==1.65.2
+zxing-cpp==3.2.0.post1
+
+# Build-time font subsetting only; not needed to open the HTML or run kiosk.
+fonttools==4.69.1

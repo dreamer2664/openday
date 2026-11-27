@@ -1,0 +1,136 @@
+{
+  "date": "2026-11-27",
+  "tests": [
+    {
+      "job": "A_casardi_foto_gatto",
+      "status": "PASS",
+      "seconds": 8.39,
+      "bytes": 2398792,
+      "memory": {
+        "rss_kib": 344136,
+        "peak_kib": 417400
+      }
+    },
+    {
+      "job": "B_casardi_nes_cane",
+      "status": "PASS",
+      "seconds": 0.35,
+      "bytes": 55576,
+      "memory": {
+        "rss_kib": 369216,
+        "peak_kib": 417400
+      }
+    },
+    {
+      "job": "C_pantheon_foto_volpe",
+      "status": "PASS",
+      "seconds": 4.02,
+      "bytes": 9158035,
+      "memory": {
+        "rss_kib": 512380,
+        "peak_kib": 553560
+      }
+    },
+    {
+      "job": "D_pantheon_nes_gufo",
+      "status": "PASS",
+      "seconds": 0.42,
+      "bytes": 63496,
+      "memory": {
+        "rss_kib": 523104,
+        "peak_kib": 553560
+      }
+    },
+    {
+      "job": "E_foro_foto_nessuno",
+      "status": "PASS",
+      "seconds": 4.22,
+      "bytes": 11168517,
+      "memory": {
+        "rss_kib": 600560,
+        "peak_kib": 663416
+      }
+    },
+    {
+      "job": "F_foro_nes_tartaruga",
+      "status": "PASS",
+      "seconds": 0.39,
+      "bytes": 54710,
+      "memory": {
+        "rss_kib": 601084,
+        "peak_kib": 663416
+      }
+    },
+    {
+      "job": "G_epidauro_foto_coniglio",
+      "status": "PASS",
+      "seconds": 5.32,
+      "bytes": 10293485,
+      "memory": {
+        "rss_kib": 666200,
+        "peak_kib": 764148
+      }
+    },
+    {
+      "job": "H_epidauro_nes_corvo",
+      "status": "PASS",
+      "seconds": 0.44,
+      "bytes": 67461,
+      "memory": {
+        "rss_kib": 666200,
+        "peak_kib": 764148
+      }
+    },
+    {
+      "job": "I_biblioteca_foto_drago",
+      "status": "PASS",
+      "seconds": 6.99,
+      "bytes": 6996910,
+      "memory": {
+        "rss_kib": 626624,
+        "peak_kib": 764148
+      }
+    },
+    {
+      "job": "J_biblioteca_nes_gatto",
+      "status": "PASS",
+      "seconds": 0.4,
+      "bytes": 64971,
+      "memory": {
+        "rss_kib": 629528,
+        "peak_kib": 764148
+      }
+    },
+    {
+      "job": "K_paestum_foto_cane",
+      "status": "PASS",
+      "seconds": 7.62,
+      "bytes": 8847054,
+      "memory": {
+        "rss_kib": 628420,
+        "peak_kib": 764148
+      }
+    },
+    {
+      "job": "L_paestum_nes_coniglio",
+      "status": "PASS",
+      "seconds": 0.35,
+      "bytes": 54997,
+      "memory": {
+        "rss_kib": 628684,
+        "peak_kib": 764148
+      }
+    }
+  ],
+  "total_seconds": 38.94,
+  "initial_memory": {
+    "rss_kib": 309852,
+    "peak_kib": 380836
+  },
+  "final_memory": {
+    "rss_kib": 628684,
+    "peak_kib": 764148
+  },
+  "limit_note": "Single local process, one composite at a time; not multi-client load certification.",
+  "cleanup": "PASS: no active cards after final reset"
+}
