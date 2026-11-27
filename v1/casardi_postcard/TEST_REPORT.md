@@ -1,128 +1,101 @@
-# Report di collaudo · revisione LPC / Windows / QR 3.0
+# Report di collaudo · 3.1 NES Retro
 ## Open Day 2026/27 · Liceo Alfredo Casardi · Barletta
 
-**Data: 27 novembre 2026.** Questo report riguarda i **nuovi personaggi LPC e il vero trasferimento del PNG**. I numeri della precedente consegna con arte rifiutata non vengono usati per dimostrare la revisione. Le evidenze leggibili da macchina sono in `docs/test-results/`.
+**Data: 27 novembre 2026.** Questo report riguarda i **sei nuovi scenari pixel e la UI ridisegnata**, con i personaggi LPC mantenuti dalla precedente revisione. Le prove sono state rieseguite sul runtime 3.1: i PASS della vecchia arte rifiutata non sono usati come approvazione dei nuovi sfondi. Evidenze in `docs/test-results/`.
 
-## 1 · Esito e ambiente effettivo
+## 1 · Cosa cambia e cosa rimane
 
-**Implementato:** creatore completo responsive, nuovo sistema modulare LPC con equipaggiamento fantascientifico, sei luoghi in due stili, PNG 3000 × 2000, HTML autonomo, creatore telefono completo, servizio Go LAN con QR del **file già finito**, launcher Windows a doppio clic e kiosk Python facoltativo.
+- **Sostituiti tutti e sei i vecchi fondali NES**, non soltanto le palette: nuove architetture, materiali, pavimentazioni, vegetazione, profondità e luce. PNG canonici **600 × 400, 64 colori per sfondo, opachi**, identici come sorgente fra Canvas e Pillow. Vecchi disegni procedurali rimossi, senza fallback silenzioso.
+- Sono **illustrazioni assistite da IA e rifinite su griglia/palette**, non disegni dichiarati interamente a mano, fotografie sintetiche spacciate per autentiche o rilievi storici. Provenienza/licenze/hash in `assets/nes/manifest.json`; dichiarazione in Info e nei metadati PNG. Nessuna esclusiva rivendicata sugli elementi generati automaticamente. L’app non esegue modelli né chiede rete o API per disegnare.
+- **Nuova UI NES-rétro:** titoli pixel, pannelli squadrati, inventario illustrato, colori blu notte/menta/oro, focus e selezione visibili, controlli touch e movimento ridotto. Anche il download Go e il kiosk Python facoltativo adottano la stessa famiglia visiva. La guida stampabile resta chiara su fondo bianco.
+- **Nuova targhetta NES compatta**, con soli istituto/evento/città/nome facoltativo. Appoggi del Foro NES ricalibrati; testo di Paestum spostato a sinistra. Corrette le miniature del benvenuto e le note di scena ora distinte fra foto e illustrazione.
+- **Preservati:** creator LPC modulare, quattro pose/sei espressioni, otto companion facoltativi, stile fotografico, export reale **3000 × 2000**, creatore telefono completo, HTML autonomo, launcher Windows e QR del **PNG già finito**. Nessun timer per creare.
 
-**Verificato qui:** Linux x86-64, Python 3.13, Go **1.27.4**, Chromium/Playwright, Node **20.20.2** per la sola parità degli sprite. Le API sono state provate via HTTP reale locale e il QR decodificato indipendentemente con zxing-cpp. La sandbox dispone di circa 2 GiB RAM: i collaudi pesanti sono stati eseguiti in serie, spegnendo il renderer Python quando non necessario.
+## 2 · Ambiente realmente usato e limiti
 
-**Non verificato qui:** esecuzione nativa dell’EXE su Windows, associazione browser/firewall/SmartScreen del PC, telefono fisico separato, Wi-Fi della scuola, Safari/Firefox, Web Share nativo e tastiera virtuale reale. Il binario è **cross-compilato e non firmato**. Nessuna emulazione viene presentata come test hardware.
+Linux x86-64, Python **3.13**, Go **1.27.4**, Chromium/Playwright; Node **20.20.2** per parità e sintassi. HTTP reale locale, QR decodificati indipendentemente con zxing-cpp, download confrontati byte per byte. Le suite browser e il renderer HD sono stati eseguiti **in serie**, nella sandbox con circa 2 GiB RAM. I nomi dei campioni sono fittizi.
 
-L’EXE è un vero PE x64 con sottosistema grafico, non un collegamento a un servizio esterno. L’HTML deve restare accanto; un errore esplicito gestisce il file mancante. Per l’uso normale non servono terminale, Go o Python.
+**Non eseguiti qui:** Windows nativo, doppio clic/associazione browser/firewall/SmartScreen del PC reale, telefono fisico Android/iOS, Wi-Fi scolastica, Safari/Firefox, tastiera virtuale reale, Web Share nativo. Il PE Windows x64 è **cross-compilato e non firmato**: la build non equivale a una prova su Windows. Touch e viewport emulati non diventano una certificazione hardware.
 
-## 2 · Risultati automatici della revisione
+Il servizio distribuito non abilita le eccezioni di collaudo `CASARDI_TRUST_PREVIEW` / `CASARDI_QA_LAN_IP`; non impostarle all’evento. I link loopback negli screenshot sono indirizzi di QA, non link raggiungibili dai telefoni del pubblico.
 
-| Suite / evidenza | Risultato effettivo | Ambito |
+## 3 · Prove automatiche della 3.1
+
+| Evidenza | Esito osservato | Ambito e limite |
 |---|---|---|
-| `unit-tests.txt` | **34 test PASS** | Validazione, personaggi, compositor, storage/API Python, HTML incorporato, font, route telefono e traduttore |
-| `go-service-tests.txt` | **26 test principali PASS, race detector** | Sicurezza e ciclo di vita del servizio; 24,735 s nell’ultima esecuzione |
-| `asset-audit.json` | **7716 casi PASS**, zero tocchi al bordo | Renderabilità, alpha finale binario e limiti della tela; non tutte le combinazioni artistiche |
-| Stesso audit LPC | **255 PNG, 56 definizioni, 85 atlanti SHA-256 verificati** | Provenienza dei bytes, non un’autorizzazione legale nuova |
-| `layout-audit.json` | **6048 casi**, zero fuori cornice e zero sovrapposizioni fra basi dei piedi | Geometria; non riconoscimento automatico di pavimento/prospettiva |
-| `browser-sprite-audit.json` | **938 confronti RGBA esatti, zero differenze** | 182 geometrie, 272 palette, 400 profili congiunti, 84 animali/stili |
-| `go-service-browser.json` | **15 verifiche PASS** | Chromium desktop + contesto touch indipendente, vero QR/PNG/reset/fallback |
-| `standalone-browser-tests.json` | **22 verifiche PASS + 12 export HD PASS** | File unico offline, intero percorso, telefono emulato, errori/reset, tutte le scene/stili |
-| `go-real-expiry.json` | **300 secondi reali, PASS a 301,47 s** | Nessuna accelerazione dell’orologio del server |
-| `go-launch-lifecycle.json` | **7 verifiche PASS** | Processo Go Linux con configurazione standard, porte/file mancanti e arresto dal pulsante browser |
-| `browser-tests.json` | **16 verifiche PASS** | UI distinta del kiosk Python, tutte le categorie, QR e secondo contesto browser |
-| `hd-http-regression.json` | **12 export HTTP HD PASS**, 38,94 s complessivi | Tutte le scene/stili del renderer Pillow; reset finale e zero cartoline attive |
-| `photo-integrity.txt` | **6 fonti fotografiche PASS** | SHA-256 locali, senza richieste Internet |
-| `windows-build.json` | **Build Windows x64 PASS** | Hash dell’EXE e dei 20 file Go/vendor di input; **non** esecuzione Windows |
+| `unit-tests.txt` | **45 test PASS**, 9,913 s | Validazione, creator, compositore/storage/API, HTML/font, nuovi sfondi e note per stile. Comprende hash e pixel canonici incorporati identici, font Go rinominato e sei export Python esattamente nearest-neighbor |
+| `go-service-tests.txt` | **26 test principali PASS**, race detector, 26,246 s | Sicurezza, RAM, token, scadenza, reset, isolamento, limiti PNG/HTTP. Nessuna gara rilevata nelle prove eseguite |
+| `nes-art-audit.json` | **6 PNG PASS** | Dimensioni/opacità, palette ≤64, metadati IA, hash e riferimenti fotografici verificati; non un giudizio automatico sulla bellezza |
+| `asset-audit.json` | **7716 casi PASS**, zero tocchi al bordo | Renderabilità/alpha/bordi del creator mantenuto. **255 PNG, 56 definizioni, 85 atlanti** LPC verificati con SHA-256; non tutte le combinazioni artistiche |
+| `layout-audit.json` | **6048 casi**, zero fuori cornice o sovrapposizioni fra basi dei piedi | Geometria di sei scene/due stili, corporature/pose/animali. Non riconosce da solo pavimento o ostacoli |
+| `browser-sprite-audit.json` | **938 confronti RGBA esatti**, zero differenze | 182 geometrie, 272 palette, 400 profili congiunti, 84 animali/stili. Non identità dell’intera cartolina Canvas/Pillow |
+| `nes-retro-ui.json` | **8 verifiche PASS** | Miniature 3:2, no overflow a 320/375/390/768/1366, sei note NES distinte, provenienza, movimento ridotto, file offline senza richieste/JS error |
+| `go-service-browser.json` | **15 verifiche PASS**, 18,30 s | Vero PNG/QR, contesto touch separato, bytes identici, revoca/reset/errori/fallback, creatore telefono offline |
+| `standalone-browser-tests.json` | **22 verifiche + 12 export HD PASS**, 51,77 s | Percorso completo `file://` offline, desktop/touch emulato, tutte le scene/stili, metadati, errori e reset. Sei NES uguali pixel per pixel al nativo ingrandito ×5 |
+| `go-real-expiry.json` | **300 secondi reali**, verifica a **301,47 s**, PASS | Landing, `/file`, `/image` → 410; copia RAM rimossa. Nessun salto dell’orologio del server |
+| `go-launch-lifecycle.json` | **7 verifiche PASS**, 2,74 s | Processo Go Linux, configurazione standard, nessuna eccezione preview, porte/file mancanti, secondo avvio e arresto dal vero pulsante browser |
+| `browser-tests.json` | **16 verifiche PASS**, 33,17 s | UI distinta Python aggiornata, categorie, sei scene/stili, QR, tastiera/dialogo, errori/reset e secondo contesto browser |
+| `hd-http-regression.json` | **12 export HTTP HD PASS**, 42,93 s | Tutte le combinazioni Pillow, PNG 3000 × 2000 e crediti, reset finale e zero cartoline attive. Non è un test multiutente |
+| `photo-integrity.txt` | **6 fonti PASS** | Hash dei file autentici locali, nessuna richiesta Internet |
+| `windows-build.json` | **Build PE Windows x64 PASS** | Hash dell’EXE e dei **21 file Go/vendor**; non esecuzione nativa Windows |
 
-Gli hash esatti dell’HTML provato sono confrontati fra build, suite standalone e suite servizio; quelli dei sorgenti sprite e del servizio sono registrati nei relativi report. I tempi variano con cache, memoria e hardware; non sono promesse di velocità sui telefoni.
+Le suite finali servizio, standalone, redesign, avvio e scadenza registrano **lo stesso hash dell’HTML definitivo** qui sotto. Gli hash Go della prova del timer/avvio coincidono con la build Windows. Non si presenta un test su una vecchia build come test della consegna attuale.
 
-### 26 test Go: cosa è stato effettivamente esercitato
+### Vero QR del file finito, non del creatore
 
-Token 192 bit non prevedibili, accettazione/validazione del PNG e bytes originali, scadenza al deadline esatto e su tutte e tre le route di download, reset con azzeramento del buffer, sostituzione alla nuova esportazione e nuova pagina principale, isolamento `/telefono`, nessuna chiave riservata per client remoti, chiave owner obbligatoria, client/host/origine non autorizzati respinti, generazioni obsolete e upload in corso non riesumabili dopo reset, dimensioni errate/PNG corrotti/limite 24 MiB, nessun directory browsing, GET non modifica la sessione, no cookie/no-store, pagina mobile e immagine inline, rete selezionata validata, assenza LAN senza URL inventato, pulitore senza letture HTTP, chiusura con buffer azzerato, QR con margine e HEAD senza corpo PNG. Il race detector non ha riportato gare nelle esecuzioni provate.
+Eseguito l’intero percorso nello studio HTTP, generato un PNG, decodificato il QR, aperto il suo URL `/download/…` in **un altro contesto Chromium touch**, scaricato e verificato il PNG identico a quello del PC, dimensioni 3000 × 2000 e crediti presenti. `/telefono` ha un **QR distinto**, serve il creatore completo e non rivela la chiave del PC né ne resetta la sessione.
 
-### 15 verifiche browser/servizio: trasferimento non simulato
+Provati: modifica personaggio → revoca immediata; nuova esportazione → token diverso; nuovo visitatore → nome/scelte/Blob e RAM azzerati, vecchio link HTTP 410; errore bridge iniettato → nessun QR fittizio e salvataggio locale ancora disponibile; rigenerazione QR dal medesimo PNG già pronto. Nessun cookie/progetto persistente nel creator Go/HTML, nessuna richiesta a host esterni osservata.
 
-1. Apertura reale HTTP dello studio con configurazione owner; la configurazione sensibile viene rimossa dal DOM.
-2. Creazione e generazione di un PNG NES; **QR finale decodificato indipendentemente**, URL `/download/…`, non `/telefono`.
-3. Download reale dal pulsante PC, 3000 × 2000, con crediti foto/LPC nei metadati.
-4. Altro contesto Chromium touch, pagina aperta dal link del QR e **download byte per byte identico** al file PC.
-5. QR del creatore telefono distinto; la sua apertura non revoca né rivela la sessione dello stand.
-6. Nessun cookie o progetto in localStorage/sessionStorage.
-7. Modifica personaggio → revoca immediata del vecchio file e rimozione dell’immagine QR.
-8. Nuova esportazione → token diverso.
-9. Clock del solo browser accelerato: QR nascosto al termine, PNG PC ancora disponibile. **Non** è la prova del clock backend.
-10. Richiesta di nuovo QR per il PNG già composto, senza ricomposizione.
-11. Nuovo visitatore → pagina pulita, nome/scelte/Blob cancellati, vecchio link HTTP 410.
-12. Pagina mobile italiana di collegamento non valido.
-13. Guasto bridge iniettato: messaggio italiano, nessun QR finto, PNG locale ancora salvabile.
-14. Creatore telefono caricato via HTTP e usato offline fino al PNG.
-15. Nessuna eccezione JavaScript o richiesta a host esterni nei contesti osservati.
+Il servizio conserva una sola copia PNG in **RAM**, non su disco; token casuale 192 bit, durata normale 600 s (configurabile 300–600), revoca su reset/nuova sessione/esportazione/arresto. Per la scadenza backend è stato atteso davvero il tempo di **300 s** su un’istanza separata della build finale: download iniziale identico, poi tre risposte 410 e trasferimento assente. La prova dell’orologio accelerato del solo browser è separata e non usata per dimostrare questa scadenza.
 
-### Scadenza backend realmente attesa
+I 26 test Go includono owner/key/client/host/origine, generazioni obsolete/upload annullato, PNG corrotti/dimensioni/limite 24 MiB, scadenza esatta su tutte le route, buffer azzerato, pulitore senza nuove letture HTTP, HEAD/no-store/no cookie e nessun directory browsing. Il test di avvio ordinario legge l’HTML adiacente da una directory corrente diversa e conferma l’arresto dal browser, socket chiusa e processo uscito con codice 0.
 
-Istanza separata configurata a **300 s**. Caricato un vero PNG 3000 × 2000, decodificato il QR e scaricato il file identico. Dopo **301,47 secondi di tempo reale**, landing, `/file` e `/image` restituivano **410**; stato del servizio senza trasferimento attivo. Il servizio non scrive PNG su disco: il buffer posseduto è azzerato alla scadenza. Il test unitario separato verifica anche il pulitore senza richieste.
+### Creatore telefono e file autonomo
 
-L’evidenza è legata allo stesso hash dei sorgenti Go della build Windows. Una successiva modifica solo cosmetica al contrasto CSS ha rigenerato l’HTML: non è stata usata per rivendicare un nuovo test del timer backend. Nessuna prova di dieci minuti su un telefono reale è implicata.
+Il solo HTML è stato copiato/aperto tramite **`file://` con rete disattivata**. Verificati i nove gruppi, quattro look, compatibilità capi/pose/oggetti, accenti nel nome, nome/animale omessi, Indietro, focus/Esc, download PNG/TXT, annullamento e recupero da guasto `toBlob` iniettato. Esportate tutte e dodici le scene/stili, PNG opachi 3000 × 2000, metadati UTF-8 e 300 dpi. Le sei composizioni NES sono esattamente il nativo 600 × 400 ingrandito nearest-neighbor ×5, anche con il renderer Python.
 
-### Avvio, porte e arresto reale
+`/telefono` è stato caricato via HTTP e poi portato offline: percorso completo ed export senza altre richieste al server. Il contesto è separato e touch **emulato**, non un telefono fisico. Nessun overflow alle larghezze indicate, orientamento landscape/reset provati. Quick Look/File iOS può non eseguire HTML locali; l’app non è una PWA, e non si promette il ricaricamento HTTP offline dopo aver chiuso la pagina. La condivisione nativa appare solo se supportata, ma non è stata azionata su hardware reale.
 
-Il test del processo Go è stato eseguito **senza `TRUST_PREVIEW`**, con l’HTML accanto al binario e directory corrente differente. Verificati host/chiave/origine errati respinti; assenza di LAN senza QR inventato; secondo avvio che riusa l’istanza; porta occupata da altro programma con errore italiano senza cancellare la cartolina attiva; HTML mancante con messaggio di ripristino; nessun accesso ai sorgenti. Il **pulsante Info → Arresta servizio locale è stato premuto nel browser**, confermato e la socket ha smesso di accettare connessioni. Il processo Linux è poi terminato con codice 0.
+## 4 · Revisione artistica effettiva
 
-Questo prova il servizio e il ciclo di vita, **non** `rundll32`/MessageBox/firewall reali di Windows. L’eccezione QA dell’iframe non è attiva nell’avvio ordinario distribuito.
+Osservati i sei nuovi PNG canonici, le sei composizioni NES complete Pillow, la tavola delle dodici esportazioni Canvas e le catture reali desktop/telefono. Si sono controllati riconoscibilità delle architetture, piano dei piedi, scala, companion, contrasto della targhetta e conservazione dei caratteri richiesti. **Non tutte le possibili combinazioni sono state viste a occhio e non si presume approvazione del committente.**
 
-## 3 · HTML autonomo e telefono
+Correzioni specifiche: rimosso il pannello con pseudo-iscrizione del Foro; avatar e companion spostati sul selciato centrale libero, lontano dall’olivo/pietre destre; nessun soggetto sui plutei della Malatestiana; targhetta di Paestum fuori dal timpano; note NES senza il vecchio testo sulla desaturazione fotografica; proporzioni 3:2 delle sei miniature corrette e ricontrollate su cinque larghezze. I colori Casardi sono interpretativi dal riferimento del **1936**, non documentazione attuale. I dettagli architettonici minori delle illustrazioni restano interpretazioni, non un rilievo filologico certificato.
 
-- File unico isolato con **`file://` e rete già disattivata**, senza dipendenze accanto; intero percorso e nove categorie, quattro preset, incompatibilità gestite, pose/oggetti e otto companion.
-- Due stili, sei luoghi, nome con accenti e sua omissione; ritorno senza perdita delle scelte, dialogo/focus/Esc, PNG e TXT realmente scaricati.
-- Reset annulla lavori e URL, navigazione bloccata durante export, guasto `toBlob` iniettato con recupero.
-- **12 PNG 3000 × 2000** aperti/verificati, alpha opaco, iTXt e 300 dpi. Sei NES esattamente uguali alla composizione nativa 600 × 400 ingrandita ×5 nearest-neighbor.
-- Nessun overflow orizzontale alle larghezze **320, 375, 390, 768, 1366**; percorso completo touch emulato 390 × 844, orientamento orizzontale e reset.
-- `/telefono` inizialmente via HTTP, poi offline: percorso fotografico Biblioteca/gufo e PNG, **zero richieste successive** all’HTML iniziale. Nessun owner/key o reset del PC.
-- Nessun errore JavaScript/CSP nei contesti della suite passata. Web Share è mostrato solo dove l’API lo consente: **nessuna finestra nativa di condivisione è stata provata**.
+Materiale consegnato: **8 PNG HD**, **12 JPG attribuiti**, **7 screenshot servizio**, **6 standalone**, **16 Python**, tavole `docs/qa/01…10`, guida A4 **di una pagina** rigenerata e controllata visivamente. Le tavole 08/09/10 mostrano rispettivamente i sei fondali canonici, l’interfaccia desktop completa e il benvenuto telefono emulato; non illustrazioni promozionali diverse dal runtime. Per contenere il pacchetto, le sedici schermate del kiosk Python sono ricompresse in JPEG qualità 76; nessun PNG HD o asset del creator è stato ridotto. Schede di appoggio/luce/scala in `docs/SCENE_COMPOSITION.md`.
 
-La parità RGBA degli sprite non significa identità dell’intera cartolina Canvas/Pillow: foto ottimizzate, interpolazione, font, rumore e ombre hanno implementazioni distinte. L’HTML non è una PWA; Quick Look/File iOS può non eseguirlo. L’alternativa HTTP completa è documentata, senza promettere comportamento non osservato.
+La parità degli sprite non implica identità dell’intero montaggio fra Canvas e Pillow: JPEG ottimizzati, rasterizzazione font, interpolazione, rumore e ombre hanno implementazioni distinte. Lo sfondo NES invece è un **unico file canonico per scena** ed è verificato byte per byte anche nell’HTML incorporato.
 
-## 4 · Revisione visiva e correzioni
+## 5 · Risorse e limiti residui
 
-Sono state osservate le nuove tavole, le dodici composizioni vere Pillow e le dodici Canvas, non solo schermate dell’interfaccia. I campioni usano nomi fittizi. Il set mantenuto include **8 PNG HD** (due foto e sei NES), **12 JPG attribuiti**, **7 screenshot servizio**, **6 standalone/touch**, **16 kiosk Python** e una guida operatore A4 di **una pagina**, renderizzata e controllata.
+Il giro HTTP Python finale di dodici export ha lasciato **610924 KiB RSS**, con picco processo **714004 KiB**. Rendering serializzato e cache limitate; non è certificazione per molti client contemporanei. Consigliati browser recente, una sola edizione attiva e **8 GB RAM** sul PC dello stand. I tempi della sandbox non sono promesse sui telefoni.
 
-Correzioni specifiche della revisione:
+Un primo tentativo di richiamare la build Go senza percorso esplicito è fallito perché Go non è nel PATH; ripetuto con il toolchain verificato e build/test completi PASS. Per la revisione PDF il modulo `fitz` non era installato: usato l’esistente `pypdfium2`, verificata una pagina e osservato il raster della guida. Nessuna dipendenza aggiuntiva è richiesta agli operatori. Questi errori degli strumenti di manutenzione non sono nascosti come prove riuscite dell’app.
 
-- Abbandonata la precedente base procedurale del personaggio; veri livelli artistici LPC e nuovi equipaggiamenti tecnici, con attribuzione per parte.
-- Cappotti senza variante femminile/teen non vengono forzati: controlli disabilitati e normalizzazione esplicita. Gonna dritta limitata ai corpi supportati.
-- Trasparenze intenzionali di lenti, capelli e cappuccio composte sul pixel nativo con alpha-over; niente buchi nella testa né sfocatura della sagoma.
-- Ancora centrale del corpo conservata dopo ritaglio/armonizzazione; piedi e ombre non si spostano con capelli o oggetti. Ombra del companion specchiato corretta.
-- Tartaruga ridotta a rapporto .10; cani e pose ampie separati in Biblioteca (foto x=1200, NES x=242). L’audit di layout, inizialmente fallito durante l’adattamento LPC, è ora a zero errori sui 6048 casi.
-- QR del PNG in evidenza **prima** delle azioni di salvataggio, testo/azioni leggibili anche nel tema NES; il creatore telefono rimane separato in Info.
-- Schede di composizione per appoggi, luce, grading, ombre e piccola occlusione d’erba a Paestum; cornice discreta e soli testi richiesti. La scala contenuta al Foro evita i blocchi lapidei.
-
-Tavole `docs/qa/01…07`, campioni `renders/` e schede `docs/SCENE_COMPOSITION.md`. La geometria automatica non dimostra da sola prospettiva o fusione artistica. **Non tutte le combinazioni possibili sono state osservate a occhio e non si presume approvazione del committente.**
-
-## 5 · Risorse, errori incontrati e limiti
-
-Il giro HTTP Python delle dodici cartoline è passato: memoria residente finale **628684 KiB**, massimo processo osservato **764148 KiB**. Un solo compositore alla volta, finitura a blocchi e cache limitata; non è certificazione multiutente/load test. Consigliati **8 GB RAM** sul PC, browser recente e una sola edizione attiva.
-
-Durante tentativi di collaudo con più contesti browser e il renderer Python HD già residente sono comparsi un timeout di navigazione e un blocco/timeout del comando di QA. Non vengono nascosti come PASS: le prove sono state ripetute **separatamente**, fermando gli altri processi pesanti. Le successive suite complete servizio (15), standalone (22 + 12 export) e kiosk (16) sono passate. Non è stata introdotta una scorciatoia che salta i controlli o riduce l’export. Evitare di eseguire più suite/server/render HD insieme nella sandbox limitata.
-
-| Aspetto | Stato reale / azione necessaria |
+| Aspetto | Stato / azione necessaria |
 |---|---|
-| Windows nativo, doppio clic, browser, firewall e SmartScreen | **NON ESEGUITO qui**; cross-build verificata, collaudo sul PC necessario |
-| Telefono fisico / Wi-Fi della scuola / VLAN e isolamento | **NON ESEGUITO**; procedura e checklist in GUIDA_OPERATORE.md |
-| IP sandbox | Loopback/link-local di QA, non indirizzi dello stand |
-| Safari/Firefox, iOS/Android reali, touch fisico e Web Share | **NON ESEGUITI** |
-| Fotografia Casardi | Autentica ma **1936, 707 × 491**, non attuale; dettaglio limitato dichiarato, cartella per sostituzione autorizzata |
-| Licenze e beni culturali | Fonti fotografiche/LPC documentate; nessuna liberatoria istituzionale o clearance di ogni diritto presunta |
-| Tutte le combinazioni artistiche | Audit limitati e tavole rappresentative, non revisione esaustiva |
-| Copie già scaricate / traffico in corso | Non richiamabili o cancellabili a distanza; il reset revoca solo accessi successivi |
-| Cancellazione forense della RAM / sistema | Non promessa; azzeramento del buffer posseduto verificato nei test |
-| Accesso fuori LAN / HTTPS | Non previsto; HTTP sulla LAN fidata, nessun hosting o port forwarding |
+| Windows nativo, doppio clic, browser, firewall, SmartScreen | **NON ESEGUITO qui**; prova sul PC dello stand e verifica IT indispensabili |
+| Telefono fisico / Wi-Fi scolastica / VLAN e isolamento | **NON ESEGUITO**; compilare la checklist GUIDA_OPERATORE.md |
+| Safari/Firefox, touch/tastiera fisici, Web Share | **NON ESEGUITI** |
+| Fotografia Casardi | Autentica ma **1936, 707 × 491**, non attuale. Nessuna autorizzazione istituzionale inventata; procedura di sostituzione inclusa |
+| Nuove illustrazioni | Assistenza IA dichiarata, no generazione runtime; nessuna garanzia filologica o esclusiva sui contenuti prodotti automaticamente |
+| Licenze LPC/foto e beni culturali | Obblighi per parte conservati; non una clearance universale o una liberatoria della scuola |
+| Copie già salvate / traffico già consegnato | Non cancellabili a distanza; reset revoca soltanto gli accessi successivi |
+| Cancellazione forense RAM / sistema | Non promessa; azzeramento del buffer posseduto controllato nei test |
+| Internet / HTTPS | Non previsti. HTTP sulla LAN fidata; niente hosting esterno o port forwarding |
 
-## 6 · Pacchetto e riproducibilità
+## 6 · Integrità della build finale
 
-Il builder `scripts/package.py` richiede tutte le prove sopra, controlla gli hash correnti di HTML/EXE/sorgenti, le attribuzioni dei campioni e l’assenza di cartoline temporanee. **La build candidata non è la consegna finale.** La build finale richiede anche `package-smoke.json` riferito allo stesso fingerprint di tutti i file runtime.
+- HTML: **12.734.874 byte**, SHA-256 `00dbd839a4749810b8ceefecf83d108a9cbcbf336d198d3ff58dd7fe36e9d3f7`.
+- EXE Windows x64: **10.467.840 byte**, SHA-256 `f49fcf7d0d69b01e0d52f0bceb6893722c7598cbc7bff28504b1ea3a7b87d465`.
+- Sorgenti Go/vendor: **21 file**, SHA-256 aggregato `a2d19278837a05e253a2a7dd35874720651c21b5f262b754fe11d330ee994122`.
+- Manifest dei sei sfondi: SHA-256 `61e3da814da0865ee343c9ca7c721d98c1e5b74fd208190e02433524c86ed008`.
 
-La prova della copia estratta è riproducibile nell’intestazione di `scripts/package_smoke.py`: ZIP estratto fuori dai sorgenti, servizio nativo Linux ricompilato dai suoi sorgenti vendorizzati, HTML letto dalla sua cartella, file unico copiato da solo e aperto offline. Entrambi gli stili sono composti a 3000 × 2000, caricati su quel servizio, scaricati via URL QR decodificato e confrontati byte per byte; reset, `/telefono` senza chiave e nessun directory browsing. L’EXE Windows è confrontato con il file sorgente, **non eseguito** in questa prova.
+`scripts/package.py` verifica hash correnti, suite passate, sintassi, dimensioni/crediti dei campioni e assenza di PNG visitatori. Per la **build finale**, oltre alla candidata, richiede una prova da ZIP estratto con fingerprint identico di tutti i file runtime. La procedura riproducibile è nell’intestazione di `scripts/package_smoke.py`: estrazione separata, servizio nativo Linux ricompilato dai sorgenti vendorizzati estratti, HTML letto accanto e copia del solo HTML aperta offline. Il PE Windows viene confrontato, non eseguito. Esito e fingerprint effettivi sono registrati in `docs/test-results/package-smoke.json`.
 
-**Estrazione indipendente eseguita e PASS:** **502 file runtime identici**, fingerprint aggregato `4d833f4e035aaceccf58ef41b5756ea938852af319dfe622dfb7df01cc9a7be6`. Dal solo HTML estratto, a rete disattivata, creati i PNG fotografico e NES; entrambi trasferiti dal servizio ricompilato della copia estratta tramite QR decodificato, bytes identici, poi revocati con reset. Verificati anche creatore telefono senza chiave, stato RAM svuotato e nessun accesso ai sorgenti. Evidenza: **`package-smoke.json`**. Non è un test su un sistema operativo appena installato.
+**Estrazione indipendente eseguita e PASS:** **506 file runtime identici**, fingerprint aggregato `0ccf8d9b2a6bfade3cad7e39d102223ee827ffb0a2cf666e8ada3188be6458a0`. Dal solo HTML estratto, aperto offline e separato dal progetto, creati PNG fotografico e NES a 3000 × 2000; trasferiti con il servizio ricompilato della copia estratta tramite QR decodificato, download byte per byte identici. Verificati anche reset/RAM vuota, revoca del vecchio link, `/telefono` senza chiave e nessun directory browsing. Il servizio di QA è stato poi arrestato. Questa prova non è un’installazione su Windows pulito o un telefono fisico.
 
-**Pacchetto finale:** `Cartolina_Casardi_Windows_LPC_QR_2026-27.zip`. La verifica ZIP controlla CRC e tutti gli SHA-256 interni, emettendo `MANIFEST.sha256` e il `.zip.sha256` esterno; preflight completo in **`package-audit.json`**. Esclusi cache, toolchain, binari Linux di QA, virtualenv e ogni file visitatore. Le sole modifiche documentali aggiunte dopo l’estrazione non cambiano i 502 file runtime; sono comunque comprese nel manifest e nella verifica CRC/hash dell’archivio finale.
+Il pacchetto `Cartolina_Casardi_Windows_LPC_QR_2026-27.zip` contiene sorgenti, EXE/HTML pronti, asset/licenze, guide, campioni e prove; esclude cache, toolchain, binari Linux di QA, virtualenv e cartoline visitatori. CRC ZIP e SHA-256 di tutti i membri sono controllati. `MANIFEST.sha256`, `.zip.sha256` e `docs/test-results/package-audit.json` permettono il controllo della distribuzione finale. Le modifiche ai soli documenti non cambiano il fingerprint runtime, ma restano coperte dal manifest completo.
 
-**Prima di aprire al pubblico:** compilare la checklist reale, verificare Windows e IT, scaricare con un telefono separato entrambe le modalità e controllare reset/vecchio link. Nessun collaudo della sandbox elimina questa dipendenza esterna.
+**Prima dell’apertura al pubblico:** prova con Windows, IT e un vero telefono separato, nei due stili, sulla rete dello stand; controllare anche il vecchio link dopo reset. Nessuna prova della sandbox elimina questa dipendenza esterna.

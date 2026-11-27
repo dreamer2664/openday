@@ -127,7 +127,20 @@ globalThis.CasardiRender=(()=>{
   const edge=(m,t,c)=>{x.fillStyle=c;x.fillRect(m,m,w-2*m,t);x.fillRect(m,h-m-t,w-2*m,t);x.fillRect(m,m,t,h-2*m);x.fillRect(w-m-t,m,t,h-2*m);};
   x.save();edge(m1,w1,nes?'rgba(16,14,20,.824)':'rgba(246,240,226,.431)');edge(m2,w2,nes?'rgba(16,14,20,.47)':'rgba(246,240,226,.216)');x.restore();
  }
+ function nesTexts(card,job,zone){
+  const layer=canvas(card.width,card.height),x=context(layer);
+  const rows=[['LICEO ALFREDO CASARDI',8,'#f5f0d8',12],['OPEN DAY 2026/27',7,'#cbd7e4',11],['BARLETTA',6,'#79dcc2',10]];
+  if(cleanName(job.name))rows.push([cleanName(job.name),8,'#f1c675',12]);
+  for(const r of rows){x.font=r[1]+'px "Pixel"';while(r[1]>6&&x.measureText(r[0]).width>202){r[1]--;x.font=r[1]+'px "Pixel"';}}
+  const w=Math.ceil(Math.max(...rows.map(r=>{x.font=r[1]+'px "Pixel"';return x.measureText(r[0]).width;})))+18,h=rows.reduce((s,r)=>s+r[3],0)+12;
+  const bx=zone==='top-right'?card.width-18-w:18,by=18;
+  x.fillStyle='#090e1d';x.fillRect(bx+4,by+4,w,h);x.fillStyle='#45516c';x.fillRect(bx+1,by,w-2,h);x.fillRect(bx,by+1,w,h-2);x.fillStyle='#151b32';x.fillRect(bx+2,by+2,w-4,h-4);
+  x.fillStyle='#f1c675';for(const xx of [bx+2,bx+w-8])for(const yy of [by+2,by+h-3])x.fillRect(xx,yy,6,1);
+  let yy=by+6;for(const r of rows){x.font=r[1]+'px "Pixel"';x.fillStyle=r[2];x.textBaseline='top';x.fillText(r[0],bx+9,yy);yy+=r[3];}
+  const im=x.getImageData(0,0,layer.width,layer.height);for(let i=3;i<im.data.length;i+=4)im.data[i]=im.data[i]>=112?255:0;x.putImageData(im,0,0);context(card).drawImage(layer,0,0);
+ }
  function texts(card,job,zone){
+  if(job.mode==='nes'){nesTexts(card,job,zone);return;}
   const w=card.width,h=card.height,x=context(card),scale=w/3000,px=v=>round(v*scale),nes=job.mode==='nes';
   const layer=nes?canvas(w,h):card,tx=nes?context(layer):x;
   const dark=nes&&['biblioteca','foro'].includes(job.scene),family=nes?'Pixel':'Cinzel';
@@ -176,7 +189,7 @@ globalThis.CasardiRender=(()=>{
  }
  function credit(job){
   const m=PORTABLE.metadata[job.scene],nes=job.mode==='nes',author=m.artist==='Unknown authorUnknown author'?'Autore non identificato (archivio storico)':m.artist;
-  const changes=nes?'Ricostruzione pixel art originale basata su riferimenti architettonici; aggiunta di sprite e testi.':'Fonte incorporata JPEG ottimizzata (lato massimo 3000 px, qualità 86); ritaglio, finitura cromatica, ombre; aggiunta di sprite e testi. Composizione locale Canvas.';
+  const changes=nes?'Nuova illustrazione pixel art assistita da IA, ricostruita dal riferimento architettonico autorizzato; rifinitura a 600 × 400 e palette di 64 colori; aggiunta di sprite e testi. Nessuna generazione a runtime.':'Fonte incorporata JPEG ottimizzata (lato massimo 3000 px, qualità 86); ritaglio, finitura cromatica, ombre; aggiunta di sprite e testi. Composizione locale Canvas.';
   const text='CARTOLINA OPEN DAY 2026/27 — LICEO ALFREDO CASARDI — BARLETTA\n\n'+(nes?'Ricostruzione pixel art':'Fotografia')+': '+m.title.slice(5)+'\nAutore della fotografia di riferimento: '+author+'\nFonte: '+m.page+'\nOriginale: '+m.url+'\nLicenza della fotografia di riferimento: '+m.lic+'\n'+m.licurl+'\nLicenza della composizione derivata: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/\nModifiche: '+changes+'\n'+S.credit(job.character)+'\nCompanion originali Casardi: CC0 1.0. Nessun endorsement dei fotografi o degli autori LPC. Le parti originali mantengono le loro licenze.\nFont: Cinzel, EB Garamond, Press Start 2P — SIL Open Font License 1.1; sottoinsiemi Unicode U+0000–U+052F in WOFF; il derivato di Press Start 2P è rinominato Casardi Pixel.\nConserva questi crediti quando ridistribuisci il file.\n';
   return{author,text,source:m.page,copyright:'CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/'};
  }
@@ -184,7 +197,7 @@ globalThis.CasardiRender=(()=>{
  function chunk(type,body){const out=new Uint8Array(body.length+12),dv=new DataView(out.buffer),enc=new TextEncoder();dv.setUint32(0,body.length);out.set(enc.encode(type),4);out.set(body,8);let crc=0xffffffff;for(let i=4;i<body.length+8;i++)crc=crcTable[(crc^out[i])&255]^(crc>>>8);dv.setUint32(body.length+8,(crc^0xffffffff)>>>0);return out;}
  async function pngBlob(c,job,signal){
   check(signal);const b=await new Promise((resolve,reject)=>c.toBlob(blob=>blob?resolve(blob):reject(new Error('Il browser non ha memoria sufficiente per il PNG. Chiudi altre schede e riprova.')),'image/png'));check(signal);
-  const raw=new Uint8Array(await b.arrayBuffer()),view=new DataView(raw.buffer),enc=new TextEncoder(),cr=credit(job),fields={Title:'LICEO ALFREDO CASARDI — OPEN DAY 2026/27 — BARLETTA',Author:cr.author,Source:cr.source,Copyright:cr.copyright,Description:cr.text,Software:'Casardi Postcard Studio 3.0 · Canvas locale'};
+  const raw=new Uint8Array(await b.arrayBuffer()),view=new DataView(raw.buffer),enc=new TextEncoder(),cr=credit(job),fields={Title:'LICEO ALFREDO CASARDI — OPEN DAY 2026/27 — BARLETTA',Author:cr.author,Source:cr.source,Copyright:cr.copyright,Description:cr.text,Software:'Casardi Postcard Studio 3.1 NES Retro · Canvas locale'};
   const parts=[raw.subarray(0,33)];
   for(const [key,text]of Object.entries(fields))parts.push(chunk('iTXt',enc.encode(key+'\0\0\0\0\0'+text)));
   const dpi=new Uint8Array(9),dv=new DataView(dpi.buffer);dv.setUint32(0,11811);dv.setUint32(4,11811);dpi[8]=1;parts.push(chunk('pHYs',dpi));

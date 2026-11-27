@@ -1,7 +1,7 @@
-# Guida operatore dello stand · Windows
+# Guida operatore dello stand · Windows · NES Retro 3.1
 ## Liceo Alfredo Casardi · Open Day 2026/27 · Barletta
 
-Questa guida riguarda **AVVIA_CARTOLINA_WINDOWS.exe + HTML**, l’edizione consigliata senza terminale. Le istruzioni dell’edizione Python, distinta e facoltativa, sono nel README. Non confondere il QR del creatore con il QR del PNG finito.
+Questa guida riguarda **AVVIA_CARTOLINA_WINDOWS.exe + HTML**, l’edizione consigliata senza terminale. Le istruzioni dell’edizione Python, distinta e facoltativa, sono nel README. Non confondere il QR del creatore con il QR del PNG finito. La 3.1 cambia il tema e tutti e sei gli scenari pixel; personaggi, export e percorso restano gli stessi. Gli scenari sono interpretazioni illustrate assistite da IA: la colorazione Casardi parte dalla foto del 1936, non è una fotografia attuale.
 
 ## Prima dell’evento: preparazione
 

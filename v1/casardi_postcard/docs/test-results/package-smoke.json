@@ -2,10 +2,10 @@
   "result": "PASS",
   "date": "2026-11-27",
   "procedure": "ZIP extracted outside source tree; its own Go native service built from extracted vendored sources; standalone HTML copied alone and opened file:// with browser network disabled.",
-  "runtime_files_equal": 502,
-  "runtime_sha256": "4d833f4e035aaceccf58ef41b5756ea938852af319dfe622dfb7df01cc9a7be6",
-  "windows_exe_sha256": "fa776b51cf299f2858c24d3cec2b6987609332d643a2aba16d654157e1ff4f90",
-  "standalone_html_sha256": "00fd5456424fc979423d98283d509be4e0ca753ac54e96ca2e9c8b9cd0dc9081",
+  "runtime_files_equal": 506,
+  "runtime_sha256": "0ccf8d9b2a6bfade3cad7e39d102223ee827ffb0a2cf666e8ada3188be6458a0",
+  "windows_exe_sha256": "f49fcf7d0d69b01e0d52f0bceb6893722c7598cbc7bff28504b1ea3a7b87d465",
+  "standalone_html_sha256": "00dbd839a4749810b8ceefecf83d108a9cbcbf336d198d3ff58dd7fe36e9d3f7",
   "standalone_file_only_offline": [
     {
       "mode": "photo",
@@ -14,7 +14,7 @@
         3000,
         2000
       ],
-      "sha256": "144df2521e4c79214a3eb82a1aaa4a8597ebf8ebe596d19470119e05d35c4e0e"
+      "sha256": "54cbf65971bf48a0c61c8e450217a1f507516f521743ac6c7036423636930d93"
     },
     {
       "mode": "nes",
@@ -23,7 +23,7 @@
         3000,
         2000
       ],
-      "sha256": "57b9a3f67ccad9ff907b9847a1ada432bdc6e60a465fd5b2d401d4d6e6682fc6"
+      "sha256": "ad4d4fee85ed889c5d0db96c0b187f10d9dfae8b794059c25d48da89a66ad87a"
     }
   ],
   "phone_creator_http": "PASS",
@@ -35,10 +35,10 @@
         3000,
         2000
       ],
-      "png_sha256": "144df2521e4c79214a3eb82a1aaa4a8597ebf8ebe596d19470119e05d35c4e0e",
+      "png_sha256": "54cbf65971bf48a0c61c8e450217a1f507516f521743ac6c7036423636930d93",
       "qr_independently_decoded": true,
       "download_identical_bytes": true,
-      "seconds": 0.16
+      "seconds": 0.15
     },
     {
       "mode": "nes",
@@ -47,7 +47,7 @@
         3000,
         2000
       ],
-      "png_sha256": "57b9a3f67ccad9ff907b9847a1ada432bdc6e60a465fd5b2d401d4d6e6682fc6",
+      "png_sha256": "ad4d4fee85ed889c5d0db96c0b187f10d9dfae8b794059c25d48da89a66ad87a",
       "qr_independently_decoded": true,
       "download_identical_bytes": true,
       "seconds": 0.05

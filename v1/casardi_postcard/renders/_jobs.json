@@ -41,7 +41,7 @@
   },
   "file": "renders/A_casardi_foto_gatto.png",
   "jpg": "renders/A_casardi_foto_gatto.jpg",
-  "seconds": 8.26,
+  "seconds": 8.14,
   "size": [
    3000,
    2000
@@ -89,7 +89,7 @@
   },
   "file": "renders/B_casardi_nes_cane.png",
   "jpg": "renders/B_casardi_nes_cane.jpg",
-  "seconds": 0.28,
+  "seconds": 1.13,
   "size": [
    3000,
    2000
@@ -137,7 +137,7 @@
   },
   "file": null,
   "jpg": "renders/C_pantheon_foto_volpe.jpg",
-  "seconds": 1.46,
+  "seconds": 1.54,
   "size": [
    3000,
    2000
@@ -185,7 +185,7 @@
   },
   "file": "renders/D_pantheon_nes_gufo.png",
   "jpg": "renders/D_pantheon_nes_gufo.jpg",
-  "seconds": 0.31,
+  "seconds": 0.92,
   "size": [
    3000,
    2000
@@ -229,7 +229,7 @@
   },
   "file": "renders/E_foro_foto_nessuno.png",
   "jpg": "renders/E_foro_foto_nessuno.jpg",
-  "seconds": 4.18,
+  "seconds": 4.15,
   "size": [
    3000,
    2000
@@ -277,7 +277,7 @@
   },
   "file": "renders/F_foro_nes_tartaruga.png",
   "jpg": "renders/F_foro_nes_tartaruga.jpg",
-  "seconds": 0.27,
+  "seconds": 1.28,
   "size": [
    3000,
    2000
@@ -325,7 +325,7 @@
   },
   "file": null,
   "jpg": "renders/G_epidauro_foto_coniglio.jpg",
-  "seconds": 1.58,
+  "seconds": 1.54,
   "size": [
    3000,
    2000
@@ -373,7 +373,7 @@
   },
   "file": "renders/H_epidauro_nes_corvo.png",
   "jpg": "renders/H_epidauro_nes_corvo.jpg",
-  "seconds": 0.31,
+  "seconds": 0.86,
   "size": [
    3000,
    2000
@@ -421,7 +421,7 @@
   },
   "file": null,
   "jpg": "renders/I_biblioteca_foto_drago.jpg",
-  "seconds": 1.47,
+  "seconds": 1.5,
   "size": [
    3000,
    2000
@@ -469,7 +469,7 @@
   },
   "file": "renders/J_biblioteca_nes_gatto.png",
   "jpg": "renders/J_biblioteca_nes_gatto.jpg",
-  "seconds": 0.3,
+  "seconds": 0.83,
   "size": [
    3000,
    2000
@@ -517,7 +517,7 @@
   },
   "file": null,
   "jpg": "renders/K_paestum_foto_cane.jpg",
-  "seconds": 1.64,
+  "seconds": 1.46,
   "size": [
    3000,
    2000
@@ -565,7 +565,7 @@
   },
   "file": "renders/L_paestum_nes_coniglio.png",
   "jpg": "renders/L_paestum_nes_coniglio.jpg",
-  "seconds": 0.26,
+  "seconds": 0.91,
   "size": [
    3000,
    2000

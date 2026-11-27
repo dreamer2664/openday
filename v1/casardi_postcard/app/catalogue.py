@@ -6,6 +6,7 @@ from .animals import ANIMALS
 from .palette import (SKIN_TONES, HAIR_COLORS, FABRIC_COLORS, DENIM_COLORS,
                       LEATHER_COLORS, METAL_COLORS, EYE_COLORS, table_for_ui)
 from .scenes import PHOTO_SCENES
+from .nes_art import art_manifest
 
 CHOICES = {
     'build': list(ch.BUILDS), 'face': ch.FACES, 'eye_shape': ch.EYE_SHAPES,
@@ -93,7 +94,8 @@ def normalise_job(raw):
 def public_catalogue(ttl, revision):
     scenes = []
     for sid, cfg in PHOTO_SCENES.items():
-        scenes.append(dict(id=sid, label=cfg['label'], place=cfg['place'], note=cfg['note'],
+        nes_note = ('Interpretazione a colori dalla fotografia storica del 1936. ' if sid=='casardi' else '') + art_manifest()['scenes'][sid]['landmarks']
+        scenes.append(dict(id=sid, label=cfg['label'], place=cfg['place'], note=cfg['note'], nes_note=nes_note,
                            thumbs={m: f'/thumbs/{sid}-{m}.{("png" if m=="nes" else "jpg")}?v={revision}'
                                    for m in ('photo','nes')}))
     animals = [dict(id=k, label=v['label'],

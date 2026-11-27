@@ -1,4 +1,4 @@
-# Fonti e licenze · revisione LPC 3.0
+# Fonti e licenze · revisione 3.1 NES Retro
 ## Open Day 2026/27 · Liceo Alfredo Casardi · Barletta
 
 Ricerca e verifica delle fonti: **27 novembre 2026**. L’inventario riguarda gli asset effettivamente distribuiti. Le foto hanno pagine sorgenti con dichiarazioni di licenza riutilizzabile; non provengono da Google Immagini, social network o immagini con watermark rimosso. **La nuova base dei personaggi non è opera originale Casardi e non è tutta CC0.**
@@ -11,7 +11,7 @@ Ricerca e verifica delle fonti: **27 novembre 2026**. L’inventario riguarda gl
 | Personaggi modulari Universal LPC | Autori e licenza per record/parte: OGA-BY 3.0, CC BY-SA 3.0 oppure CC0; non una licenza globale CC0 |
 | Equipaggiamento fantascientifico e companion originali | CC0 1.0, nella misura dei diritti rinunciabili; le basi LPC sottostanti mantengono le proprie licenze |
 | Sei fotografie | Licenze specifiche CC0 / CC BY-SA 3.0 / 4.0 elencate sotto |
-| Sfondi NES originali ricostruiti dai riferimenti | Distribuiti prudenzialmente come adattamenti **CC BY-SA 4.0**, con fonte del riferimento |
+| Sei nuovi sfondi NES, illustrazioni assistite da IA e rifinite su griglia pixel | Distribuiti prudenzialmente come adattamenti **CC BY-SA 4.0**, con fonte del riferimento; nessuna esclusiva sugli elementi generati automaticamente |
 | Cartoline composte PNG / JPG | Adattamenti **CC BY-SA 4.0**, senza cancellare gli obblighi dei materiali originali |
 | Font | SIL Open Font License 1.1; l’immagine che usa il font non diventa OFL |
 | QR Go vendorizzato | MIT, avviso incluso |
@@ -197,18 +197,26 @@ Il creatore offre anche **TXT dei crediti**. Il servizio Go consegna il PNG orig
 
 Tutti SIL OFL 1.1. I TTF originali in `assets/fonts/` e `web/static/fonts/` non sono modificati. Nessun font proviene da ROM Nintendo, nessuna richiesta runtime a Google Fonts.
 
-Nell’HTML sono incorporati sottoinsiemi **WOFF1 U+0000–U+052F**, con copyright/licenza conservati. Il derivato di Press Start 2P è rinominato internamente **Casardi Pixel** per rispettare il Reserved Font Name. I testi OFL di Cinzel / EB Garamond inclusi non dichiarano un nome riservato. FontTools è solo uno strumento di build, non runtime nell’HTML.
+Nell’HTML sono incorporati sottoinsiemi **WOFF1 U+0000–U+052F**, con copyright/licenza conservati. Il derivato di Press Start 2P è rinominato internamente **Casardi Pixel** per rispettare il Reserved Font Name. Lo stesso sottoinsieme rinominato è incorporato nella pagina Go di download (`service/phone_font.go`, generato da `scripts/build_phone_font.py`): la pagina non richiede font su Internet. I testi OFL di Cinzel / EB Garamond inclusi non dichiarano un nome riservato. FontTools è solo uno strumento di build, non runtime nell’HTML.
 
 ## 6. Riferimenti architettonici
 
 - **Casardi:** fotografia d’archivio, [voce storica](https://it.wikipedia.org/wiki/Liceo_classico_Alfredo_Casardi) e confronto con il [sito istituzionale](https://www.liceocasardi.edu.it/). Nessuna immagine ufficiale non autorizzata è copiata. La ricostruzione conserva l’asimmetria razionalista della facciata, non una scuola generica inventata.
-- **Pantheon:** pavimento, edicole, cupola e oculo dal preciso riferimento fotografico, non un tempio esterno.
+- **Pantheon:** parete curva interna, colonne corinzie, edicole, pavimento a intarsi e fascia della cupola dal riferimento fotografico, non un tempio esterno. L’oculo non rientra nell’inquadratura NES consegnata.
 - **Foro / Arco di Tito:** un fornice e attico, Via Sacra e pini; non il Tempio di Saturno.
 - **Epidauro:** vista dall’orchestra con cavea radiale, non una veduta dall’alto spacciata per questa foto.
 - **Malatestiana:** Aula del Nuti, navate, volte e plutei; ambiente umanistico reale, non una biblioteca scolastica di fantasia.
 - **Paestum:** secondo tempio di Hera / detto di Nettuno, colonnato e timpano della struttura fotografata.
 
-Le sei ricostruzioni sono disegni distinti in `app/scenes.py`, non filtri pixelate né rilievi scientifici. Le pagine fotografiche sopra sono i riferimenti visivi puntuali. Nessun servizio di generazione immagini esterno è stato usato per fingere fotografie autentiche.
+### Revisione degli scenari 3.1: provenienza dichiarata
+
+I sei vecchi fondali schematici procedurali sono stati **sostituiti**, non soltanto ricolorati. I nuovi file canonici sono `assets/nes/{casardi,pantheon,foro,epidauro,biblioteca,paestum}.png`: **600 × 400 pixel nativi, 64 colori per sfondo, opachi**. Browser e Python leggono gli stessi identici PNG. `app/scenes.py` contiene soltanto i layout e l’adattatore; non è più la sorgente dei disegni.
+
+La lavorazione ha usato **generazione di immagini assistita da IA a partire dai sei riferimenti fotografici documentati**, direzione artistica comune, ritaglio 3:2, riduzione su griglia 600 × 400, palette senza diffusione del dithering e rifinitura locale. Non sono opere interamente disegnate a mano, né fotografie semplicemente ingrandite/quantizzate, né asset presi da giochi commerciali. Il pannello dell’attico dell’Arco di Tito è stato ridipinto per eliminare la pseudo-iscrizione generata. Rilievi, texture e piccoli dettagli sono interpretazioni illustrative, **non una restituzione scientifica o filologicamente certificata**. In particolare la colorazione Casardi interpreta una fotografia del 1936: non documenta i colori attuali della scuola.
+
+`assets/nes/manifest.json` conserva hash dei PNG consegnati, hash/dimensioni dei master di lavoro e del riferimento, licenze, elementi architettonici e lavorazioni. I master di lavoro ad alta risoluzione non sono necessari né inclusi; i **PNG nativi consegnati sono le sorgenti modificabili** dell’arte usata nell’app. L’importatore `scripts/import_nes_art.py --masters CARTELLA` documenta la rifinitura se si dispone dei master; l’app non lo esegue. Nessun modello, account, servizio di generazione, API a pagamento o richiesta Internet è necessario **a runtime**. Le fotografie autentiche rimangono separate e non sono sostituite da immagini sintetiche.
+
+Si mantengono prudenzialmente attribuzioni e ShareAlike dei riferimenti per le illustrazioni e per i montaggi. **Non si rivendica un diritto esclusivo sugli elementi prodotti automaticamente**, né si garantisce che ogni elemento sia tutelabile o esente da ogni diritto di terzi. Gli interventi e gli adattamenti sono offerti sotto CC BY-SA 4.0 nella misura dei diritti disponibili. La dichiarazione di assistenza IA è presente anche in Info, nei metadati dei PNG e nel manifest. “NES” indica un’ispirazione estetica: non sono rispettati i limiti hardware originali di palette, sprite o tile.
 
 ## 7. Software di terze parti
 
@@ -238,4 +246,4 @@ Solo sviluppo/QA: **Playwright 1.65.2**, **zxing-cpp 3.2.0.post1** (Apache-2.0),
 
 Per l’HTML, le foto sono ulteriormente ottimizzate in **JPEG qualità 86 / 4:2:0, lato massimo 3000 px**. La foto Casardi non è ingrandita prima dell’incorporamento. Dimensioni e hash delle copie incorporate sono in `docs/test-results/standalone-build.json`. I file sotto `assets/photos/` conservano le lavorazioni/hash elencati nella sezione 2.
 
-Dopo una sostituzione autorizzata aggiornare fonte, permessi/licenza, manifest, coordinate e fonti del PNG; rigenerare esempi, HTML e test. Non sostituire immagini mentre lo stand è aperto. Il controllo SHA-256 garantisce corrispondenza dei bytes, **non** certifica da solo i diritti. Nessuna pubblicazione o push GitHub è stato effettuato.
+Dopo una sostituzione autorizzata aggiornare fonte, permessi/licenza, manifest, coordinate e fonti del PNG; rigenerare esempi, HTML e test. Gli sfondi NES canonici non vengono sovrascritti da `build_examples.py`: una modifica ai loro pixel richiede l’aggiornamento consapevole del relativo hash in `assets/nes/manifest.json`. Non sostituire immagini mentre lo stand è aperto. Il controllo SHA-256 garantisce corrispondenza dei bytes, **non** certifica da solo i diritti. La distribuzione nel repository autorizzato non cambia licenze o attribuzioni e non implica approvazione ufficiale della scuola.

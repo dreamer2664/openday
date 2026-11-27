@@ -54,6 +54,7 @@ THUMB_DIR.mkdir(parents=True,exist_ok=True)
 ASSET_REVISION=hashlib.sha256(b''.join((ROOT/'app'/f).read_bytes() for f in
     ('character.py','cyber_layers.py','animals.py','scenes.py','pixel.py','postcard.py','palette.py'))+
     (ROOT/'assets/photos/photo_metadata.json').read_bytes()+
+    (ROOT/'assets/nes/manifest.json').read_bytes()+
     b''.join((ROOT/cfg['photo']).read_bytes() if (ROOT/cfg['photo']).is_file() else b'missing'
              for cfg in PHOTO_SCENES.values())).hexdigest()[:10]
 

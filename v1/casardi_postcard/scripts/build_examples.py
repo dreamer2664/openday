@@ -1,4 +1,4 @@
-"""Regenerate local style previews and all six original NES background PNGs."""
+"""Regenerate real local style previews; canonical revised NES sources are preserved."""
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
@@ -15,7 +15,6 @@ if __name__=='__main__':
     job=normalise_job({**JOBS['B_casardi_nes_cane'],'name':''})
     (output/'style-nes.png').write_bytes(png_bytes(compose(job,1200),job))
     for sid in PHOTO_SCENES:
-        job=dict(scene=sid,mode='nes')
-        path=ROOT/'assets/nes'/(sid+'.png');path.parent.mkdir(parents=True,exist_ok=True)
-        path.write_bytes(png_bytes(nes_background(sid,600),job))
-    print('Two real style examples and six native NES backgrounds regenerated.')
+        with __import__('PIL.Image',fromlist=['open']).open(ROOT/'assets/nes'/(sid+'.png')) as im:
+            assert im.size==(600,400)
+    print('Two actual style examples regenerated; six canonical pixel paintings preserved.')

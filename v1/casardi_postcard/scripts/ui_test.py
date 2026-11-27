@@ -33,7 +33,7 @@ async def stable(page):
 
 async def screenshot(page,name,full=False):
     await stable(page)
-    await page.screenshot(path=str(OUT/Path(name).with_suffix('.jpg')),type='jpeg',quality=90,animations='disabled',full_page=full)
+    await page.screenshot(path=str(OUT/Path(name).with_suffix('.jpg')),type='jpeg',quality=76,animations='disabled',full_page=full)
 
 async def pick(page,field,value):
     await page.click(f'#creator-panes [data-field="{field}"][data-value="{value}"]')

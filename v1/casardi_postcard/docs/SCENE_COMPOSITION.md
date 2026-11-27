@@ -3,7 +3,7 @@
 
 Tutte le coordinate fotografiche sono riferite al PNG 3000 × 2000, origine in alto a sinistra. La foto viene ritagliata a 3:2 mantenendo il fondo (`crop_anchor_y=1`). `ground_y` indica la riga delle suole; l’altezza indicata è un obiettivo nominale e viene arrotondata a un fattore intero dello sprite, non forzata con interpolazione. Le posizioni dei companion sono dedicate, non angoli decorativi.
 
-**Revisione LPC 3.0:** il personaggio usa ora il canvas modulare 64 × 64, con centro nativo x=32 conservato attraverso il ritaglio. Il parametro x resta l’ancora del corpo, non il centro variabile di capelli o oggetto. L’armonizzazione conserva questa informazione; le ombre seguono piedi reali e orientamento anche quando il companion è specchiato. La tartaruga usa rapporto d’altezza .10 rispetto alla posa di riferimento, non .22. Il nuovo audit controlla 6048 casi senza uscite dalla cornice o sovrapposizioni fra basi dei piedi, ma non sostituisce l’ispezione del pavimento fotografico.
+**Revisione 3.1 NES Retro, personaggi LPC mantenuti:** il personaggio usa ora il canvas modulare 64 × 64, con centro nativo x=32 conservato attraverso il ritaglio. Il parametro x resta l’ancora del corpo, non il centro variabile di capelli o oggetto. L’armonizzazione conserva questa informazione; le ombre seguono piedi reali e orientamento anche quando il companion è specchiato. La tartaruga usa rapporto d’altezza .10 rispetto alla posa di riferimento, non .22. Il nuovo audit controlla 6048 casi senza uscite dalla cornice o sovrapposizioni fra basi dei piedi, ma non sostituisce l’ispezione del pavimento fotografico.
 
 ## Pipeline comune fotografica
 
@@ -66,8 +66,8 @@ Piano: selciato/terra del primissimo piano destro, evitando i grossi frammenti l
 | Finitura | vignetta 0.09; grana 0.002 |
 | Occlusori | nessuno: appoggio in area libera |
 | Zona testo foto | `bottom-left` |
-| NES, griglia 600 × 400 | suole y=376; personaggio x=462, h nominale=174; companion x=362 |
-| Zona testo NES | `bottom-left` |
+| NES, griglia 600 × 400 | suole y=376; personaggio x=342, h nominale=156; companion x=242 |
+| Zona testo NES | `top-left` |
 
 ## Teatro di Epidauro
 
@@ -121,13 +121,26 @@ Piano: prato e sentiero davanti al recinto, non sui gradini del tempio. Personag
 | Occlusori | grass |
 | Zona testo foto | `top-left` |
 | NES, griglia 600 × 400 | suole y=370; personaggio x=242, h nominale=174; companion x=344 |
-| Zona testo NES | `top-right` |
+| Zona testo NES | `top-left` |
 
-## Uniformità NES
+## Uniformità NES · nuova arte 3.1
 
-Intera composizione nativa 600 × 400: sfondo geometrico originale, sprite, ombre nette, cornice e font con alpha binario vengono composti **prima** dell’ingrandimento ×5. Non si lascia una foto dietro agli sprite. La tavolozza è NES-inspired, non una simulazione dei limiti hardware originali. Biblioteca e Foro usano testi scuri per il contrasto contro intonaco/pavimento chiaro; le altre scene usano testi chiari nelle rispettive zone dedicate.
+Tutti i vecchi sfondi geometrici procedurali sono sostituiti da **sei illustrazioni architettoniche assistite da IA e rifinite su griglia nativa**, in `assets/nes/*.png`: 600 × 400, 64 colori per sfondo, opachi. L’arte canonica è identica fra browser e Python. `app/nes_art.py` ne controlla hash/dimensioni/opacità; non esiste un fallback ai disegni rifiutati. Provenienza e licenze in `assets/nes/manifest.json` e SOURCES_AND_LICENSES.md. La riduzione riguarda una nuova illustrazione, non un filtro applicato alla foto originale.
 
-Le architetture sono sei disegni distinti, non un unico tempio ricolorato: scuola razionalista, interno a cupola, arco a fornice, teatro radiale, biblioteca a navate e tempio dorico. I dettagli iscritti sono texture geometriche astratte, non frasi pseudo-latine.
+Sfondo, sprite, ombre nette, cornice e font con alpha binario sono composti **prima** dell’ingrandimento nearest-neighbor ×5. Non si lascia una foto dietro agli sprite. La tavolozza è ispirata al rétro, non una simulazione dei limiti hardware originali: i personaggi LPC conservano le proprie palette.
+
+La nuova **targhetta compatta in alto a sinistra**, con bordo a pixel, fondo blu notte e ombra netta, usa testi avorio/menta/oro leggibili in tutte e sei le scene. Contiene solo istituto, Open Day, città ed eventuale nome: nessun punteggio, slogan, logo o testo aggiuntivo. Evita il vecchio trattamento tipografico variabile di Biblioteca e Foro e lascia libero il centro architettonico.
+
+| Scena NES | Scelte della nuova illustrazione e integrazione |
+|---|---|
+| Casardi | Facciata razionalista asimmetrica, finestre alte, pietra/intonaco e prospetto laterale; luce calda alto-sinistra, appoggio sul piazzale pavimentato. Colori interpretativi dal riferimento del 1936, **non documentazione della scuola attuale** |
+| Pantheon | Parete interna curva, colonne corinzie, edicole e pavimento a intarsi in prospettiva; parte della cupola in alto, oculo fuori campo. Soggetto anteriore destro, gufo/companion a sinistra, ombre corte sul marmo |
+| Arco di Tito | Un solo fornice, attico e intradosso, pini e olivo; selciato libero centrale. Avatar spostato a x=342 e altezza nominale ridotta a 156 per evitare pietre/albero sulla destra, companion x=242. Pseudo-iscrizione dell’attico rimossa e pannello lapideo ridipinto |
+| Epidauro | Orchestra libera con cavea semicircolare, sedute e scale radiali, fascia alberata e cielo. Soggetto sul piano sabbioso anteriore destro; la cavea rimane riconoscibile |
+| Malatestiana | Aula del Nuti, corridoio centrale, plutei, colonne, volte, tiranti e rosone; cotto prospettico con luce laterale calda. Appoggi nell’asse libero davanti ai banchi, non sui piani di legno |
+| Hera II | Colonne doriche, colonnato laterale, trabeazione e timpano superstite; pietra calda, prato e sentiero. Soggetti nel primo piano libero; targhetta a sinistra, non sopra il timpano destro |
+
+Rilievi, texture e dettagli minori sono interpretazioni illustrative, non un rilievo filologico certificato; non si presume perfetta corrispondenza di ogni elemento o iscrizione. Nessuna generazione durante la visita. L’adeguatezza artistica è stata verificata sui sei campioni composti consegnati, non su ogni combinazione del creator e non come approvazione del committente.
 
 ## Modifiche alle foto
 

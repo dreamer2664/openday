@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "date": "2026-11-27",
-  "revision": "3.0 LPC + Windows GUI launcher + genuine finished-PNG QR",
+  "revision": "3.1 NES Retro: six new native paintings + redesigned UI + retained LPC + Windows + finished-PNG QR",
   "archive": "Cartolina_Casardi_Windows_LPC_QR_2026-27.zip",
   "preflight": {
     "photo_sources": 6,
@@ -15,7 +15,9 @@
       "screenshots-standalone": 6,
       "screenshots": 16
     },
-    "unit_tests": 34,
+    "unit_tests": 45,
+    "nes_art_integrity": "PASS: six canonical 600x400 paintings, at most 64 colours each",
+    "nes_redesign_checks": 8,
     "go_top_level_race_tests": 26,
     "service_browser_checks": 15,
     "standalone_browser_checks": 22,

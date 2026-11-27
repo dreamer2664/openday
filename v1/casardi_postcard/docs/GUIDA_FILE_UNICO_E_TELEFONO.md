@@ -1,7 +1,7 @@
 # Un solo HTML · PC e telefono
-## Cartolina Casardi · Open Day 2026/27 — revisione LPC 3.0
+## Cartolina Casardi · Open Day 2026/27 — revisione 3.1 NES Retro
 
-**File pronto: `Cartolina_Casardi_PC_e_Telefono.html`**, circa 11,2 MB. È il creatore completo: sei luoghi in entrambi gli stili, personaggi modulari LPC con equipaggiamento fantascientifico, otto animali facoltativi, anteprima, export PNG **3000 × 2000** e TXT dei crediti. Non scarica librerie o font da Internet e non richiede Python, Go, Node o comandi.
+**File pronto: `Cartolina_Casardi_PC_e_Telefono.html`**, circa 12,7 MB. È il creatore completo: sei luoghi in entrambi gli stili, personaggi modulari LPC con equipaggiamento fantascientifico, otto animali facoltativi, anteprima, export PNG **3000 × 2000** e TXT dei crediti. Non scarica librerie o font da Internet e non richiede Python, Go, Node o comandi.
 
 ## Aprirlo sul PC
 
@@ -31,7 +31,7 @@ Trasferire/scaricare lo stesso file `.html` e aprirlo in un browser che esegue H
 
 ## Creare e salvare
 
-La UI touch non è un’edizione ridotta. Ha nove categorie, quattro look iniziali modificabili, quattro pose e sei espressioni. Su schermi piccoli l’avatar di dettaglio resta visibile mentre si personalizza; l’anteprima finale mostra tutta la cartolina.
+La UI NES-rétro usa pannelli squadrati, titoli pixel, colori ad alto contrasto e controlli touch. Non è un’edizione ridotta. Ha nove categorie, quattro look iniziali modificabili, quattro pose e sei espressioni. Su schermi piccoli l’avatar di dettaglio resta visibile mentre si personalizza; l’anteprima finale mostra tutta la cartolina.
 
 Dopo **Genera PNG**:
 
@@ -47,6 +47,7 @@ Il comportamento esatto di Foto/Download, menu Condividi e pressione prolungata 
 
 - Tutti gli asset sono incorporati; niente richieste runtime esterne, analytics, cookie o localStorage. Nel servizio Windows soltanto il **PNG definitivo** viene copiato nella RAM del PC per il QR.
 - Nel file autonomo lavoro e PNG rimangono nella memoria della pagina fino a reset/chiusura. Ricomincia revoca gli URL Blob e azzera le scelte, **non cancella i file già scaricati**.
+- I sei nuovi sfondi sono illustrazioni assistite da IA e rifinite su griglia/palette; nessun modello viene eseguito durante la visita. I PNG canonici sono gli stessi in tutte le edizioni. Non sono rilievi documentari o disegni dichiarati interamente manuali.
 - La foto Casardi è autentica, storica (1936) e nativa 707 × 491; la grandezza dell’export non le aggiunge dettaglio.
 - Foto ricomposta a 3000 × 2000; pixel art nativa 600 × 400 composta e ingrandita ×5 con nearest-neighbor. Nessuna dipendenza dalla risoluzione del monitor.
 - Sprite Python e JavaScript: **938 confronti RGBA esatti**. Non si rivendica l’identità di intere cartoline fra Canvas e Pillow: interpolazione foto, rasterizzazione font, rumore e ombre sono implementazioni distinte. L’HTML incorpora JPEG ulteriormente ottimizzati, documentati nel report di build.

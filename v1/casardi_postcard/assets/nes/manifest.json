@@ -1,0 +1,164 @@
+{
+  "version": "3.1 NES Retro",
+  "date": "2026-11-27",
+  "native_grid": [
+    600,
+    400
+  ],
+  "export_scale": 5,
+  "disclosure": "Six new AI-assisted pixel-art illustrations, not handwritten drawings and not documentary photographs. Licensed architectural references retained; no commercial-game assets. Not an emulation of original NES hardware palette/tile limits.",
+  "runtime": "Only these local native PNGs; no generation, Internet, external models, master files or source photographs needed to draw the NES background.",
+  "palette": "At most 64 colours per background; the independently licensed LPC characters retain their own palettes.",
+  "scenes": {
+    "casardi": {
+      "path": "assets/nes/casardi.png",
+      "sha256": "535ea07d76de611c59988b7d51126f28dbbe0a54728576cf8a727d483c3fb12e",
+      "dimensions": [
+        600,
+        400
+      ],
+      "palette_colors": 64,
+      "alpha": "Opaque; no photographic layer",
+      "reference_photo": "https://commons.wikimedia.org/wiki/File:Liceo_Classico_Alfredo_Casardi_Barletta.jpg",
+      "reference_local_sha256": "1f47b2a8d090930bd2057d007596475bfbfe61d7561b78c945392c78d4e1b1ab",
+      "reference_license": "CC0",
+      "reference_license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "reference_author": "Autore non identificato (archivio storico)",
+      "landmarks": "Facciata razionalista asimmetrica, avancorpo lapideo, due piani di finestre alte, prospetto laterale e piazzale pavimentato.",
+      "generation_brief": "Upper-left golden light; quiet sky above the real asymmetrical rationalist school, detailed limestone/stucco, teal windows, paved empty forecourt.",
+      "work_master_sha256": "9e892d8be913ed27d5ec40fbc3ffa87b536130353e947c219720f376bf93b9c8",
+      "work_master_dimensions": [
+        1264,
+        848
+      ],
+      "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
+      "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements."
+    },
+    "pantheon": {
+      "path": "assets/nes/pantheon.png",
+      "sha256": "7a748c8b2c0129c32e0ff3c293af2bf378d6e437d15163264af0ce3dc8c69caf",
+      "dimensions": [
+        600,
+        400
+      ],
+      "palette_colors": 64,
+      "alpha": "Opaque; no photographic layer",
+      "reference_photo": "https://commons.wikimedia.org/wiki/File:Pantheon_interior_3.jpg",
+      "reference_local_sha256": "0b8cf198734d128fbff32c0b8feb702a97ff474d94d5aec6ce5e69ab52878b91",
+      "reference_license": "CC BY-SA 3.0",
+      "reference_license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "reference_author": "Wknight94",
+      "landmarks": "Parete curva, colonne corinzie, edicole, cornici, parte della cupola e pavimento a intarsi; non il portico esterno.",
+      "generation_brief": "Curved Pantheon interior, Corinthian columns, alternating aedicules, coloured marble inlays, warm indirect light, empty foreground floor.",
+      "work_master_sha256": "e1e044d3dbb016ddc68b9756220c80932326e84bdb0a57018d4989b8482e68d6",
+      "work_master_dimensions": [
+        1264,
+        848
+      ],
+      "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
+      "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements."
+    },
+    "foro": {
+      "path": "assets/nes/foro.png",
+      "sha256": "f53512c8033b05393717e61c6ae33d39065ce3b634a23a00f2a515070a982c8b",
+      "dimensions": [
+        600,
+        400
+      ],
+      "palette_colors": 64,
+      "alpha": "Opaque; no photographic layer",
+      "reference_photo": "https://commons.wikimedia.org/wiki/File:Arch_of_Titus_in_Rome_(2).jpg",
+      "reference_local_sha256": "7bccc901d26fb35695721e6f1fec93181f95deebc5bccec241840c43442d1272",
+      "reference_license": "CC BY-SA 4.0",
+      "reference_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reference_author": "Tournasol7",
+      "landmarks": "Arco di Tito a un fornice, attico, capitelli, intradosso e Via Sacra; pini a ombrello e olivo. Nessuna falsa iscrizione.",
+      "generation_brief": "Single Arch of Titus, correctly observed attic and relief frieze, Via Sacra paving, umbrella pine and olive, open central foreground.",
+      "work_master_sha256": "4faf9f21ab9287a4c2782905bc6465431d2ba68ceb452e0b11f046da7a9c0dce",
+      "work_master_dimensions": [
+        1264,
+        848
+      ],
+      "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
+      "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter. Foro: pseudo-inscription removed and stone panel repainted.",
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements."
+    },
+    "epidauro": {
+      "path": "assets/nes/epidauro.png",
+      "sha256": "7af9104d1df3915346711ea183798dd0a2bec17251c7225ae4fd07d57ad3b4f6",
+      "dimensions": [
+        600,
+        400
+      ],
+      "palette_colors": 64,
+      "alpha": "Opaque; no photographic layer",
+      "reference_photo": "https://commons.wikimedia.org/wiki/File:Theatre_of_Epidaurus,_202507.jpg",
+      "reference_local_sha256": "444370a96346478ed45be428526ab4e7b567926ad003ee1943c62bc0bf733e2a",
+      "reference_license": "CC BY-SA 4.0",
+      "reference_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reference_author": "Zde",
+      "landmarks": "Vista dal piano dell’orchestra: cavea semicircolare, file di sedute, scale radiali, diazoma e crinale alberato.",
+      "generation_brief": "Theatre of Epidaurus from orchestra level, elliptical curved stone seating and radial aisles, wooded ridge, empty sandy orchestra.",
+      "work_master_sha256": "97a2ca8717c0b735067235d43df46c08801461594959b8caf6f9d963bcd74dab",
+      "work_master_dimensions": [
+        1264,
+        848
+      ],
+      "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
+      "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements."
+    },
+    "biblioteca": {
+      "path": "assets/nes/biblioteca.png",
+      "sha256": "2c91115861566b79293ba670c0e3b2158d712724b334b9cb88bb737efcb4738b",
+      "dimensions": [
+        600,
+        400
+      ],
+      "palette_colors": 64,
+      "alpha": "Opaque; no photographic layer",
+      "reference_photo": "https://commons.wikimedia.org/wiki/File:Cesena_-_Biblioteca_Malatestiana_-_Interno_-_2024-09-08_14-29-45_001.jpg",
+      "reference_local_sha256": "cf048a83eb21b55f843281f5bd56c5b5a745f1f6102c1286a84308d600cdf7ee",
+      "reference_license": "CC BY-SA 4.0",
+      "reference_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reference_author": "Terragio67",
+      "landmarks": "Aula del Nuti: corridoio centrale, tre navate, volte a crociera, tiranti, colonne, plutei e rosone di fondo.",
+      "generation_brief": "Real Aula del Nuti, symmetrical aisle, groin vaults, iron tie rods, historic chained-book lecterns, terracotta floor and amber lateral light.",
+      "work_master_sha256": "6029439035d5e0160e05cfbcf8913ee63a13fffcf6b350d1a9e8d936dd8aa7cd",
+      "work_master_dimensions": [
+        1264,
+        848
+      ],
+      "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
+      "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements."
+    },
+    "paestum": {
+      "path": "assets/nes/paestum.png",
+      "sha256": "536f952e761ac0f0b80f4ffcb58738c87be7aa136f58e295e06823eee413bdc7",
+      "dimensions": [
+        600,
+        400
+      ],
+      "palette_colors": 64,
+      "alpha": "Opaque; no photographic layer",
+      "reference_photo": "https://commons.wikimedia.org/wiki/File:Hera_temple_II_-_Paestum_-_Poseidonia_-_July_13th_2013_-_04.jpg",
+      "reference_local_sha256": "a76a08466b950176ff03fc080488716b9aaa5f90ecce12b8d13cc3a6bd2cf91b",
+      "reference_license": "CC BY-SA 3.0",
+      "reference_license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reference_author": "Norbert Nagel",
+      "landmarks": "Hera II: sei colonne doriche sulla fronte, colonnato laterale, trabeazione, timpano superstite e gradini.",
+      "generation_brief": "Hera II at Paestum in the reference three-quarter view, six stocky Doric front columns, long side colonnade, worn limestone, open grassy forecourt.",
+      "work_master_sha256": "9fd9649b42c7f9f424edede4394411ab2def04a3d8ea411bfced71c720c41f53",
+      "work_master_dimensions": [
+        1264,
+        848
+      ],
+      "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
+      "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements."
+    }
+  }
+}

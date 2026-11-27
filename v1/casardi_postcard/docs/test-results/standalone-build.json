@@ -88,12 +88,13 @@
       "internal_name": "Casardi Pixel"
     }
   },
+  "nes_art": "Six new AI-assisted architectural paintings, native 600x400, 64 colours each; canonical PNG hashes and references in assets/nes/manifest.json.",
   "runtime_network": "None",
   "visitor_storage": "Memory of the open page only; no project persistence.",
   "qr": "AVVIA_CARTOLINA_WINDOWS.exe serves this full HTML and hosts its actual finished PNG via temporary LAN URL. Raw standalone HTML exports locally without hosting other devices.",
   "lpc_commit": "86a3719ee4a7e2e9fb27c7c152e29a741d3e930a",
   "lpc_parts": 56,
   "lpc_pose_atlases": 85,
-  "bytes": 11185027,
-  "sha256": "00fd5456424fc979423d98283d509be4e0ca753ac54e96ca2e9c8b9cd0dc9081"
+  "bytes": 12734874,
+  "sha256": "00dbd839a4749810b8ceefecf83d108a9cbcbf336d198d3ff58dd7fe36e9d3f7"
 }

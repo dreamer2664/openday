@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#172b35">
+<meta name="theme-color" content="#101426">
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+kf1sAAAAASUVORK5CYII=">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; font-src data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Cartolina Casardi · PC e telefono · Open Day 2026/27</title>
@@ -12,13 +12,13 @@
 <body>
 <a class="skip" href="#main-content">Vai ai controlli</a>
 <section id="welcome" aria-labelledby="welcome-title">
- <header class="welcome-top"><span>LICEO ALFREDO CASARDI</span><span>BARLETTA</span></header>
+ <header class="welcome-top"><span class="welcome-wordmark"><svg class="pixel-mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 4h20v16H2z"/><path fill="#101426" d="M4 6h16v12H4z"/><path fill="#82e4c4" d="M6 8h6v5H6zM14 8h4v1h-4zM14 11h4v1h-4zM6 15h12v1H6z"/></svg>LICEO ALFREDO CASARDI</span><span class="edition-chip">BARLETTA</span></header>
  <main class="welcome-layout">
   <div class="welcome-copy">
    <p class="eyebrow">OPEN DAY 2026/27</p>
-   <h1 id="welcome-title">La tua<br>cartolina.</h1>
-   <p class="lead">Un luogo, il tuo personaggio,<br>un ricordo da portare con te.</p>
-   <p class="intro">Scegli fra sei ambientazioni autentiche e due stili. Crea il tuo avatar pixel art: giacche cyber, equipaggiamento da esplorazione, capelli e accessori modulari. Poi porta con te il PNG.</p>
+   <h1 id="welcome-title">La tua<br><span>cartolina.</span></h1>
+   <p class="lead">Un luogo vero. Il tuo personaggio.<br>Un ricordo, tutto tuo.</p>
+   <p class="intro">Esplora sei luoghi in fotografia o in un mondo di pixel. Componi il tuo avatar, scegli un piccolo compagno e crea una cartolina ad alta risoluzione.</p>
    <button class="primary big" id="start" disabled>Preparazione… <span aria-hidden="true">→</span></button>
    <p class="offline-badge"><span aria-hidden="true">●</span> File unico · PC e telefono · Funziona offline</p>
    <p id="boot-error" role="alert" hidden></p>
@@ -26,12 +26,14 @@
    <button class="text-button" id="welcome-info">Come aprire e salvare · Fonti e licenze</button>
   </div>
   <div class="welcome-art" aria-label="Esempi reali dei due stili">
-   <figure class="sample sample-photo"><img id="sample-photo" alt="Esempio fotografico con la facciata storica del Casardi, un personaggio e un gatto"><figcaption>01 <span>FOTOGRAFICA</span></figcaption></figure>
-   <figure class="sample sample-nes"><img id="sample-nes" alt="Esempio interamente in pixel art con il Casardi e un companion"><figcaption>02 <span>PIXEL ART NES</span></figcaption></figure>
-   <p class="art-caption">3000 × 2000 px <span>·</span> PNG ad alta risoluzione</p>
+   <div class="pixel-window-bar"><span>CASARDI / PIXEL ART</span><span class="window-lights" aria-hidden="true"><i></i><i></i><i></i></span></div>
+   <figure class="sample sample-nes"><img id="sample-nes" alt="Nuova illustrazione pixel del Casardi con personaggio e companion"><figcaption>PIXEL ART NES <span>Il luogo ricostruito, pixel per pixel.</span></figcaption></figure>
+   <figure class="sample sample-photo"><img id="sample-photo" alt="Esempio fotografico con la facciata storica del Casardi, un personaggio e un gatto"><figcaption>FOTOGRAFICA <span>Lo stesso luogo, reale.</span></figcaption></figure>
+   <p class="art-caption">Due stili. Lo stesso ricordo.<br><span>3000 × 2000 px</span> · PNG</p>
   </div>
  </main>
- <footer class="welcome-bottom"><span>Edizione autonoma · Tutto è incorporato nel file</span><span>2026 / 27</span></footer>
+ <section class="worlds" aria-label="Le sei nuove ambientazioni pixel"><div class="worlds-label"><span>IL TUO PROSSIMO SCENARIO</span><span>6 luoghi da scegliere</span></div><div id="world-strip" class="world-strip"></div></section>
+ <footer class="welcome-bottom"><span>Edizione autonoma · Tutto è incorporato nel file</span><span>NES RETRO / 3.1</span></footer>
 </section>
 
 <section id="studio" hidden aria-label="Studio cartoline">
@@ -93,7 +95,7 @@
       <p class="eyebrow">DAL PC AL TELEFONO</p><h3 id="transfer-title">Scansiona e scarica.</h3>
       <p id="transfer-status" role="status" aria-live="polite"></p>
       <div id="transfer-loading" class="transfer-loading" hidden><span class="spinner" aria-hidden="true"></span> Preparazione del QR…</div>
-      <div id="transfer-code" class="transfer-code" hidden><img id="transfer-qr" alt="QR del PNG finale da scaricare sul telefono"><div><strong>Questo QR apre la cartolina già pronta.</strong><p id="transfer-time" class="transfer-time"></p><a id="transfer-link" target="_blank" rel="noopener noreferrer" class="transfer-link"></a><p class="hint">Non si apre? Controlla stessa Wi-Fi, rete privata di Windows e assenza di isolamento tra dispositivi. Il salvataggio sul PC è sempre disponibile sopra.</p></div></div>
+      <div id="transfer-code" class="transfer-code" hidden><img id="transfer-qr" alt="QR del PNG finale da scaricare sul telefono"><div><strong>Questo QR apre la cartolina già pronta.</strong><p id="transfer-time" class="transfer-time"></p><a id="transfer-link" target="_blank" rel="noopener noreferrer" class="transfer-link"></a><p class="hint">Non si apre? Controlla stessa Wi-Fi, rete privata di Windows e assenza di isolamento tra dispositivi. Il salvataggio sul PC è sempre disponibile qui sotto.</p></div></div>
       <button id="transfer-retry" class="secondary" hidden>Crea un nuovo QR per questo PNG</button>
      </section>
      <div class="save-actions"><a class="primary" id="save" download="cartolina-casardi.png">Scarica PNG <span aria-hidden="true">↓</span></a><button class="secondary" id="share" hidden>Condividi / Salva…</button><a class="secondary" id="open-image" target="_blank" rel="noopener">Apri l’immagine</a></div>
@@ -138,6 +140,8 @@
    <p>Il Casardi è documentato con una foto storica del 1936, nativa 707 × 491 pixel: non è una foto attuale né un’immagine realmente acquisita a 3000 pixel. Le altre fonti incorporate sono ottimizzate in JPEG, lato massimo 3000 pixel, qualità 86. I file originali con hash e i riferimenti completi sono nel pacchetto sorgente.</p>
    <div id="credits-list"></div>
    <p>La licenza della fotografia non sostituisce eventuali autorizzazioni per l’uso dei beni culturali o dell’identità dell’istituto. Nessuna autorizzazione per foto tratte dal sito della scuola è presunta. Nessuna affiliazione dei fotografi è implicata.</p>
+   <h3>Nuove ambientazioni pixel</h3>
+   <p>Le sei illustrazioni NES sono ricostruzioni architettoniche <strong>assistite da IA</strong>, create dai riferimenti fotografici autorizzati e rifinite su griglia nativa 600 × 400 con una palette di 64 colori per sfondo. Non sono fotografie a cui è stato applicato un filtro, né disegni dichiarati interamente a mano. La generazione è avvenuta solo durante lo sviluppo: nell’app ci sono esclusivamente PNG locali, nessun modello o servizio esterno. Le architetture sono interpretazioni illustrative, non rilievi documentari; i colori del Casardi reinterpretano il riferimento del 1936, non documentano la scuola attuale. Non si rivendica un’esclusiva sugli elementi generati automaticamente. Lo stile è ispirato al rétro, senza simulare i limiti hardware originali NES.</p>
    <h3>Codice, disegni e font</h3>
    <p>Codice originale: MIT. Nuova base dei personaggi: Universal LPC, con veri livelli disegnati da artisti e licenze per parte OGA-BY 3.0 / CC-BY-SA 3.0; <strong>non è tutta CC0</strong>. Crediti completi sotto e nei metadati di ogni PNG. Equipaggiamento fantascientifico originale e companion: CC0. Le ricostruzioni NES e le cartoline composte si distribuiscono come adattamenti CC BY-SA 4.0, conservando crediti e licenze dei riferimenti e dei materiali originali. Nessun personaggio o asset di videogiochi commerciali. Font Cinzel, EB Garamond e Press Start 2P: SIL OFL 1.1, incorporati in WOFF come sottoinsiemi Unicode U+0000–U+052F. Il sottoinsieme modificato di Press Start 2P è rinominato internamente «Casardi Pixel», nel rispetto del nome riservato; i font originali non sono modificati.</p>
    <details><summary>Autori e licenze delle parti LPC incluse</summary><pre id="lpc-credits" class="lpc-credits"></pre></details>

@@ -1,0 +1,90 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "revision": "3.1 NES Retro",
+  "scenes": [
+    {
+      "scene": "casardi",
+      "result": "PASS",
+      "sha256": "535ea07d76de611c59988b7d51126f28dbbe0a54728576cf8a727d483c3fb12e",
+      "dimensions": [
+        600,
+        400
+      ],
+      "colours": 64,
+      "opaque": true,
+      "licensed_reference_sha256_verified": true
+    },
+    {
+      "scene": "pantheon",
+      "result": "PASS",
+      "sha256": "7a748c8b2c0129c32e0ff3c293af2bf378d6e437d15163264af0ce3dc8c69caf",
+      "dimensions": [
+        600,
+        400
+      ],
+      "colours": 64,
+      "opaque": true,
+      "licensed_reference_sha256_verified": true
+    },
+    {
+      "scene": "foro",
+      "result": "PASS",
+      "sha256": "f53512c8033b05393717e61c6ae33d39065ce3b634a23a00f2a515070a982c8b",
+      "dimensions": [
+        600,
+        400
+      ],
+      "colours": 64,
+      "opaque": true,
+      "licensed_reference_sha256_verified": true
+    },
+    {
+      "scene": "epidauro",
+      "result": "PASS",
+      "sha256": "7af9104d1df3915346711ea183798dd0a2bec17251c7225ae4fd07d57ad3b4f6",
+      "dimensions": [
+        600,
+        400
+      ],
+      "colours": 64,
+      "opaque": true,
+      "licensed_reference_sha256_verified": true
+    },
+    {
+      "scene": "biblioteca",
+      "result": "PASS",
+      "sha256": "2c91115861566b79293ba670c0e3b2158d712724b334b9cb88bb737efcb4738b",
+      "dimensions": [
+        600,
+        400
+      ],
+      "colours": 64,
+      "opaque": true,
+      "licensed_reference_sha256_verified": true
+    },
+    {
+      "scene": "paestum",
+      "result": "PASS",
+      "sha256": "536f952e761ac0f0b80f4ffcb58738c87be7aa136f58e295e06823eee413bdc7",
+      "dimensions": [
+        600,
+        400
+      ],
+      "colours": 64,
+      "opaque": true,
+      "licensed_reference_sha256_verified": true
+    }
+  ],
+  "canonical_files": 6,
+  "native_grid": [
+    600,
+    400
+  ],
+  "manifest_sha256": "61e3da814da0865ee343c9ca7c721d98c1e5b74fd208190e02433524c86ed008",
+  "original_procedural_backgrounds": "Replaced, no fallback",
+  "new_art": "AI-assisted architectural repaint; transparent disclosure in app, PNG metadata and manifest.",
+  "artifact": "docs/qa/08_nuovi_scenari_nes.jpg",
+  "seconds": 0.15,
+  "limitations": "File/metadata/palette integrity and native grid, not automated artistic or historical validation. Six delivered representative scenes manually reviewed; no user acceptance presumed."
+}

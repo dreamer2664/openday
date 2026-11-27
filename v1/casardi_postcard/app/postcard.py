@@ -34,7 +34,8 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageChops
 from .animals import draw_animal
 from .character import GROUND, H as SPR_H, W as SPR_W, render as render_char
 from .imgutil import to_pil
-from .scenes import NES_SCENES, PHOTO_SCENES, build_nes_scene
+from .scenes import NES_SCENES, PHOTO_SCENES
+from .nes_art import load_nes_art
 
 CARD_W, CARD_H = 3000, 2000
 PREVIEW_W = 1200
@@ -75,7 +76,7 @@ def _photo_source(scene_id: str) -> Image.Image:
 
 @lru_cache(maxsize=8)
 def _nes_scene(scene_id: str) -> Image.Image:
-    return to_pil(build_nes_scene(scene_id))
+    return load_nes_art(scene_id)
 
 
 # ---------------------------------------------------------------------------
@@ -320,8 +321,35 @@ def _spaced_width(draw, text, font, tracking):
     return sum(draw.textlength(c, font=font) for c in text) + tracking * max(0, len(text) - 1)
 
 
+def draw_nes_signature(card: Image.Image, job: dict, zone: str):
+    """Compact native-pixel nameplate; only the four permitted text fields."""
+    draw=ImageDraw.Draw(card);draw.fontmode='1'
+    rows=[(TEXT['school'],8,'#f5f0d8',12),(TEXT['event'],7,'#cbd7e4',11),(TEXT['city'],6,'#79dcc2',10)]
+    name=(job.get('name') or '').strip()
+    if name:rows.append((name,8,'#f1c675',12))
+    fitted=[]
+    for label,size,color,advance in rows:
+        while size>6 and draw.textlength(label,font=_font('pixel',size))>202:size-=1
+        fitted.append((label,_font('pixel',size),color,advance))
+    w=int(max(draw.textlength(label,font=font) for label,font,_,_ in fitted))+18
+    h=sum(r[3] for r in fitted)+12
+    x=18 if zone!='top-right' else card.width-18-w;y=18
+    draw.rectangle((x+4,y+4,x+w+3,y+h+3),fill='#090e1d')
+    draw.rectangle((x+1,y,x+w-2,y+h-1),fill='#45516c')
+    draw.rectangle((x,y+1,x+w-1,y+h-2),fill='#45516c')
+    draw.rectangle((x+2,y+2,x+w-3,y+h-3),fill='#151b32')
+    for xx,yy,sign in ((x+2,y+2,1),(x+w-8,y+2,1),(x+2,y+h-3,1),(x+w-8,y+h-3,1)):
+        draw.rectangle((xx,yy,xx+5,yy),fill='#f1c675')
+    yy=y+6
+    for label,font,color,advance in fitted:
+        draw.text((x+9,yy),label,font=font,fill=color);yy+=advance
+
+
 def draw_texts(card: Image.Image, job: dict, scale: float, zone: str, mode: str):
     """Essential text only: school, event, city, optional name."""
+    if mode == 'nes':
+        draw_nes_signature(card,job,zone)
+        return
     W, H = card.size
     px = lambda v: int(round(v * scale))
     ox, oy = card.size

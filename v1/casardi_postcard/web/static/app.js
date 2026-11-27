@@ -166,7 +166,7 @@
         changed();state.scene=scene.id;applyMode();buildScenes();if(state.step===1)showStep(2);
       }},node('img',{class:'choice-art'+(state.mode==='nes'?' pixel':''),src:scene.thumbs[state.mode],alt:''}),
         node('span',{class:'tag'},scene.place),node('h3',{},scene.label));
-      c.title=scene.note;select(c,scene.id===state.scene);grid.append(c);
+      c.title=state.mode==='nes'?scene.nes_note:scene.note;select(c,scene.id===state.scene);grid.append(c);
     }
   }
   $('#name-input').addEventListener('input',e=>{state.name=e.target.value;changed();});

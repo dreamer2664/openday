@@ -1,11 +1,15 @@
 # Cartolina digitale · Liceo Alfredo Casardi
-## Open Day 2026/27 · Barletta — edizione 3.0
+## Open Day 2026/27 · Barletta — edizione 3.1 NES Retro
 
 **Pacchetto di questa revisione: `Cartolina_Casardi_Windows_LPC_QR_2026-27.zip`.** Sostituisce la consegna precedente; i due file principali sono già pronti nella cartella, non vanno ricreati dai sorgenti.
 
 Studio completo per creare cartoline **PNG 3000 × 2000, orizzontali 3:2**. Sei ambientazioni autentiche, modalità fotografica e ricostruzione NES, nome facoltativo, personaggio modulare e otto companion facoltativi. Nessun account, cloud, servizio a pagamento o asset di videogiochi commerciali.
 
-**Questa revisione sostituisce i personaggi precedenti con sprite modulari disegnati dagli artisti Universal LPC**, più equipaggiamento fantascientifico originale: giacca cyber, tuta da esplorazione, gilet tecnico, visore, zaino a celle e oggetti. Non è un ritocco cromatico della vecchia base. Le licenze LPC sono per parte: **non è tutto CC0**.
+**Novità 3.1:** interfaccia NES-rétro con titoli pixel, pannelli squadrati, inventario illustrato, palette blu notte/menta/oro, controlli touch e focus visibile. **Tutti e sei i vecchi fondali pixel sono stati sostituiti**, non solo ricolorati: architetture, pavimenti, vegetazione, profondità e luce dedicati. Nuova targhetta discreta per i soli testi richiesti; anche la pagina del QR segue il nuovo tema.
+
+**I personaggi LPC della revisione approvata restano invariati**, con equipaggiamento fantascientifico originale: giacca cyber, tuta da esplorazione, gilet tecnico, visore, zaino a celle e oggetti. Le licenze LPC sono per parte: **non è tutto CC0**.
+
+**Provenienza degli scenari:** sei nuove illustrazioni **assistite da IA**, create dai riferimenti fotografici documentati e rifinite a **600 × 400 nativi, 64 colori per sfondo**. Non si dichiarano interamente disegnate a mano o rilievi storici. Sono gli stessi PNG canonici per browser e Python, senza filtri fotografici o generazione a runtime. Manifest, licenze e limiti in [assets/nes/manifest.json](assets/nes/manifest.json) e [SOURCES_AND_LICENSES.md](SOURCES_AND_LICENSES.md). I colori del Casardi reinterpretano la foto del 1936, non documentano la facciata attuale.
 
 **Il QR principale trasferisce il PNG già finito**, non apre il creatore. Il QR distinto del creatore telefono è soltanto in Info. Il trasferimento reale è stato verificato via HTTP fra due contesti Chromium indipendenti, con decodifica del QR e confronto byte per byte del PNG. **Non è una prova con un telefono fisico sulla rete della scuola.**
 
@@ -46,7 +50,7 @@ Dopo «Genera PNG», la scheda **Dal PC al telefono → Scansiona e scarica** mo
 
 Il QR scade dopo **10 minuti**; alla scadenza il servizio elimina la propria copia e l’interfaccia nasconde il QR. Il PNG locale resta salvabile finché non si resetta/chiude la pagina; si può richiedere un nuovo QR per quel medesimo PNG. Non esiste una galleria dei visitatori. Un reset non può cancellare copie già scaricate o bytes già consegnati al telefono.
 
-**Tastiera:** Tab / Shift+Tab, Invio / Spazio sui pulsanti; Esc chiude Info. Mouse e touch sono supportati. L’edizione Python aggiunge Alt+← / Alt+→. Il battito delle palpebre è facoltativo e rispetta la preferenza di movimento ridotto.
+**Tastiera:** Tab / Shift+Tab, Invio / Spazio sui pulsanti; Esc chiude Info. Mouse e touch sono supportati. Alt+← / Alt+→ percorre i passaggi già sbloccati. Il battito delle palpebre è facoltativo e rispetta la preferenza di movimento ridotto.
 
 ## 3 · Rete e prova obbligatoria con un vero telefono
 
@@ -77,7 +81,7 @@ Il token ha **192 bit casuali**. Il QR non contiene l’immagine e non la carica
 
 ## 4 · File unico autonomo e versione telefono completa
 
-**`Cartolina_Casardi_PC_e_Telefono.html`**, circa **11,2 MB**, contiene l’applicazione completa: foto, ricostruzioni, sprite, font, crediti e licenze. Può essere copiato **da solo** e aperto in un browser, senza comandi, Python o file accanto. Non è una demo né un semplice download viewer.
+**`Cartolina_Casardi_PC_e_Telefono.html`**, circa **12,7 MB**, contiene l’applicazione completa: foto, ricostruzioni, sprite, font, crediti e licenze. Può essere copiato **da solo** e aperto in un browser, senza comandi, Python o file accanto. Non è una demo né un semplice download viewer.
 
 | Apertura | Cosa offre |
 |---|---|
@@ -179,10 +183,13 @@ python -m unittest discover -s tests -v
 python scripts/fetch_photos.py --check
 python scripts/asset_audit.py
 python scripts/layout_audit.py
+python scripts/nes_art_audit.py
 python scripts/render_gallery.py
+python scripts/build_review_sheets.py
 python scripts/build_examples.py
 python scripts/build_standalone.py
 python scripts/browser_sprite_audit.py
+python scripts/nes_ui_test.py
 ```
 
 La curation LPC è fissata a una revisione e non viene eseguita a runtime. `scripts/curate_lpc.py` richiede rete solo se si vuole ricreare il sottoinsieme da monte; conservare autori/licenze e non aggiornare durante l’evento. Il traduttore degli equipaggiamenti originali è limitato e rifiuta sintassi non supportata: nessun interprete Python è incorporato nell’HTML.
@@ -193,6 +200,7 @@ Go **≥1.24**, toolchain del collaudo **1.27.4**. Con Go installato:
 cd service
 go test -mod=vendor -race -count=1 -v ./...
 cd ..
+python scripts/build_phone_font.py  # solo se si modifica il font della pagina QR
 python scripts/build_service.py
 ```
 

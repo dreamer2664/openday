@@ -27,6 +27,10 @@ in assets/characters/CREDITI_LPC.txt and its unmodified source metadata. Only
 original Casardi sci-fi equipment and companion drawings are offered under
 CC0 1.0. Delivered postcard compositions and NES background reconstructions
 are offered as CC BY-SA 4.0 adaptations, without relicensing their underlying
-materials. See SOURCES_AND_LICENSES.md for full provenance and notices.
+materials. The six revised NES backgrounds are AI-assisted architectural
+illustrations with native pixel/palette finishing, not wholly hand-drawn works.
+No exclusive copyright over machine-generated elements or permission beyond
+the documented rights is claimed. See assets/nes/manifest.json and
+SOURCES_AND_LICENSES.md for full provenance and notices.
 The school's name is descriptive, not official endorsement or a license to
 any school logo or trademark. No Cyberpunk 2077 or ARK assets are included.

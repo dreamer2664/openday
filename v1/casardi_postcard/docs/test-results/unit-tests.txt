@@ -26,14 +26,29 @@ test_unpredictable_token_format_and_no_name_data (test_core.StorageTests.test_un
 test_held_items_have_compatible_pose (test_core.ValidationTests.test_held_items_have_compatible_pose) ... ok
 test_invalid_payloads (test_core.ValidationTests.test_invalid_payloads) ... ok
 test_unicode_name_normalisation_and_length (test_core.ValidationTests.test_unicode_name_normalisation_and_length) ... ok
+test_all_six_hd_exports_are_exact_native_nearest_neighbour (test_nes_art.NesArtTests.test_all_six_hd_exports_are_exact_native_nearest_neighbour) ... ok
+test_catalogue_keeps_photo_and_nes_notes_distinct (test_nes_art.NesArtTests.test_catalogue_keeps_photo_and_nes_notes_distinct) ... ok
+test_licensed_reference_bytes_are_preserved (test_nes_art.NesArtTests.test_licensed_reference_bytes_are_preserved) ... ok
+test_loader_returns_exact_source_pixels (test_nes_art.NesArtTests.test_loader_returns_exact_source_pixels) ... ok
+test_manifest_has_six_distinct_architectural_sources (test_nes_art.NesArtTests.test_manifest_has_six_distinct_architectural_sources) ... ok
+test_native_png_dimensions_palette_opacity_and_hashes (test_nes_art.NesArtTests.test_native_png_dimensions_palette_opacity_and_hashes) ... ok
+test_pixelcanvas_adapter_preserves_all_pixels (test_nes_art.NesArtTests.test_pixelcanvas_adapter_preserves_all_pixels) ... /home/user/casardi_postcard/app/scenes.py:115: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  c.buf=list(image.getdata())
+/home/user/casardi_postcard/tests/test_nes_art.py:49: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  self.assertEqual(build_nes_scene(sid).buf,list(nes_art.load_nes_art(sid).getdata()))
+ok
+test_tampering_is_an_explicit_error (test_nes_art.NesArtTests.test_tampering_is_an_explicit_error) ... ok
+test_unknown_scene_does_not_fall_back_to_old_art (test_nes_art.NesArtTests.test_unknown_scene_does_not_fall_back_to_old_art) ... ok
 test_build_hashes_and_all_six_sources (test_standalone.StandaloneTests.test_build_hashes_and_all_six_sources) ... ok
+test_canonical_nes_pixels_and_manifest_are_embedded_unchanged (test_standalone.StandaloneTests.test_canonical_nes_pixels_and_manifest_are_embedded_unchanged) ... ok
 test_every_runtime_resource_embedded_and_no_connections (test_standalone.StandaloneTests.test_every_runtime_resource_embedded_and_no_connections) ... ok
+test_go_download_page_font_is_embedded_renamed_and_licensed (test_standalone.StandaloneTests.test_go_download_page_font_is_embedded_renamed_and_licensed) ... ok
 test_modified_reserved_font_is_renamed (test_standalone.StandaloneTests.test_modified_reserved_font_is_renamed) ... ok
 test_phone_creator_qr_really_contains_creator_url (test_standalone.StandaloneTests.test_phone_creator_qr_really_contains_creator_url) ... ok
 test_phone_route_full_creator_no_owner_or_card (test_standalone.StandaloneTests.test_phone_route_full_creator_no_owner_or_card) ... ok
 test_translator_current_and_rejects_unsupported_syntax (test_standalone.StandaloneTests.test_translator_current_and_rejects_unsupported_syntax) ... ok
 
 ----------------------------------------------------------------------
-Ran 34 tests in 2.679s
+Ran 45 tests in 9.913s
 
 OK

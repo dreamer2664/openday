@@ -51,6 +51,23 @@ class StandaloneTests(unittest.TestCase):
         self.assertEqual(names,{'Casardi Pixel'})
         self.assertTrue(any('Copyright 2012' in n.toUnicode() for n in f['name'].names if n.nameID==0))
 
+    def test_canonical_nes_pixels_and_manifest_are_embedded_unchanged(self):
+        match=re.search(r'<script id="embedded-data" type="application/json">(.*?)</script>',HTML.read_text(),re.S)
+        self.assertIsNotNone(match)
+        data=json.loads(match[1])
+        self.assertEqual(data['nesArt'],json.loads((ROOT/'assets/nes/manifest.json').read_text()))
+        for sid,images in data['images'].items():
+            self.assertEqual(base64.b64decode(images['nes'].split(',',1)[1]),(ROOT/'assets/nes'/(sid+'.png')).read_bytes())
+
+    def test_go_download_page_font_is_embedded_renamed_and_licensed(self):
+        match=re.search(r'const phoneFontData = "([^"]+)"',(ROOT/'service/phone_font.go').read_text())
+        self.assertIsNotNone(match)
+        font=TTFont(io.BytesIO(base64.b64decode(match[1])))
+        names={n.toUnicode() for n in font['name'].names if n.nameID in (1,4,16,18)}
+        self.assertEqual(names,{'Casardi Pixel'})
+        self.assertTrue(any('Copyright 2012' in n.toUnicode() for n in font['name'].names if n.nameID==0))
+        self.assertTrue(any('Open Font License' in n.toUnicode() for n in font['name'].names if n.nameID==13))
+
     def test_phone_route_full_creator_no_owner_or_card(self):
         from app import server
         client=server.app.test_client(use_cookies=False);before=len(server.store.cards)

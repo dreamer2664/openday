@@ -1,7 +1,7 @@
 {
   "browser": "Chromium via Playwright",
   "date": "2026-11-27",
-  "seconds": 33.3,
+  "seconds": 33.17,
   "tests": [
     {
       "test": "six_locations_nes_style_preserved",
@@ -26,7 +26,7 @@
     {
       "test": "png_export_and_independently_decoded_qr",
       "result": "PASS",
-      "detail": "3000×2000; 0.25 s"
+      "detail": "3000×2000; 1.13 s"
     },
     {
       "test": "second_browser_context_mobile_page_and_png_download",
@@ -51,7 +51,7 @@
     {
       "test": "six_photo_locations_unnamed_no_companion_hd_export",
       "result": "PASS",
-      "detail": "7.19 s"
+      "detail": "7.24 s"
     },
     {
       "test": "operator_diagnostics_and_real_network_test_qr",

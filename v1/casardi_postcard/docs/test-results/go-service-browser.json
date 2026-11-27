@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "date": "2026-11-27",
-  "seconds": 18.9,
+  "seconds": 18.3,
   "tests": [
     {
       "name": "Avvio HTTP completo, configurazione riservata rimossa dal DOM e modalità QR attiva",
@@ -15,8 +15,8 @@
     {
       "name": "PNG del PC scaricato dal pulsante, 3000×2000 e crediti LPC/foto incorporati",
       "result": "PASS",
-      "bytes": 192752,
-      "sha256": "5a72e993e88fd06b4ee04059576571165a9bded359f98314503126d1e1b736f8"
+      "bytes": 658600,
+      "sha256": "a16ac342bca8dc25de5ab03c7b09dfd82696175812b670dff80595e72e5db69b"
     },
     {
       "name": "Secondo contesto touch: pagina aperta dall’URL QR e PNG scaricato byte per byte identico al PC",
@@ -69,7 +69,7 @@
       "result": "PASS"
     }
   ],
-  "html_sha256": "00fd5456424fc979423d98283d509be4e0ca753ac54e96ca2e9c8b9cd0dc9081",
+  "html_sha256": "00dbd839a4749810b8ceefecf83d108a9cbcbf336d198d3ff58dd7fe36e9d3f7",
   "environment": "Linux Go build, Chromium desktop and separate emulated touch browser; QA-only loopback LAN address",
   "physical_second_device": "NOT TESTED — must be checked on school Wi-Fi",
   "windows_native": "NOT TESTED — PE x64 cross-compiled, business logic tested on Linux",

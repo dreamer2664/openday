@@ -30,8 +30,9 @@
  function mode(){document.body.classList.toggle('nes',state.mode==='nes');$('#live-stage').style.backgroundImage='url("'+PORTABLE.thumbs[state.scene][state.mode]+'")';$('#live-place').textContent=O.scenes.find(s=>s.id===state.scene).label;$('#live-mode').textContent=state.mode==='nes'?'PIXEL ART NES':'FOTOGRAFICA';$$('[data-mode]').forEach(b=>selected(b,state.styleChosen&&b.dataset.mode===state.mode));}
  setInterval(()=>{if(!state.ready||!state.visited||$('#studio').hidden||!$('#blink').checked||matchMedia('(prefers-reduced-motion: reduce)').matches||document.hidden)return;const ticket=liveTicket;$('#live-character').src=liveClosed;setTimeout(()=>{if(ticket===liveTicket)$('#live-character').src=liveOpen;},130);},4700);
  $('#blink').addEventListener('change',()=>{if(liveOpen)$('#live-character').src=liveOpen;});
+ function sceneNote(s){return state.mode==='nes'?s.nes_note:s.note;}
  function scenes(){
-  const grid=$('#scene-grid');grid.replaceChildren();for(const s of O.scenes){const b=el('button',{class:'choice scene-choice','data-scene':s.id,onclick:()=>{changed();state.scene=s.id;mode();scenes();show(2);}},el('img',{src:PORTABLE.thumbs[s.id][state.mode],alt:'',class:state.mode==='nes'?'pixel':''}),el('span',{class:'choice-copy'},el('strong',{},s.label),el('span',{},s.place)));b.title=s.note;selected(b,state.scene===s.id);grid.append(b);}$('#scene-note').textContent=O.scenes.find(s=>s.id===state.scene).note;
+  const grid=$('#scene-grid');grid.replaceChildren();for(const s of O.scenes){const b=el('button',{class:'choice scene-choice','data-scene':s.id,onclick:()=>{changed();state.scene=s.id;mode();scenes();show(2);}},el('img',{src:PORTABLE.thumbs[s.id][state.mode],alt:'',class:state.mode==='nes'?'pixel':''}),el('span',{class:'choice-copy'},el('strong',{},s.label),el('span',{},s.place)));b.title=sceneNote(s);selected(b,state.scene===s.id);grid.append(b);}$('#scene-note').textContent=sceneNote(O.scenes.find(s=>s.id===state.scene));
  }
  function bottomColors(){const c=O.colors;if(!['jeans','chino','shorts','tuta'].includes(state.character.bottom))return c.fabric;const seen=new Set();return[...c.denim,...c.fabric].filter(x=>{if(seen.has(x.id))return false;seen.add(x.id);return true;});}
  function setCharacter(field,value){
@@ -119,6 +120,10 @@
   if(!$('#info-dialog').hidden){if(e.key==='Escape'){e.preventDefault();closeInfo();return;}if(e.key==='Tab'){const items=$$('#info-dialog button,#info-dialog a,#info-dialog summary').filter(n=>n.getClientRects().length&&!n.disabled);if(e.shiftKey&&(document.activeElement===items[0]||document.activeElement===$('#info-dialog .dialog'))){e.preventDefault();items.at(-1).focus();}else if(!e.shiftKey&&document.activeElement===items.at(-1)){e.preventDefault();items[0].focus();}}return;}
   if(e.altKey&&!$('#studio').hidden){if(e.key==='ArrowRight'){e.preventDefault();show(state.step+1);}if(e.key==='ArrowLeft'){e.preventDefault();show(state.step-1);}}
  });
+ function worldStrip(){
+  const box=$('#world-strip'),short={casardi:'Casardi · Barletta',pantheon:'Pantheon · Roma',foro:'Arco di Tito · Roma',epidauro:'Teatro di Epidauro',biblioteca:'Malatestiana · Cesena',paestum:'Hera II · Paestum'};
+  for(const s of O.scenes)box.append(el('figure',{class:'world-preview'},el('img',{src:PORTABLE.thumbs[s.id].nes,alt:short[s.id],width:600,height:400}),el('figcaption',{},short[s.id])));
+ }
  function credits(){
   const box=$('#credits-list');for(const s of O.scenes){const m=PORTABLE.metadata[s.id];box.append(el('div',{class:'credit-entry'},el('strong',{},s.label),el('p',{},m.artist==='Unknown authorUnknown author'?'Autore non identificato · Archivio storico':m.artist,' · ',m.date,' · ',m.lic),el('p',{},el('a',{href:m.page,target:'_blank',rel:'noopener noreferrer'},'Pagina sorgente'),' · ',el('a',{href:m.licurl,target:'_blank',rel:'noopener noreferrer'},'Licenza')),el('p',{},s.note)));}
   $('#lpc-credits').textContent=PORTABLE.lpcCredits;
@@ -127,7 +132,7 @@
  async function boot(){
   try{
    if(!HTMLCanvasElement.prototype.toBlob||!window.TextEncoder||!window.Blob||!window.File)throw new Error('Questo browser non dispone delle funzioni necessarie. Apri il file completo in una versione recente di Chrome, Edge, Firefox o Safari.');
-   $('#sample-photo').src=$('#style-photo').src=PORTABLE.examples.photo;$('#sample-nes').src=$('#style-nes').src=PORTABLE.examples.nes;mode();scenes();animals();companionOptions();live();credits();await R.fontsReady();
+   $('#sample-photo').src=$('#style-photo').src=PORTABLE.examples.photo;$('#sample-nes').src=$('#style-nes').src=PORTABLE.examples.nes;mode();scenes();animals();companionOptions();live();credits();worldStrip();await R.fontsReady();
    CasardiBridge.init();state.ready=true;$('#start').disabled=false;$('#start').innerHTML='Inizia <span aria-hidden="true">→</span>';
   }catch(e){$('#boot-error').textContent=(e.message||'Preparazione non riuscita.')+' Se stai visualizzando un allegato, scaricalo e aprilo in un browser, non nell’anteprima dell’app File.';$('#boot-error').hidden=false;$('#start').textContent='Browser non disponibile';}
  }

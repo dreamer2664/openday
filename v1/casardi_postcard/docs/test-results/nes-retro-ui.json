@@ -1,0 +1,48 @@
+{
+  "result": "PASS",
+  "revision": "3.1 NES Retro",
+  "date": "2026-11-27",
+  "html_sha256": "00dbd839a4749810b8ceefecf83d108a9cbcbf336d198d3ff58dd7fe36e9d3f7",
+  "tests": [
+    {
+      "name": "Benvenuto: miniature proporzionate e nessun overflow a 320 px",
+      "result": "PASS",
+      "width": 320
+    },
+    {
+      "name": "Benvenuto: miniature proporzionate e nessun overflow a 375 px",
+      "result": "PASS",
+      "width": 375
+    },
+    {
+      "name": "Benvenuto: miniature proporzionate e nessun overflow a 390 px",
+      "result": "PASS",
+      "width": 390
+    },
+    {
+      "name": "Benvenuto: miniature proporzionate e nessun overflow a 768 px",
+      "result": "PASS",
+      "width": 768
+    },
+    {
+      "name": "Benvenuto: miniature proporzionate e nessun overflow a 1366 px",
+      "result": "PASS",
+      "width": 1366
+    },
+    {
+      "name": "Sei note NES distinte da quelle fotografiche; Casardi storico identificato in entrambi gli stili",
+      "result": "PASS"
+    },
+    {
+      "name": "Provenienza IA e limiti storici leggibili nel dialogo informazioni",
+      "result": "PASS"
+    },
+    {
+      "name": "Movimento ridotto rispettato; zero eccezioni e zero richieste HTTP/S offline",
+      "result": "PASS"
+    }
+  ],
+  "javascript_errors": [],
+  "http_requests": [],
+  "environment": "Chromium Linux, responsive viewport emulation; not a native Windows or physical phone test"
+}

@@ -9,7 +9,7 @@
     "joint_random_profiles": 400,
     "all_animal_variants_poses": 84
   },
-  "seconds": 9.37,
+  "seconds": 9.59,
   "node": "v20.20.2",
   "input_manifest_sha256": "0fa2d45088813e2fa92abb0a25f44bb5be7ec65446126c705b00c2ae915ee076",
   "scope": "Exact raw RGBA equality for sprites, not a claim of pixel-identical Canvas/Pillow whole postcards.",

@@ -1,8 +1,8 @@
 """
 Tiny pixel-art raster canvas.
 
-Everything in the project (sprites, animals, NES scenes) is painted on a
-`PixelCanvas`: an RGBA palette buffer + a coverage buffer so shapes can be
+Sprites, equipment and animals use a `PixelCanvas`; revised NES backgrounds
+are canonical native PNG paintings loaded separately. The canvas uses: an RGBA palette buffer + a coverage buffer so shapes can be
 painted in layers with hard 1-pixel edges and hard pixel-centre rasterisation. No antialiasing is applied to sprites
 or scenery.
 """

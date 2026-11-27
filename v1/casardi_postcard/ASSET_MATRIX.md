@@ -1,11 +1,11 @@
-# Matrice effettiva degli asset · revisione LPC 3.0
+# Matrice effettiva degli asset · revisione 3.1 NES Retro
 ## Liceo Alfredo Casardi · Open Day 2026/27 · Barletta
 
 Inventario della versione consegnata, **27 novembre 2026**. I colori, i prodotti cartesiani, i preset, le icone derivate e le copie nei due renderer **non vengono contati come nuovi disegni**.
 
-## 1 · Nuova base artistica, non quella precedente
+## 1 · Personaggi LPC mantenuti dalla revisione precedente
 
-I personaggi della precedente consegna sono stati **sostituiti**, non ricolorati. La base attuale è il lavoro modulare degli artisti **Universal LPC Spritesheet Character Generator**, revisione fissata:
+I personaggi LPC già accettati **non sono stati sostituiti nella 3.1**. La vecchia base procedurale è esclusa dalla consegna. Si mantiene il lavoro modulare degli artisti **Universal LPC Spritesheet Character Generator**, revisione fissata:
 
 ```text
 86a3719ee4a7e2e9fb27c7c152e29a741d3e930a
@@ -131,11 +131,14 @@ Ogni foto ha un appoggio e orientamento dedicati. Ombra di contatto, ombra proie
 
 ## 6 · Scenari, campioni e verifiche
 
-- **6 fotografie** con fonte/licenza e **6 ricostruzioni originali NES**, griglia 600 × 400.
+- **6 fotografie** autentiche con fonte/licenza, preservate.
+- **6 nuovi sfondi NES**, tutti sostituiti: illustrazioni **assistite da IA** e rifinite su griglia **600 × 400, 64 colori per sfondo**, non sei ricolorazioni della stessa scena. Nessuna generazione a runtime e nessun asset commerciale. I PNG canonici sono in `assets/nes/`; `manifest.json` registra provenienza/hash/licenze. Nessuna esclusiva rivendicata sugli elementi generati automaticamente.
+- Casardi razionalista asimmetrico, Pantheon interno curvo con intarsi, Arco di Tito a un fornice e selciato, Epidauro dal piano dell’orchestra, Aula del Nuti con volte/plutei, Hera II con colonnato dorico: sei architetture distinte. Piccoli dettagli sono interpretativi, non certificazione filologica.
+- Canvas e Pillow usano gli **stessi file di sfondo**, non implementazioni grafiche divergenti. I vecchi poligoni procedurali sono rimossi; `build_examples.py` non sovrascrive più l’arte.
 - Soggetti, testo e ombre NES vengono composti sulla stessa griglia prima dell’ingrandimento ×5; niente residui fotografici. Le foto sono ricomposte a 3000 × 2000, indipendenti dal monitor.
 - **8 PNG HD** mantenuti e **12 JPG 1200 × 800** in `renders/`. Tutte le 12 scene/stili sono state realmente renderizzate anche dal renderer browser a 3000 × 2000.
 
-Evidenze rigenerate con la nuova base:
+Evidenze della revisione attuale (limiti e hash in TEST_REPORT.md):
 
 | Verifica | Risultato | Cosa non dimostra |
 |---|---|---|
@@ -143,6 +146,7 @@ Evidenze rigenerate con la nuova base:
 | Integrità LPC | **255 PNG sorgenti, 56 definizioni, 85 atlanti** con SHA-256 verificato | Non una nuova autorizzazione legale degli autori |
 | Audit layout | **6048 casi**, zero fuori cornice / sovrapposizioni fra basi dei piedi | Non riconosce da solo prospettiva o ostacoli in foto |
 | Parità Python / JS | **938 confronti RGBA esatti, zero differenze** | Non identità dell’intera cartolina Canvas/Pillow |
-| Tavole visive | `docs/qa/01…04`, render 05, dettaglio Foro 06, render browser 07 | Revisione manuale rappresentativa, non approvazione del committente |
+| Sei sfondi nativi | **6 PNG, dimensioni/opacità/palette/hash e riferimenti verificati** | Non un voto automatico sulla bellezza o fedeltà storica |
+| Tavole visive | `docs/qa/01…04`, render 05, dettaglio Foro 06, render browser 07, nuove architetture 08 | Revisione manuale rappresentativa, non approvazione del committente |
 
 Le tavole sono pixel effettivi del renderer: includono ingrandimenti nearest-neighbor e una striscia 1×, non illustrazioni promozionali o asset diversi dall’app. Per la provenienza completa e le condizioni ShareAlike leggere **SOURCES_AND_LICENSES.md** e i crediti LPC inclusi.
