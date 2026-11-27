@@ -1,0 +1,2544 @@
+{
+  "id": "dio-greco",
+  "title": "Quale dio greco sei?",
+  "intro": "Otto domande, sei strategie di risposta, tre snodi e un profilo esplorativo ispirato a quale dio greco sei?: non è una diagnosi né una misura scientifica.",
+  "category": "06 · QUIZ",
+  "binary": false,
+  "dimensions": [
+    "strategia",
+    "autorità",
+    "cura",
+    "autonomia",
+    "arti",
+    "comunicazione",
+    "conflitto",
+    "trasformazione",
+    "artigianato",
+    "ospitalità"
+  ],
+  "questions": [
+    {
+      "id": "Q01",
+      "number": 1,
+      "prompt": "Un patto fra divinità viene infranto: come ristabilisci un ordine credibile?",
+      "tradeoff": "Una riparazione credibile deve proteggere il patto senza confondere autorità e impunità.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q01.svg",
+        "sourceId": "dio-greco:question:Q01",
+        "alt": "Illustrazione originale pertinente a: Un patto fra divinità viene infranto: come ristabilisci un ordine credibile?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q01.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Ricostruisco i termini del patto e distinguo una violazione intenzionale da un equivoco.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q01-A.svg",
+            "sourceId": "dio-greco:option:Q01-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q01",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q01-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q02"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Immagino due modi di riparare la fiducia, uno pubblico e uno che coinvolga direttamente le parti.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q01-B.svg",
+            "sourceId": "dio-greco:option:Q01-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q01",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q01-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q03"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Propongo una riparazione limitata e verifico se ristabilisce il patto senza imporre una punizione eccessiva.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q01-C.svg",
+            "sourceId": "dio-greco:option:Q01-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q01",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q01-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q04"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Ascolto le divinità e le comunità toccate prima di annunciare chi ha ragione.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q01-D.svg",
+            "sourceId": "dio-greco:option:Q01-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q01",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q01-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q05"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Controllo se la regola protegge tutti o se l'autorità che la invoca è parte del conflitto.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q01-E.svg",
+            "sourceId": "dio-greco:option:Q01-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q01",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q01-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q03"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Definisco un criterio di riparazione e una condizione osservabile per dire che il patto è ricostruito.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q01-F.svg",
+            "sourceId": "dio-greco:option:Q01-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q01",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q01-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q04"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q02",
+      "number": 2,
+      "prompt": "Due comunità chiedono entrambe il tuo aiuto: come scegli la forma di sostegno?",
+      "tradeoff": "Aiutare una comunità può sottrarre risorse all'altra: il criterio va reso visibile.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q02.svg",
+        "sourceId": "dio-greco:question:Q02",
+        "alt": "Illustrazione originale pertinente a: Due comunità chiedono entrambe il tuo aiuto: come scegli la forma di sostegno?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q02.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Ricostruisco il patto prima di scegliere una punizione.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q02-A.svg",
+            "sourceId": "dio-greco:option:Q02-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q02",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q02-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q06"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Offro accoglienza senza trasformarla in un debito.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q02-B.svg",
+            "sourceId": "dio-greco:option:Q02-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q02",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q02-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q06"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Affronto il problema con una competenza concreta.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q02-C.svg",
+            "sourceId": "dio-greco:option:Q02-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q02",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q02-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q06"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Mi muovo, raccolgo notizie e torno con un piano.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q02-D.svg",
+            "sourceId": "dio-greco:option:Q02-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q02",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q02-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q06"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Prima di esercitare potere, ascolto chi subirà la decisione e chiarisco le ragioni.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q02-E.svg",
+            "sourceId": "dio-greco:option:Q02-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q02",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q02-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q06"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Traduco il problema in termini comprensibili a chi non condivide i miei presupposti.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q02-F.svg",
+            "sourceId": "dio-greco:option:Q02-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q02",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q02-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q06"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q03",
+      "number": 3,
+      "prompt": "Un viaggio richiede una guida e una parola persuasiva: quale ruolo assumi?",
+      "tradeoff": "Una guida efficace non controlla ogni voce: deve decidere quando parlare e quando lasciare spazio.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q03.svg",
+        "sourceId": "dio-greco:question:Q03",
+        "alt": "Illustrazione originale pertinente a: Un viaggio richiede una guida e una parola persuasiva: quale ruolo assumi?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q03.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Distinguo l’autorità legittima dal semplice comando.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q03-A.svg",
+            "sourceId": "dio-greco:option:Q03-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q03",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q03-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q06"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Provo a proteggere persone e luoghi insieme.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q03-B.svg",
+            "sourceId": "dio-greco:option:Q03-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q03",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q03-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q06"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Trasformo la frustrazione in un’opera o in un’invenzione.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q03-C.svg",
+            "sourceId": "dio-greco:option:Q03-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q03",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q03-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q06"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Uso una parola chiara prima di ricorrere allo scontro.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q03-D.svg",
+            "sourceId": "dio-greco:option:Q03-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q03",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q03-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q06"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Verifico se la regola vale anche per chi la impone.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q03-E.svg",
+            "sourceId": "dio-greco:option:Q03-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q03",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q03-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q06"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Cerco un intermediario affidabile e controllo che il messaggio non cambi lungo il percorso.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q03-F.svg",
+            "sourceId": "dio-greco:option:Q03-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q03",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q03-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q06"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q04",
+      "number": 4,
+      "prompt": "Un'opera creata da te viene rifiutata: la difendi, la trasformi o la condividi?",
+      "tradeoff": "Cambiare l'opera può salvarne il senso, ma può anche cancellare ciò che l'autore voleva difendere.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q04.svg",
+        "sourceId": "dio-greco:question:Q04",
+        "alt": "Illustrazione originale pertinente a: Un'opera creata da te viene rifiutata: la difendi, la trasformi o la condividi?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q04.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Rendo visibile il costo di rompere l’accordo.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q04-A.svg",
+            "sourceId": "dio-greco:option:Q04-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q04",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q04-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q06"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Cerco un gesto di cura che possa essere sostenuto nel tempo.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q04-B.svg",
+            "sourceId": "dio-greco:option:Q04-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q04",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q04-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q06"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Rendo visibile il lavoro che di solito resta nell’ombra.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q04-C.svg",
+            "sourceId": "dio-greco:option:Q04-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q04",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q04-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q06"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Apro un passaggio fra mondi che non si stavano ascoltando.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q04-D.svg",
+            "sourceId": "dio-greco:option:Q04-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q04",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q04-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q06"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Cerco una riparazione proporzionata, non un gesto che alimenti altra vendetta.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q04-E.svg",
+            "sourceId": "dio-greco:option:Q04-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q04",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q04-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q06"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Creo uno spazio di confronto in cui nessuna parte debba rinunciare alla propria voce.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q04-F.svg",
+            "sourceId": "dio-greco:option:Q04-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q04",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q04-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q06"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q05",
+      "number": 5,
+      "prompt": "Una festa si interrompe per un conflitto: come riporti l'attenzione sul bene comune?",
+      "tradeoff": "La festa unisce persone diverse, ma non tutte vivono il conflitto nello stesso modo.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q05.svg",
+        "sourceId": "dio-greco:question:Q05",
+        "alt": "Illustrazione originale pertinente a: Una festa si interrompe per un conflitto: come riporti l'attenzione sul bene comune?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q05.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Cerco una regola condivisa e chiarisco chi ne risponde.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q05-A.svg",
+            "sourceId": "dio-greco:option:Q05-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q05",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q05-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q06"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Guardo prima a chi è più esposto e a cosa gli serve ora.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q05-B.svg",
+            "sourceId": "dio-greco:option:Q05-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q05",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q05-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q06"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Creo qualcosa di utile e bello, poi ascolto come viene ricevuto.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q05-C.svg",
+            "sourceId": "dio-greco:option:Q05-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q05",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q05-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q06"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Cerco chi può tradurre il problema fra comunità diverse.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q05-D.svg",
+            "sourceId": "dio-greco:option:Q05-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q05",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q05-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q06"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Definisco un confine che protegga le persone senza trasformarsi in punizione arbitraria.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q05-E.svg",
+            "sourceId": "dio-greco:option:Q05-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q05",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q05-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q06"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Faccio parlare le comunità coinvolte prima di annunciare una soluzione.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q05-F.svg",
+            "sourceId": "dio-greco:option:Q05-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q05",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q05-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q06"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q06",
+      "number": 6,
+      "prompt": "Un'offesa pubblica richiede una risposta: quale costo sei disposto a pagare?",
+      "tradeoff": "La risposta pubblica protegge la dignità oppure alimenta una vendetta che coinvolge innocenti.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q06.svg",
+        "sourceId": "dio-greco:question:Q06",
+        "alt": "Illustrazione originale pertinente a: Un'offesa pubblica richiede una risposta: quale costo sei disposto a pagare?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q06.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Valuto l'offesa, il danno che ha prodotto e il rischio di una risposta sproporzionata.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q06-A.svg",
+            "sourceId": "dio-greco:option:Q06-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q06",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q06-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q07"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Cerco una risposta simbolica che riconosca la ferita senza trasformarla in una catena di vendette.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q06-B.svg",
+            "sourceId": "dio-greco:option:Q06-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q06",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q06-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q08"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Faccio un passo temporaneo per fermare l'escalation, poi riapro il confronto.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q06-C.svg",
+            "sourceId": "dio-greco:option:Q06-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q06",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q06-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q09"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Chiedo a chi è stato offeso quale riparazione considera significativa.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q06-D.svg",
+            "sourceId": "dio-greco:option:Q06-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q06",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q06-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q10"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Verifico se l'offesa pubblica ha colpito anche persone che non possono rispondere in pubblico.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q06-E.svg",
+            "sourceId": "dio-greco:option:Q06-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q06",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q06-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q08"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Stabilisco quale limite non superare e chi può chiedere una revisione della risposta.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q06-F.svg",
+            "sourceId": "dio-greco:option:Q06-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q06",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q06-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q09"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q07",
+      "number": 7,
+      "prompt": "Un viandante arriva senza risorse: quale gesto definisce la tua ospitalità?",
+      "tradeoff": "Ospitalità e prudenza devono convivere quando non conosci la storia del viandante.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q07.svg",
+        "sourceId": "dio-greco:question:Q07",
+        "alt": "Illustrazione originale pertinente a: Un viandante arriva senza risorse: quale gesto definisce la tua ospitalità?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q07.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Distinguo l’autorità legittima dal semplice comando.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q07-A.svg",
+            "sourceId": "dio-greco:option:Q07-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q07",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q07-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q11"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Provo a proteggere persone e luoghi insieme.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q07-B.svg",
+            "sourceId": "dio-greco:option:Q07-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q07",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q07-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q11"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Trasformo la frustrazione in un’opera o in un’invenzione.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q07-C.svg",
+            "sourceId": "dio-greco:option:Q07-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q07",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q07-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q11"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Uso una parola chiara prima di ricorrere allo scontro.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q07-D.svg",
+            "sourceId": "dio-greco:option:Q07-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q07",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q07-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q11"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Verifico se la regola vale anche per chi la impone.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q07-E.svg",
+            "sourceId": "dio-greco:option:Q07-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q07",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q07-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q11"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Cerco un intermediario affidabile e controllo che il messaggio non cambi lungo il percorso.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q07-F.svg",
+            "sourceId": "dio-greco:option:Q07-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q07",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q07-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q11"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q08",
+      "number": 8,
+      "prompt": "Una decisione deve unire ragione, coraggio e conseguenze: da dove cominci?",
+      "tradeoff": "Una soluzione razionale può ignorare il dolore; una risposta coraggiosa può trascurare le conseguenze.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q08.svg",
+        "sourceId": "dio-greco:question:Q08",
+        "alt": "Illustrazione originale pertinente a: Una decisione deve unire ragione, coraggio e conseguenze: da dove cominci?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q08.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Rendo visibile il costo di rompere l’accordo.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q08-A.svg",
+            "sourceId": "dio-greco:option:Q08-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q08",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q08-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q11"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Cerco un gesto di cura che possa essere sostenuto nel tempo.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q08-B.svg",
+            "sourceId": "dio-greco:option:Q08-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q08",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q08-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q11"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Rendo visibile il lavoro che di solito resta nell’ombra.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q08-C.svg",
+            "sourceId": "dio-greco:option:Q08-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q08",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q08-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q11"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Apro un passaggio fra mondi che non si stavano ascoltando.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q08-D.svg",
+            "sourceId": "dio-greco:option:Q08-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q08",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q08-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q11"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Cerco una riparazione proporzionata, non un gesto che alimenti altra vendetta.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q08-E.svg",
+            "sourceId": "dio-greco:option:Q08-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q08",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q08-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q11"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Creo uno spazio di confronto in cui nessuna parte debba rinunciare alla propria voce.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q08-F.svg",
+            "sourceId": "dio-greco:option:Q08-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q08",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q08-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q11"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q09",
+      "number": 9,
+      "prompt": "Una promessa contrasta con un dovere più grande: come sciogli il nodo?",
+      "tradeoff": "Mantenere la promessa tutela la fiducia, ma il dovere concorrente non può essere liquidato.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q09.svg",
+        "sourceId": "dio-greco:question:Q09",
+        "alt": "Illustrazione originale pertinente a: Una promessa contrasta con un dovere più grande: come sciogli il nodo?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q09.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Cerco una regola condivisa e chiarisco chi ne risponde.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q09-A.svg",
+            "sourceId": "dio-greco:option:Q09-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q09",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q09-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q11"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Guardo prima a chi è più esposto e a cosa gli serve ora.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q09-B.svg",
+            "sourceId": "dio-greco:option:Q09-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q09",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q09-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q11"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Creo qualcosa di utile e bello, poi ascolto come viene ricevuto.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q09-C.svg",
+            "sourceId": "dio-greco:option:Q09-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q09",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q09-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q11"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Cerco chi può tradurre il problema fra comunità diverse.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q09-D.svg",
+            "sourceId": "dio-greco:option:Q09-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q09",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q09-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q11"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Definisco un confine che protegga le persone senza trasformarsi in punizione arbitraria.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q09-E.svg",
+            "sourceId": "dio-greco:option:Q09-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q09",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q09-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q11"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Faccio parlare le comunità coinvolte prima di annunciare una soluzione.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q09-F.svg",
+            "sourceId": "dio-greco:option:Q09-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q09",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q09-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q11"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q10",
+      "number": 10,
+      "prompt": "Un luogo naturale è minacciato da un progetto utile: che equilibrio cerchi?",
+      "tradeoff": "Il progetto porta un beneficio comune, ma trasforma un luogo che non appartiene solo ai decisori.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q10.svg",
+        "sourceId": "dio-greco:question:Q10",
+        "alt": "Illustrazione originale pertinente a: Un luogo naturale è minacciato da un progetto utile: che equilibrio cerchi?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q10.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Ricostruisco il patto prima di scegliere una punizione.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q10-A.svg",
+            "sourceId": "dio-greco:option:Q10-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q10",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q10-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q11"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Offro accoglienza senza trasformarla in un debito.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q10-B.svg",
+            "sourceId": "dio-greco:option:Q10-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q10",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q10-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q11"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Affronto il problema con una competenza concreta.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q10-C.svg",
+            "sourceId": "dio-greco:option:Q10-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q10",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q10-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q11"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Mi muovo, raccolgo notizie e torno con un piano.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q10-D.svg",
+            "sourceId": "dio-greco:option:Q10-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q10",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q10-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q11"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Prima di esercitare potere, ascolto chi subirà la decisione e chiarisco le ragioni.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q10-E.svg",
+            "sourceId": "dio-greco:option:Q10-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q10",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q10-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q11"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Traduco il problema in termini comprensibili a chi non condivide i miei presupposti.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q10-F.svg",
+            "sourceId": "dio-greco:option:Q10-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q10",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q10-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q11"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q11",
+      "number": 11,
+      "prompt": "Una comunità affronta una carestia: quale aiuto avvii per primo?",
+      "tradeoff": "Il soccorso immediato e la prevenzione futura possono richiedere risorse diverse.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q11.svg",
+        "sourceId": "dio-greco:question:Q11",
+        "alt": "Illustrazione originale pertinente a: Una comunità affronta una carestia: quale aiuto avvii per primo?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q11.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Controllo scorte, tempi e distribuzione per individuare dove il bisogno è più urgente.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q11-A.svg",
+            "sourceId": "dio-greco:option:Q11-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q11",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q11-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q12"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Confronto soccorso immediato, semina futura e condivisione fra comunità.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q11-B.svg",
+            "sourceId": "dio-greco:option:Q11-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q11",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q11-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q12"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Avvio un aiuto circoscritto e verifico rapidamente se raggiunge chi ne ha più bisogno.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q11-C.svg",
+            "sourceId": "dio-greco:option:Q11-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q11",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q11-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q13"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Coordino le comunità per distribuire ruoli e rendere pubblici i criteri di priorità.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q11-D.svg",
+            "sourceId": "dio-greco:option:Q11-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q11",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q11-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q13"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Ascolto chi coltiva o distribuisce il cibo: può conoscere ostacoli invisibili ai decisori.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q11-E.svg",
+            "sourceId": "dio-greco:option:Q11-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q11",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q11-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q14"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Definisco un indicatore di bisogno e una scadenza per rivedere le priorità.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q11-F.svg",
+            "sourceId": "dio-greco:option:Q11-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q11",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q11-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q14"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q12",
+      "number": 12,
+      "prompt": "Un conflitto si risolve con strategia o forza: quale limite non superi?",
+      "tradeoff": "La forza può fermare un danno urgente, ma lasciare una possibilità di uscita cambia il dopo.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q12.svg",
+        "sourceId": "dio-greco:question:Q12",
+        "alt": "Illustrazione originale pertinente a: Un conflitto si risolve con strategia o forza: quale limite non superi?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q12.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Rendo visibile il costo di rompere l’accordo.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q12-A.svg",
+            "sourceId": "dio-greco:option:Q12-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q12",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q12-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q15"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Cerco un gesto di cura che possa essere sostenuto nel tempo.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q12-B.svg",
+            "sourceId": "dio-greco:option:Q12-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q12",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q12-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q15"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Rendo visibile il lavoro che di solito resta nell’ombra.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q12-C.svg",
+            "sourceId": "dio-greco:option:Q12-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q12",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q12-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q15"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Apro un passaggio fra mondi che non si stavano ascoltando.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q12-D.svg",
+            "sourceId": "dio-greco:option:Q12-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q12",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q12-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q15"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Cerco una riparazione proporzionata, non un gesto che alimenti altra vendetta.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q12-E.svg",
+            "sourceId": "dio-greco:option:Q12-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q12",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q12-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q15"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Creo uno spazio di confronto in cui nessuna parte debba rinunciare alla propria voce.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q12-F.svg",
+            "sourceId": "dio-greco:option:Q12-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q12",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q12-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q15"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q13",
+      "number": 13,
+      "prompt": "Il tuo lavoro manuale è indispensabile ma invisibile: che riconoscimento chiedi?",
+      "tradeoff": "Il riconoscimento può riparare un'ingiustizia o diventare una ricompensa simbolica senza cambiamenti reali.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q13.svg",
+        "sourceId": "dio-greco:question:Q13",
+        "alt": "Illustrazione originale pertinente a: Il tuo lavoro manuale è indispensabile ma invisibile: che riconoscimento chiedi?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q13.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Cerco una regola condivisa e chiarisco chi ne risponde.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q13-A.svg",
+            "sourceId": "dio-greco:option:Q13-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q13",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q13-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q15"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Guardo prima a chi è più esposto e a cosa gli serve ora.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q13-B.svg",
+            "sourceId": "dio-greco:option:Q13-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q13",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q13-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q15"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Creo qualcosa di utile e bello, poi ascolto come viene ricevuto.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q13-C.svg",
+            "sourceId": "dio-greco:option:Q13-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q13",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q13-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q15"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Cerco chi può tradurre il problema fra comunità diverse.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q13-D.svg",
+            "sourceId": "dio-greco:option:Q13-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q13",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q13-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q15"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Definisco un confine che protegga le persone senza trasformarsi in punizione arbitraria.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q13-E.svg",
+            "sourceId": "dio-greco:option:Q13-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q13",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q13-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q15"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Faccio parlare le comunità coinvolte prima di annunciare una soluzione.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q13-F.svg",
+            "sourceId": "dio-greco:option:Q13-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q13",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q13-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q15"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q14",
+      "number": 14,
+      "prompt": "Il cambiamento ti toglie una posizione comoda: cosa proteggi?",
+      "tradeoff": "Perdere un privilegio non equivale sempre a perdere un diritto: occorre distinguere i due piani.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q14.svg",
+        "sourceId": "dio-greco:question:Q14",
+        "alt": "Illustrazione originale pertinente a: Il cambiamento ti toglie una posizione comoda: cosa proteggi?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q14.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Ricostruisco il patto prima di scegliere una punizione.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q14-A.svg",
+            "sourceId": "dio-greco:option:Q14-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q14",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q14-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q15"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Offro accoglienza senza trasformarla in un debito.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q14-B.svg",
+            "sourceId": "dio-greco:option:Q14-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q14",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q14-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q15"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Affronto il problema con una competenza concreta.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q14-C.svg",
+            "sourceId": "dio-greco:option:Q14-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q14",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q14-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q15"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Mi muovo, raccolgo notizie e torno con un piano.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q14-D.svg",
+            "sourceId": "dio-greco:option:Q14-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q14",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q14-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q15"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Prima di esercitare potere, ascolto chi subirà la decisione e chiarisco le ragioni.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q14-E.svg",
+            "sourceId": "dio-greco:option:Q14-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q14",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q14-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q15"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Traduco il problema in termini comprensibili a chi non condivide i miei presupposti.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q14-F.svg",
+            "sourceId": "dio-greco:option:Q14-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q14",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q14-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q15"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q15",
+      "number": 15,
+      "prompt": "Un messaggio deve attraversare mondi diversi: come lo rendi comprensibile?",
+      "tradeoff": "Una parola tradotta male può trasformare un accordo; chiarire il destinatario conta quanto il messaggio.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q15.svg",
+        "sourceId": "dio-greco:question:Q15",
+        "alt": "Illustrazione originale pertinente a: Un messaggio deve attraversare mondi diversi: come lo rendi comprensibile?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q15.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Distinguo l’autorità legittima dal semplice comando.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q15-A.svg",
+            "sourceId": "dio-greco:option:Q15-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q15",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q15-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla.",
+          "next": "Q16"
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Provo a proteggere persone e luoghi insieme.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q15-B.svg",
+            "sourceId": "dio-greco:option:Q15-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q15",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q15-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto.",
+          "next": "Q16"
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Trasformo la frustrazione in un’opera o in un’invenzione.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q15-C.svg",
+            "sourceId": "dio-greco:option:Q15-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q15",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q15-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile.",
+          "next": "Q16"
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Uso una parola chiara prima di ricorrere allo scontro.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q15-D.svg",
+            "sourceId": "dio-greco:option:Q15-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q15",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q15-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità.",
+          "next": "Q16"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Verifico se la regola vale anche per chi la impone.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q15-E.svg",
+            "sourceId": "dio-greco:option:Q15-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q15",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q15-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere.",
+          "next": "Q16"
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Cerco un intermediario affidabile e controllo che il messaggio non cambi lungo il percorso.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q15-F.svg",
+            "sourceId": "dio-greco:option:Q15-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q15",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q15-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta.",
+          "next": "Q16"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q16",
+      "number": 16,
+      "prompt": "Quale ambivalenza divina ti somiglia più di una virtù semplice?",
+      "tradeoff": "Le figure mitiche sono ambivalenti e le tradizioni variano: una qualità isolata non esaurisce un dio.",
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/question-Q16.svg",
+        "sourceId": "dio-greco:question:Q16",
+        "alt": "Illustrazione originale pertinente a: Quale ambivalenza divina ti somiglia più di una virtù semplice?",
+        "manifestPath": "assets/quiz-art/dio-greco/question-Q16.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Ordine e patto",
+          "text": "Rendo visibile il costo di rompere l’accordo.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q16-A.svg",
+            "sourceId": "dio-greco:option:Q16-A",
+            "alt": "Illustrazione originale: Ordine e patto — Quale dio greco sei?, Q16",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q16-A.svg"
+          },
+          "scores": {
+            "strategia": 2,
+            "autorità": 2,
+            "cura": 1
+          },
+          "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla."
+        },
+        {
+          "id": "B",
+          "label": "Cura e ospitalità",
+          "text": "Cerco un gesto di cura che possa essere sostenuto nel tempo.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q16-B.svg",
+            "sourceId": "dio-greco:option:Q16-B",
+            "alt": "Illustrazione originale: Cura e ospitalità — Quale dio greco sei?, Q16",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q16-B.svg"
+          },
+          "scores": {
+            "cura": 2,
+            "ospitalità": 2,
+            "trasformazione": 1
+          },
+          "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto."
+        },
+        {
+          "id": "C",
+          "label": "Arte e abilità",
+          "text": "Rendo visibile il lavoro che di solito resta nell’ombra.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q16-C.svg",
+            "sourceId": "dio-greco:option:Q16-C",
+            "alt": "Illustrazione originale: Arte e abilità — Quale dio greco sei?, Q16",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q16-C.svg"
+          },
+          "scores": {
+            "arti": 2,
+            "artigianato": 2,
+            "autonomia": 1
+          },
+          "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile."
+        },
+        {
+          "id": "D",
+          "label": "Viaggio e parola",
+          "text": "Apro un passaggio fra mondi che non si stavano ascoltando.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q16-D.svg",
+            "sourceId": "dio-greco:option:Q16-D",
+            "alt": "Illustrazione originale: Viaggio e parola — Quale dio greco sei?, Q16",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q16-D.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "autonomia": 1,
+            "strategia": 1
+          },
+          "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità."
+        },
+        {
+          "id": "E",
+          "label": "Cerco un limite giusto",
+          "text": "Cerco una riparazione proporzionata, non un gesto che alimenti altra vendetta.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q16-E.svg",
+            "sourceId": "dio-greco:option:Q16-E",
+            "alt": "Illustrazione originale: Cerco un limite giusto — Quale dio greco sei?, Q16",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q16-E.svg"
+          },
+          "scores": {
+            "autorità": 1,
+            "cura": 1,
+            "strategia": 1,
+            "ospitalità": 1
+          },
+          "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere."
+        },
+        {
+          "id": "F",
+          "label": "Metto in relazione le voci",
+          "text": "Creo uno spazio di confronto in cui nessuna parte debba rinunciare alla propria voce.",
+          "image": {
+            "src": "../assets/quiz-art/dio-greco/option-Q16-F.svg",
+            "sourceId": "dio-greco:option:Q16-F",
+            "alt": "Illustrazione originale: Metto in relazione le voci — Quale dio greco sei?, Q16",
+            "manifestPath": "assets/quiz-art/dio-greco/option-Q16-F.svg"
+          },
+          "scores": {
+            "comunicazione": 2,
+            "ospitalità": 1,
+            "cura": 1,
+            "trasformazione": 1
+          },
+          "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta."
+        }
+      ],
+      "minimumOptions": 6,
+      "terminal": true
+    }
+  ],
+  "results": [
+    {
+      "id": "zeus",
+      "title": "Zeus",
+      "summary": "Affinità con il governo dei patti e con un’autorità che deve essere riconosciuta.",
+      "strength": "Visione dell’insieme e capacità di assumere responsabilità.",
+      "tension": "Nei miti Zeus è anche una figura potente e contraddittoria, non un modello morale.",
+      "nudge": "Chiediti come rendere controllabile il potere che eserciti.",
+      "sources": [
+        "Esiodo, Teogonia; Inno omerico a Zeus."
+      ],
+      "scoreStyle": "A",
+      "match": [
+        "strategia",
+        "autorità"
+      ],
+      "branchMatch": {
+        "Q01": "A",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-zeus.svg",
+        "sourceId": "dio-greco:result:zeus",
+        "alt": "Illustrazione originale del profilo Zeus",
+        "manifestPath": "assets/quiz-art/dio-greco/result-zeus.svg"
+      }
+    },
+    {
+      "id": "hera",
+      "title": "Hera",
+      "summary": "Affinità con il peso delle alleanze, dei legami e del loro riconoscimento pubblico.",
+      "strength": "Memoria dei patti e attenzione alla dignità.",
+      "tension": "I racconti la collocano spesso in conflitti dinastici e matrimoniali.",
+      "nudge": "Distingui tutela di un legame e controllo sulle persone.",
+      "sources": [
+        "Omero, Iliade; Esiodo, Teogonia."
+      ],
+      "scoreStyle": "B",
+      "match": [
+        "cura",
+        "ospitalità"
+      ],
+      "branchMatch": {
+        "Q01": "B",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-hera.svg",
+        "sourceId": "dio-greco:result:hera",
+        "alt": "Illustrazione originale del profilo Hera",
+        "manifestPath": "assets/quiz-art/dio-greco/result-hera.svg"
+      }
+    },
+    {
+      "id": "poseidone",
+      "title": "Poseidone",
+      "summary": "Ti somiglia la forza che sostiene e insieme sconvolge: il mare non è mai del tutto addomesticato.",
+      "strength": "Energia e rispetto per forze più grandi del singolo.",
+      "tension": "La potenza senza misura può travolgere chi non ha voce.",
+      "nudge": "Immagina un limite che renda la forza anche una protezione.",
+      "sources": [
+        "Omero, Odissea; Inno omerico a Poseidone."
+      ],
+      "scoreStyle": "C",
+      "match": [
+        "arti",
+        "artigianato"
+      ],
+      "branchMatch": {
+        "Q01": "C",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-poseidone.svg",
+        "sourceId": "dio-greco:result:poseidone",
+        "alt": "Illustrazione originale del profilo Poseidone",
+        "manifestPath": "assets/quiz-art/dio-greco/result-poseidone.svg"
+      }
+    },
+    {
+      "id": "demetra",
+      "title": "Demetra",
+      "summary": "Affinità con cura, nutrimento e legame fra comunità e cicli della natura.",
+      "strength": "Capacità di proteggere ciò da cui dipende la vita comune.",
+      "tension": "La cura può trasformarsi in rifiuto quando il dolore non trova ascolto.",
+      "nudge": "Cerca una forma di cura che lasci spazio anche alla trasformazione.",
+      "sources": [
+        "Inno omerico a Demetra."
+      ],
+      "scoreStyle": "D",
+      "match": [
+        "comunicazione",
+        "autonomia"
+      ],
+      "branchMatch": {
+        "Q01": "D",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-demetra.svg",
+        "sourceId": "dio-greco:result:demetra",
+        "alt": "Illustrazione originale del profilo Demetra",
+        "manifestPath": "assets/quiz-art/dio-greco/result-demetra.svg"
+      }
+    },
+    {
+      "id": "atena",
+      "title": "Atena",
+      "summary": "Ti guida una strategia che unisce competenza, misura e intelligenza pratica.",
+      "strength": "Pianificazione e capacità di trovare una soluzione non impulsiva.",
+      "tension": "La ragione non rende automaticamente giusta ogni scelta.",
+      "nudge": "Ascolta chi subisce le conseguenze del piano.",
+      "sources": [
+        "Omero, Odissea; Inno omerico ad Atena."
+      ],
+      "scoreStyle": "E",
+      "match": [
+        "autorità",
+        "cura"
+      ],
+      "branchMatch": {
+        "Q01": "E",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-atena.svg",
+        "sourceId": "dio-greco:result:atena",
+        "alt": "Illustrazione originale del profilo Atena",
+        "manifestPath": "assets/quiz-art/dio-greco/result-atena.svg"
+      }
+    },
+    {
+      "id": "apollo",
+      "title": "Apollo",
+      "summary": "Ti interessa l’incontro fra arti, conoscenza, rituale e parole che orientano.",
+      "strength": "Ricerca di chiarezza e forma.",
+      "tension": "Un responso può essere ambiguo: interpretarlo richiede responsabilità.",
+      "nudge": "Distingui ciò che sai da ciò che stai interpretando.",
+      "sources": [
+        "Inni omerici ad Apollo; Esiodo, Teogonia."
+      ],
+      "scoreStyle": "F",
+      "match": [
+        "comunicazione",
+        "ospitalità"
+      ],
+      "branchMatch": {
+        "Q01": "F",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-apollo.svg",
+        "sourceId": "dio-greco:result:apollo",
+        "alt": "Illustrazione originale del profilo Apollo",
+        "manifestPath": "assets/quiz-art/dio-greco/result-apollo.svg"
+      }
+    },
+    {
+      "id": "artemide",
+      "title": "Artemide",
+      "summary": "Valorizzi autonomia, confini e rispetto per spazi non interamente controllabili.",
+      "strength": "Indipendenza e attenzione alla natura.",
+      "tension": "Proteggere un confine può richiedere di negoziare con chi arriva da fuori.",
+      "nudge": "Chiarisci chi stabilisce il confine e a tutela di chi.",
+      "sources": [
+        "Inno omerico ad Artemide; Callimaco, Inno ad Artemide."
+      ],
+      "scoreStyle": "A",
+      "match": [
+        "strategia",
+        "autorità"
+      ],
+      "branchMatch": {
+        "Q01": "A",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-artemide.svg",
+        "sourceId": "dio-greco:result:artemide",
+        "alt": "Illustrazione originale del profilo Artemide",
+        "manifestPath": "assets/quiz-art/dio-greco/result-artemide.svg"
+      }
+    },
+    {
+      "id": "ares",
+      "title": "Ares",
+      "summary": "Riconosci il conflitto e non fingi che scompaia solo evitando di nominarlo.",
+      "strength": "Coraggio di affrontare la tensione.",
+      "tension": "Nei miti la guerra porta costi e ferite, non una scorciatoia gloriosa.",
+      "nudge": "Prima dello scontro, individua un’uscita e una persona da proteggere.",
+      "sources": [
+        "Omero, Iliade; Esiodo, Teogonia."
+      ],
+      "scoreStyle": "B",
+      "match": [
+        "cura",
+        "ospitalità"
+      ],
+      "branchMatch": {
+        "Q01": "B",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-ares.svg",
+        "sourceId": "dio-greco:result:ares",
+        "alt": "Illustrazione originale del profilo Ares",
+        "manifestPath": "assets/quiz-art/dio-greco/result-ares.svg"
+      }
+    },
+    {
+      "id": "afrodite",
+      "title": "Afrodite",
+      "summary": "Noti attrazione, desiderio e relazioni come forze che cambiano le decisioni.",
+      "strength": "Sensibilità ai legami e alla bellezza.",
+      "tension": "Desiderio e consenso non sono la stessa cosa.",
+      "nudge": "Fai spazio alla reciprocità, non soltanto all’intensità.",
+      "sources": [
+        "Inno omerico ad Afrodite; Esiodo, Teogonia."
+      ],
+      "scoreStyle": "C",
+      "match": [
+        "arti",
+        "artigianato"
+      ],
+      "branchMatch": {
+        "Q01": "C",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-afrodite.svg",
+        "sourceId": "dio-greco:result:afrodite",
+        "alt": "Illustrazione originale del profilo Afrodite",
+        "manifestPath": "assets/quiz-art/dio-greco/result-afrodite.svg"
+      }
+    },
+    {
+      "id": "efesto",
+      "title": "Efesto",
+      "summary": "Ti riconosci nel lavoro paziente che trasforma materiali e rende possibile ciò che prima non c’era.",
+      "strength": "Abilità tecnica e capacità di costruire.",
+      "tension": "Il lavoro indispensabile può rimanere invisibile o non riconosciuto.",
+      "nudge": "Dai valore sia all’opera sia a chi la realizza.",
+      "sources": [
+        "Omero, Iliade; Esiodo, Teogonia."
+      ],
+      "scoreStyle": "D",
+      "match": [
+        "comunicazione",
+        "autonomia"
+      ],
+      "branchMatch": {
+        "Q01": "D",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-efesto.svg",
+        "sourceId": "dio-greco:result:efesto",
+        "alt": "Illustrazione originale del profilo Efesto",
+        "manifestPath": "assets/quiz-art/dio-greco/result-efesto.svg"
+      }
+    },
+    {
+      "id": "ermes",
+      "title": "Ermes",
+      "summary": "Ti muovi fra ruoli e confini, con curiosità per messaggi, scambi e passaggi.",
+      "strength": "Comunicazione agile e capacità di mediazione.",
+      "tension": "L’astuzia può diventare inganno se manca trasparenza.",
+      "nudge": "Dichiara cosa sai e cosa stai negoziando.",
+      "sources": [
+        "Inno omerico a Ermes."
+      ],
+      "scoreStyle": "E",
+      "match": [
+        "autorità",
+        "cura"
+      ],
+      "branchMatch": {
+        "Q01": "E",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-ermes.svg",
+        "sourceId": "dio-greco:result:ermes",
+        "alt": "Illustrazione originale del profilo Ermes",
+        "manifestPath": "assets/quiz-art/dio-greco/result-ermes.svg"
+      }
+    },
+    {
+      "id": "dioniso",
+      "title": "Dioniso",
+      "summary": "Ti interessa ciò che rompe un’identità troppo rigida e apre una trasformazione collettiva.",
+      "strength": "Immaginazione, energia e capacità di cambiare prospettiva.",
+      "tension": "La liberazione può essere destabilizzante e non è sempre scelta da tutti.",
+      "nudge": "Crea uno spazio in cui partecipare sia davvero una scelta.",
+      "sources": [
+        "Euripide, Baccanti; Inno omerico a Dioniso."
+      ],
+      "scoreStyle": "F",
+      "match": [
+        "comunicazione",
+        "ospitalità"
+      ],
+      "branchMatch": {
+        "Q01": "F",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-dioniso.svg",
+        "sourceId": "dio-greco:result:dioniso",
+        "alt": "Illustrazione originale del profilo Dioniso",
+        "manifestPath": "assets/quiz-art/dio-greco/result-dioniso.svg"
+      }
+    },
+    {
+      "id": "estia",
+      "title": "Estia",
+      "summary": "Dai valore al luogo condiviso, alla continuità e alla cura quotidiana che lo rende abitabile.",
+      "strength": "Stabilità e attenzione alla comunità.",
+      "tension": "La quiete può diventare esclusione se il luogo non accoglie chi arriva.",
+      "nudge": "Chiediti chi può entrare nel cerchio e chi resta fuori.",
+      "sources": [
+        "Inni omerici a Estia."
+      ],
+      "scoreStyle": "A",
+      "match": [
+        "strategia",
+        "autorità"
+      ],
+      "branchMatch": {
+        "Q01": "A",
+        "Q06": "C",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-estia.svg",
+        "sourceId": "dio-greco:result:estia",
+        "alt": "Illustrazione originale del profilo Estia",
+        "manifestPath": "assets/quiz-art/dio-greco/result-estia.svg"
+      }
+    },
+    {
+      "id": "ade",
+      "title": "Ade",
+      "summary": "Affronti ciò che è nascosto o difficile senza confondere invisibilità e assenza.",
+      "strength": "Serietà, discrezione e attenzione ai confini.",
+      "tension": "Nel mito il regno dei morti non equivale a un semplice antagonista malvagio.",
+      "nudge": "Dai un nome a ciò che è stato rimosso prima di decidere come agire.",
+      "sources": [
+        "Omero, Odissea; Inno omerico a Demetra."
+      ],
+      "scoreStyle": "B",
+      "match": [
+        "cura",
+        "ospitalità"
+      ],
+      "branchMatch": {
+        "Q01": "B",
+        "Q06": "C",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Britannica — Greek mythology",
+          "url": "https://www.britannica.com/topic/Greek-mythology"
+        },
+        {
+          "label": "Perseus Digital Library — testi antichi",
+          "url": "https://www.perseus.tufts.edu/hopper/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/dio-greco/result-ade.svg",
+        "sourceId": "dio-greco:result:ade",
+        "alt": "Illustrazione originale del profilo Ade",
+        "manifestPath": "assets/quiz-art/dio-greco/result-ade.svg"
+      }
+    }
+  ],
+  "startQuestion": "Q01",
+  "sessionLength": 8,
+  "minimumResults": 8,
+  "branchQuestions": [
+    "Q01",
+    "Q06",
+    "Q11"
+  ]
+}

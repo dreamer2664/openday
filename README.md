@@ -1,44 +1,51 @@
-# CASARDI 8-BIT — Il segnale fantasma
+# Casardi Arcade + 8-bit — progetti Open Day
 
-Un’avventura platform narrativa originale per l’Open Day del Liceo Casardi. Il prototipo attuale gira nel browser senza librerie o risorse remote: grafica procedurale su canvas e suoni sintetizzati localmente via Web Audio.
+Un catalogo arcade con dieci quiz italiani originali e l’avventura platform preesistente del Liceo Casardi. Interfaccia, dati e immagini di gioco sono locali; non ci sono account, analitiche o risposte salvate. Per usare i quiz serve JavaScript e un server statico locale, perché i dataset vengono caricati come JSON.
 
-## Avvio rapido
+## Avvio
 
-1. Aprire `index.html` con un browser moderno (Chrome/Firefox/Edge recenti) **oppure** avviare un server statico nella cartella:
-   ```bash
-   python3 -m http.server 8000
-   ```
-2. Visitare `http://localhost:8000`.
-3. Premere **INIZIA LA MISSIONE**. Per una postazione pubblica preferire schermo intero e verificare prima l’audio del browser.
+Dalla cartella del repository:
 
-Non servono account, connessione Internet, installazione o CDN. Il carattere usa stack di sistema; tutto il codice di gioco è incluso localmente. Il browser potrebbe richiedere un primo click per abilitare l’audio.
+```bash
+python3 -m http.server 8000 --bind 0.0.0.0
+```
 
-## Comandi
+Apri `http://localhost:8000/`. La home è la sala giochi; scegli una cartuccia e premi **Inizia**. Per l’avventura platform già esistente, scegli il link in alto o visita `platform.html`.
 
-- **A / D** oppure **← / →**: muovi
-- **Spazio**: salta; nelle prove a tempo carica e rilascia il tiro
-- **E**: interagisci con un personaggio/terminale vicino
-- **1, 2, 3**: suona la sequenza di Francesco
-- **Esc**: pausa
-- **R**: ricomincia dopo il finale
-
-## Modalità
-
-- **Missione Open Day**: esperienza autonoma con i quattro protagonisti, platform, logica, basket, pianoforte, calcio e scelta di sicurezza digitale.
-- **Avventura completa**: campagna a cinque capitoli, con scenari digitali stilizzati, salti sopra varchi, frammenti collezionabili e sfide su file/cartelle, fogli di calcolo, verifica delle fonti e privacy.
-
-Il progetto resta aperto e in sviluppo continuativo: il lavoro prosegue sulla build esistente, senza stop di fase. I flussi principali hanno un test automatico headless; durata effettiva, test browser cross-device e playtest con visitatori restano da verificare. Non dichiariamo completati i requisiti di 7–10 minuti per la demo e 30 minuti per la campagna finché non saranno misurati e rifiniti.
+I quiz hanno una sessione standard di otto domande, percorsi ramificati, riprova e ritorno alla sala giochi. Nei nove quiz narrativi, ogni dilemma presenta sei risposte strategiche e un vincolo aggiuntivo (“In bilico”) su conseguenze, incertezze e prospettive; l’ordine delle risposte cambia a ogni schermata. Dopo ogni scelta compare una riflessione specifica sullo stile scelto, sui tratti influenzati e sulla prossima tappa, senza assegnare risposte giuste o sbagliate. “Umano o AI?” mantiene le due scelte di classificazione e la scala di confidenza. Include un avviso generale prima di iniziare e feedback con provenienza dopo ogni risposta; i singoli esiti non sono mostrati durante la domanda. La disclosure attuale riflette la decisione editoriale del committente e non costituisce un parere legale.
 
 ## Struttura
 
-- `index.html`, `style.css`, `game.js` — build web senza dipendenze.
-- `RICERCA_CASARDI.md` — ricognizione iniziale e fonti.
-- `GAME_DESIGN.md` — direzione creativa, personaggi, sistema e capitoli.
-- `CONTROLLI.md` — scheda comandi e istruzioni postazione.
-- `ASSET_CREDITS.md` — provenienza e licenze.
-- `TEST_REPORT.md` — verifiche realizzate e lavoro rimanente.
-- `tests/smoke.cjs` — test headless senza dipendenze per i flussi demo/campagna (`node tests/smoke.cjs`).
+- `index.html`, `styles/arcade.css` — home arcade responsive.
+- `quizzes/*.html` — dieci pagine HTML distinte e giocabili.
+- `data/quizzes/*.json` — archivi ramificati a 16 nodi, sei opzioni e trade-off per ogni domanda narrativa, punteggi e risultati.
+- `data/question-depth.json` — vincoli e conseguenze contestuali per ogni domanda narrativa.
+- `data/branch-responses.json` — sei risposte scritte appositamente per ciascuno dei tre snodi di ogni quiz, così il testo cambia con il dilemma e non solo con lo stile.
+- `data/human-ai-answer-key.json` — chiavi e fonti delle immagini fotografiche, caricate dall’interfaccia soltanto dopo la risposta.
+- `data/asset-manifest.json` — manifest unico per cover, fotografie di prova e illustrazioni di domanda/opzione/risultato.
+- `assets/quiz-art/` — SVG originali e locali; il codice generatore è `scripts/build_quiz_art.py`.
+- `assets/human-ai/` — fotografie reali e immagini sintetiche di terzi per la prova.
+- `platform.html`, `style.css`, `game.js` — avventura platform originale, conservata.
+- `docs/ricerca-e-progettazione.md`, `docs/grafi-e-punteggi.md` — fonti e blueprint dei contenuti.
+- `ASSET_CREDITS.md` — licenze e attribuzioni.
 
-## Stato GitHub
+## Test
 
-Repository di destinazione: [dreamer2664/openday](https://github.com/dreamer2664/openday), branch `main`. La build aggiornata viene versionata in commit incrementali. Il token personale non va inserito nei file del progetto, negli URL Git, nei log o nei commit; l’eventuale credenziale resta fuori dal repository con permessi locali ristretti.
+```bash
+node --check game.js
+node tests/smoke.cjs
+node --check scripts/quiz-engine.js
+node --check scripts/quiz-page.js
+node tests/quiz-engine.cjs
+```
+
+`tests/quiz-engine.cjs` controlla i dieci dataset, i 16 nodi, le sei risposte e i trade-off narrativi, gli otto quesiti per sessione, i link nel manifest e la raggiungibilità dei risultati; esplora 216 combinazioni di ramo per quiz narrativo, poi simula 500 sessioni per quiz e 20.000 per la prova fotografica. Le simulazioni automatiche non sostituiscono playtest con visitatori né revisione editoriale o legale.
+
+Per rigenerare i dati e le illustrazioni originali dopo modifiche ai contenuti:
+
+```bash
+python3 scripts/build_quiz_data.py
+python3 scripts/build_quiz_art.py
+```
+
+Le immagini SVG sono disegnate con primitive deterministiche locali (non generate da un modello d’immagini) e attribuite nel manifest. Il runtime non carica CDN, font, librerie o immagini esterne; solo i link di attribuzione rimandano ai siti delle fonti.

@@ -1,0 +1,2404 @@
+{
+  "id": "filosofo",
+  "title": "Quale filosofo ti somiglia?",
+  "intro": "Otto domande, sei strategie di risposta, tre snodi e un profilo esplorativo ispirato a quale filosofo ti somiglia?: non è una diagnosi né una misura scientifica.",
+  "category": "08 · QUIZ",
+  "binary": false,
+  "dimensions": [
+    "dialogo",
+    "definizioni",
+    "osservazione",
+    "etica",
+    "moderazione",
+    "politica",
+    "natura",
+    "dubbio"
+  ],
+  "questions": [
+    {
+      "id": "Q01",
+      "number": 1,
+      "prompt": "Una convinzione molto popolare non ha prove chiare: come inizi a discuterla?",
+      "tradeoff": "La popolarità di una convinzione spiega perché è condivisa, non se è vera.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q01.svg",
+        "sourceId": "filosofo:question:Q01",
+        "alt": "Illustrazione originale pertinente a: Una convinzione molto popolare non ha prove chiare: come inizi a discuterla?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q01.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Chiedo una definizione della convinzione e quale osservazione viene presentata come prova.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q01-A.svg",
+            "sourceId": "filosofo:option:Q01-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q01",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q01-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q02"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Propongo due spiegazioni possibili e cerco un caso che le metta davvero a confronto.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q01-B.svg",
+            "sourceId": "filosofo:option:Q01-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q01",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q01-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q03"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Cerco una piccola verifica concreta prima di discutere la tesi in astratto.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q01-C.svg",
+            "sourceId": "filosofo:option:Q01-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q01",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q01-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q04"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Chiedo a chi sostiene la convinzione come è arrivato a crederci e cosa lo convincerebbe del contrario.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q01-D.svg",
+            "sourceId": "filosofo:option:Q01-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q01",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q01-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q05"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Controllo chi ha prodotto le prove disponibili e quali esperienze non sono rappresentate.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q01-E.svg",
+            "sourceId": "filosofo:option:Q01-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q01",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q01-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q03"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Stabilisco che cosa conterebbe come prova sufficiente, senza pretendere certezza assoluta.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q01-F.svg",
+            "sourceId": "filosofo:option:Q01-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q01",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q01-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q04"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q02",
+      "number": 2,
+      "prompt": "Se due persone usano la stessa parola in modi diversi, cosa fai?",
+      "tradeoff": "Una definizione può cambiare la conclusione: prima chiarisci se tutti parlano della stessa cosa.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q02.svg",
+        "sourceId": "filosofo:question:Q02",
+        "alt": "Illustrazione originale pertinente a: Se due persone usano la stessa parola in modi diversi, cosa fai?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q02.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Metto a confronto le definizioni prima di accettare la conclusione.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q02-A.svg",
+            "sourceId": "filosofo:option:Q02-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q02",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q02-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q06"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Distinguo un desiderio urgente da un bisogno che conta nel tempo.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q02-B.svg",
+            "sourceId": "filosofo:option:Q02-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q02",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q02-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q06"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Confronto ciò che appare con il modo in cui potrebbe essere spiegato.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q02-C.svg",
+            "sourceId": "filosofo:option:Q02-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q02",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q02-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q06"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Confronto gli argomenti e non soltanto chi li pronuncia.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q02-D.svg",
+            "sourceId": "filosofo:option:Q02-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q02",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q02-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q06"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Chiedo quali osservazioni potrebbero smentire la spiegazione preferita.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q02-E.svg",
+            "sourceId": "filosofo:option:Q02-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q02",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q02-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q06"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Valuto la teoria per le conseguenze, senza confondere utilità e verità.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q02-F.svg",
+            "sourceId": "filosofo:option:Q02-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q02",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q02-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q06"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q03",
+      "number": 3,
+      "prompt": "Una scelta piacevole oggi può creare problemi domani: quale criterio usi?",
+      "tradeoff": "Il piacere immediato è un dato, ma anche le conseguenze differite fanno parte della scelta.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q03.svg",
+        "sourceId": "filosofo:question:Q03",
+        "alt": "Illustrazione originale pertinente a: Una scelta piacevole oggi può creare problemi domani: quale criterio usi?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q03.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Cerco un controesempio che aiuti a precisare l’idea.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q03-A.svg",
+            "sourceId": "filosofo:option:Q03-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q03",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q03-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q06"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Cerco una condotta che riduca danno e dipendenza.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q03-B.svg",
+            "sourceId": "filosofo:option:Q03-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q03",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q03-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q06"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Guardo alle cause e ai cambiamenti prima di formulare una regola.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q03-C.svg",
+            "sourceId": "filosofo:option:Q03-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q03",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q03-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q06"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Accetto di rivedere una convinzione se cambia la prova.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q03-D.svg",
+            "sourceId": "filosofo:option:Q03-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q03",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q03-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q06"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Confronto la tesi con un’esperienza diversa, non solo con un altro argomento.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q03-E.svg",
+            "sourceId": "filosofo:option:Q03-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q03",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q03-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q06"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Provo una scelta proporzionata e osservo se riduce il problema.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q03-F.svg",
+            "sourceId": "filosofo:option:Q03-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q03",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q03-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q06"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q04",
+      "number": 4,
+      "prompt": "È più importante conoscere il mondo o imparare a vivere bene?",
+      "tradeoff": "Conoscere come funziona il mondo non risponde da solo a come dovremmo vivere.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q04.svg",
+        "sourceId": "filosofo:question:Q04",
+        "alt": "Illustrazione originale pertinente a: È più importante conoscere il mondo o imparare a vivere bene?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q04.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Preferisco una domanda ben posta a una risposta troppo rapida.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q04-A.svg",
+            "sourceId": "filosofo:option:Q04-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q04",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q04-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q06"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Domando quale idea di bene rende sensata questa decisione.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q04-B.svg",
+            "sourceId": "filosofo:option:Q04-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q04",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q04-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q06"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Mi interessa se una spiegazione funziona oltre il caso singolo.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q04-C.svg",
+            "sourceId": "filosofo:option:Q04-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q04",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q04-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q06"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Cerco un dialogo che faccia emergere ciò che ciascuno dà per scontato.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q04-D.svg",
+            "sourceId": "filosofo:option:Q04-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q04",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q04-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q06"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Distinguo ciò che è dimostrato da ciò che sembra plausibile.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q04-E.svg",
+            "sourceId": "filosofo:option:Q04-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q04",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q04-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q06"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Cerco una regola condivisibile che lasci spazio a casi e persone differenti.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q04-F.svg",
+            "sourceId": "filosofo:option:Q04-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q04",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q04-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q06"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q05",
+      "number": 5,
+      "prompt": "Una regola della città contrasta con ciò che ti pare giusto: come la giudichi?",
+      "tradeoff": "La legalità e la giustizia possono divergere: contestare una norma ha conseguenze per altri.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q05.svg",
+        "sourceId": "filosofo:question:Q05",
+        "alt": "Illustrazione originale pertinente a: Una regola della città contrasta con ciò che ti pare giusto: come la giudichi?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q05.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Chiedo che cosa intendiamo e provo a rendere esplicite le premesse.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q05-A.svg",
+            "sourceId": "filosofo:option:Q05-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q05",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q05-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q06"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Valuto come la scelta cambia la vita concreta delle persone.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q05-B.svg",
+            "sourceId": "filosofo:option:Q05-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q05",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q05-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q06"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Cerco un’osservazione o un dato che possa correggere la teoria.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q05-C.svg",
+            "sourceId": "filosofo:option:Q05-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q05",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q05-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q06"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Tengo aperte più interpretazioni finché non vedo una ragione decisiva.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q05-D.svg",
+            "sourceId": "filosofo:option:Q05-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q05",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q05-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q06"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Provo a trovare un caso concreto che metta in difficoltà la regola.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q05-E.svg",
+            "sourceId": "filosofo:option:Q05-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q05",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q05-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q06"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Mi domando quale comportamento seguirebbe da questa idea e chi ne sarebbe toccato.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q05-F.svg",
+            "sourceId": "filosofo:option:Q05-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q05",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q05-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q06"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q06",
+      "number": 6,
+      "prompt": "Una persona soffre per qualcosa fuori dal suo controllo: che aiuto è utile?",
+      "tradeoff": "Un aiuto può alleviare il dolore o sostenere autonomia: chiedi quale bisogno è in gioco.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q06.svg",
+        "sourceId": "filosofo:question:Q06",
+        "alt": "Illustrazione originale pertinente a: Una persona soffre per qualcosa fuori dal suo controllo: che aiuto è utile?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q06.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Distinguo ciò che la persona può controllare da ciò che richiede un intervento esterno.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q06-A.svg",
+            "sourceId": "filosofo:option:Q06-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q06",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q06-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q07"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Considero più forme di aiuto: sollievo immediato, compagnia o cambiamento della causa.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q06-B.svg",
+            "sourceId": "filosofo:option:Q06-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q06",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q06-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q08"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Offro un aiuto pratico limitato e verifico se è quello che serve davvero.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q06-C.svg",
+            "sourceId": "filosofo:option:Q06-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q06",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q06-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q09"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Chiedo alla persona quale sostegno desidera, invece di prescrivere una risposta dall'esterno.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q06-D.svg",
+            "sourceId": "filosofo:option:Q06-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q06",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q06-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q10"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Controllo se le istituzioni o il gruppo possono ridurre una sofferenza trattata come inevitabile.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q06-E.svg",
+            "sourceId": "filosofo:option:Q06-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q06",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q06-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q08"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Definisco un passo possibile adesso e una condizione per chiedere ulteriore supporto.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q06-F.svg",
+            "sourceId": "filosofo:option:Q06-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q06",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q06-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q09"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q07",
+      "number": 7,
+      "prompt": "Un argomento elegante porta a una conclusione incerta: cosa ti convince?",
+      "tradeoff": "La coerenza formale non garantisce che le premesse siano vere o complete.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q07.svg",
+        "sourceId": "filosofo:question:Q07",
+        "alt": "Illustrazione originale pertinente a: Un argomento elegante porta a una conclusione incerta: cosa ti convince?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q07.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Cerco un controesempio che aiuti a precisare l’idea.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q07-A.svg",
+            "sourceId": "filosofo:option:Q07-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q07",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q07-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q11"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Cerco una condotta che riduca danno e dipendenza.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q07-B.svg",
+            "sourceId": "filosofo:option:Q07-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q07",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q07-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q11"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Guardo alle cause e ai cambiamenti prima di formulare una regola.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q07-C.svg",
+            "sourceId": "filosofo:option:Q07-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q07",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q07-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q11"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Accetto di rivedere una convinzione se cambia la prova.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q07-D.svg",
+            "sourceId": "filosofo:option:Q07-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q07",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q07-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q11"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Confronto la tesi con un’esperienza diversa, non solo con un altro argomento.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q07-E.svg",
+            "sourceId": "filosofo:option:Q07-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q07",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q07-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q11"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Provo una scelta proporzionata e osservo se riduce il problema.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q07-F.svg",
+            "sourceId": "filosofo:option:Q07-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q07",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q07-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q11"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q08",
+      "number": 8,
+      "prompt": "Un desiderio è forte ma non necessario: come lo valuti?",
+      "tradeoff": "Ridurre un desiderio può dare tranquillità, ma chi decide cosa è necessario?",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q08.svg",
+        "sourceId": "filosofo:question:Q08",
+        "alt": "Illustrazione originale pertinente a: Un desiderio è forte ma non necessario: come lo valuti?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q08.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Preferisco una domanda ben posta a una risposta troppo rapida.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q08-A.svg",
+            "sourceId": "filosofo:option:Q08-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q08",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q08-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q11"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Domando quale idea di bene rende sensata questa decisione.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q08-B.svg",
+            "sourceId": "filosofo:option:Q08-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q08",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q08-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q11"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Mi interessa se una spiegazione funziona oltre il caso singolo.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q08-C.svg",
+            "sourceId": "filosofo:option:Q08-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q08",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q08-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q11"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Cerco un dialogo che faccia emergere ciò che ciascuno dà per scontato.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q08-D.svg",
+            "sourceId": "filosofo:option:Q08-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q08",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q08-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q11"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Distinguo ciò che è dimostrato da ciò che sembra plausibile.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q08-E.svg",
+            "sourceId": "filosofo:option:Q08-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q08",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q08-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q11"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Cerco una regola condivisibile che lasci spazio a casi e persone differenti.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q08-F.svg",
+            "sourceId": "filosofo:option:Q08-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q08",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q08-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q11"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q09",
+      "number": 9,
+      "prompt": "La vita buona richiede amici, beni e partecipazione pubblica?",
+      "tradeoff": "Una vita buona può includere relazioni e responsabilità senza dipendere da ogni forma di prestigio.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q09.svg",
+        "sourceId": "filosofo:question:Q09",
+        "alt": "Illustrazione originale pertinente a: La vita buona richiede amici, beni e partecipazione pubblica?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q09.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Chiedo che cosa intendiamo e provo a rendere esplicite le premesse.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q09-A.svg",
+            "sourceId": "filosofo:option:Q09-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q09",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q09-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q11"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Valuto come la scelta cambia la vita concreta delle persone.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q09-B.svg",
+            "sourceId": "filosofo:option:Q09-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q09",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q09-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q11"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Cerco un’osservazione o un dato che possa correggere la teoria.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q09-C.svg",
+            "sourceId": "filosofo:option:Q09-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q09",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q09-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q11"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Tengo aperte più interpretazioni finché non vedo una ragione decisiva.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q09-D.svg",
+            "sourceId": "filosofo:option:Q09-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q09",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q09-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q11"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Provo a trovare un caso concreto che metta in difficoltà la regola.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q09-E.svg",
+            "sourceId": "filosofo:option:Q09-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q09",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q09-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q11"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Mi domando quale comportamento seguirebbe da questa idea e chi ne sarebbe toccato.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q09-F.svg",
+            "sourceId": "filosofo:option:Q09-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q09",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q09-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q11"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q10",
+      "number": 10,
+      "prompt": "Un'apparenza inganna i sensi: quale passaggio aggiungi prima di credere?",
+      "tradeoff": "I sensi possono sbagliare, ma anche un ragionamento può partire da un presupposto falso.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q10.svg",
+        "sourceId": "filosofo:question:Q10",
+        "alt": "Illustrazione originale pertinente a: Un'apparenza inganna i sensi: quale passaggio aggiungi prima di credere?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q10.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Metto a confronto le definizioni prima di accettare la conclusione.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q10-A.svg",
+            "sourceId": "filosofo:option:Q10-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q10",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q10-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q11"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Distinguo un desiderio urgente da un bisogno che conta nel tempo.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q10-B.svg",
+            "sourceId": "filosofo:option:Q10-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q10",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q10-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q11"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Confronto ciò che appare con il modo in cui potrebbe essere spiegato.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q10-C.svg",
+            "sourceId": "filosofo:option:Q10-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q10",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q10-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q11"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Confronto gli argomenti e non soltanto chi li pronuncia.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q10-D.svg",
+            "sourceId": "filosofo:option:Q10-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q10",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q10-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q11"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Chiedo quali osservazioni potrebbero smentire la spiegazione preferita.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q10-E.svg",
+            "sourceId": "filosofo:option:Q10-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q10",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q10-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q11"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Valuto la teoria per le conseguenze, senza confondere utilità e verità.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q10-F.svg",
+            "sourceId": "filosofo:option:Q10-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q10",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q10-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q11"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q11",
+      "number": 11,
+      "prompt": "Una convenzione sembra naturale solo perché è antica: la segui?",
+      "tradeoff": "L'età di una convenzione non prova che sia naturale o giusta.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q11.svg",
+        "sourceId": "filosofo:question:Q11",
+        "alt": "Illustrazione originale pertinente a: Una convenzione sembra naturale solo perché è antica: la segui?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q11.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Ricostruisco chi ha formulato la convenzione e quali ragioni la sostengono oggi.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q11-A.svg",
+            "sourceId": "filosofo:option:Q11-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q11",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q11-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q12"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Immagino una situazione in cui la convenzione non valga e osservo cosa cambia.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q11-B.svg",
+            "sourceId": "filosofo:option:Q11-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q11",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q11-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q12"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Provo a sospendere per un caso la regola e valuto gli effetti prima di generalizzare.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q11-C.svg",
+            "sourceId": "filosofo:option:Q11-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q11",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q11-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q13"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Confronto le esperienze di chi segue la convenzione e di chi ne subisce il costo.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q11-D.svg",
+            "sourceId": "filosofo:option:Q11-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q11",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q11-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q13"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Cerco chi ha interesse a far apparire naturale la regola e chi non può contestarla.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q11-E.svg",
+            "sourceId": "filosofo:option:Q11-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q11",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q11-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q14"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Chiedo quale evidenza distinguerebbe una pratica utile da una semplice abitudine ereditata.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q11-F.svg",
+            "sourceId": "filosofo:option:Q11-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q11",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q11-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q14"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q12",
+      "number": 12,
+      "prompt": "Un'ingiustizia porta vantaggio a molti: come reagisci?",
+      "tradeoff": "Un vantaggio collettivo può nascondere un danno concentrato su una minoranza.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q12.svg",
+        "sourceId": "filosofo:question:Q12",
+        "alt": "Illustrazione originale pertinente a: Un'ingiustizia porta vantaggio a molti: come reagisci?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q12.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Preferisco una domanda ben posta a una risposta troppo rapida.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q12-A.svg",
+            "sourceId": "filosofo:option:Q12-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q12",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q12-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q15"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Domando quale idea di bene rende sensata questa decisione.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q12-B.svg",
+            "sourceId": "filosofo:option:Q12-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q12",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q12-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q15"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Mi interessa se una spiegazione funziona oltre il caso singolo.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q12-C.svg",
+            "sourceId": "filosofo:option:Q12-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q12",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q12-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q15"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Cerco un dialogo che faccia emergere ciò che ciascuno dà per scontato.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q12-D.svg",
+            "sourceId": "filosofo:option:Q12-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q12",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q12-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q15"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Distinguo ciò che è dimostrato da ciò che sembra plausibile.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q12-E.svg",
+            "sourceId": "filosofo:option:Q12-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q12",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q12-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q15"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Cerco una regola condivisibile che lasci spazio a casi e persone differenti.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q12-F.svg",
+            "sourceId": "filosofo:option:Q12-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q12",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q12-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q15"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q13",
+      "number": 13,
+      "prompt": "Il dolore non si può evitare: cosa rimane sotto il tuo controllo?",
+      "tradeoff": "Accettare ciò che non controlli non significa rinunciare a chiedere aiuto o agire insieme.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q13.svg",
+        "sourceId": "filosofo:question:Q13",
+        "alt": "Illustrazione originale pertinente a: Il dolore non si può evitare: cosa rimane sotto il tuo controllo?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q13.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Chiedo che cosa intendiamo e provo a rendere esplicite le premesse.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q13-A.svg",
+            "sourceId": "filosofo:option:Q13-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q13",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q13-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q15"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Valuto come la scelta cambia la vita concreta delle persone.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q13-B.svg",
+            "sourceId": "filosofo:option:Q13-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q13",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q13-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q15"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Cerco un’osservazione o un dato che possa correggere la teoria.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q13-C.svg",
+            "sourceId": "filosofo:option:Q13-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q13",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q13-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q15"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Tengo aperte più interpretazioni finché non vedo una ragione decisiva.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q13-D.svg",
+            "sourceId": "filosofo:option:Q13-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q13",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q13-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q15"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Provo a trovare un caso concreto che metta in difficoltà la regola.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q13-E.svg",
+            "sourceId": "filosofo:option:Q13-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q13",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q13-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q15"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Mi domando quale comportamento seguirebbe da questa idea e chi ne sarebbe toccato.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q13-F.svg",
+            "sourceId": "filosofo:option:Q13-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q13",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q13-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q15"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q14",
+      "number": 14,
+      "prompt": "Il cosmo sembra in mutamento: quale immagine lo descrive meglio?",
+      "tradeoff": "Ogni immagine del cosmo seleziona alcuni aspetti e ne lascia fuori altri.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q14.svg",
+        "sourceId": "filosofo:question:Q14",
+        "alt": "Illustrazione originale pertinente a: Il cosmo sembra in mutamento: quale immagine lo descrive meglio?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q14.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Metto a confronto le definizioni prima di accettare la conclusione.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q14-A.svg",
+            "sourceId": "filosofo:option:Q14-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q14",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q14-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q15"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Distinguo un desiderio urgente da un bisogno che conta nel tempo.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q14-B.svg",
+            "sourceId": "filosofo:option:Q14-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q14",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q14-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q15"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Confronto ciò che appare con il modo in cui potrebbe essere spiegato.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q14-C.svg",
+            "sourceId": "filosofo:option:Q14-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q14",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q14-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q15"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Confronto gli argomenti e non soltanto chi li pronuncia.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q14-D.svg",
+            "sourceId": "filosofo:option:Q14-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q14",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q14-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q15"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Chiedo quali osservazioni potrebbero smentire la spiegazione preferita.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q14-E.svg",
+            "sourceId": "filosofo:option:Q14-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q14",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q14-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q15"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Valuto la teoria per le conseguenze, senza confondere utilità e verità.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q14-F.svg",
+            "sourceId": "filosofo:option:Q14-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q14",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q14-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q15"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q15",
+      "number": 15,
+      "prompt": "Un modello numerico promette ordine: che ruolo ha nella realtà?",
+      "tradeoff": "Una struttura matematica può spiegare relazioni senza coincidere con la realtà stessa.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q15.svg",
+        "sourceId": "filosofo:question:Q15",
+        "alt": "Illustrazione originale pertinente a: Un modello numerico promette ordine: che ruolo ha nella realtà?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q15.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Cerco un controesempio che aiuti a precisare l’idea.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q15-A.svg",
+            "sourceId": "filosofo:option:Q15-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q15",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q15-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca.",
+          "next": "Q16"
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Cerco una condotta che riduca danno e dipendenza.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q15-B.svg",
+            "sourceId": "filosofo:option:Q15-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q15",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q15-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta.",
+          "next": "Q16"
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Guardo alle cause e ai cambiamenti prima di formulare una regola.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q15-C.svg",
+            "sourceId": "filosofo:option:Q15-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q15",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q15-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi.",
+          "next": "Q16"
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Accetto di rivedere una convinzione se cambia la prova.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q15-D.svg",
+            "sourceId": "filosofo:option:Q15-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q15",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q15-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica.",
+          "next": "Q16"
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Confronto la tesi con un’esperienza diversa, non solo con un altro argomento.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q15-E.svg",
+            "sourceId": "filosofo:option:Q15-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q15",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q15-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla.",
+          "next": "Q16"
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Provo una scelta proporzionata e osservo se riduce il problema.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q15-F.svg",
+            "sourceId": "filosofo:option:Q15-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q15",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q15-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo.",
+          "next": "Q16"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q16",
+      "number": 16,
+      "prompt": "Quando è saggio sospendere il giudizio?",
+      "tradeoff": "Sospendere il giudizio evita una falsa certezza, ma la vita pratica non sospende ogni decisione.",
+      "image": {
+        "src": "../assets/quiz-art/filosofo/question-Q16.svg",
+        "sourceId": "filosofo:question:Q16",
+        "alt": "Illustrazione originale pertinente a: Quando è saggio sospendere il giudizio?",
+        "manifestPath": "assets/quiz-art/filosofo/question-Q16.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Chiarisco le parole",
+          "text": "Preferisco una domanda ben posta a una risposta troppo rapida.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q16-A.svg",
+            "sourceId": "filosofo:option:Q16-A",
+            "alt": "Illustrazione originale: Chiarisco le parole — Quale filosofo ti somiglia?, Q16",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q16-A.svg"
+          },
+          "scores": {
+            "dialogo": 2,
+            "definizioni": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca."
+        },
+        {
+          "id": "B",
+          "label": "Guardo alle conseguenze",
+          "text": "Domando quale idea di bene rende sensata questa decisione.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q16-B.svg",
+            "sourceId": "filosofo:option:Q16-B",
+            "alt": "Illustrazione originale: Guardo alle conseguenze — Quale filosofo ti somiglia?, Q16",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q16-B.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1
+          },
+          "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta."
+        },
+        {
+          "id": "C",
+          "label": "Osservo il mondo",
+          "text": "Mi interessa se una spiegazione funziona oltre il caso singolo.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q16-C.svg",
+            "sourceId": "filosofo:option:Q16-C",
+            "alt": "Illustrazione originale: Osservo il mondo — Quale filosofo ti somiglia?, Q16",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q16-C.svg"
+          },
+          "scores": {
+            "osservazione": 2,
+            "natura": 2,
+            "dubbio": 1
+          },
+          "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi."
+        },
+        {
+          "id": "D",
+          "label": "Sospendo e confronto",
+          "text": "Cerco un dialogo che faccia emergere ciò che ciascuno dà per scontato.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q16-D.svg",
+            "sourceId": "filosofo:option:Q16-D",
+            "alt": "Illustrazione originale: Sospendo e confronto — Quale filosofo ti somiglia?, Q16",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q16-D.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "dialogo": 1,
+            "politica": 1
+          },
+          "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica."
+        },
+        {
+          "id": "E",
+          "label": "Cerco un controesempio",
+          "text": "Distinguo ciò che è dimostrato da ciò che sembra plausibile.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q16-E.svg",
+            "sourceId": "filosofo:option:Q16-E",
+            "alt": "Illustrazione originale: Cerco un controesempio — Quale filosofo ti somiglia?, Q16",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q16-E.svg"
+          },
+          "scores": {
+            "dubbio": 2,
+            "osservazione": 2,
+            "definizioni": 1
+          },
+          "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla."
+        },
+        {
+          "id": "F",
+          "label": "La porto nella vita pratica",
+          "text": "Cerco una regola condivisibile che lasci spazio a casi e persone differenti.",
+          "image": {
+            "src": "../assets/quiz-art/filosofo/option-Q16-F.svg",
+            "sourceId": "filosofo:option:Q16-F",
+            "alt": "Illustrazione originale: La porto nella vita pratica — Quale filosofo ti somiglia?, Q16",
+            "manifestPath": "assets/quiz-art/filosofo/option-Q16-F.svg"
+          },
+          "scores": {
+            "etica": 2,
+            "moderazione": 1,
+            "politica": 1,
+            "natura": 1
+          },
+          "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo."
+        }
+      ],
+      "minimumOptions": 6,
+      "terminal": true
+    }
+  ],
+  "results": [
+    {
+      "id": "socrate",
+      "title": "Socrate",
+      "summary": "Ti somiglia la pratica di interrogare idee e definizioni nel dialogo.",
+      "strength": "Fai emergere premesse che sembravano invisibili.",
+      "tension": "Le fonti su Socrate sono mediate: Platone e Senofonte non sono una registrazione neutra.",
+      "nudge": "Chiedi anche quale prova potrebbe convincerti.",
+      "sources": [
+        "Platone, Apologia; Stanford Encyclopedia of Philosophy, Socrates."
+      ],
+      "scoreStyle": "A",
+      "match": [
+        "dialogo",
+        "definizioni"
+      ],
+      "branchMatch": {
+        "Q01": "A",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy — voce di riferimento",
+          "url": "https://plato.stanford.edu/entries/ethics-ancient/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/filosofo/result-socrate.svg",
+        "sourceId": "filosofo:result:socrate",
+        "alt": "Illustrazione originale del profilo Socrate",
+        "manifestPath": "assets/quiz-art/filosofo/result-socrate.svg"
+      }
+    },
+    {
+      "id": "platone",
+      "title": "Platone",
+      "summary": "Ti attirano modelli, educazione e domande su ciò che rende giusta una comunità.",
+      "strength": "Colleghi conoscenza, etica e politica.",
+      "tension": "Un modello ideale va confrontato con le persone reali e le sue conseguenze.",
+      "nudge": "Metti alla prova un’idea astratta con un caso concreto.",
+      "sources": [
+        "Platone, Repubblica; Stanford Encyclopedia of Philosophy, Plato."
+      ],
+      "scoreStyle": "B",
+      "match": [
+        "etica",
+        "moderazione"
+      ],
+      "branchMatch": {
+        "Q01": "B",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy — voce di riferimento",
+          "url": "https://plato.stanford.edu/entries/plato/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/filosofo/result-platone.svg",
+        "sourceId": "filosofo:result:platone",
+        "alt": "Illustrazione originale del profilo Platone",
+        "manifestPath": "assets/quiz-art/filosofo/result-platone.svg"
+      }
+    },
+    {
+      "id": "aristotele",
+      "title": "Aristotele",
+      "summary": "Preferisci classificare, osservare e ragionare sulle cause e sulle pratiche.",
+      "strength": "Colleghi teoria e casi specifici.",
+      "tension": "Le categorie storiche di Aristotele riflettono anche gerarchie antiche.",
+      "nudge": "Domanda chi resta fuori dalla classificazione.",
+      "sources": [
+        "Aristotele, Etica Nicomachea; Stanford Encyclopedia of Philosophy, Aristotle."
+      ],
+      "scoreStyle": "C",
+      "match": [
+        "osservazione",
+        "natura"
+      ],
+      "branchMatch": {
+        "Q01": "C",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy — voce di riferimento",
+          "url": "https://plato.stanford.edu/entries/aristotle/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/filosofo/result-aristotele.svg",
+        "sourceId": "filosofo:result:aristotele",
+        "alt": "Illustrazione originale del profilo Aristotele",
+        "manifestPath": "assets/quiz-art/filosofo/result-aristotele.svg"
+      }
+    },
+    {
+      "id": "epicuro",
+      "title": "Epicuro",
+      "summary": "Valuti desideri, piacere e tranquillità distinguendo ciò che serve da ciò che agita.",
+      "strength": "Cerchi una vita buona senza inseguire ogni impulso.",
+      "tension": "L’epicureismo non equivale a edonismo senza misura.",
+      "nudge": "Chiediti quali desideri sostengono amicizia e serenità.",
+      "sources": [
+        "Epicuro, Lettera a Meneceo; Stanford Encyclopedia of Philosophy, Epicurus."
+      ],
+      "scoreStyle": "D",
+      "match": [
+        "dubbio",
+        "dialogo"
+      ],
+      "branchMatch": {
+        "Q01": "D",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy — voce di riferimento",
+          "url": "https://plato.stanford.edu/entries/epicurus/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/filosofo/result-epicuro.svg",
+        "sourceId": "filosofo:result:epicuro",
+        "alt": "Illustrazione originale del profilo Epicuro",
+        "manifestPath": "assets/quiz-art/filosofo/result-epicuro.svg"
+      }
+    },
+    {
+      "id": "diogene",
+      "title": "Diogene",
+      "summary": "Ti interessa mettere in crisi convenzioni attraverso uno stile di vita essenziale.",
+      "strength": "Indipendenza dal prestigio e dalle apparenze.",
+      "tension": "La provocazione può denunciare un’abitudine ma non sostituisce sempre una proposta.",
+      "nudge": "Dopo la critica, immagina una pratica alternativa.",
+      "sources": [
+        "Diogene Laerzio, Vite dei filosofi; Stanford Encyclopedia of Philosophy, Ancient Greek and Roman Ethics."
+      ],
+      "scoreStyle": "E",
+      "match": [
+        "dubbio",
+        "osservazione"
+      ],
+      "branchMatch": {
+        "Q01": "E",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy — voce di riferimento",
+          "url": "https://plato.stanford.edu/entries/ethics-ancient/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/filosofo/result-diogene.svg",
+        "sourceId": "filosofo:result:diogene",
+        "alt": "Illustrazione originale del profilo Diogene",
+        "manifestPath": "assets/quiz-art/filosofo/result-diogene.svg"
+      }
+    },
+    {
+      "id": "zenone",
+      "title": "Zenone di Cizio",
+      "summary": "Ti orienti verso disciplina, ragione e una vita in rapporto con la natura.",
+      "strength": "Cerchi stabilità nelle risposte che dipendono da te.",
+      "tension": "Autocontrollo non significa negare emozioni o bisogni.",
+      "nudge": "Distingui ciò che controlli da ciò su cui puoi comunque agire insieme agli altri.",
+      "sources": [
+        "Diogene Laerzio, Vite dei filosofi; Stanford Encyclopedia of Philosophy, Stoicism."
+      ],
+      "scoreStyle": "F",
+      "match": [
+        "etica",
+        "moderazione"
+      ],
+      "branchMatch": {
+        "Q01": "F",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy — voce di riferimento",
+          "url": "https://plato.stanford.edu/entries/stoicism/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/filosofo/result-zenone.svg",
+        "sourceId": "filosofo:result:zenone",
+        "alt": "Illustrazione originale del profilo Zenone di Cizio",
+        "manifestPath": "assets/quiz-art/filosofo/result-zenone.svg"
+      }
+    },
+    {
+      "id": "marco-aurelio",
+      "title": "Marco Aurelio",
+      "summary": "Ti aiuta una pratica riflessiva che collega doveri, attenzione e vita comune.",
+      "strength": "Rivedi la tua condotta con regolarità.",
+      "tension": "Le meditazioni private di un imperatore non cancellano il potere esercitato.",
+      "nudge": "Affianca l’esame di sé a una domanda sulle responsabilità pubbliche.",
+      "sources": [
+        "Marco Aurelio, Colloqui con sé stesso; Stanford Encyclopedia of Philosophy, Marcus Aurelius."
+      ],
+      "scoreStyle": "A",
+      "match": [
+        "dialogo",
+        "definizioni"
+      ],
+      "branchMatch": {
+        "Q01": "A",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy — voce di riferimento",
+          "url": "https://plato.stanford.edu/entries/marcus-aurelius/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/filosofo/result-marco-aurelio.svg",
+        "sourceId": "filosofo:result:marco-aurelio",
+        "alt": "Illustrazione originale del profilo Marco Aurelio",
+        "manifestPath": "assets/quiz-art/filosofo/result-marco-aurelio.svg"
+      }
+    },
+    {
+      "id": "seneca",
+      "title": "Seneca",
+      "summary": "Ti interessano tempo, emozioni e scelte morali nella vita quotidiana.",
+      "strength": "Traduci le idee in esercizi e domande pratiche.",
+      "tension": "Seneca fu anche un uomo ricco e vicino al potere imperiale.",
+      "nudge": "Confronta ciò che si insegna con le condizioni in cui si vive.",
+      "sources": [
+        "Seneca, Lettere a Lucilio; Stanford Encyclopedia of Philosophy, Seneca."
+      ],
+      "scoreStyle": "B",
+      "match": [
+        "etica",
+        "moderazione"
+      ],
+      "branchMatch": {
+        "Q01": "B",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy — voce di riferimento",
+          "url": "https://plato.stanford.edu/entries/ethics-ancient/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/filosofo/result-seneca.svg",
+        "sourceId": "filosofo:result:seneca",
+        "alt": "Illustrazione originale del profilo Seneca",
+        "manifestPath": "assets/quiz-art/filosofo/result-seneca.svg"
+      }
+    },
+    {
+      "id": "eraclito",
+      "title": "Eraclito",
+      "summary": "Noti tensioni e trasformazioni dentro ciò che sembra stabile.",
+      "strength": "Non confondi un’apparenza momentanea con una spiegazione completa.",
+      "tension": "I frammenti sono brevi e la loro interpretazione resta discussa.",
+      "nudge": "Sostieni la tua lettura con un passo preciso.",
+      "sources": [
+        "Eraclito, frammenti; Stanford Encyclopedia of Philosophy, Heraclitus."
+      ],
+      "scoreStyle": "C",
+      "match": [
+        "osservazione",
+        "natura"
+      ],
+      "branchMatch": {
+        "Q01": "C",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy — voce di riferimento",
+          "url": "https://plato.stanford.edu/entries/presocratics/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/filosofo/result-eraclito.svg",
+        "sourceId": "filosofo:result:eraclito",
+        "alt": "Illustrazione originale del profilo Eraclito",
+        "manifestPath": "assets/quiz-art/filosofo/result-eraclito.svg"
+      }
+    },
+    {
+      "id": "pitagora",
+      "title": "Pitagora",
+      "summary": "Ti attrae cercare proporzioni, relazioni e strutture che diano ordine al mondo.",
+      "strength": "Riconosci schemi e connessioni formali.",
+      "tension": "Un modello elegante non è automaticamente una descrizione completa della realtà.",
+      "nudge": "Distingui analogia, matematica e prova empirica.",
+      "sources": [
+        "Aristotele, Metafisica; Stanford Encyclopedia of Philosophy, Pythagoras."
+      ],
+      "scoreStyle": "D",
+      "match": [
+        "dubbio",
+        "dialogo"
+      ],
+      "branchMatch": {
+        "Q01": "D",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy — voce di riferimento",
+          "url": "https://plato.stanford.edu/entries/pythagoreanism/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/filosofo/result-pitagora.svg",
+        "sourceId": "filosofo:result:pitagora",
+        "alt": "Illustrazione originale del profilo Pitagora",
+        "manifestPath": "assets/quiz-art/filosofo/result-pitagora.svg"
+      }
+    },
+    {
+      "id": "pirrone",
+      "title": "Pirrone",
+      "summary": "Ti interessa capire quando una conclusione va sospesa perché le ragioni restano in equilibrio.",
+      "strength": "Sai riconoscere i limiti di una certezza.",
+      "tension": "Sospendere il giudizio non elimina la necessità di scegliere nella pratica.",
+      "nudge": "Spiega che cosa resta ragionevole fare mentre l’incertezza continua.",
+      "sources": [
+        "Sesto Empirico, Schizzi pirroniani; Stanford Encyclopedia of Philosophy, Ancient Skepticism."
+      ],
+      "scoreStyle": "E",
+      "match": [
+        "dubbio",
+        "osservazione"
+      ],
+      "branchMatch": {
+        "Q01": "E",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy — voce di riferimento",
+          "url": "https://plato.stanford.edu/entries/skepticism-ancient/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/filosofo/result-pirrone.svg",
+        "sourceId": "filosofo:result:pirrone",
+        "alt": "Illustrazione originale del profilo Pirrone",
+        "manifestPath": "assets/quiz-art/filosofo/result-pirrone.svg"
+      }
+    },
+    {
+      "id": "anassimandro",
+      "title": "Anassimandro",
+      "summary": "Ti incuriosisce spiegare il cosmo con principi generali invece di fermarti al singolo fenomeno.",
+      "strength": "Immagini modelli ampi e relazioni fra elementi.",
+      "tension": "Delle sue idee restano testimonianze frammentarie e indirette.",
+      "nudge": "Separa ciò che è attestato da ciò che ricostruiamo.",
+      "sources": [
+        "Simplicio, Commento alla Fisica; Stanford Encyclopedia of Philosophy, Anaximander."
+      ],
+      "scoreStyle": "F",
+      "match": [
+        "etica",
+        "moderazione"
+      ],
+      "branchMatch": {
+        "Q01": "F",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [
+        {
+          "label": "Stanford Encyclopedia of Philosophy — voce di riferimento",
+          "url": "https://plato.stanford.edu/entries/presocratics/"
+        }
+      ],
+      "image": {
+        "src": "../assets/quiz-art/filosofo/result-anassimandro.svg",
+        "sourceId": "filosofo:result:anassimandro",
+        "alt": "Illustrazione originale del profilo Anassimandro",
+        "manifestPath": "assets/quiz-art/filosofo/result-anassimandro.svg"
+      }
+    }
+  ],
+  "startQuestion": "Q01",
+  "sessionLength": 8,
+  "minimumResults": 8,
+  "branchQuestions": [
+    "Q01",
+    "Q06",
+    "Q11"
+  ]
+}

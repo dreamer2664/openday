@@ -1,0 +1,236 @@
+{
+  "tipo-di-mente": {
+    "Q01": [
+      "Chiedo quale risultato minimo deve produrre il progetto e quali informazioni mancano per definirlo.",
+      "Propongo due interpretazioni diverse del brief e cerco un esempio che le distingua.",
+      "Costruisco una bozza breve con un solo obiettivo, così il gruppo può reagire a qualcosa di concreto.",
+      "Raccolgo in pochi minuti le aspettative di chi userà il risultato, poi restituisco i punti comuni.",
+      "Controllo chi non era nella stanza quando il brief è stato scritto e quali bisogni rischiano di sparire.",
+      "Concordo un criterio osservabile per il primo prototipo e una soglia che ci farà cambiare direzione."
+    ],
+    "Q06": [
+      "Verifico origine, data e pertinenza del nuovo dato prima di riscrivere tutto il piano.",
+      "Riformulo il problema con la nuova informazione e tengo aperte due ipotesi di lavoro.",
+      "Aggiorno il passaggio più esposto al cambiamento e lascio intatto il resto finché non serve.",
+      "Spiego al gruppo che cosa cambia, che cosa no e chi deve coordinare il prossimo passo.",
+      "Chiedo chi subirà il costo del piano attuale se ignoriamo il dato appena emerso.",
+      "Definisco quale ulteriore evidenza confermerebbe la svolta e quando ricontrollarla."
+    ],
+    "Q11": [
+      "Metto a confronto i criteri usati dai due metodi e cerco un caso concreto su cui valutarli.",
+      "Cerco una terza possibilità che prenda il vantaggio di entrambi senza sommarne i difetti.",
+      "Provo il metodo del compagno su un compito piccolo e confronto il risultato con il mio.",
+      "Chiedo a entrambi di esplicitare obiettivi e vincoli prima di distribuire i ruoli.",
+      "Verifico quale prospettiva manca nella discussione e se il dissenso segnala un costo ignorato.",
+      "Concordo in anticipo una prova e una regola per decidere se mantenere o cambiare metodo."
+    ]
+  },
+  "apocalisse": {
+    "Q01": [
+      "Faccio un inventario rapido: acqua, farmaci, documenti e strumenti che non si possono sostituire.",
+      "Chiedo al gruppo quale risorsa critica rischia di mancare per prima e confronto le priorità.",
+      "Metto in sicurezza una riserva essenziale e provo a chiudere il compito più urgente entro il tempo.",
+      "Assegno coppie e incarichi brevi, includendo chi conosce i bisogni di ogni persona.",
+      "Controllo se qualcuno dipende da un oggetto o da una cura che il piano collettivo non ha contato.",
+      "Definisco un carico massimo e un segnale di stop: non tutto ciò che è utile è trasportabile."
+    ],
+    "Q06": [
+      "Confronto distanza, ostacoli e informazioni recenti, non soltanto i chilometri sulla mappa.",
+      "Cerco una terza via o una ricognizione breve che riduca l'incertezza senza impegnare tutti.",
+      "Scelgo la via breve solo fino a un punto di controllo, con una finestra per tornare indietro.",
+      "Condivido la differenza di rischio e chiedo chi ha informazioni locali prima della decisione.",
+      "Valuto chi sarebbe più esposto se la strada incerta si interrompesse o richiedesse più energie.",
+      "Stabilisco prima quali segnali rendono preferibile la via nota e quando rivalutare la scelta."
+    ],
+    "Q11": [
+      "Ricontrollo quantità, consumi e tempi: il calo può dipendere da una stima iniziale sbagliata.",
+      "Considero più cause — spreco, nuovi bisogni o registrazioni mancanti — prima di attribuire colpe.",
+      "Faccio una verifica breve delle scorte e correggo subito il conteggio più incerto.",
+      "Condivido i dati con il gruppo e chiedo a chi gestisce le razioni di ricostruire i passaggi.",
+      "Controllo se la regola di distribuzione lascia qualcuno con bisogni maggiori senza una quota adeguata.",
+      "Fisso una soglia di riserva e un momento di controllo per distinguere un picco da una tendenza."
+    ]
+  },
+  "villain": {
+    "Q01": [
+      "Individuo quale parte del piano è stata scoperta e quali conseguenze reali avrebbe proseguirla.",
+      "Trasformo la rivelazione in una svolta narrativa: il pubblico scopre che il piano aveva un'altra lettura.",
+      "Cambio una sola mossa e provo una via d'uscita prima di riscrivere l'intera scena.",
+      "Avviso gli alleati, ascolto chi vuole fermarsi e ridistribuisco merito e responsabilità.",
+      "Controllo chi verrebbe coinvolto senza averlo scelto e sposto il confronto lontano da loro.",
+      "Definisco un limite non negoziabile e un segnale che interrompe il piano se il rischio cresce."
+    ],
+    "Q06": [
+      "Scompongo il costo emerso: chi lo sostiene, da quando e quale passaggio lo provoca.",
+      "Immagino un finale alternativo che raggiunga l'obiettivo senza ripetere il danno appena visto.",
+      "Sospendo la parte più rischiosa e provo una modifica reversibile prima di proseguire.",
+      "Dico agli alleati cosa è cambiato e rinegozio insieme a loro la posta in gioco.",
+      "Ascolto le persone colpite prima di spiegare perché il piano sembrava necessario.",
+      "Stabilisco una soglia di danno e una verifica: se la superiamo, il piano si ferma."
+    ],
+    "Q11": [
+      "Ricostruisco quali fatti hanno alimentato la reputazione e separo ciò che è vero da ciò che è comodo.",
+      "Uso l'attenzione per raccontare un obiettivo diverso, lasciando al pubblico spazio per dissentire.",
+      "Aspetto una mossa prima di sfruttare la fama: così non la trasformo in un impegno irreversibile.",
+      "Chiedo agli alleati come la reputazione ricade su di loro e concordo una risposta comune.",
+      "Rendo visibile chi è stato cancellato dal racconto che mi ha reso famoso.",
+      "Dichiaro un criterio: sfrutto la reputazione solo se posso correggere pubblicamente le informazioni false."
+    ]
+  },
+  "epoca-storica": {
+    "Q01": [
+      "Scelgo l'attività quotidiana che mi interessa e chiedo chi, in quel luogo, avrebbe potuto svolgerla.",
+      "Immagino due giornate diverse nella stessa epoca, una per chi ha potere e una per chi ne ha meno.",
+      "Provo a seguire un mestiere o una pratica concreta invece di scegliere un'epoca solo per l'estetica.",
+      "Cerco un luogo di incontro e mi domando quali voci potevano davvero parteciparvi.",
+      "Guardo chi resta fuori da piazza, biblioteca o viaggio per ceto, genere, status o provenienza.",
+      "Scelgo un'attività e un periodo precisi, poi verifico se le fonti confermano la mia immagine iniziale."
+    ],
+    "Q06": [
+      "Confronto produzione, tempi e condizioni di lavoro prima di chiamare l'innovazione un progresso.",
+      "Cerco chi ha beneficiato della tecnica e chi ha subito un cambiamento non scelto.",
+      "Immagino una transizione graduale e controllo quale competenza o reddito rischia di perdersi.",
+      "Ascolto lavoratori, proprietari e comunità: la stessa macchina cambia esperienza a seconda del ruolo.",
+      "Verifico chi è assente dai resoconti ufficiali e chi sostiene i costi ambientali o sociali.",
+      "Stabilisco quale prova — salari, orari, sicurezza o accesso — mi farebbe giudicare l'effetto."
+    ],
+    "Q11": [
+      "Distinguo ordine pubblico, stabilità personale e obbedienza: non sono la stessa forma di sicurezza.",
+      "Cerco una libertà praticata in modi diversi da gruppi diversi, non un unico ideale astratto.",
+      "Provo a immaginare una riforma concreta che allarghi autonomia senza ignorare i rischi del cambiamento.",
+      "Chiedo a chi vive sotto quelle regole quali margini di scelta esistono nella vita quotidiana.",
+      "Controllo quali gruppi hanno diritti formali e quali possono esercitarli davvero.",
+      "Scelgo una libertà specifica e cerco una fonte che mostri chi poteva rivendicarla e a quale prezzo."
+    ]
+  },
+  "dio-greco": {
+    "Q01": [
+      "Ricostruisco i termini del patto e distinguo una violazione intenzionale da un equivoco.",
+      "Immagino due modi di riparare la fiducia, uno pubblico e uno che coinvolga direttamente le parti.",
+      "Propongo una riparazione limitata e verifico se ristabilisce il patto senza imporre una punizione eccessiva.",
+      "Ascolto le divinità e le comunità toccate prima di annunciare chi ha ragione.",
+      "Controllo se la regola protegge tutti o se l'autorità che la invoca è parte del conflitto.",
+      "Definisco un criterio di riparazione e una condizione osservabile per dire che il patto è ricostruito."
+    ],
+    "Q06": [
+      "Valuto l'offesa, il danno che ha prodotto e il rischio di una risposta sproporzionata.",
+      "Cerco una risposta simbolica che riconosca la ferita senza trasformarla in una catena di vendette.",
+      "Faccio un passo temporaneo per fermare l'escalation, poi riapro il confronto.",
+      "Chiedo a chi è stato offeso quale riparazione considera significativa.",
+      "Verifico se l'offesa pubblica ha colpito anche persone che non possono rispondere in pubblico.",
+      "Stabilisco quale limite non superare e chi può chiedere una revisione della risposta."
+    ],
+    "Q11": [
+      "Controllo scorte, tempi e distribuzione per individuare dove il bisogno è più urgente.",
+      "Confronto soccorso immediato, semina futura e condivisione fra comunità.",
+      "Avvio un aiuto circoscritto e verifico rapidamente se raggiunge chi ne ha più bisogno.",
+      "Coordino le comunità per distribuire ruoli e rendere pubblici i criteri di priorità.",
+      "Ascolto chi coltiva o distribuisce il cibo: può conoscere ostacoli invisibili ai decisori.",
+      "Definisco un indicatore di bisogno e una scadenza per rivedere le priorità."
+    ]
+  },
+  "parola-latina": {
+    "Q01": [
+      "Rileggo la promessa e distinguo l'obiettivo essenziale dalla forma che avevo promesso di usare.",
+      "Cerco una via per mantenere la fiducia senza fingere che le circostanze siano rimaste uguali.",
+      "Avviso subito del cambiamento e propongo un risultato parziale che posso davvero consegnare.",
+      "Concordo con chi attende il risultato quale parte va salvata e quale può essere rinegoziata.",
+      "Controllo se mantenere la promessa alla lettera scaricherebbe un costo ingiusto su terzi.",
+      "Rendo espliciti il nuovo limite, il tempo necessario e la condizione con cui aggiornerò l'impegno."
+    ],
+    "Q06": [
+      "Spiego le ragioni della decisione impopolare e i dati che la sostengono.",
+      "Cerco un modo diverso di presentare il principio senza svuotarlo per ottenere consenso.",
+      "Applico la decisione in un passaggio verificabile e mi assumo la responsabilità dell'esito.",
+      "Ascolto l'opposizione e distinguo il dissenso sul fine da quello sul metodo.",
+      "Controllo chi subisce l'effetto della scelta e se esiste una correzione equa.",
+      "Dico quali prove mi farebbero rivedere la decisione, pur mantenendo fermo il criterio."
+    ],
+    "Q11": [
+      "Scompongo l'obiettivo in abitudini piccole e controllo se il ritmo è sostenibile.",
+      "Cerco due modi per esercitarmi, così un giorno difficile non interrompe tutto il percorso.",
+      "Fisso una sessione breve oggi e valuto dopo una settimana cosa ha funzionato.",
+      "Concordo con qualcuno un momento di confronto, senza trasformarlo in sorveglianza.",
+      "Controllo se il piano lascia spazio a riposo, imprevisti e responsabilità verso gli altri.",
+      "Stabilisco una soglia realistica di continuità e un criterio per adattare il ritmo senza abbandonare l'obiettivo."
+    ]
+  },
+  "filosofo": {
+    "Q01": [
+      "Chiedo una definizione della convinzione e quale osservazione viene presentata come prova.",
+      "Propongo due spiegazioni possibili e cerco un caso che le metta davvero a confronto.",
+      "Cerco una piccola verifica concreta prima di discutere la tesi in astratto.",
+      "Chiedo a chi sostiene la convinzione come è arrivato a crederci e cosa lo convincerebbe del contrario.",
+      "Controllo chi ha prodotto le prove disponibili e quali esperienze non sono rappresentate.",
+      "Stabilisco che cosa conterebbe come prova sufficiente, senza pretendere certezza assoluta."
+    ],
+    "Q06": [
+      "Distinguo ciò che la persona può controllare da ciò che richiede un intervento esterno.",
+      "Considero più forme di aiuto: sollievo immediato, compagnia o cambiamento della causa.",
+      "Offro un aiuto pratico limitato e verifico se è quello che serve davvero.",
+      "Chiedo alla persona quale sostegno desidera, invece di prescrivere una risposta dall'esterno.",
+      "Controllo se le istituzioni o il gruppo possono ridurre una sofferenza trattata come inevitabile.",
+      "Definisco un passo possibile adesso e una condizione per chiedere ulteriore supporto."
+    ],
+    "Q11": [
+      "Ricostruisco chi ha formulato la convenzione e quali ragioni la sostengono oggi.",
+      "Immagino una situazione in cui la convenzione non valga e osservo cosa cambia.",
+      "Provo a sospendere per un caso la regola e valuto gli effetti prima di generalizzare.",
+      "Confronto le esperienze di chi segue la convenzione e di chi ne subisce il costo.",
+      "Cerco chi ha interesse a far apparire naturale la regola e chi non può contestarla.",
+      "Chiedo quale evidenza distinguerebbe una pratica utile da una semplice abitudine ereditata."
+    ]
+  },
+  "personaggio-antico": {
+    "Q01": [
+      "Ordino i fatti disponibili e chiarisco quale decisione l'assemblea deve prendere oggi.",
+      "Preparo una proposta principale e un'alternativa se la crisi si sviluppa in modo diverso.",
+      "Porto una misura immediata, limitata nel tempo, da valutare prima di estenderla.",
+      "Ascolto gruppi coinvolti con interessi diversi e provo a rendere visibile il dissenso.",
+      "Controllo chi non può parlare in assemblea ma subirà gli effetti della proposta.",
+      "Propongo un criterio trasparente, un responsabile e una data per rivedere la misura."
+    ],
+    "Q06": [
+      "Mappo le divisioni e verifico quali promesse della vittoria sono ancora sostenibili.",
+      "Immagino un accordo che lasci spazio a più gruppi senza fingere che il conflitto sia finito.",
+      "Avvio una misura di sicurezza temporanea e ne controllo gli effetti sulla popolazione.",
+      "Incontro le parti e negozio garanzie reciproche prima di annunciare un nuovo ordine.",
+      "Ascolto chi ha perso e chi resta senza rappresentanza nel nuovo governo.",
+      "Definisco una regola di transizione e un meccanismo con cui le parti possano contestarla."
+    ],
+    "Q11": [
+      "Confronto il racconto celebrativo con le fonti e separo risultato, costo e attribuzione.",
+      "Propongo una memoria plurale che mostri più prospettive senza cancellare le responsabilità.",
+      "Correggo subito l'omissione più verificabile e annoto cosa resta da controllare.",
+      "Invito chi ha partecipato ma non è ricordato a contribuire alla ricostruzione.",
+      "Cerco la voce di chi ha pagato il prezzo e non ha accesso ai luoghi della memoria.",
+      "Stabilisco criteri di prova e attribuzione prima di modificare il racconto pubblico."
+    ]
+  },
+  "scegli-il-classico": {
+    "Q01": [
+      "Cerco la voce sul dizionario e confronto il significato con la frase che la contiene.",
+      "Provo due interpretazioni della parola e vedo quale si accorda meglio con il contesto.",
+      "Leggo il periodo prima e dopo e annoto una prima ipotesi da verificare.",
+      "Chiedo a qualcuno come ha capito la frase e confronto il suo percorso con il mio.",
+      "Controllo se la traduzione nasconde un riferimento culturale o una voce meno familiare.",
+      "Cerco un esempio d'uso e mi chiedo quale indizio mi farebbe cambiare traduzione."
+    ],
+    "Q06": [
+      "Confronto parole, ordine della frase e registro per individuare dove si perde il tono.",
+      "Provo una resa più libera e confronto cosa guadagna e cosa sacrifica.",
+      "Traduco una frase alla volta, poi rileggo il testo ad alta voce per sentire il ritmo.",
+      "Confronto la mia versione con una traduzione diversa e chiedo a un compagno cosa percepisce.",
+      "Cerco chi parla, a chi e in quale situazione: il tono dipende anche dalle relazioni.",
+      "Scelgo il tono da preservare e verifico se una seconda lettura sostiene la mia scelta."
+    ],
+    "Q11": [
+      "Distribuisco l'esercizio in sessioni brevi e verifico quali parti richiedono più tempo.",
+      "Alterno attività diverse per mantenere curiosità senza perdere continuità.",
+      "Scelgo un obiettivo minimo settimanale e faccio una prova per capire se è realistico.",
+      "Chiedo quale supporto o confronto può rendere sostenibile la pratica regolare.",
+      "Controllo se il ritmo previsto lascia spazio a riposo, altre materie e vita personale.",
+      "Definisco un criterio concreto di progresso e una data per adattare il piano."
+    ]
+  }
+}

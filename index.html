@@ -1,23 +1,50 @@
 <!doctype html>
 <html lang="it">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101321"><title>CASARDI 8-BIT — Il segnale fantasma</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111324">
+  <meta name="description" content="Una sala giochi di quiz originali per l’Open Day del Liceo Casardi.">
+  <title>CASARDI ARCADE — Quiz dell’Open Day</title>
+  <link rel="stylesheet" href="styles/arcade.css">
 </head>
 <body>
-<div class="shell">
-  <header class="topbar"><a class="brand" href="#" aria-label="Casardi 8-bit"><span class="brand-mark">C</span><span>CASARDI <b>8-BIT</b></span></a><div class="topnote"><span class="live-dot"></span> PROTOTIPO GIOCABILE · BUILD 0.1</div><button id="audioToggle" class="icon-button" aria-label="Attiva o disattiva audio">♫ <span>AUDIO</span></button></header>
+  <a class="skip-link" href="#giochi">Vai ai quiz</a>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Casardi Arcade, home"><span class="brand-mark" aria-hidden="true">C</span><span>CASARDI <b>ARCADE</b></span></a>
+    <span class="status"><i aria-hidden="true"></i> OPEN DAY · SALA GIOCHI</span>
+    <a class="platform-link" href="platform.html">Gioca all’avventura platform <span aria-hidden="true">↗</span></a>
+  </header>
   <main>
-    <section class="stage-wrap" aria-label="Area di gioco">
-      <div class="stage-label"><span id="chapterLabel">MENU PRINCIPALE</span><span id="stageHint">UNA MISSIONE AL CASARDI</span></div>
-      <div class="screen-frame"><canvas id="game" width="480" height="270" aria-label="Gioco platform Casardi 8-bit"></canvas><div id="overlay" class="overlay"></div></div>
-      <div class="underbar"><div class="controls"><span><kbd>A</kbd><kbd>D</kbd> MUOVI</span><span><kbd>SPAZIO</kbd> SALTA</span><span><kbd>E</kbd> INTERAGISCI</span></div><div class="under-right"><span id="objective">SCEGLI LA TUA AVVENTURA</span><button id="pauseBtn" class="pause-button" hidden>Ⅱ PAUSA</button></div></div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">INSERISCI LA CURIOSITÀ · PREMI PER INIZIARE</p>
+        <h1 id="hero-title">Scegli il tuo<br><em>prossimo livello.</em></h1>
+        <p class="lede">Dieci quiz originali: idee, storia, parole e personaggi. Scegli un percorso, rispondi a otto domande e scopri un profilo narrativo costruito sulle tue scelte.</p>
+        <a class="cta" href="#giochi">ESPLORA I QUIZ <span aria-hidden="true">↓</span></a>
+      </div>
+      <figure class="hero-art">
+        <img src="assets/covers/cover-portico-rinascimentale.jpg" alt="Portico rinascimentale, immagine Open Access del Metropolitan Museum of Art">
+        <figcaption>UN MONDO DI DOMANDE · LIVELLO 01</figcaption>
+      </figure>
+      <div class="pixel-row" aria-hidden="true"><span>✦</span><span>◆</span><span>✦</span><span>●</span><span>◆</span><span>✦</span></div>
     </section>
-    <aside class="side-panel"><div class="panel-heading"><span class="spark">✦</span><span id="panelEyebrow">OPEN DAY · MISSIONE SPECIALE</span></div><h1 id="panelTitle">Il segnale<br><em>fantasma</em></h1><p id="panelText">Qualcosa ha trasformato l’avviso dell’Open Day in una pioggia di pixel. La squadra del Casardi ha un piano. Più o meno.</p><div id="menuActions" class="menu-actions"><button id="startDemo" class="primary-button">INIZIA LA MISSIONE <span>→</span></button><button id="campaignBtn" class="secondary-button">AVVENTURA COMPLETA <small>4 CAPITOLI</small></button></div><div id="statusCard" class="status-card" hidden><div class="status-top"><span>STATO DELLA SQUADRA</span><span id="heartDisplay">♥ ♥ ♥</span></div><div id="statusLine">Trova i tuoi compagni e ripristina il segnale.</div><div class="team-mini"><span><i class="dot ran"></i> RANALDO</span><span><i class="dot car"></i> CARLO</span><span><i class="dot fra"></i> FRANCESCO</span><span><i class="dot rug"></i> RUGGERO</span></div></div><div class="side-footer"><span>UN’AVVENTURA ORIGINALE</span><span>BARLETTA · ITALIA</span></div></aside>
+    <section class="arcade" id="giochi" aria-labelledby="games-title">
+      <div class="section-heading"><div><p class="eyebrow">SELEZIONA UNA CARTUCCIA</p><h2 id="games-title">La sala giochi</h2></div><span class="counter">10 QUIZ · 1 PLAYER</span></div>
+      <div class="game-grid">
+        <a class="game-card" href="quizzes/umano-o-ai.html"><img src="assets/covers/cover-camera-obscura.jpg" alt="Camera oscura"><span class="card-number">01</span><span class="card-copy"><small>OCCHIO ALL’INDIZIO</small><strong>Umano o AI?</strong><span>Allena lo sguardo, dichiara la tua confidenza.</span></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+        <a class="game-card" href="quizzes/tipo-di-mente.html"><img src="assets/covers/cover-filosofo-lampada.jpg" alt="Statuetta antica di un filosofo"><span class="card-number">02</span><span class="card-copy"><small>MODALITÀ ESPLORAZIONE</small><strong>Che tipo di mente hai?</strong><span>Scopri strategie, curiosità e tensioni.</span></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+        <a class="game-card" href="quizzes/apocalisse.html"><img src="assets/covers/cover-naufragio-tempesta.jpg" alt="Nave in una tempesta"><span class="card-number">03</span><span class="card-copy"><small>SFIDA COOPERATIVA</small><strong>Sopravviveresti all’apocalisse?</strong><span>Le scelte contano più dell’eroismo.</span></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+        <a class="game-card" href="quizzes/villain.html"><img src="assets/covers/cover-maschera-teatrale.jpg" alt="Maschera teatrale antica"><span class="card-number">04</span><span class="card-copy"><small>SCENA FINALE</small><strong>Che villain saresti?</strong><span>Firma originale, difetto compreso.</span></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+        <a class="game-card" href="quizzes/epoca-storica.html"><img src="assets/covers/cover-vitruvio.jpg" alt="Studio storico di proporzioni umane"><span class="card-number">05</span><span class="card-copy"><small>MACCHINA DEL TEMPO</small><strong>In quale epoca saresti nato?</strong><span>Un contesto storico, con i suoi compromessi.</span></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+        <a class="game-card" href="quizzes/dio-greco.html"><img src="assets/covers/cover-atena.jpg" alt="Rilievo antico di Atena"><span class="card-number">06</span><span class="card-copy"><small>MITOLOGIA · NON BIOGRAFIA</small><strong>Quale dio greco sei?</strong><span>Virtù, ambivalenze e varianti del mito.</span></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+        <a class="game-card" href="quizzes/parola-latina.html"><img src="assets/covers/cover-papiro-odissea.jpg" alt="Frammento di manoscritto antico"><span class="card-number">07</span><span class="card-copy"><small>UNA PAROLA, MOLTE SFUMATURE</small><strong>Che parola latina sei?</strong><span>Etimologia e significato nel contesto.</span></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+        <a class="game-card" href="quizzes/filosofo.html"><img src="assets/covers/cover-crisippo.jpg" alt="Busto di un filosofo antico"><span class="card-number">08</span><span class="card-copy"><small>DOMANDE PIÙ CHE ETICHETTE</small><strong>Quale filosofo ti somiglia?</strong><span>Un’affinità ragionata, non un test scientifico.</span></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+        <a class="game-card" href="quizzes/personaggio-antico.html"><img src="assets/covers/cover-ritratto-romano.jpg" alt="Ritratto scultoreo romano"><span class="card-number">09</span><span class="card-copy"><small>STORIA · SCELTE E CONSEGUENZE</small><strong>Quale personaggio antico saresti?</strong><span>Leadership e contesto, senza mitizzare la conquista.</span></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+        <a class="game-card" href="quizzes/scegli-il-classico.html"><img src="assets/covers/cover-papiro-odissea.jpg" alt="Frammento di manoscritto antico"><span class="card-number">10</span><span class="card-copy"><small>ORIENTAMENTO · NON UN VERDETTO</small><strong>Dovresti scegliere il Classico?</strong><span>Spunti per parlarne con studenti e docenti.</span></span><span class="card-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
   </main>
-  <footer class="foot"><span>ISPIRATO ALLA SEDE CENTRALE DEL LICEO CASARDI · VIA F. D’ARAGONA</span><span>← → / A D · SPAZIO · E</span></footer>
-</div>
-<div id="dialog" class="dialog-backdrop" hidden><section class="dialog-box" role="dialog" aria-modal="true" aria-labelledby="dialogTitle"><div class="dialog-top"><span id="dialogSpeaker">SQUADRA CASARDI</span><button id="closeDialog" aria-label="Chiudi">×</button></div><h2 id="dialogTitle"></h2><p id="dialogText"></p><div id="dialogChoices" class="choices"></div><div id="dialogNote" class="dialog-note"></div></section></div>
-<script src="game.js"></script>
-</body></html>
+  <footer class="footer"><span>UN PROGETTO PER L’OPEN DAY · LICEO CASARDI</span><span><a href="ASSET_CREDITS.md">CREDITI E FONTI</a> · <a href="docs/ricerca-e-progettazione.md">RICERCA</a></span></footer>
+</body>
+</html>

@@ -1,0 +1,2056 @@
+{
+  "tipo-di-mente": {
+    "dimensions": [
+      "analisi",
+      "immaginazione",
+      "apertura",
+      "azione",
+      "ascolto",
+      "pianificazione",
+      "revisione",
+      "collaborazione"
+    ],
+    "approaches": [
+      {
+        "id": "A",
+        "label": "Metto a fuoco",
+        "text": [
+          "Separo i fatti dalle ipotesi e cerco una prova controllabile.",
+          "Definisco il problema con precisione prima di scegliere.",
+          "Confronto due spiegazioni e verifico quale regge meglio.",
+          "Rendo visibili i passaggi, così posso correggere un errore."
+        ],
+        "scores": {
+          "analisi": 2,
+          "pianificazione": 1,
+          "revisione": 1
+        },
+        "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire."
+      },
+      {
+        "id": "B",
+        "label": "Apro possibilità",
+        "text": [
+          "Cerco un collegamento inatteso e provo a immaginare un’alternativa.",
+          "Cambio prospettiva: un’idea nuova potrebbe sbloccare la situazione.",
+          "Tengo aperte più ipotesi finché non emergono indizi migliori.",
+          "Trasformo il vincolo in un’occasione per sperimentare."
+        ],
+        "scores": {
+          "immaginazione": 2,
+          "apertura": 1,
+          "revisione": 1
+        },
+        "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista."
+      },
+      {
+        "id": "C",
+        "label": "Passo all’azione",
+        "text": [
+          "Faccio una prova piccola e reversibile, poi valuto cosa è successo.",
+          "Scelgo il prossimo passo concreto e mi do un tempo per rivederlo.",
+          "Organizzo le priorità e parto da ciò che si può verificare subito.",
+          "Preferisco un prototipo imperfetto a un piano che non si prova mai."
+        ],
+        "scores": {
+          "azione": 2,
+          "pianificazione": 1,
+          "analisi": 1
+        },
+        "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade."
+      },
+      {
+        "id": "D",
+        "label": "Coinvolgo le persone",
+        "text": [
+          "Ascolto chi è coinvolto e costruisco una risposta che tenga conto dei diversi punti di vista.",
+          "Chiedo un confronto prima di fissare la soluzione.",
+          "Mi domando chi rischia di restare escluso e adatto il piano.",
+          "Condivido il ragionamento: una buona idea migliora se può essere discussa."
+        ],
+        "scores": {
+          "ascolto": 2,
+          "collaborazione": 1,
+          "apertura": 1
+        },
+        "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile."
+      },
+      {
+        "id": "E",
+        "label": "Cerco il punto cieco",
+        "text": [
+          "Prima di scegliere, cerco chi potrebbe essere escluso e quale ipotesi sto dando per scontata.",
+          "Faccio un giro di obiezioni: che cosa non abbiamo ancora considerato?",
+          "Chiedo un parere a chi vede il problema da un’altra posizione.",
+          "Rendo esplicito il costo della mia idea e verifico chi lo sostiene."
+        ],
+        "scores": {
+          "ascolto": 2,
+          "revisione": 2,
+          "collaborazione": 1
+        },
+        "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa."
+      },
+      {
+        "id": "F",
+        "label": "Definisco una prova",
+        "text": [
+          "Scelgo un test piccolo, un segnale osservabile e un momento per rivedere la scelta.",
+          "Prima di decidere tutto, provo la parte più incerta in modo reversibile.",
+          "Stabilisco quale risultato confermerebbe o smentirebbe la mia ipotesi.",
+          "Procedo per una tappa breve e concordo in anticipo quando cambiare strada."
+        ],
+        "scores": {
+          "azione": 1,
+          "analisi": 2,
+          "pianificazione": 1,
+          "revisione": 1
+        },
+        "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile."
+      }
+    ],
+    "results": [
+      {
+        "id": "stratega",
+        "title": "Stratega",
+        "summary": "Trasformi il caos in una mappa di priorità e dipendenze.",
+        "strength": "Rendi chiaro il prossimo passo senza perdere di vista l’insieme.",
+        "tension": "Una mappa troppo rifinita può ritardare l’esperimento.",
+        "nudge": "Prova a mettere alla prova il piano con una piccola eccezione.",
+        "sources": [
+          "Profilo narrativo originale; non è una tipologia psicometrica."
+        ]
+      },
+      {
+        "id": "visionario",
+        "title": "Visionario",
+        "summary": "Vedi possibilità che gli altri non hanno ancora collegato.",
+        "strength": "Generi alternative e dai spazio all’immaginazione.",
+        "tension": "Le idee possono restare aperte troppo a lungo.",
+        "nudge": "Scegli un’ipotesi da testare, senza rinunciare alle altre.",
+        "sources": [
+          "Profilo narrativo originale; non è una tipologia psicometrica."
+        ]
+      },
+      {
+        "id": "analista",
+        "title": "Analista",
+        "summary": "Ti orienti chiedendo che cosa sappiamo davvero e che cosa manca.",
+        "strength": "Riconosci incoerenze e distingui un indizio da una prova.",
+        "tension": "La ricerca di certezza può diventare una pausa infinita.",
+        "nudge": "Decidi quale informazione basta per il prossimo passo.",
+        "sources": [
+          "Profilo narrativo originale; non è una tipologia psicometrica."
+        ]
+      },
+      {
+        "id": "creativo",
+        "title": "Creativo",
+        "summary": "Ti piace cambiare cornice e provare strade non ovvie.",
+        "strength": "Riesci a usare un vincolo come materiale per inventare.",
+        "tension": "Un’idea brillante ha bisogno anche di verifica e manutenzione.",
+        "nudge": "Affianca alla novità un criterio semplice per capire se funziona.",
+        "sources": [
+          "Profilo narrativo originale; non è una tipologia psicometrica."
+        ]
+      },
+      {
+        "id": "osservatore",
+        "title": "Osservatore",
+        "summary": "Noti dettagli, segnali deboli e cambiamenti di contesto.",
+        "strength": "Sai aspettare abbastanza da vedere ciò che sfugge alla fretta.",
+        "tension": "Osservare non sempre chiarisce quando è il momento di intervenire.",
+        "nudge": "Condividi un’osservazione e trasformala in una domanda verificabile.",
+        "sources": [
+          "Profilo narrativo originale; non è una tipologia psicometrica."
+        ]
+      },
+      {
+        "id": "idealista",
+        "title": "Idealista",
+        "summary": "Valuti le scelte anche per il modo in cui toccano le persone.",
+        "strength": "Rendi visibili conseguenze e bisogni spesso trascurati.",
+        "tension": "Voler includere ogni prospettiva può rendere difficile scegliere.",
+        "nudge": "Distingui ciò che è indispensabile da ciò che può essere migliorato dopo.",
+        "sources": [
+          "Profilo narrativo originale; non è una tipologia psicometrica."
+        ]
+      },
+      {
+        "id": "pragmatico",
+        "title": "Pragmatico",
+        "summary": "Ti orienti verso prove concrete, prototipi e piccoli passi.",
+        "strength": "Porti le idee nel mondo reale e impari dai risultati.",
+        "tension": "L’urgenza di fare può far saltare una domanda importante.",
+        "nudge": "Prima di partire, formula in una frase cosa vuoi scoprire.",
+        "sources": [
+          "Profilo narrativo originale; non è una tipologia psicometrica."
+        ]
+      },
+      {
+        "id": "diplomatico",
+        "title": "Diplomatico",
+        "summary": "Cerchi un terreno comune senza cancellare le differenze.",
+        "strength": "Faciliti il confronto e fai circolare informazioni nel gruppo.",
+        "tension": "Un accordo rapido non sempre affronta il dissenso reale.",
+        "nudge": "Nomina con gentilezza anche il punto su cui non c’è accordo.",
+        "sources": [
+          "Profilo narrativo originale; non è una tipologia psicometrica."
+        ]
+      }
+    ]
+  },
+  "apocalisse": {
+    "dimensions": [
+      "preparazione",
+      "cooperazione",
+      "leadership condivisa",
+      "gestione del rischio",
+      "riparazione",
+      "esplorazione",
+      "calma",
+      "risorse"
+    ],
+    "approaches": [
+      {
+        "id": "A",
+        "label": "Metto in sicurezza",
+        "text": [
+          "Faccio l’inventario, stabilisco priorità e proteggo le scorte comuni.",
+          "Controllo prima acqua, riparo e informazioni affidabili.",
+          "Organizzo le risorse in modo trasparente, con una riserva per gli imprevisti.",
+          "Preferisco una procedura semplice che tutti possano seguire."
+        ],
+        "scores": {
+          "preparazione": 2,
+          "risorse": 2,
+          "calma": 1
+        },
+        "feedback": "Hai protetto risorse e margini. Controlla che la riserva prevista resti accessibile anche a chi non ha voce nel gruppo."
+      },
+      {
+        "id": "B",
+        "label": "Tengo unito il gruppo",
+        "text": [
+          "Raccolgo i bisogni e propongo una decisione condivisa, con ruoli chiari.",
+          "Ascolto il dissenso e cerco una regola equa per distribuire il carico.",
+          "Chiedo chi sa fare cosa e organizzo coppie di supporto.",
+          "La fiducia è una risorsa: spiego il piano e lascio spazio alle obiezioni."
+        ],
+        "scores": {
+          "cooperazione": 2,
+          "leadership condivisa": 2,
+          "calma": 1
+        },
+        "feedback": "Hai messo al centro la fiducia e la cooperazione. Un accordo funziona meglio se responsabilità e dissenso restano espliciti."
+      },
+      {
+        "id": "C",
+        "label": "Verifico la strada",
+        "text": [
+          "Confronto mappa, segnali e rischi prima di muovermi.",
+          "Mando una ricognizione prudente e concordo un punto di ritorno.",
+          "Scelgo il percorso con un piano alternativo e un limite di tempo.",
+          "Non confondo la via più corta con quella più sicura."
+        ],
+        "scores": {
+          "esplorazione": 2,
+          "gestione del rischio": 2,
+          "preparazione": 1
+        },
+        "feedback": "Hai cercato informazioni prima di muoverti. Una ricognizione utile ha un limite di tempo e un piano di rientro."
+      },
+      {
+        "id": "D",
+        "label": "Riparo e adatto",
+        "text": [
+          "Cerco il guasto, provo una riparazione reversibile e controllo il risultato.",
+          "Riutilizzo ciò che abbiamo, senza consumare tutte le riserve.",
+          "Divido il lavoro in passaggi e chiedo aiuto se il rischio supera le competenze.",
+          "Mantengo la calma, ma cambio piano se i segnali dicono che non funziona."
+        ],
+        "scores": {
+          "riparazione": 2,
+          "calma": 1,
+          "risorse": 1
+        },
+        "feedback": "Hai scelto di intervenire sul problema. Prima di improvvisare, verifica che il rischio della riparazione sia proporzionato."
+      },
+      {
+        "id": "E",
+        "label": "Calcolo il margine",
+        "text": [
+          "Controllo quanto dura la riserva nello scenario peggiore e fisso una soglia di allarme.",
+          "Stimo il costo in acqua, tempo e fatica prima di autorizzare il piano.",
+          "Cerco un margine di sicurezza, non una previsione ottimistica.",
+          "Tengo traccia delle risorse usate e stabilisco quando fermare l’intervento."
+        ],
+        "scores": {
+          "gestione del rischio": 2,
+          "risorse": 2,
+          "preparazione": 1
+        },
+        "feedback": "Hai calcolato una soglia di sicurezza. Le stime vanno aggiornate quando cambiano le condizioni, non difese per orgoglio."
+      },
+      {
+        "id": "F",
+        "label": "Concordo una regola",
+        "text": [
+          "Propongo una regola temporanea, trasparente e rivedibile con il gruppo.",
+          "Chiarisco chi decide, chi controlla e come segnalare un problema.",
+          "Distribuisco compiti e responsabilità senza lasciare solo chi è più esposto.",
+          "Scelgo un accordo minimo adesso e un momento preciso per valutarlo di nuovo."
+        ],
+        "scores": {
+          "cooperazione": 2,
+          "leadership condivisa": 1,
+          "calma": 1,
+          "preparazione": 1
+        },
+        "feedback": "Hai proposto una regola condivisa. Dille quando sarà rivista: una soluzione provvisoria non deve diventare automaticamente permanente."
+      }
+    ],
+    "results": [
+      {
+        "id": "coordinatore",
+        "title": "Coordinatore di squadra",
+        "summary": "Aiuti il gruppo a trasformare competenze diverse in un piano comune.",
+        "strength": "Condivisione dei ruoli e ascolto del dissenso.",
+        "tension": "Puoi caricarti del compito di tenere insieme tutto.",
+        "nudge": "Delega una decisione e lascia che il gruppo la riveda.",
+        "sources": [
+          "Archetipo narrativo originale."
+        ]
+      },
+      {
+        "id": "lupo",
+        "title": "Lupo autonomo",
+        "summary": "Sai muoverti con iniziativa e proteggere il tuo spazio d’azione.",
+        "strength": "Autonomia e capacità di leggere il contesto.",
+        "tension": "L’indipendenza senza scambio riduce le informazioni disponibili.",
+        "nudge": "Concorda un check-in: autonomia e cooperazione possono convivere.",
+        "sources": [
+          "Archetipo narrativo originale."
+        ]
+      },
+      {
+        "id": "stratega",
+        "title": "Stratega delle risorse",
+        "summary": "Pensi in anticipo a scorte, alternative e conseguenze.",
+        "strength": "Preparazione e gestione delle priorità.",
+        "tension": "Un piano robusto deve poter cambiare quando cambiano i dati.",
+        "nudge": "Stabilisci un segnale che ti farà rivedere la strategia.",
+        "sources": [
+          "Archetipo narrativo originale."
+        ]
+      },
+      {
+        "id": "tecnico",
+        "title": "Riparatore inventivo",
+        "summary": "Cerchi il guasto e immagini come ripristinare una funzione utile.",
+        "strength": "Pazienza, adattamento e cura degli strumenti.",
+        "tension": "Riparare da soli o oltre le proprie competenze può aggiungere rischio.",
+        "nudge": "Prima di intervenire, esplicita il rischio e chiedi un secondo controllo.",
+        "sources": [
+          "Archetipo narrativo originale."
+        ]
+      },
+      {
+        "id": "diplomatico",
+        "title": "Mediatore del rifugio",
+        "summary": "Cerchi accordi praticabili quando risorse e bisogni entrano in conflitto.",
+        "strength": "Equità e gestione del dissenso.",
+        "tension": "La mediazione non può sostituire una scelta urgente quando serve.",
+        "nudge": "Proponi una decisione temporanea e un momento preciso per rivederla.",
+        "sources": [
+          "Archetipo narrativo originale."
+        ]
+      },
+      {
+        "id": "esploratore",
+        "title": "Esploratore prudente",
+        "summary": "Vuoi informazioni nuove, ma definisci limiti e vie di ritorno.",
+        "strength": "Curiosità accompagnata da valutazione del rischio.",
+        "tension": "La ricognizione può diventare un fine invece di servire il gruppo.",
+        "nudge": "Decidi prima quale informazione renderebbe utile l’esplorazione.",
+        "sources": [
+          "Archetipo narrativo originale."
+        ]
+      },
+      {
+        "id": "impulsivo",
+        "title": "Partenza a razzo",
+        "summary": "Sotto pressione preferisci agire subito e sbloccare l’impasse.",
+        "strength": "Energia e disponibilità ad assumerti un primo compito.",
+        "tension": "La velocità può trascurare consenso, risorse o sicurezza.",
+        "nudge": "Fai una pausa di trenta secondi per chiedere: cosa potrebbe andare storto?",
+        "sources": [
+          "Archetipo narrativo originale."
+        ]
+      },
+      {
+        "id": "supporto",
+        "title": "Bravo a chiedere supporto",
+        "summary": "Riconosci che restare al sicuro dipende anche dal chiedere e offrire aiuto.",
+        "strength": "Consapevolezza dei limiti e attenzione reciproca.",
+        "tension": "In una crisi il supporto va organizzato, non lasciato all’improvvisazione.",
+        "nudge": "Dichiara un bisogno concreto e abbinalo a una risorsa disponibile.",
+        "sources": [
+          "Archetipo narrativo originale."
+        ]
+      }
+    ]
+  },
+  "villain": {
+    "dimensions": [
+      "controllo",
+      "spettacolo",
+      "pazienza",
+      "imprevedibilità",
+      "innovazione",
+      "lealtà",
+      "empatia",
+      "confronto"
+    ],
+    "approaches": [
+      {
+        "id": "A",
+        "label": "Regia accurata",
+        "text": [
+          "Rimetto in ordine il piano e preparo un’alternativa discreta.",
+          "Studio il punto debole del copione prima di cambiare scena.",
+          "Preferisco controllare tempi e dettagli: l’imprevisto si prepara.",
+          "Rendo leggibile la posta in gioco prima del confronto."
+        ],
+        "scores": {
+          "controllo": 2,
+          "pazienza": 2,
+          "innovazione": 1
+        },
+        "feedback": "Hai puntato su controllo e preparazione. Lascia uno spazio per correggere il piano quando emergono costi che non avevi previsto."
+      },
+      {
+        "id": "B",
+        "label": "Entrata in scena",
+        "text": [
+          "Trasformo l’ostacolo in una scena memorabile.",
+          "Dico chiaramente al pubblico che cosa voglio cambiare.",
+          "Scelgo un gesto teatrale che renda impossibile ignorare il problema.",
+          "Se il piano è scoperto, ne faccio parte dello spettacolo."
+        ],
+        "scores": {
+          "spettacolo": 2,
+          "confronto": 1,
+          "imprevedibilità": 1
+        },
+        "feedback": "Hai scelto la comunicazione scenica. Chiediti se il pubblico può rispondere o se sta soltanto assistendo al tuo messaggio."
+      },
+      {
+        "id": "C",
+        "label": "Improvvisazione",
+        "text": [
+          "Abbandono la battuta preparata e provo una soluzione insolita.",
+          "Uso l’errore come materiale per una nuova idea.",
+          "Cambio le regole del gioco invece di ripetere il piano fallito.",
+          "Accetto che il finale sorprenda anche me, purché nessuno venga danneggiato."
+        ],
+        "scores": {
+          "imprevedibilità": 2,
+          "innovazione": 2,
+          "empatia": 1
+        },
+        "feedback": "Hai accolto l’imprevisto. L’inventiva funziona meglio quando il colpo di scena non ricade su chi non ha scelto di partecipare."
+      },
+      {
+        "id": "D",
+        "label": "Patto con la squadra",
+        "text": [
+          "Ascolto l’alleato e chiarisco quale limite non voglio superare.",
+          "Condivido merito e responsabilità invece di prendermi tutta la scena.",
+          "Cerco un compromesso che conservi il legame senza fingere accordo.",
+          "Rivedo il piano se il suo costo ricade su chi non ha scelto."
+        ],
+        "scores": {
+          "lealtà": 2,
+          "empatia": 2,
+          "pazienza": 1
+        },
+        "feedback": "Hai considerato alleati e legami. Condividere il merito è credibile solo se anche le decisioni vengono condivise."
+      },
+      {
+        "id": "E",
+        "label": "Dichiaro un limite",
+        "text": [
+          "Prima della scena, stabilisco cosa non farò e chi deve poter fermare il piano.",
+          "Rendo esplicite le conseguenze accettabili e quelle che non intendo scaricare sugli altri.",
+          "Chiedo consenso a chi è coinvolto, invece di trattare il silenzio come assenso.",
+          "Controllo che il colpo di scena non trasformi persone inconsapevoli in bersagli."
+        ],
+        "scores": {
+          "empatia": 2,
+          "lealtà": 1,
+          "controllo": 1
+        },
+        "feedback": "Hai dichiarato un limite. Un confine è concreto quando chi è coinvolto può farlo rispettare."
+      },
+      {
+        "id": "F",
+        "label": "Riscrivo il copione",
+        "text": [
+          "Cambio l’obiettivo della scena: non devo vincere nello stesso modo in cui ho iniziato.",
+          "Uso l’imprevisto per inventare un finale diverso, poi ne verifico il costo.",
+          "Abbandono il piano elegante se i fatti mostrano che non funziona più.",
+          "Trasformo la sconfitta parziale in una scelta nuova, non in una vendetta."
+        ],
+        "scores": {
+          "innovazione": 2,
+          "imprevedibilità": 1,
+          "pazienza": 1
+        },
+        "feedback": "Hai riscritto il copione. Cambiare obiettivo può essere più interessante che cercare una nuova via per ottenere lo stesso risultato."
+      }
+    ],
+    "results": [
+      {
+        "id": "genio",
+        "title": "Genio del piano",
+        "summary": "La tua firma è una strategia con passaggi che sembrano inevitabili.",
+        "strength": "Visione d’insieme e attenzione ai dettagli.",
+        "tension": "Il bisogno di controllo può rendere difficile ascoltare un dato nuovo.",
+        "nudge": "Lascia che un alleato modifichi una parte del piano.",
+        "sources": [
+          "Archetipo immaginario originale, non ispirato a una persona specifica."
+        ]
+      },
+      {
+        "id": "tiranno",
+        "title": "Tiranno da palcoscenico",
+        "summary": "Ti interessa il potere della scena e l’effetto che produce.",
+        "strength": "Presenza e capacità di comunicare un obiettivo.",
+        "tension": "Il pubblico non è una folla da comandare: le persone possono dissentire.",
+        "nudge": "Fai una domanda vera prima del tuo prossimo monologo.",
+        "sources": [
+          "Archetipo immaginario originale."
+        ]
+      },
+      {
+        "id": "burattinaio",
+        "title": "Burattinaio paziente",
+        "summary": "Preferisci muovere gli eventi con tempi lunghi e leve precise.",
+        "strength": "Pazienza e capacità di anticipare conseguenze.",
+        "tension": "Un piano segreto può erodere fiducia e consenso.",
+        "nudge": "Rendi esplicita una regola del gioco agli alleati.",
+        "sources": [
+          "Archetipo immaginario originale."
+        ]
+      },
+      {
+        "id": "caos",
+        "title": "Mente caotica",
+        "summary": "L’imprevisto ti dà energia e apre possibilità nuove.",
+        "strength": "Adattamento rapido e inventiva.",
+        "tension": "La sorpresa non è sempre un bene per chi ne subisce gli effetti.",
+        "nudge": "Prima di improvvisare, definisci un confine di sicurezza.",
+        "sources": [
+          "Archetipo immaginario originale."
+        ]
+      },
+      {
+        "id": "antieroe",
+        "title": "Antieroe con un codice",
+        "summary": "Ti muovi fra obiettivi ambiziosi e limiti che scegli di rispettare.",
+        "strength": "Lealtà e consapevolezza del costo delle decisioni.",
+        "tension": "Un codice vale anche quando non conviene al piano.",
+        "nudge": "Condividi il tuo limite prima che arrivi la crisi.",
+        "sources": [
+          "Archetipo immaginario originale."
+        ]
+      },
+      {
+        "id": "visionario",
+        "title": "Visionario senza freni",
+        "summary": "Vedi un futuro diverso e vuoi costringere la storia a raggiungerlo.",
+        "strength": "Innovazione e chiarezza d’intento.",
+        "tension": "Un fine dichiarato giusto non giustifica qualunque mezzo.",
+        "nudge": "Chiedi chi paga il prezzo e lascia spazio a un no.",
+        "sources": [
+          "Archetipo immaginario originale."
+        ]
+      },
+      {
+        "id": "ombra",
+        "title": "Stratega nell’ombra",
+        "summary": "Preferisci preparare il terreno piuttosto che cercare applausi.",
+        "strength": "Osservazione, pazienza e senso delle connessioni.",
+        "tension": "L’influenza senza trasparenza può trasformarsi in manipolazione.",
+        "nudge": "Rendi visibile una decisione che riguarda anche altri.",
+        "sources": [
+          "Archetipo immaginario originale."
+        ]
+      },
+      {
+        "id": "distruttore",
+        "title": "Distruttore di copioni",
+        "summary": "Metti in discussione sistemi che sembrano intoccabili.",
+        "strength": "Coraggio di affrontare il conflitto e rompere l’inerzia.",
+        "tension": "Demolire non basta se non immagini cosa può sostituire il copione.",
+        "nudge": "Accosta alla critica una proposta che possa essere provata.",
+        "sources": [
+          "Archetipo immaginario originale."
+        ]
+      }
+    ]
+  },
+  "epoca-storica": {
+    "dimensions": [
+      "tradizione",
+      "mobilità",
+      "comunità",
+      "gerarchia",
+      "tecnologia",
+      "ritmi",
+      "sapere",
+      "autonomia"
+    ],
+    "approaches": [
+      {
+        "id": "A",
+        "label": "Radici e comunità",
+        "text": [
+          "Mi orientano consuetudini condivise e legami di vicinato.",
+          "Preferisco migliorare un’istituzione conosciuta prima di sostituirla.",
+          "Cerco una comunità stabile in cui contribuire nel tempo.",
+          "Il sapere tramandato è utile, ma voglio capire chi ne resta fuori."
+        ],
+        "scores": {
+          "tradizione": 2,
+          "comunità": 2,
+          "ritmi": 1
+        },
+        "feedback": "Hai valorizzato continuità e comunità. Domanda chi può entrare in quella comunità e chi ne resta escluso."
+      },
+      {
+        "id": "B",
+        "label": "Viaggio e scambio",
+        "text": [
+          "Mi attirano le reti di scambio e l’incontro con lingue diverse.",
+          "Mi sposto volentieri se il viaggio apre nuove possibilità.",
+          "Cerco contatti lontani, sapendo che ogni scambio ha costi e asimmetrie.",
+          "Preferisco imparare sul campo e confrontare prospettive."
+        ],
+        "scores": {
+          "mobilità": 2,
+          "autonomia": 1,
+          "sapere": 1
+        },
+        "feedback": "Hai scelto scambi e mobilità. Segui anche il potere che decide chi viaggia liberamente e a quali condizioni."
+      },
+      {
+        "id": "C",
+        "label": "Sapere e discussione",
+        "text": [
+          "Voglio rendere accessibili strumenti, testi e conoscenze.",
+          "Mi interessa discutere un’idea e verificare come è stata costruita.",
+          "Studio come cambiano le istituzioni quando circolano nuove idee.",
+          "Cerco luoghi in cui ricerca, arte e dialogo possano incontrarsi."
+        ],
+        "scores": {
+          "sapere": 2,
+          "autonomia": 1,
+          "comunità": 1
+        },
+        "feedback": "Hai dato peso a sapere e discussione. Verifica chi produce le fonti e chi ha accesso ai luoghi in cui circolano."
+      },
+      {
+        "id": "D",
+        "label": "Officina e cambiamento",
+        "text": [
+          "Mi incuriosiscono strumenti che cambiano il modo di lavorare.",
+          "Valuto un’innovazione chiedendomi chi ne trae beneficio e chi ne sostiene il costo.",
+          "Sperimenterei una tecnica nuova, con regole per limitare gli effetti imprevisti.",
+          "Preferisco ritmi adattabili e soluzioni costruite provando."
+        ],
+        "scores": {
+          "tecnologia": 2,
+          "ritmi": 1,
+          "autonomia": 1
+        },
+        "feedback": "Hai guardato a strumenti e cambiamento. Una novità va letta insieme al lavoro, alle risorse e ai costi che sposta."
+      },
+      {
+        "id": "E",
+        "label": "Guardo chi paga",
+        "text": [
+          "Chiedo chi guadagna dalla novità e chi ne sostiene il costo quotidiano.",
+          "Confronto la stessa scelta dal punto di vista di gruppi con diritti diversi.",
+          "Non giudico il progresso solo dalla velocità: considero lavoro, accesso e ambiente.",
+          "Cerco una fonte che racconti l’esperienza meno visibile nel racconto dominante."
+        ],
+        "scores": {
+          "autonomia": 1,
+          "comunità": 1,
+          "gerarchia": 2,
+          "sapere": 1
+        },
+        "feedback": "Hai chiesto chi paga il prezzo. Confronta testimonianze diverse: una sola prospettiva non descrive un’intera epoca."
+      },
+      {
+        "id": "F",
+        "label": "Tengo il meglio, cambio il resto",
+        "text": [
+          "Conservo una pratica utile, ma la adatto se produce esclusioni evitabili.",
+          "Provo una riforma graduale e osservo chi ne beneficia davvero.",
+          "Non scelgo tra passato e novità in blocco: distinguo funzioni e conseguenze.",
+          "Mantengo una rete di sostegno mentre sperimento un modo diverso di fare."
+        ],
+        "scores": {
+          "tradizione": 1,
+          "tecnologia": 1,
+          "ritmi": 1,
+          "autonomia": 1
+        },
+        "feedback": "Hai cercato di conservare ciò che serve e trasformare il resto. Specifica quale pratica manterresti e con quale criterio."
+      }
+    ],
+    "results": [
+      {
+        "id": "grecia",
+        "title": "Grecia delle poleis",
+        "summary": "Ti attrae una vita civica fatta di assemblee, rituali e confronto, in comunità molto diverse fra loro.",
+        "strength": "Partecipazione e dibattito.",
+        "tension": "La cittadinanza antica escludeva molte persone: non era una democrazia universale.",
+        "nudge": "Confronta Atene con un’altra polis, senza trattarle come un modello unico.",
+        "sources": [
+          "Aristotele, Politica; Stanford Encyclopedia of Philosophy, Ancient Political Philosophy."
+        ]
+      },
+      {
+        "id": "repubblica",
+        "title": "Roma repubblicana",
+        "summary": "Ti interessa una società di istituzioni, alleanze e negoziazioni pubbliche.",
+        "strength": "Capacità di pensare in termini di regole e responsabilità civiche.",
+        "tension": "La Repubblica romana era gerarchica e legata a espansione e schiavitù.",
+        "nudge": "Chiediti chi poteva partecipare davvero alla vita politica.",
+        "sources": [
+          "Cicerone, De re publica; Stanford Encyclopedia of Philosophy, Ancient Political Philosophy."
+        ]
+      },
+      {
+        "id": "impero",
+        "title": "Roma imperiale",
+        "summary": "Ti incuriosiscono reti, infrastrutture e amministrazione su distanze ampie.",
+        "strength": "Visione sistemica e organizzazione.",
+        "tension": "Connessioni e stabilità dell’Impero si accompagnavano a dominio e disuguaglianze.",
+        "nudge": "Guarda una provincia dal punto di vista di chi vi viveva.",
+        "sources": [
+          "Cassio Dione, Historia Romana; Encyclopaedia Britannica, Roman Empire."
+        ]
+      },
+      {
+        "id": "medioevo",
+        "title": "Medioevo urbano",
+        "summary": "Ti interessano comunità locali, mestieri, istituzioni e saperi in trasformazione.",
+        "strength": "Attenzione alle reti di collaborazione e ai ritmi condivisi.",
+        "tension": "Il Medioevo europeo copre secoli e regioni molto differenti.",
+        "nudge": "Scegli una città e un secolo: evita l’idea di un’unica età medievale.",
+        "sources": [
+          "Jacques Le Goff, Medieval Civilization; Encyclopaedia Britannica, Middle Ages."
+        ]
+      },
+      {
+        "id": "rinascimento",
+        "title": "Rinascimento",
+        "summary": "Ti attira l’incontro fra bottega, ricerca, arti e nuove forme di patronato.",
+        "strength": "Curiosità interdisciplinare e sperimentazione.",
+        "tension": "L’accesso a istruzione e potere era fortemente diseguale.",
+        "nudge": "Segui una tecnica o un’opera nel suo contesto sociale.",
+        "sources": [
+          "Encyclopaedia Britannica, Renaissance."
+        ]
+      },
+      {
+        "id": "esplorazioni",
+        "title": "Età delle esplorazioni",
+        "summary": "Ti muovi per curiosità e scambio, in un’epoca di rotte globali e contatti forzati.",
+        "strength": "Apertura a lingue e geografie diverse.",
+        "tension": "Le esplorazioni europee furono intrecciate a colonizzazione e violenza.",
+        "nudge": "Ricostruisci la stessa rotta da più punti di vista.",
+        "sources": [
+          "Encyclopaedia Britannica, Age of Discovery."
+        ]
+      },
+      {
+        "id": "illuminismo",
+        "title": "Illuminismo",
+        "summary": "Ti coinvolgono discussione pubblica, sapere e critica delle autorità.",
+        "strength": "Ricerca di argomenti e ragioni condivisibili.",
+        "tension": "Gli ideali illuministi convivevano con esclusioni e contraddizioni.",
+        "nudge": "Domandati chi era considerato parte del pubblico.",
+        "sources": [
+          "Stanford Encyclopedia of Philosophy, Enlightenment."
+        ]
+      },
+      {
+        "id": "industriale",
+        "title": "Rivoluzione industriale",
+        "summary": "Ti interessa capire come strumenti e produzione ridisegnano la vita quotidiana.",
+        "strength": "Attenzione al cambiamento tecnico e organizzativo.",
+        "tension": "Innovazione, lavoro minorile, urbanizzazione e inquinamento non furono costi astratti.",
+        "nudge": "Guarda una tecnologia insieme alle condizioni di chi la usava.",
+        "sources": [
+          "Encyclopaedia Britannica, Industrial Revolution."
+        ]
+      },
+      {
+        "id": "belle-epoque",
+        "title": "Belle Époque",
+        "summary": "Ti attrae un mondo di città, arti, trasporti e fiducia nella modernità.",
+        "strength": "Curiosità per la vita urbana e le novità culturali.",
+        "tension": "Il nome evoca soprattutto una prospettiva europea e non cancella tensioni sociali.",
+        "nudge": "Confronta l’esperienza di gruppi diversi nella stessa città.",
+        "sources": [
+          "Encyclopaedia Britannica, Belle Époque."
+        ]
+      },
+      {
+        "id": "novecento",
+        "title": "Novecento",
+        "summary": "Ti trovi a tuo agio fra trasformazioni rapide, media di massa e diritti in discussione.",
+        "strength": "Capacità di leggere sistemi complessi e mutamenti ravvicinati.",
+        "tension": "Il secolo comprende guerre, totalitarismi e esperienze lontane fra loro.",
+        "nudge": "Specifica sempre luogo, decennio e voce storica.",
+        "sources": [
+          "Encyclopaedia Britannica, 20th century."
+        ]
+      }
+    ]
+  },
+  "dio-greco": {
+    "dimensions": [
+      "strategia",
+      "autorità",
+      "cura",
+      "autonomia",
+      "arti",
+      "comunicazione",
+      "conflitto",
+      "trasformazione",
+      "artigianato",
+      "ospitalità"
+    ],
+    "approaches": [
+      {
+        "id": "A",
+        "label": "Ordine e patto",
+        "text": [
+          "Cerco una regola condivisa e chiarisco chi ne risponde.",
+          "Ricostruisco il patto prima di scegliere una punizione.",
+          "Distinguo l’autorità legittima dal semplice comando.",
+          "Rendo visibile il costo di rompere l’accordo."
+        ],
+        "scores": {
+          "strategia": 2,
+          "autorità": 2,
+          "cura": 1
+        },
+        "feedback": "Hai cercato un ordine riconoscibile. Nei miti l’autorità è spesso ambivalente: chiediti chi può contestarla."
+      },
+      {
+        "id": "B",
+        "label": "Cura e ospitalità",
+        "text": [
+          "Guardo prima a chi è più esposto e a cosa gli serve ora.",
+          "Offro accoglienza senza trasformarla in un debito.",
+          "Provo a proteggere persone e luoghi insieme.",
+          "Cerco un gesto di cura che possa essere sostenuto nel tempo."
+        ],
+        "scores": {
+          "cura": 2,
+          "ospitalità": 2,
+          "trasformazione": 1
+        },
+        "feedback": "Hai scelto una risposta di cura. Cura e ospitalità non richiedono di decidere al posto di chi riceve aiuto."
+      },
+      {
+        "id": "C",
+        "label": "Arte e abilità",
+        "text": [
+          "Creo qualcosa di utile e bello, poi ascolto come viene ricevuto.",
+          "Affronto il problema con una competenza concreta.",
+          "Trasformo la frustrazione in un’opera o in un’invenzione.",
+          "Rendo visibile il lavoro che di solito resta nell’ombra."
+        ],
+        "scores": {
+          "arti": 2,
+          "artigianato": 2,
+          "autonomia": 1
+        },
+        "feedback": "Hai dato valore a competenza, arte o tecnica. Riconosci anche il lavoro che rende possibile il risultato ma resta invisibile."
+      },
+      {
+        "id": "D",
+        "label": "Viaggio e parola",
+        "text": [
+          "Cerco chi può tradurre il problema fra comunità diverse.",
+          "Mi muovo, raccolgo notizie e torno con un piano.",
+          "Uso una parola chiara prima di ricorrere allo scontro.",
+          "Apro un passaggio fra mondi che non si stavano ascoltando."
+        ],
+        "scores": {
+          "comunicazione": 2,
+          "autonomia": 1,
+          "strategia": 1
+        },
+        "feedback": "Hai puntato su viaggio e parola. Una mediazione riesce se il messaggio conserva il senso per entrambe le comunità."
+      },
+      {
+        "id": "E",
+        "label": "Cerco un limite giusto",
+        "text": [
+          "Definisco un confine che protegga le persone senza trasformarsi in punizione arbitraria.",
+          "Prima di esercitare potere, ascolto chi subirà la decisione e chiarisco le ragioni.",
+          "Verifico se la regola vale anche per chi la impone.",
+          "Cerco una riparazione proporzionata, non un gesto che alimenti altra vendetta."
+        ],
+        "scores": {
+          "autorità": 1,
+          "cura": 1,
+          "strategia": 1,
+          "ospitalità": 1
+        },
+        "feedback": "Hai definito un limite. La proporzione della risposta conta quanto il principio che vuoi difendere."
+      },
+      {
+        "id": "F",
+        "label": "Metto in relazione le voci",
+        "text": [
+          "Faccio parlare le comunità coinvolte prima di annunciare una soluzione.",
+          "Traduco il problema in termini comprensibili a chi non condivide i miei presupposti.",
+          "Cerco un intermediario affidabile e controllo che il messaggio non cambi lungo il percorso.",
+          "Creo uno spazio di confronto in cui nessuna parte debba rinunciare alla propria voce."
+        ],
+        "scores": {
+          "comunicazione": 2,
+          "ospitalità": 1,
+          "cura": 1,
+          "trasformazione": 1
+        },
+        "feedback": "Hai messo in relazione prospettive diverse. Chiedi a ciascuna parte se si riconosce davvero nella soluzione proposta."
+      }
+    ],
+    "results": [
+      {
+        "id": "zeus",
+        "title": "Zeus",
+        "summary": "Affinità con il governo dei patti e con un’autorità che deve essere riconosciuta.",
+        "strength": "Visione dell’insieme e capacità di assumere responsabilità.",
+        "tension": "Nei miti Zeus è anche una figura potente e contraddittoria, non un modello morale.",
+        "nudge": "Chiediti come rendere controllabile il potere che eserciti.",
+        "sources": [
+          "Esiodo, Teogonia; Inno omerico a Zeus."
+        ]
+      },
+      {
+        "id": "hera",
+        "title": "Hera",
+        "summary": "Affinità con il peso delle alleanze, dei legami e del loro riconoscimento pubblico.",
+        "strength": "Memoria dei patti e attenzione alla dignità.",
+        "tension": "I racconti la collocano spesso in conflitti dinastici e matrimoniali.",
+        "nudge": "Distingui tutela di un legame e controllo sulle persone.",
+        "sources": [
+          "Omero, Iliade; Esiodo, Teogonia."
+        ]
+      },
+      {
+        "id": "poseidone",
+        "title": "Poseidone",
+        "summary": "Ti somiglia la forza che sostiene e insieme sconvolge: il mare non è mai del tutto addomesticato.",
+        "strength": "Energia e rispetto per forze più grandi del singolo.",
+        "tension": "La potenza senza misura può travolgere chi non ha voce.",
+        "nudge": "Immagina un limite che renda la forza anche una protezione.",
+        "sources": [
+          "Omero, Odissea; Inno omerico a Poseidone."
+        ]
+      },
+      {
+        "id": "demetra",
+        "title": "Demetra",
+        "summary": "Affinità con cura, nutrimento e legame fra comunità e cicli della natura.",
+        "strength": "Capacità di proteggere ciò da cui dipende la vita comune.",
+        "tension": "La cura può trasformarsi in rifiuto quando il dolore non trova ascolto.",
+        "nudge": "Cerca una forma di cura che lasci spazio anche alla trasformazione.",
+        "sources": [
+          "Inno omerico a Demetra."
+        ]
+      },
+      {
+        "id": "atena",
+        "title": "Atena",
+        "summary": "Ti guida una strategia che unisce competenza, misura e intelligenza pratica.",
+        "strength": "Pianificazione e capacità di trovare una soluzione non impulsiva.",
+        "tension": "La ragione non rende automaticamente giusta ogni scelta.",
+        "nudge": "Ascolta chi subisce le conseguenze del piano.",
+        "sources": [
+          "Omero, Odissea; Inno omerico ad Atena."
+        ]
+      },
+      {
+        "id": "apollo",
+        "title": "Apollo",
+        "summary": "Ti interessa l’incontro fra arti, conoscenza, rituale e parole che orientano.",
+        "strength": "Ricerca di chiarezza e forma.",
+        "tension": "Un responso può essere ambiguo: interpretarlo richiede responsabilità.",
+        "nudge": "Distingui ciò che sai da ciò che stai interpretando.",
+        "sources": [
+          "Inni omerici ad Apollo; Esiodo, Teogonia."
+        ]
+      },
+      {
+        "id": "artemide",
+        "title": "Artemide",
+        "summary": "Valorizzi autonomia, confini e rispetto per spazi non interamente controllabili.",
+        "strength": "Indipendenza e attenzione alla natura.",
+        "tension": "Proteggere un confine può richiedere di negoziare con chi arriva da fuori.",
+        "nudge": "Chiarisci chi stabilisce il confine e a tutela di chi.",
+        "sources": [
+          "Inno omerico ad Artemide; Callimaco, Inno ad Artemide."
+        ]
+      },
+      {
+        "id": "ares",
+        "title": "Ares",
+        "summary": "Riconosci il conflitto e non fingi che scompaia solo evitando di nominarlo.",
+        "strength": "Coraggio di affrontare la tensione.",
+        "tension": "Nei miti la guerra porta costi e ferite, non una scorciatoia gloriosa.",
+        "nudge": "Prima dello scontro, individua un’uscita e una persona da proteggere.",
+        "sources": [
+          "Omero, Iliade; Esiodo, Teogonia."
+        ]
+      },
+      {
+        "id": "afrodite",
+        "title": "Afrodite",
+        "summary": "Noti attrazione, desiderio e relazioni come forze che cambiano le decisioni.",
+        "strength": "Sensibilità ai legami e alla bellezza.",
+        "tension": "Desiderio e consenso non sono la stessa cosa.",
+        "nudge": "Fai spazio alla reciprocità, non soltanto all’intensità.",
+        "sources": [
+          "Inno omerico ad Afrodite; Esiodo, Teogonia."
+        ]
+      },
+      {
+        "id": "efesto",
+        "title": "Efesto",
+        "summary": "Ti riconosci nel lavoro paziente che trasforma materiali e rende possibile ciò che prima non c’era.",
+        "strength": "Abilità tecnica e capacità di costruire.",
+        "tension": "Il lavoro indispensabile può rimanere invisibile o non riconosciuto.",
+        "nudge": "Dai valore sia all’opera sia a chi la realizza.",
+        "sources": [
+          "Omero, Iliade; Esiodo, Teogonia."
+        ]
+      },
+      {
+        "id": "ermes",
+        "title": "Ermes",
+        "summary": "Ti muovi fra ruoli e confini, con curiosità per messaggi, scambi e passaggi.",
+        "strength": "Comunicazione agile e capacità di mediazione.",
+        "tension": "L’astuzia può diventare inganno se manca trasparenza.",
+        "nudge": "Dichiara cosa sai e cosa stai negoziando.",
+        "sources": [
+          "Inno omerico a Ermes."
+        ]
+      },
+      {
+        "id": "dioniso",
+        "title": "Dioniso",
+        "summary": "Ti interessa ciò che rompe un’identità troppo rigida e apre una trasformazione collettiva.",
+        "strength": "Immaginazione, energia e capacità di cambiare prospettiva.",
+        "tension": "La liberazione può essere destabilizzante e non è sempre scelta da tutti.",
+        "nudge": "Crea uno spazio in cui partecipare sia davvero una scelta.",
+        "sources": [
+          "Euripide, Baccanti; Inno omerico a Dioniso."
+        ]
+      },
+      {
+        "id": "estia",
+        "title": "Estia",
+        "summary": "Dai valore al luogo condiviso, alla continuità e alla cura quotidiana che lo rende abitabile.",
+        "strength": "Stabilità e attenzione alla comunità.",
+        "tension": "La quiete può diventare esclusione se il luogo non accoglie chi arriva.",
+        "nudge": "Chiediti chi può entrare nel cerchio e chi resta fuori.",
+        "sources": [
+          "Inni omerici a Estia."
+        ]
+      },
+      {
+        "id": "ade",
+        "title": "Ade",
+        "summary": "Affronti ciò che è nascosto o difficile senza confondere invisibilità e assenza.",
+        "strength": "Serietà, discrezione e attenzione ai confini.",
+        "tension": "Nel mito il regno dei morti non equivale a un semplice antagonista malvagio.",
+        "nudge": "Dai un nome a ciò che è stato rimosso prima di decidere come agire.",
+        "sources": [
+          "Omero, Odissea; Inno omerico a Demetra."
+        ]
+      }
+    ]
+  },
+  "parola-latina": {
+    "dimensions": [
+      "iniziativa",
+      "coraggio misurato",
+      "giudizio",
+      "fermezza",
+      "libertà",
+      "riconoscimento",
+      "cura e legame",
+      "affidabilità",
+      "misura ed equità"
+    ],
+    "approaches": [
+      {
+        "id": "A",
+        "label": "Agire con giudizio",
+        "text": [
+          "Valuto il rischio e poi scelgo un passo proporzionato.",
+          "Distinguo audacia da temerarietà prima di espormi.",
+          "Cerco il criterio che rende la decisione giusta anche per gli altri.",
+          "Mi assumo la responsabilità senza scambiare fermezza per ostinazione."
+        ],
+        "scores": {
+          "giudizio": 2,
+          "coraggio misurato": 2,
+          "fermezza": 1
+        },
+        "feedback": "Hai combinato giudizio e coraggio. Distingui la fermezza nel principio dalla rigidità sul modo di applicarlo."
+      },
+      {
+        "id": "B",
+        "label": "Tenere il patto",
+        "text": [
+          "Rendo affidabile la mia parola, soprattutto quando costa mantenerla.",
+          "Proteggo una relazione senza nascondere il disaccordo.",
+          "Condivido il merito e riconosco chi ha contribuito.",
+          "Cerco una misura equa, non un vantaggio solo per me."
+        ],
+        "scores": {
+          "affidabilità": 2,
+          "cura e legame": 2,
+          "misura ed equità": 1
+        },
+        "feedback": "Hai protetto il patto. La fiducia richiede reciprocità: non deve diventare copertura automatica di un errore."
+      },
+      {
+        "id": "C",
+        "label": "Aprire una strada",
+        "text": [
+          "Prendo iniziativa quando una possibilità rischia di passare.",
+          "Difendo la libertà di scegliere e ascolto il limite altrui.",
+          "Punto a un risultato utile più che a un applauso immediato.",
+          "Metto in discussione un’autorità senza rinunciare alle prove."
+        ],
+        "scores": {
+          "iniziativa": 2,
+          "libertà": 2,
+          "giudizio": 1
+        },
+        "feedback": "Hai preso iniziativa e difeso autonomia. Controlla che la tua libertà non trasferisca il rischio su un’altra persona."
+      },
+      {
+        "id": "D",
+        "label": "Costanza senza rumore",
+        "text": [
+          "Sostengo un impegno nel tempo invece di inseguire un gesto spettacolare.",
+          "Accetto di rivedere la mia condotta se i fatti la smentiscono.",
+          "Cerco riconoscimento per il lavoro, non dominio sugli altri.",
+          "Resto saldo, ma lascio spazio a una correzione ragionevole."
+        ],
+        "scores": {
+          "fermezza": 2,
+          "riconoscimento": 1,
+          "affidabilità": 1
+        },
+        "feedback": "Hai dato valore alla costanza. Prevedi anche quali fatti giustificherebbero una revisione dell’impegno."
+      },
+      {
+        "id": "E",
+        "label": "Misuro il caso concreto",
+        "text": [
+          "Valuto circostanze, proporzioni e conseguenze prima di applicare una regola.",
+          "Controllo chi beneficia del criterio e chi ne sopporta il costo.",
+          "Cerco una misura equa, poi spiego perché non tratto tutti i casi in modo identico.",
+          "Distinguo un principio da un’abitudine: il contesto può chiedere una correzione."
+        ],
+        "scores": {
+          "giudizio": 2,
+          "misura ed equità": 2,
+          "coraggio misurato": 1
+        },
+        "feedback": "Hai misurato il caso concreto. Spiega il criterio di equità, così la flessibilità non appare arbitraria."
+      },
+      {
+        "id": "F",
+        "label": "Rendo esplicito il patto",
+        "text": [
+          "Dico che cosa prometto, quali limiti ho e come avviserò se le condizioni cambiano.",
+          "Cerco una soluzione che protegga la fiducia senza coprire un errore.",
+          "Condivido responsabilità e merito, non soltanto il risultato finale.",
+          "Chiedo un accordo reciproco: la lealtà non può essere un obbligo a senso unico."
+        ],
+        "scores": {
+          "affidabilità": 2,
+          "cura e legame": 1,
+          "libertà": 1,
+          "fermezza": 1
+        },
+        "feedback": "Hai reso espliciti i termini del patto. Un accordo solido chiarisce limiti, responsabilità e come gestire un cambiamento."
+      }
+    ],
+    "results": [
+      {
+        "id": "virtus",
+        "title": "Virtus",
+        "summary": "Valore, capacità e coraggio d’agire: il senso varia con autore e contesto, non è soltanto una virtù militare.",
+        "strength": "Iniziativa accompagnata da responsabilità.",
+        "tension": "La ricerca di valore può scivolare nella competizione per il prestigio.",
+        "nudge": "Chiediti quale bene produce il coraggio che mostri.",
+        "sources": [
+          "Lewis & Short, s.v. virtus; Cicerone, De officiis."
+        ]
+      },
+      {
+        "id": "fides",
+        "title": "Fides",
+        "summary": "Fiducia, lealtà e affidabilità nei rapporti: non coincide solo con la fede religiosa.",
+        "strength": "Sai costruire relazioni che possono reggere nel tempo.",
+        "tension": "La lealtà non obbliga a coprire un’ingiustizia.",
+        "nudge": "Rendi esplicite le condizioni del patto.",
+        "sources": [
+          "Lewis & Short, s.v. fides; Cicerone, De officiis."
+        ]
+      },
+      {
+        "id": "constantia",
+        "title": "Constantia",
+        "summary": "Costanza e coerenza davanti alle difficoltà, senza dover diventare rigidità.",
+        "strength": "Puoi mantenere un impegno oltre l’entusiasmo iniziale.",
+        "tension": "Perseverare non significa ignorare informazioni nuove.",
+        "nudge": "Stabilisci quali fatti ti farebbero cambiare piano.",
+        "sources": [
+          "Lewis & Short, s.v. constantia; Seneca, De constantia sapientis."
+        ]
+      },
+      {
+        "id": "prudentia",
+        "title": "Prudentia",
+        "summary": "Capacità di valutare circostanze e conseguenze prima di scegliere.",
+        "strength": "Colleghi il giudizio a situazioni concrete.",
+        "tension": "La cautela può diventare rinvio se non ammette una decisione.",
+        "nudge": "Individua la soglia di prova sufficiente per agire.",
+        "sources": [
+          "Lewis & Short, s.v. prudentia; Cicerone, De officiis."
+        ]
+      },
+      {
+        "id": "audacia",
+        "title": "Audacia",
+        "summary": "Audacia può indicare slancio coraggioso o temerarietà: il contesto decide la sfumatura.",
+        "strength": "Ti assumi il rischio di iniziare.",
+        "tension": "Il rischio non è una virtù se viene scaricato sugli altri.",
+        "nudge": "Nomina chi potrebbe subire le conseguenze della tua scelta.",
+        "sources": [
+          "Lewis & Short, s.v. audacia."
+        ]
+      },
+      {
+        "id": "clementia",
+        "title": "Clementia",
+        "summary": "Mitezza o clemenza nell’esercizio del potere: una scelta, non semplice debolezza.",
+        "strength": "Sai lasciare spazio alla riparazione.",
+        "tension": "La clemenza senza giustizia può ignorare chi ha subito un danno.",
+        "nudge": "Unisci ascolto, responsabilità e possibilità di rimediare.",
+        "sources": [
+          "Lewis & Short, s.v. clementia; Seneca, De clementia."
+        ]
+      },
+      {
+        "id": "dignitas",
+        "title": "Dignitas",
+        "summary": "Prestigio, merito e posizione riconosciuta: il significato è sociale e storico.",
+        "strength": "Vuoi che il lavoro abbia un riconoscimento visibile.",
+        "tension": "La reputazione può dipendere da gerarchie che non sono neutrali.",
+        "nudge": "Riconosci anche il contributo meno visibile del gruppo.",
+        "sources": [
+          "Lewis & Short, s.v. dignitas; Cicerone, De officiis."
+        ]
+      },
+      {
+        "id": "libertas",
+        "title": "Libertas",
+        "summary": "Libertà e condizione di chi non è sottoposto a dominio; nelle società antiche era distribuita in modo diseguale.",
+        "strength": "Difendi autonomia e possibilità di scelta.",
+        "tension": "La libertà di alcuni può poggiare sulla subordinazione di altri.",
+        "nudge": "Domanda chi è incluso quando si parla di libertà.",
+        "sources": [
+          "Lewis & Short, s.v. libertas; Stanford Encyclopedia of Philosophy, Ancient Political Philosophy."
+        ]
+      },
+      {
+        "id": "auctoritas",
+        "title": "Auctoritas",
+        "summary": "Influenza e autorevolezza riconosciuta; non si riduce a un ordine o a un comando.",
+        "strength": "Sai guadagnare ascolto attraverso competenza e affidabilità.",
+        "tension": "Un titolo non prova da solo che una decisione sia giusta.",
+        "nudge": "Rendi verificabili le ragioni della tua influenza.",
+        "sources": [
+          "Lewis & Short, s.v. auctoritas; Cicerone, De re publica."
+        ]
+      },
+      {
+        "id": "aequitas",
+        "title": "Aequitas",
+        "summary": "Equità, proporzione e considerazione del caso concreto: non sempre coincide con applicare una regola alla lettera.",
+        "strength": "Cerchi una misura che tenga conto delle differenze.",
+        "tension": "La misura può diventare arbitrio se i criteri non sono spiegati.",
+        "nudge": "Dichiara quale criterio rende il trattamento equo.",
+        "sources": [
+          "Lewis & Short, s.v. aequitas; Cicerone, De officiis."
+        ]
+      },
+      {
+        "id": "amicitia",
+        "title": "Amicitia",
+        "summary": "Legame di amicizia e alleanza che nella cultura romana poteva anche avere dimensioni civiche.",
+        "strength": "Investi nella reciprocità e nella fiducia.",
+        "tension": "Un’amicizia non dovrebbe cancellare responsabilità verso altri.",
+        "nudge": "Tieni insieme lealtà personale e correttezza pubblica.",
+        "sources": [
+          "Lewis & Short, s.v. amicitia; Cicerone, Laelius de amicitia."
+        ]
+      },
+      {
+        "id": "cura",
+        "title": "Cura",
+        "summary": "Attenzione, impegno e sollecitudine; una parola latina dal campo semantico ampio.",
+        "strength": "Noti i bisogni che richiedono continuità.",
+        "tension": "Prendersi cura non significa decidere sempre al posto degli altri.",
+        "nudge": "Chiedi quale forma di aiuto è davvero desiderata.",
+        "sources": [
+          "Lewis & Short, s.v. cura."
+        ]
+      },
+      {
+        "id": "otium",
+        "title": "Otium",
+        "summary": "Tempo libero da attività pubbliche o lavorative, che può diventare studio, riflessione o riposo.",
+        "strength": "Proteggi uno spazio per pensare e imparare.",
+        "tension": "Nella società romana l’otium dipendeva spesso da risorse e privilegi.",
+        "nudge": "Domanda chi rende possibile il tempo libero di cui godi.",
+        "sources": [
+          "Lewis & Short, s.v. otium; Cicerone, De officiis."
+        ]
+      },
+      {
+        "id": "gloria",
+        "title": "Gloria",
+        "summary": "Fama o riconoscimento pubblico: desiderio comprensibile, ma non equivalente al valore di un’azione.",
+        "strength": "Sai dare forma pubblica a un risultato.",
+        "tension": "La ricerca di gloria può oscurare collaboratori e conseguenze.",
+        "nudge": "Condividi il merito e verifica ciò che resta dopo l’applauso.",
+        "sources": [
+          "Lewis & Short, s.v. gloria; Cicerone, De officiis."
+        ]
+      }
+    ]
+  },
+  "filosofo": {
+    "dimensions": [
+      "dialogo",
+      "definizioni",
+      "osservazione",
+      "etica",
+      "moderazione",
+      "politica",
+      "natura",
+      "dubbio"
+    ],
+    "approaches": [
+      {
+        "id": "A",
+        "label": "Chiarisco le parole",
+        "text": [
+          "Chiedo che cosa intendiamo e provo a rendere esplicite le premesse.",
+          "Metto a confronto le definizioni prima di accettare la conclusione.",
+          "Cerco un controesempio che aiuti a precisare l’idea.",
+          "Preferisco una domanda ben posta a una risposta troppo rapida."
+        ],
+        "scores": {
+          "dialogo": 2,
+          "definizioni": 2,
+          "dubbio": 1
+        },
+        "feedback": "Hai iniziato dalle parole e dalle premesse. Prova a formulare l’idea dell’altra persona in modo che la riconosca."
+      },
+      {
+        "id": "B",
+        "label": "Guardo alle conseguenze",
+        "text": [
+          "Valuto come la scelta cambia la vita concreta delle persone.",
+          "Distinguo un desiderio urgente da un bisogno che conta nel tempo.",
+          "Cerco una condotta che riduca danno e dipendenza.",
+          "Domando quale idea di bene rende sensata questa decisione."
+        ],
+        "scores": {
+          "etica": 2,
+          "moderazione": 1,
+          "politica": 1
+        },
+        "feedback": "Hai guardato alle conseguenze. Un esito utile non dimostra da solo che una premessa sia vera o giusta."
+      },
+      {
+        "id": "C",
+        "label": "Osservo il mondo",
+        "text": [
+          "Cerco un’osservazione o un dato che possa correggere la teoria.",
+          "Confronto ciò che appare con il modo in cui potrebbe essere spiegato.",
+          "Guardo alle cause e ai cambiamenti prima di formulare una regola.",
+          "Mi interessa se una spiegazione funziona oltre il caso singolo."
+        ],
+        "scores": {
+          "osservazione": 2,
+          "natura": 2,
+          "dubbio": 1
+        },
+        "feedback": "Hai chiesto osservazioni e cause. Distingui un esempio isolato da una regolarità che regge ad altri casi."
+      },
+      {
+        "id": "D",
+        "label": "Sospendo e confronto",
+        "text": [
+          "Tengo aperte più interpretazioni finché non vedo una ragione decisiva.",
+          "Confronto gli argomenti e non soltanto chi li pronuncia.",
+          "Accetto di rivedere una convinzione se cambia la prova.",
+          "Cerco un dialogo che faccia emergere ciò che ciascuno dà per scontato."
+        ],
+        "scores": {
+          "dubbio": 2,
+          "dialogo": 1,
+          "politica": 1
+        },
+        "feedback": "Hai lasciato spazio al dubbio. La sospensione può essere una scelta ragionata, ma non elimina ogni decisione pratica."
+      },
+      {
+        "id": "E",
+        "label": "Cerco un controesempio",
+        "text": [
+          "Provo a trovare un caso concreto che metta in difficoltà la regola.",
+          "Chiedo quali osservazioni potrebbero smentire la spiegazione preferita.",
+          "Confronto la tesi con un’esperienza diversa, non solo con un altro argomento.",
+          "Distinguo ciò che è dimostrato da ciò che sembra plausibile."
+        ],
+        "scores": {
+          "dubbio": 2,
+          "osservazione": 2,
+          "definizioni": 1
+        },
+        "feedback": "Hai cercato un controesempio. Se mette in difficoltà la tesi, chiediti se la confuta o se invita a precisarla."
+      },
+      {
+        "id": "F",
+        "label": "La porto nella vita pratica",
+        "text": [
+          "Mi domando quale comportamento seguirebbe da questa idea e chi ne sarebbe toccato.",
+          "Valuto la teoria per le conseguenze, senza confondere utilità e verità.",
+          "Provo una scelta proporzionata e osservo se riduce il problema.",
+          "Cerco una regola condivisibile che lasci spazio a casi e persone differenti."
+        ],
+        "scores": {
+          "etica": 2,
+          "moderazione": 1,
+          "politica": 1,
+          "natura": 1
+        },
+        "feedback": "Hai portato l’idea nella vita concreta. Considera chi beneficia dell’applicazione e chi potrebbe subirne il costo."
+      }
+    ],
+    "results": [
+      {
+        "id": "socrate",
+        "title": "Socrate",
+        "summary": "Ti somiglia la pratica di interrogare idee e definizioni nel dialogo.",
+        "strength": "Fai emergere premesse che sembravano invisibili.",
+        "tension": "Le fonti su Socrate sono mediate: Platone e Senofonte non sono una registrazione neutra.",
+        "nudge": "Chiedi anche quale prova potrebbe convincerti.",
+        "sources": [
+          "Platone, Apologia; Stanford Encyclopedia of Philosophy, Socrates."
+        ]
+      },
+      {
+        "id": "platone",
+        "title": "Platone",
+        "summary": "Ti attirano modelli, educazione e domande su ciò che rende giusta una comunità.",
+        "strength": "Colleghi conoscenza, etica e politica.",
+        "tension": "Un modello ideale va confrontato con le persone reali e le sue conseguenze.",
+        "nudge": "Metti alla prova un’idea astratta con un caso concreto.",
+        "sources": [
+          "Platone, Repubblica; Stanford Encyclopedia of Philosophy, Plato."
+        ]
+      },
+      {
+        "id": "aristotele",
+        "title": "Aristotele",
+        "summary": "Preferisci classificare, osservare e ragionare sulle cause e sulle pratiche.",
+        "strength": "Colleghi teoria e casi specifici.",
+        "tension": "Le categorie storiche di Aristotele riflettono anche gerarchie antiche.",
+        "nudge": "Domanda chi resta fuori dalla classificazione.",
+        "sources": [
+          "Aristotele, Etica Nicomachea; Stanford Encyclopedia of Philosophy, Aristotle."
+        ]
+      },
+      {
+        "id": "epicuro",
+        "title": "Epicuro",
+        "summary": "Valuti desideri, piacere e tranquillità distinguendo ciò che serve da ciò che agita.",
+        "strength": "Cerchi una vita buona senza inseguire ogni impulso.",
+        "tension": "L’epicureismo non equivale a edonismo senza misura.",
+        "nudge": "Chiediti quali desideri sostengono amicizia e serenità.",
+        "sources": [
+          "Epicuro, Lettera a Meneceo; Stanford Encyclopedia of Philosophy, Epicurus."
+        ]
+      },
+      {
+        "id": "diogene",
+        "title": "Diogene",
+        "summary": "Ti interessa mettere in crisi convenzioni attraverso uno stile di vita essenziale.",
+        "strength": "Indipendenza dal prestigio e dalle apparenze.",
+        "tension": "La provocazione può denunciare un’abitudine ma non sostituisce sempre una proposta.",
+        "nudge": "Dopo la critica, immagina una pratica alternativa.",
+        "sources": [
+          "Diogene Laerzio, Vite dei filosofi; Stanford Encyclopedia of Philosophy, Ancient Greek and Roman Ethics."
+        ]
+      },
+      {
+        "id": "zenone",
+        "title": "Zenone di Cizio",
+        "summary": "Ti orienti verso disciplina, ragione e una vita in rapporto con la natura.",
+        "strength": "Cerchi stabilità nelle risposte che dipendono da te.",
+        "tension": "Autocontrollo non significa negare emozioni o bisogni.",
+        "nudge": "Distingui ciò che controlli da ciò su cui puoi comunque agire insieme agli altri.",
+        "sources": [
+          "Diogene Laerzio, Vite dei filosofi; Stanford Encyclopedia of Philosophy, Stoicism."
+        ]
+      },
+      {
+        "id": "marco-aurelio",
+        "title": "Marco Aurelio",
+        "summary": "Ti aiuta una pratica riflessiva che collega doveri, attenzione e vita comune.",
+        "strength": "Rivedi la tua condotta con regolarità.",
+        "tension": "Le meditazioni private di un imperatore non cancellano il potere esercitato.",
+        "nudge": "Affianca l’esame di sé a una domanda sulle responsabilità pubbliche.",
+        "sources": [
+          "Marco Aurelio, Colloqui con sé stesso; Stanford Encyclopedia of Philosophy, Marcus Aurelius."
+        ]
+      },
+      {
+        "id": "seneca",
+        "title": "Seneca",
+        "summary": "Ti interessano tempo, emozioni e scelte morali nella vita quotidiana.",
+        "strength": "Traduci le idee in esercizi e domande pratiche.",
+        "tension": "Seneca fu anche un uomo ricco e vicino al potere imperiale.",
+        "nudge": "Confronta ciò che si insegna con le condizioni in cui si vive.",
+        "sources": [
+          "Seneca, Lettere a Lucilio; Stanford Encyclopedia of Philosophy, Seneca."
+        ]
+      },
+      {
+        "id": "eraclito",
+        "title": "Eraclito",
+        "summary": "Noti tensioni e trasformazioni dentro ciò che sembra stabile.",
+        "strength": "Non confondi un’apparenza momentanea con una spiegazione completa.",
+        "tension": "I frammenti sono brevi e la loro interpretazione resta discussa.",
+        "nudge": "Sostieni la tua lettura con un passo preciso.",
+        "sources": [
+          "Eraclito, frammenti; Stanford Encyclopedia of Philosophy, Heraclitus."
+        ]
+      },
+      {
+        "id": "pitagora",
+        "title": "Pitagora",
+        "summary": "Ti attrae cercare proporzioni, relazioni e strutture che diano ordine al mondo.",
+        "strength": "Riconosci schemi e connessioni formali.",
+        "tension": "Un modello elegante non è automaticamente una descrizione completa della realtà.",
+        "nudge": "Distingui analogia, matematica e prova empirica.",
+        "sources": [
+          "Aristotele, Metafisica; Stanford Encyclopedia of Philosophy, Pythagoras."
+        ]
+      },
+      {
+        "id": "pirrone",
+        "title": "Pirrone",
+        "summary": "Ti interessa capire quando una conclusione va sospesa perché le ragioni restano in equilibrio.",
+        "strength": "Sai riconoscere i limiti di una certezza.",
+        "tension": "Sospendere il giudizio non elimina la necessità di scegliere nella pratica.",
+        "nudge": "Spiega che cosa resta ragionevole fare mentre l’incertezza continua.",
+        "sources": [
+          "Sesto Empirico, Schizzi pirroniani; Stanford Encyclopedia of Philosophy, Ancient Skepticism."
+        ]
+      },
+      {
+        "id": "anassimandro",
+        "title": "Anassimandro",
+        "summary": "Ti incuriosisce spiegare il cosmo con principi generali invece di fermarti al singolo fenomeno.",
+        "strength": "Immagini modelli ampi e relazioni fra elementi.",
+        "tension": "Delle sue idee restano testimonianze frammentarie e indirette.",
+        "nudge": "Separa ciò che è attestato da ciò che ricostruiamo.",
+        "sources": [
+          "Simplicio, Commento alla Fisica; Stanford Encyclopedia of Philosophy, Anaximander."
+        ]
+      }
+    ]
+  },
+  "personaggio-antico": {
+    "dimensions": [
+      "coalizione",
+      "strategia",
+      "eloquenza",
+      "istituzioni",
+      "studio",
+      "diplomazia",
+      "ambizione",
+      "responsabilità"
+    ],
+    "approaches": [
+      {
+        "id": "A",
+        "label": "Costruisco alleanze",
+        "text": [
+          "Cerco garanzie reciproche e ascolto gli interessi in gioco.",
+          "Prima di annunciare un piano, verifico chi deve sostenerlo.",
+          "Provo a tenere insieme consenso, differenze e obiettivi concreti.",
+          "Una coalizione regge se i suoi partecipanti possono parlare con franchezza."
+        ],
+        "scores": {
+          "coalizione": 2,
+          "diplomazia": 2,
+          "responsabilità": 1
+        },
+        "feedback": "Hai costruito una coalizione. Specifica quale impegno reciproco la rende più di un’alleanza di convenienza."
+      },
+      {
+        "id": "B",
+        "label": "Studio il terreno",
+        "text": [
+          "Raccolgo informazioni e considero conseguenze anche lontane.",
+          "Confronto risorse e vincoli prima di muovere le persone.",
+          "Preparo un piano alternativo se l’ipotesi iniziale cade.",
+          "La strategia deve includere chi subirà i suoi effetti."
+        ],
+        "scores": {
+          "strategia": 2,
+          "studio": 1,
+          "responsabilità": 1
+        },
+        "feedback": "Hai studiato terreno e conseguenze. Confronta la tua pianificazione con le informazioni di chi vive quel contesto."
+      },
+      {
+        "id": "C",
+        "label": "Parlo in pubblico",
+        "text": [
+          "Presento una tesi e mostro quali fatti la sostengono.",
+          "Cerco parole comprensibili senza nascondere i costi della proposta.",
+          "Rendo visibile il merito di chi ha contribuito.",
+          "Accetto il confronto invece di scambiare consenso e silenzio."
+        ],
+        "scores": {
+          "eloquenza": 2,
+          "coalizione": 1,
+          "istituzioni": 1
+        },
+        "feedback": "Hai scelto la parola pubblica. Una tesi persuasiva resta affidabile quando espone anche i fatti scomodi."
+      },
+      {
+        "id": "D",
+        "label": "Rafforzo le regole",
+        "text": [
+          "Penso a procedure che possano funzionare anche dopo di me.",
+          "Distribuisco responsabilità e controllo come verranno esercitate.",
+          "Mi interessa una riforma che renda meno fragile la comunità.",
+          "Valuto il successo anche dal costo umano lasciato alle spalle."
+        ],
+        "scores": {
+          "istituzioni": 2,
+          "responsabilità": 2,
+          "diplomazia": 1
+        },
+        "feedback": "Hai dato peso a istituzioni e responsabilità. Le regole durano se chi ne è soggetto può chiederne conto."
+      },
+      {
+        "id": "E",
+        "label": "Controllo le fonti",
+        "text": [
+          "Confronto testimonianze e interessi di chi racconta prima di trasformare un fatto in slogan.",
+          "Cerco una voce meno vicina al potere e dichiaro ciò che resta incerto.",
+          "Verifico date, contesto e provenienza del dato prima di usarlo in pubblico.",
+          "Tengo separati fatto attestato, interpretazione e racconto successivo."
+        ],
+        "scores": {
+          "studio": 2,
+          "istituzioni": 1,
+          "responsabilità": 1
+        },
+        "feedback": "Hai controllato le fonti. Separa ciò che è attestato, ciò che è interpretato e ciò che è stato aggiunto dopo."
+      },
+      {
+        "id": "F",
+        "label": "Calcolo il costo umano",
+        "text": [
+          "Mappo chi rischia di perdere sicurezza, autonomia o risorse se il piano riesce.",
+          "Consulto chi subirà l’esito, non soltanto chi può autorizzarlo.",
+          "Cerco una via che riduca il danno anche se è meno spettacolare.",
+          "Stabilisco come riparare le conseguenze se la decisione produce un costo inatteso."
+        ],
+        "scores": {
+          "responsabilità": 2,
+          "diplomazia": 1,
+          "coalizione": 1
+        },
+        "feedback": "Hai messo al centro il costo umano. Ascoltare chi lo sostiene può cambiare il piano, non solo il modo di presentarlo."
+      }
+    ],
+    "results": [
+      {
+        "id": "alessandro",
+        "title": "Alessandro",
+        "summary": "Affinità con ambizione, mobilità e capacità di costruire una spedizione multiculturale.",
+        "strength": "Visione strategica e adattamento a contesti diversi.",
+        "tension": "La sua espansione fu conquista e impose costi enormi a popolazioni diverse.",
+        "nudge": "Distingui l’abilità strategica dalla legittimità morale dell’impero.",
+        "sources": [
+          "Arriano, Anabasi; Encyclopaedia Britannica, Alexander the Great."
+        ]
+      },
+      {
+        "id": "cesare",
+        "title": "Giulio Cesare",
+        "summary": "Ti interessa intrecciare organizzazione, scrittura pubblica e iniziativa politica.",
+        "strength": "Comunicazione e capacità di coordinare risorse.",
+        "tension": "La sua carriera è inseparabile dalla guerra civile e dall’espansione romana.",
+        "nudge": "Chiediti quali istituzioni si indeboliscono quando una persona concentra potere.",
+        "sources": [
+          "Cesare, Commentarii; Encyclopaedia Britannica, Julius Caesar."
+        ]
+      },
+      {
+        "id": "annibale",
+        "title": "Annibale",
+        "summary": "Ti somiglia un pensiero strategico attento a terreno, tempi e aspettative dell’avversario.",
+        "strength": "Creatività nell’adattare i mezzi a un contesto difficile.",
+        "tension": "Le fonti romane che lo raccontano sono spesso avversarie.",
+        "nudge": "Confronta le fonti e separa memoria storica da leggenda.",
+        "sources": [
+          "Polibio, Storie; Livio, Ab urbe condita."
+        ]
+      },
+      {
+        "id": "pericle",
+        "title": "Pericle",
+        "summary": "Affinità con la parola pubblica e il sostegno a istituzioni e progetti civici ateniesi.",
+        "strength": "Capacità di comunicare una direzione comune.",
+        "tension": "La democrazia ateniese era limitata e il suo impero esercitava dominio.",
+        "nudge": "Domanda chi non poteva partecipare all’assemblea.",
+        "sources": [
+          "Tucidide, La guerra del Peloponneso; Stanford Encyclopedia of Philosophy, Ancient Political Philosophy."
+        ]
+      },
+      {
+        "id": "cicerone",
+        "title": "Cicerone",
+        "summary": "Ti guida il tentativo di persuadere attraverso argomenti, istituzioni e responsabilità civica.",
+        "strength": "Eloquenza e attenzione alle ragioni pubbliche.",
+        "tension": "La sua politica riflette gerarchie e interessi dell’élite romana.",
+        "nudge": "Valuta un discorso sia per la sua forma sia per chi ne beneficia.",
+        "sources": [
+          "Cicerone, De officiis; Encyclopaedia Britannica, Cicero."
+        ]
+      },
+      {
+        "id": "augusto",
+        "title": "Augusto",
+        "summary": "Ti interessa costruire continuità e istituzioni dopo una stagione di conflitto.",
+        "strength": "Pazienza politica e capacità amministrativa.",
+        "tension": "La stabilità augustea consolidò un potere personale e una narrazione ufficiale.",
+        "nudge": "Chiedi quale voce manca nel racconto del vincitore.",
+        "sources": [
+          "Res Gestae Divi Augusti; Encyclopaedia Britannica, Augustus."
+        ]
+      },
+      {
+        "id": "cleopatra",
+        "title": "Cleopatra VII",
+        "summary": "Affinità con diplomazia, governo e gestione di relazioni fra poteri in competizione.",
+        "strength": "Capacità di negoziare in un contesto internazionale difficile.",
+        "tension": "La sua immagine è stata spesso filtrata da propaganda romana e stereotipi.",
+        "nudge": "Confronta il ritratto romano con fonti e contesto egiziani.",
+        "sources": [
+          "Plutarco, Vita di Antonio; Encyclopaedia Britannica, Cleopatra."
+        ]
+      },
+      {
+        "id": "leonida",
+        "title": "Leonida",
+        "summary": "Ti richiama il valore simbolico del comando condiviso in una situazione estrema.",
+        "strength": "Presenza e assunzione di responsabilità.",
+        "tension": "La memoria delle Termopili è stata trasformata in leggenda eroica.",
+        "nudge": "Cerca la storia oltre lo slogan e considera gli alleati meno ricordati.",
+        "sources": [
+          "Erodoto, Storie; Encyclopaedia Britannica, Thermopylae."
+        ]
+      },
+      {
+        "id": "hatshepsut",
+        "title": "Hatshepsut",
+        "summary": "Ti interessa consolidare un ruolo politico attraverso governo, rituale e progetti pubblici.",
+        "strength": "Pianificazione e uso attento delle istituzioni.",
+        "tension": "Le fonti e la memoria del suo regno furono rielaborate dopo la sua morte.",
+        "nudge": "Distingui monumento, propaganda e ricostruzione moderna.",
+        "sources": [
+          "Metropolitan Museum of Art, Hatshepsut; Encyclopaedia Britannica."
+        ]
+      },
+      {
+        "id": "ashoka",
+        "title": "Ashoka",
+        "summary": "Ti interessa il rapporto fra potere imperiale, responsabilità e trasformazione dopo la guerra.",
+        "strength": "Capacità di ripensare il modo in cui si governa.",
+        "tension": "Gli editti sono una voce regale e non raccontano tutte le esperienze dell’impero.",
+        "nudge": "Leggi gli editti come fonte e come comunicazione politica.",
+        "sources": [
+          "Editti di Ashoka; Encyclopaedia Britannica, Ashoka."
+        ]
+      },
+      {
+        "id": "enheduanna",
+        "title": "Enheduanna",
+        "summary": "Ti richiama il ruolo di una voce poetica e sacerdotale in una rete politica mesopotamica.",
+        "strength": "Uso della parola per costruire memoria e autorità.",
+        "tension": "La trasmissione dei testi antichi ha una storia complessa e non sempre certa.",
+        "nudge": "Chiediti come attribuzione e potere attraversano la storia di un testo.",
+        "sources": [
+          "Inni di Enheduanna; Electronic Text Corpus of Sumerian Literature, Oxford."
+        ]
+      },
+      {
+        "id": "ipazia",
+        "title": "Ipazia",
+        "summary": "Ti attrae lo studio e l’insegnamento in una città attraversata da tensioni politiche e religiose.",
+        "strength": "Ricerca, argomentazione e trasmissione del sapere.",
+        "tension": "Le testimonianze sono limitate e le narrazioni successive possono semplificarla.",
+        "nudge": "Separare le fonti contemporanee dalle reinterpretazioni posteriori.",
+        "sources": [
+          "Socrate Scolastico, Storia ecclesiastica; Encyclopaedia Britannica, Hypatia."
+        ]
+      }
+    ]
+  },
+  "scegli-il-classico": {
+    "dimensions": [
+      "curiosità linguistica",
+      "pazienza di lettura",
+      "ragionamento",
+      "interesse storico",
+      "metodo",
+      "autonomia",
+      "esercizio",
+      "motivazione intrinseca"
+    ],
+    "approaches": [
+      {
+        "id": "A",
+        "label": "Seguo le parole",
+        "text": [
+          "Una parola insolita mi fa venire voglia di cercarne storia e sfumature.",
+          "Mi piace confrontare traduzioni e capire che cosa cambia.",
+          "Una lingua nuova mi incuriosisce anche quando richiede esercizio.",
+          "Mi interessa come una frase costruisce il proprio significato."
+        ],
+        "scores": {
+          "curiosità linguistica": 2,
+          "pazienza di lettura": 1,
+          "esercizio": 1
+        },
+        "feedback": "Hai seguito la curiosità linguistica. Una parola può aprire molte piste: scegline una e confronta esempi reali."
+      },
+      {
+        "id": "B",
+        "label": "Cerco il metodo",
+        "text": [
+          "Divido un compito lungo in passaggi e controllo i progressi.",
+          "Mi aiuta trovare la regola dietro a un esempio.",
+          "Chiedo un confronto quando una strategia non funziona.",
+          "Preferisco capire il procedimento invece di memorizzare una risposta isolata."
+        ],
+        "scores": {
+          "metodo": 2,
+          "ragionamento": 2,
+          "autonomia": 1
+        },
+        "feedback": "Hai cercato metodo e struttura. Un piano utile include pause e una strategia per quando il primo tentativo non funziona."
+      },
+      {
+        "id": "C",
+        "label": "Collego i contesti",
+        "text": [
+          "Mi domando chi racconta una storia e in quale contesto.",
+          "Mi piace confrontare idee antiche e problemi di oggi senza confonderli.",
+          "Cerco più versioni prima di decidere che cosa è successo.",
+          "La storia mi interessa quando cambia il modo di leggere il presente."
+        ],
+        "scores": {
+          "interesse storico": 2,
+          "ragionamento": 1,
+          "pazienza di lettura": 1
+        },
+        "feedback": "Hai collegato storia e contesto. Il paragone col presente aiuta se non cancella le differenze fra epoche."
+      },
+      {
+        "id": "D",
+        "label": "Ascolto la motivazione",
+        "text": [
+          "Scelgo in base a ciò che desidero imparare, non solo alle aspettative altrui.",
+          "Cerco una scuola che mi permetta di fare domande e chiedere aiuto.",
+          "Mi do tempo per provare prima di trasformare una difficoltà in un verdetto.",
+          "Valuto insieme a studenti e docenti se il percorso corrisponde ai miei interessi."
+        ],
+        "scores": {
+          "motivazione intrinseca": 2,
+          "autonomia": 1,
+          "esercizio": 1
+        },
+        "feedback": "Hai ascoltato la motivazione personale. Confrontala con una settimana concreta di lezioni, studio e attività."
+      },
+      {
+        "id": "E",
+        "label": "Chiedo a chi lo vive",
+        "text": [
+          "Parlo con studenti e docenti e chiedo com’è una settimana concreta, non solo l’immagine del corso.",
+          "Confronto il piano di studi e le forme di supporto con i miei bisogni reali.",
+          "Cerco una lezione aperta o un’attività per capire se mi interessa il lavoro quotidiano.",
+          "Ascolto pareri diversi, poi distinguo esperienze personali da informazioni verificabili."
+        ],
+        "scores": {
+          "autonomia": 2,
+          "motivazione intrinseca": 1,
+          "metodo": 1
+        },
+        "feedback": "Hai chiesto esperienze dirette. Cerca più voci e distingui un aneddoto da informazioni sul percorso nel suo insieme."
+      },
+      {
+        "id": "F",
+        "label": "Provo un assaggio",
+        "text": [
+          "Scelgo un testo breve o un esercizio e noto se la difficoltà mi incuriosisce o mi blocca.",
+          "Faccio una prova concreta, poi rifletto su cosa mi è piaciuto e cosa richiede supporto.",
+          "Dedico un tempo limitato a tradurre o argomentare e valuto l’esperienza, non il voto.",
+          "Confronto un’attività umanistica con una di un altro indirizzo prima di trarre conclusioni."
+        ],
+        "scores": {
+          "esercizio": 2,
+          "curiosità linguistica": 1,
+          "pazienza di lettura": 1,
+          "motivazione intrinseca": 1
+        },
+        "feedback": "Hai scelto una prova concreta. Valuta interesse e supporto necessario, non un singolo risultato o voto."
+      }
+    ],
+    "results": [
+      {
+        "id": "nato",
+        "title": "Classico da esplorare",
+        "summary": "Le tue risposte mostrano curiosità per lingue, testi e contesti umanistici.",
+        "strength": "Hai motivazioni da approfondire con una visita e una prova concreta.",
+        "tension": "Un quiz non può prevedere rendimento, benessere o preferenze future.",
+        "nudge": "Parla con studenti e docenti e guarda una settimana reale di studio.",
+        "sources": [
+          "Indicazione orientativa originale; verificare il piano dell’offerta formativa dell’istituto."
+        ]
+      },
+      {
+        "id": "curioso",
+        "title": "Curioso intellettuale",
+        "summary": "Ti piace seguire una domanda anche quando la risposta richiede tempo.",
+        "strength": "Curiosità e disponibilità a esplorare.",
+        "tension": "Ogni percorso offre spazi diversi per coltivare la curiosità.",
+        "nudge": "Chiedi quali attività concrete permettono di approfondire i tuoi temi preferiti.",
+        "sources": [
+          "Indicazione orientativa originale; non è un test scientifico."
+        ]
+      },
+      {
+        "id": "razionale",
+        "title": "Razionale in incognito",
+        "summary": "Ti attirano strutture, regole e ragionamenti, anche dentro testi e lingue.",
+        "strength": "Capacità di cercare un metodo.",
+        "tension": "La stessa attitudine si sviluppa in molti indirizzi scolastici.",
+        "nudge": "Confronta il lavoro quotidiano del Classico con quello di altri percorsi.",
+        "sources": [
+          "Indicazione orientativa originale; non è un test scientifico."
+        ]
+      },
+      {
+        "id": "umanista",
+        "title": "Potenziale umanista",
+        "summary": "Ti interessa leggere idee nel loro contesto e ascoltare più voci.",
+        "strength": "Apertura storica e sensibilità interpretativa.",
+        "tension": "Il percorso richiede pratica costante, non solo interesse iniziale.",
+        "nudge": "Prova un’attività di traduzione o analisi e nota come ti trovi.",
+        "sources": [
+          "Indicazione orientativa originale; non è un test scientifico."
+        ]
+      },
+      {
+        "id": "da-convincere",
+        "title": "Curioso da convincere",
+        "summary": "La curiosità c’è, ma vuoi capire meglio che cosa si fa davvero al Classico.",
+        "strength": "Non ti accontenti di scegliere per sentito dire.",
+        "tension": "Un’impressione generale non basta per confrontare programmi e metodi.",
+        "nudge": "Porta tre domande precise a un open day o a una lezione aperta.",
+        "sources": [
+          "Indicazione orientativa originale; consultare il PTOF dell’istituto."
+        ]
+      },
+      {
+        "id": "metodo",
+        "title": "Metodo da costruire",
+        "summary": "Ti può aiutare un percorso in cui impari a pianificare e chiedere supporto.",
+        "strength": "Riconoscere il bisogno di un metodo è già un punto di partenza.",
+        "tension": "Ogni indirizzo comporta studio; il carico va conosciuto prima di decidere.",
+        "nudge": "Informati su tutoraggio, strumenti di recupero e abitudini settimanali.",
+        "sources": [
+          "Indicazione orientativa originale; non è una diagnosi di attitudine."
+        ]
+      },
+      {
+        "id": "altri-percorsi",
+        "title": "Altri percorsi da esplorare",
+        "summary": "Le tue priorità potrebbero trovare spazio anche in indirizzi diversi dal Classico.",
+        "strength": "Sai nominare cosa ti motiva e cosa vuoi evitare.",
+        "tension": "Un risultato non dovrebbe chiudere una possibilità prima di conoscerla.",
+        "nudge": "Confronta almeno due piani di studio e parlane con persone di fiducia.",
+        "sources": [
+          "Indicazione orientativa originale; verificare le offerte formative locali."
+        ]
+      },
+      {
+        "id": "scelta-aperta",
+        "title": "Scelta ancora aperta",
+        "summary": "Per ora non emerge una preferenza netta: è un buon motivo per raccogliere informazioni.",
+        "strength": "Ti concedi di non decidere sulla base di un’etichetta.",
+        "tension": "Rinviare senza esplorare può lasciare che decidano le aspettative altrui.",
+        "nudge": "Scegli un’attività da provare e una persona a cui fare domande.",
+        "sources": [
+          "Indicazione orientativa originale; non è un test scientifico."
+        ]
+      }
+    ]
+  }
+}

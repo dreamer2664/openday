@@ -1,0 +1,919 @@
+{
+  "id": "umano-o-ai",
+  "title": "Umano o AI?",
+  "intro": "Allena lo sguardo senza pretendere che un singolo indizio basti. Prima di iniziare: il campione include immagini sintetiche e fotografie; la provenienza di ciascuna viene svelata solo dopo la tua risposta.",
+  "category": "01 · SFIDA VISIVA",
+  "binary": true,
+  "dimensions": [
+    "accuratezza",
+    "calibrazione",
+    "miglioramento"
+  ],
+  "questions": [
+    {
+      "id": "Q01",
+      "number": 1,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/real-01.jpg",
+        "sourceId": "real-photo-01",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/real-01.jpg"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q01-real.svg",
+            "sourceId": "umano-o-ai:option:Q01-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q01-real.svg"
+          },
+          "nextBy": {
+            "real-low": "Q02",
+            "real-high": "Q03",
+            "ai-low": "Q04",
+            "ai-high": "Q05"
+          }
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q01-ai.svg",
+            "sourceId": "umano-o-ai:option:Q01-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q01-ai.svg"
+          },
+          "nextBy": {
+            "real-low": "Q02",
+            "real-high": "Q03",
+            "ai-low": "Q04",
+            "ai-high": "Q05"
+          }
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q02",
+      "number": 2,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/ai-01.webp",
+        "sourceId": "ai-photo-01",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/ai-01.webp"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q02-real.svg",
+            "sourceId": "umano-o-ai:option:Q02-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q02-real.svg"
+          },
+          "next": "Q06"
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q02-ai.svg",
+            "sourceId": "umano-o-ai:option:Q02-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q02-ai.svg"
+          },
+          "next": "Q06"
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q03",
+      "number": 3,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/real-02.jpg",
+        "sourceId": "real-photo-02",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/real-02.jpg"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q03-real.svg",
+            "sourceId": "umano-o-ai:option:Q03-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q03-real.svg"
+          },
+          "next": "Q06"
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q03-ai.svg",
+            "sourceId": "umano-o-ai:option:Q03-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q03-ai.svg"
+          },
+          "next": "Q06"
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q04",
+      "number": 4,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/ai-02.webp",
+        "sourceId": "ai-photo-02",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/ai-02.webp"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q04-real.svg",
+            "sourceId": "umano-o-ai:option:Q04-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q04-real.svg"
+          },
+          "next": "Q06"
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q04-ai.svg",
+            "sourceId": "umano-o-ai:option:Q04-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q04-ai.svg"
+          },
+          "next": "Q06"
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q05",
+      "number": 5,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/real-03.jpg",
+        "sourceId": "real-photo-03",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/real-03.jpg"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q05-real.svg",
+            "sourceId": "umano-o-ai:option:Q05-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q05-real.svg"
+          },
+          "next": "Q06"
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q05-ai.svg",
+            "sourceId": "umano-o-ai:option:Q05-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q05-ai.svg"
+          },
+          "next": "Q06"
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q06",
+      "number": 6,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/ai-03.png",
+        "sourceId": "ai-photo-03",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/ai-03.png"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q06-real.svg",
+            "sourceId": "umano-o-ai:option:Q06-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q06-real.svg"
+          },
+          "nextBy": {
+            "real-low": "Q07",
+            "real-high": "Q08",
+            "ai-low": "Q09",
+            "ai-high": "Q10"
+          }
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q06-ai.svg",
+            "sourceId": "umano-o-ai:option:Q06-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q06-ai.svg"
+          },
+          "nextBy": {
+            "real-low": "Q07",
+            "real-high": "Q08",
+            "ai-low": "Q09",
+            "ai-high": "Q10"
+          }
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q07",
+      "number": 7,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/real-04.jpg",
+        "sourceId": "real-photo-04",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/real-04.jpg"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q07-real.svg",
+            "sourceId": "umano-o-ai:option:Q07-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q07-real.svg"
+          },
+          "next": "Q11"
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q07-ai.svg",
+            "sourceId": "umano-o-ai:option:Q07-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q07-ai.svg"
+          },
+          "next": "Q11"
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q08",
+      "number": 8,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/ai-04.webp",
+        "sourceId": "ai-photo-04",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/ai-04.webp"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q08-real.svg",
+            "sourceId": "umano-o-ai:option:Q08-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q08-real.svg"
+          },
+          "next": "Q11"
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q08-ai.svg",
+            "sourceId": "umano-o-ai:option:Q08-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q08-ai.svg"
+          },
+          "next": "Q11"
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q09",
+      "number": 9,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/ai-05.png",
+        "sourceId": "ai-photo-05",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/ai-05.png"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q09-real.svg",
+            "sourceId": "umano-o-ai:option:Q09-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q09-real.svg"
+          },
+          "next": "Q11"
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q09-ai.svg",
+            "sourceId": "umano-o-ai:option:Q09-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q09-ai.svg"
+          },
+          "next": "Q11"
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q10",
+      "number": 10,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/real-05.jpg",
+        "sourceId": "real-photo-05",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/real-05.jpg"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q10-real.svg",
+            "sourceId": "umano-o-ai:option:Q10-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q10-real.svg"
+          },
+          "next": "Q11"
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q10-ai.svg",
+            "sourceId": "umano-o-ai:option:Q10-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q10-ai.svg"
+          },
+          "next": "Q11"
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q11",
+      "number": 11,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/ai-06.jpg",
+        "sourceId": "ai-photo-06",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/ai-06.jpg"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q11-real.svg",
+            "sourceId": "umano-o-ai:option:Q11-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q11-real.svg"
+          },
+          "nextBy": {
+            "real-low": "Q12",
+            "real-high": "Q13",
+            "ai-low": "Q14",
+            "ai-high": "Q14"
+          }
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q11-ai.svg",
+            "sourceId": "umano-o-ai:option:Q11-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q11-ai.svg"
+          },
+          "nextBy": {
+            "real-low": "Q12",
+            "real-high": "Q13",
+            "ai-low": "Q14",
+            "ai-high": "Q14"
+          }
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q12",
+      "number": 12,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/real-06.jpg",
+        "sourceId": "real-photo-06",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/real-06.jpg"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q12-real.svg",
+            "sourceId": "umano-o-ai:option:Q12-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q12-real.svg"
+          },
+          "next": "Q15"
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q12-ai.svg",
+            "sourceId": "umano-o-ai:option:Q12-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q12-ai.svg"
+          },
+          "next": "Q15"
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q13",
+      "number": 13,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/ai-07.png",
+        "sourceId": "ai-photo-07",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/ai-07.png"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q13-real.svg",
+            "sourceId": "umano-o-ai:option:Q13-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q13-real.svg"
+          },
+          "next": "Q15"
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q13-ai.svg",
+            "sourceId": "umano-o-ai:option:Q13-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q13-ai.svg"
+          },
+          "next": "Q15"
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q14",
+      "number": 14,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/real-07.jpg",
+        "sourceId": "real-photo-07",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/real-07.jpg"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q14-real.svg",
+            "sourceId": "umano-o-ai:option:Q14-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q14-real.svg"
+          },
+          "next": "Q15"
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q14-ai.svg",
+            "sourceId": "umano-o-ai:option:Q14-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q14-ai.svg"
+          },
+          "next": "Q15"
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q15",
+      "number": 15,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/ai-08.png",
+        "sourceId": "ai-photo-08",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/ai-08.png"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q15-real.svg",
+            "sourceId": "umano-o-ai:option:Q15-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q15-real.svg"
+          },
+          "next": "Q16"
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q15-ai.svg",
+            "sourceId": "umano-o-ai:option:Q15-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q15-ai.svg"
+          },
+          "next": "Q16"
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2
+    },
+    {
+      "id": "Q16",
+      "number": 16,
+      "prompt": "Secondo te, questa immagine è una fotografia autentica o è stata generata con un sistema di intelligenza artificiale?",
+      "image": {
+        "src": "../assets/human-ai/real-08.jpg",
+        "sourceId": "real-photo-08",
+        "alt": "Immagine-test: osserva la scena e decidi la provenienza.",
+        "manifestPath": "assets/human-ai/real-08.jpg"
+      },
+      "options": [
+        {
+          "id": "real",
+          "label": "Fotografia",
+          "text": "La mia risposta è fotografia.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q16-real.svg",
+            "sourceId": "umano-o-ai:option:Q16-real",
+            "alt": "Simbolo di risposta real, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q16-real.svg"
+          }
+        },
+        {
+          "id": "ai",
+          "label": "Immagine generata dall’AI",
+          "text": "La mia risposta è immagine generata dall’AI.",
+          "image": {
+            "src": "../assets/quiz-art/umano-o-ai/option-Q16-ai.svg",
+            "sourceId": "umano-o-ai:option:Q16-ai",
+            "alt": "Simbolo di risposta ai, illustrazione originale",
+            "manifestPath": "assets/quiz-art/umano-o-ai/option-Q16-ai.svg"
+          }
+        }
+      ],
+      "confidenceRequired": true,
+      "routeBand": "confidence",
+      "minimumOptions": 2,
+      "terminal": true
+    }
+  ],
+  "results": [
+    {
+      "id": "zero",
+      "title": "Zero indizi certi",
+      "summary": "Riconoscere la provenienza da una singola immagine è difficile: il risultato non misura intelligenza o alfabetizzazione digitale.",
+      "strength": "Il dato mostra solo quante risposte coincidono con l’etichetta verificata nel campione.",
+      "tension": "La confidenza è una stima personale; non è una misura clinica o una prova di competenza universale.",
+      "nudge": "Confronta i tuoi dubbi e osserva come cambia la confidenza dopo il feedback.",
+      "sources": [
+        "Benchmark WasItAIGenerated, immagini originali selezionate; provenienza individuale nel manifest."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Dataset e documentazione WasItAIGenerated",
+          "url": "https://github.com/wasitaigenerated/ai-image-detection-benchmark"
+        }
+      ],
+      "match": [],
+      "image": {
+        "src": "../assets/quiz-art/umano-o-ai/result-zero.svg",
+        "sourceId": "umano-o-ai:result:zero",
+        "alt": "Illustrazione originale del risultato: Zero indizi certi",
+        "manifestPath": "assets/quiz-art/umano-o-ai/result-zero.svg"
+      },
+      "exactCorrect": 0
+    },
+    {
+      "id": "uno",
+      "title": "Primo giro di osservazione",
+      "summary": "Hai colto un indizio in questa prova, ma la classificazione resta un esercizio probabilistico.",
+      "strength": "Il dato mostra solo quante risposte coincidono con l’etichetta verificata nel campione.",
+      "tension": "La confidenza è una stima personale; non è una misura clinica o una prova di competenza universale.",
+      "nudge": "Non trasformare un dettaglio isolato in una regola universale.",
+      "sources": [
+        "Benchmark WasItAIGenerated, immagini originali selezionate; provenienza individuale nel manifest."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Dataset e documentazione WasItAIGenerated",
+          "url": "https://github.com/wasitaigenerated/ai-image-detection-benchmark"
+        }
+      ],
+      "match": [],
+      "image": {
+        "src": "../assets/quiz-art/umano-o-ai/result-uno.svg",
+        "sourceId": "umano-o-ai:result:uno",
+        "alt": "Illustrazione originale del risultato: Primo giro di osservazione",
+        "manifestPath": "assets/quiz-art/umano-o-ai/result-uno.svg"
+      },
+      "exactCorrect": 1
+    },
+    {
+      "id": "due",
+      "title": "Sguardo in allenamento",
+      "summary": "Due risposte corrette sono un punto di partenza per confrontare aspettative e segnali visivi.",
+      "strength": "Il dato mostra solo quante risposte coincidono con l’etichetta verificata nel campione.",
+      "tension": "La confidenza è una stima personale; non è una misura clinica o una prova di competenza universale.",
+      "nudge": "Rivedi le immagini dopo aver conosciuto la provenienza, senza colpevolizzarti.",
+      "sources": [
+        "Benchmark WasItAIGenerated, immagini originali selezionate; provenienza individuale nel manifest."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Dataset e documentazione WasItAIGenerated",
+          "url": "https://github.com/wasitaigenerated/ai-image-detection-benchmark"
+        }
+      ],
+      "match": [],
+      "image": {
+        "src": "../assets/quiz-art/umano-o-ai/result-due.svg",
+        "sourceId": "umano-o-ai:result:due",
+        "alt": "Illustrazione originale del risultato: Sguardo in allenamento",
+        "manifestPath": "assets/quiz-art/umano-o-ai/result-due.svg"
+      },
+      "exactCorrect": 2
+    },
+    {
+      "id": "tre",
+      "title": "Qualche intuizione",
+      "summary": "Tre classificazioni corrette indicano intuizioni utili, ma un campione piccolo non dimostra una tecnica affidabile.",
+      "strength": "Il dato mostra solo quante risposte coincidono con l’etichetta verificata nel campione.",
+      "tension": "La confidenza è una stima personale; non è una misura clinica o una prova di competenza universale.",
+      "nudge": "Chiediti quali indizi ti hanno convinto e quanto erano davvero diagnostici.",
+      "sources": [
+        "Benchmark WasItAIGenerated, immagini originali selezionate; provenienza individuale nel manifest."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Dataset e documentazione WasItAIGenerated",
+          "url": "https://github.com/wasitaigenerated/ai-image-detection-benchmark"
+        }
+      ],
+      "match": [],
+      "image": {
+        "src": "../assets/quiz-art/umano-o-ai/result-tre.svg",
+        "sourceId": "umano-o-ai:result:tre",
+        "alt": "Illustrazione originale del risultato: Qualche intuizione",
+        "manifestPath": "assets/quiz-art/umano-o-ai/result-tre.svg"
+      },
+      "exactCorrect": 3
+    },
+    {
+      "id": "quattro",
+      "title": "A metà del percorso",
+      "summary": "Hai riconosciuto alcune immagini; fotografie e sistemi generativi possono condividere indizi e imperfezioni.",
+      "strength": "Il dato mostra solo quante risposte coincidono con l’etichetta verificata nel campione.",
+      "tension": "La confidenza è una stima personale; non è una misura clinica o una prova di competenza universale.",
+      "nudge": "Prova a distinguere impressione, confidenza e prova verificabile.",
+      "sources": [
+        "Benchmark WasItAIGenerated, immagini originali selezionate; provenienza individuale nel manifest."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Dataset e documentazione WasItAIGenerated",
+          "url": "https://github.com/wasitaigenerated/ai-image-detection-benchmark"
+        }
+      ],
+      "match": [],
+      "image": {
+        "src": "../assets/quiz-art/umano-o-ai/result-quattro.svg",
+        "sourceId": "umano-o-ai:result:quattro",
+        "alt": "Illustrazione originale del risultato: A metà del percorso",
+        "manifestPath": "assets/quiz-art/umano-o-ai/result-quattro.svg"
+      },
+      "exactCorrect": 4
+    },
+    {
+      "id": "cinque",
+      "title": "Occhio curioso",
+      "summary": "Cinque risposte corrette mostrano un risultato interessante su questa selezione, non una capacità stabile in ogni contesto.",
+      "strength": "Il dato mostra solo quante risposte coincidono con l’etichetta verificata nel campione.",
+      "tension": "La confidenza è una stima personale; non è una misura clinica o una prova di competenza universale.",
+      "nudge": "Nota quali categorie ti hanno messo più alla prova.",
+      "sources": [
+        "Benchmark WasItAIGenerated, immagini originali selezionate; provenienza individuale nel manifest."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Dataset e documentazione WasItAIGenerated",
+          "url": "https://github.com/wasitaigenerated/ai-image-detection-benchmark"
+        }
+      ],
+      "match": [],
+      "image": {
+        "src": "../assets/quiz-art/umano-o-ai/result-cinque.svg",
+        "sourceId": "umano-o-ai:result:cinque",
+        "alt": "Illustrazione originale del risultato: Occhio curioso",
+        "manifestPath": "assets/quiz-art/umano-o-ai/result-cinque.svg"
+      },
+      "exactCorrect": 5
+    },
+    {
+      "id": "sei",
+      "title": "Intuitivo con metodo",
+      "summary": "Hai ottenuto un buon numero di risposte corrette. Il feedback e la revisione contano quanto il colpo d’occhio.",
+      "strength": "Il dato mostra solo quante risposte coincidono con l’etichetta verificata nel campione.",
+      "tension": "La confidenza è una stima personale; non è una misura clinica o una prova di competenza universale.",
+      "nudge": "Usa la confidenza per capire dove la tua intuizione è ben calibrata.",
+      "sources": [
+        "Benchmark WasItAIGenerated, immagini originali selezionate; provenienza individuale nel manifest."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Dataset e documentazione WasItAIGenerated",
+          "url": "https://github.com/wasitaigenerated/ai-image-detection-benchmark"
+        }
+      ],
+      "match": [],
+      "image": {
+        "src": "../assets/quiz-art/umano-o-ai/result-sei.svg",
+        "sourceId": "umano-o-ai:result:sei",
+        "alt": "Illustrazione originale del risultato: Intuitivo con metodo",
+        "manifestPath": "assets/quiz-art/umano-o-ai/result-sei.svg"
+      },
+      "exactCorrect": 6
+    },
+    {
+      "id": "sette",
+      "title": "Quasi a fuoco",
+      "summary": "Sette risposte corrette in questa sessione: ottimo risultato, senza che diventi una garanzia generale.",
+      "strength": "Il dato mostra solo quante risposte coincidono con l’etichetta verificata nel campione.",
+      "tension": "La confidenza è una stima personale; non è una misura clinica o una prova di competenza universale.",
+      "nudge": "Le immagini sintetiche cambiano rapidamente; resta curioso e prudente.",
+      "sources": [
+        "Benchmark WasItAIGenerated, immagini originali selezionate; provenienza individuale nel manifest."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Dataset e documentazione WasItAIGenerated",
+          "url": "https://github.com/wasitaigenerated/ai-image-detection-benchmark"
+        }
+      ],
+      "match": [],
+      "image": {
+        "src": "../assets/quiz-art/umano-o-ai/result-sette.svg",
+        "sourceId": "umano-o-ai:result:sette",
+        "alt": "Illustrazione originale del risultato: Quasi a fuoco",
+        "manifestPath": "assets/quiz-art/umano-o-ai/result-sette.svg"
+      },
+      "exactCorrect": 7
+    },
+    {
+      "id": "otto",
+      "title": "Occhio d’aquila — in questa prova",
+      "summary": "Hai classificato correttamente tutte le immagini di questo campione. È una sessione riuscita, non una prova che esista un segno infallibile.",
+      "strength": "Il dato mostra solo quante risposte coincidono con l’etichetta verificata nel campione.",
+      "tension": "La confidenza è una stima personale; non è una misura clinica o una prova di competenza universale.",
+      "nudge": "Continua a controllare fonti e contesto: la sola immagine non basta sempre.",
+      "sources": [
+        "Benchmark WasItAIGenerated, immagini originali selezionate; provenienza individuale nel manifest."
+      ],
+      "sourceLinks": [
+        {
+          "label": "Dataset e documentazione WasItAIGenerated",
+          "url": "https://github.com/wasitaigenerated/ai-image-detection-benchmark"
+        }
+      ],
+      "match": [],
+      "image": {
+        "src": "../assets/quiz-art/umano-o-ai/result-otto.svg",
+        "sourceId": "umano-o-ai:result:otto",
+        "alt": "Illustrazione originale del risultato: Occhio d’aquila — in questa prova",
+        "manifestPath": "assets/quiz-art/umano-o-ai/result-otto.svg"
+      },
+      "exactCorrect": 8
+    }
+  ],
+  "startQuestion": "Q01",
+  "sessionLength": 8,
+  "minimumResults": 8,
+  "branchQuestions": [
+    "Q01",
+    "Q06",
+    "Q11"
+  ],
+  "answerKey": "../data/human-ai-answer-key.json"
+}

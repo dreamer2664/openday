@@ -1,0 +1,2232 @@
+{
+  "id": "tipo-di-mente",
+  "title": "Che tipo di mente hai?",
+  "intro": "Otto domande, sei strategie di risposta, tre snodi e un profilo esplorativo ispirato a che tipo di mente hai?: non è una diagnosi né una misura scientifica.",
+  "category": "02 · QUIZ",
+  "binary": false,
+  "dimensions": [
+    "analisi",
+    "immaginazione",
+    "apertura",
+    "azione",
+    "ascolto",
+    "pianificazione",
+    "revisione",
+    "collaborazione"
+  ],
+  "questions": [
+    {
+      "id": "Q01",
+      "number": 1,
+      "prompt": "Un progetto parte con un brief incompleto: da dove inizi?",
+      "tradeoff": "Hai poco tempo e il gruppo non ha ancora definito come riconoscerà un buon risultato.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q01.svg",
+        "sourceId": "tipo-di-mente:question:Q01",
+        "alt": "Illustrazione originale pertinente a: Un progetto parte con un brief incompleto: da dove inizi?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q01.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Chiedo quale risultato minimo deve produrre il progetto e quali informazioni mancano per definirlo.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q01-A.svg",
+            "sourceId": "tipo-di-mente:option:Q01-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q01",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q01-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q02"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Propongo due interpretazioni diverse del brief e cerco un esempio che le distingua.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q01-B.svg",
+            "sourceId": "tipo-di-mente:option:Q01-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q01",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q01-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q03"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Costruisco una bozza breve con un solo obiettivo, così il gruppo può reagire a qualcosa di concreto.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q01-C.svg",
+            "sourceId": "tipo-di-mente:option:Q01-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q01",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q01-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q04"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Raccolgo in pochi minuti le aspettative di chi userà il risultato, poi restituisco i punti comuni.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q01-D.svg",
+            "sourceId": "tipo-di-mente:option:Q01-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q01",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q01-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q05"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Controllo chi non era nella stanza quando il brief è stato scritto e quali bisogni rischiano di sparire.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q01-E.svg",
+            "sourceId": "tipo-di-mente:option:Q01-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q01",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q01-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q03"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Concordo un criterio osservabile per il primo prototipo e una soglia che ci farà cambiare direzione.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q01-F.svg",
+            "sourceId": "tipo-di-mente:option:Q01-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q01",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q01-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q04"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q02",
+      "number": 2,
+      "prompt": "Un indizio contraddice la prima ipotesi: come reagisci?",
+      "tradeoff": "Il nuovo indizio è credibile, ma potrebbe essere un'eccezione e non una smentita completa.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q02.svg",
+        "sourceId": "tipo-di-mente:question:Q02",
+        "alt": "Illustrazione originale pertinente a: Un indizio contraddice la prima ipotesi: come reagisci?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q02.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Definisco il problema con precisione prima di scegliere.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q02-A.svg",
+            "sourceId": "tipo-di-mente:option:Q02-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q02",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q02-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q06"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Cambio prospettiva: un’idea nuova potrebbe sbloccare la situazione.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q02-B.svg",
+            "sourceId": "tipo-di-mente:option:Q02-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q02",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q02-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q06"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Scelgo il prossimo passo concreto e mi do un tempo per rivederlo.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q02-C.svg",
+            "sourceId": "tipo-di-mente:option:Q02-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q02",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q02-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q06"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Chiedo un confronto prima di fissare la soluzione.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q02-D.svg",
+            "sourceId": "tipo-di-mente:option:Q02-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q02",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q02-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q06"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Faccio un giro di obiezioni: che cosa non abbiamo ancora considerato?",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q02-E.svg",
+            "sourceId": "tipo-di-mente:option:Q02-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q02",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q02-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q06"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Prima di decidere tutto, provo la parte più incerta in modo reversibile.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q02-F.svg",
+            "sourceId": "tipo-di-mente:option:Q02-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q02",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q02-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q06"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q03",
+      "number": 3,
+      "prompt": "Il gruppo ha molte idee ma poco tempo: come sblocchi?",
+      "tradeoff": "Le idee sono diverse e nessuno ha ancora provato a trasformarle in un piano verificabile.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q03.svg",
+        "sourceId": "tipo-di-mente:question:Q03",
+        "alt": "Illustrazione originale pertinente a: Il gruppo ha molte idee ma poco tempo: come sblocchi?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q03.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Confronto due spiegazioni e verifico quale regge meglio.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q03-A.svg",
+            "sourceId": "tipo-di-mente:option:Q03-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q03",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q03-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q06"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Tengo aperte più ipotesi finché non emergono indizi migliori.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q03-B.svg",
+            "sourceId": "tipo-di-mente:option:Q03-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q03",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q03-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q06"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Organizzo le priorità e parto da ciò che si può verificare subito.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q03-C.svg",
+            "sourceId": "tipo-di-mente:option:Q03-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q03",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q03-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q06"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Mi domando chi rischia di restare escluso e adatto il piano.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q03-D.svg",
+            "sourceId": "tipo-di-mente:option:Q03-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q03",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q03-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q06"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Chiedo un parere a chi vede il problema da un’altra posizione.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q03-E.svg",
+            "sourceId": "tipo-di-mente:option:Q03-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q03",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q03-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q06"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Stabilisco quale risultato confermerebbe o smentirebbe la mia ipotesi.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q03-F.svg",
+            "sourceId": "tipo-di-mente:option:Q03-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q03",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q03-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q06"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q04",
+      "number": 4,
+      "prompt": "Davanti a un problema senza una risposta ovvia, cosa annoti?",
+      "tradeoff": "Non conosci tutte le cause: una scelta affrettata può chiudere una strada utile.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q04.svg",
+        "sourceId": "tipo-di-mente:question:Q04",
+        "alt": "Illustrazione originale pertinente a: Davanti a un problema senza una risposta ovvia, cosa annoti?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q04.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Rendo visibili i passaggi, così posso correggere un errore.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q04-A.svg",
+            "sourceId": "tipo-di-mente:option:Q04-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q04",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q04-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q06"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Trasformo il vincolo in un’occasione per sperimentare.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q04-B.svg",
+            "sourceId": "tipo-di-mente:option:Q04-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q04",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q04-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q06"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Preferisco un prototipo imperfetto a un piano che non si prova mai.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q04-C.svg",
+            "sourceId": "tipo-di-mente:option:Q04-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q04",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q04-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q06"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Condivido il ragionamento: una buona idea migliora se può essere discussa.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q04-D.svg",
+            "sourceId": "tipo-di-mente:option:Q04-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q04",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q04-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q06"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Rendo esplicito il costo della mia idea e verifico chi lo sostiene.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q04-E.svg",
+            "sourceId": "tipo-di-mente:option:Q04-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q04",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q04-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q06"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Procedo per una tappa breve e concordo in anticipo quando cambiare strada.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q04-F.svg",
+            "sourceId": "tipo-di-mente:option:Q04-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q04",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q04-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q06"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q05",
+      "number": 5,
+      "prompt": "Un piano funziona ma una persona resta esclusa: quale priorità scegli?",
+      "tradeoff": "Il piano produce risultati, ma il costo dell'esclusione ricade sempre sulla stessa persona.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q05.svg",
+        "sourceId": "tipo-di-mente:question:Q05",
+        "alt": "Illustrazione originale pertinente a: Un piano funziona ma una persona resta esclusa: quale priorità scegli?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q05.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Separo i fatti dalle ipotesi e cerco una prova controllabile.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q05-A.svg",
+            "sourceId": "tipo-di-mente:option:Q05-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q05",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q05-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q06"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Cerco un collegamento inatteso e provo a immaginare un’alternativa.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q05-B.svg",
+            "sourceId": "tipo-di-mente:option:Q05-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q05",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q05-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q06"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Faccio una prova piccola e reversibile, poi valuto cosa è successo.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q05-C.svg",
+            "sourceId": "tipo-di-mente:option:Q05-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q05",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q05-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q06"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Ascolto chi è coinvolto e costruisco una risposta che tenga conto dei diversi punti di vista.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q05-D.svg",
+            "sourceId": "tipo-di-mente:option:Q05-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q05",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q05-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q06"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Prima di scegliere, cerco chi potrebbe essere escluso e quale ipotesi sto dando per scontata.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q05-E.svg",
+            "sourceId": "tipo-di-mente:option:Q05-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q05",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q05-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q06"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Scelgo un test piccolo, un segnale osservabile e un momento per rivedere la scelta.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q05-F.svg",
+            "sourceId": "tipo-di-mente:option:Q05-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q05",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q05-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q06"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q06",
+      "number": 6,
+      "prompt": "Un dato nuovo cambia lo scenario a metà lavoro: come aggiorni la rotta?",
+      "tradeoff": "Cambiare rotta protegge il risultato, ma rende visibili le ipotesi sbagliate fatte finora.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q06.svg",
+        "sourceId": "tipo-di-mente:question:Q06",
+        "alt": "Illustrazione originale pertinente a: Un dato nuovo cambia lo scenario a metà lavoro: come aggiorni la rotta?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q06.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Verifico origine, data e pertinenza del nuovo dato prima di riscrivere tutto il piano.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q06-A.svg",
+            "sourceId": "tipo-di-mente:option:Q06-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q06",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q06-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q07"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Riformulo il problema con la nuova informazione e tengo aperte due ipotesi di lavoro.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q06-B.svg",
+            "sourceId": "tipo-di-mente:option:Q06-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q06",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q06-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q08"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Aggiorno il passaggio più esposto al cambiamento e lascio intatto il resto finché non serve.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q06-C.svg",
+            "sourceId": "tipo-di-mente:option:Q06-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q06",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q06-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q09"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Spiego al gruppo che cosa cambia, che cosa no e chi deve coordinare il prossimo passo.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q06-D.svg",
+            "sourceId": "tipo-di-mente:option:Q06-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q06",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q06-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q10"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Chiedo chi subirà il costo del piano attuale se ignoriamo il dato appena emerso.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q06-E.svg",
+            "sourceId": "tipo-di-mente:option:Q06-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q06",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q06-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q08"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Definisco quale ulteriore evidenza confermerebbe la svolta e quando ricontrollarla.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q06-F.svg",
+            "sourceId": "tipo-di-mente:option:Q06-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q06",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q06-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q09"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q07",
+      "number": 7,
+      "prompt": "Due spiegazioni plausibili competono: quale prova cerchi?",
+      "tradeoff": "Entrambe le spiegazioni sembrano plausibili; la prova più rapida potrebbe non essere la più decisiva.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q07.svg",
+        "sourceId": "tipo-di-mente:question:Q07",
+        "alt": "Illustrazione originale pertinente a: Due spiegazioni plausibili competono: quale prova cerchi?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q07.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Confronto due spiegazioni e verifico quale regge meglio.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q07-A.svg",
+            "sourceId": "tipo-di-mente:option:Q07-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q07",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q07-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q11"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Tengo aperte più ipotesi finché non emergono indizi migliori.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q07-B.svg",
+            "sourceId": "tipo-di-mente:option:Q07-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q07",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q07-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q11"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Organizzo le priorità e parto da ciò che si può verificare subito.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q07-C.svg",
+            "sourceId": "tipo-di-mente:option:Q07-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q07",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q07-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q11"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Mi domando chi rischia di restare escluso e adatto il piano.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q07-D.svg",
+            "sourceId": "tipo-di-mente:option:Q07-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q07",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q07-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q11"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Chiedo un parere a chi vede il problema da un’altra posizione.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q07-E.svg",
+            "sourceId": "tipo-di-mente:option:Q07-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q07",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q07-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q11"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Stabilisco quale risultato confermerebbe o smentirebbe la mia ipotesi.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q07-F.svg",
+            "sourceId": "tipo-di-mente:option:Q07-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q07",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q07-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q11"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q08",
+      "number": 8,
+      "prompt": "La squadra chiede una decisione immediata: come riduci l'incertezza?",
+      "tradeoff": "La decisione è reversibile solo in parte: il gruppo vuole sapere su quale criterio ti basi.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q08.svg",
+        "sourceId": "tipo-di-mente:question:Q08",
+        "alt": "Illustrazione originale pertinente a: La squadra chiede una decisione immediata: come riduci l'incertezza?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q08.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Rendo visibili i passaggi, così posso correggere un errore.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q08-A.svg",
+            "sourceId": "tipo-di-mente:option:Q08-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q08",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q08-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q11"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Trasformo il vincolo in un’occasione per sperimentare.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q08-B.svg",
+            "sourceId": "tipo-di-mente:option:Q08-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q08",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q08-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q11"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Preferisco un prototipo imperfetto a un piano che non si prova mai.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q08-C.svg",
+            "sourceId": "tipo-di-mente:option:Q08-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q08",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q08-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q11"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Condivido il ragionamento: una buona idea migliora se può essere discussa.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q08-D.svg",
+            "sourceId": "tipo-di-mente:option:Q08-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q08",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q08-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q11"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Rendo esplicito il costo della mia idea e verifico chi lo sostiene.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q08-E.svg",
+            "sourceId": "tipo-di-mente:option:Q08-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q08",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q08-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q11"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Procedo per una tappa breve e concordo in anticipo quando cambiare strada.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q08-F.svg",
+            "sourceId": "tipo-di-mente:option:Q08-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q08",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q08-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q11"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q09",
+      "number": 9,
+      "prompt": "Hai un pomeriggio libero e un'idea da sviluppare: che forma le dai?",
+      "tradeoff": "Hai un pomeriggio, non un budget illimitato: devi scegliere cosa provare e cosa lasciare in sospeso.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q09.svg",
+        "sourceId": "tipo-di-mente:question:Q09",
+        "alt": "Illustrazione originale pertinente a: Hai un pomeriggio libero e un'idea da sviluppare: che forma le dai?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q09.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Separo i fatti dalle ipotesi e cerco una prova controllabile.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q09-A.svg",
+            "sourceId": "tipo-di-mente:option:Q09-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q09",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q09-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q11"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Cerco un collegamento inatteso e provo a immaginare un’alternativa.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q09-B.svg",
+            "sourceId": "tipo-di-mente:option:Q09-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q09",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q09-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q11"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Faccio una prova piccola e reversibile, poi valuto cosa è successo.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q09-C.svg",
+            "sourceId": "tipo-di-mente:option:Q09-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q09",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q09-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q11"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Ascolto chi è coinvolto e costruisco una risposta che tenga conto dei diversi punti di vista.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q09-D.svg",
+            "sourceId": "tipo-di-mente:option:Q09-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q09",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q09-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q11"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Prima di scegliere, cerco chi potrebbe essere escluso e quale ipotesi sto dando per scontata.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q09-E.svg",
+            "sourceId": "tipo-di-mente:option:Q09-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q09",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q09-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q11"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Scelgo un test piccolo, un segnale osservabile e un momento per rivedere la scelta.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q09-F.svg",
+            "sourceId": "tipo-di-mente:option:Q09-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q09",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q09-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q11"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q10",
+      "number": 10,
+      "prompt": "Un risultato inatteso è promettente ma fragile: cosa fai?",
+      "tradeoff": "Il risultato funziona in un caso, ma non sai ancora se regge in condizioni diverse.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q10.svg",
+        "sourceId": "tipo-di-mente:question:Q10",
+        "alt": "Illustrazione originale pertinente a: Un risultato inatteso è promettente ma fragile: cosa fai?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q10.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Definisco il problema con precisione prima di scegliere.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q10-A.svg",
+            "sourceId": "tipo-di-mente:option:Q10-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q10",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q10-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q11"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Cambio prospettiva: un’idea nuova potrebbe sbloccare la situazione.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q10-B.svg",
+            "sourceId": "tipo-di-mente:option:Q10-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q10",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q10-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q11"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Scelgo il prossimo passo concreto e mi do un tempo per rivederlo.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q10-C.svg",
+            "sourceId": "tipo-di-mente:option:Q10-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q10",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q10-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q11"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Chiedo un confronto prima di fissare la soluzione.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q10-D.svg",
+            "sourceId": "tipo-di-mente:option:Q10-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q10",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q10-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q11"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Faccio un giro di obiezioni: che cosa non abbiamo ancora considerato?",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q10-E.svg",
+            "sourceId": "tipo-di-mente:option:Q10-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q10",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q10-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q11"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Prima di decidere tutto, provo la parte più incerta in modo reversibile.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q10-F.svg",
+            "sourceId": "tipo-di-mente:option:Q10-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q10",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q10-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q11"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q11",
+      "number": 11,
+      "prompt": "Un compagno propone un metodo opposto al tuo: come lo valuti?",
+      "tradeoff": "Il metodo alternativo può essere efficace per il compagno, anche se non lo sarebbe per te.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q11.svg",
+        "sourceId": "tipo-di-mente:question:Q11",
+        "alt": "Illustrazione originale pertinente a: Un compagno propone un metodo opposto al tuo: come lo valuti?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q11.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Metto a confronto i criteri usati dai due metodi e cerco un caso concreto su cui valutarli.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q11-A.svg",
+            "sourceId": "tipo-di-mente:option:Q11-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q11",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q11-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q12"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Cerco una terza possibilità che prenda il vantaggio di entrambi senza sommarne i difetti.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q11-B.svg",
+            "sourceId": "tipo-di-mente:option:Q11-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q11",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q11-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q12"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Provo il metodo del compagno su un compito piccolo e confronto il risultato con il mio.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q11-C.svg",
+            "sourceId": "tipo-di-mente:option:Q11-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q11",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q11-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q13"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Chiedo a entrambi di esplicitare obiettivi e vincoli prima di distribuire i ruoli.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q11-D.svg",
+            "sourceId": "tipo-di-mente:option:Q11-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q11",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q11-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q13"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Verifico quale prospettiva manca nella discussione e se il dissenso segnala un costo ignorato.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q11-E.svg",
+            "sourceId": "tipo-di-mente:option:Q11-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q11",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q11-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q14"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Concordo in anticipo una prova e una regola per decidere se mantenere o cambiare metodo.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q11-F.svg",
+            "sourceId": "tipo-di-mente:option:Q11-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q11",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q11-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q14"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q12",
+      "number": 12,
+      "prompt": "Una regola impedisce un esito utile: la interpreti, la contesti o la aggiri?",
+      "tradeoff": "La regola protegge un'esigenza reale, ma nel caso concreto produce un effetto inatteso.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q12.svg",
+        "sourceId": "tipo-di-mente:question:Q12",
+        "alt": "Illustrazione originale pertinente a: Una regola impedisce un esito utile: la interpreti, la contesti o la aggiri?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q12.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Rendo visibili i passaggi, così posso correggere un errore.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q12-A.svg",
+            "sourceId": "tipo-di-mente:option:Q12-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q12",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q12-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q15"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Trasformo il vincolo in un’occasione per sperimentare.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q12-B.svg",
+            "sourceId": "tipo-di-mente:option:Q12-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q12",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q12-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q15"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Preferisco un prototipo imperfetto a un piano che non si prova mai.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q12-C.svg",
+            "sourceId": "tipo-di-mente:option:Q12-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q12",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q12-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q15"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Condivido il ragionamento: una buona idea migliora se può essere discussa.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q12-D.svg",
+            "sourceId": "tipo-di-mente:option:Q12-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q12",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q12-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q15"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Rendo esplicito il costo della mia idea e verifico chi lo sostiene.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q12-E.svg",
+            "sourceId": "tipo-di-mente:option:Q12-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q12",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q12-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q15"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Procedo per una tappa breve e concordo in anticipo quando cambiare strada.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q12-F.svg",
+            "sourceId": "tipo-di-mente:option:Q12-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q12",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q12-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q15"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q13",
+      "number": 13,
+      "prompt": "Devi raccontare un'idea complessa a chi non la conosce: come la traduci?",
+      "tradeoff": "Chi ascolta ha conoscenze diverse e poco tempo: semplificare troppo rischia di deformare l'idea.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q13.svg",
+        "sourceId": "tipo-di-mente:question:Q13",
+        "alt": "Illustrazione originale pertinente a: Devi raccontare un'idea complessa a chi non la conosce: come la traduci?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q13.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Separo i fatti dalle ipotesi e cerco una prova controllabile.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q13-A.svg",
+            "sourceId": "tipo-di-mente:option:Q13-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q13",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q13-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q15"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Cerco un collegamento inatteso e provo a immaginare un’alternativa.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q13-B.svg",
+            "sourceId": "tipo-di-mente:option:Q13-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q13",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q13-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q15"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Faccio una prova piccola e reversibile, poi valuto cosa è successo.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q13-C.svg",
+            "sourceId": "tipo-di-mente:option:Q13-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q13",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q13-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q15"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Ascolto chi è coinvolto e costruisco una risposta che tenga conto dei diversi punti di vista.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q13-D.svg",
+            "sourceId": "tipo-di-mente:option:Q13-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q13",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q13-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q15"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Prima di scegliere, cerco chi potrebbe essere escluso e quale ipotesi sto dando per scontata.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q13-E.svg",
+            "sourceId": "tipo-di-mente:option:Q13-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q13",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q13-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q15"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Scelgo un test piccolo, un segnale osservabile e un momento per rivedere la scelta.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q13-F.svg",
+            "sourceId": "tipo-di-mente:option:Q13-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q13",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q13-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q15"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q14",
+      "number": 14,
+      "prompt": "Dopo un errore, come decidi se correggere o ripartire?",
+      "tradeoff": "L'errore è correggibile, ma ripartire da zero ha un costo per tutto il gruppo.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q14.svg",
+        "sourceId": "tipo-di-mente:question:Q14",
+        "alt": "Illustrazione originale pertinente a: Dopo un errore, come decidi se correggere o ripartire?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q14.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Definisco il problema con precisione prima di scegliere.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q14-A.svg",
+            "sourceId": "tipo-di-mente:option:Q14-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q14",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q14-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q15"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Cambio prospettiva: un’idea nuova potrebbe sbloccare la situazione.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q14-B.svg",
+            "sourceId": "tipo-di-mente:option:Q14-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q14",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q14-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q15"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Scelgo il prossimo passo concreto e mi do un tempo per rivederlo.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q14-C.svg",
+            "sourceId": "tipo-di-mente:option:Q14-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q14",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q14-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q15"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Chiedo un confronto prima di fissare la soluzione.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q14-D.svg",
+            "sourceId": "tipo-di-mente:option:Q14-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q14",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q14-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q15"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Faccio un giro di obiezioni: che cosa non abbiamo ancora considerato?",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q14-E.svg",
+            "sourceId": "tipo-di-mente:option:Q14-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q14",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q14-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q15"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Prima di decidere tutto, provo la parte più incerta in modo reversibile.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q14-F.svg",
+            "sourceId": "tipo-di-mente:option:Q14-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q14",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q14-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q15"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q15",
+      "number": 15,
+      "prompt": "In una scelta importante, quale informazione pesa di più?",
+      "tradeoff": "Le informazioni disponibili sono incomplete e alcune fonti hanno interessi diversi.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q15.svg",
+        "sourceId": "tipo-di-mente:question:Q15",
+        "alt": "Illustrazione originale pertinente a: In una scelta importante, quale informazione pesa di più?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q15.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Confronto due spiegazioni e verifico quale regge meglio.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q15-A.svg",
+            "sourceId": "tipo-di-mente:option:Q15-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q15",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q15-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire.",
+          "next": "Q16"
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Tengo aperte più ipotesi finché non emergono indizi migliori.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q15-B.svg",
+            "sourceId": "tipo-di-mente:option:Q15-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q15",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q15-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista.",
+          "next": "Q16"
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Organizzo le priorità e parto da ciò che si può verificare subito.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q15-C.svg",
+            "sourceId": "tipo-di-mente:option:Q15-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q15",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q15-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade.",
+          "next": "Q16"
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Mi domando chi rischia di restare escluso e adatto il piano.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q15-D.svg",
+            "sourceId": "tipo-di-mente:option:Q15-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q15",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q15-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile.",
+          "next": "Q16"
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Chiedo un parere a chi vede il problema da un’altra posizione.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q15-E.svg",
+            "sourceId": "tipo-di-mente:option:Q15-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q15",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q15-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa.",
+          "next": "Q16"
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Stabilisco quale risultato confermerebbe o smentirebbe la mia ipotesi.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q15-F.svg",
+            "sourceId": "tipo-di-mente:option:Q15-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q15",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q15-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile.",
+          "next": "Q16"
+        }
+      ],
+      "minimumOptions": 6
+    },
+    {
+      "id": "Q16",
+      "number": 16,
+      "prompt": "Quale frase descrive il tuo modo di cambiare idea?",
+      "tradeoff": "Cambiare idea può essere una forza; spiegare cosa ha fatto cambiare la tua rende la scelta affidabile.",
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/question-Q16.svg",
+        "sourceId": "tipo-di-mente:question:Q16",
+        "alt": "Illustrazione originale pertinente a: Quale frase descrive il tuo modo di cambiare idea?",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/question-Q16.svg"
+      },
+      "options": [
+        {
+          "id": "A",
+          "label": "Metto a fuoco",
+          "text": "Rendo visibili i passaggi, così posso correggere un errore.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q16-A.svg",
+            "sourceId": "tipo-di-mente:option:Q16-A",
+            "alt": "Illustrazione originale: Metto a fuoco — Che tipo di mente hai?, Q16",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q16-A.svg"
+          },
+          "scores": {
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai puntato su chiarezza e verifiche. Ciò che non è stato misurato può comunque contare: chiarisci quale prova ti basta per agire."
+        },
+        {
+          "id": "B",
+          "label": "Apro possibilità",
+          "text": "Trasformo il vincolo in un’occasione per sperimentare.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q16-B.svg",
+            "sourceId": "tipo-di-mente:option:Q16-B",
+            "alt": "Illustrazione originale: Apro possibilità — Che tipo di mente hai?, Q16",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q16-B.svg"
+          },
+          "scores": {
+            "immaginazione": 2,
+            "apertura": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai tenuto aperte più possibilità. Per non restare nel campo delle ipotesi, scegli quale indizio ti farebbe scartare una pista."
+        },
+        {
+          "id": "C",
+          "label": "Passo all’azione",
+          "text": "Preferisco un prototipo imperfetto a un piano che non si prova mai.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q16-C.svg",
+            "sourceId": "tipo-di-mente:option:Q16-C",
+            "alt": "Illustrazione originale: Passo all’azione — Che tipo di mente hai?, Q16",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q16-C.svg"
+          },
+          "scores": {
+            "azione": 2,
+            "pianificazione": 1,
+            "analisi": 1
+          },
+          "feedback": "Hai privilegiato una mossa concreta. Se è piccola e reversibile, il risultato può insegnarti qualcosa senza chiudere altre strade."
+        },
+        {
+          "id": "D",
+          "label": "Coinvolgo le persone",
+          "text": "Condivido il ragionamento: una buona idea migliora se può essere discussa.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q16-D.svg",
+            "sourceId": "tipo-di-mente:option:Q16-D",
+            "alt": "Illustrazione originale: Coinvolgo le persone — Che tipo di mente hai?, Q16",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q16-D.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "collaborazione": 1,
+            "apertura": 1
+          },
+          "feedback": "Hai coinvolto chi è toccato dalla scelta. Cerca anche il dissenso meno visibile, non solo il consenso più facile."
+        },
+        {
+          "id": "E",
+          "label": "Cerco il punto cieco",
+          "text": "Rendo esplicito il costo della mia idea e verifico chi lo sostiene.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q16-E.svg",
+            "sourceId": "tipo-di-mente:option:Q16-E",
+            "alt": "Illustrazione originale: Cerco il punto cieco — Che tipo di mente hai?, Q16",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q16-E.svg"
+          },
+          "scores": {
+            "ascolto": 2,
+            "revisione": 2,
+            "collaborazione": 1
+          },
+          "feedback": "Hai cercato un punto cieco. Verifica che la prospettiva consultata aggiunga davvero un’informazione diversa."
+        },
+        {
+          "id": "F",
+          "label": "Definisco una prova",
+          "text": "Procedo per una tappa breve e concordo in anticipo quando cambiare strada.",
+          "image": {
+            "src": "../assets/quiz-art/tipo-di-mente/option-Q16-F.svg",
+            "sourceId": "tipo-di-mente:option:Q16-F",
+            "alt": "Illustrazione originale: Definisco una prova — Che tipo di mente hai?, Q16",
+            "manifestPath": "assets/quiz-art/tipo-di-mente/option-Q16-F.svg"
+          },
+          "scores": {
+            "azione": 1,
+            "analisi": 2,
+            "pianificazione": 1,
+            "revisione": 1
+          },
+          "feedback": "Hai definito una prova. Decidi prima quale esito ti farebbe cambiare idea: è lì che il test diventa utile."
+        }
+      ],
+      "minimumOptions": 6,
+      "terminal": true
+    }
+  ],
+  "results": [
+    {
+      "id": "stratega",
+      "title": "Stratega",
+      "summary": "Trasformi il caos in una mappa di priorità e dipendenze.",
+      "strength": "Rendi chiaro il prossimo passo senza perdere di vista l’insieme.",
+      "tension": "Una mappa troppo rifinita può ritardare l’esperimento.",
+      "nudge": "Prova a mettere alla prova il piano con una piccola eccezione.",
+      "sources": [
+        "Profilo narrativo originale; non è una tipologia psicometrica."
+      ],
+      "scoreStyle": "A",
+      "match": [
+        "analisi",
+        "pianificazione"
+      ],
+      "branchMatch": {
+        "Q01": "A",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [],
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/result-stratega.svg",
+        "sourceId": "tipo-di-mente:result:stratega",
+        "alt": "Illustrazione originale del profilo Stratega",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/result-stratega.svg"
+      }
+    },
+    {
+      "id": "visionario",
+      "title": "Visionario",
+      "summary": "Vedi possibilità che gli altri non hanno ancora collegato.",
+      "strength": "Generi alternative e dai spazio all’immaginazione.",
+      "tension": "Le idee possono restare aperte troppo a lungo.",
+      "nudge": "Scegli un’ipotesi da testare, senza rinunciare alle altre.",
+      "sources": [
+        "Profilo narrativo originale; non è una tipologia psicometrica."
+      ],
+      "scoreStyle": "B",
+      "match": [
+        "immaginazione",
+        "apertura"
+      ],
+      "branchMatch": {
+        "Q01": "B",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [],
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/result-visionario.svg",
+        "sourceId": "tipo-di-mente:result:visionario",
+        "alt": "Illustrazione originale del profilo Visionario",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/result-visionario.svg"
+      }
+    },
+    {
+      "id": "analista",
+      "title": "Analista",
+      "summary": "Ti orienti chiedendo che cosa sappiamo davvero e che cosa manca.",
+      "strength": "Riconosci incoerenze e distingui un indizio da una prova.",
+      "tension": "La ricerca di certezza può diventare una pausa infinita.",
+      "nudge": "Decidi quale informazione basta per il prossimo passo.",
+      "sources": [
+        "Profilo narrativo originale; non è una tipologia psicometrica."
+      ],
+      "scoreStyle": "C",
+      "match": [
+        "azione",
+        "pianificazione"
+      ],
+      "branchMatch": {
+        "Q01": "C",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [],
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/result-analista.svg",
+        "sourceId": "tipo-di-mente:result:analista",
+        "alt": "Illustrazione originale del profilo Analista",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/result-analista.svg"
+      }
+    },
+    {
+      "id": "creativo",
+      "title": "Creativo",
+      "summary": "Ti piace cambiare cornice e provare strade non ovvie.",
+      "strength": "Riesci a usare un vincolo come materiale per inventare.",
+      "tension": "Un’idea brillante ha bisogno anche di verifica e manutenzione.",
+      "nudge": "Affianca alla novità un criterio semplice per capire se funziona.",
+      "sources": [
+        "Profilo narrativo originale; non è una tipologia psicometrica."
+      ],
+      "scoreStyle": "D",
+      "match": [
+        "ascolto",
+        "collaborazione"
+      ],
+      "branchMatch": {
+        "Q01": "D",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [],
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/result-creativo.svg",
+        "sourceId": "tipo-di-mente:result:creativo",
+        "alt": "Illustrazione originale del profilo Creativo",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/result-creativo.svg"
+      }
+    },
+    {
+      "id": "osservatore",
+      "title": "Osservatore",
+      "summary": "Noti dettagli, segnali deboli e cambiamenti di contesto.",
+      "strength": "Sai aspettare abbastanza da vedere ciò che sfugge alla fretta.",
+      "tension": "Osservare non sempre chiarisce quando è il momento di intervenire.",
+      "nudge": "Condividi un’osservazione e trasformala in una domanda verificabile.",
+      "sources": [
+        "Profilo narrativo originale; non è una tipologia psicometrica."
+      ],
+      "scoreStyle": "E",
+      "match": [
+        "ascolto",
+        "revisione"
+      ],
+      "branchMatch": {
+        "Q01": "E",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [],
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/result-osservatore.svg",
+        "sourceId": "tipo-di-mente:result:osservatore",
+        "alt": "Illustrazione originale del profilo Osservatore",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/result-osservatore.svg"
+      }
+    },
+    {
+      "id": "idealista",
+      "title": "Idealista",
+      "summary": "Valuti le scelte anche per il modo in cui toccano le persone.",
+      "strength": "Rendi visibili conseguenze e bisogni spesso trascurati.",
+      "tension": "Voler includere ogni prospettiva può rendere difficile scegliere.",
+      "nudge": "Distingui ciò che è indispensabile da ciò che può essere migliorato dopo.",
+      "sources": [
+        "Profilo narrativo originale; non è una tipologia psicometrica."
+      ],
+      "scoreStyle": "F",
+      "match": [
+        "azione",
+        "analisi"
+      ],
+      "branchMatch": {
+        "Q01": "F",
+        "Q06": "A",
+        "Q11": "A"
+      },
+      "sourceLinks": [],
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/result-idealista.svg",
+        "sourceId": "tipo-di-mente:result:idealista",
+        "alt": "Illustrazione originale del profilo Idealista",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/result-idealista.svg"
+      }
+    },
+    {
+      "id": "pragmatico",
+      "title": "Pragmatico",
+      "summary": "Ti orienti verso prove concrete, prototipi e piccoli passi.",
+      "strength": "Porti le idee nel mondo reale e impari dai risultati.",
+      "tension": "L’urgenza di fare può far saltare una domanda importante.",
+      "nudge": "Prima di partire, formula in una frase cosa vuoi scoprire.",
+      "sources": [
+        "Profilo narrativo originale; non è una tipologia psicometrica."
+      ],
+      "scoreStyle": "A",
+      "match": [
+        "analisi",
+        "pianificazione"
+      ],
+      "branchMatch": {
+        "Q01": "A",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [],
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/result-pragmatico.svg",
+        "sourceId": "tipo-di-mente:result:pragmatico",
+        "alt": "Illustrazione originale del profilo Pragmatico",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/result-pragmatico.svg"
+      }
+    },
+    {
+      "id": "diplomatico",
+      "title": "Diplomatico",
+      "summary": "Cerchi un terreno comune senza cancellare le differenze.",
+      "strength": "Faciliti il confronto e fai circolare informazioni nel gruppo.",
+      "tension": "Un accordo rapido non sempre affronta il dissenso reale.",
+      "nudge": "Nomina con gentilezza anche il punto su cui non c’è accordo.",
+      "sources": [
+        "Profilo narrativo originale; non è una tipologia psicometrica."
+      ],
+      "scoreStyle": "B",
+      "match": [
+        "immaginazione",
+        "apertura"
+      ],
+      "branchMatch": {
+        "Q01": "B",
+        "Q06": "B",
+        "Q11": "A"
+      },
+      "sourceLinks": [],
+      "image": {
+        "src": "../assets/quiz-art/tipo-di-mente/result-diplomatico.svg",
+        "sourceId": "tipo-di-mente:result:diplomatico",
+        "alt": "Illustrazione originale del profilo Diplomatico",
+        "manifestPath": "assets/quiz-art/tipo-di-mente/result-diplomatico.svg"
+      }
+    }
+  ],
+  "startQuestion": "Q01",
+  "sessionLength": 8,
+  "minimumResults": 8,
+  "branchQuestions": [
+    "Q01",
+    "Q06",
+    "Q11"
+  ]
+}
