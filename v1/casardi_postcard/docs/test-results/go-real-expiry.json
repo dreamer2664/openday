@@ -23,7 +23,7 @@
   "service_transfer_removed": true,
   "storage": "Memory only; no PNG is written by the Go service",
   "environment": "Linux build of the same Go source; QA loopback HTTP, not Windows-native or a physical school phone",
-  "html_sha256": "48cca47603d4eb53db38680ace4151c9b3dac134b38c02bbd7f0849403d7e049",
+  "html_sha256": "e8e28940e478a985e2b5113606045b4eac8677c58c27055a8392b719605a392a",
   "served_html_matches": "PASS",
   "go_source_sha256": "a2d19278837a05e253a2a7dd35874720651c21b5f262b754fe11d330ee994122"
 }

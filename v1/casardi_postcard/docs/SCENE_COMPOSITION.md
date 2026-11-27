@@ -265,3 +265,12 @@ Rilievi, texture e dettagli minori sono interpretazioni illustrative, non un ril
 ## Modifiche alle foto
 
 Se si cambia inquadratura, tutte queste coordinate devono essere ricontrollate su PNG reali con corporature/pose e companion differenti. Una licenza corretta non rende automaticamente corretta la prospettiva. Le tavole di controllo e i render consegnati sono in `docs/qa` e `renders`; l’ispezione manuale rimane necessaria.
+
+
+## Spostamento libero facoltativo · 3.3
+
+I layout sopra rimangono le posizioni consigliate. Alla fine il visitatore può sostituirli con un appoggio scelto direttamente sull’anteprima: coordinate normalizzate sulla tela 600×400, non pixel CSS del dispositivo. Il limite tiene insieme personaggio e companion, con ancoraggio dei piedi e dimensioni effettive del ritaglio sprite. Le tre taglie UI passano a scale intere; foto ed export HD usano gli asset originali, non l’immagine di anteprima.
+
+Durante il gesto il ritaglio reale del gruppo si muove su uno sfondo senza la precedente copia. Al rilascio sono ricomposti contatto, ombre e occlusione. Gli sticker sono livelli distinti dalla scena e restano sulla cornice; il PNG finale ricompone quei livelli nel renderer, senza contorni di selezione o screenshot del DOM. Le coordinate, i limiti e le scelte valide sono confrontati fra `app/layout_edit.py` e `browser/composition.js`.
+
+La libertà di spostamento non inferisce supporto reale su ogni superficie: una posizione scelta sul cielo o su una balaustra resta una scelta grafica dell’utente. Usare Posizione consigliata per tornare al layout verificato. Le prove geometriche non attestano plausibilità architettonica di tutti gli spostamenti manuali.

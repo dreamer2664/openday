@@ -1,0 +1,156 @@
+[
+  {
+    "path": "renders/Z_33_cartolina_photo_decorata.png",
+    "job": {
+      "mode": "photo",
+      "scene": "paestum",
+      "name": "Arianna",
+      "character": {
+        "build": "snello",
+        "skin": "chiara",
+        "face": "ovale",
+        "eye_shape": "classici",
+        "eyes": "castani",
+        "brows": "naturali",
+        "nose": "piccolo",
+        "mouth": "sottili",
+        "expression": "neutra",
+        "hair": "corti",
+        "hair_color": "nero",
+        "beard": "none",
+        "top": "cyber_jacket",
+        "top_color": "antracite",
+        "inner_color": "ciano",
+        "bottom": "cargo",
+        "bottom_color": "jeans-scuro",
+        "belt_color": "nero",
+        "shoes": "tech_boots",
+        "shoes_color": "nero",
+        "hat": "none",
+        "hat_color": "nero",
+        "glasses": "none",
+        "accessory": "none",
+        "accessory_color": "argento",
+        "held": "none",
+        "pose": "rilassata"
+      },
+      "companion": {
+        "animal": "gatto",
+        "variant": "soriano",
+        "pose": "seduto"
+      },
+      "composition": {
+        "actor": {
+          "x": 321,
+          "y": 344,
+          "scale": 100
+        },
+        "plaque": {
+          "theme": "avorio",
+          "ornament": "logo_casardi",
+          "position": "top-left",
+          "track": "classico"
+        },
+        "stickers": [
+          {
+            "id": "alloro",
+            "x": 510,
+            "y": 80,
+            "size": 76,
+            "rotation": 0
+          },
+          {
+            "id": "pegaso",
+            "x": 48,
+            "y": 332,
+            "size": 76,
+            "rotation": 0
+          }
+        ]
+      }
+    },
+    "dimensions": [
+      3000,
+      2000
+    ],
+    "sha256": "01c7ba97fff4ad8b3e3fe1ac0c0f4f9a62f93bacafac6fbc1cbd8f6525aba170",
+    "bytes": 11007153
+  },
+  {
+    "path": "renders/Z_33_cartolina_nes_decorata.png",
+    "job": {
+      "mode": "nes",
+      "scene": "paestum",
+      "name": "Arianna",
+      "character": {
+        "build": "snello",
+        "skin": "chiara",
+        "face": "ovale",
+        "eye_shape": "classici",
+        "eyes": "castani",
+        "brows": "naturali",
+        "nose": "piccolo",
+        "mouth": "sottili",
+        "expression": "neutra",
+        "hair": "corti",
+        "hair_color": "nero",
+        "beard": "none",
+        "top": "cyber_jacket",
+        "top_color": "antracite",
+        "inner_color": "ciano",
+        "bottom": "cargo",
+        "bottom_color": "jeans-scuro",
+        "belt_color": "nero",
+        "shoes": "tech_boots",
+        "shoes_color": "nero",
+        "hat": "none",
+        "hat_color": "nero",
+        "glasses": "none",
+        "accessory": "none",
+        "accessory_color": "argento",
+        "held": "none",
+        "pose": "rilassata"
+      },
+      "companion": {
+        "animal": "gatto",
+        "variant": "soriano",
+        "pose": "seduto"
+      },
+      "composition": {
+        "actor": {
+          "x": 317,
+          "y": 338,
+          "scale": 100
+        },
+        "plaque": {
+          "theme": "notte",
+          "ornament": "logo_casardi",
+          "position": "top-left",
+          "track": "classico"
+        },
+        "stickers": [
+          {
+            "id": "alloro",
+            "x": 510,
+            "y": 80,
+            "size": 76,
+            "rotation": 0
+          },
+          {
+            "id": "pegaso",
+            "x": 48,
+            "y": 332,
+            "size": 76,
+            "rotation": 0
+          }
+        ]
+      }
+    },
+    "dimensions": [
+      3000,
+      2000
+    ],
+    "sha256": "be4d72cba8d8b18b60376495b43ace61e3fb313d606d63a51ab7d0538c5aa002",
+    "bytes": 541563
+  }
+]

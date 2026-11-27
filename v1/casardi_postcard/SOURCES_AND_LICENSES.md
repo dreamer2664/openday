@@ -1,4 +1,4 @@
-# Fonti e licenze · revisione 3.2 · Dodici luoghi
+# Fonti e licenze · revisione 3.3 · Composizione e sticker
 ## Open Day 2026/27 · Liceo Alfredo Casardi · Barletta
 
 Ricerca e verifica delle fonti: **27 novembre 2026**. L’inventario riguarda gli asset effettivamente distribuiti. Le foto hanno pagine sorgenti con dichiarazioni di licenza riutilizzabile; non provengono da Google Immagini, social network o immagini con watermark rimosso. **La nuova base dei personaggi non è opera originale Casardi e non è tutta CC0.**
@@ -337,3 +337,28 @@ Solo sviluppo/QA: **Playwright 1.65.2**, **zxing-cpp 3.2.0.post1** (Apache-2.0),
 Per l’HTML, le foto sono ulteriormente ottimizzate in **JPEG qualità 86 / 4:2:0, lato massimo 3000 px**. La foto Casardi non è ingrandita prima dell’incorporamento. Dimensioni e hash delle copie incorporate sono in `docs/test-results/standalone-build.json`. I file sotto `assets/photos/` conservano le lavorazioni/hash elencati nella sezione 2.
 
 Dopo una sostituzione autorizzata aggiornare fonte, permessi/licenza, manifest, coordinate e fonti del PNG; rigenerare esempi, HTML e test. Gli sfondi NES canonici non vengono sovrascritti da `build_examples.py`: una modifica ai loro pixel richiede l’aggiornamento consapevole del relativo hash in `assets/nes/manifest.json`. Non sostituire immagini mentre lo stand è aperto. Il controllo SHA-256 garantisce corrispondenza dei bytes, **non** certifica da solo i diritti. La distribuzione nel repository autorizzato non cambia licenze o attribuzioni e non implica approvazione ufficiale della scuola.
+
+
+## Sticker facoltativi e identità Casardi · 3.3
+
+Otto elementi in `assets/stickers/manifest.json`, non attivi per impostazione iniziale. Crediti specifici del PNG soltanto per gli elementi selezionati, anche quando il simbolo compare nella targhetta. Le licenze degli altri materiali non vengono sostituite.
+
+### Sette sticker decorativi originali
+
+Corona d’alloro, Pegaso alato, lira classica, libro aperto, maschere teatrali, capitello ionico e rosa dei venti (`astrolabio` è soltanto l’identificatore tecnico storico dell’ultimo file). Immagini **assistite da IA** prodotte durante lo sviluppo, senza asset di videogiochi o riferimenti commerciali: fondo magenta rimosso, margine avorio, rifinitura con nearest-neighbour su tela **96 × 96**, palette fino a 64 colori con trasparenza. Non sono disegni dichiarati interamente manuali. **CC0 1.0 nella misura dei diritti disponibili**, senza rivendicare esclusiva sugli elementi automatici. Fonti native incluse come PNG; hash dei master di lavorazione e degli asset finiti nel manifest. `scripts/prepare_stickers.py` descrive l’importazione, non è necessario a runtime.
+
+### Logo ufficiale autentico, non generato
+
+- Titolare/identità indicata: **Liceo Classico – Scienze Umane – Musicale Alfredo Casardi, Barletta**.
+- Fonte primaria: [brochure ufficiale 2026/27, pagina 1](https://www.liceocasardi.edu.it/wp-content/uploads/2025/12/POF-26-27-Liceo-Casardi-Brochure.pdf), verificata il 27 novembre 2026. Estratta l’immagine incorporata **387 × 506** del Pegaso bianco, alloro verde e capitello ionico dorato.
+- Riscontri: [intestazione del vecchio sito ufficiale](https://www.liceocasardi.edu.it/wp-old/wp-content/uploads/2021/04/Intestazione4.png) e [documento ufficiale scolastico di novembre 2026](https://www.liceocasardi.edu.it/wp-content/uploads/2026/11/2_ATTO_DINDIRIZZO_2025_28_integrazione.docx.pdf.pades-2.pdf).
+- Immagine fotografica: **nessun ridisegno/ricolorazione**; fondo bianco e proporzioni conservati. La sola variante NES è ridotta con nearest-neighbour a un lato massimo di 96 e palette limitata. Rotazione bloccata per entrambe le edizioni. Ridimensionamento nella targhetta o come sticker, senza distorsione.
+- Base di riuso: le [note legali ufficiali](https://www.liceocasardi.edu.it/note-legali/) dichiarano **CC BY 4.0** per dati/documenti/informazioni, **salvo diversa indicazione ed eccezioni/diritti distinti di terzi**. Testo pertinente acquisito, data e hash della pagina in `assets/stickers/FONTE_LOGO_E_LICENZA.txt`. Testo completo della CC BY 4.0 in `assets/licenses/CC-BY-4.0.txt`, dal [mirror SPDX](https://raw.githubusercontent.com/spdx/license-list-data/main/text/CC-BY-4.0.txt), riferimento [canonico](https://creativecommons.org/licenses/by/4.0/).
+- La licenza copyright **non** conferisce proprietà o diritti di marchio, non è una liberatoria generale dell’istituto e non implica approvazione. Non si presume il permesso dalla sola pubblicazione online. Per un uso pubblico istituzionale far verificare all’istituto identità, attribuzione e possibili eccezioni. Nessun logo di terzi o stemma della Repubblica viene rivendicato come logo Casardi.
+- Candidati esaminati e scartati: `Logo.jpg` relativo al progetto **Studente atleta**; `Pegaso15.jpg`, copertina del giornalino; l’emblema della Repubblica nella testata nazionale. Nessuno è installato o presentato come logo scolastico.
+
+**Attribuzione inserita se scelto:** Liceo Classico – Scienze Umane – Musicale Alfredo Casardi, Barletta; brochure ufficiale 2026/27, pagina 1; estrazione e ridimensionamento, versione NES ridotta su griglia; CC BY 4.0 secondo le note legali ufficiali, salvi diritti distinti; nessuna approvazione implicita. URL della brochure e delle note conservati nel PNG e nel TXT dei crediti. La fotografia sottostante e i moduli LPC mantengono attribuzioni/licenze proprie.
+
+### Sostituire o rimuovere il logo senza inventarlo
+
+L’operatore può non selezionarlo: l’impostazione iniziale è senza marchio. Per una versione grafica ufficiale più recente o vettoriale, il manutentore deve riceverla dall’istituto con indicazioni di riuso, sostituire i due PNG `logo_casardi`, aggiornare provenienza e SHA-256 nel manifest, quindi ricostruire HTML, rilanciare test e distribuire il pacchetto verificato. Non rigenerare il logo con IA e non attribuire a un nuovo file la provenienza del vecchio. La pagina di ricerca e i master intermedi non sono dipendenze runtime.

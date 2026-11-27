@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "date": "2026-11-27",
-  "seconds": 2.74,
+  "seconds": 2.6,
   "tests": [
     {
       "name": "Standard security configuration: no preview exception, wrong key/host/origin rejected",
@@ -33,7 +33,7 @@
     }
   ],
   "configuration": "Production defaults, no TRUST_PREVIEW and no CASARDI_HTML override; native Linux binary reads HTML beside itself from a different working directory.",
-  "html_sha256": "48cca47603d4eb53db38680ace4151c9b3dac134b38c02bbd7f0849403d7e049",
+  "html_sha256": "e8e28940e478a985e2b5113606045b4eac8677c58c27055a8392b719605a392a",
   "go_source_sha256": "a2d19278837a05e253a2a7dd35874720651c21b5f262b754fe11d330ee994122",
   "windows_native": "NOT TESTED; platform browser launch, Windows firewall and MessageBox require the real PC"
 }

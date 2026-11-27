@@ -1,4 +1,4 @@
-# Matrice effettiva degli asset · revisione 3.2 · Dodici luoghi
+# Matrice effettiva degli asset · revisione 3.3 · Composizione e sticker
 ## Liceo Alfredo Casardi · Open Day 2026/27 · Barletta
 
 Inventario della versione consegnata, **27 novembre 2026**. I colori, i prodotti cartesiani, i preset, le icone derivate e le copie nei due renderer **non vengono contati come nuovi disegni**.
@@ -152,3 +152,20 @@ Evidenze della revisione attuale (limiti e hash in TEST_REPORT.md):
 | Tavole visive | `docs/qa/01…04`, render 05, dettaglio Foro 06, render browser 07, dodici architetture 08 e controlli/zoom 11–13 | Revisione manuale rappresentativa, non approvazione del committente |
 
 Le tavole sono pixel effettivi del renderer: includono ingrandimenti nearest-neighbor e una striscia 1×, non illustrazioni promozionali o asset diversi dall’app. Per la provenienza completa e le condizioni ShareAlike leggere **SOURCES_AND_LICENSES.md** e i crediti LPC inclusi.
+
+
+## Estensione opzionale 3.3 · composizione finale
+
+Il patrimonio precedente (12 fotografie, 12 scene NES, personaggi modulari LPC e 8 companion) è conservato. Aggiunti **7 sticker decorativi originali assistiti da IA** a 96×96 e **1 logo ufficiale Casardi autentico** a 387×506 con variante NES ridotta. Manifest/hash/licenze: `assets/stickers/manifest.json`; anteprima di tutti gli elementi: `docs/qa/14_sticker.jpg`.
+
+| Gruppo | Scelte reali | Comportamento |
+|---|---|---|
+| Personaggio sulla cartolina | Trascinamento continuo; 3 taglie distinte | Mouse, dito o frecce; il companion segue; gruppo contenuto nella cornice |
+| Sticker | 8 motivi, fino a 6 per composizione | Posizione, dimensione, livello; inclinazione tranne logo ufficiale |
+| Finitura targhetta | Originale + Notte, Avorio, Pergamena | Nessuna modifica obbligatoria |
+| Simbolo targhetta | Nessuno + 8 motivi | Stessa provenienza, attribuzione e distinzione logo/Pegaso |
+| Percorso | Nessuno + Classico, Scienze Umane, Musicale | Riga aggiuntiva solo se selezionata |
+| Posizione targhetta | Consigliata + 4 angoli | Testi istituzionali invariati |
+| Cronologia | Fino a 25 modifiche in RAM | Annulla, Ripristina composizione, reset visitatore |
+
+Prove dedicate: `composition-audit.json` (geometria/validazione condivisa) e `composition-ui-tests.json` (eventi UI, touch emulato e pixel dei PNG realmente scaricati). Le dimensioni restano quelle di export, non dello schermo. Le combinazioni non sono un numero di nuovi disegni o una certificazione artistica universale.

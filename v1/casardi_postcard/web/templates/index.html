@@ -6,6 +6,7 @@
 <meta name="kiosk-csrf" content="{{ csrf }}">
 <title>Cartolina Open Day 2026/27 · Liceo Alfredo Casardi</title>
 <link rel="stylesheet" href="/static/app.css">
+<link rel="stylesheet" href="/static/layout-editor.css">
 </head>
 <body class="mode-photo">
 
@@ -128,11 +129,12 @@
       <!-- STEP: preview & export -->
       <section class="pane" data-pane="preview">
         <h2>La tua cartolina</h2>
-        <p class="sub">Controlla l'anteprima, poi genera il PNG in alta risoluzione (3000 × 2000).</p>
+        <p class="sub">Sposta il personaggio sulla cartolina. Gli sticker e le aggiunte alla targhetta sono facoltativi, qui sotto.</p>
         <div class="preview-wrap">
           <img id="final-preview" alt="Anteprima della cartolina">
           <div class="preview-loading" id="preview-loading" hidden><span></span><p>Composizione in corso…</p></div>
         </div>
+        <div id="composition-panel"></div>
         <div class="actions">
           <button class="btn btn-ghost" id="btn-back-edit">Modifica</button>
           <button class="btn btn-primary" id="btn-export" disabled>Genera PNG e QR code</button>
@@ -177,6 +179,7 @@
     <div class="network-check"><img id="phone-creator-qr" alt="QR per il creatore completo sul telefono"><div><h3>Crea direttamente sul telefono</h3><p>Questo QR apre il <strong>creatore completo</strong> con tutti gli stili, personaggi e companion, non una pagina di solo download. Il PNG viene composto sul telefono.</p><p><a id="phone-creator-link" href="/telefono" target="_blank" rel="noopener">Apri la versione telefono</a></p><p class="hint">Serve la stessa rete locale per aprirla. Una volta caricata, la creazione funziona senza altre richieste al server. Per il file autonomo usa Cartolina_Casardi_PC_e_Telefono.html.</p></div></div>
     <details><summary>Fotografie, riferimenti e licenze</summary><div id="credits-list"></div><p class="hint">Crediti e licenze delle parti selezionate sono inclusi anche nei metadati del PNG e nella pagina di download. Il Casardi è documentato con una fotografia storica a risoluzione limitata, non una ripresa attuale. Le composizioni sono adattamenti CC BY-SA 4.0; le fotografie mantengono la loro licenza originale.</p></details>
     <details><summary>Nuovi scenari NES · Provenienza</summary><p>Sei illustrazioni architettoniche assistite da IA a partire dalle fotografie documentate, rifinite su griglia 600 × 400 e palette di 64 colori per sfondo. Non sono opere interamente disegnate a mano o rilievi scientifici. Nessun modello o servizio esterno è usato nell’app: gli sfondi sono PNG locali condivisi con il creatore autonomo. I colori del Casardi interpretano il riferimento del 1936, non la scuola attuale. Adattamenti CC BY-SA 4.0 con attribuzioni dei riferimenti; nessuna esclusiva rivendicata sugli elementi generati automaticamente.</p></details>
+    <details><summary>Sticker e logo ufficiale</summary><p>Sette sticker originali assistiti da IA e rifiniti su griglia 96×96. Logo ufficiale autentico estratto dalla pagina 1 della brochure Casardi 2026/27, non generato; licenza CC BY 4.0 secondo le note legali del sito, fatti salvi diritti distinti, terzi e marchi. Nessuna approvazione implicita. Le attribuzioni viaggiano nel PNG se il logo o gli sticker vengono scelti.</p><p><a href="https://www.liceocasardi.edu.it/wp-content/uploads/2025/12/POF-26-27-Liceo-Casardi-Brochure.pdf" target="_blank" rel="noopener">Brochure ufficiale</a> · <a href="https://www.liceocasardi.edu.it/note-legali/" target="_blank" rel="noopener">Note legali del sito</a></p></details>
     <details><summary>Personaggi modulari LPC · Autori e licenze</summary><p>Sprite disegnati dagli artisti di Universal LPC, con equipaggiamento fantascientifico originale Casardi. LPC non è tutto CC0. Nessun asset di Cyberpunk 2077 o ARK. I crediti completi del sottoinsieme incluso sono riportati qui; il PNG attribuisce le sole parti selezionate.</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.6 monospace">{{ lpc_credits }}</pre></details>
     <div class="actions">
       <button class="btn btn-ghost" id="btn-diag-refresh">Aggiorna</button>
@@ -186,6 +189,7 @@
 </div>
 
 <div id="status" class="status" role="status" aria-live="polite" hidden><span></span><button aria-label="Chiudi messaggio">×</button></div>
+<script src="/static/layout-editor.js"></script>
 <script src="/static/app.js"></script>
 </body>
 </html>

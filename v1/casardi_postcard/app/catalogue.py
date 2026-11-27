@@ -7,6 +7,7 @@ from .palette import (SKIN_TONES, HAIR_COLORS, FABRIC_COLORS, DENIM_COLORS,
                       LEATHER_COLORS, METAL_COLORS, EYE_COLORS, table_for_ui)
 from .scenes import PHOTO_SCENES
 from .nes_art import art_manifest
+from . import layout_edit
 
 CHOICES = {
     'build': list(ch.BUILDS), 'face': ch.FACES, 'eye_shape': ch.EYE_SHAPES,
@@ -87,7 +88,9 @@ def normalise_job(raw):
     scene = raw.get('scene', 'casardi')
     if not isinstance(mode,str) or not isinstance(scene,str) or mode not in ('photo', 'nes') or scene not in PHOTO_SCENES:
         raise ValidationError('Stile o ambientazione non validi.')
-    return dict(mode=mode, scene=scene, name=clean_name(raw.get('name','') if raw.get('name','') is not None else ''),
+    try: composition=layout_edit.normalise(raw.get('composition'))
+    except ValueError as exc: raise ValidationError(str(exc)) from exc
+    return dict(composition=composition, mode=mode, scene=scene, name=clean_name(raw.get('name','') if raw.get('name','') is not None else ''),
                 character=normalise_character(raw.get('character')),
                 companion=normalise_companion(raw.get('companion')))
 
@@ -101,7 +104,7 @@ def public_catalogue(ttl, revision):
     animals = [dict(id=k, label=v['label'],
                     variants=[dict(id=a,label=b,hex=c) for a,b,c in v['variants']],
                     poses=v['poses']) for k,v in ANIMALS.items()]
-    return dict(scenes=scenes, choices=CHOICES, labels=ch.LABELS, compatibility=ch.COMPATIBILITY, presets=ch.PRESETS,
+    return dict(stickers=layout_edit.public_stickers(), scenes=scenes, choices=CHOICES, labels=ch.LABELS, compatibility=ch.COMPATIBILITY, presets=ch.PRESETS,
                 colors={k:table_for_ui(v) for k,v in COLORS.items()},
                 animals=animals, defaults=dict(character=ch.default_spec()),
                 ttl_seconds=ttl, asset_revision=revision)

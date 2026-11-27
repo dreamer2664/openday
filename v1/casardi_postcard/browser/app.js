@@ -2,7 +2,7 @@
 (()=>{
  'use strict';
  const $=s=>document.querySelector(s),$$=s=>Array.from(document.querySelectorAll(s)),R=CasardiRender,O=PORTABLE.catalogue;
- const state={mode:'photo',styleChosen:false,scene:'casardi',name:'',character:{...O.defaults.character},companion:null,tab:'body',step:0,highest:0,epoch:0,visited:false,ready:false,file:null,busy:false};
+ const state={mode:'photo',styleChosen:false,scene:'casardi',name:'',character:{...O.defaults.character},companion:null,composition:CasardiEditor.defaults(),tab:'body',step:0,highest:0,epoch:0,visited:false,ready:false,file:null,busy:false};
  const labels={
   build:{minuto:'Minuta',snello:'Snella',medio:'Media',atletico:'Atletica',robusto:'Robusta'},face:{ovale:'Ovale',tondo:'Tondo',squadrato:'Squadrato',affusolato:'Affusolato'},eye_shape:{classici:'Classici',mandorla:'A mandorla',tondi:'Tondi'},brows:{naturali:'Naturali',folte:'Folte',sottili:'Sottili'},nose:{piccolo:'Piccolo',largo:'Largo',aquilino:'Aquilino'},mouth:{sottili:'Sottili',piene:'Piene'},
   hair:{corti:'Corti',caschetto:'Caschetto',ricci:'Ricci',lunghi:'Lunghi',coda:'Coda',crocchia:'Crocchia',trecce:'Trecce',ondulati:'Ondulati',calvo:'Raso',cresta:'Cresta'},beard:{none:'Nessuna',baffi:'Baffi',barba:'Barba',barba_lunga:'Barba lunga'},top:{tshirt:'T-shirt',camicia:'Camicia',felpa:'Felpa',maglione:'Maglione',giacca:'Giacca',tunica:'Tunica',giubbotto:'Giubbotto'},bottom:{jeans:'Jeans',chino:'Chino',shorts:'Pantaloncini',gonna:'Gonna',gonna_lunga:'Gonna lunga',tuta:'Tuta'},shoes:{sneakers:'Sneakers',stivaletti:'Stivaletti',mocassini:'Mocassini',sandali:'Sandali',scarpe_sport:'Scarpe sportive'},hat:{none:'Nessuno',corona_alloro:'Corona d’alloro',berretto:'Berretto',cappello:'Cappello',cuffie:'Cuffie'},glasses:{none:'Nessuno',tondi:'Tondi',sole:'Da sole',spessi:'Spessi'},accessory:{none:'Nessuno',collana:'Collana',sciarpa:'Sciarpa',zaino:'Zaino',tracolla:'Tracolla'},held:{none:'Niente',libro:'Libro',pergamena:'Pergamena',cetra:'Cetra'},pose:{rilassata:'Rilassata',saluto:'Saluto',fianchi:'Mani sui fianchi',libro:'Con il libro'},expression:{neutra:'Neutra',sorriso:'Sorriso',entusiasta:'Entusiasta',seria:'Seria',curiosa:'Curiosa',sorpresa:'Sorpresa'},animalPose:{seduto:'Seduto',in_piedi:'In piedi',accovacciato:'Accovacciato',posato:'Posato',ali:'Ali aperte',cammina:'In cammino',ritirata:'Nel guscio'}
@@ -17,7 +17,7 @@
  function notice(text,error=false){clearTimeout(toastTimer);$('#toast span').textContent=text;$('#toast').classList.toggle('error',error);$('#toast').hidden=false;if(!error)toastTimer=setTimeout(()=>$('#toast').hidden=true,8000);}
  $('#toast button').addEventListener('click',()=>$('#toast').hidden=true);
  function selected(n,yes){n.classList.toggle('selected',yes);n.setAttribute('aria-pressed',String(yes));}
- function job(){return{mode:state.mode,scene:state.scene,name:R.cleanName(state.name),character:{...state.character},companion:state.companion?{...state.companion}:null};}
+ function job(){return{mode:state.mode,scene:state.scene,name:R.cleanName(state.name),character:{...state.character},companion:state.companion?{...state.companion}:null,composition:CasardiComposition.normalize(state.composition)};}
  function discardFile(invalidate=true){
   if(invalidate)CasardiBridge.clear();
   release(fileURL);release(creditsURL);fileURL=creditsURL=null;state.file=null;$('#result').hidden=true;$('#save').removeAttribute('href');$('#open-image').removeAttribute('href');$('#save-credits').removeAttribute('href');$('#save-image').removeAttribute('src');$('#share').hidden=true;
@@ -86,10 +86,11 @@
    const list=el('div',{class:'variant-options'});for(const v of values){const b=el('button',{class:'option','data-comp-field':key,'data-value':v.id,onclick:()=>{changed();state.companion[key]=v.id;companionOptions();live();$('#companion-options [data-comp-field="'+key+'"][data-value="'+v.id+'"]').focus({preventScroll:true});}},v.hex?el('span',{class:'color-dot',style:'background:'+v.hex}):null,v.label);selected(b,state.companion[key]===v.id);list.append(b);}box.append(group(title,list));
   }
  }
+ const editor=CasardiEditor.mount({root:$('#composition-panel'),wrap:$('.preview-wrap'),image:$('#final-preview'),stickers:O.stickers,getComposition:()=>state.composition,getMode:()=>state.mode,imageFor:id=>PORTABLE.stickerImages[id][state.mode],notify:notice,onChange:(composition,{render})=>{if(state.busy)return;state.composition=composition;changed();if(render){$('#export').disabled=true;preview();}}});
  async function preview(){
-  previewController?.abort();const ctl=previewController=new AbortController(),epoch=state.epoch;$('#preview-loading').hidden=false;$('#export').disabled=true;
-  let c=null;try{c=await R.compose(job(),matchMedia('(max-width: 760px)').matches?900:1200,{signal:ctl.signal});if(epoch!==state.epoch||ctl.signal.aborted)return;const data=c.toDataURL('image/png'),image=$('#final-preview');image.src=data;await image.decode();if(epoch!==state.epoch||ctl.signal.aborted)return;$('#export').disabled=false;}
-  catch(e){if(e.name!=='AbortError')notice(e.message||'Anteprima non riuscita. Riprova o chiudi altre schede per liberare memoria.',true);}
+  editor.setRendering();previewController?.abort();const ctl=previewController=new AbortController(),epoch=state.epoch;$('#preview-loading').hidden=false;$('#export').disabled=true;
+  let c=null;try{c=await R.compose(job(),matchMedia('(max-width: 760px)').matches?900:1200,{signal:ctl.signal,editor:true});if(epoch!==state.epoch||ctl.signal.aborted)return;const data={image:c.toDataURL('image/png'),clean:c.editor.clean.toDataURL('image/png'),ghost:c.editor.ghost.toDataURL('image/png'),meta:c.editor.meta};const image=$('#final-preview');image.src=data.image;await image.decode();if(epoch!==state.epoch||ctl.signal.aborted)return;await editor.setPreview(data);$('#export').disabled=false;}
+  catch(e){if(e.name!=='AbortError'){editor.failed();notice(e.message||'Anteprima non riuscita. Riprova o chiudi altre schede per liberare memoria.',true);}}
   finally{R.dispose(c);if(previewController===ctl)$('#preview-loading').hidden=true;}
  }
  function show(n){
@@ -107,7 +108,7 @@
  $$('[data-mode]').forEach(b=>b.addEventListener('click',()=>{changed();state.mode=b.dataset.mode;state.styleChosen=true;mode();scenes();animals();live();show(1);}));
  $('#nickname').addEventListener('input',e=>{state.name=R.cleanName(e.target.value);if(Array.from(e.target.value).length>28)e.target.value=state.name;changed();});
  $('#export').addEventListener('click',async()=>{
-  if(state.busy)return;state.busy=true;const epoch=state.epoch,ctl=exportController=new AbortController(),data=job();discardFile();$('#export').disabled=true;$('#export').textContent='Composizione HD…';$('#export-progress').hidden=false;$('#progress').value=0;
+  if(state.busy)return;state.busy=true;editor.setBusy(true);const epoch=state.epoch,ctl=exportController=new AbortController(),data=job();discardFile();$('#export').disabled=true;$('#export').textContent='Composizione HD…';$('#export-progress').hidden=false;$('#progress').value=0;
   let c=null;try{
    c=await R.compose(data,3000,{signal:ctl.signal,onProgress:v=>$('#progress').value=v});const blob=await R.pngBlob(c,data,ctl.signal);R.dispose(c);c=null;if(epoch!==state.epoch||ctl.signal.aborted)return;
    const filename='cartolina-casardi-'+data.scene+'-'+(data.mode==='nes'?'pixel':'foto')+'.png';state.file=new File([blob],filename,{type:'image/png'});fileURL=URL.createObjectURL(blob);creditsURL=URL.createObjectURL(new Blob([R.credit(data).text],{type:'text/plain;charset=utf-8'}));
@@ -115,12 +116,12 @@
    let canShare=false;try{canShare=!!navigator.share&&!!navigator.canShare?.({files:[state.file]});}catch(_){}$('#share').hidden=!canShare;
    $('#progress').value=1;$('#result').hidden=false;CasardiBridge.publish(state.file);$('#result').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
   }catch(e){if(e.name!=='AbortError'&&epoch===state.epoch)notice(e.message||'Non riesco a generare il PNG. Chiudi altre schede e riprova.',true);}
-  finally{R.dispose(c);if(epoch===state.epoch){state.busy=false;$('#export').disabled=false;$('#export').innerHTML='Genera PNG 3000 × 2000 <span aria-hidden="true">↓</span>';$('#export-progress').hidden=true;}}
+  finally{R.dispose(c);if(epoch===state.epoch){state.busy=false;editor.setBusy(false);$('#export').disabled=false;$('#export').innerHTML='Genera PNG 3000 × 2000 <span aria-hidden="true">↓</span>';$('#export-progress').hidden=true;}}
  });
  $('#share').addEventListener('click',async()=>{if(!state.file)return;try{await navigator.share({files:[state.file],title:'Cartolina Casardi · Open Day 2026/27'});}catch(e){if(e.name!=='AbortError')notice('Condivisione non disponibile. Usa Scarica PNG oppure Apri l’immagine.',true);}});
  function reset(){
-  ++state.epoch;previewController?.abort();exportController?.abort();state.busy=false;discardFile(false);CasardiBridge.clear(true);release(previewURL);previewURL=null;R.clear();
-  Object.assign(state,{mode:'photo',styleChosen:false,scene:'casardi',name:'',character:{...O.defaults.character},companion:null,tab:'body',step:0,highest:0,visited:false});++liveTicket;
+  ++state.epoch;previewController?.abort();exportController?.abort();state.busy=false;discardFile(false);CasardiBridge.clear(true);release(previewURL);previewURL=null;editor.reset();R.clear();
+  Object.assign(state,{mode:'photo',styleChosen:false,scene:'casardi',name:'',character:{...O.defaults.character},companion:null,composition:CasardiEditor.defaults(),tab:'body',step:0,highest:0,visited:false});++liveTicket;
   $('#nickname').value='';$('#final-preview').removeAttribute('src');$('#export-progress').hidden=true;$('#progress').value=0;$('#export').disabled=true;$('#export').innerHTML='Genera PNG 3000 × 2000 <span aria-hidden="true">↓</span>';$('#studio').hidden=true;$('#welcome').hidden=false;$('#start').firstChild.textContent='Inizia ';$('#toast').hidden=true;mode();scenes();animals();companionOptions();live();window.scrollTo({top:0,behavior:'instant'});$('#start').focus({preventScroll:true});
  }
  ['#reset','#new'].forEach(s=>$(s).addEventListener('click',reset));
@@ -134,7 +135,7 @@
  });
  function worldStrip(){
   const box=$('#world-strip'),short={casardi:'Casardi · Barletta',pantheon:'Pantheon · Roma',foro:'Arco di Tito · Roma',epidauro:'Teatro di Epidauro',biblioteca:'Malatestiana · Cesena',paestum:'Hera II · Paestum'};
-  for(const s of O.scenes)box.append(el('figure',{class:'world-preview'},el('img',{src:PORTABLE.thumbs[s.id].nes,alt:short[s.id],width:600,height:400}),el('figcaption',{},short[s.id])));
+  for(const s of O.scenes)box.append(el('figure',{class:'world-preview'},el('img',{src:PORTABLE.thumbs[s.id].nes,alt:short[s.id]||s.label,width:600,height:400}),el('figcaption',{},short[s.id]||s.label)));
  }
  function credits(){
   const box=$('#credits-list');for(const s of O.scenes){const m=PORTABLE.metadata[s.id];box.append(el('div',{class:'credit-entry'},el('strong',{},s.label),el('p',{},m.artist==='Unknown authorUnknown author'?'Autore non identificato · Archivio storico':m.artist,' · ',m.date,' · ',m.lic),el('p',{},el('a',{href:m.page,target:'_blank',rel:'noopener noreferrer'},'Pagina sorgente'),' · ',el('a',{href:m.licurl,target:'_blank',rel:'noopener noreferrer'},'Licenza')),el('p',{},s.note)));}

@@ -4,13 +4,13 @@
  */
 globalThis.CasardiRender=(()=>{
  'use strict';
- const S=CasardiSprites,round=x=>{const f=Math.floor(x),d=x-f;return d<.5?f:d>.5?f+1:f%2===0?f:f+1;};
+ const C=CasardiComposition,S=CasardiSprites,round=x=>{const f=Math.floor(x),d=x-f;return d<.5?f:d>.5?f+1:f%2===0?f:f+1;};
  const pause=()=>new Promise(resolve=>setTimeout(resolve,0));
  const canvas=(w,h)=>{const c=document.createElement('canvas');c.width=w;c.height=h;return c;};
  const context=c=>c.getContext('2d',{willReadFrequently:true});
  // Canvas backing stores are native memory, not part of the small JS heap.
  // Dispose consumed outputs explicitly; do not wait for mobile-browser GC.
- const dispose=c=>{if(c){c.width=1;c.height=1;}};
+ const dispose=c=>{if(c){if(c.editor){dispose(c.editor.clean);dispose(c.editor.ghost);delete c.editor;}c.width=1;c.height=1;}};
  const check=signal=>{if(signal?.aborted)throw new DOMException('Composizione annullata','AbortError');};
  const fontsReady=()=>Promise.all(['Cinzel','Garamond','Pixel'].map(f=>document.fonts.load('40px "'+f+'"')));
  const ratios={gatto:.30,cane:.40,volpe:.36,gufo:.34,coniglio:.32,corvo:.30,tartaruga:.10,drago:.34};
@@ -205,44 +205,50 @@ globalThis.CasardiRender=(()=>{
   let y=by;draw(school,y,ink);y+=px(74)+gap;draw(event,y,mute);y+=px(56)+gap;draw(city,y,accent);if(name.text){y+=px(44)+gap;draw(name,y,ink);}
   if(nes){const im=tx.getImageData(0,0,w,h),d=im.data;for(let i=3;i<d.length;i+=4)d[i]=d[i]>=112?255:0;tx.putImageData(im,0,0);x.drawImage(layer,0,0);}
  }
- async function compose(raw,width=3000,{signal,onProgress}={}){
-  check(signal);const job={...raw,name:cleanName(raw.name),character:normalize(raw.character)},nes=job.mode==='nes',nativeWidth=nes?600:width,nativeHeight=round(nativeWidth*2/3),scale=nativeWidth/3000;
+ async function compose(raw,width=3000,{signal,onProgress,editor=false}={}){
+  check(signal);const job={...raw,name:cleanName(raw.name),character:normalize(raw.character),composition:C.normalize(raw.composition)},nes=job.mode==='nes',nativeWidth=nes?600:width,nativeHeight=round(nativeWidth*2/3),scale=nativeWidth/3000,k=nativeWidth/600;
   await fontsReady();check(signal);onProgress?.(.04);await pause();
   const card=canvas(nativeWidth,nativeHeight),x=context(card);x.imageSmoothingEnabled=!nes;
   const cfg=PORTABLE.photo[job.scene],lay=nes?PORTABLE.nes[job.scene]:cfg;
-  let bg=null,returned=false;try{
+  let bg=null,returned=false,actors=null,clean=null,s=null,a=null;try{
   bg=nes?await imageFor(job.scene,'nes'):await photoBackground(job.scene,width,signal,onProgress);check(signal);x.drawImage(bg,0,0,nativeWidth,nativeHeight);
+  if(editor){clean=canvas(nativeWidth,nativeHeight);context(clean).drawImage(card,0,0);actors=canvas(nativeWidth,nativeHeight);}
+  const target=editor?context(actors):x;
   onProgress?.(.56);await pause();check(signal);
-  let s=character(job.character,job.mode);if(!nes)s=harmonise(s,cfg);
-  const gy=lay.ground_y*(nes?1:scale),cx=lay.char.x*(nes?1:scale),ch=lay.char.h*(nes?1:scale),cs=nes?Math.max(1,round(ch/s.height)):Math.max(1,round(lay.char.h/s.height))*scale;
-  if(nes)pixelShadow(x,cx,gy,s.width*cs);else shadow(x,s,cx,gy,cs,cfg.light);
-  const pos=putSprite(x,s,cx,gy,cs);let companionPos=null;
-  if(job.companion){
-   let a=animal(job.companion,job.mode);if(!nes){a=harmonise(a,cfg);if(cfg.companion.flip)a=flipped(a);}
-   const ax=(nes?lay.comp.x:cfg.companion.x*scale),ah=pos[3]*(ratios[job.companion.animal]??.32)*a.height/referenceHeight(job.companion.animal),asc=nes?Math.max(1,round(ah/a.height)):Math.max(1,round(ah/scale/a.height))*scale;
-   if(nes)pixelShadow(x,ax,gy,a.width*asc);else shadow(x,a,ax,gy,asc,cfg.light);companionPos=putSprite(x,a,ax,gy,asc);
-  }
-  if(!nes&&cfg.occluders.includes('grass')){grass(x,bg,cx,gy,ch*.5,scale);if(companionPos)grass(x,bg,companionPos[0]+companionPos[2]/2,gy,companionPos[2],scale);}
-  onProgress?.(.75);await pause();check(signal);frame(x,nativeWidth,nativeHeight,scale,job.mode);texts(card,job,lay.text_zone);check(signal);
-  let out=card;
-  if(nes&&width!==600){out=canvas(width,round(width*2/3));const ox=context(out);ox.imageSmoothingEnabled=false;ox.drawImage(card,0,0,out.width,out.height);dispose(card);}
+  s=character(job.character,job.mode);if(job.companion)a=animal(job.companion,job.mode);
+  const desc=c=>({w:c.width,h:c.height,anchor:c.anchorX??c.width/2}),geo=C.actorGeometry(job,desc(s),a?desc(a):null,job.companion?referenceHeight(job.companion.animal):1);
+  if(!nes){s=harmonise(s,cfg);if(a){a=harmonise(a,cfg);if(cfg.companion.flip){const old=a;a=flipped(a);dispose(old);}}}
+  const put=(sprite,g)=>{const cx=g.cx*k,gy=g.ground*k,sc=g.scale*k;if(nes)pixelShadow(target,cx,gy,sprite.width*sc);else shadow(target,sprite,cx,gy,sc,cfg.light);putSprite(target,sprite,cx,gy,sc);};
+  put(s,geo.character);if(a)put(a,geo.companion);if(editor)x.drawImage(actors,0,0);
+  if(!nes&&cfg.occluders.includes('grass')){const g=geo.character;grass(x,bg,g.cx*k,g.ground*k,g.h*k*.5,scale);if(a){const g=geo.companion;grass(x,bg,g.cx*k,g.ground*k,g.w*k,scale);}}
+  onProgress?.(.75);await pause();check(signal);
+  let plaque=null;
+  for(const image of editor?[card,clean]:[card]){frame(context(image),nativeWidth,nativeHeight,scale,job.mode);if(C.customPlaque(job))plaque=await C.drawPlaque(image,job,lay.text_zone);else texts(image,job,lay.text_zone);}
+  if(editor){
+   const data=context(actors).getImageData(0,0,nativeWidth,nativeHeight).data;let x0=nativeWidth,y0=nativeHeight,x1=0,y1=0;
+   for(let yy=0,i=3;yy<nativeHeight;yy++)for(let xx=0;xx<nativeWidth;xx++,i+=4)if(data[i]){x0=Math.min(x0,xx);y0=Math.min(y0,yy);x1=Math.max(x1,xx+1);y1=Math.max(y1,yy+1);}
+   const ghost=canvas(Math.max(1,x1-x0),Math.max(1,y1-y0));context(ghost).drawImage(actors,x0,y0,ghost.width,ghost.height,0,0,ghost.width,ghost.height);
+   card.editor={clean,ghost,meta:{...geo,ghost:{x:x0/k,y:y0/k,w:ghost.width/k,h:ghost.height/k},stickers:job.composition.stickers.map(C.stickerGeometry),plaque}};clean=null;
+  }else await C.drawStickers(card,job);
+  check(signal);let out=card;
+  if(nes&&width!==600){out=canvas(width,round(width*2/3));const ox=context(out);ox.imageSmoothingEnabled=false;ox.drawImage(card,0,0,out.width,out.height);if(card.editor){out.editor=card.editor;delete card.editor;}dispose(card);}
   onProgress?.(.86);returned=true;return out;
   }finally{
-   if(!returned)dispose(card);
+   dispose(s);dispose(a);dispose(actors);dispose(clean);if(!returned)dispose(card);
    if(!nes&&bg){bg.users--;if(bg!==backgroundCache?.c&&!bg.users)dispose(bg);}
   }
  }
  function credit(job){
   const m=PORTABLE.metadata[job.scene],nes=job.mode==='nes',author=m.artist==='Unknown authorUnknown author'?'Autore non identificato (archivio storico)':m.artist;
   const changes=nes?'Nuova illustrazione pixel art assistita da IA, ricostruita dal riferimento architettonico autorizzato; rifinitura a 600 × 400 e palette di 64 colori; aggiunta di sprite e testi. Nessuna generazione a runtime.':'Fonte incorporata JPEG ottimizzata (lato massimo 3000 px, qualità 86); ritaglio, finitura cromatica, ombre; aggiunta di sprite e testi. Composizione locale Canvas.';
-  const text='CARTOLINA OPEN DAY 2026/27 — LICEO ALFREDO CASARDI — BARLETTA\n\n'+(nes?'Ricostruzione pixel art':'Fotografia')+': '+m.title.slice(5)+'\nAutore della fotografia di riferimento: '+author+'\nFonte: '+m.page+'\nOriginale: '+m.url+'\nLicenza della fotografia di riferimento: '+m.lic+'\n'+m.licurl+'\nLicenza della composizione derivata: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/\nModifiche: '+changes+'\n'+S.credit(job.character)+'\nCompanion originali Casardi: CC0 1.0. Nessun endorsement dei fotografi o degli autori LPC. Le parti originali mantengono le loro licenze.\nFont: Cinzel, EB Garamond, Press Start 2P — SIL Open Font License 1.1; sottoinsiemi Unicode U+0000–U+052F in WOFF; il derivato di Press Start 2P è rinominato Casardi Pixel.\nConserva questi crediti quando ridistribuisci il file.\n';
+  const text='CARTOLINA OPEN DAY 2026/27 — LICEO ALFREDO CASARDI — BARLETTA\n\n'+(nes?'Ricostruzione pixel art':'Fotografia')+': '+m.title.slice(5)+'\nAutore della fotografia di riferimento: '+author+'\nFonte: '+m.page+'\nOriginale: '+m.url+'\nLicenza della fotografia di riferimento: '+m.lic+'\n'+m.licurl+'\nLicenza della composizione derivata: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/\nModifiche: '+changes+'\n'+S.credit(job.character)+'\nCompanion originali Casardi: CC0 1.0. Nessun endorsement dei fotografi o degli autori LPC. Le parti originali mantengono le loro licenze.\nFont: Cinzel, EB Garamond, Press Start 2P — SIL Open Font License 1.1; sottoinsiemi Unicode U+0000–U+052F in WOFF; il derivato di Press Start 2P è rinominato Casardi Pixel.\nConserva questi crediti quando ridistribuisci il file.\n'+C.credit(job);
   return{author,text,source:m.page,copyright:'CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/'};
  }
  const crcTable=Uint32Array.from({length:256},(_,n)=>{let c=n;for(let k=0;k<8;k++)c=c&1?0xedb88320^(c>>>1):c>>>1;return c>>>0;});
  function chunk(type,body){const out=new Uint8Array(body.length+12),dv=new DataView(out.buffer),enc=new TextEncoder();dv.setUint32(0,body.length);out.set(enc.encode(type),4);out.set(body,8);let crc=0xffffffff;for(let i=4;i<body.length+8;i++)crc=crcTable[(crc^out[i])&255]^(crc>>>8);dv.setUint32(body.length+8,(crc^0xffffffff)>>>0);return out;}
  async function pngBlob(c,job,signal){
   check(signal);const b=await new Promise((resolve,reject)=>c.toBlob(blob=>blob?resolve(blob):reject(new Error('Il browser non ha memoria sufficiente per il PNG. Chiudi altre schede e riprova.')),'image/png'));check(signal);
-  const raw=new Uint8Array(await b.arrayBuffer()),view=new DataView(raw.buffer),enc=new TextEncoder(),cr=credit(job),fields={Title:'LICEO ALFREDO CASARDI — OPEN DAY 2026/27 — BARLETTA',Author:cr.author,Source:cr.source,Copyright:cr.copyright,Description:cr.text,Software:'Casardi Postcard Studio 3.2 Dodici luoghi · Canvas locale'};
+  const raw=new Uint8Array(await b.arrayBuffer()),view=new DataView(raw.buffer),enc=new TextEncoder(),cr=credit(job),fields={Title:'LICEO ALFREDO CASARDI — OPEN DAY 2026/27 — BARLETTA',Author:cr.author,Source:cr.source,Copyright:cr.copyright,Description:cr.text,Software:'Casardi Postcard Studio 3.3 Composizione libera · Canvas locale'};
   const parts=[raw.subarray(0,33)];
   for(const [key,text]of Object.entries(fields))parts.push(chunk('iTXt',enc.encode(key+'\0\0\0\0\0'+text)));
   const dpi=new Uint8Array(9),dv=new DataView(dpi.buffer);dv.setUint32(0,11811);dv.setUint32(4,11811);dpi[8]=1;parts.push(chunk('pHYs',dpi));

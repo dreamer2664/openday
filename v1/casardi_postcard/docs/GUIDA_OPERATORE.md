@@ -1,4 +1,4 @@
-# Guida operatore dello stand · Windows · NES Retro 3.2
+# Guida operatore dello stand · Windows · NES Retro 3.3
 ## Liceo Alfredo Casardi · Open Day 2026/27 · Barletta
 
 Questa guida riguarda **AVVIA_CARTOLINA_WINDOWS.exe + HTML**, l’edizione consigliata senza terminale. Le istruzioni dell’edizione Python, distinta e facoltativa, sono nel README. Non confondere il QR del creatore con il QR del PNG finito. La 3.2 aggiunge sei luoghi (dodici in totale), preserva le sei illustrazioni apprezzate e corregge i controlli del personaggio senza cambiare famiglia LPC. Gli scenari sono interpretazioni illustrate assistite da IA: la colorazione Casardi parte dalla foto del 1936, non è una fotografia attuale.
@@ -71,3 +71,22 @@ Non fare reset prima che il download sia completato. Il link dura **10 minuti** 
 Per l’edizione Python: avvio `start.cmd` / `bash start.sh` dopo installazione; **Ctrl+C** per arrestare e controllare `var/exports` vuota. Non applicare questa procedura terminale all’EXE Windows.
 
 **Riferimenti:** README.md · TEST_REPORT.md · GUIDA_RAPIDA.pdf · GUIDA_FILE_UNICO_E_TELEFONO.md · SOURCES_AND_LICENSES.md.
+
+
+## Novità dell’ultimo passaggio · 3.3
+
+In **Anteprima**, prima di Genera PNG, trascinare il personaggio direttamente sulla cartolina con mouse o dito; il companion lo segue. Tre taglie nitide e «Posizione consigliata» nel relativo riquadro. Con Tab selezionare l’elemento, poi frecce; Maiusc + frecce per un passo maggiore.
+
+**Ultimi tocchi · facoltativi:** otto sticker disponibili, fino a sei sulla cartolina, spostabili, ridimensionabili e inclinabili (tranne il logo ufficiale). Per la targhetta si possono scegliere finitura, simbolo, percorso e angolo. Nessuna aggiunta obbligatoria. Annulla recupera l’ultima modifica; Ripristina composizione conserva nome/luogo/aspetto/animale. Ricomincia cancella tutta la sessione.
+
+Il Pegaso decorativo non viene spacciato per logo ufficiale: lo stemma scolastico autentico proviene dalla brochure 2026/27, con fonti e limiti di licenza documentati. Guide: [composizione e sticker](COMPOSIZIONE_E_STICKER.md), [fonti logo](FONTI_LOGO.md). Il PNG HD e il QR della cartolina pronta includono le scelte effettive e le relative attribuzioni, non pannelli e maniglie.
+
+### Prove aggiuntive da fare sui dispositivi dello stand
+
+- [ ] Trascinato il personaggio con il mouse reale del PC, verificato il PNG salvato.
+- [ ] Trascinati personaggio e sticker con un dito sul telefono effettivamente usato; lo scroll resta libero fuori dagli elementi.
+- [ ] Verificati logo/simbolo/percorso facoltativi; nessuno compare senza selezione.
+- [ ] Salvata una cartolina decorata tramite il normale QR finale; scelte corrette e dimensioni 3000 × 2000.
+- [ ] Ripristina composizione/Indietro/Avanti/Ricomincia provati senza residui fra visitatori.
+
+La posizione libera non ricostruisce i piani 3D: guidare il visitatore verso un appoggio plausibile oppure usare Posizione consigliata. Touch emulato in Chromium non equivale a telefono fisico. Anche con gli sticker, il solo file HTML locale non può ospitare un download per altri dispositivi senza un servizio raggiungibile.

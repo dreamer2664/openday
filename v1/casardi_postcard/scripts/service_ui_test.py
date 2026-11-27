@@ -36,6 +36,9 @@ async def main():
  async def create(page,mode='nes',scene='casardi'):
   await page.click('#start');await page.click('[data-mode="'+mode+'"]');await page.click('[data-scene="'+scene+'"]');await page.fill('#nickname','Martina');await page.click('#next')
   await page.locator('.preset-grid button').nth(2).click();await page.click('[data-tab="hair"]');await page.click('[data-field="hair"][data-value="longhawk"]');await page.click('#next');await page.click('[data-animal="gatto"]');await page.click('#next');await expect(page.locator('#export')).to_be_enabled(timeout=60000)
+  await page.click('[data-add-sticker=alloro]');section=page.locator('.editor-section').nth(2)
+  if not await section.evaluate('(e)=>e.open'):await section.locator('summary').click()
+  await page.select_option('[data-plaque=ornament]','logo_casardi');await page.select_option('[data-plaque=track]','classico');await expect(page.locator('#export')).to_be_enabled(timeout=60000)
  async def export(page):
   async with page.expect_response(lambda r:r.url.endswith('/bridge/export') and r.request.method=='POST') as event:await page.click('#export')
   response=await event.value;assert response.status==201,await response.text();d=await response.json();await expect(page.locator('#transfer-qr')).to_be_visible();return d
@@ -53,8 +56,8 @@ async def main():
     with Image.open(io.BytesIO(raw)) as im:
      im.verify()
     with Image.open(io.BytesIO(raw)) as im:
-     assert im.size==(3000,2000) and 'PERSONAGGIO MODULARE LPC' in im.info['Description'] and 'CC BY-SA 4.0' in im.info['Copyright']
-    mark('PNG del PC scaricato dal pulsante, 3000×2000 e crediti LPC/foto incorporati',bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest())
+     assert im.size==(3000,2000) and 'PERSONAGGIO MODULARE LPC' in im.info['Description'] and 'CC BY-SA 4.0' in im.info['Copyright'] and 'POF-26-27' in im.info['Description'] and 'DECORAZIONI FACOLTATIVE' in im.info['Description']
+    mark('PNG decorato del PC, 3000×2000 e crediti LPC/foto/logo incorporati',bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest())
     phone_ctx=await browser.new_context(viewport={'width':390,'height':844},device_scale_factor=2,is_mobile=True,has_touch=True,accept_downloads=True);phone=await phone_ctx.new_page();observe(phone)
     response=await phone.goto(url);assert response.status==200;await expect(phone.locator('img')).to_be_visible();await shot(phone,'04_telefono_download_png.jpg',True)
     async with phone.expect_download() as event:await phone.locator('a[download]').tap()

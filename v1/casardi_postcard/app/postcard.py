@@ -505,7 +505,11 @@ def companion_reference_height(kind):
     return max(crop_sprite(draw_animal(kind,info["variants"][0][0],pose)).height for pose in info["poses"])
 
 
-def compose(job: dict, width: int = CARD_W) -> Image.Image:
+def compose(job: dict, width: int = CARD_W, *, editor: bool = False) -> Image.Image:
+    from . import layout_edit as edit
+    c=edit.normalise(job.get("composition"))
+    if editor or c["actor"] is not None or c["stickers"] or edit.has_custom_plaque(job):
+        return _compose_optional(job,width,editor=editor)
     mode = job.get("mode", "photo")
     if mode == "nes":
         return _compose_nes(job, width)
@@ -626,3 +630,50 @@ def compose_preview(job: dict) -> Image.Image:
 
 def compose_full(job: dict) -> Image.Image:
     return compose(job, CARD_W)
+
+
+def _compose_optional(job,width,*,editor=False):
+    """Same HD renderer, with validated independent composition and edit-only layers.
+    The edit layers never enter an exported PNG, the QR store, or a visitor file.
+    """
+    from . import layout_edit as edit
+    nes=job.get('mode')=='nes';sid=job.get('scene','casardi');native=600 if nes else width;k=native/600
+    lay=(NES_SCENES if nes else PHOTO_SCENES)[sid]
+    bg=_nes_scene(sid).convert('RGB') if nes else photo_background(sid,native)[0]
+    card=bg.convert('RGBA');clean=card.copy() if editor else None;actors=Image.new('RGBA',card.size)
+    person=crop_sprite(render_char(dict(job.get('character') or {}),style=job['mode']))
+    comp=job.get('companion');animal=crop_sprite(draw_animal(comp['animal'],comp.get('variant',''),comp.get('pose',''),style=job['mode'])) if comp else None
+    geo=edit.actor_geometry(job,edit.descriptor(person),edit.descriptor(animal) if animal else None,companion_reference_height(comp['animal']) if comp else 1)
+    def put(im,g,flip=False):
+        if not nes:
+            cfg=PHOTO_SCENES[sid];im=harmonise(im,cfg['ambient']['tint'],cfg['ambient']['strength'],lift=.035,warm_rgb=cfg['light']['warm'],warm_strength=.10+cfg['light']['strength']*.08,desat=cfg.get('sprite_desat',1))
+        if flip:im=im.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
+        w,h=round(g['w']*k),round(g['h']*k);cx,ground=g['cx']*k,g['ground']*k
+        if nes:
+            sh=Image.new('RGBA',card.size);d=ImageDraw.Draw(sh);d.ellipse((int(cx-w*.35),ground-1,int(cx+w*.4),ground+3),fill=(21,26,27,90));actors.alpha_composite(sh)
+        else:compose_shadow(actors,im,(0,0,w,h),ground,cx,PHOTO_SCENES[sid]['light'])
+        actors.alpha_composite(im.resize((max(1,w),max(1,h)),Image.Resampling.NEAREST),(round(g['x']*k),round(g['y']*k)))
+    put(person,geo['character'])
+    if animal:put(animal,geo['companion'],not nes and bool(lay['companion'].get('flip')))
+    card.alpha_composite(actors)
+    if not nes:
+        for occ in lay.get('occluders',[]):
+            g=geo['character'];apply_occluders(card,bg,occ,g['ground']*k,g['cx']*k,g['h']*k*.5)
+            if animal:
+                g=geo['companion'];apply_occluders(card,bg,occ,g['ground']*k,g['cx']*k,g['w']*k)
+    plaque=None
+    for image in ([card,clean] if editor else [card]):
+        draw_frame(image,native/3000,job['mode'])
+        if edit.has_custom_plaque(job):plaque=edit.draw_plaque(image,job,lay['text_zone'])
+        else:draw_texts(image,job,native/3000,lay['text_zone'],job['mode'])
+    payload=None
+    if editor:
+        bbox=actors.getbbox() or (0,0,1,1)
+        payload=dict(clean=clean.convert('RGB'),ghost=actors.crop(bbox),meta=dict(**geo,ghost=dict(x=bbox[0]/k,y=bbox[1]/k,w=(bbox[2]-bbox[0])/k,h=(bbox[3]-bbox[1])/k),stickers=[edit.sticker_geometry(i) for i in edit.normalise(job.get('composition'))['stickers']],plaque=plaque))
+    else:edit.draw_stickers(card,job)
+    result=card.convert('RGB')
+    if nes and width!=600:result=result.resize((width,round(width*2/3)),Image.Resampling.NEAREST)
+    if payload:
+        if nes and width!=600:payload['clean']=payload['clean'].resize(result.size,Image.Resampling.NEAREST)
+        result.editor=payload
+    return result

@@ -53,12 +53,12 @@ async def isolated_html(source):
                 page.on('request',lambda r:network.append(r.url) if r.url.startswith(('http:','https:')) else None)
                 await page.goto(only.as_uri());await expect(page.locator('#start')).to_be_enabled()
                 for mode in ('photo','nes'):
-                    await page.evaluate('''async mode=>{const j={mode,scene:'casardi',name:'Prova isolata',character:{...PORTABLE.catalogue.defaults.character},companion:null};const c=await CasardiRender.compose(j,3000);const b=await CasardiRender.pngBlob(c,j);const old=document.querySelector('#smoke-download');if(old){URL.revokeObjectURL(old.href);old.remove();}const a=document.createElement('a');a.id='smoke-download';a.textContent='Scarica prova';a.style.cssText='position:fixed;top:10px;left:10px;z-index:9999;padding:20px;background:white;color:black';a.download='prova.png';a.href=URL.createObjectURL(b);document.body.append(a);}''',mode)
+                    await page.evaluate('''async mode=>{const j={mode,scene:'casardi',name:'Prova isolata',character:{...PORTABLE.catalogue.defaults.character},companion:{animal:'gatto',variant:'soriano',pose:'seduto'},composition:{actor:{x:330,y:340,scale:100},plaque:{theme:'notte',ornament:'logo_casardi',position:'top-left',track:'classico'},stickers:[{id:'alloro',x:515,y:80,size:76,rotation:10}]}};const c=await CasardiRender.compose(j,3000);const b=await CasardiRender.pngBlob(c,j);const old=document.querySelector('#smoke-download');if(old){URL.revokeObjectURL(old.href);old.remove();}const a=document.createElement('a');a.id='smoke-download';a.textContent='Scarica prova';a.style.cssText='position:fixed;top:10px;left:10px;z-index:9999;padding:20px;background:white;color:black';a.download='prova.png';a.href=URL.createObjectURL(b);document.body.append(a);}''',mode)
                     async with page.expect_download() as d:await page.click('#smoke-download')
                     png=td/(mode+'.png');await(await d.value).save_as(str(png));raw=png.read_bytes()
                     with Image.open(io.BytesIO(raw)) as image:
                         assert image.format=='PNG' and image.size==(3000,2000) and image.info.get('Source')
-                        assert 'PERSONAGGIO MODULARE LPC' in image.info.get('Description','');image.verify()
+                        assert 'PERSONAGGIO MODULARE LPC' in image.info.get('Description','') and 'POF-26-27' in image.info.get('Description','') and 'DECORAZIONI FACOLTATIVE' in image.info.get('Description','');image.verify()
                     result.append(dict(mode=mode,result='PASS',dimensions=[3000,2000],sha256=sha(raw)));pngs.append(raw)
                 assert not errors and not network,(errors,network)
             finally:await browser.close()

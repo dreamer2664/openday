@@ -1,11 +1,17 @@
 # Cartolina digitale · Liceo Alfredo Casardi
-## Open Day 2026/27 · Barletta — edizione 3.2 · Dodici luoghi
+## Open Day 2026/27 · Barletta — edizione 3.3 · Composizione libera e sticker
 
 **Pacchetto di questa revisione: `Cartolina_Casardi_Windows_LPC_QR_2026-27.zip`.** Sostituisce la consegna precedente; i due file principali sono già pronti nella cartella, non vanno ricreati dai sorgenti.
 
 Studio completo per creare cartoline **PNG 3000 × 2000, orizzontali 3:2**. Dodici ambientazioni autentiche, modalità fotografica e ricostruzione NES, nome facoltativo, personaggio modulare e otto companion facoltativi. Nessun account, cloud, servizio a pagamento o asset di videogiochi commerciali.
 
-**Novità 3.2:** aggiunti **Colosseo, Acropoli di Atene / Partenone, Pompei / Foro, Teatro antico di Taormina, Castel del Monte e Castello di Barletta**, ciascuno con fotografia autentica e illustrazione pixel: **12 luoghi / 24 combinazioni**. Le sei illustrazioni della 3.1 che sono piaciute al committente sono conservate **byte per byte**, insieme allo stesso tema NES-rétro.
+**Novità 3.3:** nell’ultimo passaggio puoi **trascinare il personaggio sulla cartolina con mouse o dito**; il companion lo segue. Tre taglie nitide, frecce/Maiusc+frecce, annullamento e ripristino della posizione consigliata. Il pannello **Ultimi tocchi · facoltativi**, prima del PNG, offre **otto sticker** (fino a sei per cartolina) e aggiunte opzionali alla targhetta: finitura, simbolo, percorso e angolo. Nessuna decorazione è attiva di default.
+
+**Sticker:** alloro, Pegaso decorativo, lira, libro, maschere teatrali, capitello ionico, rosa dei venti e **logo ufficiale Casardi autentico**, ricavato dalla brochure scolastica 2026/27, non generato o sostituito dallo stemma della Repubblica. Il logo conserva proporzioni/orientamento e fondo della fonte; i sette sticker decorativi sono originali assistiti da IA. Fonte, licenze ed eccezioni in [Fonti del logo](docs/FONTI_LOGO.md). [Guida a spostamento, sticker e targhetta](docs/COMPOSIZIONE_E_STICKER.md).
+
+Lo spostamento libero è una scelta grafica: non riconosce automaticamente ogni piano architettonico della fotografia. Ombre e occlusione si ricalcolano al rilascio; per un appoggio sicuro usa **Posizione consigliata**. La nuova composizione è supportata da Canvas e Pillow, compreso l’HTML autonomo offline. Il file esportato resta 3000 × 2000 e la modalità NES resta 600 × 400 → ×5, senza catturare pannelli o maniglie.
+
+**Dalla 3.2, conservato:** aggiunti **Colosseo, Acropoli di Atene / Partenone, Pompei / Foro, Teatro antico di Taormina, Castel del Monte e Castello di Barletta**, ciascuno con fotografia autentica e illustrazione pixel: **12 luoghi / 24 combinazioni**. Le sei illustrazioni della 3.1 che sono piaciute al committente sono conservate **byte per byte**, insieme allo stesso tema NES-rétro.
 
 **Personalizzazione corretta, non sostituita:** rimane la famiglia professionale LPC. I pantaloncini usano ora il vero modulo Shorts, non un secondo pantalone lungo; denim/blu notte e beige/crema hanno rampe distinte; il colore delle cuffie è effettivo. Ogni gruppo confronta i **pixel dello sprite composto nell’abbigliamento attuale**: un’alternativa senza differenza visibile viene attenuata e spiegata. «Scopri questo dettaglio» rimuove esplicitamente gli strati che lo coprono; non vengono simulati cambiamenti. Uno zoom del viso mostra gli stessi pixel nativi, ingranditi. Gli effetti facciali restano intenzionalmente piccoli: non sono nuove anatomie ad alta definizione.
 
@@ -38,7 +44,7 @@ L’indirizzo del PC è normalmente **`http://127.0.0.1:8080/`**. Se la porta ap
 
 ## 2 · Percorso del visitatore
 
-**Inizia → stile → luogo → nome facoltativo → personaggio → companion facoltativo → anteprima → Genera PNG.**
+**Inizia → stile → luogo → nome facoltativo → personaggio → companion facoltativo → anteprima e ultimi tocchi facoltativi → Genera PNG.**
 
 - Lo stile si sceglie una volta e vale per tutti i luoghi. Indietro conserva le scelte; si può cambiarlo tornando alla prima fase.
 - Quattro look iniziali — Urbano, Esplorazione, Neon, Pilota — accelerano la scelta, ma restano modificabili.
@@ -51,6 +57,8 @@ L’indirizzo del PC è normalmente **`http://127.0.0.1:8080/`**. Se la porta ap
 Dopo «Genera PNG», la scheda **Dal PC al telefono → Scansiona e scarica** mostra il QR della cartolina pronta. Sul telefono aprire il link e premere **Scarica il PNG**. Controllare il salvataggio, quindi premere sul PC **Ho finito · Nuova cartolina** o **Ricomincia**: nome, scelte, PNG della pagina e copia temporanea del servizio sono azzerati. Non avviare il visitatore successivo se appare un errore di reset non confermato; ripristinare/riavviare il servizio.
 
 Il QR scade dopo **10 minuti**; alla scadenza il servizio elimina la propria copia e l’interfaccia nasconde il QR. Il PNG locale resta salvabile finché non si resetta/chiude la pagina; si può richiedere un nuovo QR per quel medesimo PNG. Non esiste una galleria dei visitatori. Un reset non può cancellare copie già scaricate o bytes già consegnati al telefono.
+
+**Composizione finale:** trascina personaggio/sticker, oppure selezionali con Tab e spostali con le frecce; Maiusc aumenta il passo. Le opzioni della targhetta sono in fondo. «Ripristina composizione» non cancella nome, luogo o aspetto. [Istruzioni complete](docs/COMPOSIZIONE_E_STICKER.md).
 
 **Tastiera:** Tab / Shift+Tab, Invio / Spazio sui pulsanti; Esc chiude Info. Mouse e touch sono supportati. Alt+← / Alt+→ percorre i passaggi già sbloccati. Il battito delle palpebre è facoltativo e rispetta la preferenza di movimento ridotto.
 
@@ -138,9 +146,10 @@ browser/                         creatore e compositore Canvas originali
 app/, web/                       renderer e kiosk Python facoltativo
 assets/characters/lpc/            fonti LPC, definizioni, atlanti, palette, hash
 assets/photos/, nes/, fonts/      foto, ricostruzioni e font locali
+assets/stickers/                 7 sticker nativi + logo autentico, manifest/fonti
 assets/licenses/                 testi legali e avvisi delle dipendenze
 assets/replacements/casardi/      procedura per foto attuale autorizzata
-renders/                         13 PNG HD e 24 JPG, esempi con nomi fittizi
+renders/                         13 PNG HD di base + 2 PNG decorati, 24 JPG; nomi fittizi
 docs/                            guide, screenshot reali e risultati QA
 scripts/, tests/                 build, controlli riproducibili e unitari
 var/                             solo edizione Python, mai dati da archiviare
@@ -215,6 +224,8 @@ I test browser devono essere eseguiti **in serie nella sandbox limitata**, su is
 python scripts/service_ui_test.py
 python scripts/control_ui_test.py  # richiede anche il kiosk Python su :8080
 python scripts/standalone_ui_test.py
+python scripts/composition_audit.py  # geometria/validazione Canvas-Pillow
+python scripts/composition_ui_test.py # drag, touch emulato, controlli e PNG reali
 # solo con il kiosk Python avviato:
 python scripts/ui_test.py
 python scripts/stress_http_test.py

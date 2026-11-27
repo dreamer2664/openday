@@ -1,3 +1,21 @@
+test_actor_group_remains_inside_frame_at_edges (test_composition.CompositionTests.test_actor_group_remains_inside_frame_at_edges) ... ok
+test_api_editor_and_logo_are_local_validated_and_nonpersistent (test_composition.CompositionTests.test_api_editor_and_logo_are_local_validated_and_nonpersistent) ... ok
+test_companion_follows_player_without_changing_its_relative_scale (test_composition.CompositionTests.test_companion_follows_player_without_changing_its_relative_scale) ... ok
+test_default_route_preserves_legacy_no_decoration (test_composition.CompositionTests.test_default_route_preserves_legacy_no_decoration) ... ok
+test_edit_layers_do_not_contaminate_export (test_composition.CompositionTests.test_edit_layers_do_not_contaminate_export) ... ok
+test_empty_is_genuinely_undecorated (test_composition.CompositionTests.test_empty_is_genuinely_undecorated) ... ok
+test_every_new_option_is_rendered_and_nes_upsampling_is_exact (test_composition.CompositionTests.test_every_new_option_is_rendered_and_nes_upsampling_is_exact) ... ok
+test_independent_defaults (test_composition.CompositionTests.test_independent_defaults) ... ok
+test_invalid_actor_inputs_are_not_coerced (test_composition.CompositionTests.test_invalid_actor_inputs_are_not_coerced) ... ok
+test_invalid_plaque_inputs (test_composition.CompositionTests.test_invalid_plaque_inputs) ... ok
+test_invalid_stickers_and_maximum (test_composition.CompositionTests.test_invalid_stickers_and_maximum) ... ok
+test_no_extra_credits_by_default (test_composition.CompositionTests.test_no_extra_credits_by_default) ... ok
+test_no_unknown_paths_or_free_text_in_normalized_layout (test_composition.CompositionTests.test_no_unknown_paths_or_free_text_in_normalized_layout) ... ok
+test_official_logo_not_rotatable (test_composition.CompositionTests.test_official_logo_not_rotatable) ... ok
+test_rotated_sticker_bounds (test_composition.CompositionTests.test_rotated_sticker_bounds) ... ok
+test_selected_only_attributions_and_png (test_composition.CompositionTests.test_selected_only_attributions_and_png) ... ok
+test_six_stickers_are_valid (test_composition.CompositionTests.test_six_stickers_are_valid) ... ok
+test_source_hashes_and_native_originals (test_composition.CompositionTests.test_source_hashes_and_native_originals) ... ok
 test_bad_field_and_oversized_field_list_rejected (test_controls.ControlTests.test_bad_field_and_oversized_field_list_rejected) ... ok
 test_closed_eye_colour_is_not_counted_as_successful_effect (test_controls.ControlTests.test_closed_eye_colour_is_not_counted_as_successful_effect) ... ok
 test_coat_hides_belt_instead_of_drawing_it_over_coat (test_controls.ControlTests.test_coat_hides_belt_instead_of_drawing_it_over_coat) ... ok
@@ -62,6 +80,6 @@ test_phone_route_full_creator_no_owner_or_card (test_standalone.StandaloneTests.
 test_translator_current_and_rejects_unsupported_syntax (test_standalone.StandaloneTests.test_translator_current_and_rejects_unsupported_syntax) ... ok
 
 ----------------------------------------------------------------------
-Ran 58 tests in 10.947s
+Ran 76 tests in 10.743s
 
 OK

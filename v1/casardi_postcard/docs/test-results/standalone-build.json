@@ -155,6 +155,40 @@
   "lpc_commit": "86a3719ee4a7e2e9fb27c7c152e29a741d3e930a",
   "lpc_parts": 56,
   "lpc_pose_atlases": 85,
-  "bytes": 24318425,
-  "sha256": "48cca47603d4eb53db38680ace4151c9b3dac134b38c02bbd7f0849403d7e049"
+  "stickers": {
+    "alloro": {
+      "photo": "93f1c5a17091b76645a3b6447dbe706346b0389471ff792d4b83e6a4f423fa6c",
+      "nes": "93f1c5a17091b76645a3b6447dbe706346b0389471ff792d4b83e6a4f423fa6c"
+    },
+    "pegaso": {
+      "photo": "7311a6522154cee88ff207423410119c902b588b02c43fc84ab86acaf3bd2c43",
+      "nes": "7311a6522154cee88ff207423410119c902b588b02c43fc84ab86acaf3bd2c43"
+    },
+    "lira": {
+      "photo": "58dcdcb21a8470b03898e13205553298b91e1046f9dde0c02b875fe739a61af3",
+      "nes": "58dcdcb21a8470b03898e13205553298b91e1046f9dde0c02b875fe739a61af3"
+    },
+    "libro": {
+      "photo": "74a53a7e251ebde083db11f0b171f6ad339f74d32a13b337e072487676b797bb",
+      "nes": "74a53a7e251ebde083db11f0b171f6ad339f74d32a13b337e072487676b797bb"
+    },
+    "teatro": {
+      "photo": "caef4c0c5068cb5bbc6a88d3fd90e134ae8c308176aa97275c0a2fada5ba9ee0",
+      "nes": "caef4c0c5068cb5bbc6a88d3fd90e134ae8c308176aa97275c0a2fada5ba9ee0"
+    },
+    "capitello": {
+      "photo": "48467cbca2ce10567a4e2be9ebf991be09f095c2820e8a8a743e04e38b8cd334",
+      "nes": "48467cbca2ce10567a4e2be9ebf991be09f095c2820e8a8a743e04e38b8cd334"
+    },
+    "astrolabio": {
+      "photo": "04e74f3c53cb7ce3ad494b172f312c5523d7ce69ca41abf86c037f1fcff86f57",
+      "nes": "04e74f3c53cb7ce3ad494b172f312c5523d7ce69ca41abf86c037f1fcff86f57"
+    },
+    "logo_casardi": {
+      "photo": "5c7dea1f9cbc96d92d0bdf23b789fe1b6c6bca38cb13962c0108e05a34597754",
+      "nes": "485ca08cbf56b7360d66f1064993f46560a403f5855e9b0b682ccbc4a1f40640"
+    }
+  },
+  "bytes": 24818408,
+  "sha256": "e8e28940e478a985e2b5113606045b4eac8677c58c27055a8392b719605a392a"
 }

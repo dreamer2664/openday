@@ -1,9 +1,15 @@
 {
   "result": "PASS",
   "date": "2026-11-27",
-  "revision": "3.2: twelve places / 24 combinations + actual composited-pixel controls + retained 3.1 art and LPC + Windows LAN PNG QR",
+  "revision": "3.3: mouse/touch character placement, optional final stickers and nameplate, authentic Casardi logo; retained twelve places / LPC / offline HD / Windows LAN PNG QR",
   "archive": "Cartolina_Casardi_Windows_LPC_QR_2026-27.zip",
   "preflight": {
+    "optional_composition_checks": 26,
+    "manual_layout_cases": 3240,
+    "sticker_layout_cases": 324,
+    "composition_validation_cases": 745,
+    "optional_stickers": 8,
+    "decorated_hd_examples": 2,
     "photo_sources": 12,
     "nes_backgrounds": 12,
     "retained_3_1_backgrounds_unchanged": 6,
@@ -16,7 +22,7 @@
       "screenshots-standalone": 6,
       "screenshots": 16
     },
-    "unit_tests": 58,
+    "unit_tests": 76,
     "nes_art_integrity": "PASS: twelve canonical 600x400 paintings, at most 64 colours each",
     "nes_redesign_checks": 8,
     "control_pixel_comparisons": 3250,

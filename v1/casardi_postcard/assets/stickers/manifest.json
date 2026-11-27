@@ -1,0 +1,172 @@
+{
+  "version": "3.3",
+  "date": "2026-11-27",
+  "disclosure": "Seven original AI-assisted pixel stickers; the official school logo is authentic and NOT AI-generated. Empty selection by default.",
+  "stickers": {
+    "alloro": {
+      "label": "Corona d’alloro",
+      "paths": {
+        "photo": "assets/stickers/alloro.png",
+        "nes": "assets/stickers/alloro.png"
+      },
+      "sha256": {
+        "photo": "93f1c5a17091b76645a3b6447dbe706346b0389471ff792d4b83e6a4f423fa6c",
+        "nes": "93f1c5a17091b76645a3b6447dbe706346b0389471ff792d4b83e6a4f423fa6c"
+      },
+      "size": [
+        96,
+        96
+      ],
+      "origin": "Original AI-assisted sticker; pixel-grid finishing and magenta-key removal",
+      "license": "CC0 1.0, to the extent rights are available",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "master_sha256": "baf8b9162549c9cfac2f6fe4fb8817f06b85cacb79a4083fdcb7cdb533029924",
+      "rotation": true
+    },
+    "pegaso": {
+      "label": "Pegaso alato",
+      "paths": {
+        "photo": "assets/stickers/pegaso.png",
+        "nes": "assets/stickers/pegaso.png"
+      },
+      "sha256": {
+        "photo": "7311a6522154cee88ff207423410119c902b588b02c43fc84ab86acaf3bd2c43",
+        "nes": "7311a6522154cee88ff207423410119c902b588b02c43fc84ab86acaf3bd2c43"
+      },
+      "size": [
+        96,
+        96
+      ],
+      "origin": "Original AI-assisted sticker; pixel-grid finishing and magenta-key removal",
+      "license": "CC0 1.0, to the extent rights are available",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "master_sha256": "9876ab7bc9195c30a8d90b064644df77035bb097b6edfc318ee7d8a1c617edf1",
+      "rotation": true
+    },
+    "lira": {
+      "label": "Lira classica",
+      "paths": {
+        "photo": "assets/stickers/lira.png",
+        "nes": "assets/stickers/lira.png"
+      },
+      "sha256": {
+        "photo": "58dcdcb21a8470b03898e13205553298b91e1046f9dde0c02b875fe739a61af3",
+        "nes": "58dcdcb21a8470b03898e13205553298b91e1046f9dde0c02b875fe739a61af3"
+      },
+      "size": [
+        96,
+        96
+      ],
+      "origin": "Original AI-assisted sticker; pixel-grid finishing and magenta-key removal",
+      "license": "CC0 1.0, to the extent rights are available",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "master_sha256": "708037af53d0f6b5a126d1631d09319a03d5c71aceadd668fc1475a31858712e",
+      "rotation": true
+    },
+    "libro": {
+      "label": "Libro aperto",
+      "paths": {
+        "photo": "assets/stickers/libro.png",
+        "nes": "assets/stickers/libro.png"
+      },
+      "sha256": {
+        "photo": "74a53a7e251ebde083db11f0b171f6ad339f74d32a13b337e072487676b797bb",
+        "nes": "74a53a7e251ebde083db11f0b171f6ad339f74d32a13b337e072487676b797bb"
+      },
+      "size": [
+        96,
+        96
+      ],
+      "origin": "Original AI-assisted sticker; pixel-grid finishing and magenta-key removal",
+      "license": "CC0 1.0, to the extent rights are available",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "master_sha256": "0cc68dce422a3d46300a70860ac16c79241ce7ab519ca4b58cd4bd166ba192cd",
+      "rotation": true
+    },
+    "teatro": {
+      "label": "Maschere teatrali",
+      "paths": {
+        "photo": "assets/stickers/teatro.png",
+        "nes": "assets/stickers/teatro.png"
+      },
+      "sha256": {
+        "photo": "caef4c0c5068cb5bbc6a88d3fd90e134ae8c308176aa97275c0a2fada5ba9ee0",
+        "nes": "caef4c0c5068cb5bbc6a88d3fd90e134ae8c308176aa97275c0a2fada5ba9ee0"
+      },
+      "size": [
+        96,
+        96
+      ],
+      "origin": "Original AI-assisted sticker; pixel-grid finishing and magenta-key removal",
+      "license": "CC0 1.0, to the extent rights are available",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "master_sha256": "f597b47bdae4f3c3c65bfa1eede37954e0a10a7335f074696ce236235724c6d4",
+      "rotation": true
+    },
+    "capitello": {
+      "label": "Capitello ionico",
+      "paths": {
+        "photo": "assets/stickers/capitello.png",
+        "nes": "assets/stickers/capitello.png"
+      },
+      "sha256": {
+        "photo": "48467cbca2ce10567a4e2be9ebf991be09f095c2820e8a8a743e04e38b8cd334",
+        "nes": "48467cbca2ce10567a4e2be9ebf991be09f095c2820e8a8a743e04e38b8cd334"
+      },
+      "size": [
+        96,
+        96
+      ],
+      "origin": "Original AI-assisted sticker; pixel-grid finishing and magenta-key removal",
+      "license": "CC0 1.0, to the extent rights are available",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "master_sha256": "b9562eee2c441d3c67d51bf6416d5722c4be9ec946713a30b92e7fdb656a4b08",
+      "rotation": true
+    },
+    "astrolabio": {
+      "label": "Rosa dei venti",
+      "paths": {
+        "photo": "assets/stickers/astrolabio.png",
+        "nes": "assets/stickers/astrolabio.png"
+      },
+      "sha256": {
+        "photo": "04e74f3c53cb7ce3ad494b172f312c5523d7ce69ca41abf86c037f1fcff86f57",
+        "nes": "04e74f3c53cb7ce3ad494b172f312c5523d7ce69ca41abf86c037f1fcff86f57"
+      },
+      "size": [
+        96,
+        96
+      ],
+      "origin": "Original AI-assisted sticker; pixel-grid finishing and magenta-key removal",
+      "license": "CC0 1.0, to the extent rights are available",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "master_sha256": "be0a1ca6421d5d621cd0a656771078d0c733a86ccba3a0a7ef9ed97853f4c6b2",
+      "rotation": true
+    },
+    "logo_casardi": {
+      "label": "Logo ufficiale Casardi",
+      "paths": {
+        "photo": "assets/stickers/logo_casardi.png",
+        "nes": "assets/stickers/logo_casardi-nes.png"
+      },
+      "sha256": {
+        "photo": "5c7dea1f9cbc96d92d0bdf23b789fe1b6c6bca38cb13962c0108e05a34597754",
+        "nes": "485ca08cbf56b7360d66f1064993f46560a403f5855e9b0b682ccbc4a1f40640"
+      },
+      "size": [
+        387,
+        506
+      ],
+      "origin": "Embedded image extracted from first page of official school brochure, not recreated",
+      "source_pdf": "https://www.liceocasardi.edu.it/wp-content/uploads/2025/12/POF-26-27-Liceo-Casardi-Brochure.pdf",
+      "source_pdf_sha256": "b87c3d6c9ee5927157e4afe4d2cd587f4b05d655976b1e396cee09c2dd9b3034",
+      "extracted_source_sha256": "6c37900ed8de1be4118b6c78d52896bbea4999a69fdab138c5b9793997f4e367",
+      "corroboration": "https://www.liceocasardi.edu.it/wp-content/uploads/2026/11/2_ATTO_DINDIRIZZO_2025_28_integrazione.docx.pdf.pades-2.pdf",
+      "license": "CC BY 4.0 under the school site legal notice; trademark and third-party rights reserved",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "legal_notice": "https://www.liceocasardi.edu.it/note-legali/",
+      "attribution": "Liceo Classico – Scienze Umane – Musicale Alfredo Casardi, Barletta; brochure ufficiale 2026/27, pagina 1. Estrazione e ridimensionamento; versione NES ridotta su griglia. Nessuna approvazione dell’istituto implicita.",
+      "rotation": false
+    }
+  }
+}

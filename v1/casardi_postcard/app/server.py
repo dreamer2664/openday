@@ -179,7 +179,7 @@ def index():
         session['owner']=secrets.token_urlsafe(24)
         session['csrf']=secrets.token_urlsafe(24)
     CAPABILITIES[session['csrf']]=session['owner']
-    return render_template('index.html',csrf=session['csrf'],app_version='3.2',
+    return render_template('index.html',csrf=session['csrf'],app_version='3.3',
                            lpc_credits=(ROOT/'assets/characters/CREDITI_LPC.txt').read_text(encoding='utf-8'))
 
 
@@ -243,10 +243,10 @@ def companion():
     return image_response(img.resize((img.width*4,img.height*4),Image.Resampling.NEAREST))
 
 
-def render_card(job,width):
+def render_card(job,width,*,editor=False):
     if not RENDER_GATE.acquire(blocking=False):
         return None,(jsonify(error='Composizione già in corso. Attendi un momento e riprova.'),429)
-    try: return pc.compose(job,width),None
+    try: return pc.compose(job,width,editor=editor),None
     finally: RENDER_GATE.release()
 
 
@@ -256,6 +256,24 @@ def preview():
     image,error=render_card(job,1200)
     if error: return error
     return image_response(image,'PNG' if job['mode']=='nes' else 'JPEG')
+
+
+@app.post('/api/editor-preview')
+def editor_preview():
+    job=normalise_job(json_body());image,error=render_card(job,1200,editor=True)
+    if error:return error
+    def data_uri(im,fmt='PNG'):
+        b=io.BytesIO();im.save(b,fmt,**({'quality':90} if fmt=='JPEG' else {}));return 'data:image/'+('jpeg' if fmt=='JPEG' else 'png')+';base64,'+base64.b64encode(b.getvalue()).decode()
+    parts=image.editor;fmt='PNG' if job['mode']=='nes' else 'JPEG'
+    return jsonify(image=data_uri(image,fmt),clean=data_uri(parts['clean'],fmt),ghost=data_uri(parts['ghost']),meta=parts['meta'])
+
+
+@app.get('/stickers/<sid>.png')
+def sticker_asset(sid):
+    from .layout_edit import sticker_manifest
+    record=sticker_manifest()['stickers'].get(sid)
+    if not record:abort(404)
+    return send_from_directory(ROOT/'assets/stickers',Path(record['paths']['nes' if request.args.get('mode')=='nes' else 'photo']).name,max_age=86400)
 
 
 @app.post('/api/export')

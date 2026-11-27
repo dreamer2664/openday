@@ -2,7 +2,7 @@
   "result": "PASS",
   "revision": "3.2 NES Retro",
   "date": "2026-11-27",
-  "html_sha256": "48cca47603d4eb53db38680ace4151c9b3dac134b38c02bbd7f0849403d7e049",
+  "html_sha256": "e8e28940e478a985e2b5113606045b4eac8677c58c27055a8392b719605a392a",
   "tests": [
     {
       "name": "Benvenuto: miniature proporzionate e nessun overflow a 320 px",

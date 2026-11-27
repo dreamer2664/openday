@@ -4,252 +4,252 @@
     {
       "job": "A_casardi_foto_gatto",
       "status": "PASS",
-      "seconds": 7.99,
-      "bytes": 2398813,
+      "seconds": 7.91,
+      "bytes": 2398819,
       "memory": {
-        "rss_kib": 368712,
-        "peak_kib": 436728
+        "rss_kib": 427964,
+        "peak_kib": 494936
       }
     },
     {
       "job": "B_casardi_nes_cane",
       "status": "PASS",
-      "seconds": 1.22,
-      "bytes": 424989,
+      "seconds": 1.17,
+      "bytes": 424995,
       "memory": {
-        "rss_kib": 393528,
-        "peak_kib": 436728
+        "rss_kib": 431256,
+        "peak_kib": 494936
       }
     },
     {
       "job": "C_pantheon_foto_volpe",
       "status": "PASS",
-      "seconds": 4.15,
-      "bytes": 8993077,
+      "seconds": 3.93,
+      "bytes": 8993083,
       "memory": {
-        "rss_kib": 477636,
-        "peak_kib": 543328
+        "rss_kib": 503240,
+        "peak_kib": 581148
       }
     },
     {
       "job": "D_pantheon_nes_gufo",
       "status": "PASS",
-      "seconds": 0.95,
-      "bytes": 299405,
+      "seconds": 0.92,
+      "bytes": 299411,
       "memory": {
-        "rss_kib": 487688,
-        "peak_kib": 543328
+        "rss_kib": 504616,
+        "peak_kib": 581148
       }
     },
     {
       "job": "E_foro_foto_nessuno",
       "status": "PASS",
-      "seconds": 4.48,
-      "bytes": 10924930,
+      "seconds": 4.37,
+      "bytes": 10924936,
       "memory": {
-        "rss_kib": 612344,
-        "peak_kib": 635560
+        "rss_kib": 629416,
+        "peak_kib": 647888
       }
     },
     {
       "job": "F_foro_nes_tartaruga",
       "status": "PASS",
-      "seconds": 1.23,
-      "bytes": 412351,
+      "seconds": 1.22,
+      "bytes": 412357,
       "memory": {
-        "rss_kib": 612344,
-        "peak_kib": 635560
+        "rss_kib": 629416,
+        "peak_kib": 647888
       }
     },
     {
       "job": "G_epidauro_foto_coniglio",
       "status": "PASS",
-      "seconds": 5.69,
-      "bytes": 9864026,
+      "seconds": 5.5,
+      "bytes": 9864032,
       "memory": {
-        "rss_kib": 723484,
-        "peak_kib": 763308
+        "rss_kib": 629816,
+        "peak_kib": 720952
       }
     },
     {
       "job": "H_epidauro_nes_corvo",
       "status": "PASS",
-      "seconds": 0.93,
-      "bytes": 304418,
+      "seconds": 0.97,
+      "bytes": 304424,
       "memory": {
-        "rss_kib": 723748,
-        "peak_kib": 763308
+        "rss_kib": 629816,
+        "peak_kib": 720952
       }
     },
     {
       "job": "I_biblioteca_foto_drago",
       "status": "PASS",
-      "seconds": 7.93,
-      "bytes": 6604750,
+      "seconds": 7.69,
+      "bytes": 6604756,
       "memory": {
-        "rss_kib": 730840,
-        "peak_kib": 827116
+        "rss_kib": 638428,
+        "peak_kib": 720952
       }
     },
     {
       "job": "J_biblioteca_nes_gatto",
       "status": "PASS",
-      "seconds": 0.92,
-      "bytes": 300023,
+      "seconds": 0.94,
+      "bytes": 300029,
       "memory": {
-        "rss_kib": 732160,
-        "peak_kib": 827116
+        "rss_kib": 638692,
+        "peak_kib": 720952
       }
     },
     {
       "job": "K_paestum_foto_cane",
       "status": "PASS",
       "seconds": 7.6,
-      "bytes": 8395704,
+      "bytes": 8395710,
       "memory": {
-        "rss_kib": 732424,
-        "peak_kib": 827116
+        "rss_kib": 621752,
+        "peak_kib": 720952
       }
     },
     {
       "job": "L_paestum_nes_coniglio",
       "status": "PASS",
-      "seconds": 0.99,
-      "bytes": 335046,
+      "seconds": 1.12,
+      "bytes": 335052,
       "memory": {
-        "rss_kib": 732424,
-        "peak_kib": 827116
+        "rss_kib": 621752,
+        "peak_kib": 720952
       }
     },
     {
       "job": "M_colosseo_foto_volpe",
       "status": "PASS",
-      "seconds": 8.32,
-      "bytes": 8321546,
+      "seconds": 8.17,
+      "bytes": 8321552,
       "memory": {
-        "rss_kib": 732444,
-        "peak_kib": 827116
+        "rss_kib": 585868,
+        "peak_kib": 720952
       }
     },
     {
       "job": "N_colosseo_nes_volpe",
       "status": "PASS",
       "seconds": 0.87,
-      "bytes": 277719,
+      "bytes": 277725,
       "memory": {
-        "rss_kib": 732444,
-        "peak_kib": 827116
+        "rss_kib": 585868,
+        "peak_kib": 720952
       }
     },
     {
       "job": "O_acropoli_foto_gufo",
       "status": "PASS",
-      "seconds": 10.06,
-      "bytes": 7950309,
+      "seconds": 9.64,
+      "bytes": 7950315,
       "memory": {
-        "rss_kib": 733340,
-        "peak_kib": 827116
+        "rss_kib": 609176,
+        "peak_kib": 720952
       }
     },
     {
       "job": "P_acropoli_nes_gufo",
       "status": "PASS",
-      "seconds": 0.85,
-      "bytes": 283325,
+      "seconds": 0.86,
+      "bytes": 283331,
       "memory": {
-        "rss_kib": 734396,
-        "peak_kib": 827116
+        "rss_kib": 609176,
+        "peak_kib": 720952
       }
     },
     {
       "job": "Q_pompei_foto_gatto",
       "status": "PASS",
-      "seconds": 6.63,
-      "bytes": 7491803,
+      "seconds": 6.57,
+      "bytes": 7491809,
       "memory": {
-        "rss_kib": 734548,
-        "peak_kib": 827116
+        "rss_kib": 633724,
+        "peak_kib": 720952
       }
     },
     {
       "job": "R_pompei_nes_gatto",
       "status": "PASS",
-      "seconds": 0.83,
-      "bytes": 273494,
+      "seconds": 0.82,
+      "bytes": 273500,
       "memory": {
-        "rss_kib": 734548,
-        "peak_kib": 827116
+        "rss_kib": 633724,
+        "peak_kib": 720952
       }
     },
     {
       "job": "S_taormina_foto_coniglio",
       "status": "PASS",
-      "seconds": 6.36,
-      "bytes": 8912532,
+      "seconds": 6.27,
+      "bytes": 8912538,
       "memory": {
-        "rss_kib": 734552,
-        "peak_kib": 827116
+        "rss_kib": 624680,
+        "peak_kib": 720952
       }
     },
     {
       "job": "T_taormina_nes_coniglio",
       "status": "PASS",
-      "seconds": 1.08,
-      "bytes": 367498,
+      "seconds": 1.09,
+      "bytes": 367504,
       "memory": {
-        "rss_kib": 734552,
-        "peak_kib": 827116
+        "rss_kib": 625208,
+        "peak_kib": 720952
       }
     },
     {
       "job": "U_casteldelmonte_foto_cane",
       "status": "PASS",
-      "seconds": 9.17,
-      "bytes": 7157609,
+      "seconds": 8.95,
+      "bytes": 7157615,
       "memory": {
-        "rss_kib": 751064,
-        "peak_kib": 827116
+        "rss_kib": 629164,
+        "peak_kib": 720952
       }
     },
     {
       "job": "V_casteldelmonte_nes_cane",
       "status": "PASS",
-      "seconds": 0.88,
-      "bytes": 284143,
+      "seconds": 0.86,
+      "bytes": 284149,
       "memory": {
-        "rss_kib": 751856,
-        "peak_kib": 827116
+        "rss_kib": 629164,
+        "peak_kib": 720952
       }
     },
     {
       "job": "W_castellobarletta_foto_drago",
       "status": "PASS",
-      "seconds": 9.11,
-      "bytes": 6610684,
+      "seconds": 8.86,
+      "bytes": 6610690,
       "memory": {
-        "rss_kib": 735016,
-        "peak_kib": 827116
+        "rss_kib": 620732,
+        "peak_kib": 720952
       }
     },
     {
       "job": "X_castellobarletta_nes_drago",
       "status": "PASS",
-      "seconds": 0.83,
-      "bytes": 264409,
+      "seconds": 0.86,
+      "bytes": 264415,
       "memory": {
-        "rss_kib": 735016,
-        "peak_kib": 827116
+        "rss_kib": 620732,
+        "peak_kib": 720952
       }
     }
   ],
-  "total_seconds": 99.13,
+  "total_seconds": 97.23,
   "initial_memory": {
-    "rss_kib": 360996,
-    "peak_kib": 406412
+    "rss_kib": 365016,
+    "peak_kib": 494936
   },
   "final_memory": {
-    "rss_kib": 735016,
-    "peak_kib": 827116
+    "rss_kib": 620732,
+    "peak_kib": 720952
   },
   "limit_note": "Single local process, one composite at a time; not multi-client load certification.",
   "cleanup": "PASS: no active cards after final reset"

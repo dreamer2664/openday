@@ -1,0 +1,201 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "seconds": 60.09,
+  "html_sha256": "e8e28940e478a985e2b5113606045b4eac8677c58c27055a8392b719605a392a",
+  "tests": [
+    {
+      "name": "photo: cartolina iniziale senza sticker né aggiunte obbligatorie",
+      "result": "PASS"
+    },
+    {
+      "name": "photo: trascinamento mouse modifica realmente il PNG scaricato e sposta anche il companion",
+      "result": "PASS",
+      "changed_pixels": 818903
+    },
+    {
+      "name": "photo: frecce con Maiusc spostano il personaggio di dieci unità native",
+      "result": "PASS"
+    },
+    {
+      "name": "photo: taglia del personaggio realmente diversa nel PNG, a passi interi",
+      "result": "PASS",
+      "changed_pixels": 781980
+    },
+    {
+      "name": "photo: sticker trascinabile, rimozione da tastiera e annullamento reale",
+      "result": "PASS"
+    },
+    {
+      "name": "photo: massimo sei sticker e logo istituzionale non inclinabile",
+      "result": "PASS"
+    },
+    {
+      "name": "photo: simbolo ufficiale, finitura e percorso opzionali conservati tornando indietro",
+      "result": "PASS"
+    },
+    {
+      "name": "photo: dimensione e inclinazione cambiano i pixel del PNG con i veri controlli a cursore",
+      "result": "PASS",
+      "changed_pixels": 124791
+    },
+    {
+      "name": "photo: PNG decorato ricomposto dagli asset, identico byte per byte al download UI; logo attribuito",
+      "result": "PASS"
+    },
+    {
+      "name": "photo: ripristino delle sole decorazioni e reset del visitatore senza residui",
+      "result": "PASS"
+    },
+    {
+      "name": "nes: cartolina iniziale senza sticker né aggiunte obbligatorie",
+      "result": "PASS"
+    },
+    {
+      "name": "nes: trascinamento mouse modifica realmente il PNG scaricato e sposta anche il companion",
+      "result": "PASS",
+      "changed_pixels": 811950
+    },
+    {
+      "name": "nes: frecce con Maiusc spostano il personaggio di dieci unità native",
+      "result": "PASS"
+    },
+    {
+      "name": "nes: taglia del personaggio realmente diversa nel PNG, a passi interi",
+      "result": "PASS",
+      "changed_pixels": 627850
+    },
+    {
+      "name": "nes: sticker trascinabile, rimozione da tastiera e annullamento reale",
+      "result": "PASS"
+    },
+    {
+      "name": "nes: massimo sei sticker e logo istituzionale non inclinabile",
+      "result": "PASS"
+    },
+    {
+      "name": "nes: simbolo ufficiale, finitura e percorso opzionali conservati tornando indietro",
+      "result": "PASS"
+    },
+    {
+      "name": "nes: dimensione e inclinazione cambiano i pixel del PNG con i veri controlli a cursore",
+      "result": "PASS",
+      "changed_pixels": 124850
+    },
+    {
+      "name": "nes: PNG decorato ricomposto dagli asset, identico byte per byte al download UI; logo attribuito",
+      "result": "PASS"
+    },
+    {
+      "name": "nes: ripristino delle sole decorazioni e reset del visitatore senza residui",
+      "result": "PASS"
+    },
+    {
+      "name": "Touch emulato 320 px: personaggio e sticker si muovono; nessun overflow orizzontale; lo scroll fuori dagli elementi resta libero",
+      "result": "PASS",
+      "physical_device": false
+    },
+    {
+      "name": "Touch emulato 390 px: personaggio e sticker si muovono; nessun overflow orizzontale; lo scroll fuori dagli elementi resta libero",
+      "result": "PASS",
+      "physical_device": false
+    },
+    {
+      "name": "Touch emulato 768 px: personaggio e sticker si muovono; nessun overflow orizzontale; lo scroll fuori dagli elementi resta libero",
+      "result": "PASS",
+      "physical_device": false
+    },
+    {
+      "name": "Pillow photo: trascinamento reale, logo e percorso nella cartolina HD scaricata",
+      "result": "PASS",
+      "changed_pixels": 1468667
+    },
+    {
+      "name": "Pillow nes: trascinamento reale, logo e percorso nella cartolina HD scaricata",
+      "result": "PASS",
+      "changed_pixels": 1181475
+    },
+    {
+      "name": "File autonomo: zero HTTP anche per sticker e logo; nessun errore JavaScript in tutte le prove",
+      "result": "PASS"
+    }
+  ],
+  "exports": [
+    {
+      "mode": "photo",
+      "edition": "standalone",
+      "operation": "character mouse drag",
+      "changed_export_pixels": 818903,
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "sha256": "f3411eff57bf676e1a89466d87fe7b6befc6b9e1b12c84369531d5151aa1615b",
+      "bytes": 11969664
+    },
+    {
+      "mode": "photo",
+      "edition": "standalone",
+      "operation": "optional nameplate and stickers",
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "sha256": "01c7ba97fff4ad8b3e3fe1ac0c0f4f9a62f93bacafac6fbc1cbd8f6525aba170",
+      "bytes": 11007153
+    },
+    {
+      "mode": "nes",
+      "edition": "standalone",
+      "operation": "character mouse drag",
+      "changed_export_pixels": 811950,
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "sha256": "1373c4773ce6faf887e9fb0e59cc04e43128ad7f9c775eb81046104727200f0d",
+      "bytes": 541528
+    },
+    {
+      "mode": "nes",
+      "edition": "standalone",
+      "operation": "optional nameplate and stickers",
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "sha256": "be4d72cba8d8b18b60376495b43ace61e3fb313d606d63a51ab7d0538c5aa002",
+      "bytes": 541563
+    },
+    {
+      "edition": "python",
+      "mode": "photo",
+      "operation": "drag and optional decorations",
+      "changed_export_pixels": 1468667,
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "sha256": "c1ba43e19eeaae82a4dba9f8c2a3d1e0c151ae5e3896478ddf0c3f4566843250",
+      "bytes": 8335506
+    },
+    {
+      "edition": "python",
+      "mode": "nes",
+      "operation": "drag and optional decorations",
+      "changed_export_pixels": 1181475,
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "sha256": "8c48f7b14b9c2894d9aa2b47e48d9c5f4013a327e0608ce5b38e6d4a06c7bad2",
+      "bytes": 339338
+    }
+  ],
+  "javascript_errors": [],
+  "standalone_http_requests": [],
+  "physical_phone": "NOT TESTED",
+  "native_windows": "NOT TESTED",
+  "school_wifi": "NOT TESTED",
+  "method": "Real UI mouse events, keyboard and CDP touch emulation; PNG downloads decoded and compared. No image of the editor is exported. Synthetic demo name only."
+}

@@ -2352,7 +2352,7 @@
   ],
   "zero_pixel_alternatives_measured": 563,
   "failures": [],
-  "seconds": 6.06,
+  "seconds": 6.65,
   "method": "Actual composited 64×64 RGBA comparison; transparent RGB ignored; pairwise unique visible reference-context results; occluded alternatives explicitly reported, not counted as successful visual changes.",
   "limitations": "Pixel differences establish a real effect, not perceptual equality or artistic quality. Face details change only a few native pixels; UI includes a nearest-neighbour close-up. UI interaction coverage is separate.",
   "sources": {

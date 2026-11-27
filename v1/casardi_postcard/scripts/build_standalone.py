@@ -8,6 +8,7 @@ from __future__ import annotations
 import base64
 import hashlib
 import io
+import shutil
 import json
 from pathlib import Path
 import sys
@@ -48,17 +49,22 @@ def font_bytes(path,rename=None):
     font.flavor='woff';buf=io.BytesIO();font.save(buf);return buf.getvalue()
 
 def main():
+    for name in ('layout-editor.js','layout-editor.css'):shutil.copyfile(ROOT/'browser'/name,ROOT/'web/static'/name)
     sprites=generate(ROOT);(ROOT/'browser/sprites.js').write_text(sprites,encoding='utf-8')
     lpc,lpc_credits=bundle()
-    cat=public_catalogue(600,'browser-3.2')
+    cat=public_catalogue(600,'browser-3.3')
     for item in cat['scenes']:item.pop('thumbs',None)
-    data=dict(version='3.2',lpc=lpc,lpcCredits=lpc_credits,date='2026-11-27',catalogue=cat,palette=COLORS,
+    data=dict(version='3.3',lpc=lpc,lpcCredits=lpc_credits,date='2026-11-27',catalogue=cat,palette=COLORS,
               colorFields={k:list(dict.fromkeys(c[0] for c in v)) for k,v in COLOR_FIELDS.items()},
               photo=PHOTO_SCENES,nes=NES_SCENES,nesArt=json.loads((ROOT/'assets/nes/manifest.json').read_text()),metadata=photo_metadata(),images={},thumbs={},examples={},licenses={})
     report=dict(date='2026-11-27',file=OUTPUT.name,editions='One responsive standalone HTML: full desktop and touch-phone creator.',
                 renderer='Independent JavaScript + Canvas; artist-drawn LPC indexed atlases + translated original equipment/animals; no Python runtime.',
                 photos={},fonts={},nes_art='Twelve AI-assisted architectural paintings, native 600x400, 64 colours each; canonical PNG hashes and references in assets/nes/manifest.json.',runtime_network='None',visitor_storage='Memory of the open page only; no project persistence.',
                 qr='AVVIA_CARTOLINA_WINDOWS.exe serves this full HTML and hosts its actual finished PNG via temporary LAN URL. Raw standalone HTML exports locally without hosting other devices.',lpc_commit=lpc['commit'],lpc_parts=len(lpc['parts']),lpc_pose_atlases=len(lpc['atlases']))
+    data['stickerManifest']=json.loads((ROOT/'assets/stickers/manifest.json').read_text())
+    data['stickerImages']={sid:{mode:uri((ROOT/record['paths'][mode]).read_bytes(),'image/png') for mode in ('photo','nes')} for sid,record in data['stickerManifest']['stickers'].items()}
+    data['licenses']['Logo Casardi — fonte e ambito del riuso']=(ROOT/'assets/stickers/FONTE_LOGO_E_LICENZA.txt').read_text()
+    report['stickers']={sid:record['sha256'] for sid,record in data['stickerManifest']['stickers'].items()}
     for sid,cfg in PHOTO_SCENES.items():
         source=ROOT/cfg['photo'];raw,size=photo_bytes(source);nes=(ROOT/'assets/nes'/(sid+'.png')).read_bytes()
         data['images'][sid]={'photo':uri(raw,'image/jpeg'),'nes':uri(nes,'image/png')}
@@ -77,11 +83,11 @@ def main():
     for p in sorted((ROOT/'assets/licenses').glob('*.txt')):data['licenses'][p.stem]=p.read_text(encoding='utf-8')
     for p in sorted((ROOT/'assets/fonts').glob('OFL-*.txt')):data['licenses'][p.stem]=p.read_text(encoding='utf-8')
     data['licenses']['MIT — codice originale']=(ROOT/'LICENSE').read_text(encoding='utf-8')
-    css=(ROOT/'browser/interface.css').read_text(encoding='utf-8').replace('/*__FONTS__*/','\n'.join(font_css))
+    css=(ROOT/'browser/interface.css').read_text(encoding='utf-8').replace('/*__FONTS__*/','\n'.join(font_css))+'\n'+(ROOT/'browser/layout-editor.css').read_text()
     template=(ROOT/'browser/interface.html').read_text(encoding='utf-8')
     bootstrap="const PORTABLE=JSON.parse(document.getElementById('embedded-data').textContent);document.getElementById('embedded-data').remove();\n"
     fields={'/*__CSS__*/':css,'/*__DATA__*/':json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'),
-            '/*__SPRITES__*/':bootstrap+sprites,'/*__RENDER__*/':(ROOT/'browser/render.js').read_text(encoding='utf-8'),
+            '/*__SPRITES__*/':bootstrap+sprites,'/*__RENDER__*/':(ROOT/'browser/composition.js').read_text()+'\n'+(ROOT/'browser/render.js').read_text(encoding='utf-8')+'\n'+(ROOT/'browser/layout-editor.js').read_text(),
             '/*__BRIDGE__*/':(ROOT/'browser/bridge.js').read_text(encoding='utf-8'),
             '/*__APP__*/':(ROOT/'browser/app.js').read_text(encoding='utf-8')}
     for marker,value in fields.items():

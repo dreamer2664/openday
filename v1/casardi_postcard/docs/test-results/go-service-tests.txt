@@ -1,25 +1,25 @@
 === RUN   TestUnpredictable192BitTokens
 --- PASS: TestUnpredictable192BitTokens (0.00s)
 === RUN   TestPNGUploadAndOriginalBytes
---- PASS: TestPNGUploadAndOriginalBytes (3.56s)
+--- PASS: TestPNGUploadAndOriginalBytes (3.64s)
 === RUN   TestExpiryAtExactDeadline
---- PASS: TestExpiryAtExactDeadline (1.15s)
+--- PASS: TestExpiryAtExactDeadline (1.17s)
 === RUN   TestEveryDownloadRouteChecksExpiry
 === RUN   TestEveryDownloadRouteChecksExpiry/#00
 === RUN   TestEveryDownloadRouteChecksExpiry//image
 === RUN   TestEveryDownloadRouteChecksExpiry//file
---- PASS: TestEveryDownloadRouteChecksExpiry (3.51s)
-    --- PASS: TestEveryDownloadRouteChecksExpiry/#00 (1.23s)
-    --- PASS: TestEveryDownloadRouteChecksExpiry//image (1.15s)
-    --- PASS: TestEveryDownloadRouteChecksExpiry//file (1.13s)
+--- PASS: TestEveryDownloadRouteChecksExpiry (3.43s)
+    --- PASS: TestEveryDownloadRouteChecksExpiry/#00 (1.14s)
+    --- PASS: TestEveryDownloadRouteChecksExpiry//image (1.13s)
+    --- PASS: TestEveryDownloadRouteChecksExpiry//file (1.15s)
 === RUN   TestResetRevokesAndWipesMemory
---- PASS: TestResetRevokesAndWipesMemory (1.17s)
+--- PASS: TestResetRevokesAndWipesMemory (1.14s)
 === RUN   TestNewExportReplacesPrevious
---- PASS: TestNewExportReplacesPrevious (2.36s)
+--- PASS: TestNewExportReplacesPrevious (2.22s)
 === RUN   TestNewPCSessionRevokesPrevious
---- PASS: TestNewPCSessionRevokesPrevious (1.18s)
+--- PASS: TestNewPCSessionRevokesPrevious (1.17s)
 === RUN   TestPhoneCreatorDoesNotResetOrRevealKey
---- PASS: TestPhoneCreatorDoesNotResetOrRevealKey (1.13s)
+--- PASS: TestPhoneCreatorDoesNotResetOrRevealKey (1.11s)
 === RUN   TestRemoteRootDoesNotRevealOwnerKey
 --- PASS: TestRemoteRootDoesNotRevealOwnerKey (0.00s)
 === RUN   TestOwnerCapabilityRequired
@@ -33,28 +33,28 @@
 === RUN   TestStaleGenerationCannotUpload
 --- PASS: TestStaleGenerationCannotUpload (0.03s)
 === RUN   TestInflightUploadCannotResurrectAfterReset
---- PASS: TestInflightUploadCannotResurrectAfterReset (0.98s)
+--- PASS: TestInflightUploadCannotResurrectAfterReset (1.03s)
 === RUN   TestBadDimensionsAndCorruptPNGRejected
---- PASS: TestBadDimensionsAndCorruptPNGRejected (0.52s)
+--- PASS: TestBadDimensionsAndCorruptPNGRejected (0.51s)
 === RUN   TestBodySizeIsBounded
---- PASS: TestBodySizeIsBounded (0.31s)
+--- PASS: TestBodySizeIsBounded (0.40s)
 === RUN   TestNoDirectoryBrowsingOrSourceFiles
 --- PASS: TestNoDirectoryBrowsingOrSourceFiles (0.00s)
 === RUN   TestGETCannotResetAndNoCookieOrCache
 --- PASS: TestGETCannotResetAndNoCookieOrCache (0.00s)
 === RUN   TestPNGInlineAndMobilePage
---- PASS: TestPNGInlineAndMobilePage (1.16s)
+--- PASS: TestPNGInlineAndMobilePage (1.19s)
 === RUN   TestNetworkSelectionValidated
 --- PASS: TestNetworkSelectionValidated (0.05s)
 === RUN   TestNoLANDoesNotInventReachableURL
---- PASS: TestNoLANDoesNotInventReachableURL (0.95s)
+--- PASS: TestNoLANDoesNotInventReachableURL (0.91s)
 === RUN   TestCleanerDeletesWithoutHTTPRequests
---- PASS: TestCleanerDeletesWithoutHTTPRequests (2.18s)
+--- PASS: TestCleanerDeletesWithoutHTTPRequests (2.19s)
 === RUN   TestShutdownWipesMemory
---- PASS: TestShutdownWipesMemory (1.14s)
+--- PASS: TestShutdownWipesMemory (1.22s)
 === RUN   TestQRIsARealPNGWithQuietBorder
---- PASS: TestQRIsARealPNGWithQuietBorder (0.19s)
+--- PASS: TestQRIsARealPNGWithQuietBorder (0.18s)
 === RUN   TestHeadNeverReturnsPNGBody
---- PASS: TestHeadNeverReturnsPNGBody (1.16s)
+--- PASS: TestHeadNeverReturnsPNGBody (1.13s)
 PASS
-ok  	casardi.local/postcard-service	23.764s
+ok  	casardi.local/postcard-service	23.740s

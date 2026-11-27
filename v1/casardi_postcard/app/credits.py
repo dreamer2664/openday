@@ -4,6 +4,7 @@ from pathlib import Path
 import io
 import json
 from PIL.PngImagePlugin import PngInfo
+from .layout_edit import credits as decoration_credits
 
 ROOT=Path(__file__).resolve().parent.parent
 
@@ -21,7 +22,7 @@ def credit_for(job):
     return dict(title=m['title'][5:],author=author,source=m['page'],original=m['url'],
                 license='CC BY-SA 4.0',license_url='https://creativecommons.org/licenses/by-sa/4.0/',
                 photo_license=m['lic'],photo_license_url=m['licurl'],changes=modifications,
-                artwork=(__import__('app.character',fromlist=['character_credit']).character_credit(job.get('character')) if 'character' in job else ('Sfondo NES assistito da IA e rifinito su griglia nativa: adattamento CC BY-SA 4.0; nessun personaggio incluso in questo asset.' if pixel else 'Personaggi modulari Universal LPC: licenze per parte, non tutti CC0. Crediti completi in assets/characters/CREDITI_LPC.txt; il PNG esportato attribuisce le parti selezionate.'))+'\nCompanion originali Casardi: CC0 1.0. Nessun endorsement da parte dei fotografi o degli autori LPC.',
+                artwork=(__import__('app.character',fromlist=['character_credit']).character_credit(job.get('character')) if 'character' in job else ('Sfondo NES assistito da IA e rifinito su griglia nativa: adattamento CC BY-SA 4.0; nessun personaggio incluso in questo asset.' if pixel else 'Personaggi modulari Universal LPC: licenze per parte, non tutti CC0. Crediti completi in assets/characters/CREDITI_LPC.txt; il PNG esportato attribuisce le parti selezionate.'))+'\nCompanion originali Casardi: CC0 1.0. Nessun endorsement da parte dei fotografi o degli autori LPC.'+decoration_credits(job),
                 mode='Ricostruzione pixel art' if pixel else 'Fotografia')
 
 def credit_text(c):
@@ -43,7 +44,7 @@ def png_bytes(image, job):
     meta.add_itxt('Source',c['source'])
     meta.add_itxt('Copyright',f"{c['license']} — {c['license_url']}")
     meta.add_itxt('Description',credit_text(c))
-    meta.add_text('Software','Casardi Postcard Studio 3.2 Dodici luoghi · Pillow')
+    meta.add_text('Software','Casardi Postcard Studio 3.3 Composizione libera · Pillow')
     buf=io.BytesIO()
     image.save(buf,'PNG',optimize=True,pnginfo=meta,dpi=(300,300))
     return buf.getvalue()

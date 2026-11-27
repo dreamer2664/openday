@@ -158,6 +158,6 @@
   "original_procedural_backgrounds": "Replaced, no fallback",
   "new_art": "AI-assisted architectural repaint; transparent disclosure in app, PNG metadata and manifest.",
   "artifact": "docs/qa/08_nuovi_scenari_nes.jpg",
-  "seconds": 0.23,
+  "seconds": 0.25,
   "limitations": "File/metadata/palette integrity and native grid, not automated artistic or historical validation. Twelve delivered scenes visually reviewed during development; no user acceptance presumed."
 }

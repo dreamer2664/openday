@@ -1,4 +1,4 @@
-"""Build/verify the 3.2 twelve-location Windows + LPC + finished-PNG-QR distribution.
+"""Build/verify the 3.3 optional-composition Windows + LPC + finished-PNG-QR distribution.
 
 python scripts/package.py --candidate   # before independent extracted smoke
 python scripts/package.py               # final, requires current runtime smoke
@@ -51,6 +51,7 @@ def check(candidate=False):
                  'assets/characters/CREDITI_LPC.txt','assets/licenses/OGA-BY-3.0.txt','assets/licenses/CC-BY-SA-2.5.txt','assets/nes/manifest.json','assets/nes/LEGGIMI.md',
                  'assets/licenses/dependencies/Go-BSD-3-Clause.txt','assets/licenses/dependencies/skip2-go-qrcode-MIT.txt'):
         assert (ROOT/name).is_file(),name
+    for name in (EXE,'start.sh'):assert (ROOT/name).stat().st_mode&0o111==0o111,'Executable mode lost: '+name
     for directory in ('var/exports','var/qa_exports'):
         assert not list((ROOT/directory).glob('*.png')) and not list((ROOT/directory).glob('*.part')),'Clear synthetic or visitor exports before packaging.'
     assert not (ROOT/'var/ultima_cartolina.png').exists()
@@ -94,7 +95,7 @@ def check(candidate=False):
         shot_counts[directory]=n
     unit=(ROOT/'docs/test-results/unit-tests.txt').read_text()
     unit_count=int(re.search(r'Ran (\d+) tests',unit)[1])
-    assert unit_count>=58 and unit.strip().endswith('OK') and 'ResourceWarning' not in unit
+    assert unit_count>=76 and unit.strip().endswith('OK') and 'ResourceWarning' not in unit
     asset=report('asset-audit.json');assert asset['result']=='PASS' and asset['total']==7716 and asset['boundary_touches']==0
     assert (asset['licensed_parts'],asset['source_pngs_sha256_verified'],asset['definitions_sha256_verified'],asset['pose_atlases_sha256_verified'])==(56,255,56,85)
     layout=report('layout-audit.json');assert layout['cases']==12096 and layout['outside_inner_frame']==layout['foot_span_overlaps']==0
@@ -135,6 +136,23 @@ def check(candidate=False):
         assert smoke['standalone_html_sha256']==html_hash and smoke['windows_exe_sha256']==windows['sha256']
         assert len(smoke['checks'])==2 and passed(smoke['checks']) and len(smoke['standalone_file_only_offline'])==2 and passed(smoke['standalone_file_only_offline'])
         assert smoke['phone_creator_http']==smoke['reset_and_memory_cleanup']==smoke['no_directory_browsing']=='PASS'
+    optional=report('composition-ui-tests.json');assert optional['result']=='PASS' and optional['html_sha256']==html_hash
+    assert len(optional['tests'])==26 and passed(optional['tests']) and len(optional['exports'])==6
+    assert not optional['javascript_errors'] and not optional['standalone_http_requests']
+    editing=report('composition-audit.json');assert editing['result']=='PASS'
+    assert (editing['actor'],editing['stickers'],editing['normalization'])==(3240,324,745)
+    assert editing['geometry_mismatches']==editing['validation_mismatches']==editing['manual_group_outside_frame']==0
+    for name,digest in editing['source'].items():assert sha((ROOT/name).read_bytes())==digest,name
+    for name in ('layout-editor.js','layout-editor.css'):assert (ROOT/'browser'/name).read_bytes()==(ROOT/'web/static'/name).read_bytes()
+    stickers=json.loads((ROOT/'assets/stickers/manifest.json').read_text())['stickers'];assert len(stickers)==8
+    for sid,record in stickers.items():
+        for mode,path in record['paths'].items():assert sha((ROOT/path).read_bytes())==record['sha256'][mode]
+    examples=json.loads((ROOT/'renders/composition-33-examples.json').read_text());assert len(examples)==2
+    for entry in examples:
+        data=(ROOT/entry['path']).read_bytes();assert sha(data)==entry['sha256']
+        with Image.open(ROOT/entry['path']) as im:
+            assert im.size==(3000,2000) and 'DECORAZIONI FACOLTATIVE' in im.info['Description'] and 'POF-26-27' in im.info['Description']
+    for path in ('docs/COMPOSIZIONE_E_STICKER.md','docs/FONTI_LOGO.md','assets/stickers/FONTE_LOGO_E_LICENZA.txt','assets/licenses/CC-BY-4.0.txt'):assert (ROOT/path).is_file()
     for directory in ('app','scripts','tests'):
         for p in (ROOT/directory).glob('*.py'):compile(p.read_text(),str(p),'exec')
     node='Not installed; not a runtime requirement'
@@ -144,7 +162,7 @@ def check(candidate=False):
         node='PASS'
     except FileNotFoundError:pass
     assert (ROOT/'docs/GUIDA_RAPIDA.pdf').read_bytes().startswith(b'%PDF-')
-    return dict(photo_sources=12,nes_backgrounds=12,retained_3_1_backgrounds_unchanged=6,lpc_parts=56,source_lpc_pngs=255,hd_png_examples=13,jpg_examples=24,
+    return dict(optional_composition_checks=26,manual_layout_cases=3240,sticker_layout_cases=324,composition_validation_cases=745,optional_stickers=8,decorated_hd_examples=2,photo_sources=12,nes_backgrounds=12,retained_3_1_backgrounds_unchanged=6,lpc_parts=56,source_lpc_pngs=255,hd_png_examples=13,jpg_examples=24,
                 screenshots=shot_counts,unit_tests=unit_count,nes_art_integrity='PASS: twelve canonical 600x400 paintings, at most 64 colours each',nes_redesign_checks=8,control_pixel_comparisons=3250,zero_pixel_alternatives_explicitly_reported=563,actual_control_ui_clicks=controls['actual_ui_alternative_clicks'],
                 layout_cases=12096,all_standalone_hd_exports=24,all_python_http_hd_exports=24,go_top_level_race_tests=26,service_browser_checks=15,standalone_browser_checks=22,
                 independently_extracted_copy='PENDING: candidate only' if candidate else 'PASS',
@@ -155,7 +173,7 @@ def check(candidate=False):
 
 def build(candidate=False):
     checks=check(candidate)
-    data=dict(result='CANDIDATE' if candidate else 'PASS',date='2026-11-27',revision='3.2: twelve places / 24 combinations + actual composited-pixel controls + retained 3.1 art and LPC + Windows LAN PNG QR',
+    data=dict(result='CANDIDATE' if candidate else 'PASS',date='2026-11-27',revision='3.3: mouse/touch character placement, optional final stickers and nameplate, authentic Casardi logo; retained twelve places / LPC / offline HD / Windows LAN PNG QR',
               archive=OUTPUT.name,preflight=checks,archive_crc='Verified after writing',manifest_sha256='Verified against every included ZIP member',
               excluded='All var files except README, visitor PNGs, caches, virtualenvs, toolchains and QA Linux binaries.',
               windows_native='NOT TESTED; only cross-compilation and same-source Linux checks',physical_phone='NOT TESTED — required on school LAN')
@@ -168,6 +186,7 @@ def build(candidate=False):
     with zipfile.ZipFile(OUTPUT) as z:
         assert z.testzip() is None,'Corrupt ZIP member'
         names=z.namelist();assert len(names)==len(set(names))==len(listing)
+        for name in (EXE,'start.sh'):assert (z.getinfo(ROOT.name+'/'+name).external_attr>>16)&0o111==0o111,'ZIP executable mode: '+name
         assert all(n.startswith(ROOT.name+'/') and '/..' not in n for n in names)
         assert not any('/var/' in n and not n.endswith('/var/README.md') for n in names)
         for line in MANIFEST.read_text().splitlines():

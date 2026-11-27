@@ -7,7 +7,7 @@
   const csrf = $('meta[name="kiosk-csrf"]').content;
   const state = { options:null, generation:0, epoch:0, step:0, highest:0, mode:'photo',
     styleChosen:false, scene:'casardi', name:'', character:{}, companion:null,
-    tab:'body', exported:null, countdown:null, ready:false };
+    composition:CasardiEditor.defaults(), tab:'body', exported:null, countdown:null, ready:false };
   const LABELS = {
     build:{minuto:'Minuta',snello:'Snella',medio:'Media',atletico:'Atletica',robusto:'Robusta'},
     face:{ovale:'Ovale',tondo:'Tondo',squadrato:'Squadrato',affusolato:'Affusolato'},
@@ -73,7 +73,7 @@
   const debounce=(fn,ms)=>{let t;return(...args)=>{clearTimeout(t);t=setTimeout(()=>fn(...args),ms);};};
   const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
   function payload(){return {mode:state.mode,scene:state.scene,name:state.name,
-    character:{...state.character},companion:state.companion?{...state.companion}:null};}
+    character:{...state.character},companion:state.companion?{...state.companion}:null,composition:JSON.parse(JSON.stringify(state.composition))};}
   function changed() {
     clearInterval(state.countdown);state.exported=null;$('#result').hidden=true;
   }
@@ -298,29 +298,31 @@
     }
   }
 
+  let editor=null;
   // ---- true postcard preview and HD export
   let previewSeq=0,previewAbort,exporting=false,exportEpoch=-1;
   async function loadPreview(){
+    editor.setRendering();
     const seq=++previewSeq,epoch=state.epoch;
     if(previewAbort)previewAbort.abort();previewAbort=new AbortController();
     $('#preview-loading').hidden=false;$('#btn-export').disabled=true;$('#result').hidden=true;
     try{
       let response;
       for(let attempt=0;attempt<6;attempt++){
-        try{response=await api('/api/preview',payload(),previewAbort.signal);break;}
+        try{response=await api('/api/editor-preview',payload(),previewAbort.signal);break;}
         catch(e){if(e.status===429&&attempt<5){await sleep(500);continue;}throw e;}
       }
-      const blob=await response.blob();
+      const data=await response.json();
       if(seq!==previewSeq||epoch!==state.epoch)return;
-      const url=URL.createObjectURL(blob);release(previewURL);previewURL=url;$('#final-preview').src=url;
+      $('#final-preview').src=data.image;
       await $('#final-preview').decode();
-      if(seq===previewSeq&&epoch===state.epoch)$('#btn-export').disabled=false;
-    }catch(e){if(e.name!=='AbortError')notify(e.message,true);}
+      if(seq===previewSeq&&epoch===state.epoch){await editor.setPreview(data);$('#btn-export').disabled=false;}
+    }catch(e){if(e.name!=='AbortError'){editor.failed();notify(e.message,true);}}
     finally{if(seq===previewSeq&&epoch===state.epoch)$('#preview-loading').hidden=true;}
   }
   $('#btn-back-edit').addEventListener('click',()=>showStep(3));
   $('#btn-export').addEventListener('click',async()=>{
-    if(exporting)return;exporting=true;const epoch=state.epoch;exportEpoch=epoch;
+    if(exporting)return;exporting=true;editor.setBusy(true);const epoch=state.epoch;exportEpoch=epoch;
     const btn=$('#btn-export');btn.disabled=true;btn.textContent='Composizione HD…';$('#result').hidden=true;
     try{
       const data=await json('/api/export',payload());
@@ -332,7 +334,7 @@
       $('#result').hidden=false;$('#qr-fallback').hidden=!!data.qr;
       countdown(data.expires_at);$('#result').scrollIntoView({behavior:'smooth',block:'nearest'});
     }catch(e){if(epoch===state.epoch)notify(e.message,true);}
-    finally{exporting=false;if(epoch===state.epoch){btn.disabled=false;btn.textContent='Genera PNG e QR code';}}
+    finally{exporting=false;if(epoch===state.epoch){editor.setBusy(false);btn.disabled=false;btn.textContent='Genera PNG e QR code';}}
   });
   function countdown(expires){
     clearInterval(state.countdown);
@@ -347,7 +349,7 @@
   // ---- reset also cancels exports in flight (server-side generation check)
   function clearUI(){
     state.epoch++;state.ready=false;state.highest=0;state.step=0;state.mode='photo';state.styleChosen=false;
-    state.scene='casardi';state.name='';state.character={...state.options.defaults.character};state.companion=null;state.tab='body';state.exported=null;
+    state.scene='casardi';state.name='';state.character={...state.options.defaults.character};state.companion=null;state.composition=CasardiEditor.defaults();editor?.reset();state.tab='body';state.exported=null;
     clearInterval(state.countdown);spriteSeq++;compSeq++;previewSeq++;
     if(spriteAbort)spriteAbort.abort();if(compAbort)compAbort.abort();if(previewAbort)previewAbort.abort();
     [openURL,closedURL,companionURL,previewURL].forEach(release);openURL=closedURL=companionURL=previewURL=null;
@@ -417,7 +419,7 @@
   async function boot(){
     $('#btn-retry').hidden=true;
     try{
-      state.options=await json('/api/options');for(const[k,v]of Object.entries(state.options.labels||{}))LABELS[k]={...LABELS[k],...v};await resetAll();
+      state.options=await json('/api/options');if(!editor)editor=CasardiEditor.mount({root:$('#composition-panel'),wrap:$('.preview-wrap'),image:$('#final-preview'),stickers:state.options.stickers,getComposition:()=>state.composition,getMode:()=>state.mode,imageFor:id=>'/stickers/'+id+'.png?mode='+state.mode,notify:notify,onChange:(composition,{render})=>{if(exporting)return;state.composition=composition;changed();if(render){$('#btn-export').disabled=true;loadPreview();}}});for(const[k,v]of Object.entries(state.options.labels||{}))LABELS[k]={...LABELS[k],...v};await resetAll();
     }catch(e){
       $('#boot-error').textContent=e.message;$('#boot-error').hidden=false;$('#btn-retry').hidden=false;
       $('#btn-start').textContent='Server non disponibile';$('#btn-retry').textContent='Riprova la connessione';
