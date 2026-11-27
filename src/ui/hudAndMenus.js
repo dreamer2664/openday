@@ -37,7 +37,7 @@ const PORTRAIT_ROWS = {
 
 const SPEAKER_NAMES = {
   ranaldo: "PROF. RANALDO (Matematica)",
-  carlo: "CARLO (Basket #35 OKC)",
+  carlo: "CARLO (Basket)",
   francesco: "FRANCESCO (Pianoforte)",
   ruggero: "RUGGERO (Atletica Leggera)",
   daniele: "DANIELE (Ballerino Latino-Americano)",

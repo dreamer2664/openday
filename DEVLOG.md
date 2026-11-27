@@ -1,3 +1,22 @@
+## Fase O — Somiglianza Ranaldo e canotta Carlo (v3.0.7, 26/11/2026)
+
+**Feedback:** «Ranaldo non è per niente uguale, Carlo non ha il numero sulla canotta, a questo punto fai
+semplicemente una canotta da basket colorata, senza numero, con vari colori.»
+
+**Ranaldo (ritratto 64×64 e sprite 32×36)**
+- Capelli: base grigio acciaio + calotta chiara + **punte irregolari** verso l'alto (6 ciuffi di altezza
+  diversa) con ombre di separazione: niente effetto casco.
+- Barba: percorsi anatomici (basettoni → guance → mascella → mento) in grigio chiaro, baffi sopra la bocca
+  visibile, texture brizzolata.
+- Sopracciglia scure (nelle foto sono molto più scure dei capelli), iride azzurra.
+- Abito: **maglietta blu navy** piena, girocollo scuro, piega di luce — via giacca e cravatta.
+
+**Carlo**
+- Rimossi numero e riferimenti OKC. Canotta: petto arancio, spalline/bordi blu royal, filetto bianco,
+  colletto blu, luci e ombre sul tessuto.
+
+**Verifica:** playtest 511 · testi 341 · regressione 178 · mobile 30 · 0 errori JS.
+
 ## Fase N — Ranaldo, Carlo #35 OKC e Francesco (v3.0.6, 26/11/2026)
 
 **Richieste:** «La frangia di Francesco un po' più bassa» · «due foto del prof. Ranaldo» ·

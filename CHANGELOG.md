@@ -1,5 +1,19 @@
 # CHANGELOG — OPERAZIONE EIPASS: IL CASARDI IN 8 BIT
 
+## v3.0.7 — Ranaldo somigliante, canotta colorata per Carlo (26/11/2026)
+
+**Prof. Ranaldo**
+- Ritratto e sprite rifatti puntando sulla **somiglianza con le due foto**: capelli **grigio argento
+  voluminosi con ciuffi a punta** sulla sommità e lati corti, **barba corta chiara che segue la mascella**
+  (basettoni → guance → mento) con baffi e bocca visibili, **sopracciglia scure** e **occhi azzurri**.
+- Abito cambiato: **maglietta blu navy a girocollo** (come nelle foto) al posto della giacca con cravatta,
+  sia nello sprite sia nel ritratto.
+
+**Carlo**
+- Via il numero: la canotta è ora una **canotta da basket colorata** — petto arancio vivo, spalline e
+  bordi **blu royal**, filetto bianco sul giromanica, colletto blu. Semplice e leggibile a 1x.
+- Etichetta HUD tornata a `CARLO (Basket)`; rimossi tutti i riferimenti al numero.
+
 ## v3.0.6 — Ranaldo dalle foto, Carlo #35 OKC, Francesco in abito (26/11/2026)
 
 **Prof. Ranaldo (2 foto reali)**

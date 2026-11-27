@@ -1,6 +1,8 @@
 # OPERAZIONE EIPASS — IL CASARDI IN 8 BIT
 
 
+> **v3.0.7** — Ranaldo ridisegnato sulle foto (capelli argento a punte, barba che segue la mascella, maglietta blu navy) e canotta da basket **colorata senza numero** per Carlo.
+>
 > **v3.0.6** — Ranaldo dalle foto (capelli argento, barba brizzolata, occhi azzurri), Carlo con la **canotta #35 OKC di Durant (2013-14)** e Francesco in blazer nero con frangia più bassa.
 >
 > **v3.0.5** — Daniele e Francesco ridisegnati **dalle foto reali**: fade + occhiali sottili + giacca avorio per Daniele, frangia folta + blazer nero da concerto per Francesco.
@@ -15,7 +17,7 @@ Videogioco originale narrativo-platform a 8-bit realizzato per l'**Open Day del 
 
 **Protagonisti giocabili (5):** **Prof. Ranaldo** *(Matematica)*, **Carlo** *(Basket)*, **Daniele** *(Ballo Latino-Americano)*, **Ruggero** *(Atletica Leggera)* e **Francesco** *(Pianoforte)*.
 
-**Gioca subito dal browser:** https://dreamer2664.github.io/openday/ — build standalone v3.0.6, nessuna installazione.
+**Gioca subito dal browser:** https://dreamer2664.github.io/openday/ — build standalone v3.0.7, nessuna installazione.
 
 **Repository:** https://github.com/dreamer2664/openday (sorgente `src/`, strumenti `tools/`, documentazione e storico).
 

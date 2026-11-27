@@ -31,7 +31,7 @@ export const CHARACTERS = {
     shortName: "CAR",
     fullName: "Carlo",
     role: "Protagonista & Cestista",
-    passion: "Basket — canotta #35 OKC",
+    passion: "Basket",
     color: "#f46d1f",
     accent: "#1d4ed8",
     speedMult: 1.05,
