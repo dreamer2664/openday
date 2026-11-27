@@ -1,5 +1,25 @@
 # CHANGELOG — OPERAZIONE EIPASS: IL CASARDI IN 8 BIT
 
+## v3.0.5 — Daniele e Francesco come nella vita reale (26/11/2026)
+
+Dalle **foto reali** caricate: i tre ragazzi erano «praticamente uguali, solo colori diversi». Ora
+hanno silhouette, taglio di capelli e abiti riconoscibili.
+
+**Daniele** (2 foto al sole + ritratto in studio)
+- **Taglio corto con fade ai lati** (tempie chiare quasi rasate) e ciuffo corto pettinato in avanti.
+- **Occhiali sottili ovali con lente ambrata**, disegnati sia nei ritratti 64×64 sia sullo sprite 32×36.
+- **Giacca avorio con revers ampi** su t-shirt bianca, spilla dorata, pantaloni chiari, scarpe chiare.
+- Palette HUD spostata su **oro/ambra** (era magenta) con cornice ritratto avorio.
+
+**Francesco** (foto al pianoforte)
+- **Blazer nero da concerto** su camicia nera al posto del cardigan smeraldo, colletto chiaro per staccare a 1x.
+- **Chioma molto voluminosa e mossa con frangia folta** sulla fronte (prima era un caschetto simile agli altri).
+- Tinta HUD spostata su un **ciano più brillante** per leggersi sopra l'abito scuro.
+
+**Tutti e cinque** restano distinti a colpo d'occhio: Carlo (occhiali spessi + baffetto + canotta #23),
+Ranaldo (sale-e-pepe + cravatta ocra + compasso), Daniele (fade + occhiali sottili + giacca avorio),
+Ruggero (fascia sportiva + pettorale di gara), Francesco (frangia folta + blazer nero).
+
 ## v3.0.4 — Personaggi rifiniti e facciata ricostruita dalle foto (26/11/2026)
 
 **Personaggi (sprite 32x36 e ritratti 64x64 rigenerati)**

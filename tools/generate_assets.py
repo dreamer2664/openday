@@ -103,13 +103,14 @@ CHAR_PALETTES = {
         "shoes": rgba("#f8fafc"),
     },
     "francesco": {
-        # Pianista elegante: chioma mossa/ondulata con riga laterale, cuffie studio oro/nere al collo, cardigan smeraldo
-        "hair": (rgba("#151019"), rgba("#2c2234"), rgba("#503f5e")),
-        "top": (rgba("#0b4f47"), rgba("#137a6e"), rgba("#2eb09e")),
-        "sub": rgba("#faf5e8"),
+        # DALLA FOTO AL PIANOFORTE: BLASER NERO da concerto su camicia nera, capelli mossi
+        # molto voluminosi con frangia folta. Nessun colore acceso: eleganza severa.
+        "hair": (rgba("#171420"), rgba("#2a2534"), rgba("#4a4358")),
+        "top": (rgba("#0c0c11"), rgba("#1b1b23"), rgba("#2e2e3a")),
+        "sub": rgba("#121218"),
         "acc": rgba("#fbbf24"),
-        "pants": (rgba("#1b1929"), rgba("#2c2842")),
-        "shoes": rgba("#261915"),
+        "pants": (rgba("#0b0b10"), rgba("#1a1a22")),
+        "shoes": rgba("#191921"),
     },
     "ruggero": {
         # Velocista & Ostacolista d'Atletica Leggera: capelli castano scuro messy + fascia atletica e completino da pista cremisi/bianco!
@@ -121,14 +122,14 @@ CHAR_PALETTES = {
         "shoes": rgba("#ef4444"),
     },
     "daniele": {
-        # 5° Protagonista giocabile: ballerino latino-americano — camicia aperta corallo/magenta su canotta bianca,
-        # pantaloni neri da ballo e scarpe da salsa lucide. Fascia ritmica magenta al polso (accento).
-        "hair": (rgba("#231710"), rgba("#4a3021"), rgba("#7d563c")),
-        "top": (rgba("#9d174d"), rgba("#db2777"), rgba("#f472b6")),
-        "sub": rgba("#fff7fb"),
-        "acc": rgba("#fbbf24"),
-        "pants": (rgba("#111827"), rgba("#1f2937")),
-        "shoes": rgba("#f9a8d4"),
+        # DALLE FOTO: giacca AVORIO con revers ampi su t-shirt bianca, pantaloni chiari,
+        # capelli corti con fade ai lati e occhiali sottili. Eleganza da sera, non tuta sportiva.
+        "hair": (rgba("#241a12"), rgba("#4a3524"), rgba("#7a6248")),
+        "top": (rgba("#8f8878"), rgba("#cfc6b3"), rgba("#eee7d7")),
+        "sub": rgba("#fbf8f1"),
+        "acc": rgba("#c9a227"),
+        "pants": (rgba("#7c7566"), rgba("#a9a293")),
+        "shoes": rgba("#f4f1e8"),
     },
     "sofia": {
         "hair": (rgba("#3b1d16"), rgba("#693528"), rgba("#99513f")),
@@ -177,19 +178,20 @@ def draw_canonical_messy_hair_32(im, hx, hy, hd, hm, hl, variant="carlo", bounce
         px(im, hx + 20, by + 10, hd)
 
     elif variant == "francesco":
-        # Onde voluminose con riga laterale morbida e ciocche lunghe alle tempie
-        rect(im, hx + 9, by + 3, 14, 5, hm)
-        rect(im, hx + 7, by + 6, 18, 4, hm)
-        rect(im, hx + 6, by + 8, 3, 6, hd)  # onda laterale lunga sx
-        rect(im, hx + 22, by + 8, 3, 5, hd)  # onda laterale lunga dx
-        rect(im, hx + 10, by + 2, 6, 2, hl)
-        rect(im, hx + 17, by + 2, 5, 2, hm)
-        rect(im, hx + 11, by + 4, 4, 2, hl)
-        # Ciuffo ondulato obliquo sulla fronte
-        rect(im, hx + 15, by + 9, 6, 2, hm)
-        px(im, hx + 16, by + 11, hd)
-        px(im, hx + 19, by + 11, hd)
-        px(im, hx + 11, by + 10, hd)
+        # DALLA FOTO: chioma MOLTO voluminosa, morbida e mossa, con FRANGIA folta che
+        # copre la fronte (la differenza più evidente rispetto agli altri due).
+        rect(im, hx + 8, by + 2, 16, 5, hm)          # calotta ampia
+        rect(im, hx + 10, by + 1, 12, 2, hl)         # luce in alto
+        rect(im, hx + 6, by + 5, 20, 4, hm)          # volume laterale
+        rect(im, hx + 6, by + 8, 3, 7, hd)           # onda lunga sx
+        rect(im, hx + 23, by + 8, 3, 6, hd)          # onda lunga dx
+        rect(im, hx + 9, by + 8, 14, 3, hd)          # FRANGIA folta sulla fronte
+        px(im, hx + 11, by + 11, hd)
+        px(im, hx + 14, by + 11, hd)
+        px(im, hx + 18, by + 11, hd)
+        px(im, hx + 21, by + 11, hd)
+        px(im, hx + 12, by + 4, hl)
+        px(im, hx + 19, by + 3, hm)
 
     elif variant == "ruggero":
         # Ciuffi scattanti sparati in avanti/alto + fascia sportiva bianca/cremisi!
@@ -224,17 +226,17 @@ def draw_canonical_messy_hair_32(im, hx, hy, hd, hm, hl, variant="carlo", bounce
         px(im, hx + 19, by + 10, hd)
 
     elif variant == "daniele":
-        # Taglio giovane castano naturale, ordinato con ciuffo morbido laterale verso destra (silhouette ben distinta!)
-        rect(im, hx + 10, by + 3, 12, 5, hm)
-        rect(im, hx + 9, by + 6, 14, 4, hd)
-        rect(im, hx + 9, by + 8, 2, 3, hd)
-        rect(im, hx + 21, by + 8, 2, 3, hm)
-        rect(im, hx + 11, by + 2, 7, 2, hl)
-        px(im, hx + 18, by + 3, hl)
-        # Ciuffo naturale diagonale leggero
-        rect(im, hx + 13, by + 9, 6, 1, hm)
-        px(im, hx + 17, by + 10, hd)
-        px(im, hx + 19, by + 10, hm)
+        # DALLE FOTO: taglio CORTO con FADE ai lati (le tempie sono quasi rasate) e
+        # ciuffo corto pettinato in avanti. Silhouette compatta, molto diversa da Francesco.
+        rect(im, hx + 10, by + 3, 12, 5, hm)          # volume corto sopra
+        rect(im, hx + 11, by + 2, 8, 2, hl)           # luce corta
+        rect(im, hx + 9, by + 6, 3, 2, rgba("#6b5a4c"))   # FADE chiaro tempia sx
+        rect(im, hx + 20, by + 6, 3, 2, rgba("#6b5a4c"))  # FADE chiaro tempia dx
+        px(im, hx + 9, by + 8, rgba("#8d7c6c"))
+        px(im, hx + 22, by + 8, rgba("#8d7c6c"))
+        rect(im, hx + 11, by + 7, 10, 2, hd)          # ciuffo corto in avanti
+        px(im, hx + 13, by + 9, hd)
+        px(im, hx + 18, by + 9, hm)
 
     elif variant == "sofia":
         rect(im, hx + 10, by + 2, 12, 3, hl)
@@ -356,6 +358,23 @@ def draw_char_32x36(im, ox, oy, cid, pose):
         rect(im, ox + 14, hy + 17, 5, 1, SKIN_MID)  # mento pulito senza barba!
         # sopracciglia folta già disegnata; lenti con doppio riflesso (vetro reale)
 
+    elif cid == "daniele":
+        # OCCHIALI SOTTILI OVALI CON LENTE AMBRATA (dalla foto al sole) + fade chiaro ai lati
+        gf = rgba("#1c1712")
+        gl = rgba("#8a6538")
+        rect(im, ox + 11, hy + 12, 4, 1, gf)
+        rect(im, ox + 17, hy + 12, 4, 1, gf)
+        px(im, ox + 15, hy + 12, gf); px(im, ox + 16, hy + 12, gf)
+        rect(im, ox + 11, hy + 13, 4, 2, gl)
+        rect(im, ox + 17, hy + 13, 4, 2, gl)
+        px(im, ox + 12, hy + 13, rgba("#e8c98f"))
+        px(im, ox + 18, hy + 13, rgba("#e8c98f"))
+        rect(im, ox + 11, hy + 15, 4, 1, gf)
+        rect(im, ox + 17, hy + 15, 4, 1, gf)
+        # fade chiaro sulle tempie (taglio corto ai lati)
+        px(im, ox + 9, hy + 10, rgba("#6b5a4c"))
+        px(im, ox + 22, hy + 10, rgba("#6b5a4c"))
+
     elif cid == "ranaldo":
         # PROF. RANALDO (45 ANNI): barba corta curata sale-e-pepe aderente alla mascella (non barba lunga da 70enne!)
         rect(im, ox + 14, hy + 15, 5, 1, hd)  # baffo corto curato
@@ -383,12 +402,16 @@ def draw_char_32x36(im, ox, oy, cid, pose):
         rect(im, ox + 13, hy + 21, 5, 4, WHITE)
         rect(im, ox + 14, hy + 22, 3, 2, pal["sub"])
     elif cid == "francesco":
-        # Cardigan smeraldo aperto su camicia avorio + CUFFIE DA STUDIO nere/oro al collo!
-        rect(im, ox + 13, hy + 19, 5, 9, pal["sub"])
-        rect(im, ox + 10, hy + 18, 3, 3, rgba("#1e293b"))  # padiglione cuffia sx
-        rect(im, ox + 19, hy + 18, 3, 3, rgba("#1e293b"))  # padiglione cuffia dx
-        px(im, ox + 11, hy + 19, pal["acc"])  # anello oro cuffia sx
-        px(im, ox + 20, hy + 19, pal["acc"])  # anello oro cuffia dx
+        # BLAZER NERO DA CONCERTO (dalla foto al pianoforte) su camicia nera:
+        # rever in evidenza, abbottonatura centrale, un solo lampo di luce sul tessuto.
+        rect(im, ox + 10, hy + 18, 3, 2, rgba("#22222b"))   # spalla sinistra
+        rect(im, ox + 19, hy + 18, 3, 2, rgba("#22222b"))   # spalla destra
+        rect(im, ox + 13, hy + 19, 5, 9, rgba("#0c0c11"))   # camicia nera
+        rect(im, ox + 14, hy + 20, 1, 7, rgba("#2e2e3a"))   # abbottonatura
+        px(im, ox + 12, hy + 21, rgba("#5a5a68"))           # riflesso rever sx
+        px(im, ox + 19, hy + 21, rgba("#5a5a68"))           # riflesso rever dx
+        px(im, ox + 15, hy + 19, rgba("#c9c7d2"))           # colletto della camicia (stacco)
+        px(im, ox + 16, hy + 20, rgba("#8e8c9c"))
     elif cid == "ruggero":
         # Canotta da Atletica Leggera cremisi con spalline sportive e pettorale di gara bianco sul petto!
         rect(im, ox + 9, hy + 19, 2, 3, SKIN)  # spalle scoperte da canotta pista
@@ -397,11 +420,14 @@ def draw_char_32x36(im, ox, oy, cid, pose):
         rect(im, ox + 13, hy + 22, 5, 1, rgba("#0f172a"))  # righe numero gara
         rect(im, ox + 14, hy + 24, 3, 1, rgba("#dc2626"))
     elif cid == "daniele":
-        # Camicia da ballo corallo aperta sulla canotta bianca, fazzoletto oro e scarpe da salsa!
-        rect(im, ox + 10, hy + 18, 11, 2, td)  # bordo cappuccio
-        rect(im, ox + 13, hy + 19, 5, 9, pal["sub"])  # t-shirt bianca centrale
-        rect(im, ox + 12, hy + 19, 1, 9, pal["acc"])  # profilo zip ciano sx
-        rect(im, ox + 18, hy + 19, 1, 9, pal["acc"])  # profilo zip ciano dx
+        # GIACCA AVORIO CON REVERS AMPI su t-shirt bianca (dalla foto) + spilla dorata all'occhiello
+        rect(im, ox + 10, hy + 18, 3, 2, rgba("#eee7d7"))   # spalla sinistra chiara
+        rect(im, ox + 19, hy + 18, 3, 2, rgba("#eee7d7"))   # spalla destra
+        rect(im, ox + 13, hy + 19, 5, 9, pal["sub"])        # t-shirt bianca al centro
+        rect(im, ox + 12, hy + 19, 1, 9, rgba("#b7ae9b"))   # revers sinistro in ombra
+        rect(im, ox + 18, hy + 19, 1, 9, rgba("#b7ae9b"))   # revers destro in ombra
+        px(im, ox + 12, hy + 20, pal["acc"])                # spilla dorata
+        px(im, ox + 19, hy + 20, rgba("#8f8878"))           # taschino
     elif cid == "sofia":
         rect(im, ox + 13, hy + 19, 5, 3, pal["acc"])
 
@@ -550,7 +576,7 @@ def draw_portrait_64(im, ox, oy, cid, expr):
         "carlo": ("#19233c", "#28385e", "#f46d1f"),
         "francesco": ("#0d2a28", "#184743", "#38e2d8"),
         "ruggero": ("#2b121c", "#4a1e30", "#f45565"),
-        "daniele": ("#2b0d1f", "#5c1636", "#f472b6"),
+        "daniele": ("#241d12", "#4a3d26", "#e0b25c"),
         "sofista": ("#171326", "#27203d", "#c084fc"),
         "sofia": ("#221438", "#3b2363", "#fbbf24"),
         "mimmo": ("#142436", "#213c59", "#60a5fa"),
@@ -624,12 +650,14 @@ def draw_portrait_64(im, ox, oy, cid, expr):
         rect(buf, 27, 51, 10, 8, WHITE)
         rect(buf, 29, 53, 6, 4, pal["sub"])
     elif cid == "francesco":
-        # Cardigan smeraldo aperto + CUFFIE DA STUDIO nere con anelli d'oro al collo!
-        rect(buf, 24, 46, 16, 15, pal["sub"])
-        rect(buf, 17, 42, 7, 8, rgba("#1e293b"))
-        rect(buf, 40, 42, 7, 8, rgba("#1e293b"))
-        rect(buf, 19, 44, 3, 4, pal["acc"])
-        rect(buf, 42, 44, 3, 4, pal["acc"])
+        # BLAZER NERO ELEGANTE da concerto (dalla foto al pianoforte) + camicia nera
+        rect(buf, 10, 46, 44, 15, rgba("#16161c"))
+        rect(buf, 12, 46, 8, 15, rgba("#22222b"))            # bavero sinistro
+        rect(buf, 44, 46, 8, 15, rgba("#22222b"))            # bavero destro
+        rect(buf, 26, 46, 12, 15, rgba("#0c0c11"))           # camicia nera al centro
+        rect(buf, 31, 47, 2, 14, rgba("#2a2a34"))            # abbottonatura
+        px(buf, 19, 50, rgba("#3a3a46"))                     # riflesso del taschino
+        px(buf, 45, 50, rgba("#3a3a46"))
     elif cid == "ruggero":
         # Canotta da Atletica Leggera cremisi con spalle scoperte e pettorale di gara bianco!
         rect(buf, 12, 46, 7, 15, SKIN)
@@ -692,19 +720,7 @@ def draw_portrait_64(im, ox, oy, cid, expr):
         rect(buf, 30, 17, 2, 4, hl)
         rect(buf, 38, 17, 4, 4, hd)
 
-    elif cid == "francesco":
-        # Pianista: chioma ondulata più lunga con riga laterale morbida e onde alle tempie
-        rect(buf, 15, 8, 34, 9, hm)
-        rect(buf, 18, 5, 14, 4, hl)
-        rect(buf, 33, 6, 12, 4, hm)
-        rect(buf, 12, 13, 6, 15, hd)  # onde lunghe fino alle orecchie!
-        rect(buf, 46, 13, 6, 14, hd)
-        rect(buf, 14, 15, 3, 10, hm)
-        # Grande onda asimmetrica da sx verso dx sulla fronte
-        rect(buf, 19, 16, 6, 4, hd)
-        rect(buf, 31, 16, 12, 5, hm)
-        rect(buf, 35, 17, 6, 6, hd)
-        rect(buf, 33, 16, 4, 3, hl)
+
 
     elif cid == "ruggero":
         # Attaccante: ciuffi dinamici appuntiti + fascia atletica biancorossa!
@@ -724,15 +740,37 @@ def draw_portrait_64(im, ox, oy, cid, expr):
         rect(buf, 38, 16, 4, 4, hd)
 
     elif cid == "daniele":
-        # Capelli castani naturali ben curati con riga laterale morbida verso destra
-        rect(buf, 17, 8, 30, 9, hm)
-        rect(buf, 20, 5, 16, 4, hl)
-        rect(buf, 34, 6, 10, 4, hm)
-        rect(buf, 15, 12, 4, 11, hd)
-        rect(buf, 45, 12, 4, 11, hm)
-        rect(buf, 20, 16, 6, 3, hd)
-        rect(buf, 29, 16, 12, 4, hm)
-        rect(buf, 36, 17, 6, 3, hd)
+        # DALLE FOTO: taglio corto con FADE ai lati (sfumato chiaro sulle tempie), ciuffo
+        # corto e pettinato in avanti sulla fronte, riga appena accennata a sinistra.
+        rect(buf, 19, 6, 25, 7, hm)          # volume superiore corto
+        rect(buf, 21, 4, 20, 3, hl)          # luce sul ciuffo
+        rect(buf, 17, 11, 3, 8, rgba("#6b5a4c"))   # fade chiaro tempia sx
+        rect(buf, 44, 11, 3, 8, rgba("#6b5a4c"))   # fade chiaro tempia dx
+        rect(buf, 16, 14, 1, 5, rgba("#8d7c6c"))   # sfumatura più chiara verso l'orecchio
+        rect(buf, 47, 14, 1, 5, rgba("#8d7c6c"))
+        rect(buf, 19, 12, 12, 4, hd)         # ciuffo pettinato in avanti
+        rect(buf, 31, 12, 14, 4, hm)
+        # riga corta laterale sinistra
+        rect(buf, 22, 11, 1, 4, hl)
+
+    elif cid == "francesco":
+        # DALLA FOTO AL PIANOFORTE: capelli mossi molto voluminosi con FRANGIA folta
+        # che copre la fronte e scende sopra le sopracciglia (mai corto).
+        rect(buf, 14, 5, 36, 10, hm)         # calotta ampia e morbida
+        rect(buf, 16, 3, 26, 4, hl)          # luce in alto
+        rect(buf, 40, 4, 10, 4, hm)
+        rect(buf, 12, 10, 5, 14, hd)         # onde lunghe alle tempie
+        rect(buf, 47, 10, 5, 13, hd)
+        rect(buf, 15, 12, 3, 8, hm)
+        rect(buf, 46, 12, 3, 8, hm)
+        # FRANGIA folta a ciuffi sulla fronte
+        rect(buf, 18, 13, 28, 6, hd)
+        rect(buf, 20, 12, 7, 4, hm)
+        rect(buf, 29, 11, 8, 4, hl)
+        rect(buf, 38, 12, 7, 5, hm)
+        px(buf, 22, 19, hd)
+        px(buf, 30, 19, hd)
+        px(buf, 39, 19, hd)
 
     elif cid == "sofia":
         rect(buf, 16, 9, 32, 9, hm)
@@ -795,6 +833,20 @@ def draw_portrait_64(im, ox, oy, cid, expr):
         # Riflesso realistico azzurro-bianco sul vetro!
         px(buf, 19, 26, rgba("#bae6fd")); px(buf, 20, 26, WHITE)
         px(buf, 35, 26, rgba("#bae6fd")); px(buf, 36, 26, WHITE)
+    elif cid == "daniele":
+        # OCCHIALI SOTTILI OVALI (dalla foto al sole): montatura fine scura, lente ambrata
+        gf = rgba("#1c1712")
+        gl = rgba("#7c5a33")
+        for gx in (19, 35):
+            rect(buf, gx, 26, 11, 1, gf)        # ponte superiore
+            rect(buf, gx, 32, 11, 1, gf)        # ponte inferiore
+            rect(buf, gx, 27, 1, 5, gf)         # asta sinistra
+            rect(buf, gx + 10, 27, 1, 5, gf)    # asta destra
+            rect(buf, gx + 1, 27, 9, 5, gl)     # lente ambrata
+            px(buf, gx + 2, 27, rgba("#e8c98f"))  # riflesso caldo
+            px(buf, gx + 3, 28, rgba("#fde9c0"))
+        px(buf, 31, 28, gf)  # ponte sul naso
+        px(buf, 31, 29, gf)
     elif cid == "sofia":
         for gx in (20, 35):
             rect(buf, gx, 25, 9, 1, rgba("#fbbf24"))

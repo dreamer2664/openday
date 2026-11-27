@@ -1,3 +1,22 @@
+## Fase M — Daniele e Francesco dalle foto (v3.0.5, 26/11/2026)
+
+**Richiesta:** «Ho caricato 2 foto di Daniele e una di Francesco per renderli più come la loro versione
+nella vita reale, visto che ora sono praticamente 3 personaggi uguali solo colori diversi.»
+
+**Analisi delle foto**
+- Daniele: taglio corto con fade netto ai lati, ciuffo pettinato avanti, occhiali sottili con lente scura
+  ambrata, giacca avorio con revers ampi, t-shirt bianca, pantaloni chiari, postura rilassata.
+- Francesco: capelli mossi molto voluminosi con frangia folta, blazer nero su camicia nera, al pianoforte.
+
+**Interventi su `tools/generate_assets.py`** (nessuna modifica al runtime)
+- Nuove palette `daniele` (avorio/oro) e `francesco` (nero/carbonio).
+- Capigliatura 32×36 riscritta per entrambi: fade per Daniele, frangia folta per Francesco.
+- Occhiali di Daniele disegnati su sprite (3 righe) e su ritratto (montatura fine + lente ambrata).
+- Abiti ridisegnati: giacca avorio con revers e spilla; blazer nero con colletto chiaro.
+- `constants.js`: tinte HUD (Daniele oro `#e0b25c`, Francesco ciano `#5eead4`) e cornice ritratto avorio.
+
+**Verifica:** playtest 511 · testi 341 · regressione 178 · mobile 30 · screenshot 7/7 · minigiochi 6/6 · 0 errori JS.
+
 ## Fase L — Personaggi e facciata dalle foto (v3.0.4, 26/11/2026)
 
 **Richiesta:** «Concentrati sui personaggi molto, puoi migliorarli molto. Poi vedi le foto della scuola e
