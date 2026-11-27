@@ -63,13 +63,17 @@ def palettes():
 
 SKIN_MAP=dict(porcellana='light',chiara='light',dorata='amber',ambra='taupe',olivastra='olive',bruna='brown',ebano='black')
 HAIR_MAP=dict(nero='black',castano='dark_brown',nocciola='light_brown',biondo='blonde',ramato='ginger',rosso='redhead',cenere='gray',platino='platinum',viola='purple',verde='green',ciano='cyan',rosa='pink',blu_elettrico='blue')
-CLOTH_MAP=dict(bianco='white',crema='tan',rosso='red',bordeaux='maroon',blu='blue',navy='navy',azzurro='sky',verde='green',oliva='forest',giallo='yellow',senape='orange',grigio='gray',antracite='charcoal',nero='black',rosa='pink',lilla='lavender',ciano='cyan',magenta='magenta',jeans='blue',**{'jeans-chiaro':'bluegray','jeans-scuro':'navy'},beige='tan',cuoio='leather',cognac='brown',oro='yellow',argento='gray',bronzo='leather',rame='orange')
+CLOTH_MAP=dict(bianco='white',crema='tan',rosso='red',bordeaux='maroon',blu='blue',navy='navy',azzurro='sky',verde='green',oliva='forest',giallo='yellow',senape='orange',grigio='gray',antracite='charcoal',nero='black',rosa='pink',lilla='lavender',ciano='cyan',magenta='magenta',jeans='denim',**{'jeans-chiaro':'denim_light','jeans-scuro':'denim_dark'},beige='beige',cuoio='leather',cognac='brown',oro='yellow',argento='gray',bronzo='leather',rame='orange')
 EYE_MAP=dict(castani='brown',neri='dark',verdi='green',azzurri='blue',grigi='gray',ambra='yellow')
 CUSTOM={
  'body':{'porcelain':['#352830','#b56e61','#d69b80','#edb79a','#ffdec5','#fff3df']},
  'hair':{'cyan':['#081e2d','#123849','#226776','#3898a1','#69cdbf','#b7f3db']},
  'cloth':{'cyan':['#101e31','#1c3b50','#245d71','#35879a','#58b6bd','#a9e8dc'],
-          'magenta':['#22182d','#482541','#713553','#aa4774','#da78aa','#efb5cd']},
+          'magenta':['#22182d','#482541','#713553','#aa4774','#da78aa','#efb5cd'],
+          'denim':['#15243c','#253a57','#3b5476','#56789b','#80a2c0','#bfd2df'],
+          'denim_light':['#293c55','#3e5878','#607ea2','#8aa5c4','#b2c6db','#dee7ef'],
+          'denim_dark':['#101b2c','#1d2d43','#30455f','#475f7d','#6f8ba7','#a7bdce'],
+          'beige':['#3d352f','#605244','#8a765a','#b5a180','#d5c6a7','#f1e6ce']},
  'eye':{'dark':['#10141f','#1d2638','#5c7383']}
 }
 

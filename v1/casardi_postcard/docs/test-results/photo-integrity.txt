@@ -4,3 +4,9 @@ OK foro: file locale integro; CC BY-SA 4.0
 OK epidauro: file locale integro; CC BY-SA 4.0
 OK biblioteca: file locale integro; CC BY-SA 4.0
 OK paestum: file locale integro; CC BY-SA 3.0
+OK colosseo: file locale integro; CC BY-SA 2.5
+OK acropoli: file locale integro; CC BY-SA 4.0
+OK pompei: file locale integro; CC BY-SA 3.0
+OK taormina: file locale integro; CC BY-SA 3.0
+OK casteldelmonte: file locale integro; CC BY-SA 4.0
+OK castellobarletta: file locale integro; Public domain

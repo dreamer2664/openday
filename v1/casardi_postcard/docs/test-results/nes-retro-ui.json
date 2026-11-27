@@ -1,8 +1,8 @@
 {
   "result": "PASS",
-  "revision": "3.1 NES Retro",
+  "revision": "3.2 NES Retro",
   "date": "2026-11-27",
-  "html_sha256": "00dbd839a4749810b8ceefecf83d108a9cbcbf336d198d3ff58dd7fe36e9d3f7",
+  "html_sha256": "48cca47603d4eb53db38680ace4151c9b3dac134b38c02bbd7f0849403d7e049",
   "tests": [
     {
       "name": "Benvenuto: miniature proporzionate e nessun overflow a 320 px",
@@ -30,7 +30,7 @@
       "width": 1366
     },
     {
-      "name": "Sei note NES distinte da quelle fotografiche; Casardi storico identificato in entrambi gli stili",
+      "name": "Dodici note NES distinte da quelle fotografiche; Casardi storico identificato in entrambi gli stili",
       "result": "PASS"
     },
     {

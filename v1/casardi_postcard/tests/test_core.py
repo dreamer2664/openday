@@ -168,7 +168,7 @@ class ApiTests(unittest.TestCase):
 
     def test_catalogue_and_assets(self):
         r=self.client.get('/api/options');self.assertEqual(r.status_code,200)
-        self.assertEqual(len(r.json['scenes']),6);self.assertEqual(len(r.json['animals']),8)
+        self.assertEqual(len(r.json['scenes']),12);self.assertEqual(len(r.json['animals']),8)
         for path in ('/static/app.js','/static/app.css','/static/fonts/Cinzel.ttf','/network-test'):
             with self.client.get(path) as response:
                 self.assertEqual(response.status_code,200)

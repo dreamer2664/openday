@@ -18,7 +18,7 @@
    <p class="eyebrow">OPEN DAY 2026/27</p>
    <h1 id="welcome-title">La tua<br><span>cartolina.</span></h1>
    <p class="lead">Un luogo vero. Il tuo personaggio.<br>Un ricordo, tutto tuo.</p>
-   <p class="intro">Esplora sei luoghi in fotografia o in un mondo di pixel. Componi il tuo avatar, scegli un piccolo compagno e crea una cartolina ad alta risoluzione.</p>
+   <p class="intro">Esplora dodici luoghi in fotografia o in un mondo di pixel. Componi il tuo avatar, scegli un piccolo compagno e crea una cartolina ad alta risoluzione.</p>
    <button class="primary big" id="start" disabled>Preparazione… <span aria-hidden="true">→</span></button>
    <p class="offline-badge"><span aria-hidden="true">●</span> File unico · PC e telefono · Funziona offline</p>
    <p id="boot-error" role="alert" hidden></p>
@@ -32,8 +32,8 @@
    <p class="art-caption">Due stili. Lo stesso ricordo.<br><span>3000 × 2000 px</span> · PNG</p>
   </div>
  </main>
- <section class="worlds" aria-label="Le sei nuove ambientazioni pixel"><div class="worlds-label"><span>IL TUO PROSSIMO SCENARIO</span><span>6 luoghi da scegliere</span></div><div id="world-strip" class="world-strip"></div></section>
- <footer class="welcome-bottom"><span>Edizione autonoma · Tutto è incorporato nel file</span><span>NES RETRO / 3.1</span></footer>
+ <section class="worlds" aria-label="Le dodici ambientazioni pixel"><div class="worlds-label"><span>IL TUO PROSSIMO SCENARIO</span><span>12 luoghi da scegliere</span></div><div id="world-strip" class="world-strip"></div></section>
+ <footer class="welcome-bottom"><span>Edizione autonoma · Tutto è incorporato nel file</span><span>NES RETRO / 3.2</span></footer>
 </section>
 
 <section id="studio" hidden aria-label="Studio cartoline">
@@ -66,7 +66,7 @@
     </div>
    </section>
    <section class="pane" data-pane="1" hidden>
-    <h2>Scegli il luogo.</h2><p class="sub">Sei ambientazioni, tra la scuola e il mondo classico.</p><div class="scene-grid" id="scene-grid"></div><p class="scene-note" id="scene-note"></p>
+    <h2>Scegli il luogo.</h2><p class="sub">Dodici ambientazioni: la scuola, il mondo classico e i castelli di Puglia.</p><div class="scene-grid" id="scene-grid"></div><p class="scene-note" id="scene-note"></p>
    </section>
    <section class="pane" data-pane="2" hidden>
     <h2>Vuoi firmarla?</h2><p class="sub">Basta un nome o un nickname. Puoi anche lasciare il campo vuoto.</p>
@@ -102,7 +102,7 @@
      <p class="hint">Su telefono: se il download non parte, apri l’immagine e usa la pressione prolungata o il menu Condividi del browser per salvarla. Le opzioni dipendono dal sistema.</p>
      <details class="image-fallback"><summary>Mostra il PNG da salvare con pressione prolungata</summary><img id="save-image" alt="PNG finale: tieni premuto per salvarlo sul telefono"></details>
      <a class="text-button" id="save-credits" download="crediti-cartolina.txt">Scarica anche i crediti di foto e personaggio</a>
-     <p id="transfer-local-only" class="standalone-transfer-note">Stai usando il file autonomo: il PNG è salvabile su questo dispositivo. Per trasferirlo dal PC a un altro telefono con un vero QR, sul PC apri <strong>AVVIA_CARTOLINA_WINDOWS.exe</strong> dal pacchetto completo: si apre lo studio con il servizio locale, senza terminale né Python.</p>
+     <p id="transfer-local-only" class="standalone-transfer-note">Stai usando il file autonomo: il PNG è salvabile su questo dispositivo. Un normale QR non può contenere il PNG HD né rendere remoto il file locale: anche su Android serve un servizio raggiungibile. Nessun cloud o accoppiamento a due QR è stato aggiunto. Per trasferirlo dal PC a un altro telefono con il servizio LAN già incluso, sul PC apri <strong>AVVIA_CARTOLINA_WINDOWS.exe</strong> dal pacchetto completo: si apre lo studio con il servizio locale, senza terminale né Python.</p>
      <p class="privacy-note" id="result-privacy">Il file viene creato qui, non caricato online. Le copie già scaricate restano sul dispositivo.</p>
      <button class="secondary new-button" id="new">Ho finito · Nuova cartolina</button>
     </section>
@@ -140,8 +140,9 @@
    <p>Il Casardi è documentato con una foto storica del 1936, nativa 707 × 491 pixel: non è una foto attuale né un’immagine realmente acquisita a 3000 pixel. Le altre fonti incorporate sono ottimizzate in JPEG, lato massimo 3000 pixel, qualità 86. I file originali con hash e i riferimenti completi sono nel pacchetto sorgente.</p>
    <div id="credits-list"></div>
    <p>La licenza della fotografia non sostituisce eventuali autorizzazioni per l’uso dei beni culturali o dell’identità dell’istituto. Nessuna autorizzazione per foto tratte dal sito della scuola è presunta. Nessuna affiliazione dei fotografi è implicata.</p>
+   <h3>Personalizzazione: dettagli e coperture</h3><p>Le alternative attenuate sono confrontate con i pixel del personaggio attuale: una scelta coperta non viene presentata come una modifica visibile. «Scopri questo dettaglio» cambia esplicitamente gli strati che lo nascondono. Lo zoom del viso ingrandisce i pixel reali, senza sostituire il personaggio. Capelli, barba e sopracciglia condividono il colore. I capi senza una variante LPC per la corporatura scelta rimangono disattivati.</p>
    <h3>Nuove ambientazioni pixel</h3>
-   <p>Le sei illustrazioni NES sono ricostruzioni architettoniche <strong>assistite da IA</strong>, create dai riferimenti fotografici autorizzati e rifinite su griglia nativa 600 × 400 con una palette di 64 colori per sfondo. Non sono fotografie a cui è stato applicato un filtro, né disegni dichiarati interamente a mano. La generazione è avvenuta solo durante lo sviluppo: nell’app ci sono esclusivamente PNG locali, nessun modello o servizio esterno. Le architetture sono interpretazioni illustrative, non rilievi documentari; i colori del Casardi reinterpretano il riferimento del 1936, non documentano la scuola attuale. Non si rivendica un’esclusiva sugli elementi generati automaticamente. Lo stile è ispirato al rétro, senza simulare i limiti hardware originali NES.</p>
+   <p>Le dodici illustrazioni NES sono ricostruzioni architettoniche <strong>assistite da IA</strong>, create dai riferimenti fotografici autorizzati e rifinite su griglia nativa 600 × 400 con una palette di 64 colori per sfondo. Non sono fotografie a cui è stato applicato un filtro, né disegni dichiarati interamente a mano. La generazione è avvenuta solo durante lo sviluppo: nell’app ci sono esclusivamente PNG locali, nessun modello o servizio esterno. Le architetture sono interpretazioni illustrative, non rilievi documentari; i colori del Casardi reinterpretano il riferimento del 1936, non documentano la scuola attuale. Non si rivendica un’esclusiva sugli elementi generati automaticamente. Lo stile è ispirato al rétro, senza simulare i limiti hardware originali NES.</p>
    <h3>Codice, disegni e font</h3>
    <p>Codice originale: MIT. Nuova base dei personaggi: Universal LPC, con veri livelli disegnati da artisti e licenze per parte OGA-BY 3.0 / CC-BY-SA 3.0; <strong>non è tutta CC0</strong>. Crediti completi sotto e nei metadati di ogni PNG. Equipaggiamento fantascientifico originale e companion: CC0. Le ricostruzioni NES e le cartoline composte si distribuiscono come adattamenti CC BY-SA 4.0, conservando crediti e licenze dei riferimenti e dei materiali originali. Nessun personaggio o asset di videogiochi commerciali. Font Cinzel, EB Garamond e Press Start 2P: SIL OFL 1.1, incorporati in WOFF come sottoinsiemi Unicode U+0000–U+052F. Il sottoinsieme modificato di Press Start 2P è rinominato internamente «Casardi Pixel», nel rispetto del nome riservato; i font originali non sono modificati.</p>
    <details><summary>Autori e licenze delle parti LPC incluse</summary><pre id="lpc-credits" class="lpc-credits"></pre></details>

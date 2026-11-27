@@ -6,4 +6,4 @@ La modalità touch è **emulata**, non un telefono fisico. Il file è stato aper
 
 Hash dell’HTML e risultati in `docs/test-results/standalone-browser-tests.json`. Tutti i nomi/configurazioni sono sintetici.
 
-Revisione corrente: **3.1 NES Retro**, nuovi scenari e UI; personaggi LPC mantenuti. Le catture complete del benvenuto desktop/telefono sono anche in `../qa/09_interfaccia_nes.jpg` e `../qa/10_interfaccia_telefono.jpg`.
+Revisione corrente: **3.1 NES Retro**, dodici luoghi / ventiquattro combinazioni, controlli corretti e personaggi LPC mantenuti. Le catture complete del benvenuto desktop/telefono sono anche in `../qa/09_interfaccia_nes.jpg` e `../qa/10_interfaccia_telefono.jpg`.

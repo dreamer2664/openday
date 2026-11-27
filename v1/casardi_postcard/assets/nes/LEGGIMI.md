@@ -1,14 +1,16 @@
-# Sei nuovi scenari · NES Retro 3.1
+# Dodici scenari · NES Retro 3.2
 
-Questi **sei PNG nativi 600 × 400** sono le sorgenti canoniche modificabili usate sia da Canvas sia da Pillow. Sono illustrazioni architettoniche **assistite da IA**, rifinite su griglia e con una palette di 64 colori per sfondo. Non sono disegni interamente manuali, rilievi storici, foto attuali o asset di giochi commerciali. I personaggi LPC conservano palette e licenze proprie: il limite di 64 colori riguarda lo sfondo, non l’intera cartolina.
+Questi **dodici PNG nativi 600 × 400** sono le sorgenti canoniche modificabili usate sia da Canvas sia da Pillow. Sono illustrazioni architettoniche **assistite da IA**, rifinite su griglia e con una palette di 64 colori per sfondo. Non sono disegni interamente manuali, rilievi storici, foto attuali o asset di giochi commerciali. I personaggi LPC conservano palette e licenze proprie: il limite di 64 colori riguarda lo sfondo, non l’intera cartolina.
 
 Le foto di riferimento autentiche, i loro autori e le licenze sono in `../photos/photo_metadata.json` e `../../SOURCES_AND_LICENSES.md`. Per Casardi il riferimento è del **1936**: la versione illustrata a colori non rappresenta una fotografia della scuola di oggi. L’oculo del Pantheon è fuori dall’inquadratura scelta; i dettagli minori sono interpretativi.
+
+Le sei illustrazioni consegnate nella **3.1 sono preservate byte per byte**; la 3.2 aggiunge Colosseo, Acropoli, Pompei, Taormina, Castel del Monte e Castello di Barletta. Gli hash precedenti sono in `manifest.json → retained_from_3_1`; l’audit verifica che siano invariati.
 
 ## File e integrità
 
 `manifest.json` conserva dimensioni, hash SHA-256, tavolozza, fonte/licenza del riferimento, elementi architettonici e hash dei master di lavorazione. I master non sono inclusi e **non sono una dipendenza runtime**. `../../app/nes_art.py` verifica il PNG prima del rendering. Un file cambiato senza aggiornare il manifest genera un errore esplicito, non un ritorno silenzioso al vecchio fondale.
 
-`../../scripts/import_nes_art.py --masters CARTELLA` documenta come sono stati rifiniti i master se il manutentore ne dispone. Non scarica né genera nuove immagini. I PNG consegnati possono invece essere aperti direttamente in un editor pixel art.
+`../../scripts/import_nes_art.py --masters CARTELLA --scenes ID...` documenta come sono stati rifiniti i master se il manutentore ne dispone. Non scarica né genera nuove immagini. I PNG consegnati possono invece essere aperti direttamente in un editor pixel art.
 
 ## Modifiche locali, a servizio fermo
 
@@ -17,7 +19,7 @@ Le foto di riferimento autentiche, i loro autori e le licenze sono in `../photos
 3. Conservare nei metadati provenienza, licenze e dichiarazione IA applicabile. Per una nuova fonte acquisire prima i diritti, senza attribuire automaticamente la licenza del vecchio riferimento.
 4. Aggiornare consapevolmente nel record di `manifest.json` l’hash SHA-256 del file e le lavorazioni. Se cambia la fonte, aggiornare anche autore/link/licenza/hash del riferimento. **Non ricalcolare hash per nascondere un file corrotto o inatteso.**
 5. Rivedere `NES_SCENES` in `app/scenes.py`: piedi, scala, posizione del companion e zona della targhetta sono specifici dell’inquadratura. Il builder incorpora questi layout nel browser.
-6. Rigenerare campioni e HTML con `scripts/render_gallery.py`, `scripts/build_examples.py`, `scripts/build_standalone.py`; rieseguire test, audit e confezionamento. `build_examples.py` preserva i sei PNG canonici e non li ridisegna.
+6. Rigenerare campioni e HTML con `scripts/render_gallery.py`, `scripts/build_examples.py`, `scripts/build_standalone.py`; rieseguire test, audit e confezionamento. `build_examples.py` preserva i dodici PNG canonici e non li ridisegna.
 
 Tutti gli elementi della cartolina sono composti a 600 × 400 **prima** dell’ingrandimento nearest-neighbor ×5 a 3000 × 2000. Nessun filtro o modello generativo viene eseguito durante la visita; nessuna connessione Internet è necessaria.
 

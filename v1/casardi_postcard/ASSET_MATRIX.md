@@ -1,11 +1,11 @@
-# Matrice effettiva degli asset · revisione 3.1 NES Retro
+# Matrice effettiva degli asset · revisione 3.2 · Dodici luoghi
 ## Liceo Alfredo Casardi · Open Day 2026/27 · Barletta
 
 Inventario della versione consegnata, **27 novembre 2026**. I colori, i prodotti cartesiani, i preset, le icone derivate e le copie nei due renderer **non vengono contati come nuovi disegni**.
 
 ## 1 · Personaggi LPC mantenuti dalla revisione precedente
 
-I personaggi LPC già accettati **non sono stati sostituiti nella 3.1**. La vecchia base procedurale è esclusa dalla consegna. Si mantiene il lavoro modulare degli artisti **Universal LPC Spritesheet Character Generator**, revisione fissata:
+I personaggi LPC già accettati **non sono stati sostituiti come famiglia nella 3.2**. La vecchia base procedurale è esclusa dalla consegna. Si mantiene il lavoro modulare degli artisti **Universal LPC Spritesheet Character Generator**, revisione fissata:
 
 ```text
 86a3719ee4a7e2e9fb27c7c152e29a741d3e930a
@@ -46,7 +46,7 @@ I numeri includono l’opzione «nessuno» dove indicata. Tutte le categorie sup
 | Acconciatura | **15** | **14 disegni** e senza capelli: corti asimmetrici, caschetto, ricci corti, lunghi lisci, coda alta, crocchia, treccia, ondulati, cresta corta/lunga, treccine aderenti, dreadlocks, afro, rasati |
 | Barba / baffi | **4** | Nessuno, baffi, barba corta, barba lunga; tre livelli LPC, non quattro barbe nuove |
 | Capi superiori | **10** | Sette capi LPC e tre look tecnici basati su capi LPC con pannelli originali: dettagli sotto |
-| Capi inferiori | **6** | Cargo tecnici, jeans risvoltati, pantaloni, pantaloncini, gonna corta, gonna dritta; cargo = jeans LPC + tasche/ginocchiere originali |
+| Capi inferiori | **6** | Cargo tecnici, jeans risvoltati, pantaloni, pantaloncini (vero modulo LPC Shorts), gonna corta, gonna dritta; cargo = jeans LPC + tasche/ginocchiere originali |
 | Scarpe | **5** | Quattro basi LPC: sneakers, stivaletti, scarpe basse, sandali; stivali tecnici = stivaletti + segmenti originali |
 | Copricapo / cuffie | **6** | Nessuno; cuffie tecniche, berretto, bandana LPC, cappuccio LPC, corona d’alloro |
 | Occhiali | **5** | Nessuno; tondi, da sole e spessi LPC; visore HUD originale |
@@ -76,7 +76,7 @@ I look **Urbano / Esplorazione / Neon / Pilota** sono quattro configurazioni mod
 | Campo | Palette uniche disponibili |
 |---|---:|
 | Pelle | **7** |
-| Capelli / barba | **13** |
+| Capelli / barba / sopracciglia | **13** |
 | Occhi | **6** |
 | Capo superiore | **18** |
 | Inserti / strato interno | **18** |
@@ -86,9 +86,9 @@ I look **Urbano / Esplorazione / Neon / Pilota** sono quattro configurazioni mod
 | Copricapo | **18** |
 | Accessori | **22** |
 
-Le palette originali LPC e quelle del progetto sono salvate localmente. Il colore dell’accessorio è interpretato secondo il materiale: la collana usa la rampa metallica; non ogni tono tessile corrisponde a un metallo distinto. Gli inserti sono più evidenti sui tre capi tecnici; non si dichiarano 18 nuovi capi perché cambia una cucitura.
+Le palette originali LPC e quelle del progetto sono salvate localmente. Denim classico / blu, denim scuro / blu notte e beige / crema hanno ora rampe distinte: non sono alias. Le cuffie usano davvero il colore del copricapo. Il colore dell’accessorio è interpretato secondo il materiale: la collana usa la rampa metallica; non ogni tono tessile corrisponde a un metallo distinto. Gli inserti sono più evidenti sui tre capi tecnici; non si dichiarano 18 nuovi capi perché cambia una cucitura.
 
-In modalità fotografica i colori vengono poi armonizzati con luce/tinta della scena. Il Casardi storico è volutamente molto desaturato. I due stili usano **la stessa nuova famiglia di personaggi**, non due inventari separati. Gli animali hanno una propria resa di palette coerente.
+In modalità fotografica i colori vengono poi armonizzati con luce/tinta della scena. Il Casardi storico è volutamente molto desaturato. I due stili usano **la stessa famiglia LPC di personaggi**, non due inventari separati. Gli animali hanno una propria resa di palette coerente.
 
 ## 4 · Compatibilità e ordine dei livelli
 
@@ -105,7 +105,7 @@ In modalità fotografica i colori vengono poi armonizzati con luce/tinta della s
 - Cappuccio e berretto nascondono i capelli; non cancellano l’acconciatura selezionata. Cuffie e alloro restano compatibili con i capelli, che possono coprirli parzialmente.
 - Oggetto diverso da niente → Mani davanti. Mani davanti senza oggetto → libro. Altra posa selezionata → oggetto riposto.
 - Il sorriso/entusiasmo LPC ha occhi chiusi: il selettore forma/colore occhi resta memorizzato, non crea pupille sopra palpebre chiuse. Il visore può coprire parte dell’espressione.
-- Cinture/pantaloni e collane possono essere nascosti dai capi lunghi. Cambiare un dettaglio nascosto non è un nuovo disegno visibile.
+- Cinture/pantaloni e collane possono essere nascosti dai capi lunghi. Cambiare un dettaglio nascosto non è un nuovo disegno visibile: la UI confronta i pixel nativi del personaggio attuale, attenua le alternative a effetto nullo e offre «Scopri questo dettaglio» con modifiche esplicite agli strati. La cintura non viene più ridisegnata sopra il cappotto.
 - Capelli, cappuccio e lenti LPC hanno trasparenze intenzionali. Ora sono composti **sulla griglia nativa con vero alpha-over**, preservato nella rimappatura; la sagoma finale è alpha binario. Non creano buchi trasparenti nella testa e non vengono sfocati.
 
 Nessun audit finito dimostra la bellezza di ogni possibile combinazione teorica. Le tavole consegnate e i test coprono i casi specificati, con le limitazioni dichiarate.
@@ -131,12 +131,12 @@ Ogni foto ha un appoggio e orientamento dedicati. Ombra di contatto, ombra proie
 
 ## 6 · Scenari, campioni e verifiche
 
-- **6 fotografie** autentiche con fonte/licenza, preservate.
-- **6 nuovi sfondi NES**, tutti sostituiti: illustrazioni **assistite da IA** e rifinite su griglia **600 × 400, 64 colori per sfondo**, non sei ricolorazioni della stessa scena. Nessuna generazione a runtime e nessun asset commerciale. I PNG canonici sono in `assets/nes/`; `manifest.json` registra provenienza/hash/licenze. Nessuna esclusiva rivendicata sugli elementi generati automaticamente.
-- Casardi razionalista asimmetrico, Pantheon interno curvo con intarsi, Arco di Tito a un fornice e selciato, Epidauro dal piano dell’orchestra, Aula del Nuti con volte/plutei, Hera II con colonnato dorico: sei architetture distinte. Piccoli dettagli sono interpretativi, non certificazione filologica.
+- **12 fotografie** autentiche con fonte/licenza: sei precedenti ottimizzate, sei nuove documentate; la foto Casardi originale resta identica.
+- **12 sfondi NES**, sei della 3.1 conservati byte per byte e sei aggiunti: illustrazioni **assistite da IA** e rifinite su griglia **600 × 400, 64 colori per sfondo**, non ricolorazioni della stessa scena. Nessuna generazione a runtime e nessun asset commerciale. I PNG canonici sono in `assets/nes/`; `manifest.json` registra provenienza/hash/licenze. Nessuna esclusiva rivendicata sugli elementi generati automaticamente.
+- Casardi razionalista asimmetrico, Pantheon interno curvo con intarsi, Arco di Tito a un fornice e selciato, Epidauro dal piano dell’orchestra, Aula del Nuti con volte/plutei, Hera II con colonnato dorico: più Colosseo, Partenone, Foro di Pompei, Taormina, Castel del Monte e Castello di Barletta: dodici architetture distinte. Piccoli dettagli sono interpretativi, non certificazione filologica.
 - Canvas e Pillow usano gli **stessi file di sfondo**, non implementazioni grafiche divergenti. I vecchi poligoni procedurali sono rimossi; `build_examples.py` non sovrascrive più l’arte.
 - Soggetti, testo e ombre NES vengono composti sulla stessa griglia prima dell’ingrandimento ×5; niente residui fotografici. Le foto sono ricomposte a 3000 × 2000, indipendenti dal monitor.
-- **8 PNG HD** mantenuti e **12 JPG 1200 × 800** in `renders/`. Tutte le 12 scene/stili sono state realmente renderizzate anche dal renderer browser a 3000 × 2000.
+- **13 PNG HD** mantenuti (1 fotografico + 12 NES) e **24 JPG 1200 × 800** in `renders/`. Tutte le 24 scene/stili sono state realmente renderizzate anche dal renderer browser a 3000 × 2000.
 
 Evidenze della revisione attuale (limiti e hash in TEST_REPORT.md):
 
@@ -144,9 +144,11 @@ Evidenze della revisione attuale (limiti e hash in TEST_REPORT.md):
 |---|---|---|
 | Audit asset | **7716 casi**, zero tocchi al bordo, alpha finale 0/255 | Non tutte le combinazioni artistiche |
 | Integrità LPC | **255 PNG sorgenti, 56 definizioni, 85 atlanti** con SHA-256 verificato | Non una nuova autorizzazione legale degli autori |
-| Audit layout | **6048 casi**, zero fuori cornice / sovrapposizioni fra basi dei piedi | Non riconosce da solo prospettiva o ostacoli in foto |
+| Audit layout | **12096 casi**, zero fuori cornice / sovrapposizioni fra basi dei piedi | Non riconosce da solo prospettiva o ostacoli in foto |
 | Parità Python / JS | **938 confronti RGBA esatti, zero differenze** | Non identità dell’intera cartolina Canvas/Pillow |
-| Sei sfondi nativi | **6 PNG, dimensioni/opacità/palette/hash e riferimenti verificati** | Non un voto automatico sulla bellezza o fedeltà storica |
-| Tavole visive | `docs/qa/01…04`, render 05, dettaglio Foro 06, render browser 07, nuove architetture 08 | Revisione manuale rappresentativa, non approvazione del committente |
+| Dodici sfondi nativi | **12 PNG, dimensioni/opacità/palette/hash e riferimenti verificati** | Non un voto automatico sulla bellezza o fedeltà storica |
+| Effetto dei controlli | **3250 confronti**, reference senza duplicati; 563 alternative a zero pixel rilevate nei contesti coperti | Non una certificazione percettiva: dettagli del viso da pochi pixel, ingranditi nella UI |
+| Interazione controlli | **137 alternative UI realmente cliccate**, nove categorie; parità conteggi Python/JS | Non una prova Android hardware |
+| Tavole visive | `docs/qa/01…04`, render 05, dettaglio Foro 06, render browser 07, dodici architetture 08 e controlli/zoom 11–13 | Revisione manuale rappresentativa, non approvazione del committente |
 
 Le tavole sono pixel effettivi del renderer: includono ingrandimenti nearest-neighbor e una striscia 1×, non illustrazioni promozionali o asset diversi dall’app. Per la provenienza completa e le condizioni ShareAlike leggere **SOURCES_AND_LICENSES.md** e i crediti LPC inclusi.

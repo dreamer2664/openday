@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "date": "2026-11-27",
-  "revision": "3.1 NES Retro",
+  "revision": "3.2 Dodici luoghi",
   "scenes": [
     {
       "scene": "casardi",
@@ -74,17 +74,90 @@
       "colours": 64,
       "opaque": true,
       "licensed_reference_sha256_verified": true
+    },
+    {
+      "scene": "colosseo",
+      "result": "PASS",
+      "sha256": "56b572cbf39c2c7c4a95862a39faa68b935cb9839aa7c7e7ed9dde733b749564",
+      "dimensions": [
+        600,
+        400
+      ],
+      "colours": 64,
+      "opaque": true,
+      "licensed_reference_sha256_verified": true
+    },
+    {
+      "scene": "acropoli",
+      "result": "PASS",
+      "sha256": "6e2a132099f8ddb4d98f604d75caa556ad3e986eb41fba8ca818484ee6016bf1",
+      "dimensions": [
+        600,
+        400
+      ],
+      "colours": 64,
+      "opaque": true,
+      "licensed_reference_sha256_verified": true
+    },
+    {
+      "scene": "pompei",
+      "result": "PASS",
+      "sha256": "2f92e17e4bc8d1c51527da0941020bc29b0a18907beba5ce8f8c739df70f7469",
+      "dimensions": [
+        600,
+        400
+      ],
+      "colours": 64,
+      "opaque": true,
+      "licensed_reference_sha256_verified": true
+    },
+    {
+      "scene": "taormina",
+      "result": "PASS",
+      "sha256": "f26fd6392d3f57735718b474079b9c26113ffc7c56a4c57f0a62529cd5b2dcc7",
+      "dimensions": [
+        600,
+        400
+      ],
+      "colours": 64,
+      "opaque": true,
+      "licensed_reference_sha256_verified": true
+    },
+    {
+      "scene": "casteldelmonte",
+      "result": "PASS",
+      "sha256": "78f3cbe00210f6fb01d5358859e2fe18410a330c04d991cc66c46f7a7499f8b2",
+      "dimensions": [
+        600,
+        400
+      ],
+      "colours": 64,
+      "opaque": true,
+      "licensed_reference_sha256_verified": true
+    },
+    {
+      "scene": "castellobarletta",
+      "result": "PASS",
+      "sha256": "23e142c3e3d1d95d9f9545c3d7234e8c7039ffddac53c53286f2b3d368278e1c",
+      "dimensions": [
+        600,
+        400
+      ],
+      "colours": 64,
+      "opaque": true,
+      "licensed_reference_sha256_verified": true
     }
   ],
-  "canonical_files": 6,
+  "canonical_files": 12,
+  "retained_3_1_backgrounds_unchanged": 6,
   "native_grid": [
     600,
     400
   ],
-  "manifest_sha256": "61e3da814da0865ee343c9ca7c721d98c1e5b74fd208190e02433524c86ed008",
+  "manifest_sha256": "430b3da527706d6fe889ed0a5afc742f6096b28689d83fee28e3b0f4e740ecf5",
   "original_procedural_backgrounds": "Replaced, no fallback",
   "new_art": "AI-assisted architectural repaint; transparent disclosure in app, PNG metadata and manifest.",
   "artifact": "docs/qa/08_nuovi_scenari_nes.jpg",
-  "seconds": 0.15,
-  "limitations": "File/metadata/palette integrity and native grid, not automated artistic or historical validation. Six delivered representative scenes manually reviewed; no user acceptance presumed."
+  "seconds": 0.23,
+  "limitations": "File/metadata/palette integrity and native grid, not automated artistic or historical validation. Twelve delivered scenes visually reviewed during development; no user acceptance presumed."
 }

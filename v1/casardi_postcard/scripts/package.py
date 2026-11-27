@@ -1,4 +1,4 @@
-"""Build/verify the NES Retro 3.1 Windows + LPC + finished-PNG-QR distribution.
+"""Build/verify the 3.2 twelve-location Windows + LPC + finished-PNG-QR distribution.
 
 python scripts/package.py --candidate   # before independent extracted smoke
 python scripts/package.py               # final, requires current runtime smoke
@@ -48,19 +48,21 @@ def check(candidate=False):
                  'service/go.mod','service/go.sum','service/vendor/modules.txt',
                  'docs/GUIDA_OPERATORE.md','docs/GUIDA_RAPIDA.html','docs/GUIDA_RAPIDA.pdf',
                  'docs/GUIDA_FILE_UNICO_E_TELEFONO.md','docs/SCENE_COMPOSITION.md',
-                 'assets/characters/CREDITI_LPC.txt','assets/licenses/OGA-BY-3.0.txt','assets/nes/manifest.json','assets/nes/LEGGIMI.md',
+                 'assets/characters/CREDITI_LPC.txt','assets/licenses/OGA-BY-3.0.txt','assets/licenses/CC-BY-SA-2.5.txt','assets/nes/manifest.json','assets/nes/LEGGIMI.md',
                  'assets/licenses/dependencies/Go-BSD-3-Clause.txt','assets/licenses/dependencies/skip2-go-qrcode-MIT.txt'):
         assert (ROOT/name).is_file(),name
     for directory in ('var/exports','var/qa_exports'):
         assert not list((ROOT/directory).glob('*.png')) and not list((ROOT/directory).glob('*.part')),'Clear synthetic or visitor exports before packaging.'
     assert not (ROOT/'var/ultima_cartolina.png').exists()
-    metadata=json.loads((ROOT/'assets/photos/photo_metadata.json').read_text());assert len(metadata)==6
+    metadata=json.loads((ROOT/'assets/photos/photo_metadata.json').read_text());assert len(metadata)==12
     for sid,m in metadata.items():
         p=ROOT/'assets/photos'/sid/'source.jpg';assert sha(p.read_bytes())==m['local_sha256']
         with Image.open(p) as im:im.verify()
         with Image.open(ROOT/'assets/nes'/(sid+'.png')) as im:assert im.size==(600,400)
     nes_manifest=json.loads((ROOT/'assets/nes/manifest.json').read_text())
-    art=report('nes-art-audit.json');assert art['result']=='PASS' and art['canonical_files']==6
+    art=report('nes-art-audit.json');assert art['result']=='PASS' and art['canonical_files']==12 and art['retained_3_1_backgrounds_unchanged']==6
+    retained=nes_manifest['retained_from_3_1'];assert len(retained)==6
+    assert all(nes_manifest['scenes'][sid]['sha256']==digest for sid,digest in retained.items())
     assert art['manifest_sha256']==sha((ROOT/'assets/nes/manifest.json').read_bytes())
     assert set(nes_manifest['scenes'])=={x['scene'] for x in art['scenes']}
     for item in art['scenes']:
@@ -74,8 +76,8 @@ def check(candidate=False):
 
         p=ROOT/'assets/fonts'/name;ImageFont.truetype(str(p),18)
         assert p.read_bytes()==(ROOT/'web/static/fonts'/name).read_bytes()
-    pngs=sorted((ROOT/'renders').glob('[A-L]_*.png'));jpgs=sorted((ROOT/'renders').glob('[A-L]_*.jpg'))
-    assert len(pngs)==8 and len(jpgs)==12,(len(pngs),len(jpgs))
+    pngs=sorted((ROOT/'renders').glob('[A-X]_*.png'));jpgs=sorted((ROOT/'renders').glob('[A-X]_*.jpg'))
+    assert len(pngs)==13 and len(jpgs)==24,(len(pngs),len(jpgs))
     for p in pngs:
         with Image.open(p) as im:
             assert im.size==(3000,2000) and im.format=='PNG'
@@ -92,16 +94,25 @@ def check(candidate=False):
         shot_counts[directory]=n
     unit=(ROOT/'docs/test-results/unit-tests.txt').read_text()
     unit_count=int(re.search(r'Ran (\d+) tests',unit)[1])
-    assert unit_count>=45 and unit.strip().endswith('OK') and 'ResourceWarning' not in unit
+    assert unit_count>=58 and unit.strip().endswith('OK') and 'ResourceWarning' not in unit
     asset=report('asset-audit.json');assert asset['result']=='PASS' and asset['total']==7716 and asset['boundary_touches']==0
     assert (asset['licensed_parts'],asset['source_pngs_sha256_verified'],asset['definitions_sha256_verified'],asset['pose_atlases_sha256_verified'])==(56,255,56,85)
-    layout=report('layout-audit.json');assert layout['cases']==6048 and layout['outside_inner_frame']==layout['foot_span_overlaps']==0
-    for filename,count in (('browser-tests.json',16),('hd-http-regression.json',12)):
+    layout=report('layout-audit.json');assert layout['cases']==12096 and layout['outside_inner_frame']==layout['foot_span_overlaps']==0
+    for filename,count in (('browser-tests.json',16),('hd-http-regression.json',24)):
         data=report(filename);assert len(data['tests'])==count and passed(data['tests']),filename
     html_hash=sha((ROOT/HTML).read_bytes());built=report('standalone-build.json');browser=report('standalone-browser-tests.json')
     assert built['sha256']==browser['html_sha256']==html_hash
     assert len(browser['tests'])==22 and passed(browser['tests']) and not browser['js_errors']
-    assert len(browser['exports'])==12 and passed(browser['exports'])
+    assert len(browser['exports'])==24 and passed(browser['exports'])
+    effects=report('control-effects-audit.json');assert effects['result']=='PASS' and effects['comparisons']==3250 and not effects['failures']
+    assert effects['zero_pixel_alternatives_measured']==563
+    for name,digest in effects['sources'].items():assert sha((ROOT/name).read_bytes())==digest,name
+    controls=report('control-ui-tests.json');assert controls['result']=='PASS' and controls['html_sha256']==html_hash
+    assert len(controls['tests'])==9 and passed(controls['tests']) and not controls['javascript_errors'] and not controls['standalone_http_requests']
+    actual=next(t for t in controls['tests'] if 'per_category' in t)
+    assert set(actual['per_category'])=={'body','face','hair','expression','top','bottom','shoes','extras','pose'}
+    assert all(n>0 for n in actual['per_category'].values()) and sum(actual['per_category'].values())==controls['actual_ui_alternative_clicks']
+    assert not (ROOT/'docs/qa/07_browser_12_cartoline.jpg').exists()
     retro=report('nes-retro-ui.json');assert retro['result']=='PASS' and retro['html_sha256']==html_hash
     assert len(retro['tests'])==8 and passed(retro['tests']) and not retro['javascript_errors'] and not retro['http_requests']
     parity=report('browser-sprite-audit.json');assert parity['result']=='PASS' and parity['comparisons']==938 and parity['mismatches']==0
@@ -112,7 +123,7 @@ def check(candidate=False):
     assert len(re.findall(r'^--- PASS: Test',gotests,re.M))==26 and not re.search(r'^FAIL|--- FAIL',gotests,re.M) and '\nPASS\n' in gotests
     service=report('go-service-browser.json');assert service['result']=='PASS' and service['html_sha256']==html_hash
     assert len(service['tests'])==15 and passed(service['tests']) and not service['javascript_errors'] and not service['external_hosts']
-    expiry=report('go-real-expiry.json');assert expiry['result']=='PASS' and expiry['configured_ttl_seconds']==300 and expiry['observed_after_seconds']>=300
+    expiry=report('go-real-expiry.json');assert expiry['result']=='PASS' and expiry['configured_ttl_seconds']==300 and expiry['observed_after_seconds']>=300 and expiry['served_html_matches']=='PASS'
     assert len(expiry['expired_routes'])==3 and all(x['status']==410 for x in expiry['expired_routes']) and expiry['service_transfer_removed']
     # This revision was retested with the exact final HTML and Go source.
     assert expiry['go_source_sha256']==windows['source_sha256'] and expiry['html_sha256']==html_hash
@@ -133,8 +144,9 @@ def check(candidate=False):
         node='PASS'
     except FileNotFoundError:pass
     assert (ROOT/'docs/GUIDA_RAPIDA.pdf').read_bytes().startswith(b'%PDF-')
-    return dict(photo_sources=6,nes_backgrounds=6,lpc_parts=56,source_lpc_pngs=255,hd_png_examples=8,jpg_examples=12,
-                screenshots=shot_counts,unit_tests=unit_count,nes_art_integrity='PASS: six canonical 600x400 paintings, at most 64 colours each',nes_redesign_checks=8,go_top_level_race_tests=26,service_browser_checks=15,standalone_browser_checks=22,
+    return dict(photo_sources=12,nes_backgrounds=12,retained_3_1_backgrounds_unchanged=6,lpc_parts=56,source_lpc_pngs=255,hd_png_examples=13,jpg_examples=24,
+                screenshots=shot_counts,unit_tests=unit_count,nes_art_integrity='PASS: twelve canonical 600x400 paintings, at most 64 colours each',nes_redesign_checks=8,control_pixel_comparisons=3250,zero_pixel_alternatives_explicitly_reported=563,actual_control_ui_clicks=controls['actual_ui_alternative_clicks'],
+                layout_cases=12096,all_standalone_hd_exports=24,all_python_http_hd_exports=24,go_top_level_race_tests=26,service_browser_checks=15,standalone_browser_checks=22,
                 independently_extracted_copy='PENDING: candidate only' if candidate else 'PASS',
                 real_backend_expiry='PASS, 300 actual seconds',native_service_stop='PASS on Linux; not native Windows',
                 source_syntax='PASS',javascript_syntax=node,no_visitor_files='PASS',png_dimensions_and_attribution='PASS',
@@ -143,7 +155,7 @@ def check(candidate=False):
 
 def build(candidate=False):
     checks=check(candidate)
-    data=dict(result='CANDIDATE' if candidate else 'PASS',date='2026-11-27',revision='3.1 NES Retro: six new native paintings + redesigned UI + retained LPC + Windows + finished-PNG QR',
+    data=dict(result='CANDIDATE' if candidate else 'PASS',date='2026-11-27',revision='3.2: twelve places / 24 combinations + actual composited-pixel controls + retained 3.1 art and LPC + Windows LAN PNG QR',
               archive=OUTPUT.name,preflight=checks,archive_crc='Verified after writing',manifest_sha256='Verified against every included ZIP member',
               excluded='All var files except README, visitor PNGs, caches, virtualenvs, toolchains and QA Linux binaries.',
               windows_native='NOT TESTED; only cross-compilation and same-source Linux checks',physical_phone='NOT TESTED — required on school LAN')

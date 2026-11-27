@@ -8,6 +8,9 @@ globalThis.CasardiRender=(()=>{
  const pause=()=>new Promise(resolve=>setTimeout(resolve,0));
  const canvas=(w,h)=>{const c=document.createElement('canvas');c.width=w;c.height=h;return c;};
  const context=c=>c.getContext('2d',{willReadFrequently:true});
+ // Canvas backing stores are native memory, not part of the small JS heap.
+ // Dispose consumed outputs explicitly; do not wait for mobile-browser GC.
+ const dispose=c=>{if(c){c.width=1;c.height=1;}};
  const check=signal=>{if(signal?.aborted)throw new DOMException('Composizione annullata','AbortError');};
  const fontsReady=()=>Promise.all(['Cinzel','Garamond','Pixel'].map(f=>document.fonts.load('40px "'+f+'"')));
  const ratios={gatto:.30,cane:.40,volpe:.36,gufo:.34,coniglio:.32,corvo:.30,tartaruga:.10,drago:.34};
@@ -21,6 +24,41 @@ globalThis.CasardiRender=(()=>{
   if(raw.blink===true)c.blink=true;
   return c;
  }
+ // Actual composited-pixel effects for the CURRENT outfit, not icon previews.
+ function applyField(raw,field,value){
+  const s={...normalize(raw),[field]:value};
+  if(field==='held')s.pose=value==='none'?'rilassata':'libro';
+  if(field==='pose'){if(value!=='libro')s.held='none';else if(s.held==='none')s.held='libro';}
+  if(field==='accessory'){const colors=value==='collana'?PORTABLE.catalogue.colors.metal:PORTABLE.catalogue.colors.fabric;if(!colors.some(c=>c.id===s.accessory_color))s.accessory_color=colors[0].id;}
+  return normalize(s);
+ }
+ function revealFor(s,field){
+  let changes={};
+  if(['eyes','eye_shape','brows','nose'].includes(field)){
+   changes={glasses:'none',expression:'neutra'};
+   if(field==='brows')Object.assign(changes,{hair:'rasati',hat:'none'});
+   if(field==='nose')changes.beard='none';
+  }else if(field==='mouth'){changes={beard:'none',expression:'neutra'};if(s.accessory==='sciarpa')changes.accessory='none';}
+  else if(['hair','hair_color'].includes(field)){changes={hat:'none'};if(field==='hair_color'&&s.hair==='calvo')changes.hair='corti';}
+  else if(['bottom','bottom_color','belt_color'].includes(field)){changes={top:'cyber_jacket'};if(field==='belt_color'&&['gonna','gonna_lunga'].includes(s.bottom))changes.bottom='cargo';}
+  else if(['shoes','shoes_color'].includes(field))changes={top:'cyber_jacket',bottom:'chino'};
+  else if(field==='inner_color')changes={top:'cyber_jacket',held:'none',pose:'rilassata'};
+  return Object.fromEntries(Object.entries(changes).filter(([k,v])=>s[k]!==v));
+ }
+ let effectCache={key:null,base:null,fields:{}};
+ function controlEffects(raw,field,values){
+  const spec=normalize(raw),key=JSON.stringify(spec);
+  if(key!==effectCache.key)effectCache={key,base:S.render(spec),fields:{}};
+  if(effectCache.fields[field])return effectCache.fields[field];
+  const pixels={},allowed=PORTABLE.catalogue.compatibility?.[field]||{};
+  for(const value of values){
+   if(allowed[value]&&!allowed[value].includes(spec.build)){pixels[value]=null;continue;}
+   const after=S.render(applyField(spec,field,value));let count=0;
+   after.buf.forEach((p,i)=>{const b=effectCache.base.buf[i];if((p[3]||b[3])&&p.some((v,k)=>v!==b[k]))count++;});pixels[value]=count;
+  }
+  return effectCache.fields[field]={pixels,reveal:revealFor(spec,field)};
+ }
+ function faceDetail(raw){const c=canvas(28,28);context(c).drawImage(spriteCanvas(S.render(normalize(raw))),18,8,28,28,0,0,28,28);return c.toDataURL();}
  function spriteCanvas(p){
   const c=canvas(p.w,p.h),x=context(c),data=x.createImageData(p.w,p.h);
   for(let i=0,j=0;i<p.buf.length;i++,j+=4)data.data.set(p.buf[i],j);
@@ -56,9 +94,10 @@ globalThis.CasardiRender=(()=>{
   imageCache={key,promise};return promise;
  }
  async function photoBackground(scene,width,signal,progress){
-  const key=scene+'/'+width;if(backgroundCache?.key===key)return backgroundCache.c;
+  const key=scene+'/'+width;if(backgroundCache?.key===key){backgroundCache.c.users++;return backgroundCache.c;}
   const source=await imageFor(scene,'photo');check(signal);
   const cfg=PORTABLE.photo[scene],height=round(width*2/3),c=canvas(width,height),x=context(c);
+  let completed=false;try{
   let [x0,y0,x1,y1]=cfg.crop.map((v,i)=>Math.trunc(v*(i%2===0?source.naturalWidth:source.naturalHeight)));
   let sw=x1-x0,sh=y1-y0;
   if(sw/sh>1.5){const nw=Math.trunc(sh*1.5);x0+=Math.floor((sw-nw)/2);sw=nw;}
@@ -87,7 +126,8 @@ globalThis.CasardiRender=(()=>{
    }
    x.putImageData(im,0,y);if(progress)progress(.12+.39*(y+rows)/height);await pause();
   }
-  check(signal);backgroundCache={key,c};return c;
+  check(signal);const previous=backgroundCache?.c;c.users=1;backgroundCache={key,c};if(previous&&!previous.users)dispose(previous);completed=true;return c;
+  }finally{if(!completed)dispose(c);}
  }
  function harmonise(c,cfg){
   const x=context(c),im=x.getImageData(0,0,c.width,c.height),d=im.data,amb=cfg.ambient.tint,mean=(amb[0]+amb[1]+amb[2])/3,st=cfg.ambient.strength,ws=.10+cfg.light.strength*.08;
@@ -111,7 +151,7 @@ globalThis.CasardiRender=(()=>{
   tx.drawImage(s,0,0);tx.globalCompositeOperation='source-in';tx.fillStyle='rgb(23,21,26)';tx.fillRect(0,0,s.width,s.height);
   cx2.setTransform(1,0,-dx/h,-depth/h,base+dx,pad+depth);cx2.imageSmoothingEnabled=false;cx2.drawImage(t,0,0,w,h);cx2.resetTransform();
   const fade=cx2.createLinearGradient(0,pad,0,pad+depth);fade.addColorStop(0,'rgba(0,0,0,1)');fade.addColorStop(1,'rgba(0,0,0,0)');cx2.globalCompositeOperation='destination-in';cx2.fillStyle=fade;cx2.fillRect(0,0,cast.width,cast.height);
-  x.save();x.globalAlpha=.35*light.strength;x.filter='blur('+blur+'px)';x.drawImage(cast,Math.trunc(cx-w/2-base),Math.trunc(ground-pad-unit*.5));x.restore();
+  x.save();x.globalAlpha=.35*light.strength;x.filter='blur('+blur+'px)';x.drawImage(cast,Math.trunc(cx-w/2-base),Math.trunc(ground-pad-unit*.5));x.restore();dispose(cast);dispose(t);
  }
  function putSprite(x,s,cx,ground,scale){
   const w=s.width*scale,h=s.height*scale,xx=round(cx-(s.anchorX??s.width/2)*scale),yy=round(ground-h);
@@ -137,7 +177,7 @@ globalThis.CasardiRender=(()=>{
   x.fillStyle='#090e1d';x.fillRect(bx+4,by+4,w,h);x.fillStyle='#45516c';x.fillRect(bx+1,by,w-2,h);x.fillRect(bx,by+1,w,h-2);x.fillStyle='#151b32';x.fillRect(bx+2,by+2,w-4,h-4);
   x.fillStyle='#f1c675';for(const xx of [bx+2,bx+w-8])for(const yy of [by+2,by+h-3])x.fillRect(xx,yy,6,1);
   let yy=by+6;for(const r of rows){x.font=r[1]+'px "Pixel"';x.fillStyle=r[2];x.textBaseline='top';x.fillText(r[0],bx+9,yy);yy+=r[3];}
-  const im=x.getImageData(0,0,layer.width,layer.height);for(let i=3;i<im.data.length;i+=4)im.data[i]=im.data[i]>=112?255:0;x.putImageData(im,0,0);context(card).drawImage(layer,0,0);
+  const im=x.getImageData(0,0,layer.width,layer.height);for(let i=3;i<im.data.length;i+=4)im.data[i]=im.data[i]>=112?255:0;x.putImageData(im,0,0);context(card).drawImage(layer,0,0);dispose(layer);
  }
  function texts(card,job,zone){
   if(job.mode==='nes'){nesTexts(card,job,zone);return;}
@@ -170,7 +210,8 @@ globalThis.CasardiRender=(()=>{
   await fontsReady();check(signal);onProgress?.(.04);await pause();
   const card=canvas(nativeWidth,nativeHeight),x=context(card);x.imageSmoothingEnabled=!nes;
   const cfg=PORTABLE.photo[job.scene],lay=nes?PORTABLE.nes[job.scene]:cfg;
-  const bg=nes?await imageFor(job.scene,'nes'):await photoBackground(job.scene,width,signal,onProgress);check(signal);x.drawImage(bg,0,0,nativeWidth,nativeHeight);
+  let bg=null,returned=false;try{
+  bg=nes?await imageFor(job.scene,'nes'):await photoBackground(job.scene,width,signal,onProgress);check(signal);x.drawImage(bg,0,0,nativeWidth,nativeHeight);
   onProgress?.(.56);await pause();check(signal);
   let s=character(job.character,job.mode);if(!nes)s=harmonise(s,cfg);
   const gy=lay.ground_y*(nes?1:scale),cx=lay.char.x*(nes?1:scale),ch=lay.char.h*(nes?1:scale),cs=nes?Math.max(1,round(ch/s.height)):Math.max(1,round(lay.char.h/s.height))*scale;
@@ -184,8 +225,12 @@ globalThis.CasardiRender=(()=>{
   if(!nes&&cfg.occluders.includes('grass')){grass(x,bg,cx,gy,ch*.5,scale);if(companionPos)grass(x,bg,companionPos[0]+companionPos[2]/2,gy,companionPos[2],scale);}
   onProgress?.(.75);await pause();check(signal);frame(x,nativeWidth,nativeHeight,scale,job.mode);texts(card,job,lay.text_zone);check(signal);
   let out=card;
-  if(nes&&width!==600){out=canvas(width,round(width*2/3));const ox=context(out);ox.imageSmoothingEnabled=false;ox.drawImage(card,0,0,out.width,out.height);}
-  onProgress?.(.86);return out;
+  if(nes&&width!==600){out=canvas(width,round(width*2/3));const ox=context(out);ox.imageSmoothingEnabled=false;ox.drawImage(card,0,0,out.width,out.height);dispose(card);}
+  onProgress?.(.86);returned=true;return out;
+  }finally{
+   if(!returned)dispose(card);
+   if(!nes&&bg){bg.users--;if(bg!==backgroundCache?.c&&!bg.users)dispose(bg);}
+  }
  }
  function credit(job){
   const m=PORTABLE.metadata[job.scene],nes=job.mode==='nes',author=m.artist==='Unknown authorUnknown author'?'Autore non identificato (archivio storico)':m.artist;
@@ -197,13 +242,13 @@ globalThis.CasardiRender=(()=>{
  function chunk(type,body){const out=new Uint8Array(body.length+12),dv=new DataView(out.buffer),enc=new TextEncoder();dv.setUint32(0,body.length);out.set(enc.encode(type),4);out.set(body,8);let crc=0xffffffff;for(let i=4;i<body.length+8;i++)crc=crcTable[(crc^out[i])&255]^(crc>>>8);dv.setUint32(body.length+8,(crc^0xffffffff)>>>0);return out;}
  async function pngBlob(c,job,signal){
   check(signal);const b=await new Promise((resolve,reject)=>c.toBlob(blob=>blob?resolve(blob):reject(new Error('Il browser non ha memoria sufficiente per il PNG. Chiudi altre schede e riprova.')),'image/png'));check(signal);
-  const raw=new Uint8Array(await b.arrayBuffer()),view=new DataView(raw.buffer),enc=new TextEncoder(),cr=credit(job),fields={Title:'LICEO ALFREDO CASARDI — OPEN DAY 2026/27 — BARLETTA',Author:cr.author,Source:cr.source,Copyright:cr.copyright,Description:cr.text,Software:'Casardi Postcard Studio 3.1 NES Retro · Canvas locale'};
+  const raw=new Uint8Array(await b.arrayBuffer()),view=new DataView(raw.buffer),enc=new TextEncoder(),cr=credit(job),fields={Title:'LICEO ALFREDO CASARDI — OPEN DAY 2026/27 — BARLETTA',Author:cr.author,Source:cr.source,Copyright:cr.copyright,Description:cr.text,Software:'Casardi Postcard Studio 3.2 Dodici luoghi · Canvas locale'};
   const parts=[raw.subarray(0,33)];
   for(const [key,text]of Object.entries(fields))parts.push(chunk('iTXt',enc.encode(key+'\0\0\0\0\0'+text)));
   const dpi=new Uint8Array(9),dv=new DataView(dpi.buffer);dv.setUint32(0,11811);dv.setUint32(4,11811);dpi[8]=1;parts.push(chunk('pHYs',dpi));
   for(let p=33;p<raw.length;){const size=view.getUint32(p),type=String.fromCharCode(...raw.subarray(p+4,p+8));if(type!=='pHYs')parts.push(raw.subarray(p,p+size+12));p+=size+12;}
   check(signal);return new Blob(parts,{type:'image/png'});
  }
- function clear(){imageCache={key:null,promise:null};backgroundCache=null;}
- return{normalize,cleanName,character,animal,characterIcon,animalIcon,compose,pngBlob,credit,fontsReady,clear,round};
+ function clear(){imageCache={key:null,promise:null};const old=backgroundCache?.c;backgroundCache=null;if(old&&!old.users)dispose(old);}
+ return{dispose,normalize,applyField,controlEffects,revealFor,faceDetail,cleanName,character,animal,characterIcon,animalIcon,compose,pngBlob,credit,fontsReady,clear,round};
 })();

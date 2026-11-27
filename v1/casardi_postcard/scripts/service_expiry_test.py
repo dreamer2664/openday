@@ -18,6 +18,8 @@ ROOT=Path(__file__).resolve().parent.parent
 BASE=os.environ.get('SERVICE_EXPIRY_URL','http://127.0.0.1:8084').rstrip('/')
 
 def main():
+    html=(ROOT/'Cartolina_Casardi_PC_e_Telefono.html').read_bytes();served_html=urllib.request.urlopen(BASE+'/telefono').read();assert served_html==html,'Restart the QA service with the current HTML before the real-clock test.'
+    tested_html_sha256=hashlib.sha256(html).hexdigest()
     page=urllib.request.urlopen(BASE+'/').read().decode();cfg=json.loads(re.search(r'<script type="application/json" id="local-service-config">(.*?)</script>',page,re.S)[1])
     data=(ROOT/'renders/B_casardi_nes_cane.png').read_bytes();headers={'Content-Type':'image/png','X-Casardi-Key':cfg['key'],'X-Casardi-Generation':str(cfg['generation']),'Origin':BASE}
     t=time.monotonic();res=json.load(urllib.request.urlopen(urllib.request.Request(BASE+'/bridge/export',data=data,headers=headers,method='POST')))
@@ -37,7 +39,7 @@ def main():
                 observed_after_seconds=round(time.monotonic()-t,2),decoded_qr='PASS',download_identical_sha256=hashlib.sha256(data).hexdigest(),
                 expired_routes=statuses,service_transfer_removed=True,storage='Memory only; no PNG is written by the Go service',
                 environment='Linux build of the same Go source; QA loopback HTTP, not Windows-native or a physical school phone',
-                html_sha256=hashlib.sha256((ROOT/'Cartolina_Casardi_PC_e_Telefono.html').read_bytes()).hexdigest(),
+                html_sha256=tested_html_sha256,served_html_matches='PASS',
                 go_source_sha256=json.loads((ROOT/'docs/test-results/windows-build.json').read_text())['source_sha256'])
     (ROOT/'docs/test-results/go-real-expiry.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(report,ensure_ascii=False,indent=2),flush=True)

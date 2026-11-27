@@ -1,6 +1,6 @@
 # Screenshot dell’edizione stand con QR del PNG
 
-Set reale Chromium/Playwright del servizio Go (stesso sorgente del launcher Windows), con tema NES Retro 3.1, nuovi scenari e personaggi LPC mantenuti. Nomi e PNG sintetici; i token mostrati sono revocati al termine del test. Gli URL loopback negli screenshot sono **indirizzi di collaudo**, non link raggiungibili da telefoni esterni.
+Set reale Chromium/Playwright del servizio Go (stesso sorgente del launcher Windows), con tema NES Retro 3.2, nuovi scenari e personaggi LPC mantenuti. Nomi e PNG sintetici; i token mostrati sono revocati al termine del test. Gli URL loopback negli screenshot sono **indirizzi di collaudo**, non link raggiungibili da telefoni esterni.
 
 1. Benvenuto e nuovi campioni.
 2. Anteprima pixel art allo stand.

@@ -50,14 +50,14 @@ def font_bytes(path,rename=None):
 def main():
     sprites=generate(ROOT);(ROOT/'browser/sprites.js').write_text(sprites,encoding='utf-8')
     lpc,lpc_credits=bundle()
-    cat=public_catalogue(600,'browser-3.1')
+    cat=public_catalogue(600,'browser-3.2')
     for item in cat['scenes']:item.pop('thumbs',None)
-    data=dict(version='3.1',lpc=lpc,lpcCredits=lpc_credits,date='2026-11-27',catalogue=cat,palette=COLORS,
+    data=dict(version='3.2',lpc=lpc,lpcCredits=lpc_credits,date='2026-11-27',catalogue=cat,palette=COLORS,
               colorFields={k:list(dict.fromkeys(c[0] for c in v)) for k,v in COLOR_FIELDS.items()},
               photo=PHOTO_SCENES,nes=NES_SCENES,nesArt=json.loads((ROOT/'assets/nes/manifest.json').read_text()),metadata=photo_metadata(),images={},thumbs={},examples={},licenses={})
     report=dict(date='2026-11-27',file=OUTPUT.name,editions='One responsive standalone HTML: full desktop and touch-phone creator.',
                 renderer='Independent JavaScript + Canvas; artist-drawn LPC indexed atlases + translated original equipment/animals; no Python runtime.',
-                photos={},fonts={},nes_art='Six new AI-assisted architectural paintings, native 600x400, 64 colours each; canonical PNG hashes and references in assets/nes/manifest.json.',runtime_network='None',visitor_storage='Memory of the open page only; no project persistence.',
+                photos={},fonts={},nes_art='Twelve AI-assisted architectural paintings, native 600x400, 64 colours each; canonical PNG hashes and references in assets/nes/manifest.json.',runtime_network='None',visitor_storage='Memory of the open page only; no project persistence.',
                 qr='AVVIA_CARTOLINA_WINDOWS.exe serves this full HTML and hosts its actual finished PNG via temporary LAN URL. Raw standalone HTML exports locally without hosting other devices.',lpc_commit=lpc['commit'],lpc_parts=len(lpc['parts']),lpc_pose_atlases=len(lpc['atlases']))
     for sid,cfg in PHOTO_SCENES.items():
         source=ROOT/cfg['photo'];raw,size=photo_bytes(source);nes=(ROOT/'assets/nes'/(sid+'.png')).read_bytes()

@@ -35,11 +35,25 @@
     "retrieved": "2026-11-27",
     "original_sha256": "4d4ea576ed840fb067c0146412d463548daf79378c224a80b74d0a861119b94e",
     "local_size": [
-      3072,
-      2304
+      3000,
+      2250
     ],
-    "local_processing": "JPEG locale ottimizzato, lato massimo 3600 px, qualità 93; metadati EXIF rimossi",
-    "local_sha256": "0b8cf198734d128fbff32c0b8feb702a97ff474d94d5aec6ce5e69ab52878b91"
+    "local_processing": {
+      "stages": [
+        {
+          "max_side": 3600,
+          "quality": 93,
+          "subsampling": 0
+        },
+        {
+          "max_side": 3000,
+          "quality": 90,
+          "subsampling": 2
+        }
+      ]
+    },
+    "local_sha256": "c82bd6f052ce9b3e50c345645b7eb371026deffcba63fb6c1186559d0a438827",
+    "processing": "Originale convertito in RGB e JPEG 3600 px qualità 93 4:4:4 (edizione 3.1); copia ridotta a 3000 px e JPEG qualità 90 4:2:0 (3.2), senza EXIF/GPS."
   },
   "foro": {
     "title": "File:Arch of Titus in Rome (2).jpg",
@@ -56,11 +70,25 @@
     "retrieved": "2026-11-27",
     "original_sha256": "f7eeac7fcb2e56db2b81bfc76c64d7c26f910d6f1e6f74b85d1c30d8a06d9ef5",
     "local_size": [
-      3600,
-      2790
+      3000,
+      2325
     ],
-    "local_processing": "JPEG locale ottimizzato, lato massimo 3600 px, qualità 93; metadati EXIF rimossi",
-    "local_sha256": "7bccc901d26fb35695721e6f1fec93181f95deebc5bccec241840c43442d1272"
+    "local_processing": {
+      "stages": [
+        {
+          "max_side": 3600,
+          "quality": 93,
+          "subsampling": 0
+        },
+        {
+          "max_side": 3000,
+          "quality": 90,
+          "subsampling": 2
+        }
+      ]
+    },
+    "local_sha256": "d248af281e1157a2c4b5f5b0472a6d55c5dbae85e2f4c0dbf30df737328141c6",
+    "processing": "Originale convertito in RGB e JPEG 3600 px qualità 93 4:4:4 (edizione 3.1); copia ridotta a 3000 px e JPEG qualità 90 4:2:0 (3.2), senza EXIF/GPS."
   },
   "epidauro": {
     "title": "File:Theatre of Epidaurus, 202507.jpg",
@@ -77,11 +105,25 @@
     "retrieved": "2026-11-27",
     "original_sha256": "f205cda682b14959b49762cbec50c50cbcd9097546620716b71c890296d3859f",
     "local_size": [
-      3600,
-      2396
+      3000,
+      1997
     ],
-    "local_processing": "JPEG locale ottimizzato, lato massimo 3600 px, qualità 93; metadati EXIF rimossi",
-    "local_sha256": "444370a96346478ed45be428526ab4e7b567926ad003ee1943c62bc0bf733e2a"
+    "local_processing": {
+      "stages": [
+        {
+          "max_side": 3600,
+          "quality": 93,
+          "subsampling": 0
+        },
+        {
+          "max_side": 3000,
+          "quality": 90,
+          "subsampling": 2
+        }
+      ]
+    },
+    "local_sha256": "95209bc856d05bd68cb8ce7a6544d6b40cc5a8a94602121bcfebe968cb03e602",
+    "processing": "Originale convertito in RGB e JPEG 3600 px qualità 93 4:4:4 (edizione 3.1); copia ridotta a 3000 px e JPEG qualità 90 4:2:0 (3.2), senza EXIF/GPS."
   },
   "biblioteca": {
     "title": "File:Cesena - Biblioteca Malatestiana - Interno - 2024-09-08 14-29-45 001.jpg",
@@ -98,11 +140,25 @@
     "retrieved": "2026-11-27",
     "original_sha256": "eb2e0fed820cbcca953907a55c72392a5a317013991cc73b4987ca99f4963ab5",
     "local_size": [
-      3600,
-      2403
+      3000,
+      2003
     ],
-    "local_processing": "JPEG locale ottimizzato, lato massimo 3600 px, qualità 93; metadati EXIF rimossi",
-    "local_sha256": "cf048a83eb21b55f843281f5bd56c5b5a745f1f6102c1286a84308d600cdf7ee"
+    "local_processing": {
+      "stages": [
+        {
+          "max_side": 3600,
+          "quality": 93,
+          "subsampling": 0
+        },
+        {
+          "max_side": 3000,
+          "quality": 90,
+          "subsampling": 2
+        }
+      ]
+    },
+    "local_sha256": "c7c37849075879850ed31ad9913b51d965e8d9ae0f541cbc5d110158119f884b",
+    "processing": "Originale convertito in RGB e JPEG 3600 px qualità 93 4:4:4 (edizione 3.1); copia ridotta a 3000 px e JPEG qualità 90 4:2:0 (3.2), senza EXIF/GPS."
   },
   "paestum": {
     "title": "File:Hera temple II - Paestum - Poseidonia - July 13th 2013 - 04.jpg",
@@ -119,10 +175,180 @@
     "retrieved": "2026-11-27",
     "original_sha256": "74042ebe45c08d5d4fddc8cb6c68991c96d1504db0419b0f26302ba094c21f8f",
     "local_size": [
-      3600,
-      2207
+      3000,
+      1839
     ],
-    "local_processing": "JPEG locale ottimizzato, lato massimo 3600 px, qualità 93; metadati EXIF rimossi",
-    "local_sha256": "a76a08466b950176ff03fc080488716b9aaa5f90ecce12b8d13cc3a6bd2cf91b"
+    "local_processing": {
+      "stages": [
+        {
+          "max_side": 3600,
+          "quality": 93,
+          "subsampling": 0
+        },
+        {
+          "max_side": 3000,
+          "quality": 90,
+          "subsampling": 2
+        }
+      ]
+    },
+    "local_sha256": "ade055310b83437bf0dbbc714c05d4b5cc5d593ab9c43aa0c15049ed404b625b",
+    "processing": "Originale convertito in RGB e JPEG 3600 px qualità 93 4:4:4 (edizione 3.1); copia ridotta a 3000 px e JPEG qualità 90 4:2:0 (3.2), senza EXIF/GPS."
+  },
+  "colosseo": {
+    "title": "File:Colosseum in Rome, Italy - April 2007.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 4827,
+    "h": 2833,
+    "page": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg",
+    "artist": "Diliff",
+    "credit": "Own work",
+    "lic": "CC BY-SA 2.5",
+    "licurl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "date": "Taken on 30 April 2007",
+    "desc": "A 4x4 segment panorama of the Coliseum at dusk. Taken by myself with a Canon 5D and 50mm f/1.8 lens at f/5.6.",
+    "original_sha256": "26a01fe516963531c5d57390b55bbef1ebda82e0a53d3ed583eaab35d1850f92",
+    "date_retrieved": "2026-11-27",
+    "local_size": [
+      3000,
+      1761
+    ],
+    "local_sha256": "2ff9c95bd6ef299ef026380a8abccfcbd3eb12be97c8ea03e3d7e0eb261a7bba",
+    "processing": "Copia RGB, EXIF/GPS rimossi, lato massimo 3000 px, JPEG qualità 90 e sottocampionamento 4:2:0.",
+    "local_processing": {
+      "max_side": 3000,
+      "quality": 90,
+      "subsampling": 2
+    }
+  },
+  "acropoli": {
+    "title": "File:East Facade of the Parthenon on July 23, 2019.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/East_Facade_of_the_Parthenon_on_July_23%2C_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 6000,
+    "h": 4000,
+    "page": "https://commons.wikimedia.org/wiki/File:East_Facade_of_the_Parthenon_on_July_23,_2019.jpg",
+    "artist": "George E. Koronaios",
+    "credit": "Own work",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "date": "2019-07-23 07:56:03",
+    "desc": "East Facade of the Parthenon on July 23, 2019.",
+    "original_sha256": "8d9bd3e5b31ff9178423bfa0b5947d1c72269bcf4c76197d03f84a10e7102f80",
+    "date_retrieved": "2026-11-27",
+    "local_size": [
+      3000,
+      2000
+    ],
+    "local_sha256": "3867a25f724963463e7da2495574578a11760e224cdea971cc2372a6b2270f2b",
+    "processing": "Copia RGB, EXIF/GPS rimossi, lato massimo 3000 px, JPEG qualità 90 e sottocampionamento 4:2:0.",
+    "local_processing": {
+      "max_side": 3000,
+      "quality": 90,
+      "subsampling": 2
+    }
+  },
+  "pompei": {
+    "title": "File:Forum in Pompeii 3.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Forum_in_Pompeii_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 3072,
+    "h": 2304,
+    "page": "https://commons.wikimedia.org/wiki/File:Forum_in_Pompeii_3.jpg",
+    "artist": "Wknight94",
+    "credit": "Own work",
+    "lic": "CC BY-SA 3.0",
+    "licurl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "date": "2008-04-27",
+    "desc": "Forum in Pompeii taken from the southeast corner with Mount Vesuvius in the background.",
+    "original_sha256": "987318171d75d7dcce8933bbbec893d01fdc22c90ad138847cee227dd0d1ff60",
+    "date_retrieved": "2026-11-27",
+    "local_size": [
+      3000,
+      2250
+    ],
+    "local_sha256": "944dcf8e65417bc09ca2e64720d5635e98ba6f86ff45c62e25487a6755b1f466",
+    "processing": "Copia RGB, EXIF/GPS rimossi, lato massimo 3000 px, JPEG qualità 90 e sottocampionamento 4:2:0.",
+    "local_processing": {
+      "max_side": 3000,
+      "quality": 90,
+      "subsampling": 2
+    }
+  },
+  "taormina": {
+    "title": "File:Taormina BW 2012-10-05 16-23-05 stitch.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Taormina_BW_2012-10-05_16-23-05_stitch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 5972,
+    "h": 2566,
+    "page": "https://commons.wikimedia.org/wiki/File:Taormina_BW_2012-10-05_16-23-05_stitch.jpg",
+    "artist": "Berthold Werner",
+    "credit": "Own work",
+    "lic": "CC BY-SA 3.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "date": "2012-10-05 16:23:06",
+    "desc": "Italy, Sicily, Taormina, ancient theatre",
+    "original_sha256": "b69772f593d1716c67f76b65772ab6b1c22fa7321b23ef91b8c53d9e4abc359c",
+    "date_retrieved": "2026-11-27",
+    "local_size": [
+      3000,
+      1289
+    ],
+    "local_sha256": "bada0f2252420b20c230c8a378e707b036de1862f53dd6b8df630b9a7f5f7cd2",
+    "processing": "Copia RGB, EXIF/GPS rimossi, lato massimo 3000 px, JPEG qualità 90 e sottocampionamento 4:2:0.",
+    "local_processing": {
+      "max_side": 3000,
+      "quality": 90,
+      "subsampling": 2
+    }
+  },
+  "casteldelmonte": {
+    "title": "File:Castel del Monte - front view.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Castel_del_Monte_-_front_view.jpg",
+    "w": 6197,
+    "h": 4898,
+    "page": "https://commons.wikimedia.org/wiki/File:Castel_del_Monte_-_front_view.jpg",
+    "artist": "IKKos",
+    "credit": "Own work",
+    "lic": "CC BY-SA 4.0",
+    "licurl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "date": "2019-04-22 14:41:09",
+    "desc": "Castel del Monte - front view",
+    "original_sha256": "ba10b2e322117373d36fc3cfd2d45d8c2d762d49c447d67d5bd081fa3bc804bc",
+    "date_retrieved": "2026-11-27",
+    "local_size": [
+      3000,
+      2371
+    ],
+    "local_sha256": "bb56e1cb4c9a1b9e148c41ed0a5fc99608820aca5b3eec85268f964ea10ef2cd",
+    "processing": "Copia RGB, EXIF/GPS rimossi, lato massimo 3000 px, JPEG qualità 90 e sottocampionamento 4:2:0.",
+    "local_processing": {
+      "max_side": 3000,
+      "quality": 90,
+      "subsampling": 2
+    }
+  },
+  "castellobarletta": {
+    "title": "File:Castello di Barletta 01.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Castello_di_Barletta_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 4158,
+    "h": 2645,
+    "page": "https://commons.wikimedia.org/wiki/File:Castello_di_Barletta_01.jpg",
+    "artist": "Achille83",
+    "credit": "Own work",
+    "lic": "Public domain",
+    "licurl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+    "date": "2008-10-21",
+    "desc": "Il Castello di Barletta - Ottobre 2008",
+    "original_sha256": "f1ee8271c0ba85f8bc3ce3b9b83639bd4d5c5e56e8efff9ffc22192db7b417f8",
+    "date_retrieved": "2026-11-27",
+    "local_size": [
+      3000,
+      1908
+    ],
+    "local_sha256": "ac4d1c48567f0712ae9bf9956586e106b047a778ca16c950a2968f46af974bdc",
+    "processing": "Copia RGB, EXIF/GPS rimossi, lato massimo 3000 px, JPEG qualità 90 e sottocampionamento 4:2:0.",
+    "local_processing": {
+      "max_side": 3000,
+      "quality": 90,
+      "subsampling": 2
+    }
   }
 }

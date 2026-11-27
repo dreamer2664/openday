@@ -15,9 +15,9 @@
       "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
     },
     "pantheon": {
-      "source_sha256": "0b8cf198734d128fbff32c0b8feb702a97ff474d94d5aec6ce5e69ab52878b91",
-      "embedded_sha256": "5d9d23c48b69f1bf6c47b699f16fa4d58289de88750d05a5fe5e4f55105c8a99",
-      "embedded_bytes": 1476059,
+      "source_sha256": "c82bd6f052ce9b3e50c345645b7eb371026deffcba63fb6c1186559d0a438827",
+      "embedded_sha256": "c6e8abab22c58ec351c0791bed5d98761684fe0e5771667eb1a5be2a22952841",
+      "embedded_bytes": 1635880,
       "embedded_dimensions": [
         3000,
         2250
@@ -25,9 +25,9 @@
       "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
     },
     "foro": {
-      "source_sha256": "7bccc901d26fb35695721e6f1fec93181f95deebc5bccec241840c43442d1272",
-      "embedded_sha256": "3f23fa66c234efd2d9eefbce2323f22b9ffdfcf48b18649296e02b33724f502f",
-      "embedded_bytes": 1737224,
+      "source_sha256": "d248af281e1157a2c4b5f5b0472a6d55c5dbae85e2f4c0dbf30df737328141c6",
+      "embedded_sha256": "67eae0023ea59ff08109cf29cb132f670df0d60ab71625b49ab335a9f0dfab56",
+      "embedded_bytes": 1898758,
       "embedded_dimensions": [
         3000,
         2325
@@ -35,9 +35,9 @@
       "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
     },
     "epidauro": {
-      "source_sha256": "444370a96346478ed45be428526ab4e7b567926ad003ee1943c62bc0bf733e2a",
-      "embedded_sha256": "71df2d907ec6d808d17242076fa6e439b38b28f8d7ead523e6111c50358b9264",
-      "embedded_bytes": 1708710,
+      "source_sha256": "95209bc856d05bd68cb8ce7a6544d6b40cc5a8a94602121bcfebe968cb03e602",
+      "embedded_sha256": "b4da79f25f711c39e2aee13094da0e0d48d06b580e6174a564f7715c0c728c40",
+      "embedded_bytes": 1846582,
       "embedded_dimensions": [
         3000,
         1997
@@ -45,9 +45,9 @@
       "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
     },
     "biblioteca": {
-      "source_sha256": "cf048a83eb21b55f843281f5bd56c5b5a745f1f6102c1286a84308d600cdf7ee",
-      "embedded_sha256": "138ab737ed10d036a2a16c80029ff7a85f62af77dbe1e8b1114def902134aa23",
-      "embedded_bytes": 929462,
+      "source_sha256": "c7c37849075879850ed31ad9913b51d965e8d9ae0f541cbc5d110158119f884b",
+      "embedded_sha256": "10d0a7b85c7cae2d304eea065479d44ec1002b8f0a73f8d06d5026da1c6be2d6",
+      "embedded_bytes": 1045239,
       "embedded_dimensions": [
         3000,
         2003
@@ -55,12 +55,72 @@
       "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
     },
     "paestum": {
-      "source_sha256": "a76a08466b950176ff03fc080488716b9aaa5f90ecce12b8d13cc3a6bd2cf91b",
-      "embedded_sha256": "3047cca0c8ceefd2af2729271dd0afc32944fc357dc96e72936c061c7aedc65d",
-      "embedded_bytes": 1218101,
+      "source_sha256": "ade055310b83437bf0dbbc714c05d4b5cc5d593ab9c43aa0c15049ed404b625b",
+      "embedded_sha256": "b8cbe757b77f54f7160ea7049d24faefbba72d71d6d0a75d6f7bf5ca9d8566aa",
+      "embedded_bytes": 1339005,
       "embedded_dimensions": [
         3000,
         1839
+      ],
+      "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
+    },
+    "colosseo": {
+      "source_sha256": "2ff9c95bd6ef299ef026380a8abccfcbd3eb12be97c8ea03e3d7e0eb261a7bba",
+      "embedded_sha256": "91c2f3af8582807054d58c9a9eb6f4e6c5c650c66af3d45af4e1b87d580be120",
+      "embedded_bytes": 1111065,
+      "embedded_dimensions": [
+        3000,
+        1761
+      ],
+      "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
+    },
+    "acropoli": {
+      "source_sha256": "3867a25f724963463e7da2495574578a11760e224cdea971cc2372a6b2270f2b",
+      "embedded_sha256": "0b05aab404ef6f37f4a503acdcdaaf6aee7c72fd5eba5c6b63566aceff543e06",
+      "embedded_bytes": 1317111,
+      "embedded_dimensions": [
+        3000,
+        2000
+      ],
+      "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
+    },
+    "pompei": {
+      "source_sha256": "944dcf8e65417bc09ca2e64720d5635e98ba6f86ff45c62e25487a6755b1f466",
+      "embedded_sha256": "e515d5a0b642dd3e399beed4719f8ca8e5ffeccd8f01e9a8b91bd8345cbcae6d",
+      "embedded_bytes": 1182940,
+      "embedded_dimensions": [
+        3000,
+        2250
+      ],
+      "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
+    },
+    "taormina": {
+      "source_sha256": "bada0f2252420b20c230c8a378e707b036de1862f53dd6b8df630b9a7f5f7cd2",
+      "embedded_sha256": "5059b71ba50b28927b8ae99488b6ee26b38ecc7be0b93f9afe17356798ebd0db",
+      "embedded_bytes": 1124837,
+      "embedded_dimensions": [
+        3000,
+        1289
+      ],
+      "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
+    },
+    "casteldelmonte": {
+      "source_sha256": "bb56e1cb4c9a1b9e148c41ed0a5fc99608820aca5b3eec85268f964ea10ef2cd",
+      "embedded_sha256": "8fd07a4cb24b7cf36b5e9b08666799dc6e9a1edeb96f9b61c685c4ddc9c9d222",
+      "embedded_bytes": 1259998,
+      "embedded_dimensions": [
+        3000,
+        2371
+      ],
+      "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
+    },
+    "castellobarletta": {
+      "source_sha256": "ac4d1c48567f0712ae9bf9956586e106b047a778ca16c950a2968f46af974bdc",
+      "embedded_sha256": "7431510636f44b7b2e05bdfc41b59cf6c34566f9ef4067da6a799899c47e1d2b",
+      "embedded_bytes": 948742,
+      "embedded_dimensions": [
+        3000,
+        1908
       ],
       "processing": "JPEG quality 86, 4:2:0, max side 3000; no upscaling of the embedded source; Canvas crops/scales/grades at rendering time."
     }
@@ -88,13 +148,13 @@
       "internal_name": "Casardi Pixel"
     }
   },
-  "nes_art": "Six new AI-assisted architectural paintings, native 600x400, 64 colours each; canonical PNG hashes and references in assets/nes/manifest.json.",
+  "nes_art": "Twelve AI-assisted architectural paintings, native 600x400, 64 colours each; canonical PNG hashes and references in assets/nes/manifest.json.",
   "runtime_network": "None",
   "visitor_storage": "Memory of the open page only; no project persistence.",
   "qr": "AVVIA_CARTOLINA_WINDOWS.exe serves this full HTML and hosts its actual finished PNG via temporary LAN URL. Raw standalone HTML exports locally without hosting other devices.",
   "lpc_commit": "86a3719ee4a7e2e9fb27c7c152e29a741d3e930a",
   "lpc_parts": 56,
   "lpc_pose_atlases": 85,
-  "bytes": 12734874,
-  "sha256": "00dbd839a4749810b8ceefecf83d108a9cbcbf336d198d3ff58dd7fe36e9d3f7"
+  "bytes": 24318425,
+  "sha256": "48cca47603d4eb53db38680ace4151c9b3dac134b38c02bbd7f0849403d7e049"
 }

@@ -35,7 +35,7 @@ async def main():
   page.on('request',lambda r:network.append((r.method,r.url)) if r.url.startswith(('http:','https:')) else None)
  async def download(page,selector,path):
   async with page.expect_download() as d:await page.locator(selector).click()
-  item=await d.value;await item.save_as(str(path));return item.suggested_filename
+  item=await d.value;await item.save_as(str(path));name=item.suggested_filename;await item.delete();return name
  def verify(path):
   raw=path.read_bytes()
   with Image.open(io.BytesIO(raw)) as integrity:integrity.verify()
@@ -57,7 +57,7 @@ async def main():
     await page.goto(HTML.as_uri(),wait_until='load');await expect(page.locator('#start')).to_be_enabled()
     assert not network;await shot(page,'01_file_unico_benvenuto.jpg');mark('File autonomo aperto con file:// e rete disattivata',bytes=HTML.stat().st_size)
     await page.click('#start');await expect(page.locator('#next')).to_be_disabled();await page.click('[data-mode="photo"]')
-    assert await page.locator('#scene-grid button').count()==6;await page.click('[data-scene="paestum"]');await page.fill('#nickname','Èlisa');await page.click('#next');mark('Percorso guidato, due stili, sei luoghi e nome facoltativo')
+    assert await page.locator('#scene-grid button').count()==12;await page.click('[data-scene="paestum"]');await page.fill('#nickname','Èlisa');await page.click('#next');mark('Percorso guidato, due stili, dodici luoghi e nome facoltativo')
     await page.click('#info');await expect(page.locator('#info-dialog')).to_be_visible();assert await page.locator('#studio').evaluate('(e)=>e.inert');await page.keyboard.press('Tab');assert await page.evaluate('()=>!!document.activeElement.closest("#info-dialog")');await page.keyboard.press('Escape');await expect(page.locator('#info-dialog')).to_be_hidden();mark('Dialogo informazioni, focus confinato, Esc e ritorno al controllo')
     assert await page.locator('#tabs button').count()==9;assert await page.locator('[data-field="build"]').count()==3
     for tab in ['body','face','hair','expression','top','bottom','shoes','extras','pose']:
@@ -91,17 +91,17 @@ async def main():
     jobs=json.loads((ROOT/'renders/_jobs.json').read_text())
     for name,item in jobs.items():
      j=item['job'];st=time.perf_counter()
-     info=await page.evaluate('''async job=>{const c=await CasardiRender.compose(job,3000);const blob=await CasardiRender.pngBlob(c,job);const old=document.querySelector('#qa-download');if(old){URL.revokeObjectURL(old.href);old.remove();}const a=document.createElement('a');a.id='qa-download';a.style.cssText='position:fixed;top:8px;left:8px;z-index:9999;padding:15px;background:white;color:black';a.textContent='Download prova';a.href=URL.createObjectURL(blob);a.download='prova.png';document.body.append(a);return{width:c.width,height:c.height};}''',j)
+     info=await page.evaluate('''async job=>{const c=await CasardiRender.compose(job,3000),size={width:c.width,height:c.height};let blob;try{blob=await CasardiRender.pngBlob(c,job);}finally{CasardiRender.dispose(c);}const old=document.querySelector('#qa-download');if(old){URL.revokeObjectURL(old.href);old.remove();}const a=document.createElement('a');a.id='qa-download';a.style.cssText='position:fixed;top:8px;left:8px;z-index:9999;padding:15px;background:white;color:black';a.textContent='Download prova';a.href=URL.createObjectURL(blob);a.download='prova.png';document.body.append(a);return size;}''',j)
      file=td/(name+'.png');await download(page,'#qa-download',file);v=verify(file);assert info=={'width':3000,'height':2000}
      with Image.open(file) as im:
       small=im.convert('RGB').resize((600,400),Image.Resampling.LANCZOS);contact.append((name,small))
       if j['mode']=='nes':
-       uri=await page.evaluate('async job=>(await CasardiRender.compose(job,600)).toDataURL()',j)
+       uri=await page.evaluate('async job=>{const c=await CasardiRender.compose(job,600);try{return c.toDataURL();}finally{CasardiRender.dispose(c);}}',j)
        native=Image.open(io.BytesIO(base64.b64decode(uri.split(',')[1]))).convert('RGBA');assert np.array_equal(np.asarray(im),np.asarray(native.resize((3000,2000),Image.Resampling.NEAREST)))
-     exports.append(dict(scene=j['scene'],mode=j['mode'],result='PASS',seconds=round(time.perf_counter()-st,2),**v))
+     file.unlink();exports.append(dict(scene=j['scene'],mode=j['mode'],result='PASS',seconds=round(time.perf_counter()-st,2),**v));print('HD PASS',name,round(time.perf_counter()-st,2),'s',flush=True)
     await page.evaluate('()=>{const a=document.querySelector("#qa-download");URL.revokeObjectURL(a.href);a.remove();}')
-    mark('Tutte le 12 combinazioni stile / luogo esportate dal renderer browser',exports=len(exports))
-    mark('Sei scene NES: PNG HD identici pixel per pixel alla griglia 600 × 400 ingrandita ×5')
+    mark('Tutte le 24 combinazioni stile / luogo esportate dal renderer browser',exports=len(exports))
+    mark('Dodici scene NES: PNG HD identici pixel per pixel alla griglia 600 × 400 ingrandita ×5')
     assert not network;mark('Zero richieste HTTP/S durante l’intera sessione file:// offline')
     await ctx.close()
     # A genuinely separate touch-enabled browser context, still not hardware.
@@ -122,10 +122,10 @@ async def main():
     assert not errors,errors
     mark('Nessuna eccezione JavaScript o violazione CSP in tutti i contesti')
     # Compact evidence, no extra multi-megabyte HD copies in the package.
-    sheet=Image.new('RGB',(1800,1720),'#f5f1e9');d=ImageDraw.Draw(sheet);font=ImageFont.truetype(str(ROOT/'assets/fonts/EBGaramond.ttf'),20)
+    sheet=Image.new('RGB',(1800,3440),'#f5f1e9');d=ImageDraw.Draw(sheet);font=ImageFont.truetype(str(ROOT/'assets/fonts/EBGaramond.ttf'),20)
     for i,(name,im) in enumerate(contact):
      x=i%3*600;y=i//3*430;sheet.paste(im,(x,y));d.text((x+12,y+403),name,font=font,fill='#172b35')
-    sheet.save(ROOT/'docs/qa/07_browser_12_cartoline.jpg',quality=85,optimize=True)
+    sheet.save(ROOT/'docs/qa/07_browser_24_cartoline.jpg',quality=81,optimize=True)
   except Exception:
    tests.append(dict(name='Interrupted verification',result='FAIL',error=traceback.format_exc()))
    raise

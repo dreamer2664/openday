@@ -127,14 +127,13 @@ bottom/jeans — Cuffed Pants
   https://opengameart.org/content/lpc-expanded-sit-run-jump-more
   https://opengameart.org/content/lpc-expanded-pants
 
-bottom/shorts — Long Pants
+bottom/shorts — Shorts
   JaidynReiman, ElizaWy, Bluecarrot16, Johannes Sjölund (wulax), Stephen Challener (Redshrike) · OGA-BY 3.0 · https://static.opengameart.org/OGA-BY-3.0.txt
-  original overalls by ElizaWy, base animations adapted from v3 overalls by bluecarrot16, pants by JaidynReiman
+  Original bases by Redshrike, thrust/shoot bases by Wulax, original overalls and shorts by ElizaWy, base animations adapted from v3 overalls by bluecarrot16, shorts by JaidynReiman
   https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
-  https://opengameart.org/content/lpc-expanded-sit-run-jump-more
   https://opengameart.org/content/lpc-expanded-pants
   ElizaWy, JaidynReiman, Johannes Sjölund (wulax), Stephen Challener (Redshrike) · OGA-BY 3.0 · https://static.opengameart.org/OGA-BY-3.0.txt
-  Original bases by Redshrike, thrust/shoot bases by Wulax, original pants by ElizaWy, climb/jump/run/sit/emotes/revised combat by JaidynReiman
+  Original bases by Redshrike, thrust/shoot bases by Wulax, original shorts by ElizaWy, climb/jump/run/sit/emotes/revised combat by JaidynReiman
   https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
   https://opengameart.org/content/lpc-expanded-sit-run-jump-more
   https://opengameart.org/content/lpc-expanded-pants

@@ -1,7 +1,7 @@
 # Un solo HTML · PC e telefono
-## Cartolina Casardi · Open Day 2026/27 — revisione 3.1 NES Retro
+## Cartolina Casardi · Open Day 2026/27 — revisione 3.2 · Dodici luoghi
 
-**File pronto: `Cartolina_Casardi_PC_e_Telefono.html`**, circa 12,7 MB. È il creatore completo: sei luoghi in entrambi gli stili, personaggi modulari LPC con equipaggiamento fantascientifico, otto animali facoltativi, anteprima, export PNG **3000 × 2000** e TXT dei crediti. Non scarica librerie o font da Internet e non richiede Python, Go, Node o comandi.
+**File pronto: `Cartolina_Casardi_PC_e_Telefono.html`**, circa 24,3 MB. È il creatore completo: dodici luoghi in entrambi gli stili, personaggi modulari LPC con equipaggiamento fantascientifico, otto animali facoltativi, anteprima, export PNG **3000 × 2000** e TXT dei crediti. Non scarica librerie o font da Internet e non richiede Python, Go, Node o comandi.
 
 ## Aprirlo sul PC
 
@@ -29,9 +29,15 @@ Aprire `/telefono` non rivela la chiave riservata, non trasferisce nome/scelte a
 
 Trasferire/scaricare lo stesso file `.html` e aprirlo in un browser che esegue HTML locali. Non tutti i sistemi gestiscono allo stesso modo gli allegati: **File / Quick Look di iOS può mostrare un’anteprima senza JavaScript**. Se non compare il pulsante «Inizia», usare il percorso HTTP qui sopra. Non si dichiara risolta una limitazione del visualizzatore del sistema operativo con un pulsante simulato.
 
+## La richiesta Android → un QR → altro telefono
+
+Non è realizzabile con il solo HTML, senza un servizio raggiungibile: il PNG HD non entra nel QR e il browser non può servire il proprio file locale a un altro telefono. Non sono stati aggiunti cloud o accoppiamenti a due QR non approvati. La condivisione nativa del PNG sul dispositivo è distinta da un QR di download. Il servizio Windows già incluso è una soluzione separata, non un’app Android-only.
+
 ## Creare e salvare
 
 La UI NES-rétro usa pannelli squadrati, titoli pixel, colori ad alto contrasto e controlli touch. Non è un’edizione ridotta. Ha nove categorie, quattro look iniziali modificabili, quattro pose e sei espressioni. Su schermi piccoli l’avatar di dettaglio resta visibile mentre si personalizza; l’anteprima finale mostra tutta la cartolina.
+
+Le alternative che non cambierebbero pixel visibili sono disabilitate e spiegate. «Scopri questo dettaglio» modifica esplicitamente le coperture; uno zoom mostra il viso reale. I pantaloncini, i colori denim e le cuffie sono corretti rispetto alla 3.1.
 
 Dopo **Genera PNG**:
 
@@ -47,7 +53,7 @@ Il comportamento esatto di Foto/Download, menu Condividi e pressione prolungata 
 
 - Tutti gli asset sono incorporati; niente richieste runtime esterne, analytics, cookie o localStorage. Nel servizio Windows soltanto il **PNG definitivo** viene copiato nella RAM del PC per il QR.
 - Nel file autonomo lavoro e PNG rimangono nella memoria della pagina fino a reset/chiusura. Ricomincia revoca gli URL Blob e azzera le scelte, **non cancella i file già scaricati**.
-- I sei nuovi sfondi sono illustrazioni assistite da IA e rifinite su griglia/palette; nessun modello viene eseguito durante la visita. I PNG canonici sono gli stessi in tutte le edizioni. Non sono rilievi documentari o disegni dichiarati interamente manuali.
+- I dodici sfondi sono illustrazioni assistite da IA e rifinite su griglia/palette; nessun modello viene eseguito durante la visita. I PNG canonici sono gli stessi in tutte le edizioni. Non sono rilievi documentari o disegni dichiarati interamente manuali.
 - La foto Casardi è autentica, storica (1936) e nativa 707 × 491; la grandezza dell’export non le aggiunge dettaglio.
 - Foto ricomposta a 3000 × 2000; pixel art nativa 600 × 400 composta e ingrandita ×5 con nearest-neighbor. Nessuna dipendenza dalla risoluzione del monitor.
 - Sprite Python e JavaScript: **938 confronti RGBA esatti**. Non si rivendica l’identità di intere cartoline fra Canvas e Pillow: interpolazione foto, rasterizzazione font, rumore e ombre sono implementazioni distinte. L’HTML incorpora JPEG ulteriormente ottimizzati, documentati nel report di build.
@@ -55,6 +61,6 @@ Il comportamento esatto di Foto/Download, menu Condividi e pressione prolungata 
 
 ## Collaudi effettivi e limiti
 
-Apertura del solo HTML isolato `file://` con rete disattivata; percorso completo desktop e touch **emulato**; tutte le dodici combinazioni luogo/stile esportate a 3000 × 2000; `/telefono` caricato via HTTP e poi portato offline fino al PNG; errori/reset e larghezze 320–1366 px verificati con Chromium. Risultati e hash in `docs/test-results/standalone-browser-tests.json` e TEST_REPORT.md.
+Apertura del solo HTML isolato `file://` con rete disattivata; percorso completo desktop e touch **emulato**; tutte le 24 combinazioni luogo/stile esportate a 3000 × 2000; `/telefono` caricato via HTTP e poi portato offline fino al PNG; errori/reset e larghezze 320–1366 px verificati con Chromium. Risultati e hash in `docs/test-results/standalone-browser-tests.json` e TEST_REPORT.md.
 
 **Non eseguiti:** telefono fisico Android/iOS, Safari/Firefox, Web Share nativo, tastiera virtuale reale, Windows nativo e Wi-Fi della scuola. L’emulazione non viene presentata come una prova hardware. La rete deve permettere telefono → PC; il link locale non funziona dalla sola rete mobile o da fuori LAN.

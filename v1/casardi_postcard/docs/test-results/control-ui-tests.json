@@ -1,0 +1,63 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "revision": "3.2",
+  "tests": [
+    {
+      "name": "Visore: forma occhi realmente bloccata, azione esplicita di scopertura e zoom dei pixel effettivi",
+      "result": "PASS"
+    },
+    {
+      "name": "Nove categorie: ogni alternativa abilitata provata cambia davvero il PNG dello sprite",
+      "result": "PASS",
+      "actual_clicks": 137,
+      "per_category": {
+        "body": 9,
+        "face": 15,
+        "hair": 29,
+        "expression": 5,
+        "top": 25,
+        "bottom": 22,
+        "shoes": 9,
+        "extras": 19,
+        "pose": 4
+      },
+      "covered_or_incompatible_alternatives_checked": 7
+    },
+    {
+      "name": "Parità esatta degli effetti e delle azioni di scopertura tra renderer Python e browser",
+      "result": "PASS",
+      "option_comparisons": 400
+    },
+    {
+      "name": "Cappuccio: acconciature nascoste spiegate e realmente modificabili dopo la rimozione esplicita",
+      "result": "PASS"
+    },
+    {
+      "name": "Espressione a occhi chiusi: colori inattivi dichiarati e recupero esplicito, nessun cambio fittizio",
+      "result": "PASS"
+    },
+    {
+      "name": "Colore cuffie applicato realmente anche dall’interfaccia",
+      "result": "PASS"
+    },
+    {
+      "name": "Zoom del viso leggibile e nessun overflow nel viewport telefono da 390 px",
+      "result": "PASS"
+    },
+    {
+      "name": "File autonomo: zero eccezioni JavaScript e zero richieste HTTP/S",
+      "result": "PASS"
+    },
+    {
+      "name": "Edizione Python: coperture misurate dal renderer, disattivazione, scopertura e zoom del viso reali via HTTP",
+      "result": "PASS"
+    }
+  ],
+  "actual_ui_alternative_clicks": 137,
+  "html_sha256": "48cca47603d4eb53db38680ace4151c9b3dac134b38c02bbd7f0849403d7e049",
+  "javascript_errors": [],
+  "standalone_http_requests": [],
+  "seconds": 14.97,
+  "environment": "Chromium Linux, file:// offline and loopback HTTP; 390px responsive emulation, not a physical Android/iOS phone."
+}

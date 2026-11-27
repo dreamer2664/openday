@@ -186,7 +186,7 @@
       if(!cols.some(c=>c.id===state.character.bottom_color))state.character.bottom_color=cols[0].id;
     }
     for(const[fieldName,table]of Object.entries(state.options.compatibility||{})){const allowed=table[state.character[fieldName]];if(allowed&&!allowed.includes(state.character.build))state.character[fieldName]=fieldName==='top'?'cyber_jacket':'gonna';}
-    if(['eye_shape','mouth'].includes(field)&&['sorriso','entusiasta'].includes(state.character.expression))state.character.expression='neutra';
+    // Covered facial options stay stored; uncovering is an explicit action.
     changed();refreshSprite();renderCreator();
     const target=$(`#creator-panes [data-field="${field}"][data-value="${value}"]`);
     if(target)target.focus({preventScroll:true});
@@ -203,7 +203,7 @@
       const allowed=state.options.compatibility?.[field]?.[value];if(allowed&&!allowed.includes(state.character.build)){button.disabled=true;button.title='Disponibile per la corporatura '+LABELS.build[allowed[0]];}
       select(button,state.character[field]===value);list.append(button);
     }
-    return group(title,list);
+    const g=group(title,list);g.dataset.controlField=field;return g;
   }
   function swatches(title,field,list){
     const box=node('div',{class:'swatches roomy'});
@@ -212,19 +212,41 @@
         style:`background:${c.hex}`,onclick:()=>setCharacter(field,c.id)});
       select(b,state.character[field]===c.id);box.append(b);
     }
-    return group(title,box);
+    const g=group(title,box);g.dataset.controlField=field;return g;
   }
   function bottomColors(){
     const c=state.options.colors;
-    if(!['jeans','chino','shorts','tuta'].includes(state.character.bottom))return c.fabric;
+    if(!['cargo','jeans','chino','shorts','tuta'].includes(state.character.bottom))return c.fabric;
     const ids=new Set();return [...c.denim,...c.fabric].filter(x=>{if(ids.has(x.id))return false;ids.add(x.id);return true;});
+  }
+  let effectsSequence=0;
+  async function updateControlEffects(){
+    const ticket=++effectsSequence,epoch=state.epoch,fields=$$('#creator-panes [data-control-field]').map(n=>n.dataset.controlField);
+    try{
+      const result=await json('/api/control-effects',{character:{...state.character},fields});
+      if(ticket!==effectsSequence||epoch!==state.epoch)return;
+      const image=$('#face-detail-image');if(image)image.src=result.face;
+      for(const group of $$('#creator-panes [data-control-field]')){
+        const field=group.dataset.controlField,effect=result.effects[field];let hidden=0;
+        for(const b of group.querySelectorAll('button[data-value]')){
+          const value=b.dataset.value,count=effect.pixels[value];b.dataset.pixelChange=count===null?'incompatible':String(count);
+          if(count===null){b.disabled=true;b.title='Nessun livello disegnato per questa corporatura.';}
+          else if(value!==state.character[field]&&count===0){b.disabled=true;b.title='Coperto dagli strati attuali: nessuna differenza visibile.';hidden++;}
+        }
+        if(hidden){const n=node('p',{class:'control-effect-note'},'Le alternative attenuate sono coperte dagli strati attuali: non cambierebbero i pixel visibili.');
+          if(Object.keys(effect.reveal).length)n.append(node('button',{class:'text-button reveal-control','data-reveal-field':field,onclick:()=>{Object.assign(state.character,effect.reveal);changed();refreshSprite();renderCreator();notify('Strati aggiornati per rendere visibile il dettaglio.');}},'Scopri questo dettaglio →'));
+          group.append(n);
+        }
+      }
+    }catch(e){if(ticket===effectsSequence&&epoch===state.epoch)notify('Verifica delle coperture non disponibile. Riprova questa categoria.',true);}
   }
   function renderCreator(){
     const pane=$('#creator-panes'),c=state.character,co=state.options.colors;
     pane.replaceChildren();const add=(...kids)=>pane.append(...kids);
     if(state.tab==='body')add(choices('Corporatura','build'),swatches('Tonalità della pelle','skin',co.skin));
+    if(['face','hair','expression'].includes(state.tab))add(node('div',{class:'face-detail'},node('img',{id:'face-detail-image',alt:'Pixel effettivi del viso ingranditi'}),node('p',{},node('strong',{},'Il viso, da vicino.'),node('span',{},'Pixel nativi ingranditi. Le coperture restano visibili: usa Scopri questo dettaglio per rimuoverle.'))));
     if(state.tab==='face')add(choices('Forma del viso','face'),choices('Occhi','eye_shape'),swatches('Colore degli occhi','eyes',co.eyes),choices('Sopracciglia','brows'),choices('Naso','nose'),choices('Labbra','mouth'));
-    if(state.tab==='hair')add(choices('Acconciatura','hair'),swatches('Colore dei capelli','hair_color',co.hair),choices('Barba e baffi','beard'));
+    if(state.tab==='hair')add(choices('Acconciatura','hair'),swatches('Capelli, barba e sopracciglia','hair_color',co.hair),choices('Barba e baffi','beard'));
     if(state.tab==='expression')add(choices('Espressione','expression'));
     if(state.tab==='top'){
       add(choices('Capo di sopra','top'),swatches('Colore del capo','top_color',co.fabric));
@@ -241,6 +263,7 @@
     }
     if(state.tab==='pose')add(choices('Posa','pose'));
     $$('#creator-tabs button').forEach(b=>{b.classList.toggle('active',b.dataset.tab===state.tab);b.setAttribute('aria-pressed',String(b.dataset.tab===state.tab));});
+    updateControlEffects();
   }
   $$('#creator-tabs button').forEach(b=>b.addEventListener('click',()=>{state.tab=b.dataset.tab;renderCreator();}));
 

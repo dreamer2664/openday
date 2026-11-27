@@ -1,6 +1,6 @@
 """Canonical revised native pixel paintings; no generation/network at runtime.
 
-These six sources are AI-assisted architectural repaints, individually credited
+These twelve sources are AI-assisted architectural repaints, individually credited
 and palette-finished. They replace, rather than recolour, the old schematic
 procedural backgrounds. The PNG source itself is editable in a pixel editor.
 """
@@ -17,7 +17,7 @@ ASSETS=ROOT/'assets/nes'
 def art_manifest():
     return json.loads((ASSETS/'manifest.json').read_text(encoding='utf-8'))
 
-@lru_cache(maxsize=6)
+@lru_cache(maxsize=12)
 def load_nes_art(scene_id):
     record=art_manifest()['scenes'][scene_id]
     path=ROOT/record['path']

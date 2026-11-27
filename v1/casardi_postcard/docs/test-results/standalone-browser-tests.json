@@ -1,16 +1,16 @@
 {
   "date": "2026-11-27",
   "browser": "Chromium via Playwright",
-  "html_sha256": "00dbd839a4749810b8ceefecf83d108a9cbcbf336d198d3ff58dd7fe36e9d3f7",
-  "seconds": 51.77,
+  "html_sha256": "48cca47603d4eb53db38680ace4151c9b3dac134b38c02bbd7f0849403d7e049",
+  "seconds": 46.39,
   "tests": [
     {
       "name": "File autonomo aperto con file:// e rete disattivata",
       "result": "PASS",
-      "bytes": 12734874
+      "bytes": 24318425
     },
     {
-      "name": "Percorso guidato, due stili, sei luoghi e nome facoltativo",
+      "name": "Percorso guidato, due stili, dodici luoghi e nome facoltativo",
       "result": "PASS"
     },
     {
@@ -45,8 +45,8 @@
       "name": "PNG HD scaricato davvero dal pulsante desktop",
       "result": "PASS",
       "filename": "cartolina-casardi-paestum-foto.png",
-      "bytes": 11668828,
-      "sha256": "5de0e1ea54d344876b1bb519a96f1f14d34d3eaab6a7d8c6bb89451a19fe6dd7",
+      "bytes": 11953547,
+      "sha256": "e7cac19ff6abea9bd8a8f10346ba1d0291589b961c17fb77ddbae185533704a4",
       "dimensions": [
         3000,
         2000
@@ -73,12 +73,12 @@
       "result": "PASS"
     },
     {
-      "name": "Tutte le 12 combinazioni stile / luogo esportate dal renderer browser",
+      "name": "Tutte le 24 combinazioni stile / luogo esportate dal renderer browser",
       "result": "PASS",
-      "exports": 12
+      "exports": 24
     },
     {
-      "name": "Sei scene NES: PNG HD identici pixel per pixel alla griglia 600 × 400 ingrandita ×5",
+      "name": "Dodici scene NES: PNG HD identici pixel per pixel alla griglia 600 × 400 ingrandita ×5",
       "result": "PASS"
     },
     {
@@ -92,8 +92,8 @@
         390,
         844
       ],
-      "bytes": 539417,
-      "sha256": "1acaf2aaa1a67e8e4d39ae4ebf49a780980185fc5ac0ae6a9d4f02a50520d109",
+      "bytes": 539424,
+      "sha256": "fa3338870a79f7c571a143eabbf6e57f0bb273c88845447979cdfed7aba6c75a",
       "dimensions": [
         3000,
         2000
@@ -107,8 +107,8 @@
       "name": "Versione /telefono completa: caricata via HTTP, poi offline fino al PNG",
       "result": "PASS",
       "http_requests_after_initial_html": 0,
-      "bytes": 10201120,
-      "sha256": "71498e1c1142afe657a21a0993435d6a4b5406f0ac894b240c65a94bb7ab55d0",
+      "bytes": 10678436,
+      "sha256": "ae289a83c033f6c3820f9e2771095d0cc0b2120813b2440babedfd00319da4d0",
       "dimensions": [
         3000,
         2000
@@ -124,9 +124,9 @@
       "scene": "casardi",
       "mode": "photo",
       "result": "PASS",
-      "seconds": 2.49,
-      "bytes": 3751914,
-      "sha256": "5d4a1850e3fe59eb2e47477aa31eb9556e2a36f8273cf9fd10a4de4c47a98ab7",
+      "seconds": 1.34,
+      "bytes": 3751803,
+      "sha256": "1ba293f4383cb925490f66563d82128650bbc0c960df598667eee6bf3d2803a5",
       "dimensions": [
         3000,
         2000
@@ -136,9 +136,9 @@
       "scene": "casardi",
       "mode": "nes",
       "result": "PASS",
-      "seconds": 1.44,
-      "bytes": 654994,
-      "sha256": "5e2ec03039f45a2be1517238ee800291e5a46700340fa0e673735d389d5f2198",
+      "seconds": 0.37,
+      "bytes": 654998,
+      "sha256": "758594d88641608a6c456f525fb2f2badd0cca75a268582bc50362cb7d937ae2",
       "dimensions": [
         3000,
         2000
@@ -148,9 +148,9 @@
       "scene": "pantheon",
       "mode": "photo",
       "result": "PASS",
-      "seconds": 3.84,
-      "bytes": 12324718,
-      "sha256": "bc11b24f243ab8cb51b241a357334b7fd7775dc7144a94215a2269c54190ece5",
+      "seconds": 2.09,
+      "bytes": 12791840,
+      "sha256": "5d62d46ea1d24118c367ed989a8819c00aebc744c5bbcf0d696a92f06ae23513",
       "dimensions": [
         3000,
         2000
@@ -160,9 +160,9 @@
       "scene": "pantheon",
       "mode": "nes",
       "result": "PASS",
-      "seconds": 1.38,
-      "bytes": 484291,
-      "sha256": "7bc3c52b767deeadc4fbee9476d06fb8f01b84ed599d0dd005b287448d4a766d",
+      "seconds": 0.33,
+      "bytes": 484295,
+      "sha256": "cf910583c198e1cbeb6a330043288cc93ca516f0c33fa29bfef69bfc0809fa2d",
       "dimensions": [
         3000,
         2000
@@ -172,9 +172,9 @@
       "scene": "foro",
       "mode": "photo",
       "result": "PASS",
-      "seconds": 3.31,
-      "bytes": 14034688,
-      "sha256": "7e2155a1787c4a52e4e2f7c148416ae5e025a1aae3d18d0cc18ffbab441d3fbd",
+      "seconds": 2.21,
+      "bytes": 14484193,
+      "sha256": "6b8004eaae7b35e496a0c9e4c983f2fa2b6ffc1014cf296c558bc6ca2d1e9ae8",
       "dimensions": [
         3000,
         2000
@@ -184,9 +184,9 @@
       "scene": "foro",
       "mode": "nes",
       "result": "PASS",
-      "seconds": 1.41,
-      "bytes": 604302,
-      "sha256": "1ada5dab03a0b1554c99d9f860953c86d3285885718a1373029b1c4c029bda6c",
+      "seconds": 0.35,
+      "bytes": 604304,
+      "sha256": "f9c59b8b001cc0c324db135978eb4109c15b205df13527bb2fe4150a5bc994f2",
       "dimensions": [
         3000,
         2000
@@ -196,9 +196,9 @@
       "scene": "epidauro",
       "mode": "photo",
       "result": "PASS",
-      "seconds": 3.4,
-      "bytes": 12366912,
-      "sha256": "f3185ffa51ac84d72e698a32c36e3175d85f31564f95a6122de73fe84d74733c",
+      "seconds": 2.26,
+      "bytes": 12725047,
+      "sha256": "04bb1cf23b06a4ec03c15ebbb1f01fdf5e1cd0c7cc2df7ccb10a59c2a4214fcd",
       "dimensions": [
         3000,
         2000
@@ -208,9 +208,9 @@
       "scene": "epidauro",
       "mode": "nes",
       "result": "PASS",
-      "seconds": 1.42,
-      "bytes": 529040,
-      "sha256": "a848d0bfc4c6d9e2bbaf53889e321ce3c99b371a2221689a127985cbbd7f1b29",
+      "seconds": 0.34,
+      "bytes": 528933,
+      "sha256": "f5e0f4aaac0669fa3c34fbba8822693a97c710435bc71c48e233cd6fb32c2b2f",
       "dimensions": [
         3000,
         2000
@@ -220,9 +220,9 @@
       "scene": "biblioteca",
       "mode": "photo",
       "result": "PASS",
-      "seconds": 3.39,
-      "bytes": 10271751,
-      "sha256": "4f18f652a8f28ad5530d64d951251fbeabccb5974b01fc9eda352be0192b35e1",
+      "seconds": 2.13,
+      "bytes": 10743854,
+      "sha256": "cf98d18da00161eb7a686ca6b7de71b4e2c3914f9479decb591f2cc625616170",
       "dimensions": [
         3000,
         2000
@@ -232,9 +232,9 @@
       "scene": "biblioteca",
       "mode": "nes",
       "result": "PASS",
-      "seconds": 1.38,
-      "bytes": 487050,
-      "sha256": "5e94fef0134e7ea31017c2e69fa7597057f877241969ef973e7ed3a8dab1d667",
+      "seconds": 0.35,
+      "bytes": 487002,
+      "sha256": "1e0471079855a200cbe52d53e7f8cc17789717ae469f363dc35a9ada1fa77ff5",
       "dimensions": [
         3000,
         2000
@@ -244,9 +244,9 @@
       "scene": "paestum",
       "mode": "photo",
       "result": "PASS",
-      "seconds": 3.49,
-      "bytes": 11411574,
-      "sha256": "389ee758a71b99f10c5a9fd23bf360187bf778930d014b75ccbfe0a7d608ee82",
+      "seconds": 2.2,
+      "bytes": 11691973,
+      "sha256": "f80ed4f13d39f2d4998f332e1846ea8a9c91b3a183458a97f5914419466be1ea",
       "dimensions": [
         3000,
         2000
@@ -256,9 +256,153 @@
       "scene": "paestum",
       "mode": "nes",
       "result": "PASS",
-      "seconds": 7.05,
-      "bytes": 540797,
-      "sha256": "da98286fc34c14550f0591bd2644a2b7d23e83f507f773699ce84fc2c7a348b3",
+      "seconds": 0.35,
+      "bytes": 540781,
+      "sha256": "99651bd36a648ec8afba155a2a3554eb6809ed47c04fc8a6b282ec7655011a18",
+      "dimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "scene": "colosseo",
+      "mode": "photo",
+      "result": "PASS",
+      "seconds": 2.19,
+      "bytes": 11971299,
+      "sha256": "d8f7a5f07eabc522528f531bcfd7f5431b8248c990dc075ce3af47aff44f4848",
+      "dimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "scene": "colosseo",
+      "mode": "nes",
+      "result": "PASS",
+      "seconds": 0.34,
+      "bytes": 478558,
+      "sha256": "2fad61e9b42b6cdde53d1ea31b748b63fb7b40d134f02c15693d568aac659bb6",
+      "dimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "scene": "acropoli",
+      "mode": "photo",
+      "result": "PASS",
+      "seconds": 2.16,
+      "bytes": 12279701,
+      "sha256": "8e4ff9acd7c2a3e309396013b5534fef306f448b70689bf2995df4c2aa5a78bb",
+      "dimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "scene": "acropoli",
+      "mode": "nes",
+      "result": "PASS",
+      "seconds": 0.34,
+      "bytes": 478781,
+      "sha256": "1ec43bb77fb5313c22556a0df80fedc70f221499df38b8f89c97dacd8d361289",
+      "dimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "scene": "pompei",
+      "mode": "photo",
+      "result": "PASS",
+      "seconds": 2.14,
+      "bytes": 11733149,
+      "sha256": "731621d9c86394b7ede492a1d46af3c8c42044f71e96e5cd5bf0c0718812fa97",
+      "dimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "scene": "pompei",
+      "mode": "nes",
+      "result": "PASS",
+      "seconds": 0.37,
+      "bytes": 472625,
+      "sha256": "45edc33b9e70cad980bab18702d0486f91b7aefb49c385d92507dee402bb3977",
+      "dimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "scene": "taormina",
+      "mode": "photo",
+      "result": "PASS",
+      "seconds": 2.2,
+      "bytes": 12616307,
+      "sha256": "c90528ff0cb6eac04dc274b466112007de0d9cd9b9766fd654e4e8e68430752b",
+      "dimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "scene": "taormina",
+      "mode": "nes",
+      "result": "PASS",
+      "seconds": 0.37,
+      "bytes": 569945,
+      "sha256": "96391f0a320924fe7c1a0ca5c1954f08ec215c9080c84a64a29057665614cf17",
+      "dimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "scene": "casteldelmonte",
+      "mode": "photo",
+      "result": "PASS",
+      "seconds": 2.16,
+      "bytes": 10901401,
+      "sha256": "eaa0b2a10232246bafbc83cbc3cb17f701fd37f61d90710d54a044449459f240",
+      "dimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "scene": "casteldelmonte",
+      "mode": "nes",
+      "result": "PASS",
+      "seconds": 0.36,
+      "bytes": 511556,
+      "sha256": "97cb8a03929432337d7e33dcab5b40c9212cd7192ada15bd33077d152288a84d",
+      "dimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "scene": "castellobarletta",
+      "mode": "photo",
+      "result": "PASS",
+      "seconds": 2.14,
+      "bytes": 10502120,
+      "sha256": "dc05f4feca9ce5c0f06d6f442854c9c5d176eaff04f38afe1f0c0ae6540277c0",
+      "dimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "scene": "castellobarletta",
+      "mode": "nes",
+      "result": "PASS",
+      "seconds": 0.35,
+      "bytes": 492607,
+      "sha256": "b3824b7f039458567d81253c7248e8ca0f9f49c5122b1aac233544690388b164",
       "dimensions": [
         3000,
         2000

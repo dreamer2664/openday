@@ -10,7 +10,7 @@
  for(const[k,v]of Object.entries(O.labels||{}))labels[k]={...labels[k],...v};
  const faceFields=['hair','face','beard','hat','glasses','expression','eye_shape','brows','nose','mouth'];
  const titles=['Stile','Luogo','Nome','Personaggio','Companion','Anteprima'];
- const notes=['Scegli uno stile per iniziare.','Sei luoghi, lo stesso stile.','Il nome è facoltativo.','Ogni dettaglio rimane modificabile.','Anche nessun animale va benissimo.','PNG locale · Nessun caricamento online.'];
+ const notes=['Scegli uno stile per iniziare.','Dodici luoghi, lo stesso stile.','Il nome è facoltativo.','Le scelte coperte sono spiegate, non simulate.','Anche nessun animale va benissimo.','PNG locale · Nessun caricamento online.'];
  let previewController=null,exportController=null,previewURL=null,fileURL=null,creditsURL=null,liveOpen=null,liveClosed=null,liveTicket=0,toastTimer=null;
  const release=u=>{if(u)URL.revokeObjectURL(u);};
  function el(tag,attrs={},...children){const n=document.createElement(tag);for(const[k,v]of Object.entries(attrs)){if(k==='class')n.className=v;else if(k.startsWith('on'))n.addEventListener(k.slice(2),v);else if(v!==null&&v!==undefined)n.setAttribute(k,v);}for(const c of children)if(c!==null&&c!==undefined)n.append(c.nodeType?c:document.createTextNode(String(c)));return n;}
@@ -34,31 +34,43 @@
  function scenes(){
   const grid=$('#scene-grid');grid.replaceChildren();for(const s of O.scenes){const b=el('button',{class:'choice scene-choice','data-scene':s.id,onclick:()=>{changed();state.scene=s.id;mode();scenes();show(2);}},el('img',{src:PORTABLE.thumbs[s.id][state.mode],alt:'',class:state.mode==='nes'?'pixel':''}),el('span',{class:'choice-copy'},el('strong',{},s.label),el('span',{},s.place)));b.title=sceneNote(s);selected(b,state.scene===s.id);grid.append(b);}$('#scene-note').textContent=sceneNote(O.scenes.find(s=>s.id===state.scene));
  }
- function bottomColors(){const c=O.colors;if(!['jeans','chino','shorts','tuta'].includes(state.character.bottom))return c.fabric;const seen=new Set();return[...c.denim,...c.fabric].filter(x=>{if(seen.has(x.id))return false;seen.add(x.id);return true;});}
+ function bottomColors(){const c=O.colors;if(!['cargo','jeans','chino','shorts','tuta'].includes(state.character.bottom))return c.fabric;const seen=new Set();return[...c.denim,...c.fabric].filter(x=>{if(seen.has(x.id))return false;seen.add(x.id);return true;});}
  function setCharacter(field,value){
-  state.character[field]=value;
-  if(field==='held')state.character.pose=value==='none'?'rilassata':'libro';
-  if(field==='pose'&&value==='libro'&&state.character.held==='none')state.character.held='libro';
-  if(field==='pose'&&value!=='libro')state.character.held='none';
-  if(field==='accessory'){const colors=value==='collana'?O.colors.metal:O.colors.fabric;if(!colors.some(c=>c.id===state.character.accessory_color))state.character.accessory_color=colors[0].id;}
+  const before={...state.character};state.character=R.applyField(state.character,field,value);
   if(field==='bottom'&&!bottomColors().some(c=>c.id===state.character.bottom_color))state.character.bottom_color=bottomColors()[0].id;
-  if(['eye_shape','mouth'].includes(field)&&['sorriso','entusiasta'].includes(state.character.expression))state.character.expression='neutra';
-  const beforeTop=state.character.top;state.character=R.normalize(state.character);if(field==='build'&&beforeTop!==state.character.top)notice('Per questa corporatura è stata scelta la giacca cyber: il cappotto non ha un livello compatibile.');
-  changed();live();creator();const target=$('#creator-panes [data-field="'+field+'"][data-value="'+value+'"]');target?.focus({preventScroll:true});
+  if(field==='build'&&(before.top!==state.character.top||before.bottom!==state.character.bottom))notice('Aggiornati i capi senza variante per questa corporatura. Le scelte compatibili sono rimaste invariate.');
+  changed();live();creator();$('#creator-panes [data-field="'+field+'"][data-value="'+value+'"]')?.focus({preventScroll:true});
+ }
+ function revealControls(field,changes){
+  state.character=R.normalize({...state.character,...changes});changed();live();creator();
+  notice('Strati aggiornati per mostrare il dettaglio: '+Object.entries(changes).map(([k,v])=>labels[k]?.[v]||v).join(', ')+'.');
  }
  const group=(title,...children)=>el('section',{class:'group'},el('h3',{},title),...children);
- function options(title,field){const list=el('div',{class:'options'});for(const value of O.choices[field]){const b=el('button',{class:'option'+(faceFields.includes(field)?' face-option':''),'data-field':field,'data-value':value,onclick:()=>setCharacter(field,value)},el('img',{src:R.characterIcon(state.mode,field,value),alt:'',loading:'lazy'}),el('span',{},labels[field]?.[value]||value));const allowed=O.compatibility?.[field]?.[value];if(allowed&&!allowed.includes(state.character.build)){b.disabled=true;b.title='Disponibile per la corporatura '+labels.build[allowed[0]];}selected(b,state.character[field]===value);list.append(b);}return group(title,list);}
- function swatches(title,field,colors){const list=el('div',{class:'swatches'});for(const c of colors){const b=el('button',{class:'swatch',style:'background:'+c.hex,title:c.label,'aria-label':c.label,'data-field':field,'data-value':c.id,onclick:()=>setCharacter(field,c.id)});selected(b,state.character[field]===c.id);list.append(b);}return group(title,list);}
+ function effectGroup(title,field,list,effects){
+  const wrapper=group(title,list);wrapper.dataset.controlField=field;let hidden=0;
+  for(const button of list.querySelectorAll('button')){
+   const value=button.dataset.value,n=effects.pixels[value];button.dataset.pixelChange=n===null?'incompatible':String(n);
+   if(n===null){button.disabled=true;button.title='Nessun livello disegnato per questa corporatura.';}
+   else if(value!==state.character[field]&&n===0){button.disabled=true;button.title='Coperto dagli strati attuali: nessuna differenza visibile.';hidden++;}
+  }
+  if(hidden){const note=el('p',{class:'control-effect-note'},'Le alternative attenuate sono coperte dagli strati attuali: non cambierebbero i pixel visibili.');
+   if(Object.keys(effects.reveal).length)note.append(' ',el('button',{class:'text-button reveal-control','data-reveal-field':field,onclick:()=>revealControls(field,effects.reveal)},'Scopri questo dettaglio →'));
+   wrapper.append(note);
+  }return wrapper;
+ }
+ function options(title,field){const list=el('div',{class:'options'}),values=O.choices[field];for(const value of values){const b=el('button',{class:'option'+(faceFields.includes(field)?' face-option':''),'data-field':field,'data-value':value,onclick:()=>setCharacter(field,value)},el('img',{src:R.characterIcon(state.mode,field,value),alt:'',loading:'lazy'}),el('span',{},labels[field]?.[value]||value));selected(b,state.character[field]===value);list.append(b);}return effectGroup(title,field,list,R.controlEffects(state.character,field,values));}
+ function swatches(title,field,colors){const list=el('div',{class:'swatches'});for(const c of colors){const b=el('button',{class:'swatch',style:'background:'+c.hex,title:c.label,'aria-label':c.label,'data-field':field,'data-value':c.id,onclick:()=>setCharacter(field,c.id)});selected(b,state.character[field]===c.id);list.append(b);}return effectGroup(title,field,list,R.controlEffects(state.character,field,colors.map(c=>c.id)));}
  function creator(){
   const p=$('#creator-panes'),c=state.character,co=O.colors;p.replaceChildren();const add=(...children)=>p.append(...children);
   if(state.tab==='body'){const presets=el('div',{class:'preset-grid'});for(const preset of O.presets){const pic=R.character({...O.defaults.character,...preset.character},state.mode).toDataURL();presets.append(el('button',{onclick:()=>{state.character=R.normalize({...O.defaults.character,...preset.character});changed();live();creator();}},el('img',{src:pic,alt:''}),el('strong',{},preset.label)));}add(group('Parti da un look, poi cambialo',presets),options('Corporatura','build'),swatches('Tonalità della pelle','skin',co.skin),el('p',{class:'compatibility-note'},'Tre basi LPC realmente differenti. I capi privi di un livello compatibile sono disattivati.'));}
+  if(['face','hair','expression'].includes(state.tab))add(el('div',{class:'face-detail'},el('img',{id:'face-detail-image',src:R.faceDetail(c),alt:'Ingrandimento dei pixel effettivi del viso'}),el('p',{},el('strong',{},'Il viso, da vicino.'),el('span',{},'Pixel nativi ingranditi: occhi, naso, labbra ed espressioni sono piccoli dettagli del disegno. Le coperture restano visibili anche qui.'))));
   if(state.tab==='face')add(options('Forma del viso','face'),options('Forma degli occhi','eye_shape'),swatches('Colore degli occhi','eyes',co.eyes),options('Sopracciglia','brows'),options('Naso','nose'),options('Labbra','mouth'));
-  if(state.tab==='hair')add(options('Acconciatura','hair'),swatches('Colore dei capelli','hair_color',co.hair),options('Barba e baffi','beard'));
+  if(state.tab==='hair')add(options('Acconciatura','hair'),swatches('Capelli, barba e sopracciglia','hair_color',co.hair),options('Barba e baffi','beard'));
   if(state.tab==='expression')add(options('Espressione','expression'));
   if(state.tab==='top'){add(options('Capo di sopra','top'),swatches('Colore del capo','top_color',co.fabric));if(['cyber_jacket','field_suit','tech_vest','cappotto','trench'].includes(c.top))add(swatches('Accenti e parti tecniche','inner_color',co.fabric));}
   if(state.tab==='bottom')add(options('Capo di sotto','bottom'),swatches('Tessuto e colore','bottom_color',bottomColors()),swatches('Cintura','belt_color',co.leather));
   if(state.tab==='shoes')add(options('Calzature','shoes'),swatches('Colore delle scarpe','shoes_color',co.leather));
-  if(state.tab==='extras'){add(options('Copricapo','hat'));if(['berretto','bandana','cappuccio'].includes(c.hat))add(swatches('Colore del copricapo','hat_color',co.fabric));add(options('Occhiali','glasses'),options('Accessorio','accessory'));if(c.accessory!=='none')add(swatches('Colore dell’accessorio','accessory_color',c.accessory==='collana'?co.metal:co.fabric));add(options('Oggetto in mano','held'),el('p',{class:'hint'},'Un oggetto richiede la posa con le mani davanti. Se scegli un’altra posa, l’oggetto viene riposto.'));}
+  if(state.tab==='extras'){add(options('Copricapo','hat'));if(['cuffie','berretto','bandana','cappuccio'].includes(c.hat))add(swatches('Colore del copricapo','hat_color',co.fabric));add(options('Occhiali','glasses'),options('Accessorio','accessory'));if(c.accessory!=='none')add(swatches('Colore dell’accessorio','accessory_color',c.accessory==='collana'?co.metal:co.fabric));add(options('Oggetto in mano','held'),el('p',{class:'hint'},'Un oggetto richiede la posa con le mani davanti. Se scegli un’altra posa, l’oggetto viene riposto.'));}
   if(state.tab==='pose')add(options('Posa','pose'));
   $$('#tabs button').forEach(b=>{b.classList.toggle('active',b.dataset.tab===state.tab);b.setAttribute('aria-pressed',String(b.dataset.tab===state.tab));});
  }
@@ -76,9 +88,9 @@
  }
  async function preview(){
   previewController?.abort();const ctl=previewController=new AbortController(),epoch=state.epoch;$('#preview-loading').hidden=false;$('#export').disabled=true;
-  try{const c=await R.compose(job(),matchMedia('(max-width: 760px)').matches?900:1200,{signal:ctl.signal});if(epoch!==state.epoch||ctl.signal.aborted)return;const data=c.toDataURL('image/png'),image=$('#final-preview');image.src=data;await image.decode();if(epoch!==state.epoch||ctl.signal.aborted)return;$('#export').disabled=false;}
+  let c=null;try{c=await R.compose(job(),matchMedia('(max-width: 760px)').matches?900:1200,{signal:ctl.signal});if(epoch!==state.epoch||ctl.signal.aborted)return;const data=c.toDataURL('image/png'),image=$('#final-preview');image.src=data;await image.decode();if(epoch!==state.epoch||ctl.signal.aborted)return;$('#export').disabled=false;}
   catch(e){if(e.name!=='AbortError')notice(e.message||'Anteprima non riuscita. Riprova o chiudi altre schede per liberare memoria.',true);}
-  finally{if(previewController===ctl)$('#preview-loading').hidden=true;}
+  finally{R.dispose(c);if(previewController===ctl)$('#preview-loading').hidden=true;}
  }
  function show(n){
   if(!state.ready)return;if(state.busy){notice('Attendi il PNG oppure usa Ricomincia per annullare.');return;}if(n>0&&!state.styleChosen)return;if(n>state.highest+1)return;
@@ -96,14 +108,14 @@
  $('#nickname').addEventListener('input',e=>{state.name=R.cleanName(e.target.value);if(Array.from(e.target.value).length>28)e.target.value=state.name;changed();});
  $('#export').addEventListener('click',async()=>{
   if(state.busy)return;state.busy=true;const epoch=state.epoch,ctl=exportController=new AbortController(),data=job();discardFile();$('#export').disabled=true;$('#export').textContent='Composizione HD…';$('#export-progress').hidden=false;$('#progress').value=0;
-  try{
-   const c=await R.compose(data,3000,{signal:ctl.signal,onProgress:v=>$('#progress').value=v});const blob=await R.pngBlob(c,data,ctl.signal);if(epoch!==state.epoch||ctl.signal.aborted)return;
+  let c=null;try{
+   c=await R.compose(data,3000,{signal:ctl.signal,onProgress:v=>$('#progress').value=v});const blob=await R.pngBlob(c,data,ctl.signal);R.dispose(c);c=null;if(epoch!==state.epoch||ctl.signal.aborted)return;
    const filename='cartolina-casardi-'+data.scene+'-'+(data.mode==='nes'?'pixel':'foto')+'.png';state.file=new File([blob],filename,{type:'image/png'});fileURL=URL.createObjectURL(blob);creditsURL=URL.createObjectURL(new Blob([R.credit(data).text],{type:'text/plain;charset=utf-8'}));
    $('#save').href=fileURL;$('#save').download=filename;$('#open-image').href=fileURL;$('#save-image').src=fileURL;$('#save-credits').href=creditsURL;$('#file-details').textContent='PNG · 3000 × 2000 px · '+(blob.size/1048576).toLocaleString('it-IT',{maximumFractionDigits:1})+' MB · Crediti inclusi nei metadati';
    let canShare=false;try{canShare=!!navigator.share&&!!navigator.canShare?.({files:[state.file]});}catch(_){}$('#share').hidden=!canShare;
    $('#progress').value=1;$('#result').hidden=false;CasardiBridge.publish(state.file);$('#result').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
   }catch(e){if(e.name!=='AbortError'&&epoch===state.epoch)notice(e.message||'Non riesco a generare il PNG. Chiudi altre schede e riprova.',true);}
-  finally{if(epoch===state.epoch){state.busy=false;$('#export').disabled=false;$('#export').innerHTML='Genera PNG 3000 × 2000 <span aria-hidden="true">↓</span>';$('#export-progress').hidden=true;}}
+  finally{R.dispose(c);if(epoch===state.epoch){state.busy=false;$('#export').disabled=false;$('#export').innerHTML='Genera PNG 3000 × 2000 <span aria-hidden="true">↓</span>';$('#export-progress').hidden=true;}}
  });
  $('#share').addEventListener('click',async()=>{if(!state.file)return;try{await navigator.share({files:[state.file],title:'Cartolina Casardi · Open Day 2026/27'});}catch(e){if(e.name!=='AbortError')notice('Condivisione non disponibile. Usa Scarica PNG oppure Apri l’immagine.',true);}});
  function reset(){

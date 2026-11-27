@@ -1,10 +1,11 @@
 {
-  "name": "Long Pants",
+  "name": "Shorts",
   "layer_1": {
     "zPos": 20,
-    "male": "legs/pants2/male/",
-    "female": "legs/pants2/thin/",
-    "teen": "legs/pants2/thin/"
+    "male": "legs/shorts/shorts/male/",
+    "female": "legs/shorts/shorts/thin/",
+    "teen": "legs/shorts/shorts/thin/",
+    "pregnant": "legs/shorts/shorts/thin/"
   },
   "animations": [
     "spellcast",
@@ -27,8 +28,8 @@
   ],
   "credits": [
     {
-      "file": "legs/pants2/male",
-      "notes": "original overalls by ElizaWy, base animations adapted from v3 overalls by bluecarrot16, pants by JaidynReiman",
+      "file": "legs/shorts/shorts/male",
+      "notes": "Original bases by Redshrike, thrust/shoot bases by Wulax, original overalls and shorts by ElizaWy, base animations adapted from v3 overalls by bluecarrot16, shorts by JaidynReiman",
       "authors": [
         "JaidynReiman",
         "ElizaWy",
@@ -42,13 +43,12 @@
       ],
       "urls": [
         "https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing",
-        "https://opengameart.org/content/lpc-expanded-sit-run-jump-more",
         "https://opengameart.org/content/lpc-expanded-pants"
       ]
     },
     {
-      "file": "legs/pants2",
-      "notes": "Original bases by Redshrike, thrust/shoot bases by Wulax, original pants by ElizaWy, climb/jump/run/sit/emotes/revised combat by JaidynReiman",
+      "file": "legs/shorts/shorts",
+      "notes": "Original bases by Redshrike, thrust/shoot bases by Wulax, original shorts by ElizaWy, climb/jump/run/sit/emotes/revised combat by JaidynReiman",
       "authors": [
         "ElizaWy",
         "JaidynReiman",

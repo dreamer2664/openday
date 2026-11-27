@@ -1,7 +1,7 @@
 """Render real 3000×2000 postcard examples with the revised LPC sci-fi art.
 
-All 12 scene/style combinations are rendered. Two photographic HD PNGs plus
-six small NES HD PNGs are retained; all twelve have 1200px attributed previews.
+All 24 scene/style combinations are rendered. One photographic HD PNG plus twelve NES HD PNGs are retained; all 24 have
+1200px attributed previews. Other photographic HD examples can be regenerated.
 This is not a set of screenshots and uses no commercial-game assets.
 """
 from pathlib import Path
@@ -35,18 +35,30 @@ JOBS={
  'J_biblioteca_nes_gatto':dict(mode='nes',scene='biblioteca',name='',character=ch('pilota',hair='rasati',hair_color='nero',skin='bruna',beard='barba',top='trench',top_color='nero',held='pergamena',pose='libro'),companion=dict(animal='gatto',variant='bianco',pose='in_piedi')),
  'K_paestum_foto_cane':dict(mode='photo',scene='paestum',name='Luca',character=ch('esplorazione',hair='corti',hair_color='biondo',top_color='navy',inner_color='ciano',pose='aperta',expression='entusiasta'),companion=dict(animal='cane',variant='bianco',pose='in_piedi')),
  'L_paestum_nes_coniglio':dict(mode='nes',scene='paestum',name='Noemi',character=ch(hair='caschetto',hair_color='platino',skin='ebano',top_color='bordeaux',inner_color='senape',held='oloproiettore',pose='libro',expression='curiosa'),companion=dict(animal='coniglio',variant='marrone',pose='seduto')),
+ 'M_colosseo_foto_volpe':dict(mode='photo',scene='colosseo',name='Sofia',character=ch('pilota',pose='rilassata',expression='neutra'),companion=dict(animal='volpe',variant='rossa',pose='seduto')),
+ 'N_colosseo_nes_volpe':dict(mode='nes',scene='colosseo',name='Sofia',character=ch('pilota',pose='rilassata',expression='neutra'),companion=dict(animal='volpe',variant='rossa',pose='seduto')),
+ 'O_acropoli_foto_gufo':dict(mode='photo',scene='acropoli',name='Sofia',character=ch('esplorazione',pose='rilassata',expression='neutra'),companion=dict(animal='gufo',variant='comune',pose='posato')),
+ 'P_acropoli_nes_gufo':dict(mode='nes',scene='acropoli',name='Sofia',character=ch('esplorazione',pose='rilassata',expression='neutra'),companion=dict(animal='gufo',variant='comune',pose='posato')),
+ 'Q_pompei_foto_gatto':dict(mode='photo',scene='pompei',name='Sofia',character=ch('urbano',pose='rilassata',expression='neutra'),companion=dict(animal='gatto',variant='soriano',pose='in_piedi')),
+ 'R_pompei_nes_gatto':dict(mode='nes',scene='pompei',name='Sofia',character=ch('urbano',pose='rilassata',expression='neutra'),companion=dict(animal='gatto',variant='soriano',pose='in_piedi')),
+ 'S_taormina_foto_coniglio':dict(mode='photo',scene='taormina',name='Sofia',character=ch('neon',pose='rilassata',expression='neutra'),companion=dict(animal='coniglio',variant='grigio',pose='seduto')),
+ 'T_taormina_nes_coniglio':dict(mode='nes',scene='taormina',name='Sofia',character=ch('neon',pose='rilassata',expression='neutra'),companion=dict(animal='coniglio',variant='grigio',pose='seduto')),
+ 'U_casteldelmonte_foto_cane':dict(mode='photo',scene='casteldelmonte',name='Sofia',character=ch('pilota',pose='rilassata',expression='neutra'),companion=dict(animal='cane',variant='cucciolo',pose='seduto')),
+ 'V_casteldelmonte_nes_cane':dict(mode='nes',scene='casteldelmonte',name='Sofia',character=ch('pilota',pose='rilassata',expression='neutra'),companion=dict(animal='cane',variant='cucciolo',pose='seduto')),
+ 'W_castellobarletta_foto_drago':dict(mode='photo',scene='castellobarletta',name='Sofia',character=ch('esplorazione',pose='rilassata',expression='neutra'),companion=dict(animal='drago',variant='smeraldo',pose='seduto')),
+ 'X_castellobarletta_nes_drago':dict(mode='nes',scene='castellobarletta',name='Sofia',character=ch('esplorazione',pose='rilassata',expression='neutra'),companion=dict(animal='drago',variant='smeraldo',pose='seduto')),
 }
 
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('jobs',nargs='*');parser.add_argument('--all-hd',action='store_true');args=parser.parse_args()
-    OUT.mkdir(exist_ok=True);selected=args.jobs or list(JOBS);keep=set('ABDEFHJL');meta={}
+    OUT.mkdir(exist_ok=True);selected=args.jobs or list(JOBS);keep=set('ABDFHJL N P R T V X'.replace(' ',''));meta={}
     if (OUT/'_jobs.json').exists():meta=json.loads((OUT/'_jobs.json').read_text())
     for key in selected:
         job=normalise_job(JOBS[key]);started=time.perf_counter();im=compose(job,3000);path=OUT/(key+'.png');hd=args.all_hd or key[0] in keep
         if hd:path.write_bytes(png_bytes(im,job))
         else:path.unlink(missing_ok=True)
-        small=im.resize((1200,800),Image.Resampling.NEAREST if job["mode"]=="nes" else Image.Resampling.LANCZOS);jpg=OUT/(key+'.jpg');small.save(jpg,quality=88,optimize=True,comment=credit_text(credit_for(job)).encode())
+        small=im.resize((1200,800),Image.Resampling.NEAREST if job["mode"]=="nes" else Image.Resampling.LANCZOS);jpg=OUT/(key+'.jpg');small.save(jpg,quality=82,optimize=True,comment=credit_text(credit_for(job)).encode())
         meta[key]=dict(job=job,file='renders/'+path.name if hd else None,jpg='renders/'+jpg.name,seconds=round(time.perf_counter()-started,2),size=[3000,2000])
         print(key,meta[key]['seconds'],'HD PNG' if hd else 'HD rendered; attributed JPG kept',flush=True)
     (OUT/'_jobs.json').write_text(json.dumps(meta,ensure_ascii=False,indent=1)+'\n')

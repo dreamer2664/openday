@@ -17,4 +17,4 @@ if __name__=='__main__':
     for sid in PHOTO_SCENES:
         with __import__('PIL.Image',fromlist=['open']).open(ROOT/'assets/nes'/(sid+'.png')) as im:
             assert im.size==(600,400)
-    print('Two actual style examples regenerated; six canonical pixel paintings preserved.')
+    print('Two actual style examples regenerated; twelve canonical pixel paintings preserved.')

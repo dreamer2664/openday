@@ -1,4 +1,4 @@
-"""Sequential full-HD HTTP exports across all 12 settings; not a load generator.
+"""Sequential full-HD HTTP exports across all 24 settings; not a load generator.
 
 Run against an otherwise idle test kiosk: python scripts/stress_http_test.py
 Each synthetic export replaces the preceding one and the session is reset.

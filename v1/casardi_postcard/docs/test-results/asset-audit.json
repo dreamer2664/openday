@@ -20,6 +20,6 @@
   "source_pngs_sha256_verified": 255,
   "definitions_sha256_verified": 56,
   "pose_atlases_sha256_verified": 85,
-  "seconds": 15.47,
+  "seconds": 14.92,
   "limitation": "Renderability, alpha, canvas bounds and recorded hashes only. Incompatible options are normalized/disabled, not claimed as native fits. Visual review covers the delivered sheets, not every Cartesian combination."
 }

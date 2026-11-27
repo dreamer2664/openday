@@ -56,7 +56,7 @@ PARTS={
  'coat/cappotto':'torso/jacket/torso_jacket_collared',
  'coat/trench':'torso/jacket/torso_jacket_trench',
  'bottom/jeans':'legs/pants/legs_cuffed','bottom/chino':'legs/pants/legs_pants',
- 'bottom/shorts':'legs/pants/legs_pants2','bottom/gonna':'legs/skirts/legs_skirts_plain',
+ 'bottom/shorts':'legs/shorts/legs_shorts','bottom/gonna':'legs/skirts/legs_skirts_plain',
  'bottom/gonna_lunga':'legs/skirts/legs_skirt_straight',
  'shoes/sneakers':'feet/shoes/feet_shoes_revised','shoes/stivaletti':'feet/boots/feet_boots_revised',
  'shoes/mocassini':'feet/shoes/feet_shoes_basic','shoes/sandali':'feet/feet_sandals',

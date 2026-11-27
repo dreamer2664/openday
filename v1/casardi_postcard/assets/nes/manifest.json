@@ -1,12 +1,12 @@
 {
-  "version": "3.1 NES Retro",
+  "version": "3.2 Dodici luoghi",
   "date": "2026-11-27",
   "native_grid": [
     600,
     400
   ],
   "export_scale": 5,
-  "disclosure": "Six new AI-assisted pixel-art illustrations, not handwritten drawings and not documentary photographs. Licensed architectural references retained; no commercial-game assets. Not an emulation of original NES hardware palette/tile limits.",
+  "disclosure": "Twelve AI-assisted pixel-art illustrations, not handwritten drawings and not documentary photographs. Licensed architectural references retained; no commercial-game assets. Not an emulation of original NES hardware palette/tile limits.",
   "runtime": "Only these local native PNGs; no generation, Internet, external models, master files or source photographs needed to draw the NES background.",
   "palette": "At most 64 colours per background; the independently licensed LPC characters retain their own palettes.",
   "scenes": {
@@ -33,7 +33,8 @@
       ],
       "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
       "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
-      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements."
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements.",
+      "introduced_in": "3.1"
     },
     "pantheon": {
       "path": "assets/nes/pantheon.png",
@@ -45,7 +46,7 @@
       "palette_colors": 64,
       "alpha": "Opaque; no photographic layer",
       "reference_photo": "https://commons.wikimedia.org/wiki/File:Pantheon_interior_3.jpg",
-      "reference_local_sha256": "0b8cf198734d128fbff32c0b8feb702a97ff474d94d5aec6ce5e69ab52878b91",
+      "reference_local_sha256": "c82bd6f052ce9b3e50c345645b7eb371026deffcba63fb6c1186559d0a438827",
       "reference_license": "CC BY-SA 3.0",
       "reference_license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
       "reference_author": "Wknight94",
@@ -58,7 +59,8 @@
       ],
       "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
       "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
-      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements."
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements.",
+      "introduced_in": "3.1"
     },
     "foro": {
       "path": "assets/nes/foro.png",
@@ -70,7 +72,7 @@
       "palette_colors": 64,
       "alpha": "Opaque; no photographic layer",
       "reference_photo": "https://commons.wikimedia.org/wiki/File:Arch_of_Titus_in_Rome_(2).jpg",
-      "reference_local_sha256": "7bccc901d26fb35695721e6f1fec93181f95deebc5bccec241840c43442d1272",
+      "reference_local_sha256": "d248af281e1157a2c4b5f5b0472a6d55c5dbae85e2f4c0dbf30df737328141c6",
       "reference_license": "CC BY-SA 4.0",
       "reference_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "reference_author": "Tournasol7",
@@ -83,7 +85,8 @@
       ],
       "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
       "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter. Foro: pseudo-inscription removed and stone panel repainted.",
-      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements."
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements.",
+      "introduced_in": "3.1"
     },
     "epidauro": {
       "path": "assets/nes/epidauro.png",
@@ -95,7 +98,7 @@
       "palette_colors": 64,
       "alpha": "Opaque; no photographic layer",
       "reference_photo": "https://commons.wikimedia.org/wiki/File:Theatre_of_Epidaurus,_202507.jpg",
-      "reference_local_sha256": "444370a96346478ed45be428526ab4e7b567926ad003ee1943c62bc0bf733e2a",
+      "reference_local_sha256": "95209bc856d05bd68cb8ce7a6544d6b40cc5a8a94602121bcfebe968cb03e602",
       "reference_license": "CC BY-SA 4.0",
       "reference_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "reference_author": "Zde",
@@ -108,7 +111,8 @@
       ],
       "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
       "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
-      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements."
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements.",
+      "introduced_in": "3.1"
     },
     "biblioteca": {
       "path": "assets/nes/biblioteca.png",
@@ -120,7 +124,7 @@
       "palette_colors": 64,
       "alpha": "Opaque; no photographic layer",
       "reference_photo": "https://commons.wikimedia.org/wiki/File:Cesena_-_Biblioteca_Malatestiana_-_Interno_-_2024-09-08_14-29-45_001.jpg",
-      "reference_local_sha256": "cf048a83eb21b55f843281f5bd56c5b5a745f1f6102c1286a84308d600cdf7ee",
+      "reference_local_sha256": "c7c37849075879850ed31ad9913b51d965e8d9ae0f541cbc5d110158119f884b",
       "reference_license": "CC BY-SA 4.0",
       "reference_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
       "reference_author": "Terragio67",
@@ -133,7 +137,8 @@
       ],
       "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
       "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
-      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements."
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements.",
+      "introduced_in": "3.1"
     },
     "paestum": {
       "path": "assets/nes/paestum.png",
@@ -145,7 +150,7 @@
       "palette_colors": 64,
       "alpha": "Opaque; no photographic layer",
       "reference_photo": "https://commons.wikimedia.org/wiki/File:Hera_temple_II_-_Paestum_-_Poseidonia_-_July_13th_2013_-_04.jpg",
-      "reference_local_sha256": "a76a08466b950176ff03fc080488716b9aaa5f90ecce12b8d13cc3a6bd2cf91b",
+      "reference_local_sha256": "ade055310b83437bf0dbbc714c05d4b5cc5d593ab9c43aa0c15049ed404b625b",
       "reference_license": "CC BY-SA 3.0",
       "reference_license_url": "https://creativecommons.org/licenses/by-sa/3.0",
       "reference_author": "Norbert Nagel",
@@ -158,7 +163,172 @@
       ],
       "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
       "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
-      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements."
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements.",
+      "introduced_in": "3.1"
+    },
+    "colosseo": {
+      "path": "assets/nes/colosseo.png",
+      "sha256": "56b572cbf39c2c7c4a95862a39faa68b935cb9839aa7c7e7ed9dde733b749564",
+      "dimensions": [
+        600,
+        400
+      ],
+      "palette_colors": 64,
+      "alpha": "Opaque; no photographic layer",
+      "reference_photo": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg",
+      "reference_local_sha256": "2ff9c95bd6ef299ef026380a8abccfcbd3eb12be97c8ea03e3d7e0eb261a7bba",
+      "reference_license": "CC BY-SA 2.5",
+      "reference_license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+      "reference_author": "Diliff",
+      "landmarks": "Colosseo a tre ordini di arcate e attico, anello esterno superstite a sinistra e profilo interrotto; crepuscolo e piazzale.",
+      "generation_brief": "Real Colosseum exterior at blue hour, descending broken outer ring, amber-lit Roman arcades, broad stone forecourt.",
+      "work_master_sha256": "d4e07c9737d42d617d7fd6f9aa14567e5f4fbc490bc346ac594bf9374df4083b",
+      "work_master_dimensions": [
+        1264,
+        848
+      ],
+      "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
+      "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements.",
+      "introduced_in": "3.2"
+    },
+    "acropoli": {
+      "path": "assets/nes/acropoli.png",
+      "sha256": "6e2a132099f8ddb4d98f604d75caa556ad3e986eb41fba8ca818484ee6016bf1",
+      "dimensions": [
+        600,
+        400
+      ],
+      "palette_colors": 64,
+      "alpha": "Opaque; no photographic layer",
+      "reference_photo": "https://commons.wikimedia.org/wiki/File:East_Facade_of_the_Parthenon_on_July_23,_2019.jpg",
+      "reference_local_sha256": "3867a25f724963463e7da2495574578a11760e224cdea971cc2372a6b2270f2b",
+      "reference_license": "CC BY-SA 4.0",
+      "reference_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reference_author": "George E. Koronaios",
+      "landmarks": "Fronte orientale e colonnato laterale del Partenone, stilobate e trabeazione lacunosa; rocce dell’Acropoli.",
+      "generation_brief": "East Parthenon three-quarter view, Doric peristyle, damaged roof and pediment, honey marble and open limestone path.",
+      "work_master_sha256": "a01194341e23a62e3c9bb3a1e0e22e2cbbd1cedce727f6f198605ba98303c560",
+      "work_master_dimensions": [
+        1264,
+        848
+      ],
+      "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
+      "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements.",
+      "introduced_in": "3.2"
+    },
+    "pompei": {
+      "path": "assets/nes/pompei.png",
+      "sha256": "2f92e17e4bc8d1c51527da0941020bc29b0a18907beba5ce8f8c739df70f7469",
+      "dimensions": [
+        600,
+        400
+      ],
+      "palette_colors": 64,
+      "alpha": "Opaque; no photographic layer",
+      "reference_photo": "https://commons.wikimedia.org/wiki/File:Forum_in_Pompeii_3.jpg",
+      "reference_local_sha256": "944dcf8e65417bc09ca2e64720d5635e98ba6f86ff45c62e25487a6755b1f466",
+      "reference_license": "CC BY-SA 3.0",
+      "reference_license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "reference_author": "Wknight94",
+      "landmarks": "Foro di Pompei: colonnato e trabeazione frammentaria, basi in laterizio, selciato e profilo del Vesuvio.",
+      "generation_brief": "Fragmentary Pompeii Forum colonnade receding from left, Roman paving, russet low walls and hazy Vesuvius.",
+      "work_master_sha256": "b55c94d2e653caaa7e338ed16d0577f454abba2b5ca198a42e894d0afd76605b",
+      "work_master_dimensions": [
+        1264,
+        848
+      ],
+      "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
+      "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements.",
+      "introduced_in": "3.2"
+    },
+    "taormina": {
+      "path": "assets/nes/taormina.png",
+      "sha256": "f26fd6392d3f57735718b474079b9c26113ffc7c56a4c57f0a62529cd5b2dcc7",
+      "dimensions": [
+        600,
+        400
+      ],
+      "palette_colors": 64,
+      "alpha": "Opaque; no photographic layer",
+      "reference_photo": "https://commons.wikimedia.org/wiki/File:Taormina_BW_2012-10-05_16-23-05_stitch.jpg",
+      "reference_local_sha256": "bada0f2252420b20c230c8a378e707b036de1862f53dd6b8df630b9a7f5f7cd2",
+      "reference_license": "CC BY-SA 3.0",
+      "reference_license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "reference_author": "Berthold Werner",
+      "landmarks": "Cavea curva con scale radiali, orchestra, resti della scena in laterizio e rilievi di Taormina; terrazza anteriore illustrativa.",
+      "generation_brief": "Ancient theatre from upper cavea, radial stairs and curved stone seating, brick stage remains, Sicilian rocky hills and safe empty visitor terrace.",
+      "work_master_sha256": "cc572fe2810f2f7ac18404f62593c786d2ee8e0d8871cbb29350c7ceaa53b1a8",
+      "work_master_dimensions": [
+        1264,
+        848
+      ],
+      "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
+      "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements.",
+      "introduced_in": "3.2"
+    },
+    "casteldelmonte": {
+      "path": "assets/nes/casteldelmonte.png",
+      "sha256": "78f3cbe00210f6fb01d5358859e2fe18410a330c04d991cc66c46f7a7499f8b2",
+      "dimensions": [
+        600,
+        400
+      ],
+      "palette_colors": 64,
+      "alpha": "Opaque; no photographic layer",
+      "reference_photo": "https://commons.wikimedia.org/wiki/File:Castel_del_Monte_-_front_view.jpg",
+      "reference_local_sha256": "bb56e1cb4c9a1b9e148c41ed0a5fc99608820aca5b3eec85268f964ea10ef2cd",
+      "reference_license": "CC BY-SA 4.0",
+      "reference_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "reference_author": "IKKos",
+      "landmarks": "Massa ottagonale, torri angolari ottagonali, portale con timpano e bifore; macchia mediterranea e sentiero.",
+      "generation_brief": "Federician octagonal Castel del Monte with octagonal corner towers, flat tops, real Gothic windows and entrance portal, limestone approach path.",
+      "work_master_sha256": "8e094f58d249dae72f454c3e9e4d06a56a85cd54d0f18de9bdca9740ac54be66",
+      "work_master_dimensions": [
+        1264,
+        848
+      ],
+      "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
+      "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements.",
+      "introduced_in": "3.2"
+    },
+    "castellobarletta": {
+      "path": "assets/nes/castellobarletta.png",
+      "sha256": "23e142c3e3d1d95d9f9545c3d7234e8c7039ffddac53c53286f2b3d368278e1c",
+      "dimensions": [
+        600,
+        400
+      ],
+      "palette_colors": 64,
+      "alpha": "Opaque; no photographic layer",
+      "reference_photo": "https://commons.wikimedia.org/wiki/File:Castello_di_Barletta_01.jpg",
+      "reference_local_sha256": "ac4d1c48567f0712ae9bf9956586e106b047a778ca16c950a2968f46af974bdc",
+      "reference_license": "Public domain",
+      "reference_license_url": "https://commons.wikimedia.org/wiki/Template:PD-self",
+      "reference_author": "Achille83",
+      "landmarks": "Volumi massicci e bastionati, cortine lapidee, fossato asciutto, piccolo ponte di ingresso e piazzale anteriore.",
+      "generation_brief": "Real Renaissance Barletta fortress with broad limestone volumes and angular bastions, dry green moat and paved empty forecourt.",
+      "work_master_sha256": "a1adb014ec3cf680cf55bcc6ab72c63581ad48fb6b10618650c28b9f1eaa1eb7",
+      "work_master_dimensions": [
+        1264,
+        848
+      ],
+      "creation": "AI-assisted architectural repaint using the licensed reference photograph; new illustrated pixels, not a quantized source photo. Art direction and native pixel/palette finishing in this project.",
+      "finishing": "Centre-crop to 3:2; native 600x400; 64-colour median-cut palette without diffusion dither; no runtime scaling filter.",
+      "license": "CC BY-SA 4.0 adaptation; preserve rights and attribution of the reference photograph. No claim of exclusive copyright over AI-generated elements.",
+      "introduced_in": "3.2"
     }
+  },
+  "retained_from_3_1": {
+    "casardi": "535ea07d76de611c59988b7d51126f28dbbe0a54728576cf8a727d483c3fb12e",
+    "pantheon": "7a748c8b2c0129c32e0ff3c293af2bf378d6e437d15163264af0ce3dc8c69caf",
+    "foro": "f53512c8033b05393717e61c6ae33d39065ce3b634a23a00f2a515070a982c8b",
+    "epidauro": "7af9104d1df3915346711ea183798dd0a2bec17251c7225ae4fd07d57ad3b4f6",
+    "biblioteca": "2c91115861566b79293ba670c0e3b2158d712724b334b9cb88bb737efcb4738b",
+    "paestum": "536f952e761ac0f0b80f4ffcb58738c87be7aa136f58e295e06823eee413bdc7"
   }
 }

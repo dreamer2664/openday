@@ -1,4 +1,4 @@
-"""Focused Chromium QA of the NES Retro 3.1 redesign, not physical-phone QA.
+"""Focused Chromium QA of the NES Retro 3.2 redesign, not physical-phone QA.
 Checks welcome thumbnail proportions, responsive bounds and mode-specific copy.
 Also saves two actual UI screenshots; no visitor data, network or generated art.
 """
@@ -21,7 +21,7 @@ async def main():
             page.on('pageerror',lambda e:errors.append(str(e)))
             page.on('request',lambda r:network.append(r.url) if r.url.startswith(('http:','https:')) else None)
             await page.goto(HTML.as_uri());await expect(page.locator('#start')).to_be_enabled()
-            await page.wait_for_function('()=>[...document.querySelectorAll(".world-preview img")].length===6&&[...document.querySelectorAll(".world-preview img")].every(i=>i.complete&&i.naturalWidth===600)')
+            await page.wait_for_function('()=>[...document.querySelectorAll(".world-preview img")].length===12&&[...document.querySelectorAll(".world-preview img")].every(i=>i.complete&&i.naturalWidth===600)')
             for width in (320,375,390,768,1366):
                 await page.set_viewport_size({'width':width,'height':900})
                 result=await page.evaluate('''()=>({overflow:document.documentElement.scrollWidth>innerWidth,worlds:[...document.querySelectorAll('.world-preview img')].map(i=>{const r=i.getBoundingClientRect();return {w:r.width,h:r.height,ratio:r.width/r.height};})})''')
@@ -40,7 +40,7 @@ async def main():
                 await expect(page.locator('[data-scene="'+scene['id']+'"]')).to_have_attribute('title',scene['note'])
             await page.click('[data-step="0"]');await page.click('[data-mode="photo"]')
             await expect(page.locator('#scene-note')).to_contain_text('Personaggio a colori molto attenuati')
-            mark('Sei note NES distinte da quelle fotografiche; Casardi storico identificato in entrambi gli stili')
+            mark('Dodici note NES distinte da quelle fotografiche; Casardi storico identificato in entrambi gli stili')
             await page.click('#info');await expect(page.locator('#info-dialog')).to_be_visible()
             assert 'assistite da IA' in await page.locator('#info-dialog').inner_text()
             assert 'non documentano la scuola attuale' in await page.locator('#info-dialog').inner_text()
@@ -51,7 +51,7 @@ async def main():
             assert not errors and not network,(errors,network)
             mark('Movimento ridotto rispettato; zero eccezioni e zero richieste HTTP/S offline')
         finally:await browser.close()
-    report=dict(result='PASS',revision='3.1 NES Retro',date='2026-11-27',html_sha256=hashlib.sha256(HTML.read_bytes()).hexdigest(),tests=checks,javascript_errors=errors,http_requests=network,environment='Chromium Linux, responsive viewport emulation; not a native Windows or physical phone test')
+    report=dict(result='PASS',revision='3.2 NES Retro',date='2026-11-27',html_sha256=hashlib.sha256(HTML.read_bytes()).hexdigest(),tests=checks,javascript_errors=errors,http_requests=network,environment='Chromium Linux, responsive viewport emulation; not a native Windows or physical phone test')
     (ROOT/'docs/test-results/nes-retro-ui.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 
 if __name__=='__main__':asyncio.run(main())

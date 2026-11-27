@@ -179,7 +179,7 @@ def index():
         session['owner']=secrets.token_urlsafe(24)
         session['csrf']=secrets.token_urlsafe(24)
     CAPABILITIES[session['csrf']]=session['owner']
-    return render_template('index.html',csrf=session['csrf'],app_version='3.0',
+    return render_template('index.html',csrf=session['csrf'],app_version='3.2',
                            lpc_credits=(ROOT/'assets/characters/CREDITI_LPC.txt').read_text(encoding='utf-8'))
 
 
@@ -223,6 +223,15 @@ def sprite():
     img=pc.crop_sprite(render_char(spec,style=mode))
     img=img.resize((img.width*scale,img.height*scale),Image.Resampling.NEAREST)
     return image_response(img)
+
+
+@app.post('/api/control-effects')
+def control_effects():
+    from .control_effects import assess
+    data=json_body();spec=normalise_character(data.get('character'))
+    result=assess(spec,data.get('fields',[]))
+    face=to_pil(render_char(spec)).crop((18,8,46,36));b=io.BytesIO();face.save(b,'PNG')
+    return jsonify(effects=result,face='data:image/png;base64,'+base64.b64encode(b.getvalue()).decode())
 
 
 @app.post('/api/companion')

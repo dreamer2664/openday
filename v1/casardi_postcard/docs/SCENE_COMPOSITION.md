@@ -3,7 +3,7 @@
 
 Tutte le coordinate fotografiche sono riferite al PNG 3000 × 2000, origine in alto a sinistra. La foto viene ritagliata a 3:2 mantenendo il fondo (`crop_anchor_y=1`). `ground_y` indica la riga delle suole; l’altezza indicata è un obiettivo nominale e viene arrotondata a un fattore intero dello sprite, non forzata con interpolazione. Le posizioni dei companion sono dedicate, non angoli decorativi.
 
-**Revisione 3.1 NES Retro, personaggi LPC mantenuti:** il personaggio usa ora il canvas modulare 64 × 64, con centro nativo x=32 conservato attraverso il ritaglio. Il parametro x resta l’ancora del corpo, non il centro variabile di capelli o oggetto. L’armonizzazione conserva questa informazione; le ombre seguono piedi reali e orientamento anche quando il companion è specchiato. La tartaruga usa rapporto d’altezza .10 rispetto alla posa di riferimento, non .22. Il nuovo audit controlla 6048 casi senza uscite dalla cornice o sovrapposizioni fra basi dei piedi, ma non sostituisce l’ispezione del pavimento fotografico.
+**Revisione 3.2 · Dodici luoghi, personaggi LPC mantenuti:** il personaggio usa ora il canvas modulare 64 × 64, con centro nativo x=32 conservato attraverso il ritaglio. Il parametro x resta l’ancora del corpo, non il centro variabile di capelli o oggetto. L’armonizzazione conserva questa informazione; le ombre seguono piedi reali e orientamento anche quando il companion è specchiato. La tartaruga usa rapporto d’altezza .10 rispetto alla posa di riferimento, non .22. Il nuovo audit controlla 12096 casi senza uscite dalla cornice o sovrapposizioni fra basi dei piedi, ma non sostituisce l’ispezione del pavimento fotografico.
 
 ## Pipeline comune fotografica
 
@@ -123,13 +123,133 @@ Piano: prato e sentiero davanti al recinto, non sui gradini del tempio. Personag
 | NES, griglia 600 × 400 | suole y=370; personaggio x=242, h nominale=174; companion x=344 |
 | Zona testo NES | `top-left` |
 
-## Uniformità NES · nuova arte 3.1
+## Colosseo
 
-Tutti i vecchi sfondi geometrici procedurali sono sostituiti da **sei illustrazioni architettoniche assistite da IA e rifinite su griglia nativa**, in `assets/nes/*.png`: 600 × 400, 64 colori per sfondo, opachi. L’arte canonica è identica fra browser e Python. `app/nes_art.py` ne controlla hash/dimensioni/opacità; non esiste un fallback ai disegni rifiutati. Provenienza e licenze in `assets/nes/manifest.json` e SOURCES_AND_LICENSES.md. La riduzione riguarda una nuova illustrazione, non un filtro applicato alla foto originale.
+Anfiteatro Flavio al crepuscolo: arcate illuminate, piazzale anteriore. Luce artificiale calda e cielo blu; il personaggio resta sul percorso libero a destra.
+
+Riferimento: https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg. Versione pixel: Colosseo a tre ordini di arcate e attico, anello esterno superstite a sinistra e profilo interrotto; crepuscolo e piazzale.
+
+| Parametro | Valore |
+|---|---|
+| Appoggio fotografico | y=1920 |
+| Personaggio foto | x=2320, h nominale=650 |
+| Ritaglio foto | coordinate normalizzate (0.0, 0.0, 1.0, 1.0); centratura 3:2, ancora verticale 1.0 |
+| Occlusori | Nessun livello aggiuntivo; piano fotografico mantenuto |
+| Companion foto | x=2650; specchiato=True |
+| Luce foto | dx=-0.55, dy=0.18, intensità=0.18; alte luci RGB (255, 215, 155) |
+| Ambiente foto | RGB (149, 171, 209), forza 0.26 |
+| Cromia / finitura | saturazione relativa 0.82; vignetta 0.08; grana 0.0015 |
+| Testo foto | top-right |
+| NES, griglia 600 × 400 | suole y=374; personaggio x=430, h nominale=150; companion x=328 |
+| Testo NES | top-left |
+
+## Acropoli di Atene · Partenone
+
+Fronte orientale del Partenone: gradini e frammenti marmorei. Appoggio sul percorso ghiaioso nell’angolo inferiore destro, esterno allo stilobate.
+
+Riferimento: https://commons.wikimedia.org/wiki/File:East_Facade_of_the_Parthenon_on_July_23,_2019.jpg. Versione pixel: Fronte orientale e colonnato laterale del Partenone, stilobate e trabeazione lacunosa; rocce dell’Acropoli.
+
+| Parametro | Valore |
+|---|---|
+| Appoggio fotografico | y=1900 |
+| Personaggio foto | x=2440, h nominale=670 |
+| Ritaglio foto | coordinate normalizzate (0.0, 0.0, 1.0, 1.0); centratura 3:2, ancora verticale 1.0 |
+| Occlusori | Nessun livello aggiuntivo; piano fotografico mantenuto |
+| Companion foto | x=2080; specchiato=False |
+| Luce foto | dx=-0.85, dy=0.22, intensità=0.52; alte luci RGB (255, 239, 207) |
+| Ambiente foto | RGB (228, 220, 201), forza 0.16 |
+| Cromia / finitura | saturazione relativa 0.9; vignetta 0.08; grana 0.0015 |
+| Testo foto | top-left |
+| NES, griglia 600 × 400 | suole y=372; personaggio x=425, h nominale=158; companion x=323 |
+| Testo NES | top-left |
+
+## Pompei · Foro
+
+Foro di Pompei, colonnato superstite e Vesuvio: personaggio sul selciato libero, non sull’area verde o sulle rovine. Sole dall’alto a sinistra.
+
+Riferimento: https://commons.wikimedia.org/wiki/File:Forum_in_Pompeii_3.jpg. Versione pixel: Foro di Pompei: colonnato e trabeazione frammentaria, basi in laterizio, selciato e profilo del Vesuvio.
+
+| Parametro | Valore |
+|---|---|
+| Appoggio fotografico | y=1880 |
+| Personaggio foto | x=2210, h nominale=880 |
+| Ritaglio foto | coordinate normalizzate (0.0, 0.0, 1.0, 1.0); centratura 3:2, ancora verticale 1.0 |
+| Occlusori | Nessun livello aggiuntivo; piano fotografico mantenuto |
+| Companion foto | x=1740; specchiato=False |
+| Luce foto | dx=-0.85, dy=0.25, intensità=0.5; alte luci RGB (255, 240, 209) |
+| Ambiente foto | RGB (223, 218, 201), forza 0.16 |
+| Cromia / finitura | saturazione relativa 0.88; vignetta 0.08; grana 0.0015 |
+| Testo foto | top-right |
+| NES, griglia 600 × 400 | suole y=374; personaggio x=428, h nominale=158; companion x=326 |
+| Testo NES | top-left |
+
+## Teatro antico di Taormina
+
+Teatro visto dalla cavea superiore: appoggio sul percorso di visita a destra, non nel vuoto sopra l’orchestra. Colori caldi del laterizio e luce da sinistra.
+
+Riferimento: https://commons.wikimedia.org/wiki/File:Taormina_BW_2012-10-05_16-23-05_stitch.jpg. Versione pixel: Cavea curva con scale radiali, orchestra, resti della scena in laterizio e rilievi di Taormina; terrazza anteriore illustrativa.
+
+| Parametro | Valore |
+|---|---|
+| Appoggio fotografico | y=1880 |
+| Personaggio foto | x=2500, h nominale=680 |
+| Ritaglio foto | coordinate normalizzate (0.0, 0.0, 1.0, 1.0); centratura 3:2, ancora verticale 1.0 |
+| Occlusori | Nessun livello aggiuntivo; piano fotografico mantenuto |
+| Companion foto | x=2150; specchiato=False |
+| Luce foto | dx=-0.8, dy=0.2, intensità=0.5; alte luci RGB (255, 239, 208) |
+| Ambiente foto | RGB (228, 216, 197), forza 0.16 |
+| Cromia / finitura | saturazione relativa 0.9; vignetta 0.08; grana 0.0015 |
+| Testo foto | top-left |
+| NES, griglia 600 × 400 | suole y=374; personaggio x=448, h nominale=152; companion x=348 |
+| Testo NES | top-left |
+
+## Castel del Monte
+
+Facciata del castello federiciano in luce coperta: sentiero d’accesso fra arbusti e prato; personaggio sul sentiero e companion sul prato basso accanto al percorso.
+
+Riferimento: https://commons.wikimedia.org/wiki/File:Castel_del_Monte_-_front_view.jpg. Versione pixel: Massa ottagonale, torri angolari ottagonali, portale con timpano e bifore; macchia mediterranea e sentiero.
+
+| Parametro | Valore |
+|---|---|
+| Appoggio fotografico | y=1870 |
+| Personaggio foto | x=690, h nominale=920 |
+| Ritaglio foto | coordinate normalizzate (0.0, 0.0, 1.0, 1.0); centratura 3:2, ancora verticale 1.0 |
+| Occlusori | Nessun livello aggiuntivo; piano fotografico mantenuto |
+| Companion foto | x=1140; specchiato=False |
+| Luce foto | dx=-0.5, dy=0.16, intensità=0.25; alte luci RGB (247, 236, 211) |
+| Ambiente foto | RGB (214, 217, 199), forza 0.18 |
+| Cromia / finitura | saturazione relativa 0.86; vignetta 0.08; grana 0.0015 |
+| Testo foto | top-left |
+| NES, griglia 600 × 400 | suole y=374; personaggio x=420, h nominale=160; companion x=316 |
+| Testo NES | top-left |
+
+## Castello di Barletta
+
+Fortezza e fossato asciutto: personaggio sul piazzale pavimentato anteriore, prima della siepe e del parapetto. La foto risale a ottobre 2008.
+
+Riferimento: https://commons.wikimedia.org/wiki/File:Castello_di_Barletta_01.jpg. Versione pixel: Volumi massicci e bastionati, cortine lapidee, fossato asciutto, piccolo ponte di ingresso e piazzale anteriore.
+
+| Parametro | Valore |
+|---|---|
+| Appoggio fotografico | y=1880 |
+| Personaggio foto | x=2200, h nominale=1010 |
+| Ritaglio foto | coordinate normalizzate (0.0, 0.0, 1.0, 1.0); centratura 3:2, ancora verticale 1.0 |
+| Occlusori | Nessun livello aggiuntivo; piano fotografico mantenuto |
+| Companion foto | x=1710; specchiato=False |
+| Luce foto | dx=-0.8, dy=0.2, intensità=0.46; alte luci RGB (251, 240, 219) |
+| Ambiente foto | RGB (225, 222, 205), forza 0.16 |
+| Cromia / finitura | saturazione relativa 0.88; vignetta 0.08; grana 0.0015 |
+| Testo foto | top-left |
+| NES, griglia 600 × 400 | suole y=374; personaggio x=426, h nominale=164; companion x=322 |
+| Testo NES | top-left |
+
+## Uniformità NES · arte 3.1 preservata + sei aggiunte 3.2
+
+Tutti i vecchi sfondi geometrici procedurali sono sostituiti da **dodici illustrazioni architettoniche assistite da IA e rifinite su griglia nativa**, in `assets/nes/*.png`: 600 × 400, 64 colori per sfondo, opachi. L’arte canonica è identica fra browser e Python. `app/nes_art.py` ne controlla hash/dimensioni/opacità; non esiste un fallback ai disegni rifiutati. Provenienza e licenze in `assets/nes/manifest.json` e SOURCES_AND_LICENSES.md. La riduzione riguarda una nuova illustrazione, non un filtro applicato alla foto originale.
 
 Sfondo, sprite, ombre nette, cornice e font con alpha binario sono composti **prima** dell’ingrandimento nearest-neighbor ×5. Non si lascia una foto dietro agli sprite. La tavolozza è ispirata al rétro, non una simulazione dei limiti hardware originali: i personaggi LPC conservano le proprie palette.
 
-La nuova **targhetta compatta in alto a sinistra**, con bordo a pixel, fondo blu notte e ombra netta, usa testi avorio/menta/oro leggibili in tutte e sei le scene. Contiene solo istituto, Open Day, città ed eventuale nome: nessun punteggio, slogan, logo o testo aggiuntivo. Evita il vecchio trattamento tipografico variabile di Biblioteca e Foro e lascia libero il centro architettonico.
+La nuova **targhetta compatta in alto a sinistra**, con bordo a pixel, fondo blu notte e ombra netta, usa testi avorio/menta/oro leggibili in tutte e dodici le scene. Contiene solo istituto, Open Day, città ed eventuale nome: nessun punteggio, slogan, logo o testo aggiuntivo. Evita il vecchio trattamento tipografico variabile di Biblioteca e Foro e lascia libero il centro architettonico.
 
 | Scena NES | Scelte della nuova illustrazione e integrazione |
 |---|---|
@@ -140,7 +260,7 @@ La nuova **targhetta compatta in alto a sinistra**, con bordo a pixel, fondo blu
 | Malatestiana | Aula del Nuti, corridoio centrale, plutei, colonne, volte, tiranti e rosone; cotto prospettico con luce laterale calda. Appoggi nell’asse libero davanti ai banchi, non sui piani di legno |
 | Hera II | Colonne doriche, colonnato laterale, trabeazione e timpano superstite; pietra calda, prato e sentiero. Soggetti nel primo piano libero; targhetta a sinistra, non sopra il timpano destro |
 
-Rilievi, texture e dettagli minori sono interpretazioni illustrative, non un rilievo filologico certificato; non si presume perfetta corrispondenza di ogni elemento o iscrizione. Nessuna generazione durante la visita. L’adeguatezza artistica è stata verificata sui sei campioni composti consegnati, non su ogni combinazione del creator e non come approvazione del committente.
+Rilievi, texture e dettagli minori sono interpretazioni illustrative, non un rilievo filologico certificato; non si presume perfetta corrispondenza di ogni elemento o iscrizione. Nessuna generazione durante la visita. L’adeguatezza artistica è stata verificata sui dodici luoghi composti consegnati, non su ogni combinazione del creator e non come approvazione del committente.
 
 ## Modifiche alle foto
 

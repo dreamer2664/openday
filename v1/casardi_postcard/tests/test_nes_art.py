@@ -15,12 +15,12 @@ from app.scenes import NES_SCENES,build_nes_scene
 ROOT=Path(__file__).resolve().parent.parent
 
 class NesArtTests(unittest.TestCase):
-    def test_manifest_has_six_distinct_architectural_sources(self):
+    def test_manifest_has_twelve_distinct_architectural_sources(self):
         m=nes_art.art_manifest()
         self.assertEqual(set(m['scenes']),set(NES_SCENES))
         self.assertEqual(m['native_grid'],[600,400])
         self.assertIn('AI-assisted',m['disclosure'])
-        self.assertEqual(len({r['sha256'] for r in m['scenes'].values()}),6)
+        self.assertEqual(len({r['sha256'] for r in m['scenes'].values()}),12)
         for r in m['scenes'].values():self.assertTrue(r['landmarks'] and r['reference_photo'].startswith('https://commons.wikimedia.org/'))
 
     def test_native_png_dimensions_palette_opacity_and_hashes(self):
@@ -67,7 +67,7 @@ class NesArtTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError,'modificato o incompleto'):nes_art.load_nes_art('test')
             nes_art.load_nes_art.cache_clear()
 
-    def test_all_six_hd_exports_are_exact_native_nearest_neighbour(self):
+    def test_all_twelve_hd_exports_are_exact_native_nearest_neighbour(self):
         for sid in NES_SCENES:
             with self.subTest(scene=sid):
                 job=dict(scene=sid,mode='nes',name='Èlisa',character=default_spec())

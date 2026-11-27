@@ -43,7 +43,7 @@ def png_bytes(image, job):
     meta.add_itxt('Source',c['source'])
     meta.add_itxt('Copyright',f"{c['license']} — {c['license_url']}")
     meta.add_itxt('Description',credit_text(c))
-    meta.add_text('Software','Casardi Postcard Studio 3.1 NES Retro · Pillow')
+    meta.add_text('Software','Casardi Postcard Studio 3.2 Dodici luoghi · Pillow')
     buf=io.BytesIO()
     image.save(buf,'PNG',optimize=True,pnginfo=meta,dpi=(300,300))
     return buf.getvalue()

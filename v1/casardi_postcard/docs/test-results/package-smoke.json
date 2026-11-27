@@ -2,10 +2,10 @@
   "result": "PASS",
   "date": "2026-11-27",
   "procedure": "ZIP extracted outside source tree; its own Go native service built from extracted vendored sources; standalone HTML copied alone and opened file:// with browser network disabled.",
-  "runtime_files_equal": 506,
-  "runtime_sha256": "0ccf8d9b2a6bfade3cad7e39d102223ee827ffb0a2cf666e8ada3188be6458a0",
+  "runtime_files_equal": 520,
+  "runtime_sha256": "8ff44c31e4e56260dfba77991e8c88793fb9c8922efee0b47af99e4e38661a0f",
   "windows_exe_sha256": "f49fcf7d0d69b01e0d52f0bceb6893722c7598cbc7bff28504b1ea3a7b87d465",
-  "standalone_html_sha256": "00dbd839a4749810b8ceefecf83d108a9cbcbf336d198d3ff58dd7fe36e9d3f7",
+  "standalone_html_sha256": "48cca47603d4eb53db38680ace4151c9b3dac134b38c02bbd7f0849403d7e049",
   "standalone_file_only_offline": [
     {
       "mode": "photo",
@@ -14,7 +14,7 @@
         3000,
         2000
       ],
-      "sha256": "54cbf65971bf48a0c61c8e450217a1f507516f521743ac6c7036423636930d93"
+      "sha256": "778ee7d4185e5f7998992ad47ab893eff5d697adef22ef50374a3f69913d051f"
     },
     {
       "mode": "nes",
@@ -23,7 +23,7 @@
         3000,
         2000
       ],
-      "sha256": "ad4d4fee85ed889c5d0db96c0b187f10d9dfae8b794059c25d48da89a66ad87a"
+      "sha256": "7794171f74a3d1f2153123dbcfc034e93f2f570344eb1c54d7449c43163c0f57"
     }
   ],
   "phone_creator_http": "PASS",
@@ -35,7 +35,7 @@
         3000,
         2000
       ],
-      "png_sha256": "54cbf65971bf48a0c61c8e450217a1f507516f521743ac6c7036423636930d93",
+      "png_sha256": "778ee7d4185e5f7998992ad47ab893eff5d697adef22ef50374a3f69913d051f",
       "qr_independently_decoded": true,
       "download_identical_bytes": true,
       "seconds": 0.15
@@ -47,7 +47,7 @@
         3000,
         2000
       ],
-      "png_sha256": "ad4d4fee85ed889c5d0db96c0b187f10d9dfae8b794059c25d48da89a66ad87a",
+      "png_sha256": "7794171f74a3d1f2153123dbcfc034e93f2f570344eb1c54d7449c43163c0f57",
       "qr_independently_decoded": true,
       "download_identical_bytes": true,
       "seconds": 0.05

@@ -1,15 +1,17 @@
 # Cartolina digitale · Liceo Alfredo Casardi
-## Open Day 2026/27 · Barletta — edizione 3.1 NES Retro
+## Open Day 2026/27 · Barletta — edizione 3.2 · Dodici luoghi
 
 **Pacchetto di questa revisione: `Cartolina_Casardi_Windows_LPC_QR_2026-27.zip`.** Sostituisce la consegna precedente; i due file principali sono già pronti nella cartella, non vanno ricreati dai sorgenti.
 
-Studio completo per creare cartoline **PNG 3000 × 2000, orizzontali 3:2**. Sei ambientazioni autentiche, modalità fotografica e ricostruzione NES, nome facoltativo, personaggio modulare e otto companion facoltativi. Nessun account, cloud, servizio a pagamento o asset di videogiochi commerciali.
+Studio completo per creare cartoline **PNG 3000 × 2000, orizzontali 3:2**. Dodici ambientazioni autentiche, modalità fotografica e ricostruzione NES, nome facoltativo, personaggio modulare e otto companion facoltativi. Nessun account, cloud, servizio a pagamento o asset di videogiochi commerciali.
 
-**Novità 3.1:** interfaccia NES-rétro con titoli pixel, pannelli squadrati, inventario illustrato, palette blu notte/menta/oro, controlli touch e focus visibile. **Tutti e sei i vecchi fondali pixel sono stati sostituiti**, non solo ricolorati: architetture, pavimenti, vegetazione, profondità e luce dedicati. Nuova targhetta discreta per i soli testi richiesti; anche la pagina del QR segue il nuovo tema.
+**Novità 3.2:** aggiunti **Colosseo, Acropoli di Atene / Partenone, Pompei / Foro, Teatro antico di Taormina, Castel del Monte e Castello di Barletta**, ciascuno con fotografia autentica e illustrazione pixel: **12 luoghi / 24 combinazioni**. Le sei illustrazioni della 3.1 che sono piaciute al committente sono conservate **byte per byte**, insieme allo stesso tema NES-rétro.
 
-**I personaggi LPC della revisione approvata restano invariati**, con equipaggiamento fantascientifico originale: giacca cyber, tuta da esplorazione, gilet tecnico, visore, zaino a celle e oggetti. Le licenze LPC sono per parte: **non è tutto CC0**.
+**Personalizzazione corretta, non sostituita:** rimane la famiglia professionale LPC. I pantaloncini usano ora il vero modulo Shorts, non un secondo pantalone lungo; denim/blu notte e beige/crema hanno rampe distinte; il colore delle cuffie è effettivo. Ogni gruppo confronta i **pixel dello sprite composto nell’abbigliamento attuale**: un’alternativa senza differenza visibile viene attenuata e spiegata. «Scopri questo dettaglio» rimuove esplicitamente gli strati che lo coprono; non vengono simulati cambiamenti. Uno zoom del viso mostra gli stessi pixel nativi, ingranditi. Gli effetti facciali restano intenzionalmente piccoli: non sono nuove anatomie ad alta definizione.
 
-**Provenienza degli scenari:** sei nuove illustrazioni **assistite da IA**, create dai riferimenti fotografici documentati e rifinite a **600 × 400 nativi, 64 colori per sfondo**. Non si dichiarano interamente disegnate a mano o rilievi storici. Sono gli stessi PNG canonici per browser e Python, senza filtri fotografici o generazione a runtime. Manifest, licenze e limiti in [assets/nes/manifest.json](assets/nes/manifest.json) e [SOURCES_AND_LICENSES.md](SOURCES_AND_LICENSES.md). I colori del Casardi reinterpretano la foto del 1936, non documentano la facciata attuale.
+**Provenienza degli scenari:** dodici illustrazioni **assistite da IA**, create dai riferimenti fotografici documentati e rifinite a **600 × 400 nativi, massimo 64 colori per sfondo**. Non si dichiarano interamente disegnate a mano o rilievi storici. Canvas e Pillow leggono gli stessi PNG canonici, senza generazione a runtime. Manifest, licenze e limiti in [assets/nes/manifest.json](assets/nes/manifest.json) e [SOURCES_AND_LICENSES.md](SOURCES_AND_LICENSES.md). I colori del Casardi reinterpretano il riferimento storico del **1936**, non documentano la scuola attuale. Le licenze LPC sono miste: **non è tutto CC0**.
+
+**Limite richiesto e non risolto con un trucco:** il solo HTML aperto su Android o PC crea e salva il PNG sul proprio dispositivo; non può consegnarlo a un altro telefono mediante un normale QR senza un servizio raggiungibile che ospiti il file. Un QR non può contenere un PNG HD e un URL Blob/file locale non è remoto. Non sono stati aggiunti cloud, hosting esterno, accoppiamento WebRTC o due QR come se soddisfacessero quella richiesta. Il servizio Windows già presente resta un’opzione separata, non un equivalente Android-only.
 
 **Il QR principale trasferisce il PNG già finito**, non apre il creatore. Il QR distinto del creatore telefono è soltanto in Info. Il trasferimento reale è stato verificato via HTTP fra due contesti Chromium indipendenti, con decodifica del QR e confronto byte per byte del PNG. **Non è una prova con un telefono fisico sulla rete della scuola.**
 
@@ -42,7 +44,7 @@ L’indirizzo del PC è normalmente **`http://127.0.0.1:8080/`**. Se la porta ap
 - Quattro look iniziali — Urbano, Esplorazione, Neon, Pilota — accelerano la scelta, ma restano modificabili.
 - Nove categorie di personalizzazione; quattro pose e sei espressioni. Le opzioni senza una variante grafica compatibile con la corporatura sono disabilitate, non forzate.
 - Nome/nickname facoltativo, massimo 28 caratteri. Non chiedere cognome, contatti o registrazione. I comuni accenti italiani sono coperti; emoji e tutti gli alfabeti Unicode non sono garantiti.
-- Un oggetto in mano imposta la posa «Mani davanti»; scegliendo un’altra posa viene riposto. Cappuccio e berretto nascondono i capelli: la scelta è conservata quando si tolgono.
+- Un oggetto in mano imposta la posa «Mani davanti»; scegliendo un’altra posa viene riposto. Cappuccio e berretto nascondono i capelli: la scelta resta memorizzata. L’interfaccia disabilita le alternative coperte e offre la rimozione esplicita della copertura.
 - La vista laterale è un **dettaglio ingrandito**; posizione e scala reali si controllano in Anteprima.
 - Nessun timer durante la creazione. Il conto alla rovescia riguarda **solo il collegamento di download** dopo l’esportazione.
 
@@ -81,7 +83,7 @@ Il token ha **192 bit casuali**. Il QR non contiene l’immagine e non la carica
 
 ## 4 · File unico autonomo e versione telefono completa
 
-**`Cartolina_Casardi_PC_e_Telefono.html`**, circa **12,7 MB**, contiene l’applicazione completa: foto, ricostruzioni, sprite, font, crediti e licenze. Può essere copiato **da solo** e aperto in un browser, senza comandi, Python o file accanto. Non è una demo né un semplice download viewer.
+**`Cartolina_Casardi_PC_e_Telefono.html`**, circa **24,3 MB**, contiene l’applicazione completa: foto, ricostruzioni, sprite, font, crediti e licenze. Può essere copiato **da solo** e aperto in un browser, senza comandi, Python o file accanto. Non è una demo né un semplice download viewer.
 
 | Apertura | Cosa offre |
 |---|---|
@@ -117,7 +119,7 @@ Variabili **facoltative per manutentori**, non necessarie al doppio clic:
 
 ## 6 · Cosa è incluso, fonti e limiti artistici
 
-Sei luoghi: **Casardi**, **Pantheon**, **Foro Romano / Arco di Tito**, **Teatro di Epidauro**, **Biblioteca Malatestiana**, **Tempio di Hera II a Paestum**. Le dodici interpretazioni hanno layout dedicati; il Foro fotografico mantiene volutamente un personaggio più piccolo per rispettare passanti e piano di appoggio.
+Dodici luoghi: **Casardi**, **Pantheon**, **Foro Romano / Arco di Tito**, **Teatro di Epidauro**, **Biblioteca Malatestiana**, **Tempio di Hera II a Paestum**, **Colosseo**, **Acropoli di Atene / Partenone**, **Pompei / Foro**, **Teatro antico di Taormina**, **Castel del Monte**, **Castello di Barletta**. Le 24 interpretazioni hanno layout dedicati; il Foro fotografico mantiene volutamente un personaggio più piccolo per rispettare passanti e piano di appoggio.
 
 **Foto Casardi:** autentica ma d’archivio, **1936, 707 × 491 px**, non una fotografia attuale ad alta risoluzione. Il PNG HD non inventa dettaglio mancante. È predisposta una cartella di sostituzione con immagine attuale **solo se realmente autorizzata**. Nessuna licenza viene dedotta dal sito della scuola.
 
@@ -138,13 +140,13 @@ assets/characters/lpc/            fonti LPC, definizioni, atlanti, palette, hash
 assets/photos/, nes/, fonts/      foto, ricostruzioni e font locali
 assets/licenses/                 testi legali e avvisi delle dipendenze
 assets/replacements/casardi/      procedura per foto attuale autorizzata
-renders/                         8 PNG HD e 12 JPG, esempi con nomi fittizi
+renders/                         13 PNG HD e 24 JPG, esempi con nomi fittizi
 docs/                            guide, screenshot reali e risultati QA
 scripts/, tests/                 build, controlli riproducibili e unitari
 var/                             solo edizione Python, mai dati da archiviare
 ```
 
-Sono stati renderizzati **tutti e dodici** gli esempi a 3000 × 2000. Per contenere lo ZIP si conservano due PNG fotografici e sei PNG NES, più tutte le dodici viste JPG attribuite a 1200 px. `python scripts/render_gallery.py --all-hd` conserva anche gli altri quattro PNG fotografici. Nessuna risoluzione dell’export nell’app è ridotta.
+Sono stati renderizzati **tutti e 24** gli esempi a 3000 × 2000. Per contenere lo ZIP si conservano un PNG fotografico e dodici PNG NES, più tutte le 24 viste JPG attribuite a 1200 px. `python scripts/render_gallery.py --all-hd` conserva anche tutti i PNG fotografici. Nessuna risoluzione dell’export nell’app è ridotta.
 
 ## 7 · Edizione Python facoltativa
 
@@ -189,6 +191,7 @@ python scripts/build_review_sheets.py
 python scripts/build_examples.py
 python scripts/build_standalone.py
 python scripts/browser_sprite_audit.py
+python scripts/control_effect_audit.py
 python scripts/nes_ui_test.py
 ```
 
@@ -210,6 +213,7 @@ I test browser devono essere eseguiti **in serie nella sandbox limitata**, su is
 
 ```sh
 python scripts/service_ui_test.py
+python scripts/control_ui_test.py  # richiede anche il kiosk Python su :8080
 python scripts/standalone_ui_test.py
 # solo con il kiosk Python avviato:
 python scripts/ui_test.py

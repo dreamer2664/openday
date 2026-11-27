@@ -33,7 +33,7 @@
     }
   ],
   "configuration": "Production defaults, no TRUST_PREVIEW and no CASARDI_HTML override; native Linux binary reads HTML beside itself from a different working directory.",
-  "html_sha256": "00dbd839a4749810b8ceefecf83d108a9cbcbf336d198d3ff58dd7fe36e9d3f7",
+  "html_sha256": "48cca47603d4eb53db38680ace4151c9b3dac134b38c02bbd7f0849403d7e049",
   "go_source_sha256": "a2d19278837a05e253a2a7dd35874720651c21b5f262b754fe11d330ee994122",
   "windows_native": "NOT TESTED; platform browser launch, Windows firewall and MessageBox require the real PC"
 }

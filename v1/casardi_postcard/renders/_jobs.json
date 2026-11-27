@@ -41,7 +41,7 @@
   },
   "file": "renders/A_casardi_foto_gatto.png",
   "jpg": "renders/A_casardi_foto_gatto.jpg",
-  "seconds": 8.14,
+  "seconds": 8.27,
   "size": [
    3000,
    2000
@@ -89,7 +89,7 @@
   },
   "file": "renders/B_casardi_nes_cane.png",
   "jpg": "renders/B_casardi_nes_cane.jpg",
-  "seconds": 1.13,
+  "seconds": 1.1,
   "size": [
    3000,
    2000
@@ -137,7 +137,7 @@
   },
   "file": null,
   "jpg": "renders/C_pantheon_foto_volpe.jpg",
-  "seconds": 1.54,
+  "seconds": 1.37,
   "size": [
    3000,
    2000
@@ -185,7 +185,7 @@
   },
   "file": "renders/D_pantheon_nes_gufo.png",
   "jpg": "renders/D_pantheon_nes_gufo.jpg",
-  "seconds": 0.92,
+  "seconds": 0.87,
   "size": [
    3000,
    2000
@@ -227,9 +227,9 @@
    },
    "companion": null
   },
-  "file": "renders/E_foro_foto_nessuno.png",
+  "file": null,
   "jpg": "renders/E_foro_foto_nessuno.jpg",
-  "seconds": 4.15,
+  "seconds": 1.09,
   "size": [
    3000,
    2000
@@ -277,7 +277,7 @@
   },
   "file": "renders/F_foro_nes_tartaruga.png",
   "jpg": "renders/F_foro_nes_tartaruga.jpg",
-  "seconds": 1.28,
+  "seconds": 1.17,
   "size": [
    3000,
    2000
@@ -325,7 +325,7 @@
   },
   "file": null,
   "jpg": "renders/G_epidauro_foto_coniglio.jpg",
-  "seconds": 1.54,
+  "seconds": 1.31,
   "size": [
    3000,
    2000
@@ -373,7 +373,7 @@
   },
   "file": "renders/H_epidauro_nes_corvo.png",
   "jpg": "renders/H_epidauro_nes_corvo.jpg",
-  "seconds": 0.86,
+  "seconds": 0.85,
   "size": [
    3000,
    2000
@@ -421,7 +421,7 @@
   },
   "file": null,
   "jpg": "renders/I_biblioteca_foto_drago.jpg",
-  "seconds": 1.5,
+  "seconds": 1.26,
   "size": [
    3000,
    2000
@@ -469,7 +469,7 @@
   },
   "file": "renders/J_biblioteca_nes_gatto.png",
   "jpg": "renders/J_biblioteca_nes_gatto.jpg",
-  "seconds": 0.83,
+  "seconds": 0.84,
   "size": [
    3000,
    2000
@@ -517,7 +517,7 @@
   },
   "file": null,
   "jpg": "renders/K_paestum_foto_cane.jpg",
-  "seconds": 1.46,
+  "seconds": 1.4,
   "size": [
    3000,
    2000
@@ -565,7 +565,583 @@
   },
   "file": "renders/L_paestum_nes_coniglio.png",
   "jpg": "renders/L_paestum_nes_coniglio.jpg",
-  "seconds": 0.91,
+  "seconds": 0.92,
+  "size": [
+   3000,
+   2000
+  ]
+ },
+ "M_colosseo_foto_volpe": {
+  "job": {
+   "mode": "photo",
+   "scene": "colosseo",
+   "name": "Sofia",
+   "character": {
+    "build": "medio",
+    "skin": "chiara",
+    "face": "squadrato",
+    "eye_shape": "classici",
+    "eyes": "castani",
+    "brows": "naturali",
+    "nose": "piccolo",
+    "mouth": "sottili",
+    "expression": "neutra",
+    "hair": "corti",
+    "hair_color": "platino",
+    "beard": "none",
+    "top": "cappotto",
+    "top_color": "bordeaux",
+    "inner_color": "senape",
+    "bottom": "chino",
+    "bottom_color": "nero",
+    "belt_color": "nero",
+    "shoes": "stivaletti",
+    "shoes_color": "nero",
+    "hat": "none",
+    "hat_color": "nero",
+    "glasses": "none",
+    "accessory": "none",
+    "accessory_color": "argento",
+    "held": "none",
+    "pose": "rilassata"
+   },
+   "companion": {
+    "animal": "volpe",
+    "variant": "rossa",
+    "pose": "seduto"
+   }
+  },
+  "file": null,
+  "jpg": "renders/M_colosseo_foto_volpe.jpg",
+  "seconds": 1.37,
+  "size": [
+   3000,
+   2000
+  ]
+ },
+ "N_colosseo_nes_volpe": {
+  "job": {
+   "mode": "nes",
+   "scene": "colosseo",
+   "name": "Sofia",
+   "character": {
+    "build": "medio",
+    "skin": "chiara",
+    "face": "squadrato",
+    "eye_shape": "classici",
+    "eyes": "castani",
+    "brows": "naturali",
+    "nose": "piccolo",
+    "mouth": "sottili",
+    "expression": "neutra",
+    "hair": "corti",
+    "hair_color": "platino",
+    "beard": "none",
+    "top": "cappotto",
+    "top_color": "bordeaux",
+    "inner_color": "senape",
+    "bottom": "chino",
+    "bottom_color": "nero",
+    "belt_color": "nero",
+    "shoes": "stivaletti",
+    "shoes_color": "nero",
+    "hat": "none",
+    "hat_color": "nero",
+    "glasses": "none",
+    "accessory": "none",
+    "accessory_color": "argento",
+    "held": "none",
+    "pose": "rilassata"
+   },
+   "companion": {
+    "animal": "volpe",
+    "variant": "rossa",
+    "pose": "seduto"
+   }
+  },
+  "file": "renders/N_colosseo_nes_volpe.png",
+  "jpg": "renders/N_colosseo_nes_volpe.jpg",
+  "seconds": 0.8,
+  "size": [
+   3000,
+   2000
+  ]
+ },
+ "O_acropoli_foto_gufo": {
+  "job": {
+   "mode": "photo",
+   "scene": "acropoli",
+   "name": "Sofia",
+   "character": {
+    "build": "minuto",
+    "skin": "dorata",
+    "face": "ovale",
+    "eye_shape": "classici",
+    "eyes": "castani",
+    "brows": "naturali",
+    "nose": "piccolo",
+    "mouth": "sottili",
+    "expression": "neutra",
+    "hair": "coda",
+    "hair_color": "castano",
+    "beard": "none",
+    "top": "field_suit",
+    "top_color": "oliva",
+    "inner_color": "senape",
+    "bottom": "cargo",
+    "bottom_color": "verde",
+    "belt_color": "nero",
+    "shoes": "tech_boots",
+    "shoes_color": "nero",
+    "hat": "none",
+    "hat_color": "nero",
+    "glasses": "none",
+    "accessory": "exopack",
+    "accessory_color": "oliva",
+    "held": "none",
+    "pose": "rilassata"
+   },
+   "companion": {
+    "animal": "gufo",
+    "variant": "comune",
+    "pose": "posato"
+   }
+  },
+  "file": null,
+  "jpg": "renders/O_acropoli_foto_gufo.jpg",
+  "seconds": 1.33,
+  "size": [
+   3000,
+   2000
+  ]
+ },
+ "P_acropoli_nes_gufo": {
+  "job": {
+   "mode": "nes",
+   "scene": "acropoli",
+   "name": "Sofia",
+   "character": {
+    "build": "minuto",
+    "skin": "dorata",
+    "face": "ovale",
+    "eye_shape": "classici",
+    "eyes": "castani",
+    "brows": "naturali",
+    "nose": "piccolo",
+    "mouth": "sottili",
+    "expression": "neutra",
+    "hair": "coda",
+    "hair_color": "castano",
+    "beard": "none",
+    "top": "field_suit",
+    "top_color": "oliva",
+    "inner_color": "senape",
+    "bottom": "cargo",
+    "bottom_color": "verde",
+    "belt_color": "nero",
+    "shoes": "tech_boots",
+    "shoes_color": "nero",
+    "hat": "none",
+    "hat_color": "nero",
+    "glasses": "none",
+    "accessory": "exopack",
+    "accessory_color": "oliva",
+    "held": "none",
+    "pose": "rilassata"
+   },
+   "companion": {
+    "animal": "gufo",
+    "variant": "comune",
+    "pose": "posato"
+   }
+  },
+  "file": "renders/P_acropoli_nes_gufo.png",
+  "jpg": "renders/P_acropoli_nes_gufo.jpg",
+  "seconds": 0.8,
+  "size": [
+   3000,
+   2000
+  ]
+ },
+ "Q_pompei_foto_gatto": {
+  "job": {
+   "mode": "photo",
+   "scene": "pompei",
+   "name": "Sofia",
+   "character": {
+    "build": "snello",
+    "skin": "chiara",
+    "face": "ovale",
+    "eye_shape": "classici",
+    "eyes": "castani",
+    "brows": "naturali",
+    "nose": "piccolo",
+    "mouth": "sottili",
+    "expression": "neutra",
+    "hair": "corti",
+    "hair_color": "nero",
+    "beard": "none",
+    "top": "cyber_jacket",
+    "top_color": "antracite",
+    "inner_color": "ciano",
+    "bottom": "cargo",
+    "bottom_color": "jeans-scuro",
+    "belt_color": "nero",
+    "shoes": "tech_boots",
+    "shoes_color": "nero",
+    "hat": "none",
+    "hat_color": "nero",
+    "glasses": "none",
+    "accessory": "none",
+    "accessory_color": "argento",
+    "held": "none",
+    "pose": "rilassata"
+   },
+   "companion": {
+    "animal": "gatto",
+    "variant": "soriano",
+    "pose": "in_piedi"
+   }
+  },
+  "file": null,
+  "jpg": "renders/Q_pompei_foto_gatto.jpg",
+  "seconds": 1.22,
+  "size": [
+   3000,
+   2000
+  ]
+ },
+ "R_pompei_nes_gatto": {
+  "job": {
+   "mode": "nes",
+   "scene": "pompei",
+   "name": "Sofia",
+   "character": {
+    "build": "snello",
+    "skin": "chiara",
+    "face": "ovale",
+    "eye_shape": "classici",
+    "eyes": "castani",
+    "brows": "naturali",
+    "nose": "piccolo",
+    "mouth": "sottili",
+    "expression": "neutra",
+    "hair": "corti",
+    "hair_color": "nero",
+    "beard": "none",
+    "top": "cyber_jacket",
+    "top_color": "antracite",
+    "inner_color": "ciano",
+    "bottom": "cargo",
+    "bottom_color": "jeans-scuro",
+    "belt_color": "nero",
+    "shoes": "tech_boots",
+    "shoes_color": "nero",
+    "hat": "none",
+    "hat_color": "nero",
+    "glasses": "none",
+    "accessory": "none",
+    "accessory_color": "argento",
+    "held": "none",
+    "pose": "rilassata"
+   },
+   "companion": {
+    "animal": "gatto",
+    "variant": "soriano",
+    "pose": "in_piedi"
+   }
+  },
+  "file": "renders/R_pompei_nes_gatto.png",
+  "jpg": "renders/R_pompei_nes_gatto.jpg",
+  "seconds": 0.75,
+  "size": [
+   3000,
+   2000
+  ]
+ },
+ "S_taormina_foto_coniglio": {
+  "job": {
+   "mode": "photo",
+   "scene": "taormina",
+   "name": "Sofia",
+   "character": {
+    "build": "snello",
+    "skin": "bruna",
+    "face": "ovale",
+    "eye_shape": "classici",
+    "eyes": "castani",
+    "brows": "naturali",
+    "nose": "piccolo",
+    "mouth": "sottili",
+    "expression": "neutra",
+    "hair": "longhawk",
+    "hair_color": "ciano",
+    "beard": "none",
+    "top": "tech_vest",
+    "top_color": "magenta",
+    "inner_color": "magenta",
+    "bottom": "cargo",
+    "bottom_color": "nero",
+    "belt_color": "nero",
+    "shoes": "tech_boots",
+    "shoes_color": "nero",
+    "hat": "none",
+    "hat_color": "nero",
+    "glasses": "visore",
+    "accessory": "none",
+    "accessory_color": "argento",
+    "held": "none",
+    "pose": "rilassata"
+   },
+   "companion": {
+    "animal": "coniglio",
+    "variant": "grigio",
+    "pose": "seduto"
+   }
+  },
+  "file": null,
+  "jpg": "renders/S_taormina_foto_coniglio.jpg",
+  "seconds": 1.39,
+  "size": [
+   3000,
+   2000
+  ]
+ },
+ "T_taormina_nes_coniglio": {
+  "job": {
+   "mode": "nes",
+   "scene": "taormina",
+   "name": "Sofia",
+   "character": {
+    "build": "snello",
+    "skin": "bruna",
+    "face": "ovale",
+    "eye_shape": "classici",
+    "eyes": "castani",
+    "brows": "naturali",
+    "nose": "piccolo",
+    "mouth": "sottili",
+    "expression": "neutra",
+    "hair": "longhawk",
+    "hair_color": "ciano",
+    "beard": "none",
+    "top": "tech_vest",
+    "top_color": "magenta",
+    "inner_color": "magenta",
+    "bottom": "cargo",
+    "bottom_color": "nero",
+    "belt_color": "nero",
+    "shoes": "tech_boots",
+    "shoes_color": "nero",
+    "hat": "none",
+    "hat_color": "nero",
+    "glasses": "visore",
+    "accessory": "none",
+    "accessory_color": "argento",
+    "held": "none",
+    "pose": "rilassata"
+   },
+   "companion": {
+    "animal": "coniglio",
+    "variant": "grigio",
+    "pose": "seduto"
+   }
+  },
+  "file": "renders/T_taormina_nes_coniglio.png",
+  "jpg": "renders/T_taormina_nes_coniglio.jpg",
+  "seconds": 1.05,
+  "size": [
+   3000,
+   2000
+  ]
+ },
+ "U_casteldelmonte_foto_cane": {
+  "job": {
+   "mode": "photo",
+   "scene": "casteldelmonte",
+   "name": "Sofia",
+   "character": {
+    "build": "medio",
+    "skin": "chiara",
+    "face": "squadrato",
+    "eye_shape": "classici",
+    "eyes": "castani",
+    "brows": "naturali",
+    "nose": "piccolo",
+    "mouth": "sottili",
+    "expression": "neutra",
+    "hair": "corti",
+    "hair_color": "platino",
+    "beard": "none",
+    "top": "cappotto",
+    "top_color": "bordeaux",
+    "inner_color": "senape",
+    "bottom": "chino",
+    "bottom_color": "nero",
+    "belt_color": "nero",
+    "shoes": "stivaletti",
+    "shoes_color": "nero",
+    "hat": "none",
+    "hat_color": "nero",
+    "glasses": "none",
+    "accessory": "none",
+    "accessory_color": "argento",
+    "held": "none",
+    "pose": "rilassata"
+   },
+   "companion": {
+    "animal": "cane",
+    "variant": "cucciolo",
+    "pose": "seduto"
+   }
+  },
+  "file": null,
+  "jpg": "renders/U_casteldelmonte_foto_cane.jpg",
+  "seconds": 1.23,
+  "size": [
+   3000,
+   2000
+  ]
+ },
+ "V_casteldelmonte_nes_cane": {
+  "job": {
+   "mode": "nes",
+   "scene": "casteldelmonte",
+   "name": "Sofia",
+   "character": {
+    "build": "medio",
+    "skin": "chiara",
+    "face": "squadrato",
+    "eye_shape": "classici",
+    "eyes": "castani",
+    "brows": "naturali",
+    "nose": "piccolo",
+    "mouth": "sottili",
+    "expression": "neutra",
+    "hair": "corti",
+    "hair_color": "platino",
+    "beard": "none",
+    "top": "cappotto",
+    "top_color": "bordeaux",
+    "inner_color": "senape",
+    "bottom": "chino",
+    "bottom_color": "nero",
+    "belt_color": "nero",
+    "shoes": "stivaletti",
+    "shoes_color": "nero",
+    "hat": "none",
+    "hat_color": "nero",
+    "glasses": "none",
+    "accessory": "none",
+    "accessory_color": "argento",
+    "held": "none",
+    "pose": "rilassata"
+   },
+   "companion": {
+    "animal": "cane",
+    "variant": "cucciolo",
+    "pose": "seduto"
+   }
+  },
+  "file": "renders/V_casteldelmonte_nes_cane.png",
+  "jpg": "renders/V_casteldelmonte_nes_cane.jpg",
+  "seconds": 0.82,
+  "size": [
+   3000,
+   2000
+  ]
+ },
+ "W_castellobarletta_foto_drago": {
+  "job": {
+   "mode": "photo",
+   "scene": "castellobarletta",
+   "name": "Sofia",
+   "character": {
+    "build": "minuto",
+    "skin": "dorata",
+    "face": "ovale",
+    "eye_shape": "classici",
+    "eyes": "castani",
+    "brows": "naturali",
+    "nose": "piccolo",
+    "mouth": "sottili",
+    "expression": "neutra",
+    "hair": "coda",
+    "hair_color": "castano",
+    "beard": "none",
+    "top": "field_suit",
+    "top_color": "oliva",
+    "inner_color": "senape",
+    "bottom": "cargo",
+    "bottom_color": "verde",
+    "belt_color": "nero",
+    "shoes": "tech_boots",
+    "shoes_color": "nero",
+    "hat": "none",
+    "hat_color": "nero",
+    "glasses": "none",
+    "accessory": "exopack",
+    "accessory_color": "oliva",
+    "held": "none",
+    "pose": "rilassata"
+   },
+   "companion": {
+    "animal": "drago",
+    "variant": "smeraldo",
+    "pose": "seduto"
+   }
+  },
+  "file": null,
+  "jpg": "renders/W_castellobarletta_foto_drago.jpg",
+  "seconds": 1.34,
+  "size": [
+   3000,
+   2000
+  ]
+ },
+ "X_castellobarletta_nes_drago": {
+  "job": {
+   "mode": "nes",
+   "scene": "castellobarletta",
+   "name": "Sofia",
+   "character": {
+    "build": "minuto",
+    "skin": "dorata",
+    "face": "ovale",
+    "eye_shape": "classici",
+    "eyes": "castani",
+    "brows": "naturali",
+    "nose": "piccolo",
+    "mouth": "sottili",
+    "expression": "neutra",
+    "hair": "coda",
+    "hair_color": "castano",
+    "beard": "none",
+    "top": "field_suit",
+    "top_color": "oliva",
+    "inner_color": "senape",
+    "bottom": "cargo",
+    "bottom_color": "verde",
+    "belt_color": "nero",
+    "shoes": "tech_boots",
+    "shoes_color": "nero",
+    "hat": "none",
+    "hat_color": "nero",
+    "glasses": "none",
+    "accessory": "exopack",
+    "accessory_color": "oliva",
+    "held": "none",
+    "pose": "rilassata"
+   },
+   "companion": {
+    "animal": "drago",
+    "variant": "smeraldo",
+    "pose": "seduto"
+   }
+  },
+  "file": "renders/X_castellobarletta_nes_drago.png",
+  "jpg": "renders/X_castellobarletta_nes_drago.jpg",
+  "seconds": 0.77,
   "size": [
    3000,
    2000

@@ -1,7 +1,7 @@
-# Guida operatore dello stand · Windows · NES Retro 3.1
+# Guida operatore dello stand · Windows · NES Retro 3.2
 ## Liceo Alfredo Casardi · Open Day 2026/27 · Barletta
 
-Questa guida riguarda **AVVIA_CARTOLINA_WINDOWS.exe + HTML**, l’edizione consigliata senza terminale. Le istruzioni dell’edizione Python, distinta e facoltativa, sono nel README. Non confondere il QR del creatore con il QR del PNG finito. La 3.1 cambia il tema e tutti e sei gli scenari pixel; personaggi, export e percorso restano gli stessi. Gli scenari sono interpretazioni illustrate assistite da IA: la colorazione Casardi parte dalla foto del 1936, non è una fotografia attuale.
+Questa guida riguarda **AVVIA_CARTOLINA_WINDOWS.exe + HTML**, l’edizione consigliata senza terminale. Le istruzioni dell’edizione Python, distinta e facoltativa, sono nel README. Non confondere il QR del creatore con il QR del PNG finito. La 3.2 aggiunge sei luoghi (dodici in totale), preserva le sei illustrazioni apprezzate e corregge i controlli del personaggio senza cambiare famiglia LPC. Gli scenari sono interpretazioni illustrate assistite da IA: la colorazione Casardi parte dalla foto del 1936, non è una fotografia attuale.
 
 ## Prima dell’evento: preparazione
 
@@ -35,7 +35,7 @@ Il PC può essere Ethernet e il telefono Wi-Fi se le due reti comunicano. **Stes
 ## Durante ogni visita
 
 1. Premere **Inizia**. Stile, luogo, nome facoltativo, personaggio, animale facoltativo, anteprima.
-2. Il visitatore può scegliere rapidamente uno dei quattro look e modificarlo. Le opzioni non compatibili sono disabilitate. Il dettaglio ingrandito a lato **non** è la scala finale; controllare l’anteprima.
+2. Il visitatore può scegliere rapidamente uno dei quattro look e modificarlo. Le opzioni non compatibili e le alternative coperte dagli strati sono attenuate e spiegate. Per queste ultime usare «Scopri questo dettaglio»; il viso ha uno zoom dei pixel effettivi. Il dettaglio ingrandito a lato **non** è la scala finale; controllare l’anteprima.
 3. Non chiedere cognome, email o contatti. Nome/nickname facoltativo, massimo 28 caratteri.
 4. Non c’è un limite di tempo per creare. Il timer parte soltanto dopo **Genera PNG**.
 5. Attendere la comparsa del QR nella scheda **Dal PC al telefono — Scansiona e scarica**. **Questo è il QR del PNG già finito.**
@@ -48,6 +48,7 @@ Non fare reset prima che il download sia completato. Il link dura **10 minuti** 
 
 | Problema | Azione utile |
 |---|---|
+| Un controllo non cambia il personaggio | Leggere la nota di copertura; «Scopri questo dettaglio» rimuove gli strati che lo nascondono. Occhi, naso e labbra sono dettagli di pochi pixel: usare lo zoom. Non promettere una modifica nascosta |
 | QR non visibile dopo export | Leggere il messaggio; controllare rete/IP in Info. Salvare comunque il PNG sul PC. Non mostrare il QR del creatore come sostituto di quello del file |
 | Nessuna scheda di rete privata | Collegare il PC alla LAN, arrestare il servizio e riavviare. Il programma non inventa un URL raggiungibile |
 | Telefono non apre il link | Stessa LAN, IP/porta corretti, autorizzazione firewall e client isolation con l’IT. Il link HTTP locale non funziona da rete mobile o da fuori sede |

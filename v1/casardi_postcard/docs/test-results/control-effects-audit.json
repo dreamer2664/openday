@@ -1,0 +1,2364 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "revision": "3.2",
+  "comparisons": 3250,
+  "reference_fields": [
+    {
+      "field": "build",
+      "result": "PASS",
+      "values": 3,
+      "minimum_nonzero_change": 17,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "snello",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "medio",
+          "changed_native_pixels": 415
+        },
+        {
+          "value": "minuto",
+          "changed_native_pixels": 17
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "face",
+      "result": "PASS",
+      "values": 4,
+      "minimum_nonzero_change": 17,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "rasati",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "ovale",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "squadrato",
+          "changed_native_pixels": 17
+        },
+        {
+          "value": "affusolato",
+          "changed_native_pixels": 63
+        },
+        {
+          "value": "tondo",
+          "changed_native_pixels": 120
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "eye_shape",
+      "result": "PASS",
+      "values": 3,
+      "minimum_nonzero_change": 4,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "rasati",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "classici",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "mandorla",
+          "changed_native_pixels": 6
+        },
+        {
+          "value": "tondi",
+          "changed_native_pixels": 4
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "brows",
+      "result": "PASS",
+      "values": 3,
+      "minimum_nonzero_change": 8,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "rasati",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "naturali",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "folte",
+          "changed_native_pixels": 14
+        },
+        {
+          "value": "sottili",
+          "changed_native_pixels": 8
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "nose",
+      "result": "PASS",
+      "values": 3,
+      "minimum_nonzero_change": 8,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "rasati",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "piccolo",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "largo",
+          "changed_native_pixels": 14
+        },
+        {
+          "value": "aquilino",
+          "changed_native_pixels": 8
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "mouth",
+      "result": "PASS",
+      "values": 2,
+      "minimum_nonzero_change": 4,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "rasati",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "sottili",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "piene",
+          "changed_native_pixels": 4
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "hair",
+      "result": "PASS",
+      "values": 15,
+      "minimum_nonzero_change": 151,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "corti",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "caschetto",
+          "changed_native_pixels": 281
+        },
+        {
+          "value": "ricci",
+          "changed_native_pixels": 185
+        },
+        {
+          "value": "lunghi",
+          "changed_native_pixels": 243
+        },
+        {
+          "value": "coda",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "crocchia",
+          "changed_native_pixels": 239
+        },
+        {
+          "value": "trecce",
+          "changed_native_pixels": 296
+        },
+        {
+          "value": "ondulati",
+          "changed_native_pixels": 306
+        },
+        {
+          "value": "cresta",
+          "changed_native_pixels": 174
+        },
+        {
+          "value": "longhawk",
+          "changed_native_pixels": 184
+        },
+        {
+          "value": "cornrows",
+          "changed_native_pixels": 215
+        },
+        {
+          "value": "dreadlocks",
+          "changed_native_pixels": 331
+        },
+        {
+          "value": "afro",
+          "changed_native_pixels": 173
+        },
+        {
+          "value": "rasati",
+          "changed_native_pixels": 151
+        },
+        {
+          "value": "calvo",
+          "changed_native_pixels": 190
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "beard",
+      "result": "PASS",
+      "values": 4,
+      "minimum_nonzero_change": 22,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "none",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "baffi",
+          "changed_native_pixels": 22
+        },
+        {
+          "value": "barba",
+          "changed_native_pixels": 26
+        },
+        {
+          "value": "barba_lunga",
+          "changed_native_pixels": 41
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "expression",
+      "result": "PASS",
+      "values": 6,
+      "minimum_nonzero_change": 20,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "rasati",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "neutra",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "sorriso",
+          "changed_native_pixels": 38
+        },
+        {
+          "value": "entusiasta",
+          "changed_native_pixels": 33
+        },
+        {
+          "value": "seria",
+          "changed_native_pixels": 20
+        },
+        {
+          "value": "curiosa",
+          "changed_native_pixels": 20
+        },
+        {
+          "value": "sorpresa",
+          "changed_native_pixels": 20
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "top",
+      "result": "PASS",
+      "values": 10,
+      "minimum_nonzero_change": 120,
+      "reference": {
+        "build": "medio",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "cyber_jacket",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "field_suit",
+          "changed_native_pixels": 126
+        },
+        {
+          "value": "tech_vest",
+          "changed_native_pixels": 190
+        },
+        {
+          "value": "cappotto",
+          "changed_native_pixels": 382
+        },
+        {
+          "value": "trench",
+          "changed_native_pixels": 416
+        },
+        {
+          "value": "tshirt",
+          "changed_native_pixels": 188
+        },
+        {
+          "value": "camicia",
+          "changed_native_pixels": 148
+        },
+        {
+          "value": "felpa",
+          "changed_native_pixels": 150
+        },
+        {
+          "value": "maglione",
+          "changed_native_pixels": 201
+        },
+        {
+          "value": "giacca",
+          "changed_native_pixels": 120
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "bottom",
+      "result": "PASS",
+      "values": 6,
+      "minimum_nonzero_change": 36,
+      "reference": {
+        "build": "snello",
+        "top": "tshirt",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "cargo",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "jeans",
+          "changed_native_pixels": 36
+        },
+        {
+          "value": "chino",
+          "changed_native_pixels": 102
+        },
+        {
+          "value": "shorts",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "gonna",
+          "changed_native_pixels": 201
+        },
+        {
+          "value": "gonna_lunga",
+          "changed_native_pixels": 234
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "shoes",
+      "result": "PASS",
+      "values": 5,
+      "minimum_nonzero_change": 26,
+      "reference": {
+        "build": "snello",
+        "top": "tshirt",
+        "bottom": "shorts",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "tech_boots",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "sneakers",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "stivaletti",
+          "changed_native_pixels": 26
+        },
+        {
+          "value": "mocassini",
+          "changed_native_pixels": 98
+        },
+        {
+          "value": "sandali",
+          "changed_native_pixels": 114
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "hat",
+      "result": "PASS",
+      "values": 6,
+      "minimum_nonzero_change": 16,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "none",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "cuffie",
+          "changed_native_pixels": 122
+        },
+        {
+          "value": "berretto",
+          "changed_native_pixels": 203
+        },
+        {
+          "value": "bandana",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "cappuccio",
+          "changed_native_pixels": 449
+        },
+        {
+          "value": "corona_alloro",
+          "changed_native_pixels": 16
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "glasses",
+      "result": "PASS",
+      "values": 5,
+      "minimum_nonzero_change": 63,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "none",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "tondi",
+          "changed_native_pixels": 68
+        },
+        {
+          "value": "sole",
+          "changed_native_pixels": 63
+        },
+        {
+          "value": "spessi",
+          "changed_native_pixels": 67
+        },
+        {
+          "value": "visore",
+          "changed_native_pixels": 74
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "accessory",
+      "result": "PASS",
+      "values": 6,
+      "minimum_nonzero_change": 10,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "none",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "exopack",
+          "changed_native_pixels": 79
+        },
+        {
+          "value": "collana",
+          "changed_native_pixels": 10
+        },
+        {
+          "value": "sciarpa",
+          "changed_native_pixels": 85
+        },
+        {
+          "value": "zaino",
+          "changed_native_pixels": 50
+        },
+        {
+          "value": "tracolla",
+          "changed_native_pixels": 77
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "held",
+      "result": "PASS",
+      "values": 6,
+      "minimum_nonzero_change": 268,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "none",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "libro",
+          "changed_native_pixels": 273
+        },
+        {
+          "value": "tablet",
+          "changed_native_pixels": 269
+        },
+        {
+          "value": "pergamena",
+          "changed_native_pixels": 268
+        },
+        {
+          "value": "cetra",
+          "changed_native_pixels": 278
+        },
+        {
+          "value": "oloproiettore",
+          "changed_native_pixels": 268
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "pose",
+      "result": "PASS",
+      "values": 4,
+      "minimum_nonzero_change": 273,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "rilassata",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "movimento",
+          "changed_native_pixels": 722
+        },
+        {
+          "value": "aperta",
+          "changed_native_pixels": 318
+        },
+        {
+          "value": "libro",
+          "changed_native_pixels": 273
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "skin",
+      "result": "PASS",
+      "values": 7,
+      "minimum_nonzero_change": 186,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "porcellana",
+          "changed_native_pixels": 234
+        },
+        {
+          "value": "chiara",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "dorata",
+          "changed_native_pixels": 234
+        },
+        {
+          "value": "ambra",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "olivastra",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "bruna",
+          "changed_native_pixels": 234
+        },
+        {
+          "value": "ebano",
+          "changed_native_pixels": 234
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "hair_color",
+      "result": "PASS",
+      "values": 13,
+      "minimum_nonzero_change": 190,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "nero",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "castano",
+          "changed_native_pixels": 190
+        },
+        {
+          "value": "nocciola",
+          "changed_native_pixels": 190
+        },
+        {
+          "value": "biondo",
+          "changed_native_pixels": 190
+        },
+        {
+          "value": "ramato",
+          "changed_native_pixels": 190
+        },
+        {
+          "value": "rosso",
+          "changed_native_pixels": 190
+        },
+        {
+          "value": "cenere",
+          "changed_native_pixels": 190
+        },
+        {
+          "value": "platino",
+          "changed_native_pixels": 190
+        },
+        {
+          "value": "viola",
+          "changed_native_pixels": 190
+        },
+        {
+          "value": "verde",
+          "changed_native_pixels": 190
+        },
+        {
+          "value": "ciano",
+          "changed_native_pixels": 190
+        },
+        {
+          "value": "rosa",
+          "changed_native_pixels": 190
+        },
+        {
+          "value": "blu_elettrico",
+          "changed_native_pixels": 190
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "eyes",
+      "result": "PASS",
+      "values": 6,
+      "minimum_nonzero_change": 10,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "rasati",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "castani",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "neri",
+          "changed_native_pixels": 10
+        },
+        {
+          "value": "verdi",
+          "changed_native_pixels": 10
+        },
+        {
+          "value": "azzurri",
+          "changed_native_pixels": 10
+        },
+        {
+          "value": "grigi",
+          "changed_native_pixels": 10
+        },
+        {
+          "value": "ambra",
+          "changed_native_pixels": 10
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "top_color",
+      "result": "PASS",
+      "values": 18,
+      "minimum_nonzero_change": 124,
+      "reference": {
+        "build": "medio",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "bianco",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "crema",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "rosso",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "bordeaux",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "blu",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "navy",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "azzurro",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "verde",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "oliva",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "giallo",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "senape",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "grigio",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "antracite",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "nero",
+          "changed_native_pixels": 124
+        },
+        {
+          "value": "rosa",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "lilla",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "ciano",
+          "changed_native_pixels": 186
+        },
+        {
+          "value": "magenta",
+          "changed_native_pixels": 186
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "inner_color",
+      "result": "PASS",
+      "values": 18,
+      "minimum_nonzero_change": 72,
+      "reference": {
+        "build": "medio",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "bianco",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "crema",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "rosso",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "bordeaux",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "blu",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "navy",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "azzurro",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "verde",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "oliva",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "giallo",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "senape",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "grigio",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "antracite",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "nero",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "rosa",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "lilla",
+          "changed_native_pixels": 72
+        },
+        {
+          "value": "ciano",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "magenta",
+          "changed_native_pixels": 72
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "bottom_color",
+      "result": "PASS",
+      "values": 22,
+      "minimum_nonzero_change": 84,
+      "reference": {
+        "build": "snello",
+        "top": "tshirt",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "jeans",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "jeans-chiaro",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "jeans-scuro",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "nero",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "grigio",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "beige",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "verde",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "bordeaux",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "bianco",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "crema",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "rosso",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "blu",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "navy",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "azzurro",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "oliva",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "giallo",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "senape",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "antracite",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "rosa",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "lilla",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "ciano",
+          "changed_native_pixels": 84
+        },
+        {
+          "value": "magenta",
+          "changed_native_pixels": 84
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "belt_color",
+      "result": "PASS",
+      "values": 6,
+      "minimum_nonzero_change": 14,
+      "reference": {
+        "build": "snello",
+        "top": "tshirt",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "nero",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "cuoio",
+          "changed_native_pixels": 14
+        },
+        {
+          "value": "cognac",
+          "changed_native_pixels": 14
+        },
+        {
+          "value": "bianco",
+          "changed_native_pixels": 14
+        },
+        {
+          "value": "rosso",
+          "changed_native_pixels": 14
+        },
+        {
+          "value": "blu",
+          "changed_native_pixels": 14
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "shoes_color",
+      "result": "PASS",
+      "values": 6,
+      "minimum_nonzero_change": 108,
+      "reference": {
+        "build": "snello",
+        "top": "tshirt",
+        "bottom": "shorts",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "nero",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "cuoio",
+          "changed_native_pixels": 108
+        },
+        {
+          "value": "cognac",
+          "changed_native_pixels": 108
+        },
+        {
+          "value": "bianco",
+          "changed_native_pixels": 108
+        },
+        {
+          "value": "rosso",
+          "changed_native_pixels": 108
+        },
+        {
+          "value": "blu",
+          "changed_native_pixels": 108
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "hat_color",
+      "result": "PASS",
+      "values": 18,
+      "minimum_nonzero_change": 97,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "berretto",
+        "expression": "neutra",
+        "accessory": "none"
+      },
+      "changes": [
+        {
+          "value": "bianco",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "crema",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "rosso",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "bordeaux",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "blu",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "navy",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "azzurro",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "verde",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "oliva",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "giallo",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "senape",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "grigio",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "antracite",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "nero",
+          "changed_native_pixels": 0
+        },
+        {
+          "value": "rosa",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "lilla",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "ciano",
+          "changed_native_pixels": 97
+        },
+        {
+          "value": "magenta",
+          "changed_native_pixels": 97
+        }
+      ],
+      "duplicate_groups": []
+    },
+    {
+      "field": "accessory_color",
+      "result": "PASS",
+      "values": 18,
+      "minimum_nonzero_change": 19,
+      "reference": {
+        "build": "snello",
+        "top": "cyber_jacket",
+        "bottom": "cargo",
+        "hair": "corti",
+        "hat": "none",
+        "expression": "neutra",
+        "accessory": "zaino"
+      },
+      "changes": [
+        {
+          "value": "bianco",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "crema",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "rosso",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "bordeaux",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "blu",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "navy",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "azzurro",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "verde",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "oliva",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "giallo",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "senape",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "grigio",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "antracite",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "nero",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "rosa",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "lilla",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "ciano",
+          "changed_native_pixels": 19
+        },
+        {
+          "value": "magenta",
+          "changed_native_pixels": 19
+        }
+      ],
+      "duplicate_groups": []
+    }
+  ],
+  "hat_colours": [
+    {
+      "hat": "cuffie",
+      "colours": 18,
+      "result": "PASS"
+    },
+    {
+      "hat": "berretto",
+      "colours": 18,
+      "result": "PASS"
+    },
+    {
+      "hat": "bandana",
+      "colours": 18,
+      "result": "PASS"
+    },
+    {
+      "hat": "cappuccio",
+      "colours": 18,
+      "result": "PASS"
+    }
+  ],
+  "outfit_contexts": [
+    {
+      "context": 0,
+      "patch": {},
+      "options_measured": 227,
+      "zero_pixel_alternatives": {
+        "hat_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta"
+          ],
+          "reveal": {}
+        },
+        "accessory_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "nero",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta",
+            "oro",
+            "bronzo",
+            "rame"
+          ],
+          "reveal": {}
+        }
+      }
+    },
+    {
+      "context": 1,
+      "patch": {
+        "hat": "cappuccio"
+      },
+      "options_measured": 227,
+      "zero_pixel_alternatives": {
+        "hair": {
+          "values": [
+            "caschetto",
+            "ricci",
+            "lunghi",
+            "coda",
+            "crocchia",
+            "trecce",
+            "ondulati",
+            "cresta",
+            "longhawk",
+            "cornrows",
+            "dreadlocks",
+            "afro",
+            "rasati",
+            "calvo"
+          ],
+          "reveal": {
+            "hat": "none"
+          }
+        },
+        "hair_color": {
+          "values": [
+            "castano",
+            "nocciola",
+            "biondo",
+            "ramato",
+            "rosso",
+            "cenere",
+            "platino",
+            "viola",
+            "verde",
+            "ciano",
+            "rosa",
+            "blu_elettrico"
+          ],
+          "reveal": {
+            "hat": "none"
+          }
+        },
+        "accessory_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "nero",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta",
+            "oro",
+            "bronzo",
+            "rame"
+          ],
+          "reveal": {}
+        }
+      }
+    },
+    {
+      "context": 2,
+      "patch": {
+        "hat": "berretto"
+      },
+      "options_measured": 227,
+      "zero_pixel_alternatives": {
+        "hair": {
+          "values": [
+            "caschetto",
+            "ricci",
+            "lunghi",
+            "coda",
+            "crocchia",
+            "trecce",
+            "ondulati",
+            "cresta",
+            "longhawk",
+            "cornrows",
+            "dreadlocks",
+            "afro",
+            "rasati",
+            "calvo"
+          ],
+          "reveal": {
+            "hat": "none"
+          }
+        },
+        "hair_color": {
+          "values": [
+            "castano",
+            "nocciola",
+            "biondo",
+            "ramato",
+            "rosso",
+            "cenere",
+            "platino",
+            "viola",
+            "verde",
+            "ciano",
+            "rosa",
+            "blu_elettrico"
+          ],
+          "reveal": {
+            "hat": "none"
+          }
+        },
+        "accessory_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "nero",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta",
+            "oro",
+            "bronzo",
+            "rame"
+          ],
+          "reveal": {}
+        }
+      }
+    },
+    {
+      "context": 3,
+      "patch": {
+        "expression": "sorriso"
+      },
+      "options_measured": 227,
+      "zero_pixel_alternatives": {
+        "eye_shape": {
+          "values": [
+            "mandorla",
+            "tondi"
+          ],
+          "reveal": {
+            "expression": "neutra"
+          }
+        },
+        "mouth": {
+          "values": [
+            "piene"
+          ],
+          "reveal": {
+            "expression": "neutra"
+          }
+        },
+        "eyes": {
+          "values": [
+            "neri",
+            "verdi",
+            "azzurri",
+            "grigi",
+            "ambra"
+          ],
+          "reveal": {
+            "expression": "neutra"
+          }
+        },
+        "hat_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta"
+          ],
+          "reveal": {}
+        },
+        "accessory_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "nero",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta",
+            "oro",
+            "bronzo",
+            "rame"
+          ],
+          "reveal": {}
+        }
+      }
+    },
+    {
+      "context": 4,
+      "patch": {
+        "expression": "entusiasta"
+      },
+      "options_measured": 227,
+      "zero_pixel_alternatives": {
+        "eye_shape": {
+          "values": [
+            "mandorla",
+            "tondi"
+          ],
+          "reveal": {
+            "expression": "neutra"
+          }
+        },
+        "mouth": {
+          "values": [
+            "piene"
+          ],
+          "reveal": {
+            "expression": "neutra"
+          }
+        },
+        "eyes": {
+          "values": [
+            "neri",
+            "verdi",
+            "azzurri",
+            "grigi",
+            "ambra"
+          ],
+          "reveal": {
+            "expression": "neutra"
+          }
+        },
+        "hat_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta"
+          ],
+          "reveal": {}
+        },
+        "accessory_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "nero",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta",
+            "oro",
+            "bronzo",
+            "rame"
+          ],
+          "reveal": {}
+        }
+      }
+    },
+    {
+      "context": 5,
+      "patch": {
+        "glasses": "visore"
+      },
+      "options_measured": 227,
+      "zero_pixel_alternatives": {
+        "eye_shape": {
+          "values": [
+            "mandorla",
+            "tondi"
+          ],
+          "reveal": {
+            "glasses": "none"
+          }
+        },
+        "brows": {
+          "values": [
+            "folte",
+            "sottili"
+          ],
+          "reveal": {
+            "glasses": "none",
+            "hair": "rasati"
+          }
+        },
+        "hat_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta"
+          ],
+          "reveal": {}
+        },
+        "accessory_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "nero",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta",
+            "oro",
+            "bronzo",
+            "rame"
+          ],
+          "reveal": {}
+        }
+      }
+    },
+    {
+      "context": 6,
+      "patch": {
+        "glasses": "sole"
+      },
+      "options_measured": 227,
+      "zero_pixel_alternatives": {
+        "brows": {
+          "values": [
+            "sottili"
+          ],
+          "reveal": {
+            "glasses": "none",
+            "hair": "rasati"
+          }
+        },
+        "hat_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta"
+          ],
+          "reveal": {}
+        },
+        "accessory_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "nero",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta",
+            "oro",
+            "bronzo",
+            "rame"
+          ],
+          "reveal": {}
+        }
+      }
+    },
+    {
+      "context": 7,
+      "patch": {
+        "hair": "calvo"
+      },
+      "options_measured": 227,
+      "zero_pixel_alternatives": {
+        "hair_color": {
+          "values": [
+            "castano",
+            "nocciola",
+            "biondo",
+            "ramato",
+            "rosso",
+            "cenere",
+            "platino",
+            "viola",
+            "verde",
+            "ciano",
+            "rosa",
+            "blu_elettrico"
+          ],
+          "reveal": {
+            "hair": "corti"
+          }
+        },
+        "hat_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta"
+          ],
+          "reveal": {}
+        },
+        "accessory_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "nero",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta",
+            "oro",
+            "bronzo",
+            "rame"
+          ],
+          "reveal": {}
+        }
+      }
+    },
+    {
+      "context": 8,
+      "patch": {
+        "beard": "barba_lunga"
+      },
+      "options_measured": 227,
+      "zero_pixel_alternatives": {
+        "mouth": {
+          "values": [
+            "piene"
+          ],
+          "reveal": {
+            "beard": "none"
+          }
+        },
+        "hat_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta"
+          ],
+          "reveal": {}
+        },
+        "accessory_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "nero",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta",
+            "oro",
+            "bronzo",
+            "rame"
+          ],
+          "reveal": {}
+        }
+      }
+    },
+    {
+      "context": 9,
+      "patch": {
+        "build": "medio",
+        "top": "cappotto"
+      },
+      "options_measured": 227,
+      "zero_pixel_alternatives": {
+        "bottom": {
+          "values": [
+            "jeans"
+          ],
+          "reveal": {
+            "top": "cyber_jacket"
+          }
+        },
+        "belt_color": {
+          "values": [
+            "cuoio",
+            "cognac",
+            "bianco",
+            "rosso",
+            "blu"
+          ],
+          "reveal": {
+            "top": "cyber_jacket"
+          }
+        },
+        "hat_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta"
+          ],
+          "reveal": {}
+        },
+        "accessory_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "nero",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta",
+            "oro",
+            "bronzo",
+            "rame"
+          ],
+          "reveal": {}
+        }
+      }
+    },
+    {
+      "context": 10,
+      "patch": {
+        "build": "medio",
+        "top": "trench"
+      },
+      "options_measured": 227,
+      "zero_pixel_alternatives": {
+        "bottom": {
+          "values": [
+            "jeans"
+          ],
+          "reveal": {
+            "top": "cyber_jacket"
+          }
+        },
+        "belt_color": {
+          "values": [
+            "cuoio",
+            "cognac",
+            "bianco",
+            "rosso",
+            "blu"
+          ],
+          "reveal": {
+            "top": "cyber_jacket"
+          }
+        },
+        "hat_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta"
+          ],
+          "reveal": {}
+        },
+        "accessory_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "nero",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta",
+            "oro",
+            "bronzo",
+            "rame"
+          ],
+          "reveal": {}
+        }
+      }
+    },
+    {
+      "context": 11,
+      "patch": {
+        "bottom": "gonna_lunga"
+      },
+      "options_measured": 227,
+      "zero_pixel_alternatives": {
+        "belt_color": {
+          "values": [
+            "cuoio",
+            "cognac",
+            "bianco",
+            "rosso",
+            "blu"
+          ],
+          "reveal": {
+            "bottom": "cargo"
+          }
+        },
+        "hat_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta"
+          ],
+          "reveal": {}
+        },
+        "accessory_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "nero",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta",
+            "oro",
+            "bronzo",
+            "rame"
+          ],
+          "reveal": {}
+        }
+      }
+    },
+    {
+      "context": 12,
+      "patch": {
+        "held": "libro",
+        "pose": "libro"
+      },
+      "options_measured": 227,
+      "zero_pixel_alternatives": {
+        "hat_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta"
+          ],
+          "reveal": {}
+        },
+        "accessory_color": {
+          "values": [
+            "bianco",
+            "crema",
+            "rosso",
+            "bordeaux",
+            "blu",
+            "navy",
+            "azzurro",
+            "verde",
+            "oliva",
+            "giallo",
+            "senape",
+            "grigio",
+            "antracite",
+            "nero",
+            "rosa",
+            "lilla",
+            "ciano",
+            "magenta",
+            "oro",
+            "bronzo",
+            "rame"
+          ],
+          "reveal": {}
+        }
+      }
+    }
+  ],
+  "zero_pixel_alternatives_measured": 563,
+  "failures": [],
+  "seconds": 6.06,
+  "method": "Actual composited 64×64 RGBA comparison; transparent RGB ignored; pairwise unique visible reference-context results; occluded alternatives explicitly reported, not counted as successful visual changes.",
+  "limitations": "Pixel differences establish a real effect, not perceptual equality or artistic quality. Face details change only a few native pixels; UI includes a nearest-neighbour close-up. UI interaction coverage is separate.",
+  "sources": {
+    "app/character.py": "f0b29178f68995e412928c473a577123b062281a66f9cbbe3405bff140100af5",
+    "app/cyber_layers.py": "50c6e0f4b81bc8048dea980dbdb23d3dcddb99b4eff93c890754f7b8382ec1a5",
+    "app/control_effects.py": "c479ac758b84e6dcdf519cc7ad006af75a9d4e68f2c8394dd77415cc5c3c6492",
+    "assets/characters/lpc/manifest.json": "c0c634ab157e8749f952b8e29b88f08259060cc68605da4dd4a98bd1a38597e4"
+  }
+}

@@ -34,10 +34,10 @@ class StandaloneTests(unittest.TestCase):
         for value in re.findall(r'url\([\s\"\']*([^\)\"\']+)',text):
             self.assertTrue(value.startswith('data:') or 'PORTABLE.' in value,value[:80])
 
-    def test_build_hashes_and_all_six_sources(self):
+    def test_build_hashes_and_all_twelve_sources(self):
         r=json.loads((ROOT/'docs/test-results/standalone-build.json').read_text())
         self.assertEqual(r['sha256'],hashlib.sha256(HTML.read_bytes()).hexdigest())
-        self.assertEqual(len(r['photos']),6)
+        self.assertEqual(len(r['photos']),12)
         for sid,item in r['photos'].items():
             self.assertEqual(item['source_sha256'],hashlib.sha256((ROOT/'assets/photos'/sid/'source.jpg').read_bytes()).hexdigest())
             self.assertLessEqual(max(item['embedded_dimensions']),3000)

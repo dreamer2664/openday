@@ -61,13 +61,13 @@ async def main():
         await screenshot(page,'01_welcome.png')
         await page.click('#btn-start');await screenshot(page,'02_style.png')
         await page.click('[data-style="nes"]');await screenshot(page,'03_scenes_nes.png')
-        # Visit all six locations, retaining style and the optional name field.
-        scenes=['casardi','pantheon','foro','epidauro','biblioteca','paestum']
+        # Visit all twelve locations, retaining style and the optional name field.
+        scenes=await page.evaluate('()=>[...document.querySelectorAll("#scene-grid [data-scene]")].map(b=>b.dataset.scene)');assert len(scenes)==12
         for sid in scenes:
             if await page.locator('.pane.active').get_attribute('data-pane')!='scene':await page.click('.step[data-step="scene"]')
             await page.click(f'[data-scene="{sid}"]')
             assert await page.locator('body').evaluate('(n)=>n.classList.contains("mode-nes")')
-        record('six_locations_nes_style_preserved')
+        record('twelve_locations_nes_style_preserved')
         await page.click('.step[data-step="scene"]');await page.click('[data-scene="casardi"]')
         await page.fill('#name-input','Elisa Àccénti');await screenshot(page,'04_name.png')
         await page.click('#btn-next');await screenshot(page,'05_creator_body.png')
@@ -145,7 +145,7 @@ async def main():
         record('navigation_cannot_mismatch_an_inflight_export')
         photo=await (await event.value).json();assert photo['size']==[3000,2000]
         await page.wait_for_selector('#result:not([hidden])')
-        record('six_photo_locations_unnamed_no_companion_hd_export',f"{photo['render_seconds']} s")
+        record('twelve_photo_locations_unnamed_no_companion_hd_export',f"{photo['render_seconds']} s")
         await page.click('#btn-info');await page.wait_for_function('() => document.querySelector("#diag").textContent.includes("Indirizzo LAN")')
         await screenshot(page,'14_diagnostics.png');await page.click('#btn-info-close');record('operator_diagnostics_and_real_network_test_qr')
         # Advance browser clock (not server wall time) to exercise automatic return.

@@ -35,8 +35,13 @@ def main():
             if key=='casardi':path.write_bytes(raw)
             else:
                 with Image.open(io.BytesIO(raw)) as original:
-                    img=original.convert('RGB');img.thumbnail((3600,3600),Image.Resampling.LANCZOS)
-                    img.save(path,'JPEG',quality=93,subsampling=0,optimize=True)
+                    img=original.convert('RGB')
+                    cfg=item.get('local_processing',dict(max_side=3600,quality=93,subsampling=0))
+                    for stage in cfg.get('stages',[cfg]):
+                        side=stage['max_side'];img.thumbnail((side,side),Image.Resampling.LANCZOS)
+                        b=io.BytesIO();img.save(b,'JPEG',quality=stage['quality'],subsampling=stage['subsampling'],optimize=True)
+                        encoded=b.getvalue();img=Image.open(io.BytesIO(encoded)).convert('RGB')
+                    path.write_bytes(encoded)
             item['local_sha256']=hashlib.sha256(path.read_bytes()).hexdigest()
             with Image.open(path) as img:item['local_size']=list(img.size)
         digest=hashlib.sha256(path.read_bytes()).hexdigest()

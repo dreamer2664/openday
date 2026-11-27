@@ -649,13 +649,13 @@ c.hline(35,37,39,light);
 c.set(29,47,mc);
 c.set(29,50,mc);
 }
-if (pyTruth((pyIn(pyGet(s,"bottom"),["cargo","jeans","chino","shorts"])))) {
+if (pyTruth(pyAnd((pyIn(pyGet(s,"bottom"),["cargo","jeans","chino","shorts"])),()=>(!pyIn(top,["cappotto","trench"]))))) {
 c.hline(26,37,47,bd);
 c.hline(27,36,46,bc);
 c.rect(30,46,33,47,ink);
 c.hline(31,32,46,ml);
 }
-if (pyTruth((pyEq(pyGet(s,"bottom"),"cargo")))) {
+if (pyTruth(pyAnd((pyEq(pyGet(s,"bottom"),"cargo")),()=>(!pyIn(top,["cappotto","trench"]))))) {
 for (const __item30 of pyIter([25,36])) {
 xx = __item30;
 plate(c,xx,49,3,4,ink,[43,59,76,255],[88,106,117,255]);
@@ -710,18 +710,19 @@ c.set(36,28,ink);
 }
 }
 }
-if (pyTruth(pyAnd((pyEq(pyGet(s,"mouth"),"piene")),()=>(pyIn(pyGet(s,"expression"),["neutra","seria","curiosa"]))))) {
+if (pyTruth(pyAnd((pyEq(pyGet(s,"mouth"),"piene")),()=>pyAnd((pyEq(pyGet(s,"beard"),"none")),()=>(pyIn(pyGet(s,"expression"),["neutra","seria","curiosa"])))))) {
 c.hline(31,33,33,[141,71,70,255]);
 c.set(32,34,[196,118,105,255]);
 }
 hat = pyGet(s,"hat");
 if (pyTruth((pyEq(hat,"cuffie")))) {
+[hd,hm,hc,hl,hh] = equipment_color(FABRIC_COLORS,pyGet(s,"hat_color"),"#263143");
 c.line(22,24,24,17,ink,2);
 c.line(24,17,39,17,ink,2);
 c.line(39,17,41,24,ink,2);
-c.hline(25,38,16,[98,116,133,255]);
-plate(c,20,25,4,7,ink,[44,57,73,255],[109,127,142,255]);
-plate(c,40,25,4,7,ink,[35,48,63,255],[83,104,122,255]);
+c.hline(25,38,16,hl);
+plate(c,20,25,4,7,ink,hm,hl);
+plate(c,40,25,4,7,ink,hc,hh);
 c.vline(21,27,29,light);
 c.vline(42,27,29,base);
 } else {

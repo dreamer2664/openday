@@ -1,4 +1,4 @@
-# Fonti e licenze · revisione 3.1 NES Retro
+# Fonti e licenze · revisione 3.2 · Dodici luoghi
 ## Open Day 2026/27 · Liceo Alfredo Casardi · Barletta
 
 Ricerca e verifica delle fonti: **27 novembre 2026**. L’inventario riguarda gli asset effettivamente distribuiti. Le foto hanno pagine sorgenti con dichiarazioni di licenza riutilizzabile; non provengono da Google Immagini, social network o immagini con watermark rimosso. **La nuova base dei personaggi non è opera originale Casardi e non è tutta CC0.**
@@ -10,8 +10,8 @@ Ricerca e verifica delle fonti: **27 novembre 2026**. L’inventario riguarda gl
 | Codice originale Python, JavaScript e Go, script e UI | MIT, `LICENSE` |
 | Personaggi modulari Universal LPC | Autori e licenza per record/parte: OGA-BY 3.0, CC BY-SA 3.0 oppure CC0; non una licenza globale CC0 |
 | Equipaggiamento fantascientifico e companion originali | CC0 1.0, nella misura dei diritti rinunciabili; le basi LPC sottostanti mantengono le proprie licenze |
-| Sei fotografie | Licenze specifiche CC0 / CC BY-SA 3.0 / 4.0 elencate sotto |
-| Sei nuovi sfondi NES, illustrazioni assistite da IA e rifinite su griglia pixel | Distribuiti prudenzialmente come adattamenti **CC BY-SA 4.0**, con fonte del riferimento; nessuna esclusiva sugli elementi generati automaticamente |
+| Dodici fotografie | Licenze specifiche CC0 / pubblico dominio / CC BY-SA 2.5 / 3.0 / 4.0 elencate sotto |
+| Dodici sfondi NES, illustrazioni assistite da IA e rifinite su griglia pixel | Distribuiti prudenzialmente come adattamenti **CC BY-SA 4.0**, con fonte del riferimento; nessuna esclusiva sugli elementi generati automaticamente |
 | Cartoline composte PNG / JPG | Adattamenti **CC BY-SA 4.0**, senza cancellare gli obblighi dei materiali originali |
 | Font | SIL Open Font License 1.1; l’immagine che usa il font non diventa OFL |
 | QR Go vendorizzato | MIT, avviso incluso |
@@ -22,9 +22,11 @@ Non si usa la licenza del codice per rilicenziare l’arte. Il nome dell’istit
 
 **Diritti distinti:** le licenze fotografiche non garantiscono automaticamente privacy, marchi, diritti sui soggetti, beni culturali o autorizzazioni amministrative. Valutare l’uso pubblico con il responsabile della scuola; questo documento non è una clearance universale o una consulenza legale.
 
-## 2. Fotografie incluse
+## 2. Dodici fotografie incluse
 
-| Scena | Autore della fotografia | Licenza scelta | File locale |
+Le pagine Commons e i metadati di licenza sono stati verificati durante la ricerca. I file inclusi sono copie JPEG ottimizzate, non gli originali a piena risoluzione remota; hash distinti e lavorazioni sono espliciti. La fonte Casardi è l’unica copia originale non modificata.
+
+| Scena | Autore | Licenza della fotografia | File locale |
 |---|---|---|---|
 | Liceo Alfredo Casardi | Autore non identificato (archivio storico) | CC0 | `assets/photos/casardi/source.jpg` |
 | Pantheon | Wknight94 | CC BY-SA 3.0 | `assets/photos/pantheon/source.jpg` |
@@ -32,112 +34,192 @@ Non si usa la licenza del codice per rilicenziare l’arte. Il nome dell’istit
 | Teatro di Epidauro | Zde | CC BY-SA 4.0 | `assets/photos/epidauro/source.jpg` |
 | Biblioteca Malatestiana | Terragio67 | CC BY-SA 4.0 | `assets/photos/biblioteca/source.jpg` |
 | Tempio di Hera II, Paestum | Norbert Nagel | CC BY-SA 3.0 | `assets/photos/paestum/source.jpg` |
+| Colosseo | Diliff | CC BY-SA 2.5 | `assets/photos/colosseo/source.jpg` |
+| Acropoli di Atene · Partenone | George E. Koronaios | CC BY-SA 4.0 | `assets/photos/acropoli/source.jpg` |
+| Pompei · Foro | Wknight94 | CC BY-SA 3.0 | `assets/photos/pompei/source.jpg` |
+| Teatro antico di Taormina | Berthold Werner | CC BY-SA 3.0 | `assets/photos/taormina/source.jpg` |
+| Castel del Monte | IKKos | CC BY-SA 4.0 | `assets/photos/casteldelmonte/source.jpg` |
+| Castello di Barletta | Achille83 | Public domain | `assets/photos/castellobarletta/source.jpg` |
 
 ### Liceo Alfredo Casardi
 
-- Titolo della fonte: **Liceo Classico Alfredo Casardi Barletta.jpg**.
+- Titolo: **Liceo Classico Alfredo Casardi Barletta.jpg**.
 - Autore: Autore non identificato (archivio storico).
-- [Pagina sorgente verificata](https://commons.wikimedia.org/wiki/File:Liceo_Classico_Alfredo_Casardi_Barletta.jpg).
-- [File originale di riferimento](https://upload.wikimedia.org/wikipedia/commons/c/c7/Liceo_Classico_Alfredo_Casardi_Barletta.jpg).
-- Licenza utilizzata: **[CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)**.
-- Data della fotografia dichiarata dalla fonte: 1936-11-11.
-- Reperimento: 2026-11-27.
-- Dimensioni del file sorgente: 707 × 491; copia inclusa: 707 × 491.
-- Lavorazione della copia locale: originale non modificato.
+- [Pagina sorgente](https://commons.wikimedia.org/wiki/File:Liceo_Classico_Alfredo_Casardi_Barletta.jpg) · [file originale remoto](https://upload.wikimedia.org/wikipedia/commons/c/c7/Liceo_Classico_Alfredo_Casardi_Barletta.jpg).
+- Licenza della fotografia: **[CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en)**.
+- Data dichiarata dalla fonte: 1936-11-11. Reperimento: **2026-11-27**.
+- Originale remoto: 707 × 491; copia locale: 707 × 491.
+- Lavorazione della copia inclusa: Originale non modificato.
 - SHA-256 originale: `1f47b2a8d090930bd2057d007596475bfbfe61d7561b78c945392c78d4e1b1ab`.
 - SHA-256 della copia inclusa: `1f47b2a8d090930bd2057d007596475bfbfe61d7561b78c945392c78d4e1b1ab`.
-- Attribuzione proposta: «Liceo Classico Alfredo Casardi Barletta.jpg — Autore non identificato (archivio storico), CC0, Wikimedia Commons. Adattamento per la cartolina Open Day 2026/27; nessun endorsement da parte dell’autore». Aggiungere i due link a fonte e licenza quando si ridistribuisce.
+- Attribuzione: «Liceo Classico Alfredo Casardi Barletta.jpg — Autore non identificato (archivio storico), CC0, Wikimedia Commons. Adattamento per Cartolina Casardi 2026/27; modifiche di formato/colore/composizione e, per lo stile pixel, nuova illustrazione assistita da IA. Nessun endorsement». Conservare i link a fonte e licenza.
 
-**Precisazione Casardi.** Facciata autentica del Liceo Alfredo Casardi, non un edificio scolastico generico. La pagina Commons dichiara CC0 e rimanda a [questa raccolta su Internet Archive](https://archive.org/details/liceo-casardi-barletta). L’autore non è identificato: si documenta la dichiarazione della fonte, non si inventa un’autorizzazione rilasciata dalla scuola. La risoluzione 707 × 491 è limitata e il carattere storico dell’immagine è mantenuto; il PNG 3000 × 2000 non aggiunge dettaglio fotografico inesistente.
-
-Per una foto attuale migliore è predisposta `assets/replacements/casardi/LEGGIMI.md`. La cartella non contiene fotografie ufficiali protette senza permesso. Occorre un’autorizzazione reale che copra modifica e consegna delle cartoline; la licenza dell’immagine attuale non si trasferisce alla sostituzione.
+**Casardi storico, 1936, 707 × 491:** fonte Commons con dichiarazione CC0 e rimando a https://archive.org/details/liceo-casardi-barletta. Autore non identificato; non è una foto attuale né un permesso inventato della scuola. La ricostruzione a colori è interpretativa. Per una sostituzione attuale serve un’autorizzazione reale, secondo `assets/replacements/casardi/LEGGIMI.md`; nessuna immagine ufficiale viene copiata senza permesso.
 
 ### Pantheon
 
-- Titolo della fonte: **Pantheon interior 3.jpg**.
+- Titolo: **Pantheon interior 3.jpg**.
 - Autore: Wknight94.
-- [Pagina sorgente verificata](https://commons.wikimedia.org/wiki/File:Pantheon_interior_3.jpg).
-- [File originale di riferimento](https://upload.wikimedia.org/wikipedia/commons/b/ba/Pantheon_interior_3.jpg).
-- Licenza utilizzata: **[CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)**.
-- Data della fotografia dichiarata dalla fonte: 2008-04-21.
-- Reperimento: 2026-11-27.
-- Dimensioni del file sorgente: 3072 × 2304; copia inclusa: 3072 × 2304.
-- Lavorazione della copia locale: JPEG locale ottimizzato, lato massimo 3600 px, qualità 93; metadati EXIF rimossi.
+- [Pagina sorgente](https://commons.wikimedia.org/wiki/File:Pantheon_interior_3.jpg) · [file originale remoto](https://upload.wikimedia.org/wikipedia/commons/b/ba/Pantheon_interior_3.jpg).
+- Licenza della fotografia: **[CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)**.
+- Data dichiarata dalla fonte: 2008-04-21. Reperimento: **2026-11-27**.
+- Originale remoto: 3072 × 2304; copia locale: 3000 × 2250.
+- Lavorazione della copia inclusa: Originale convertito in RGB e JPEG 3600 px qualità 93 4:4:4 (edizione 3.1); copia ridotta a 3000 px e JPEG qualità 90 4:2:0 (3.2), senza EXIF/GPS.
 - SHA-256 originale: `4d4ea576ed840fb067c0146412d463548daf79378c224a80b74d0a861119b94e`.
-- SHA-256 della copia inclusa: `0b8cf198734d128fbff32c0b8feb702a97ff474d94d5aec6ce5e69ab52878b91`.
-- Attribuzione proposta: «Pantheon interior 3.jpg — Wknight94, CC BY-SA 3.0, Wikimedia Commons. Adattamento per la cartolina Open Day 2026/27; nessun endorsement da parte dell’autore». Aggiungere i due link a fonte e licenza quando si ridistribuisce.
+- SHA-256 della copia inclusa: `c82bd6f052ce9b3e50c345645b7eb371026deffcba63fb6c1186559d0a438827`.
+- Attribuzione: «Pantheon interior 3.jpg — Wknight94, CC BY-SA 3.0, Wikimedia Commons. Adattamento per Cartolina Casardi 2026/27; modifiche di formato/colore/composizione e, per lo stile pixel, nuova illustrazione assistita da IA. Nessun endorsement». Conservare i link a fonte e licenza.
 
-La pagina offre anche GFDL: questo progetto sceglie espressamente **CC BY-SA 3.0**, non GFDL. L’inquadratura con pavimento ha sostituito riferimenti dominati dalla sola cupola, inadatti ad appoggiare i personaggi.
+Si sceglie **CC BY-SA 3.0**, non l’alternativa GFDL della pagina. Vista interna con pavimento utilizzabile per l’appoggio, non la sola cupola.
 
 ### Foro Romano · Arco di Tito
 
-- Titolo della fonte: **Arch of Titus in Rome (2).jpg**.
+- Titolo: **Arch of Titus in Rome (2).jpg**.
 - Autore: Tournasol7.
-- [Pagina sorgente verificata](https://commons.wikimedia.org/wiki/File:Arch_of_Titus_in_Rome_(2).jpg).
-- [File originale di riferimento](https://upload.wikimedia.org/wikipedia/commons/f/ff/Arch_of_Titus_in_Rome_%282%29.jpg).
-- Licenza utilizzata: **[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)**.
-- Data della fotografia dichiarata dalla fonte: 2018-11-13 13:42:16.
-- Reperimento: 2026-11-27.
-- Dimensioni del file sorgente: 4700 × 3642; copia inclusa: 3600 × 2790.
-- Lavorazione della copia locale: JPEG locale ottimizzato, lato massimo 3600 px, qualità 93; metadati EXIF rimossi.
+- [Pagina sorgente](https://commons.wikimedia.org/wiki/File:Arch_of_Titus_in_Rome_(2).jpg) · [file originale remoto](https://upload.wikimedia.org/wikipedia/commons/f/ff/Arch_of_Titus_in_Rome_%282%29.jpg).
+- Licenza della fotografia: **[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)**.
+- Data dichiarata dalla fonte: 2018-11-13 13:42:16. Reperimento: **2026-11-27**.
+- Originale remoto: 4700 × 3642; copia locale: 3000 × 2325.
+- Lavorazione della copia inclusa: Originale convertito in RGB e JPEG 3600 px qualità 93 4:4:4 (edizione 3.1); copia ridotta a 3000 px e JPEG qualità 90 4:2:0 (3.2), senza EXIF/GPS.
 - SHA-256 originale: `f7eeac7fcb2e56db2b81bfc76c64d7c26f910d6f1e6f74b85d1c30d8a06d9ef5`.
-- SHA-256 della copia inclusa: `7bccc901d26fb35695721e6f1fec93181f95deebc5bccec241840c43442d1272`.
-- Attribuzione proposta: «Arch of Titus in Rome (2).jpg — Tournasol7, CC BY-SA 4.0, Wikimedia Commons. Adattamento per la cartolina Open Day 2026/27; nessun endorsement da parte dell’autore». Aggiungere i due link a fonte e licenza quando si ridistribuisce.
+- SHA-256 della copia inclusa: `d248af281e1157a2c4b5f5b0472a6d55c5dbae85e2f4c0dbf30df737328141c6`.
+- Attribuzione: «Arch of Titus in Rome (2).jpg — Tournasol7, CC BY-SA 4.0, Wikimedia Commons. Adattamento per Cartolina Casardi 2026/27; modifiche di formato/colore/composizione e, per lo stile pixel, nuova illustrazione assistita da IA. Nessun endorsement». Conservare i link a fonte e licenza.
 
-Si rappresenta precisamente l’**Arco di Tito**, non il Tempio di Saturno. La data di scatto è 2018; una successiva partecipazione/caricamento Wiki Loves Monuments non è la data della fotografia.
+È l’**Arco di Tito**, non il Tempio di Saturno. La data di scatto è 2018; un caricamento o concorso successivo non è la data della fotografia.
 
 ### Teatro di Epidauro
 
-- Titolo della fonte: **Theatre of Epidaurus, 202507.jpg**.
+- Titolo: **Theatre of Epidaurus, 202507.jpg**.
 - Autore: Zde.
-- [Pagina sorgente verificata](https://commons.wikimedia.org/wiki/File:Theatre_of_Epidaurus,_202507.jpg).
-- [File originale di riferimento](https://upload.wikimedia.org/wikipedia/commons/6/63/Theatre_of_Epidaurus%2C_202507.jpg).
-- Licenza utilizzata: **[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)**.
-- Data della fotografia dichiarata dalla fonte: 2020-09-26 12:04:22.
-- Reperimento: 2026-11-27.
-- Dimensioni del file sorgente: 5942 × 3954; copia inclusa: 3600 × 2396.
-- Lavorazione della copia locale: JPEG locale ottimizzato, lato massimo 3600 px, qualità 93; metadati EXIF rimossi.
+- [Pagina sorgente](https://commons.wikimedia.org/wiki/File:Theatre_of_Epidaurus,_202507.jpg) · [file originale remoto](https://upload.wikimedia.org/wikipedia/commons/6/63/Theatre_of_Epidaurus%2C_202507.jpg).
+- Licenza della fotografia: **[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)**.
+- Data dichiarata dalla fonte: 2020-09-26 12:04:22. Reperimento: **2026-11-27**.
+- Originale remoto: 5942 × 3954; copia locale: 3000 × 1997.
+- Lavorazione della copia inclusa: Originale convertito in RGB e JPEG 3600 px qualità 93 4:4:4 (edizione 3.1); copia ridotta a 3000 px e JPEG qualità 90 4:2:0 (3.2), senza EXIF/GPS.
 - SHA-256 originale: `f205cda682b14959b49762cbec50c50cbcd9097546620716b71c890296d3859f`.
-- SHA-256 della copia inclusa: `444370a96346478ed45be428526ab4e7b567926ad003ee1943c62bc0bf733e2a`.
-- Attribuzione proposta: «Theatre of Epidaurus, 202507.jpg — Zde, CC BY-SA 4.0, Wikimedia Commons. Adattamento per la cartolina Open Day 2026/27; nessun endorsement da parte dell’autore». Aggiungere i due link a fonte e licenza quando si ridistribuisce.
+- SHA-256 della copia inclusa: `95209bc856d05bd68cb8ce7a6544d6b40cc5a8a94602121bcfebe968cb03e602`.
+- Attribuzione: «Theatre of Epidaurus, 202507.jpg — Zde, CC BY-SA 4.0, Wikimedia Commons. Adattamento per Cartolina Casardi 2026/27; modifiche di formato/colore/composizione e, per lo stile pixel, nuova illustrazione assistita da IA. Nessun endorsement». Conservare i link a fonte e licenza.
 
-Il nome del file contiene “202507”, ma la data di scatto nei metadati/pagina è **26 settembre 2020**. La vista è dal piano dell’orchestra; non viene presentata come una ripresa dall’alto della cavea.
+Il nome contiene “202507”, ma la data di scatto dichiarata è **26 settembre 2020**. Veduta dal piano dell’orchestra, non dall’alto della cavea.
 
 ### Biblioteca Malatestiana
 
-- Titolo della fonte: **Cesena - Biblioteca Malatestiana - Interno - 2024-09-08 14-29-45 001.jpg**.
+- Titolo: **Cesena - Biblioteca Malatestiana - Interno - 2024-09-08 14-29-45 001.jpg**.
 - Autore: Terragio67.
-- [Pagina sorgente verificata](https://commons.wikimedia.org/wiki/File:Cesena_-_Biblioteca_Malatestiana_-_Interno_-_2024-09-08_14-29-45_001.jpg).
-- [File originale di riferimento](https://upload.wikimedia.org/wikipedia/commons/3/35/Cesena_-_Biblioteca_Malatestiana_-_Interno_-_2024-09-08_14-29-45_001.jpg).
-- Licenza utilizzata: **[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)**.
-- Data della fotografia dichiarata dalla fonte: 2024-09-08.
-- Reperimento: 2026-11-27.
-- Dimensioni del file sorgente: 8878 × 5925; copia inclusa: 3600 × 2403.
-- Lavorazione della copia locale: JPEG locale ottimizzato, lato massimo 3600 px, qualità 93; metadati EXIF rimossi.
+- [Pagina sorgente](https://commons.wikimedia.org/wiki/File:Cesena_-_Biblioteca_Malatestiana_-_Interno_-_2024-09-08_14-29-45_001.jpg) · [file originale remoto](https://upload.wikimedia.org/wikipedia/commons/3/35/Cesena_-_Biblioteca_Malatestiana_-_Interno_-_2024-09-08_14-29-45_001.jpg).
+- Licenza della fotografia: **[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)**.
+- Data dichiarata dalla fonte: 2024-09-08. Reperimento: **2026-11-27**.
+- Originale remoto: 8878 × 5925; copia locale: 3000 × 2003.
+- Lavorazione della copia inclusa: Originale convertito in RGB e JPEG 3600 px qualità 93 4:4:4 (edizione 3.1); copia ridotta a 3000 px e JPEG qualità 90 4:2:0 (3.2), senza EXIF/GPS.
 - SHA-256 originale: `eb2e0fed820cbcca953907a55c72392a5a317013991cc73b4987ca99f4963ab5`.
-- SHA-256 della copia inclusa: `cf048a83eb21b55f843281f5bd56c5b5a745f1f6102c1286a84308d600cdf7ee`.
-- Attribuzione proposta: «Cesena - Biblioteca Malatestiana - Interno - 2024-09-08 14-29-45 001.jpg — Terragio67, CC BY-SA 4.0, Wikimedia Commons. Adattamento per la cartolina Open Day 2026/27; nessun endorsement da parte dell’autore». Aggiungere i due link a fonte e licenza quando si ridistribuisce.
+- SHA-256 della copia inclusa: `c7c37849075879850ed31ad9913b51d965e8d9ae0f541cbc5d110158119f884b`.
+- Attribuzione: «Cesena - Biblioteca Malatestiana - Interno - 2024-09-08 14-29-45 001.jpg — Terragio67, CC BY-SA 4.0, Wikimedia Commons. Adattamento per Cartolina Casardi 2026/27; modifiche di formato/colore/composizione e, per lo stile pixel, nuova illustrazione assistita da IA. Nessun endorsement». Conservare i link a fonte e licenza.
 
-Veduta dell’Aula del Nuti dall’ingresso, con plutei e navate. La pagina Commons dichiara un **panorama composto/stitching** e interventi di correzione prospettica/blending; una revisione del 3 novembre 2024 corregge errori di giunzione. Non viene spacciata per una singola esposizione non ritoccata.
-
-La pagina Wiki Loves Monuments 2024 rimanda ad [autorizzazioni sul patrimonio culturale](https://workspace.wikimedia.it/s/7wQqJ87Cy2b55oR). Quel documento esterno non è stato verificato né allegato come permesso specifico per l’evento. La licenza CC BY-SA 4.0 della fotografia è stata verificata separatamente; l’eventuale disciplina dei beni culturali resta distinta.
+Aula del Nuti: la fonte è un **panorama composto/stitching**, con correzioni prospettiche e blending; non viene descritta come una singola esposizione non ritoccata. Il rinvio Wiki Loves Monuments a https://workspace.wikimedia.it/s/7wQqJ87Cy2b55oR non è un permesso specifico verificato per l’evento. Licenza fotografica e disciplina dei beni culturali sono distinte.
 
 ### Tempio di Hera II, Paestum
 
-- Titolo della fonte: **Hera temple II - Paestum - Poseidonia - July 13th 2013 - 04.jpg**.
+- Titolo: **Hera temple II - Paestum - Poseidonia - July 13th 2013 - 04.jpg**.
 - Autore: Norbert Nagel.
-- [Pagina sorgente verificata](https://commons.wikimedia.org/wiki/File:Hera_temple_II_-_Paestum_-_Poseidonia_-_July_13th_2013_-_04.jpg).
-- [File originale di riferimento](https://upload.wikimedia.org/wikipedia/commons/e/e5/Hera_temple_II_-_Paestum_-_Poseidonia_-_July_13th_2013_-_04.jpg).
-- Licenza utilizzata: **[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)**.
-- Data della fotografia dichiarata dalla fonte: 2013-07-13 12:43:30.
-- Reperimento: 2026-11-27.
-- Dimensioni del file sorgente: 6004 × 3680; copia inclusa: 3600 × 2207.
-- Lavorazione della copia locale: JPEG locale ottimizzato, lato massimo 3600 px, qualità 93; metadati EXIF rimossi.
+- [Pagina sorgente](https://commons.wikimedia.org/wiki/File:Hera_temple_II_-_Paestum_-_Poseidonia_-_July_13th_2013_-_04.jpg) · [file originale remoto](https://upload.wikimedia.org/wikipedia/commons/e/e5/Hera_temple_II_-_Paestum_-_Poseidonia_-_July_13th_2013_-_04.jpg).
+- Licenza della fotografia: **[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)**.
+- Data dichiarata dalla fonte: 2013-07-13 12:43:30. Reperimento: **2026-11-27**.
+- Originale remoto: 6004 × 3680; copia locale: 3000 × 1839.
+- Lavorazione della copia inclusa: Originale convertito in RGB e JPEG 3600 px qualità 93 4:4:4 (edizione 3.1); copia ridotta a 3000 px e JPEG qualità 90 4:2:0 (3.2), senza EXIF/GPS.
 - SHA-256 originale: `74042ebe45c08d5d4fddc8cb6c68991c96d1504db0419b0f26302ba094c21f8f`.
-- SHA-256 della copia inclusa: `a76a08466b950176ff03fc080488716b9aaa5f90ecce12b8d13cc3a6bd2cf91b`.
-- Attribuzione proposta: «Hera temple II - Paestum - Poseidonia - July 13th 2013 - 04.jpg — Norbert Nagel, CC BY-SA 3.0, Wikimedia Commons. Adattamento per la cartolina Open Day 2026/27; nessun endorsement da parte dell’autore». Aggiungere i due link a fonte e licenza quando si ridistribuisce.
+- SHA-256 della copia inclusa: `ade055310b83437bf0dbbc714c05d4b5cc5d593ab9c43aa0c15049ed404b625b`.
+- Attribuzione: «Hera temple II - Paestum - Poseidonia - July 13th 2013 - 04.jpg — Norbert Nagel, CC BY-SA 3.0, Wikimedia Commons. Adattamento per Cartolina Casardi 2026/27; modifiche di formato/colore/composizione e, per lo stile pixel, nuova illustrazione assistita da IA. Nessun endorsement». Conservare i link a fonte e licenza.
 
-Il riferimento identifica il **secondo tempio di Hera**, spesso chiamato tempio di Nettuno/Poseidone, a Paestum. Non si sostituisce con un tempio greco generico.
+È il secondo tempio di **Hera**, detto di Nettuno/Poseidone, non un tempio greco generico.
+
+### Colosseo
+
+- Titolo: **Colosseum in Rome, Italy - April 2007.jpg**.
+- Autore: Diliff.
+- [Pagina sorgente](https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg) · [file originale remoto](https://upload.wikimedia.org/wikipedia/commons/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original).
+- Licenza della fotografia: **[CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5)**.
+- Data dichiarata dalla fonte: Taken on 30 April 2007. Reperimento: **2026-11-27**.
+- Originale remoto: 4827 × 2833; copia locale: 3000 × 1761.
+- Lavorazione della copia inclusa: Copia RGB, EXIF/GPS rimossi, lato massimo 3000 px, JPEG qualità 90 e sottocampionamento 4:2:0.
+- SHA-256 originale: `26a01fe516963531c5d57390b55bbef1ebda82e0a53d3ed583eaab35d1850f92`.
+- SHA-256 della copia inclusa: `2ff9c95bd6ef299ef026380a8abccfcbd3eb12be97c8ea03e3d7e0eb261a7bba`.
+- Attribuzione: «Colosseum in Rome, Italy - April 2007.jpg — Diliff, CC BY-SA 2.5, Wikimedia Commons. Adattamento per Cartolina Casardi 2026/27; modifiche di formato/colore/composizione e, per lo stile pixel, nuova illustrazione assistita da IA. Nessun endorsement». Conservare i link a fonte e licenza.
+
+Fotografia di Diliff / David Iliff, scattata il **30 aprile 2007**, scelta sotto **CC BY-SA 2.5**, non attribuita a CC0. Vista crepuscolare dall’esterno con piazzale anteriore; l’illustrazione conserva la struttura riconoscibile ma reinterpreta luce e area di appoggio.
+
+### Acropoli di Atene · Partenone
+
+- Titolo: **East Facade of the Parthenon on July 23, 2019.jpg**.
+- Autore: George E. Koronaios.
+- [Pagina sorgente](https://commons.wikimedia.org/wiki/File:East_Facade_of_the_Parthenon_on_July_23,_2019.jpg) · [file originale remoto](https://upload.wikimedia.org/wikipedia/commons/9/98/East_Facade_of_the_Parthenon_on_July_23%2C_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original).
+- Licenza della fotografia: **[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)**.
+- Data dichiarata dalla fonte: 2019-07-23 07:56:03. Reperimento: **2026-11-27**.
+- Originale remoto: 6000 × 4000; copia locale: 3000 × 2000.
+- Lavorazione della copia inclusa: Copia RGB, EXIF/GPS rimossi, lato massimo 3000 px, JPEG qualità 90 e sottocampionamento 4:2:0.
+- SHA-256 originale: `8d9bd3e5b31ff9178423bfa0b5947d1c72269bcf4c76197d03f84a10e7102f80`.
+- SHA-256 della copia inclusa: `3867a25f724963463e7da2495574578a11760e224cdea971cc2372a6b2270f2b`.
+- Attribuzione: «East Facade of the Parthenon on July 23, 2019.jpg — George E. Koronaios, CC BY-SA 4.0, Wikimedia Commons. Adattamento per Cartolina Casardi 2026/27; modifiche di formato/colore/composizione e, per lo stile pixel, nuova illustrazione assistita da IA. Nessun endorsement». Conservare i link a fonte e licenza.
+
+**Fronte orientale del Partenone**, Acropoli di Atene; non il lato occidentale dominato dal ponteggio della foto scartata. Alcuni interventi di restauro sono realmente visibili nella fotografia. L’illustrazione ripropone i resti architettonici senza dichiarare una restituzione filologica.
+
+### Pompei · Foro
+
+- Titolo: **Forum in Pompeii 3.jpg**.
+- Autore: Wknight94.
+- [Pagina sorgente](https://commons.wikimedia.org/wiki/File:Forum_in_Pompeii_3.jpg) · [file originale remoto](https://upload.wikimedia.org/wikipedia/commons/2/2d/Forum_in_Pompeii_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original).
+- Licenza della fotografia: **[CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)**.
+- Data dichiarata dalla fonte: 2008-04-27. Reperimento: **2026-11-27**.
+- Originale remoto: 3072 × 2304; copia locale: 3000 × 2250.
+- Lavorazione della copia inclusa: Copia RGB, EXIF/GPS rimossi, lato massimo 3000 px, JPEG qualità 90 e sottocampionamento 4:2:0.
+- SHA-256 originale: `987318171d75d7dcce8933bbbec893d01fdc22c90ad138847cee227dd0d1ff60`.
+- SHA-256 della copia inclusa: `944dcf8e65417bc09ca2e64720d5635e98ba6f86ff45c62e25487a6755b1f466`.
+- Attribuzione: «Forum in Pompeii 3.jpg — Wknight94, CC BY-SA 3.0, Wikimedia Commons. Adattamento per Cartolina Casardi 2026/27; modifiche di formato/colore/composizione e, per lo stile pixel, nuova illustrazione assistita da IA. Nessun endorsement». Conservare i link a fonte e licenza.
+
+Foro, colonnato superstite e Vesuvio sullo sfondo. È stata scartata una diversa fonte con un gruppo di turisti che occupava il primo piano: non è quella distribuita. I passanti residui della foto autentica non sono cancellati.
+
+### Teatro antico di Taormina
+
+- Titolo: **Taormina BW 2012-10-05 16-23-05 stitch.jpg**.
+- Autore: Berthold Werner.
+- [Pagina sorgente](https://commons.wikimedia.org/wiki/File:Taormina_BW_2012-10-05_16-23-05_stitch.jpg) · [file originale remoto](https://upload.wikimedia.org/wikipedia/commons/3/30/Taormina_BW_2012-10-05_16-23-05_stitch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original).
+- Licenza della fotografia: **[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)**.
+- Data dichiarata dalla fonte: 2012-10-05 16:23:06. Reperimento: **2026-11-27**.
+- Originale remoto: 5972 × 2566; copia locale: 3000 × 1289.
+- Lavorazione della copia inclusa: Copia RGB, EXIF/GPS rimossi, lato massimo 3000 px, JPEG qualità 90 e sottocampionamento 4:2:0.
+- SHA-256 originale: `b69772f593d1716c67f76b65772ab6b1c22fa7321b23ef91b8c53d9e4abc359c`.
+- SHA-256 della copia inclusa: `bada0f2252420b20c230c8a378e707b036de1862f53dd6b8df630b9a7f5f7cd2`.
+- Attribuzione: «Taormina BW 2012-10-05 16-23-05 stitch.jpg — Berthold Werner, CC BY-SA 3.0, Wikimedia Commons. Adattamento per Cartolina Casardi 2026/27; modifiche di formato/colore/composizione e, per lo stile pixel, nuova illustrazione assistita da IA. Nessun endorsement». Conservare i link a fonte e licenza.
+
+La fonte è un **panorama assemblato (“stitch”)** del 2012, ottimizzato e ritagliato a 3:2 nel compositore. La terrazza anteriore della versione pixel è una scelta illustrativa di integrazione, non un rilievo metrico né una nuova fotografia.
+
+### Castel del Monte
+
+- Titolo: **Castel del Monte - front view.jpg**.
+- Autore: IKKos.
+- [Pagina sorgente](https://commons.wikimedia.org/wiki/File:Castel_del_Monte_-_front_view.jpg) · [file originale remoto](https://upload.wikimedia.org/wikipedia/commons/b/bc/Castel_del_Monte_-_front_view.jpg).
+- Licenza della fotografia: **[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)**.
+- Data dichiarata dalla fonte: 2019-04-22 14:41:09. Reperimento: **2026-11-27**.
+- Originale remoto: 6197 × 4898; copia locale: 3000 × 2371.
+- Lavorazione della copia inclusa: Copia RGB, EXIF/GPS rimossi, lato massimo 3000 px, JPEG qualità 90 e sottocampionamento 4:2:0.
+- SHA-256 originale: `ba10b2e322117373d36fc3cfd2d45d8c2d762d49c447d67d5bd081fa3bc804bc`.
+- SHA-256 della copia inclusa: `bb56e1cb4c9a1b9e148c41ed0a5fc99608820aca5b3eec85268f964ea10ef2cd`.
+- Attribuzione: «Castel del Monte - front view.jpg — IKKos, CC BY-SA 4.0, Wikimedia Commons. Adattamento per Cartolina Casardi 2026/27; modifiche di formato/colore/composizione e, per lo stile pixel, nuova illustrazione assistita da IA. Nessun endorsement». Conservare i link a fonte e licenza.
+
+Castello federiciano presso Andria, fonte frontale di IKKos del 2019; non l’immagine ravvicinata del solo portale scartata in ricerca. L’illustrazione reinterpreta luce, vegetazione e sentiero.
+
+### Castello di Barletta
+
+- Titolo: **Castello di Barletta 01.jpg**.
+- Autore: Achille83.
+- [Pagina sorgente](https://commons.wikimedia.org/wiki/File:Castello_di_Barletta_01.jpg) · [file originale remoto](https://upload.wikimedia.org/wikipedia/commons/0/0e/Castello_di_Barletta_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original).
+- Licenza della fotografia: **[Public domain](https://commons.wikimedia.org/wiki/Template:PD-self)**.
+- Data dichiarata dalla fonte: 2008-10-21. Reperimento: **2026-11-27**.
+- Originale remoto: 4158 × 2645; copia locale: 3000 × 1908.
+- Lavorazione della copia inclusa: Copia RGB, EXIF/GPS rimossi, lato massimo 3000 px, JPEG qualità 90 e sottocampionamento 4:2:0.
+- SHA-256 originale: `f1ee8271c0ba85f8bc3ce3b9b83639bd4d5c5e56e8efff9ffc22192db7b417f8`.
+- SHA-256 della copia inclusa: `ac4d1c48567f0712ae9bf9956586e106b047a778ca16c950a2968f46af974bdc`.
+- Attribuzione: «Castello di Barletta 01.jpg — Achille83, Public domain, Wikimedia Commons. Adattamento per Cartolina Casardi 2026/27; modifiche di formato/colore/composizione e, per lo stile pixel, nuova illustrazione assistita da IA. Nessun endorsement». Conservare i link a fonte e licenza.
+
+L’autore **Achille83** dichiara esplicitamente **PD-self**: rilascio mondiale in pubblico dominio e, dove non possibile, uso per ogni scopo senza condizioni salvo legge. Dichiarazione verificata sulla pagina Commons e https://commons.wikimedia.org/wiki/Template:PD-self. Fotografia del **21 ottobre 2008**, non attuale. Non è una foto coperta da CC0 inventata dal progetto.
 
 ## 3. Personaggi modulari LPC: fonte, autori e scelta effettiva
 
@@ -169,7 +251,7 @@ Fra gli autori principali figurano **Stephen Challener (Redshrike), Johannes Sj�
 
 I termini upstream sono **alternative quando elencati nello stesso record**, non la prova che tutto sia CC0. Lo script `scripts/lpc_bundle.py` seleziona per record l’opzione riportata nel TXT; quando non c’è OGA-BY/CC0 usa CC BY-SA. Non sceglie GPL per l’arte inclusa. La distribuzione dell’adattamento sotto CC BY-SA 4.0 non elimina attribuzione e condizioni degli originali; i file originali restano con i rispettivi avvisi.
 
-Testi legali inclusi: `assets/licenses/OGA-BY-3.0.txt` dalla [fonte canonica OpenGameArt](https://static.opengameart.org/OGA-BY-3.0.txt), `CC-BY-SA-3.0.txt`, `CC-BY-SA-4.0.txt`, `CC0-1.0.txt`. **OGA-BY non è una licenza Creative Commons ufficiale**: deriva da CC BY 3.0 con una diversa disciplina delle misure tecniche. Non aggiungere DRM o restrizioni ulteriori incompatibili ai materiali CC BY-SA.
+Testi legali inclusi: `assets/licenses/OGA-BY-3.0.txt` dalla [fonte canonica OpenGameArt](https://static.opengameart.org/OGA-BY-3.0.txt), `CC-BY-SA-2.5.txt` (testo completo dal mirror SPDX https://github.com/spdx/license-list-data/blob/main/text/CC-BY-SA-2.5.txt, collegato al codice canonico https://creativecommons.org/licenses/by-sa/2.5/legalcode), `CC-BY-SA-3.0.txt`, `CC-BY-SA-4.0.txt`, `CC0-1.0.txt`. **OGA-BY non è una licenza Creative Commons ufficiale**: deriva da CC BY 3.0 con una diversa disciplina delle misure tecniche. Non aggiungere DRM o restrizioni ulteriori incompatibili ai materiali CC BY-SA.
 
 ### Modifiche effettuate all’arte
 
@@ -177,9 +259,11 @@ Estrazione di quattro pose frontali su griglia 64 × 64, atlanti compatti lossle
 
 Cappotto/trench rimangono limitati alla variante `male`/Ampia, gonna dritta a Slanciata/Compatta: non si dichiara una compatibilità inesistente. Inventario e limiti in **ASSET_MATRIX.md**.
 
+**Correzione 3.2 dei pantaloncini:** il modulo UI `bottom/shorts` ora usa la definizione autentica `legs/shorts/legs_shorts`, anziché `legs/pants/legs_pants2`. I PNG Shorts originali, i relativi autori/licenze e gli hash sono nel manifest aggiornato; la famiglia LPC e la revisione upstream sono le stesse. Sono inoltre state rese distinte le rampe denim / tessuto prima alias.
+
 ## 4. Riuso e attribuzioni che viaggiano con il PNG
 
-**CC BY-SA 3.0 / 4.0:** attribuire gli autori, collegare fonte/licenza, indicare le modifiche, conservare ShareAlike per l’adattamento e non suggerire approvazione. L’adozione di 4.0 per l’adattamento non cancella la licenza 3.0 del riferimento. Gratuità e uso scolastico non annullano gli obblighi.
+**CC BY-SA 2.5 / 3.0 / 4.0:** attribuire gli autori, collegare fonte/licenza, indicare le modifiche, conservare ShareAlike per l’adattamento e non suggerire approvazione. L’adozione di 4.0 per l’adattamento non cancella la licenza 2.5 / 3.0 del riferimento. Gratuità e uso scolastico non annullano gli obblighi.
 
 **OGA-BY 3.0:** attribuire come richiesto dal testo e dai record sorgenti, preservando gli avvisi. **CC0:** nessun obbligo di attribuzione sul diritto oggetto di rinuncia, ma la provenienza è conservata; non garantisce ogni diritto di terzi.
 
@@ -207,14 +291,20 @@ Nell’HTML sono incorporati sottoinsiemi **WOFF1 U+0000–U+052F**, con copyrig
 - **Epidauro:** vista dall’orchestra con cavea radiale, non una veduta dall’alto spacciata per questa foto.
 - **Malatestiana:** Aula del Nuti, navate, volte e plutei; ambiente umanistico reale, non una biblioteca scolastica di fantasia.
 - **Paestum:** secondo tempio di Hera / detto di Nettuno, colonnato e timpano della struttura fotografata.
+- **Colosseo:** anello esterno superstite a tre ordini di arcate e attico; riferimento al crepuscolo.
+- **Acropoli:** fronte orientale del Partenone e colonnato laterale; resti e stilobate, non un tempio intatto inventato.
+- **Pompei:** Foro con colonnato superstite, murature e Vesuvio.
+- **Taormina:** teatro antico, cavea, scena superstite e panorama; terrazza anteriore pixel interpretativa.
+- **Castel del Monte:** castello federiciano ottagonale presso Andria, torri e portale; non un castello fantasy.
+- **Castello di Barletta:** masse fortificate, bastioni/cortine e fossato percorribile; fotografia storicizzata del 2008.
 
-### Revisione degli scenari 3.1: provenienza dichiarata
+### Revisioni degli scenari 3.1–3.2: provenienza dichiarata
 
-I sei vecchi fondali schematici procedurali sono stati **sostituiti**, non soltanto ricolorati. I nuovi file canonici sono `assets/nes/{casardi,pantheon,foro,epidauro,biblioteca,paestum}.png`: **600 × 400 pixel nativi, 64 colori per sfondo, opachi**. Browser e Python leggono gli stessi identici PNG. `app/scenes.py` contiene soltanto i layout e l’adattatore; non è più la sorgente dei disegni.
+Nella 3.1 i sei fondali schematici procedurali sono stati sostituiti. **Nella 3.2 quei sei PNG sono conservati byte per byte** e si aggiungono `colosseo.png`, `acropoli.png`, `pompei.png`, `taormina.png`, `casteldelmonte.png`, `castellobarletta.png`. I dodici file canonici in `assets/nes/` sono: **600 × 400 pixel nativi, 64 colori per sfondo, opachi**. Browser e Python leggono gli stessi identici PNG. `app/scenes.py` contiene soltanto i layout e l’adattatore; non è più la sorgente dei disegni.
 
-La lavorazione ha usato **generazione di immagini assistita da IA a partire dai sei riferimenti fotografici documentati**, direzione artistica comune, ritaglio 3:2, riduzione su griglia 600 × 400, palette senza diffusione del dithering e rifinitura locale. Non sono opere interamente disegnate a mano, né fotografie semplicemente ingrandite/quantizzate, né asset presi da giochi commerciali. Il pannello dell’attico dell’Arco di Tito è stato ridipinto per eliminare la pseudo-iscrizione generata. Rilievi, texture e piccoli dettagli sono interpretazioni illustrative, **non una restituzione scientifica o filologicamente certificata**. In particolare la colorazione Casardi interpreta una fotografia del 1936: non documenta i colori attuali della scuola.
+La lavorazione ha usato **generazione di immagini assistita da IA a partire dai dodici riferimenti fotografici documentati**, direzione artistica comune, ritaglio 3:2, riduzione su griglia 600 × 400, palette senza diffusione del dithering e rifinitura locale. Non sono opere interamente disegnate a mano, né fotografie semplicemente ingrandite/quantizzate, né asset presi da giochi commerciali. Il pannello dell’attico dell’Arco di Tito è stato ridipinto per eliminare la pseudo-iscrizione generata. Rilievi, texture e piccoli dettagli sono interpretazioni illustrative, **non una restituzione scientifica o filologicamente certificata**. In particolare la colorazione Casardi interpreta una fotografia del 1936: non documenta i colori attuali della scuola.
 
-`assets/nes/manifest.json` conserva hash dei PNG consegnati, hash/dimensioni dei master di lavoro e del riferimento, licenze, elementi architettonici e lavorazioni. I master di lavoro ad alta risoluzione non sono necessari né inclusi; i **PNG nativi consegnati sono le sorgenti modificabili** dell’arte usata nell’app. L’importatore `scripts/import_nes_art.py --masters CARTELLA` documenta la rifinitura se si dispone dei master; l’app non lo esegue. Nessun modello, account, servizio di generazione, API a pagamento o richiesta Internet è necessario **a runtime**. Le fotografie autentiche rimangono separate e non sono sostituite da immagini sintetiche.
+`assets/nes/manifest.json` conserva hash dei PNG consegnati, hash/dimensioni dei master di lavoro e del riferimento, licenze, elementi architettonici e lavorazioni. I master di lavoro ad alta risoluzione non sono necessari né inclusi; i **PNG nativi consegnati sono le sorgenti modificabili** dell’arte usata nell’app. L’importatore `scripts/import_nes_art.py --masters CARTELLA --scenes ID...` documenta la rifinitura se si dispone dei master; l’app non lo esegue. Nessun modello, account, servizio di generazione, API a pagamento o richiesta Internet è necessario **a runtime**. Le fotografie autentiche rimangono separate e non sono sostituite da immagini sintetiche.
 
 Si mantengono prudenzialmente attribuzioni e ShareAlike dei riferimenti per le illustrazioni e per i montaggi. **Non si rivendica un diritto esclusivo sugli elementi prodotti automaticamente**, né si garantisce che ogni elemento sia tutelabile o esente da ogni diritto di terzi. Gli interventi e gli adattamenti sono offerti sotto CC BY-SA 4.0 nella misura dei diritti disponibili. La dichiarazione di assistenza IA è presente anche in Info, nei metadati dei PNG e nel manifest. “NES” indica un’ispirazione estetica: non sono rispettati i limiti hardware originali di palette, sprite o tile.
 
