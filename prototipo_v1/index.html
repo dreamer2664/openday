@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101321"><title>CASARDI 8-BIT — Il segnale fantasma</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <header class="topbar"><a class="brand" href="#" aria-label="Casardi 8-bit"><span class="brand-mark">C</span><span>CASARDI <b>8-BIT</b></span></a><div class="topnote"><span class="live-dot"></span> PROTOTIPO GIOCABILE · BUILD 0.1</div><button id="audioToggle" class="icon-button" aria-label="Attiva o disattiva audio">♫ <span>AUDIO</span></button></header>
+  <main>
+    <section class="stage-wrap" aria-label="Area di gioco">
+      <div class="stage-label"><span id="chapterLabel">MENU PRINCIPALE</span><span id="stageHint">UNA MISSIONE AL CASARDI</span></div>
+      <div class="screen-frame"><canvas id="game" width="480" height="270" aria-label="Gioco platform Casardi 8-bit"></canvas><div id="overlay" class="overlay"></div></div>
+      <div class="underbar"><div class="controls"><span><kbd>A</kbd><kbd>D</kbd> MUOVI</span><span><kbd>SPAZIO</kbd> SALTA</span><span><kbd>E</kbd> INTERAGISCI</span></div><div class="under-right"><span id="objective">SCEGLI LA TUA AVVENTURA</span><button id="pauseBtn" class="pause-button" hidden>Ⅱ PAUSA</button></div></div>
+    </section>
+    <aside class="side-panel"><div class="panel-heading"><span class="spark">✦</span><span id="panelEyebrow">OPEN DAY · MISSIONE SPECIALE</span></div><h1 id="panelTitle">Il segnale<br><em>fantasma</em></h1><p id="panelText">Qualcosa ha trasformato l’avviso dell’Open Day in una pioggia di pixel. La squadra del Casardi ha un piano. Più o meno.</p><div id="menuActions" class="menu-actions"><button id="startDemo" class="primary-button">INIZIA LA MISSIONE <span>→</span></button><button id="campaignBtn" class="secondary-button">AVVENTURA COMPLETA <small>4 CAPITOLI</small></button></div><div id="statusCard" class="status-card" hidden><div class="status-top"><span>STATO DELLA SQUADRA</span><span id="heartDisplay">♥ ♥ ♥</span></div><div id="statusLine">Trova i tuoi compagni e ripristina il segnale.</div><div class="team-mini"><span><i class="dot ran"></i> RANALDO</span><span><i class="dot car"></i> CARLO</span><span><i class="dot fra"></i> FRANCESCO</span><span><i class="dot rug"></i> RUGGERO</span></div></div><div class="side-footer"><span>UN’AVVENTURA ORIGINALE</span><span>BARLETTA · ITALIA</span></div></aside>
+  </main>
+  <footer class="foot"><span>ISPIRATO ALLA SEDE CENTRALE DEL LICEO CASARDI · VIA F. D’ARAGONA</span><span>← → / A D · SPAZIO · E</span></footer>
+</div>
+<div id="dialog" class="dialog-backdrop" hidden><section class="dialog-box" role="dialog" aria-modal="true" aria-labelledby="dialogTitle"><div class="dialog-top"><span id="dialogSpeaker">SQUADRA CASARDI</span><button id="closeDialog" aria-label="Chiudi">×</button></div><h2 id="dialogTitle"></h2><p id="dialogText"></p><div id="dialogChoices" class="choices"></div><div id="dialogNote" class="dialog-note"></div></section></div>
+<script src="game.js"></script>
+</body></html>
