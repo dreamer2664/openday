@@ -1,5 +1,25 @@
 # CHANGELOG — OPERAZIONE EIPASS: IL CASARDI IN 8 BIT
 
+## v3.0.6 — Ranaldo dalle foto, Carlo #35 OKC, Francesco in abito (26/11/2026)
+
+**Prof. Ranaldo (2 foto reali)**
+- Capelli **grigio argento scompigliati** con ciuffi alti e irregolari (prima erano antracite: sembrava
+  molto più giovane di com'è).
+- **Barba corta brizzolata** su guance e mento (barba di tre giorni), non più un filo di baffi.
+- **Occhi azzurri** e sopracciglia grigie folte nei ritratti.
+
+**Carlo**
+- Maglia diventata la **canotta bianca degli Oklahoma City Thunder #35 di Kevin Durant (2013-14)**:
+  spalline blu OKC, filetto arancio sul giromanica, colletto blu e **numero 35 in blu** sul petto
+  (leggibile sia nello sprite 32×36 sia nel ritratto 64×64).
+- Etichetta HUD aggiornata: `CARLO (Basket #35 OKC)`.
+
+**Francesco**
+- **Frangia abbassata di una riga**: ora copre la fronte come nella foto al pianoforte.
+- Frangia resa **leggibile** con ciocche chiare e ombre (prima era un blocco scuro indistinto).
+- Capelli tornati **castano scuro naturale** (niente più tonalità lilla); resta il **blazer nero da concerto**
+  su camicia nera, che è l'abito classico della foto.
+
 ## v3.0.5 — Daniele e Francesco come nella vita reale (26/11/2026)
 
 Dalle **foto reali** caricate: i tre ragazzi erano «praticamente uguali, solo colori diversi». Ora

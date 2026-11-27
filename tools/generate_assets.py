@@ -85,8 +85,8 @@ def outline_silhouette(im, ox, oy, w, h, outline_col=OUT):
 
 CHAR_PALETTES = {
     "ranaldo": {
-        # 45enne carismatico: capelli e barba sale-e-pepe (antracite + grigio acciaio + striature argento, MAI bianco da anziano!)
-        "hair": (rgba("#2b3340"), rgba("#556378"), rgba("#9aa8bc")),
+        # DALLE FOTO: capelli grigi argento (non antracite) e barba corta brizzolata
+        "hair": (rgba("#4a5260"), rgba("#79828f"), rgba("#b6bdc7")),
         "top": (rgba("#1b2c47"), rgba("#29436b"), rgba("#42669c")),
         "sub": rgba("#f8fafc"),
         "acc": rgba("#eab308"),
@@ -94,18 +94,20 @@ CHAR_PALETTES = {
         "shoes": rgba("#3b2316"),
     },
     "carlo": {
-        # Fedele alla foto reale: capelli neri corti ai lati con frangia mossa, occhiali neri spessi e baffetti!
+        # Fedele alla foto reale (occhiali neri spessi e baffetti) + MAGLIA ICONICA:
+        # canotta bianca degli Oklahoma City Thunder #35 di Kevin Durant (2013-14) con
+        # bordi blu OKC e filetti arancio; numero 35 in blu sul petto.
         "hair": (rgba("#0e0b0e"), rgba("#1e181e"), rgba("#352b35")),
-        "top": (rgba("#c2410c"), rgba("#f46d1f"), rgba("#ff9c54")),
-        "sub": rgba("#1d4ed8"),
-        "acc": rgba("#f8fafc"),
-        "pants": (rgba("#172554"), rgba("#1e3a8a")),
+        "top": (rgba("#c9cdd4"), rgba("#f2f4f7"), rgba("#ffffff")),
+        "sub": rgba("#0f4c9c"),
+        "acc": rgba("#f46d1f"),
+        "pants": (rgba("#12325f"), rgba("#1a4a86")),
         "shoes": rgba("#f8fafc"),
     },
     "francesco": {
         # DALLA FOTO AL PIANOFORTE: BLASER NERO da concerto su camicia nera, capelli mossi
         # molto voluminosi con frangia folta. Nessun colore acceso: eleganza severa.
-        "hair": (rgba("#171420"), rgba("#2a2534"), rgba("#4a4358")),
+        "hair": (rgba("#141018"), rgba("#2a2320"), rgba("#453a33")),
         "top": (rgba("#0c0c11"), rgba("#1b1b23"), rgba("#2e2e3a")),
         "sub": rgba("#121218"),
         "acc": rgba("#fbbf24"),
@@ -185,11 +187,15 @@ def draw_canonical_messy_hair_32(im, hx, hy, hd, hm, hl, variant="carlo", bounce
         rect(im, hx + 6, by + 5, 20, 4, hm)          # volume laterale
         rect(im, hx + 6, by + 8, 3, 7, hd)           # onda lunga sx
         rect(im, hx + 23, by + 8, 3, 6, hd)          # onda lunga dx
-        rect(im, hx + 9, by + 8, 14, 3, hd)          # FRANGIA folta sulla fronte
-        px(im, hx + 11, by + 11, hd)
-        px(im, hx + 14, by + 11, hd)
-        px(im, hx + 18, by + 11, hd)
-        px(im, hx + 21, by + 11, hd)
+        rect(im, hx + 9, by + 8, 14, 3, hm)          # FRANGIA folta sulla fronte (tono medio)
+        rect(im, hx + 10, by + 11, 12, 1, hm)        # frangia più bassa (copre la fronte)
+        px(im, hx + 11, by + 12, hm)
+        px(im, hx + 15, by + 12, hm)
+        px(im, hx + 19, by + 12, hm)
+        px(im, hx + 13, by + 9, hl)                  # ciocche chiare dentro la frangia
+        px(im, hx + 18, by + 9, hl)
+        px(im, hx + 12, by + 10, hd)                 # ombre tra le ciocche
+        px(im, hx + 17, by + 10, hd)
         px(im, hx + 12, by + 4, hl)
         px(im, hx + 19, by + 3, hm)
 
@@ -209,21 +215,22 @@ def draw_canonical_messy_hair_32(im, hx, hy, hd, hm, hl, variant="carlo", bounce
         px(im, hx + 19, by + 9, hd); px(im, hx + 20, by + 10, hd)
 
     elif variant == "ranaldo":
-        # 45enne energico: taglio corto/medio spettinato antracite + grigio acciaio con ciocche argento!
-        rect(im, hx + 9, by + 4, 14, 4, hm)
-        rect(im, hx + 8, by + 6, 15, 4, hd)
-        rect(im, hx + 8, by + 9, 2, 3, hm)  # tempie brizzolate
+        # DALLE FOTO: capelli GRIGI ARGENTO scompigliati con ciuffi alti sulla testa
+        # (non più antracite scuro) e tempie schiarite.
+        rect(im, hx + 9, by + 3, 14, 4, hl)          # calotta chiara
+        rect(im, hx + 8, by + 6, 15, 4, hm)          # fascia grigio acciaio
+        rect(im, hx + 14, by + 1, 5, 3, hl)          # ciuffo alto argento
+        rect(im, hx + 19, by + 2, 3, 2, hl)
+        px(im, hx + 10, by + 1, hl)                  # ciocche ribelli
+        px(im, hx + 23, by + 4, hl)
+        rect(im, hx + 8, by + 9, 2, 3, hm)           # tempie brizzolate
         rect(im, hx + 22, by + 9, 2, 3, hm)
-        rect(im, hx + 11, by + 2, 4, 2, hm)
-        rect(im, hx + 16, by + 1, 4, 3, hl)  # striatura argento sul ciuffo
-        rect(im, hx + 20, by + 3, 3, 2, hm)
-        px(im, hx + 12, by + 5, hl)
-        px(im, hx + 18, by + 5, hl)
-        # Ciocche spettinate sulla fronte
-        px(im, hx + 11, by + 10, hd)
+        px(im, hx + 12, by + 5, WHITE)               # riflesso bianco sui capelli
+        px(im, hx + 17, by + 4, hl)
+        # Ciocche spettinate sulla fronte, chiare
+        px(im, hx + 11, by + 10, hm)
         px(im, hx + 15, by + 10, hl)
-        px(im, hx + 16, by + 11, hm)
-        px(im, hx + 19, by + 10, hd)
+        px(im, hx + 19, by + 10, hm)
 
     elif variant == "daniele":
         # DALLE FOTO: taglio CORTO con FADE ai lati (le tempie sono quasi rasate) e
@@ -377,12 +384,15 @@ def draw_char_32x36(im, ox, oy, cid, pose):
 
     elif cid == "ranaldo":
         # PROF. RANALDO (45 ANNI): barba corta curata sale-e-pepe aderente alla mascella (non barba lunga da 70enne!)
-        rect(im, ox + 14, hy + 15, 5, 1, hd)  # baffo corto curato
-        rect(im, ox + 11, hy + 16, 2, 2, hm)  # profilo mascella sx brizzolato
-        rect(im, ox + 20, hy + 16, 2, 2, hm)  # profilo mascella dx brizzolato
-        rect(im, ox + 12, hy + 17, 9, 2, hd)  # barba corta scolpita sul mento
-        rect(im, ox + 14, hy + 17, 5, 1, hm)
-        px(im, ox + 16, hy + 17, hl)  # tocco argento sale-e-pepe
+        # BARBA CORTA BRIZZOLATA su guance e mento (dalle foto: barba di 3 giorni grigia)
+        beard = rgba("#8b8f96")
+        rect(im, ox + 13, hy + 15, 7, 1, beard)      # baffi corti brizzolati
+        rect(im, ox + 10, hy + 15, 3, 3, beard)      # guancia sx
+        rect(im, ox + 20, hy + 15, 3, 3, beard)      # guancia dx
+        rect(im, ox + 11, hy + 17, 11, 2, beard)     # mento
+        rect(im, ox + 13, hy + 16, 7, 1, hm)
+        px(im, ox + 15, hy + 17, hl)
+        px(im, ox + 18, hy + 16, rgba("#a9adb4"))
 
     # --- BUSTO E ABBIGLIAMENTO DISTINTIVO ---
     rect(im, ox + 9, hy + 19, 13, 9, tm)
@@ -396,11 +406,22 @@ def draw_char_32x36(im, ox, oy, cid, pose):
         px(im, ox + 13, hy + 20, td)
         px(im, ox + 18, hy + 20, td)
     elif cid == "carlo":
-        # Canotta Basket #23 arancione vivo con bordi bianchi su t-shirt blu royal!
-        rect(im, ox + 9, hy + 19, 2, 3, pal["sub"])
-        rect(im, ox + 20, hy + 19, 2, 3, pal["sub"])
-        rect(im, ox + 13, hy + 21, 5, 4, WHITE)
-        rect(im, ox + 14, hy + 22, 3, 2, pal["sub"])
+        # CANOTTA OKC 2013-14 (Kevin Durant #35): bianca, spalline blu OKC,
+        # filetto arancio sul bordo del giromanica, "35" blu sul petto.
+        okc_blue = rgba("#0f4c9c")
+        okc_orange = rgba("#f46d1f")
+        rect(im, ox + 9, hy + 19, 2, 3, okc_blue)      # spallina sx
+        rect(im, ox + 20, hy + 19, 2, 3, okc_blue)     # spallina dx
+        px(im, ox + 9, hy + 22, okc_orange)            # filetto arancio sx
+        px(im, ox + 21, hy + 22, okc_orange)           # filetto arancio dx
+        rect(im, ox + 13, hy + 21, 5, 4, WHITE)        # petto bianco
+        # numero 35 in blu (2px di altezza, leggibile nello sprite)
+        rect(im, ox + 14, hy + 21, 1, 3, okc_blue)     # il "3"
+        px(im, ox + 15, hy + 21, okc_blue)
+        rect(im, ox + 15, hy + 23, 1, 1, okc_blue)
+        rect(im, ox + 17, hy + 21, 1, 3, okc_blue)     # il "5"
+        px(im, ox + 16, hy + 21, okc_blue)
+        rect(im, ox + 16, hy + 23, 1, 1, okc_blue)
     elif cid == "francesco":
         # BLAZER NERO DA CONCERTO (dalla foto al pianoforte) su camicia nera:
         # rever in evidenza, abbottonatura centrale, un solo lampo di luce sul tessuto.
@@ -642,13 +663,30 @@ def draw_portrait_64(im, ox, oy, cid, expr):
         rect(buf, 38, 46, 4, 15, td)
         rect(buf, 30, 47, 4, 14, pal["acc"])
     elif cid == "carlo":
-        # Canotta #23 arancione su t-shirt blu royal
-        rect(buf, 12, 46, 7, 8, pal["sub"])
-        rect(buf, 45, 46, 7, 8, pal["sub"])
-        rect(buf, 18, 46, 3, 15, WHITE)
-        rect(buf, 43, 46, 3, 15, WHITE)
-        rect(buf, 27, 51, 10, 8, WHITE)
-        rect(buf, 29, 53, 6, 4, pal["sub"])
+        # CANOTTA OKC 2013-14 di Kevin Durant: bianca con bordi blu OKC e filetto arancio,
+        # numero 35 in blu ben visibile sul petto.
+        okc_blue = rgba("#0f4c9c")
+        okc_orange = rgba("#f46d1f")
+        rect(buf, 12, 46, 40, 15, rgba("#f7f9fb"))        # corpo canotta bianca
+        rect(buf, 12, 46, 8, 15, okc_blue)                # bordo giromanica sx
+        rect(buf, 44, 46, 8, 15, okc_blue)                # bordo giromanica dx
+        rect(buf, 20, 46, 2, 15, okc_orange)              # filetto arancio sx
+        rect(buf, 42, 46, 2, 15, okc_orange)              # filetto arancio dx
+        rect(buf, 12, 46, 40, 1, okc_blue)                # colletto
+        # numero 35 (7x11 px, cifre leggibili)
+        n = okc_blue
+        ny = 52
+        rect(buf, 24, ny, 2, 9, n)                        # "3": asta sinistra
+        rect(buf, 24, ny, 5, 2, n)                        # "3": barra alta
+        rect(buf, 24, ny + 3, 4, 2, n)                    # "3": barra centrale
+        rect(buf, 24, ny + 7, 5, 2, n)                    # "3": barra bassa
+        rect(buf, 28, ny + 1, 1, 2, n)                    # "3": raccordo
+        rect(buf, 28, ny + 5, 1, 2, n)
+        rect(buf, 33, ny, 5, 2, n)                        # "5": barra alta
+        rect(buf, 33, ny, 2, 5, n)                        # "5": asta sinistra
+        rect(buf, 33, ny + 3, 5, 2, n)                    # "5": barra mediana
+        rect(buf, 37, ny + 3, 1, 6, n)                    # "5": asta destra
+        rect(buf, 33, ny + 7, 5, 2, n)                    # "5": barra bassa
     elif cid == "francesco":
         # BLAZER NERO ELEGANTE da concerto (dalla foto al pianoforte) + camicia nera
         rect(buf, 10, 46, 44, 15, rgba("#16161c"))
@@ -706,19 +744,28 @@ def draw_portrait_64(im, ox, oy, cid, expr):
         rect(buf, 28, 15, 4, 3, hm)
 
     elif cid == "ranaldo":
-        # Prof. Ranaldo 45enne: taglio moderno spettinato antracite + grigio acciaio con ciocche argento (NON bianco!)
-        rect(buf, 17, 9, 30, 8, hd)
-        rect(buf, 19, 7, 26, 5, hm)
-        rect(buf, 22, 5, 8, 3, hm)
-        rect(buf, 31, 4, 9, 4, hl)  # ciocca argento dinamica sul ciuffo
-        rect(buf, 15, 13, 4, 11, hm)  # tempie brizzolate grigio acciaio
-        rect(buf, 45, 13, 4, 11, hm)
-        px(buf, 16, 18, hl); px(buf, 47, 18, hl)
-        # Ciocche messy da 45enne sulla fronte
-        rect(buf, 21, 17, 4, 4, hd)
-        rect(buf, 28, 17, 5, 5, hm)
-        rect(buf, 30, 17, 2, 4, hl)
-        rect(buf, 38, 17, 4, 4, hd)
+        # DALLE FOTO: capelli GRIGIO ARGENTO scompigliati, ciuffi alti e irregolari,
+        # tempie schiarite. Silence sui capelli scuri: devono sembrare grigi.
+        rect(buf, 16, 9, 32, 8, hl)          # calotta argentata
+        rect(buf, 18, 6, 28, 5, hl)
+        rect(buf, 14, 12, 5, 12, hm)         # tempie grigio acciaio
+        rect(buf, 46, 12, 5, 12, hm)
+        # ciuffi alti e ribelli (scompigliati, come in foto)
+        rect(buf, 22, 3, 6, 4, hl)
+        rect(buf, 30, 2, 5, 5, WHITE)
+        rect(buf, 37, 3, 6, 4, hl)
+        rect(buf, 43, 5, 4, 3, hm)
+        px(buf, 20, 2, hl); px(buf, 27, 1, hl); px(buf, 45, 2, hl)
+        # ombre tra i ciuffi per non leggere "casco bianco"
+        px(buf, 27, 8, hm)
+        px(buf, 28, 9, hm)
+        px(buf, 36, 8, hm)
+        px(buf, 37, 9, hm)
+        rect(buf, 50, 14, 1, 8, hm)
+        # Ciocche sulla fronte, brizzolate
+        rect(buf, 20, 16, 5, 4, hm)
+        rect(buf, 28, 15, 6, 5, hl)
+        rect(buf, 37, 16, 5, 4, hm)
 
 
 
@@ -763,11 +810,14 @@ def draw_portrait_64(im, ox, oy, cid, expr):
         rect(buf, 47, 10, 5, 13, hd)
         rect(buf, 15, 12, 3, 8, hm)
         rect(buf, 46, 12, 3, 8, hm)
-        # FRANGIA folta a ciuffi sulla fronte
-        rect(buf, 18, 13, 28, 6, hd)
-        rect(buf, 20, 12, 7, 4, hm)
+        # FRANGIA folta a ciuffi, con luce dentro (non un blocco scuro)
+        rect(buf, 18, 13, 28, 6, hm)
+        rect(buf, 20, 12, 7, 4, hl)
         rect(buf, 29, 11, 8, 4, hl)
         rect(buf, 38, 12, 7, 5, hm)
+        px(buf, 23, 15, hl)
+        px(buf, 32, 14, hl)
+        px(buf, 41, 15, hl)
         px(buf, 22, 19, hd)
         px(buf, 30, 19, hd)
         px(buf, 39, 19, hd)
@@ -794,6 +844,10 @@ def draw_portrait_64(im, ox, oy, cid, expr):
         rect(buf, 21, by - 1, 6, 1, eb)
         rect(buf, 35, by, 10, 2, eb)
         rect(buf, 37, by - 1, 6, 1, eb)
+    elif cid == "ranaldo":
+        # sopracciglia grigie folte (dalle foto)
+        rect(buf, 20, by, 9, 2, hm)
+        rect(buf, 35, by, 9, 2, hm)
     elif expr == 4:
         rect(buf, 21, by + 1, 7, 2, hd)
         px(buf, 28, by + 2, hd)
@@ -804,7 +858,12 @@ def draw_portrait_64(im, ox, oy, cid, expr):
         rect(buf, 36, by + 1, 7, 2, hd)
 
     # --- OCCHI ---
-    iris_c = rgba("#2b1810") if cid == "carlo" else EYE_BLK
+    if cid == "carlo":
+        iris_c = rgba("#2b1810")
+    elif cid == "ranaldo":
+        iris_c = rgba("#3f6fa8")   # occhi azzurri (dalle foto)
+    else:
+        iris_c = EYE_BLK
     if expr == 5:
         rect(buf, 22, 28, 6, 2, EYE_BLK)
     else:
@@ -1267,11 +1326,11 @@ def build_all_sprites():
     draw.text((24, 38), "Carlo, Daniele, Francesco, Ruggero e Prof. Ranaldo - Sprite 32x36 (13 pose), Ritratti 64x64 e Silhouette", fill=rgba("#94a3b8"))
 
     info = [
-        ("PROF. RANALDO (45a)", "Matematica | Sale-e-pepe"),
-        ("CARLO (Protagonista)", "Basket #23 | Occhiali+Baffi"),
-        ("FRANCESCO", "Pianoforte | Cuffie+Cardigan"),
+        ("PROF. RANALDO", "Matematica | Argento+Barba"),
+        ("CARLO (Protagonista)", "Basket #35 OKC | Occhiali+Baffi"),
+        ("FRANCESCO", "Pianoforte | Blazer nero"),
         ("RUGGERO", "Atletica | Sprint & Ostacoli"),
-        ("DANIELE (Nuovo!)", "Ballo Latino | Salsa & Bachata"),
+        ("DANIELE", "Ballo latino | Fade+Occhiali"),
     ]
     for i in range(5):
         cx = 22 + i * 182

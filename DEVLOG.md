@@ -1,3 +1,20 @@
+## Fase N — Ranaldo, Carlo #35 OKC e Francesco (v3.0.6, 26/11/2026)
+
+**Richieste:** «La frangia di Francesco un po' più bassa» · «due foto del prof. Ranaldo» ·
+«Carlo fallo con la canotta di Kevin Durant nel 2013-14 (OKC numero 35)» · «Francesco molto elegante,
+come nella foto: classico abito».
+
+**Interventi (`tools/generate_assets.py` + testi)**
+- Ranaldo: palette capelli `#4a5260 / #79828f / #b6bdc7`, capigliatura 32×36 e 64×64 riscritte con ciuffi
+  alti scompigliati, barba brizzolata su guance+mento, iride azzurra, sopracciglia grigie.
+- Carlo: palette canotta bianca con `sub` blu OKC e `acc` arancio; numero 35 disegnato a mano in due
+  blocchi (sprite 3×4 px, ritratto 11×9 px) con bordi giromanica e colletto.
+- Francesco: frangia estesa di una riga (sprite e ritratto), inserite ciocche chiare per non perdere
+  dettaglio, capelli castano scuro `#141018 / #2a2320 / #453a33`.
+- Testi: `hudAndMenus.js` (CARLO Basket #35 OKC), `constants.js` (passion), etichette della tavola.
+
+**Verifica:** playtest 511 · testi 341 · regressione 178 · mobile 30 · screenshot 7/7 · minigiochi 6/6 · 0 errori JS.
+
 ## Fase M — Daniele e Francesco dalle foto (v3.0.5, 26/11/2026)
 
 **Richiesta:** «Ho caricato 2 foto di Daniele e una di Francesco per renderli più come la loro versione
