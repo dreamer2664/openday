@@ -15,3 +15,6 @@ assets/sprites/*_raw/
 # File di sistema
 .DS_Store
 Thumbs.db
+# screenshot QA generati dai test
+qa_*.png
+qa_*.jpg
