@@ -6,14 +6,14 @@
 
 | Categoria Asset | Percorso nel Progetto | Autore / Origine | Licenza |
 |---|---|---|---|
-| **Sprite Personaggi & NPC (78 pose `32×36`)** | `assets/sprites/characters_sheet.png` | Creazione originale v2.0 (`tools/generate_assets.py`) | Originale progetto (uso libero per il Liceo Casardi) |
-| **Ritratti Dialogo (42 ritratti `64×64` a 6 espressioni)** | `assets/sprites/portraits_sheet.png` | Creazione originale v2.0 (`tools/generate_assets.py`) | Originale progetto |
+| **Sprite Personaggi & NPC (91 pose `32×36`)** | `assets/sprites/characters_sheet.png` | Creazione originale v2.0 (`tools/generate_assets.py`) | Originale progetto (uso libero per il Liceo Casardi) |
+| **Ritratti Dialogo (48 ritratti `64×64` a 6 espressioni)** | `assets/sprites/portraits_sheet.png` | Creazione originale v2.0 (`tools/generate_assets.py`) | Originale progetto |
 | **Tileset Architettonico Casardi (`16×16`)** | `assets/sprites/tileset_casardi.png` | Creazione originale v2.0 (`tools/generate_assets.py`) | Originale progetto |
 | **5 Nemici (`32×32`), 3 Boss/Mid-Boss (`48×60`) e Oggetti** | `assets/sprites/enemies_props.png` | Creazione originale v2.0 (`tools/generate_assets.py`) | Originale progetto |
 | **Tavola Personaggi & 6 Anteprime Reali** | `assets/sprites/TAVOLA_PERSONAGGI.png`, `ANTEPRIMA_SCENE_CASARDI.png` | Creazione originale (`tools/generate_assets.py`, `tools/render_visual_check.mjs`) | Originale progetto |
 | **Font Bitmap Pixel-Art 5×7 Italiano & Fondali Casardi** | `src/render/pixelFont.js`, `src/render/renderer.js` | Codice pixel-art originale | Originale progetto |
 | **Colonna Sonora Chiptune (7 brani originali)** | `assets/audio/theme_*.wav` + `src/audio/chiptuneEngine.js` | Composizione chiptune originale a 4 canali (*Via d'Aragona*, *Corridoi Classici*, *Cortile Sportivo*, *23 Postazioni Lab*, *Biblioteca 8.000 Volumi*, *Sofista Boss*, *Vittoria*) | Originale progetto |
-| **Effetti Sonori 8-Bit (13 file WAV + sintesi WebAudio)** | `assets/audio/sfx_*.wav` + `src/audio/chiptuneEngine.js` | Sintesi procedurale originale (20 file `.wav` totali) | Originale progetto |
+| **Effetti Sonori 8-Bit (17 file WAV + sintesi WebAudio)** | `assets/audio/sfx_*.wav` + `src/audio/chiptuneEngine.js` | Sintesi procedurale originale (**24 file** `.wav` totali, senza offset DC e senza duplicati) | Originale progetto |
 | **Motore di Gioco, Fisica, Dialoghi e Livelli** | `src/**` | Codice JavaScript ES6 originale senza dipendenze esterne | Originale progetto |
 
 ---

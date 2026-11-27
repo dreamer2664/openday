@@ -2,7 +2,7 @@
 // Gestisce Ciclo 60Hz deterministico, Menu, Modalità Open Day (7-10 min), Campagna Completa (6 Capitoli),
 // Dialoghi Cinematografici 64x64, Postazioni Interattive EIPASS, Minigiochi Passioni, Assist [C], CRT [V] e Audio Chiptune.
 
-import { SCREEN_W, SCREEN_H, CHARACTERS, CHAR_ORDER } from "./config/constants.js";
+import { SCREEN_W, SCREEN_H, CHARACTERS, CHAR_ORDER, HERO_BASE_ORDER } from "./config/constants.js";
 import { GameStateManager } from "./state/gameState.js";
 import { EMBEDDED_SPRITES } from "./assets/embeddedSprites.js";
 import { ChiptuneAudioEngine } from "./audio/chiptuneEngine.js";
@@ -88,13 +88,7 @@ export class CasardiGameApp {
         });
       } else if (this.scene === "paused") {
         if (this.showControlsModal) {
-          this.showControlsModal = false;
-          const back = this._helpReturnScene;
-          this._helpReturnScene = null;
-          if (back === "playing" && this._helpWasRunning) {
-            this.scene = "playing";
-            this.paused = false;
-          }
+          this.closeControlsModal();
           return;
         }
         // Tocco/Click sulle 7 voci del Menu Pausa & Dossier
@@ -398,6 +392,25 @@ export class CasardiGameApp {
       this.sprites.tileset = t;
       this.sprites.enemiesProps = e;
     });
+  }
+
+  /**
+   * Chiude la guida comandi riportando il gioco esattamente dov'era:
+   * titolo -> titolo, partita -> partita. Unico punto di uscita (§1.5).
+   */
+  closeControlsModal() {
+    this.showControlsModal = false;
+    const back = this._helpReturnScene;
+    this._helpReturnScene = null;
+    if (back && back !== "title" && this.scene === "paused") {
+      this.scene = this._helpWasRunning ? "playing" : "paused";
+      if (this._helpWasRunning) {
+        this.paused = false;
+        this.input.keys.clear();
+        this.input.justPressed.clear();
+      }
+    }
+    return back;
   }
 
   getTitleOptions() {
@@ -743,15 +756,20 @@ export class CasardiGameApp {
       );
     }
 
-    // F1 (o "?") apre la guida comandi da qualsiasi schermata, anche in partita
-    if (this.input.helpPressed && this.scene !== "title") {
-      if (!this.showControlsModal) {
-        this.showControlsModal = true;
-        this._helpReturnScene = this.scene;
-        this._helpWasRunning = !this.paused;
-        this.scene = "paused";
+    // F1 (o "?") apre/CHIUDE la guida comandi da qualsiasi schermata (§1.5, §1.6).
+    // Prima: dalla pausa il secondo F1 non chiudeva niente, e sul titolo non faceva nulla.
+    if (this.input.helpPressed) {
+      if (this.showControlsModal) {
+        this.closeControlsModal();
         this.audio.playSfx("confirm");
+        return;
       }
+      const fromScene = this.scene;
+      this.showControlsModal = true;
+      this._helpReturnScene = fromScene;
+      this._helpWasRunning = !this.paused;
+      if (fromScene !== "title") this.scene = "paused";
+      this.audio.playSfx("confirm");
       return;
     }
 
@@ -793,7 +811,7 @@ export class CasardiGameApp {
         this.audio.playSfx("confirm");
       }
       if (this.input.confirmPressed || this.input.pausePressed) {
-        this.showControlsModal = false;
+        this.closeControlsModal();
         this.audio.playSfx("confirm");
       }
       return;
@@ -871,6 +889,9 @@ export class CasardiGameApp {
       const syn = this.teamSynergy();
       this.world._synergyJumpBonus = syn.jumpBonus;
       this.world._synergySpeedBonus = syn.speedBonus;
+      this.world._synergyDmgBonus = syn.dmgBonus;
+      // §1.3: i cuori extra della sinergia vengono applicati davvero (non solo dichiarati)
+      this.state.applyTeamSynergyHp(syn.maxHpBonus);
       this.world.update(this.input);
     }
   }
@@ -894,6 +915,9 @@ export class CasardiGameApp {
     if (!this.input.interactPressed) return;
     if (!this.state.data.unlockedChars.includes(nearest.charId)) return;
     if (this.state.data.activeChar === nearest.charId) return;
+    // §1.8: il flag va CONSUMATO, altrimenti lo stesso [E] viene letto anche dal
+    // gestore delle interazioni e nella stessa frame cambia eroe E apre la postazione.
+    this.input.interactPressed = false;
     this.switchActiveChar(nearest.charId);
   }
 
@@ -914,7 +938,11 @@ export class CasardiGameApp {
     const unlocked = this.state.data.unlockedChars || [];
     return {
       unlockedCount: unlocked.length,
-      maxHpBonus: Math.max(0, unlocked.length - 1) * 10,
+      // §1.3: espresso in CUORI (non in "punti" mai applicati): +1 cuore per ogni
+      // compagno oltre il primo, fino al cap di 6 del HUD. Viene applicato davvero
+      // da state.applyTeamSynergyHp() a ogni frame.
+      maxHpBonus: Math.min(1, Math.max(0, unlocked.length - 2)),
+      maxHpPoints: Math.max(0, unlocked.length - 1) * 10, // valore "da manuale" (10 punti/cuore)
       jumpBonus: unlocked.includes("daniele") ? 0.15 : 0,
       dmgBonus: unlocked.includes("ruggero") ? 0.08 : 0,
       speedBonus: unlocked.includes("francesco") ? 0.05 : 0,
@@ -926,7 +954,7 @@ export class CasardiGameApp {
    * di squadra. I tasti 1-5 restano così coerenti con le pillole dell'HUD.
    */
   heroSlotOrder() {
-    const base = ["carlo", "ranaldo"];
+    const base = HERO_BASE_ORDER;
     const extra = (this.state.data.unlockedChars || []).filter((c) => !base.includes(c) && CHARACTERS[c]);
     return base.concat(extra);
   }
@@ -988,18 +1016,9 @@ export class CasardiGameApp {
         this.state.saveAudioPrefs();
         this.audio.playSfx("blip", 340);
       }
-      if (this.input.confirmPressed || this.input.pausePressed || this.input.helpPressed) {
-        this.showControlsModal = false;
+      if (this.input.confirmPressed || this.input.pausePressed) {
+        this.closeControlsModal();
         this.audio.playSfx("confirm");
-        // Se la guida era stata aperta con F1 durante il gioco, si torna subito a giocare
-        const back = this._helpReturnScene;
-        this._helpReturnScene = null;
-        if (back === "playing" && this._helpWasRunning) {
-          this.scene = "playing";
-          this.paused = false;
-          this.input.keys.clear();
-          this.input.justPressed.clear();
-        }
       }
       return;
     }

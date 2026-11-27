@@ -1,0 +1,30 @@
+name: QA
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      # Le 4 suite Node usano solo moduli built-in: nessuna dipendenza da installare.
+      - name: Playtest 60 Hz
+        run: node tools/qa_playtest.mjs
+      - name: Testi e pannelli
+        run: node tools/qa_text_overflow.mjs
+      - name: Regressione errori segnalati
+        run: node tools/qa_bugfix_regression.mjs
+      - name: Mobile & multi-touch
+        run: node tools/qa_mobile_touch.mjs
+      - name: Le build sono sincronizzate?
+        run: |
+          python3 tools/sync_builds.py
+          git diff --exit-code -- release docs AVVIA_GIOCO.html AVVIA_GIOCO_PC_V3.html AVVIA_GIOCO_MOBILE_V3.html \
+            || (echo "::error::Le build committate non corrispondono a src/. Lancia python3 tools/sync_builds.py" && exit 1)

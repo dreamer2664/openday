@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover"
   />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -60,6 +60,11 @@
       gap: 8px;
       width: 100%;
       height: 100%;
+      /* §3.3: un contenuto più alto del viewport spingeva #mobile-topbar in top negativo
+         (misurato -10 px a 1024x768 e -24 px a 1440x900). Ora il contenuto si comprime
+         invece di sfondare la pagina: la barra resta sempre interamente visibile. */
+      min-height: 0;
+      overflow: hidden;
       max-width: 1380px;
       padding: calc(6px + var(--safe-top)) calc(10px + var(--safe-right)) calc(6px + var(--safe-bottom)) calc(10px + var(--safe-left));
     }
@@ -122,7 +127,10 @@
 
     canvas#game-canvas {
       display: block;
-      width: min(94vw, calc((100dvh - 82px) * (16 / 9)));
+      /* §3.2: con la sola riserva di 82 px, a 850x470 e 900x500 (zoom 125% dei portatili)
+         il canvas partiva a y=-11 e l'HUD finiva fuori schermo. La riserva copre davvero
+         la barra kiosk (fino a 2 righe di pulsanti) + l'hint comandi. */
+      width: min(94vw, calc((100dvh - 190px) * (16 / 9)));
       height: auto;
       aspect-ratio: 16 / 9;
       image-rendering: pixelated;
@@ -356,6 +364,14 @@
       border-color: #ffffff;
     }
 
+    /* §3.2: sotto i 620 px di altezza la barra kiosk si compatta (2 righe, testo piccolo)
+       così il canvas 16:9 non viene spinto fuori dal bordo superiore. */
+    @media (max-height: 620px) and (pointer: fine) {
+      .kiosk-btn { padding: 3px 7px; font-size: 11px; }
+      .key-hint { display: none; }
+      #kiosk-bar { gap: 5px; padding: 4px 8px; }
+    }
+
     /* =========================================================================
        LAYOUT ATTIVO QUANDO IL GIOCO È SU TELEFONO / TOUCH (VERTICALE E ORIZZONTALE!)
        ========================================================================= */
@@ -399,7 +415,11 @@
 
       body.touch-enabled canvas#game-canvas {
         width: 100%;
-        max-height: 52dvh;
+        /* §3.1: `max-height` da solo deformava il canvas (800x600 dava 784x558, ratio 1.405).
+           Con `height:auto` l'aspect-ratio 16:9 resta sempre rispettato. */
+        height: auto;
+        max-height: 48dvh;
+        aspect-ratio: 16 / 9;
       }
 
       body.touch-enabled #mobile-hero-strip {
@@ -407,9 +427,10 @@
       }
 
       body.touch-enabled #touch-deck {
-        flex: 1;
-        max-height: none;
-        min-height: 220px;
+        flex: 1 1 auto;
+        /* §3.1: prima la console occupava 529 px su 844 (63% dello schermo) */
+        max-height: 46dvh;
+        min-height: 168px;
         background: rgba(13, 21, 40, 0.88);
         border: 1px solid #263554;
         border-radius: 18px;
@@ -467,10 +488,18 @@
       }
 
       body.touch-enabled canvas#game-canvas {
-        height: calc(100dvh - 42px - var(--safe-top) - var(--safe-bottom));
-        width: auto;
-        max-width: 98vw;
+        /* §3.1: con height fissa + max-width il rapporto veniva ignorato (800x600 -> 784x558,
+           ratio 1.405). Ora larghezza e altezza derivano dalla STESSA formula 16:9. */
+        width: min(96vw, calc((100dvh - 42px - var(--safe-top) - var(--safe-bottom)) * (16 / 9)));
+        height: auto;
+        max-width: 96vw;
+        aspect-ratio: 16 / 9;
       }
+
+      /* §3.6: in orizzontale basso (390-620 px di altezza) il canvas occupa già tutta
+         l'altezza e non resta spazio per la striscia eroe: resta nascosta e si cambia
+         eroe con il pulsante "CAMBIA EROE" della barra o con i tasti 1-5 / Q.
+         (CONTROLLI.md dice esattamente questo, senza promettere una barra che non c'è.) */
 
       body.touch-enabled #touch-deck {
         position: fixed;
@@ -537,7 +566,9 @@
     /* 3. MODALITÀ TOUCH ATTIVATA MANUALMENTE SU TABLET GRANDE / LIM / DESKTOP */
     @media (orientation: landscape) and (min-height: 621px) {
       body.touch-enabled canvas#game-canvas {
-        width: min(92vw, calc((100dvh - 210px) * (16 / 9)));
+        /* §3.3: con la sola riserva di 210 px, a 1024x768 e 1440x900 il contenuto
+           superava l'altezza e #mobile-topbar finiva a top -10 / -24 (pulsanti tagliati). */
+        width: min(92vw, calc((100dvh - 300px) * (16 / 9)));
       }
       body.touch-enabled #mobile-hero-strip {
         display: flex;
@@ -549,12 +580,12 @@
   <div id="cabinet">
     <!-- Barra compatta per Telefono / Tablet -->
     <div id="mobile-topbar">
-      <button class="m-top-btn primary" id="m-btn-openday">★ Open Day</button>
-      <button class="m-top-btn" id="m-btn-switch">CAMBIA EROE</button>
-      <button class="m-top-btn" id="m-btn-pause">II PAUSA</button>
-      <button class="m-top-btn" id="m-btn-mute">AUDIO: ON</button>
-      <button class="m-top-btn" id="m-btn-fullscreen">[ ] FULL</button>
-      <button class="m-top-btn" id="m-btn-keyboard" title="Nascondi il controller touch e usa la tastiera">⌨ TASTI</button>
+      <button type="button" class="m-top-btn primary" id="m-btn-openday" aria-label="Avvia la modalità Open Day">★ Open Day</button>
+      <button type="button" class="m-top-btn" id="m-btn-switch" aria-label="Cambia eroe attivo (ciclo)">CAMBIA EROE</button>
+      <button type="button" class="m-top-btn" id="m-btn-pause" aria-label="Pausa e Dossier">II PAUSA</button>
+      <button type="button" class="m-top-btn" id="m-btn-mute" aria-label="Attiva o disattiva audio">AUDIO: ON</button>
+      <button type="button" class="m-top-btn" id="m-btn-fullscreen" aria-label="Schermo intero">[ ] FULL</button>
+      <button type="button" class="m-top-btn" id="m-btn-keyboard" title="Nascondi il controller touch e usa la tastiera" aria-label="Nascondi i comandi touch e usa la tastiera">⌨ TASTI</button>
     </div>
 
     <!-- Schermo 16:9 480x270 -->
@@ -562,13 +593,14 @@
       <canvas id="game-canvas" width="480" height="270" tabindex="0" aria-label="Schermo di gioco Operazione EIPASS"></canvas>
     </div>
 
-    <!-- Striscia rapida selezione 4 Protagonisti (Telefono Verticale / Tablet) -->
-    <div id="mobile-hero-strip">
-      <button class="hero-pill active" data-char="ranaldo" data-action="hero1">1: RAN</button>
-      <button class="hero-pill" data-char="carlo" data-action="hero2">2: CAR</button>
-      <button class="hero-pill" data-char="daniele" data-action="hero3">3: DAN</button>
-      <button class="hero-pill" data-char="ruggero" data-action="hero4">4: RUG</button>
-      <button class="hero-pill" data-char="francesco" data-action="hero5">5: FRA</button>
+    <!-- Striscia rapida selezione 5 Protagonisti (Telefono Verticale / Tablet).
+         Ordine identico a HERO_BASE_ORDER dell'HUD e ai tasti 1-5: 1=CAR (Carlo), 2=RAN (Ranaldo). -->
+    <div id="mobile-hero-strip" role="group" aria-label="Selezione rapida eroe (1-5)">
+      <button type="button" class="hero-pill active" data-char="carlo" data-action="hero1" aria-label="Tasto 1: Carlo">1: CAR</button>
+      <button type="button" class="hero-pill" data-char="ranaldo" data-action="hero2" aria-label="Tasto 2: Ranaldo">2: RAN</button>
+      <button type="button" class="hero-pill" data-char="daniele" data-action="hero3" aria-label="Tasto 3: Daniele">3: DAN</button>
+      <button type="button" class="hero-pill" data-char="ruggero" data-action="hero4" aria-label="Tasto 4: Ruggero">4: RUG</button>
+      <button type="button" class="hero-pill" data-char="francesco" data-action="hero5" aria-label="Tasto 5: Francesco">5: FRA</button>
     </div>
 
     <!-- Console Touch Ergonomica Multi-Touch (D-Pad 2D Continuo + 4 Tasti Azione) -->
@@ -582,19 +614,19 @@
       </div>
 
       <div id="touch-actions">
-        <button class="act-btn btn-interact" data-hold="interact" id="btn-touch-interact">
+        <button type="button" class="act-btn btn-interact" data-hold="interact" id="btn-touch-interact" aria-label="Interagisci / parla / apri (E)">
           <span class="main-lbl" id="lbl-interact">USA [E]</span>
           <span class="sub-lbl" id="sub-interact">Parla/Apri</span>
         </button>
-        <button class="act-btn btn-special" data-hold="special" id="btn-touch-special">
+        <button type="button" class="act-btn btn-special" data-hold="special" id="btn-touch-special" aria-label="Abilità speciale del personaggio (X)">
           <span class="main-lbl">ABILITÀ</span>
           <span class="sub-lbl">Ballo / Tiro</span>
         </button>
-        <button class="act-btn btn-assist" data-hold="assist" id="btn-touch-assist">
+        <button type="button" class="act-btn btn-assist" data-hold="assist" id="btn-touch-assist" aria-label="Assist di squadra (C)">
           <span class="main-lbl">ASSIST</span>
           <span class="sub-lbl">Squadra [C]</span>
         </button>
-        <button class="act-btn btn-jump" data-hold="jump" id="btn-touch-jump">
+        <button type="button" class="act-btn btn-jump" data-hold="jump" id="btn-touch-jump" aria-label="Salta (Spazio)">
           <span class="main-lbl" id="lbl-jump">SALTA</span>
           <span class="sub-lbl" id="sub-jump">Tieni=Alto</span>
         </button>
@@ -603,29 +635,30 @@
 
     <!-- Barra Kiosk Desktop -->
     <div id="kiosk-bar">
-      <button class="kiosk-btn primary" id="btn-openday" title="Avvia subito la missione dimostrativa Open Day (7-10 min)">
+      <button type="button" class="kiosk-btn primary" id="btn-openday" title="Avvia subito la missione dimostrativa Open Day (7-10 min)">
         ★ Demo Open Day
       </button>
-      <button class="kiosk-btn" id="btn-campaign" title="Avvia la Campagna Completa a 6 Capitoli">
+      <button type="button" class="kiosk-btn" id="btn-campaign" title="Avvia la Campagna Completa a 6 Capitoli">
         ▶ Campagna Completa
       </button>
-      <button class="kiosk-btn" id="btn-pause" title="Apri Pausa, Dossier Fiducia e Mixer Audio [P]">
+      <button type="button" class="kiosk-btn" id="btn-pause" title="Apri Pausa, Dossier Fiducia e Mixer Audio [P]">
         ⏸ Pausa / Dossier
       </button>
-      <button class="kiosk-btn" id="btn-mute" title="Attiva/Disattiva Musica ed Effetti [M]">
+      <button type="button" class="kiosk-btn" id="btn-mute" title="Attiva/Disattiva Musica ed Effetti [M]">
         🔊 Audio ON/OFF
       </button>
-      <button class="kiosk-btn" id="btn-touch-toggle" title="Mostra/Nascondi il Controller Touch per Telefono/LIM">
+      <button type="button" class="kiosk-btn" id="btn-touch-toggle" title="Mostra/Nascondi il Controller Touch per Telefono/LIM">
         📱 Comandi Touch
       </button>
-      <button class="kiosk-btn" id="btn-reset" title="Reset immediato per il prossimo visitatore [F9]">
+      <button type="button" class="kiosk-btn" id="btn-reset" title="Reset immediato per il prossimo visitatore [F9]">
         ↻ Nuovo Visitatore (F9)
       </button>
-      <button class="kiosk-btn" id="btn-fullscreen" title="Attiva schermo intero per postazione Open Day">
+      <button type="button" class="kiosk-btn" id="btn-fullscreen" title="Attiva schermo intero per postazione Open Day">
         ⛶ Schermo Intero
       </button>
       <span class="key-hint">
-        <b>Frecce/AD</b> Muovi · <b>Spazio</b> Salta · <b>X</b> Abilità · <b>C</b> Assist · <b>E</b> Interagisci · <b>1-5/Q</b> Eroe
+        <b>Frecce/AD</b> Muovi · <b>Spazio</b> Salta · <b>X</b> Abilità · <b>C</b> Assist · <b>E</b> Interagisci · <b>1-5/Q</b> Eroe ·
+        <b>P/ESC</b> Pausa · <b>M</b> Audio · <b>V</b> CRT · <b>Y</b> Schermo intero · <b>F1/?</b> Guida · <b>F9</b> Reset
       </span>
     </div>
   </div>
@@ -780,7 +813,15 @@ const CHARACTERS = {
 
 // ORDINE UFFICIALE DEI 5 SLOT (identico a: tasti 1-5, pillole mobile, striscia eroi e pausa)
 // 1 Carlo · 2 Ranaldo · 3 Daniele · 4 Ruggero · 5 Francesco
+/** Versione del gioco: UNICA fonte di verità, mostrata nel marquee del titolo (§2.4). */
+const GAME_VERSION = "v3.0.8";
 const CHAR_ORDER = ["carlo", "ranaldo", "daniele", "ruggero", "francesco"];
+/**
+ * Ordine BASE delle pillole eroe e dei tasti 1-5 (§1.10 della review).
+ * Era scritto in tre posti diversi (qui, main.heroSlotOrder, hud.baseOrder) + l'HTML
+ * statico delle pillole: la copia HTML era invertita e cambiava eroe sbagliato (§1.2).
+ */
+const HERO_BASE_ORDER = ["carlo", "ranaldo"];
 const EIPASS_MODULES = [
   { id: 1, code: "MOD. 1", title: "I fondamenti dell'ICT", icon: "CPU" },
   { id: 2, code: "MOD. 2", title: "Navigare e cercare informazioni sul Web", icon: "WEB" },
@@ -927,11 +968,13 @@ function createFreshState(mode = "openday") {
     subRoomsVisited: [],
 
     trust: {
-      carlo: 62,
-      ranaldo: 56,
-      daniele: 56,
-      ruggero: 56,
-      francesco: 56,
+      // §1.4 della review: con questi valori la soglia "Bonus >=70%" del Dossier era
+      // praticamente irraggiungibile in una run Open Day (si fermava a 56-67%).
+      carlo: 66,
+      ranaldo: 60,
+      daniele: 60,
+      ruggero: 60,
+      francesco: 60,
     },
     eipassScore: 50,
     eipassAnswered: 0,
@@ -1026,7 +1069,25 @@ class GameStateManager {
       this.data.unlockedChars.push(charId);
       const label = TRUST_DISPLAY_NAMES[charId] || charId;
       this.pushConsequence(`${label} si unisce al gruppo`, "#38e2d8");
+      // §1.3: il bonus "+1 energia massima per compagno" della sinergia ora è REALE
+      // (prima il campo esisteva ma non veniva mai applicato: restava a 5 cuori per sempre).
+      this.applyTeamSynergyHp();
     }
+  }
+
+  /** Energia massima = 5 cuori base + 1 per ogni compagno oltre il primo (max 6 = cap HUD).
+   *  Riflette main.teamSynergy().maxHpBonus espresso in cuori invece che in "punti". */
+  applyTeamSynergyHp(bonusHearts = null) {
+    const bonus =
+      bonusHearts === null
+        ? Math.min(1, Math.max(0, (this.data.unlockedChars?.length || 2) - 2))
+        : Math.max(0, Math.min(1, bonusHearts | 0));
+    const wanted = Math.min(6, 5 + bonus);
+    if (this.data.maxHp !== wanted) {
+      this.data.maxHp = Math.max(this.data.maxHp, wanted);
+      this.data.hp = Math.min(this.data.maxHp, this.data.hp + 1);
+    }
+    return this.data.maxHp;
   }
 
   modifyTrust(charId, delta) {
@@ -5249,8 +5310,9 @@ class SpecialChallengeManager {
       const py = 64 + pk.lane * 52;
       const px = Math.min(308, Math.round(pk.x) - 24);
       drawPixelPanel(ctx, px, py, 138, 32, "#162238", "#60a5fa", "#0f172a");
-      drawPixelText(ctx, pk.label.slice(0, 21), px + 5, py + 6, "#ffffff", 1);
-      drawPixelText(ctx, pk.detail.slice(0, 21), px + 5, py + 18, "#cbd5e1", 1);
+      // §4.3: etichette misurate sui 128 px utili del pacchetto (prima taglio a 21 caratteri)
+      drawPixelText(ctx, fitPixelText(pk.label, 128, 1, 1)[0], px + 5, py + 6, "#ffffff", 1);
+      drawPixelText(ctx, fitPixelText(pk.detail, 128, 1, 1)[0], px + 5, py + 18, "#cbd5e1", 1);
     }
 
     drawPixelText(ctx, `FLUSSI GESTITI: ${m.blocked}/${m.needed}`, 296, 46, "#4ade80", 1);
@@ -5265,9 +5327,10 @@ class SpecialChallengeManager {
     const cur = m.queue[Math.min(m.idx, m.queue.length - 1)];
     if (cur) {
       drawPixelPanel(ctx, 34, 58, SCREEN_W - 68, 68, "#1e293b", "#38bdf8", "#0f172a");
-      drawPixelText(ctx, `FILE:     ${cur.name}`.slice(0, 64), 44, 66, "#ffffff", 1);
-      drawPixelText(ctx, `ORIGINE:  ${cur.origin}`.slice(0, 64), 44, 82, "#bae6fd", 1);
-      drawPixelText(ctx, `CONTESTO: ${cur.signal}`.slice(0, 64), 44, 98, "#fde047", 1);
+      // §4.3: righe misurate sui 408 px del pannello: l'origine lunga non si spezza più a metà
+      drawPixelText(ctx, fitPixelText(`FILE:     ${cur.name}`, 408, 1, 1)[0], 44, 66, "#ffffff", 1);
+      drawPixelText(ctx, fitPixelText(`ORIGINE:  ${cur.origin}`, 408, 1, 1)[0], 44, 82, "#bae6fd", 1);
+      drawPixelText(ctx, fitPixelText(`CONTESTO: ${cur.signal}`, 408, 1, 1)[0], 44, 98, "#fde047", 1);
     }
 
     drawPixelPanel(ctx, 34, 136, 196, 78, "#0d3b2e", "#4ade80", "#14532d");
@@ -7058,8 +7121,13 @@ class WorldRuntime {
       const footC = Math.floor((p.x + p.w / 2) / TILE);
       const footR = Math.floor((p.y + p.h + 1) / TILE);
       if (footR >= 0 && footR < this.rows && this.grid[footR][footC] === 1) {
-        p.lastSafeX = p.x;
-        p.lastSafeY = p.y;
+        // §1.9 della review: il "punto sicuro" non deve stare a ridosso di una fossa,
+        // altrimenti il respawn ricade subito dentro l'ostacolo. Lo aggiorniamo solo
+        // se c'è terreno pieno anche a sinistra e a destra dei piedi.
+        if (this.hasSafeFooting(footC, footR)) {
+          p.lastSafeX = p.x;
+          p.lastSafeY = p.y;
+        }
       }
       if (Math.abs(p.vx) > 0.25) {
         p.walkTimer += 0.22;
@@ -7235,6 +7303,16 @@ class WorldRuntime {
     }
   }
 
+  /** Terreno "sicuro" per il respawn: solido sotto i piedi E ai due lati (niente bordi). */
+  hasSafeFooting(footC, footR) {
+    for (let c = footC - 1; c <= footC + 1; c++) {
+      if (c < 0 || c >= this.cols) return false;
+      const t = this.grid[footR][c];
+      if (t !== 1 && t !== 2) return false; // 6 = punte, 0 = vuoto, 3 = muro da sfondare
+    }
+    return true;
+  }
+
   checkHazards(p) {
     if (p.y > this.rows * TILE + 24) {
       this.recoverFromPit();
@@ -7247,15 +7325,28 @@ class WorldRuntime {
     }
   }
 
+  /**
+   * Caduta in fossa o atterraggio sulle punte.
+   * §1.1/§6.5 della review: il riposizionamento avviene SEMPRE, anche quando il colpo
+   * viene assorbito da scudo o invulnerabilità; prima il player restava "affondato"
+   * nella buca a rimbalzare tra bordo e punte senza mai uscirne.
+   */
   recoverFromPit() {
     const p = this.player;
-    this.damagePlayer(1, false);
-    if (this.state.data.hp > 0) {
+    const hpBefore = this.state.data.hp;
+    if (p.invuln <= 0) this.damagePlayer(1, false);
+    // damagePlayer con hp<=0 ha già gestito morte + checkpoint: non riposizionare di nuovo
+    if (this.state.data.hp > 0 && this.state.data.hp <= hpBefore) {
       p.x = p.lastSafeX;
-      p.y = p.lastSafeY - 4;
+      p.y = p.lastSafeY;
       p.vx = 0;
       p.vy = 0;
-      p.invuln = 65;
+      p.onGround = true;
+      if (p.invuln < 40) p.invuln = 40; // grazia breve, non l'invulnerabilità piena (65)
+      // Suggerimento da postazione Open Day: la fossa si supera SALTANDO.
+      if (this.state.data.hp >= hpBefore) {
+        this.addFloatingText(p.x - 24, p.y - 20, "SALTA LA FOSSA! [SPAZIO/Z]", "#fde047");
+      }
     }
   }
 
@@ -7266,6 +7357,11 @@ class WorldRuntime {
 
   get synergySpeedBonus() {
     return this._synergySpeedBonus || 0;
+  }
+
+  /** Bonus danno di squadra (Ruggero): fornito da main.teamSynergy(). */
+  get synergyDmgBonus() {
+    return this._synergyDmgBonus || 0;
   }
 
   damagePlayer(amount = 1, knockback = true) {
@@ -7756,7 +7852,11 @@ class WorldRuntime {
   hitMidBoss(dmg, label = "COLPITO!") {
     const mb = this.midBoss;
     if (!mb || mb.defeated || mb.invuln > 0) return;
-    mb.hp = Math.max(0, mb.hp - dmg);
+    // §1.3: bonus danno di squadra applicato in modo frazionario (un +8% su un colpo
+    // da 2 punti non sparirebbe se arrotondassimo all'intero).
+    const eff = dmg * (1 + this.synergyDmgBonus);
+    dmg = Math.max(1, Math.round(eff));
+    mb.hp = Math.max(0, mb.hp - eff);
     mb.invuln = 28;
     this.hitstopFrames = 2;
     this.triggerShake(7, 2.5);
@@ -7846,7 +7946,9 @@ class WorldRuntime {
   hitBoss(dmg, label = "COLPITO!") {
     const b = this.boss;
     if (!b || b.defeated || b.invuln > 0) return;
-    b.hp = Math.max(0, b.hp - dmg);
+    const eff = dmg * (1 + this.synergyDmgBonus);
+    dmg = Math.max(1, Math.round(eff));
+    b.hp = Math.max(0, b.hp - eff);
     b.invuln = 34;
     this.hitstopFrames = 3;
     this.triggerShake(9, 3.2);
@@ -9084,7 +9186,10 @@ class PixelRenderer {
         ctx.fillRect(dec.x + 4, dec.y - 68, 106, 36);
         ctx.fillStyle = "#38bdf8";
         ctx.fillRect(dec.x + 4, dec.y - 68, 106, 7);
-        drawPixelText(ctx, (dec.label || "LIM CASARDI").slice(0, 17), dec.x + 7, dec.y - 55, "#fef08a", 1, null);
+        // §4.3: nessun taglio a metà parola: il cartello va a capo entro i 106 px del pannello
+        fitPixelText(dec.label || "LIM CASARDI", 104, 2, 1).forEach((ln, li) => {
+          drawPixelText(ctx, ln, dec.x + 7, dec.y - 55 + li * 9, "#fef08a", 1, null);
+        });
       } else if (dec.propKind === "desk_pc") {
         ctx.fillStyle = "#334155";
         ctx.fillRect(dec.x, dec.y - 16, 40, 16);
@@ -9172,7 +9277,7 @@ class PixelRenderer {
     const bx = Math.round((SCREEN_W - w) / 2);
     const by = SCREEN_H - 21;
     drawPixelPanel(ctx, bx, by, w, 17, "rgba(9, 14, 28, 0.94)", "#38bdf8", "#1e3a8a");
-    drawPixelText(ctx, txt.slice(0, 74), bx + 8, by + 5, "#fef08a", 1);
+    drawPixelText(ctx, fitPixelText(txt, SCREEN_W - 36, 1, 1)[0], bx + 8, by + 5, "#fef08a", 1);
   }
 
   drawInteractiveProps(ctx, world) {
@@ -9538,6 +9643,7 @@ class PixelRenderer {
 // Notifiche Stile Telltale, Banter in Tempo Reale, Postazioni Interattive EIPASS e Filtro CRT Arcade!
 
 
+
 // Ordine righe del portraits_sheet.png (8 righe x 6 espressioni, 64x64):
 // generato da tools/generate_assets.py -> ["ranaldo","carlo","francesco","ruggero","daniele","sofista","sofia","mimmo"]
 const PORTRAIT_ROWS = {
@@ -9602,7 +9708,7 @@ class UIManager {
     );
     drawPixelTextCentered(
       ctx,
-      "Carlo • Ranaldo • Daniele • Ruggero • Francesco",
+      `Carlo • Ranaldo • Daniele • Ruggero • Francesco   ${GAME_VERSION}`,
       SCREEN_W / 2,
       42,
       "#fde047",
@@ -9734,13 +9840,16 @@ class UIManager {
         ctx.fillRect(hx + 1, 8, 2, 2);
       }
     }
+    // §4.1: il contatore scudo finiva SOTTO il riquadro dell'eroe attivo (con 5 cuori
+    // il testo partiva da x=73 e le pillole da x=94). Ora sta su una micro-riga dedicata
+    // sotto i cuori (y=18), dove c'è spazio reale e non si sovrappone a niente.
     if (d.shield > 0) {
-      drawPixelText(ctx, `+${d.shield}SC`, 8 + d.maxHp * 13, 9, "#38bdf8", 1);
+      drawPixelText(ctx, `SCUDO x${d.shield}`, 7, 18, "#38bdf8", 1);
     }
 
     // Selettore rapido dei Protagonisti: 1=Carlo, 2=Ranaldo, poi gli altri acquisiti.
     // Lo stesso ordine usato dai tasti numerici (main.heroSlotOrder), così non si sfalsano.
-    const baseOrder = ["carlo", "ranaldo"];
+    const baseOrder = HERO_BASE_ORDER;
     const rosterKey = (d.unlockedChars || []).join(",");
     if (this._rosterCacheKey !== rosterKey) {
       this._rosterCacheKey = rosterKey;
@@ -9803,10 +9912,12 @@ class UIManager {
       const alpha = Math.min(1, this.bannerTimer / 28);
       ctx.save();
       ctx.globalAlpha = alpha;
-      drawPixelPanel(ctx, 64, 32, 352, 34, "rgba(11, 17, 32, 0.93)", "#ffd147", "#1e3a8a");
-      drawPixelTextCentered(ctx, this.bannerText.slice(0, 54), SCREEN_W / 2, 38, "#ffd147", 1);
+      drawPixelPanel(ctx, 64, 32, 400, 34, "rgba(11, 17, 32, 0.93)", "#ffd147", "#1e3a8a");
+      // §4.4: pannello allargato a 400 px e testo MISURATO con ellissi di parola,
+      // così i nomi dei boss ("Il Sofista Ω", 455 px) non escono più dal bordo.
+      drawPixelTextCentered(ctx, fitPixelText(this.bannerText, 396, 1, 1)[0], SCREEN_W / 2, 38, "#ffd147", 1);
       if (this.bannerSub) {
-        drawPixelTextCentered(ctx, this.bannerSub.slice(0, 56), SCREEN_W / 2, 51, "#cbd5e1", 1);
+        drawPixelTextCentered(ctx, fitPixelText(this.bannerSub, 396, 1, 1)[0], SCREEN_W / 2, 51, "#cbd5e1", 1);
       }
       ctx.restore();
     }
@@ -9938,8 +10049,11 @@ class UIManager {
 
     // Barra Titolo Postazione EIPASS
     ctx.fillStyle = "#0369a1";
-    ctx.fillRect(15, 15, SCREEN_W - 30, 19);
-    drawPixelText(ctx, fitPixelText(`${q.badge} • ${q.title}`, SCREEN_W - 44, 1, 1)[0], 22, 21, "#fef08a", 1);
+    ctx.fillRect(15, 15, SCREEN_W - 30, 27);
+    // §4.2: badge e titolo su DUE righe misurate (la barra passa da 19 a 28 px):
+    // i 10 titoli su 12 che prima finivano con "…" ora si leggono per intero.
+    drawPixelText(ctx, fitPixelText(q.badge, SCREEN_W - 44, 1, 1)[0], 22, 18, "#bae6fd", 1);
+    drawPixelText(ctx, fitPixelText(q.title, SCREEN_W - 44, 1, 1)[0], 22, 28, "#fef08a", 1);
 
     if (!qState.answered) {
       // Pannello Simulatore Visivo Dinamico in tempo reale (y = 37..111)!
@@ -9947,7 +10061,7 @@ class UIManager {
 
       const pLines = wrapPixelText(q.prompt, SCREEN_W - 40, 1, true);
       pLines.slice(0, 2).forEach((pln, pi) => {
-        drawPixelText(ctx, pln, 20, 113 + pi * 10, "#bae6fd", 1);
+        drawPixelText(ctx, pln, 20, 118 + pi * 10, "#bae6fd", 1);
       });
 
       // Le opzioni si dimensionano sul testo reale: nessuna etichetta tagliata a metà
@@ -10049,9 +10163,9 @@ class UIManager {
   renderQuizLiveSimulator(ctx, q, selIdx) {
     const opt = q.options[selIdx] || q.options[0];
     const sx = 20;
-    const sy = 37;
+    const sy = 46;
     const sw = SCREEN_W - 40;
-    const sh = 74;
+    const sh = 68;
 
     drawPixelPanel(ctx, sx, sy, sw, sh, "#0b1120", "#475569", "#162038");
 
@@ -10482,13 +10596,7 @@ class CasardiGameApp {
         });
       } else if (this.scene === "paused") {
         if (this.showControlsModal) {
-          this.showControlsModal = false;
-          const back = this._helpReturnScene;
-          this._helpReturnScene = null;
-          if (back === "playing" && this._helpWasRunning) {
-            this.scene = "playing";
-            this.paused = false;
-          }
+          this.closeControlsModal();
           return;
         }
         // Tocco/Click sulle 7 voci del Menu Pausa & Dossier
@@ -10792,6 +10900,25 @@ class CasardiGameApp {
       this.sprites.tileset = t;
       this.sprites.enemiesProps = e;
     });
+  }
+
+  /**
+   * Chiude la guida comandi riportando il gioco esattamente dov'era:
+   * titolo -> titolo, partita -> partita. Unico punto di uscita (§1.5).
+   */
+  closeControlsModal() {
+    this.showControlsModal = false;
+    const back = this._helpReturnScene;
+    this._helpReturnScene = null;
+    if (back && back !== "title" && this.scene === "paused") {
+      this.scene = this._helpWasRunning ? "playing" : "paused";
+      if (this._helpWasRunning) {
+        this.paused = false;
+        this.input.keys.clear();
+        this.input.justPressed.clear();
+      }
+    }
+    return back;
   }
 
   getTitleOptions() {
@@ -11137,15 +11264,20 @@ class CasardiGameApp {
       );
     }
 
-    // F1 (o "?") apre la guida comandi da qualsiasi schermata, anche in partita
-    if (this.input.helpPressed && this.scene !== "title") {
-      if (!this.showControlsModal) {
-        this.showControlsModal = true;
-        this._helpReturnScene = this.scene;
-        this._helpWasRunning = !this.paused;
-        this.scene = "paused";
+    // F1 (o "?") apre/CHIUDE la guida comandi da qualsiasi schermata (§1.5, §1.6).
+    // Prima: dalla pausa il secondo F1 non chiudeva niente, e sul titolo non faceva nulla.
+    if (this.input.helpPressed) {
+      if (this.showControlsModal) {
+        this.closeControlsModal();
         this.audio.playSfx("confirm");
+        return;
       }
+      const fromScene = this.scene;
+      this.showControlsModal = true;
+      this._helpReturnScene = fromScene;
+      this._helpWasRunning = !this.paused;
+      if (fromScene !== "title") this.scene = "paused";
+      this.audio.playSfx("confirm");
       return;
     }
 
@@ -11187,7 +11319,7 @@ class CasardiGameApp {
         this.audio.playSfx("confirm");
       }
       if (this.input.confirmPressed || this.input.pausePressed) {
-        this.showControlsModal = false;
+        this.closeControlsModal();
         this.audio.playSfx("confirm");
       }
       return;
@@ -11265,6 +11397,9 @@ class CasardiGameApp {
       const syn = this.teamSynergy();
       this.world._synergyJumpBonus = syn.jumpBonus;
       this.world._synergySpeedBonus = syn.speedBonus;
+      this.world._synergyDmgBonus = syn.dmgBonus;
+      // §1.3: i cuori extra della sinergia vengono applicati davvero (non solo dichiarati)
+      this.state.applyTeamSynergyHp(syn.maxHpBonus);
       this.world.update(this.input);
     }
   }
@@ -11288,6 +11423,9 @@ class CasardiGameApp {
     if (!this.input.interactPressed) return;
     if (!this.state.data.unlockedChars.includes(nearest.charId)) return;
     if (this.state.data.activeChar === nearest.charId) return;
+    // §1.8: il flag va CONSUMATO, altrimenti lo stesso [E] viene letto anche dal
+    // gestore delle interazioni e nella stessa frame cambia eroe E apre la postazione.
+    this.input.interactPressed = false;
     this.switchActiveChar(nearest.charId);
   }
 
@@ -11308,7 +11446,11 @@ class CasardiGameApp {
     const unlocked = this.state.data.unlockedChars || [];
     return {
       unlockedCount: unlocked.length,
-      maxHpBonus: Math.max(0, unlocked.length - 1) * 10,
+      // §1.3: espresso in CUORI (non in "punti" mai applicati): +1 cuore per ogni
+      // compagno oltre il primo, fino al cap di 6 del HUD. Viene applicato davvero
+      // da state.applyTeamSynergyHp() a ogni frame.
+      maxHpBonus: Math.min(1, Math.max(0, unlocked.length - 2)),
+      maxHpPoints: Math.max(0, unlocked.length - 1) * 10, // valore "da manuale" (10 punti/cuore)
       jumpBonus: unlocked.includes("daniele") ? 0.15 : 0,
       dmgBonus: unlocked.includes("ruggero") ? 0.08 : 0,
       speedBonus: unlocked.includes("francesco") ? 0.05 : 0,
@@ -11320,7 +11462,7 @@ class CasardiGameApp {
    * di squadra. I tasti 1-5 restano così coerenti con le pillole dell'HUD.
    */
   heroSlotOrder() {
-    const base = ["carlo", "ranaldo"];
+    const base = HERO_BASE_ORDER;
     const extra = (this.state.data.unlockedChars || []).filter((c) => !base.includes(c) && CHARACTERS[c]);
     return base.concat(extra);
   }
@@ -11382,18 +11524,9 @@ class CasardiGameApp {
         this.state.saveAudioPrefs();
         this.audio.playSfx("blip", 340);
       }
-      if (this.input.confirmPressed || this.input.pausePressed || this.input.helpPressed) {
-        this.showControlsModal = false;
+      if (this.input.confirmPressed || this.input.pausePressed) {
+        this.closeControlsModal();
         this.audio.playSfx("confirm");
-        // Se la guida era stata aperta con F1 durante il gioco, si torna subito a giocare
-        const back = this._helpReturnScene;
-        this._helpReturnScene = null;
-        if (back === "playing" && this._helpWasRunning) {
-          this.scene = "playing";
-          this.paused = false;
-          this.input.keys.clear();
-          this.input.justPressed.clear();
-        }
       }
       return;
     }

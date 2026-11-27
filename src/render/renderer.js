@@ -4,7 +4,7 @@
 // pozzi con profondità architettonica e font bitmap pixelFont.js nitido al 100%.
 
 import { SCREEN_W, SCREEN_H, TILE, CHARACTERS, CHAR_SPRITE_W, CHAR_SPRITE_H } from "../config/constants.js";
-import { drawPixelText, measurePixelText, drawPixelPanel } from "./pixelFont.js";
+import { drawPixelText, measurePixelText, drawPixelPanel, fitPixelText } from "./pixelFont.js";
 
 export class PixelRenderer {
   constructor(spriteImages) {
@@ -1082,7 +1082,10 @@ export class PixelRenderer {
         ctx.fillRect(dec.x + 4, dec.y - 68, 106, 36);
         ctx.fillStyle = "#38bdf8";
         ctx.fillRect(dec.x + 4, dec.y - 68, 106, 7);
-        drawPixelText(ctx, (dec.label || "LIM CASARDI").slice(0, 17), dec.x + 7, dec.y - 55, "#fef08a", 1, null);
+        // §4.3: nessun taglio a metà parola: il cartello va a capo entro i 106 px del pannello
+        fitPixelText(dec.label || "LIM CASARDI", 104, 2, 1).forEach((ln, li) => {
+          drawPixelText(ctx, ln, dec.x + 7, dec.y - 55 + li * 9, "#fef08a", 1, null);
+        });
       } else if (dec.propKind === "desk_pc") {
         ctx.fillStyle = "#334155";
         ctx.fillRect(dec.x, dec.y - 16, 40, 16);
@@ -1170,7 +1173,7 @@ export class PixelRenderer {
     const bx = Math.round((SCREEN_W - w) / 2);
     const by = SCREEN_H - 21;
     drawPixelPanel(ctx, bx, by, w, 17, "rgba(9, 14, 28, 0.94)", "#38bdf8", "#1e3a8a");
-    drawPixelText(ctx, txt.slice(0, 74), bx + 8, by + 5, "#fef08a", 1);
+    drawPixelText(ctx, fitPixelText(txt, SCREEN_W - 36, 1, 1)[0], bx + 8, by + 5, "#fef08a", 1);
   }
 
   drawInteractiveProps(ctx, world) {

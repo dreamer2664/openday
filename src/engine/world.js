@@ -563,8 +563,13 @@ export class WorldRuntime {
       const footC = Math.floor((p.x + p.w / 2) / TILE);
       const footR = Math.floor((p.y + p.h + 1) / TILE);
       if (footR >= 0 && footR < this.rows && this.grid[footR][footC] === 1) {
-        p.lastSafeX = p.x;
-        p.lastSafeY = p.y;
+        // §1.9 della review: il "punto sicuro" non deve stare a ridosso di una fossa,
+        // altrimenti il respawn ricade subito dentro l'ostacolo. Lo aggiorniamo solo
+        // se c'è terreno pieno anche a sinistra e a destra dei piedi.
+        if (this.hasSafeFooting(footC, footR)) {
+          p.lastSafeX = p.x;
+          p.lastSafeY = p.y;
+        }
       }
       if (Math.abs(p.vx) > 0.25) {
         p.walkTimer += 0.22;
@@ -740,6 +745,16 @@ export class WorldRuntime {
     }
   }
 
+  /** Terreno "sicuro" per il respawn: solido sotto i piedi E ai due lati (niente bordi). */
+  hasSafeFooting(footC, footR) {
+    for (let c = footC - 1; c <= footC + 1; c++) {
+      if (c < 0 || c >= this.cols) return false;
+      const t = this.grid[footR][c];
+      if (t !== 1 && t !== 2) return false; // 6 = punte, 0 = vuoto, 3 = muro da sfondare
+    }
+    return true;
+  }
+
   checkHazards(p) {
     if (p.y > this.rows * TILE + 24) {
       this.recoverFromPit();
@@ -752,15 +767,28 @@ export class WorldRuntime {
     }
   }
 
+  /**
+   * Caduta in fossa o atterraggio sulle punte.
+   * §1.1/§6.5 della review: il riposizionamento avviene SEMPRE, anche quando il colpo
+   * viene assorbito da scudo o invulnerabilità; prima il player restava "affondato"
+   * nella buca a rimbalzare tra bordo e punte senza mai uscirne.
+   */
   recoverFromPit() {
     const p = this.player;
-    this.damagePlayer(1, false);
-    if (this.state.data.hp > 0) {
+    const hpBefore = this.state.data.hp;
+    if (p.invuln <= 0) this.damagePlayer(1, false);
+    // damagePlayer con hp<=0 ha già gestito morte + checkpoint: non riposizionare di nuovo
+    if (this.state.data.hp > 0 && this.state.data.hp <= hpBefore) {
       p.x = p.lastSafeX;
-      p.y = p.lastSafeY - 4;
+      p.y = p.lastSafeY;
       p.vx = 0;
       p.vy = 0;
-      p.invuln = 65;
+      p.onGround = true;
+      if (p.invuln < 40) p.invuln = 40; // grazia breve, non l'invulnerabilità piena (65)
+      // Suggerimento da postazione Open Day: la fossa si supera SALTANDO.
+      if (this.state.data.hp >= hpBefore) {
+        this.addFloatingText(p.x - 24, p.y - 20, "SALTA LA FOSSA! [SPAZIO/Z]", "#fde047");
+      }
     }
   }
 
@@ -771,6 +799,11 @@ export class WorldRuntime {
 
   get synergySpeedBonus() {
     return this._synergySpeedBonus || 0;
+  }
+
+  /** Bonus danno di squadra (Ruggero): fornito da main.teamSynergy(). */
+  get synergyDmgBonus() {
+    return this._synergyDmgBonus || 0;
   }
 
   damagePlayer(amount = 1, knockback = true) {
@@ -1261,7 +1294,11 @@ export class WorldRuntime {
   hitMidBoss(dmg, label = "COLPITO!") {
     const mb = this.midBoss;
     if (!mb || mb.defeated || mb.invuln > 0) return;
-    mb.hp = Math.max(0, mb.hp - dmg);
+    // §1.3: bonus danno di squadra applicato in modo frazionario (un +8% su un colpo
+    // da 2 punti non sparirebbe se arrotondassimo all'intero).
+    const eff = dmg * (1 + this.synergyDmgBonus);
+    dmg = Math.max(1, Math.round(eff));
+    mb.hp = Math.max(0, mb.hp - eff);
     mb.invuln = 28;
     this.hitstopFrames = 2;
     this.triggerShake(7, 2.5);
@@ -1351,7 +1388,9 @@ export class WorldRuntime {
   hitBoss(dmg, label = "COLPITO!") {
     const b = this.boss;
     if (!b || b.defeated || b.invuln > 0) return;
-    b.hp = Math.max(0, b.hp - dmg);
+    const eff = dmg * (1 + this.synergyDmgBonus);
+    dmg = Math.max(1, Math.round(eff));
+    b.hp = Math.max(0, b.hp - eff);
     b.invuln = 34;
     this.hitstopFrames = 3;
     this.triggerShake(9, 3.2);

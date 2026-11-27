@@ -1,0 +1,4 @@
+# Dipendenze Python dei tool di sviluppo e QA (NON servono per giocare):
+# il gioco è una build HTML standalone, si apre con doppio clic e non installa nulla.
+pillow>=10.0
+playwright>=1.40

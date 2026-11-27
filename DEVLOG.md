@@ -1,3 +1,36 @@
+## Fase P — Review esterna verificata riga per riga (v3.0.8, 26/11/2026)
+
+**Input:** `ERRORI_OPENDay.md` (review di un agente critico, 8 sezioni, scritta sul commit `295018e`) e
+istruzione dell'utente: «verifica ogni punto prima di correggere, perché magari anche lui può aver sbagliato».
+
+**Metodo.** Prima di toccare una riga di codice ho misurato tutto:
+- Playwright su PC e mobile: 30 s di `ArrowRight` sulla fossa, `F1` in pausa/titolo, sinergia con 5 eroi,
+  tap sulle pillole a 390×844, `[E]` con il compagno a 24 px da un terminale;
+- matrici di layout a 7 viewport (800×600, 390×844, 844×390, 1024×768, 1440×900, 850×470, 900×500);
+- misure del font pixel (`measurePixelText`) su 22 sottotitoli di stanza e 12 titoli EIPASS;
+- analisi dei 27 WAV (offset DC, md5), del tileset (uniformità dei tile), di `enemies_props` (celle vuote),
+  dei conteggi nei `.md`.
+
+**Risultato della verifica:** 20 punti **confermati** e corretti, 2 **respinti** (§1.7 non riproducibile,
+§4.12 premessa falsa su `fitPixelText`), 2 **ridimensionati** (§5.4/§4.7: celle trasparenti, non nere).
+
+**Correzioni di sostanza.**
+1. La fossa ora respawna **sempre** (anche con scudo/invulnerabilità) e il punto sicuro non sta più sul
+   bordo del vuoto: fine del ping-pong a x≈408 con `→` premuto.
+2. Ordine eroi in **una sola costante** (`HERO_BASE_ORDER`): la copia HTML delle pillole era invertita.
+3. La sinergia è **reale**: +1 cuore per compagno oltre il primo (cap 6) e bonus danno sui boss; il test
+   di regressione ora verifica il comportamento e non più un campo morto.
+4. `F1` è un vero toggle ovunque (titolo compreso) con un unico `closeControlsModal()`.
+5. `[E]` consuma il flag: una sola azione per tocco.
+6. Layout: canvas sempre 16:9 (le media query erano in conflitto), riserve verticali ricalcolate per
+   topbar/kiosk, console touch ridimensionata sul verticale, tabella orizzontale bassa documentata.
+7. Testi: titoli EIPASS su due righe, banner a 400 px, 6 `slice` sostituiti da `fitPixelText`.
+8. Repo: `tools/sync_builds.py` (un comando, build identiche garantite), CI GitHub Actions, LICENSE,
+   requirements, package.json; WAV senza DC e senza duplicati.
+
+**Lezione.** Le 4 suite erano verdi mentre i difetti esistevano: verificavano i **dati**, non il
+**comportamento**. I 13 nuovi controlli chiusi in `qa_bugfix_regression.mjs` misurano il gioco vero.
+
 ## Fase O — Somiglianza Ranaldo e canotta Carlo (v3.0.7, 26/11/2026)
 
 **Feedback:** «Ranaldo non è per niente uguale, Carlo non ha il numero sulla canotta, a questo punto fai

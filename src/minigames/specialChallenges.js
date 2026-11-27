@@ -1480,8 +1480,9 @@ export class SpecialChallengeManager {
       const py = 64 + pk.lane * 52;
       const px = Math.min(308, Math.round(pk.x) - 24);
       drawPixelPanel(ctx, px, py, 138, 32, "#162238", "#60a5fa", "#0f172a");
-      drawPixelText(ctx, pk.label.slice(0, 21), px + 5, py + 6, "#ffffff", 1);
-      drawPixelText(ctx, pk.detail.slice(0, 21), px + 5, py + 18, "#cbd5e1", 1);
+      // §4.3: etichette misurate sui 128 px utili del pacchetto (prima taglio a 21 caratteri)
+      drawPixelText(ctx, fitPixelText(pk.label, 128, 1, 1)[0], px + 5, py + 6, "#ffffff", 1);
+      drawPixelText(ctx, fitPixelText(pk.detail, 128, 1, 1)[0], px + 5, py + 18, "#cbd5e1", 1);
     }
 
     drawPixelText(ctx, `FLUSSI GESTITI: ${m.blocked}/${m.needed}`, 296, 46, "#4ade80", 1);
@@ -1496,9 +1497,10 @@ export class SpecialChallengeManager {
     const cur = m.queue[Math.min(m.idx, m.queue.length - 1)];
     if (cur) {
       drawPixelPanel(ctx, 34, 58, SCREEN_W - 68, 68, "#1e293b", "#38bdf8", "#0f172a");
-      drawPixelText(ctx, `FILE:     ${cur.name}`.slice(0, 64), 44, 66, "#ffffff", 1);
-      drawPixelText(ctx, `ORIGINE:  ${cur.origin}`.slice(0, 64), 44, 82, "#bae6fd", 1);
-      drawPixelText(ctx, `CONTESTO: ${cur.signal}`.slice(0, 64), 44, 98, "#fde047", 1);
+      // §4.3: righe misurate sui 408 px del pannello: l'origine lunga non si spezza più a metà
+      drawPixelText(ctx, fitPixelText(`FILE:     ${cur.name}`, 408, 1, 1)[0], 44, 66, "#ffffff", 1);
+      drawPixelText(ctx, fitPixelText(`ORIGINE:  ${cur.origin}`, 408, 1, 1)[0], 44, 82, "#bae6fd", 1);
+      drawPixelText(ctx, fitPixelText(`CONTESTO: ${cur.signal}`, 408, 1, 1)[0], 44, 98, "#fde047", 1);
     }
 
     drawPixelPanel(ctx, 34, 136, 196, 78, "#0d3b2e", "#4ade80", "#14532d");

@@ -1,5 +1,71 @@
 # CHANGELOG — OPERAZIONE EIPASS: IL CASARDI IN 8 BIT
 
+## v3.0.8 — Review esterna verificata: 20 difetti reali corretti (26/11/2026)
+
+Arrivata una review esterna (`ERRORI_OPENDay.md`, scritta sul commit `295018e`, quindi **prima** della
+v3.0.2). Ogni punto è stato **riprovato sul campo** (Playwright, misure reali, screenshot) prima di
+toccare il codice: 2 voci su 40 sono risultate **già risolte o sbagliate** e non sono state "corrette".
+
+### Bug di gioco
+- **Fossa non letale (§1.1/§6.5):** `recoverFromPit` ora riposiziona **sempre** il giocatore (anche se lo
+  scudo o l'invulnerabilità assorbono il colpo) e mostra il suggerimento `SALTA LA FOSSA! [SPAZIO/Z]`.
+  Prima si restava a rimbalzare tra il bordo e le punte senza mai uscire (30 s di `→` = 0 avanzamento).
+- **Punto sicuro sul bordo del vuoto (§1.9):** `lastSafeX/Y` viene salvato solo su terreno con 3 tile pieni
+  (`hasSafeFooting`), quindi il respawn non ricade più a 8 px dalla fossa.
+- **Pillole eroe mobile invertite (§1.2):** `1: CAR` era Ranaldo. Ora la striscia, l'HUD e i tasti `1`-`5`
+  leggono **la stessa costante** `HERO_BASE_ORDER` (era scritta in 4 posti, §1.10).
+- **Sinergia di squadra morta (§1.3):** `maxHpBonus`/`dmgBonus` erano campi mai applicati. Ora ogni
+  compagno oltre il primo aggiunge **davvero +1 cuore** (`state.applyTeamSynergyHp`) e il bonus danno di
+  Ruggero arriva ai Mid-Boss e al Boss (`world._synergyDmgBonus`). Il test di regressione verifica il
+  **comportamento**, non più il campo.
+- **`F1` non era un toggle (§1.5) e non faceva nulla sul titolo (§1.6):** ora apre/chiude la guida
+  ovunque con un unico punto di uscita (`closeControlsModal`).
+- **`[E]` faceva due azioni (§1.8):** il flag viene **consumato** dal cambio eroe, quindi non apre più
+  la postazione EIPASS nella stessa frame.
+- **Dossier fiducia (§1.4):** valori iniziali alzati (66/60/60/60/60) così la soglia "Bonus >=70%" è
+  raggiungibile in una run Open Day.
+
+### Layout e HUD
+- **Canvas deformato (§3.1):** a 800×600 il canvas era 784×558 (ratio **1.405** invece di 1.778). Ora
+  larghezza e altezza derivano dalla stessa formula 16:9 in **tutte** le media query (misurato 768×432).
+- **HUD fuori schermo (§3.2):** a 850×470 e 900×500 il canvas partiva a `y=-11`. La riserva verticale è
+  ora reale (190 px, con barra kiosk compattata sotto i 620 px): misurato `y=+63`.
+- **Topbar mobile tagliata (§3.3):** a 1024×768 era a `top=-10`, a 1440×900 a `top=-24` → ora `+21`.
+- **Schermo verticale più vivibile (§3.1):** a 390×844 la console touch occupava 529 px; ora 388 px.
+- **Contatore scudo (§4.1):** non finisce più sotto la pillola dell'eroe: micro-riga dedicata `SCUDO x3`.
+- **Titoli EIPASS (§4.2):** su due righe misurate — 10 titoli su 12 prima finivano con "…".
+- **Titoli/banner stanza (§4.4):** pannello da 400 px e testo misurato: `Il Sofista Ω` (455 px) non esce più.
+- **Troncamenti (§4.3):** i 6 `slice(0,N)` senza ellissi sono diventati `fitPixelText` misurato.
+- **Accessibilità (§3.4/§3.5):** zoom di nuovo consentito (`maximum-scale=5`), `type="button"` su tutti i
+  22 pulsanti, 18 `aria-label` descrittivi.
+- **Versione nel gioco (§2.4):** `GAME_VERSION = "v3.0.8"` mostrato nel marquee del titolo.
+
+### Audio, asset, repo
+- **Offset DC (§5.1):** rimosso dai WAV (era −0,10/−0,17, udibile come "tloc") e dal generatore.
+- **Duplicati e peso morto (§5.2/§5.3):** eliminati `theme_main.wav`, `theme_sports.wav` e
+  `sfx_football_kick.wav` (mai usato). Da 27 a **24 file**, 3,3 MB.
+- **Build sincronizzate (§2.7):** nuovo `tools/sync_builds.py` (build + copia in `docs/`/`release/` +
+  verifica md5). `docs/LEGGIMI.md` non dichiara più v3.0.1.
+- **Infrastruttura (§6.3):** aggiunti `LICENSE`/`NOTICE_LICENSE.md`, `requirements.txt`, `package.json`
+  e la CI GitHub Actions che lancia le 4 suite e verifica che le build siano allineate a `src/`.
+
+### Documentazione
+- Conteggi corretti (§2.1): 24 `.wav`, 91 frame sprite, 48 ritratti, 511/341/193/30 test;
+  `GAME_DESIGN.md` aggiornato a **5 protagonisti** con Daniele e palette di Ruggero `#f45565`;
+  `CONTROLLI.md` riscritto su `1=CARLO/2=RANALDO/3=DANIELE/4=RUGGERO/5=FRANCESCO`, senza `W`/`SU` come
+  salto e senza `J` per l'assist.
+- Commenti "4 Protagonisti" rimossi da `index.html` e dai tool (§2.5).
+
+### Punti della review verificati e NON corretti (perché sbagliati o già risolti)
+- **§1.7 pausa sopra dialoghi/quiz:** non riproducibile — con un dialogo aperto `P` non apre la pausa.
+- **§4.12 "fitPixelText taglia a caratteri":** premessa falsa, `fitPixelText` **misura** con
+  `wrapPixelText`/`measurePixelText`; il taglio a caratteri è solo il fallback di emergenza.
+- **§5.4 "3 tile neri nel tileset" e §4.7 "16 celle vuote":** vero nei numeri ma sono celle **trasparenti**
+  (`alpha = 0`), non pixel neri; restano deliberatamente vuote, non sono un difetto visibile.
+
+**Verifica finale:** playtest **511/511**, testi **341/341**, regressione **193/193** (13 nuovi controlli
+sui punti della review), mobile **30/30**, 7/7 screenshot, 6/6 minigiochi, **0 errori JS**.
+
 ## v3.0.7 — Ranaldo somigliante, canotta colorata per Carlo (26/11/2026)
 
 **Prof. Ranaldo**

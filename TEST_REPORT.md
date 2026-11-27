@@ -7,7 +7,7 @@ Documento di verifica funzionale, fisica, narrativa, visiva (su tutte le **48 sc
 ## 1. Sintesi Esecutiva dei Test (v3.0)
 
 - **Audit Visivo Integrale su 48 Scene (`node tools/render_all_scenes.mjs`):** Renderizzate e ispezionate visivamente **tutte le 48 scene possibili del gioco** (`assets/sprites/audit_48_scene/AUDIT_1..8.png` + `ANTEPRIMA_SCENE_CASARDI.png` + `TAVOLA_PERSONAGGI.png`): Menu Principale (3 e 4 voci), Comandi/Mixer, Pausa/Dossier, Finali Open Day e Campagna S+ (+CRT), tutti i ritratti `64×64`, tutte le 6 modalità Postazioni EIPASS, tutti e 6 i Minigiochi, tutte le 4 zone Open Day, le Sotto-Aule interne (*Aula 7*, *Portineria*, *Redazione Pegaso*) e **tutti i 18 livelli della Campagna (`c1_1`..`c6_3`)**.
-- **Suite automatizzata eseguita:** `node tools/qa_playtest.mjs` — **496 / 496 test superati (`0` fallimenti)** a 60Hz.
+- **Suite automatizzata eseguita:** `node tools/qa_playtest.mjs` — **511 / 511 test superati (`0` fallimenti)** a 60Hz. Le altre tre suite: testi **341/341**, regressione errori **193/193**, mobile & multi-touch **30/30**.
 - **Verifica albero moduli ES6 su HTTP Live Server (`0.0.0.0:8080`) e bundle offline (`AVVIA_GIOCO.html` / `release/index.html`, 340 KB):** Superata con `0` errori e `0` dipendenze esterne.
 
 ---

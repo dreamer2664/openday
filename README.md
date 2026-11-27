@@ -1,6 +1,8 @@
 # OPERAZIONE EIPASS — IL CASARDI IN 8 BIT
 
 
+> **v3.0.8** — Correzione dei 20 punti reali della review esterna `ERRORI_OPENDay.md`: fossa letale/respawn corretto, pillole eroe mobile riallineate, sinergia di squadra applicata davvero (HP + danno), `F1` come vero toggle anche sul titolo, `[E]` che non fa più due azioni, layout mobile 800×600 e viewport bassi, titoli EIPASS su due righe, contatori HUD, WAV senza offset DC e documentazione allineata.
+>
 > **v3.0.7** — Ranaldo ridisegnato sulle foto (capelli argento a punte, barba che segue la mascella, maglietta blu navy) e canotta da basket **colorata senza numero** per Carlo.
 >
 > **v3.0.6** — Ranaldo dalle foto (capelli argento, barba brizzolata, occhi azzurri), Carlo con la **canotta #35 OKC di Durant (2013-14)** e Francesco in blazer nero con frangia più bassa.
@@ -46,7 +48,7 @@ Poi apri `http://localhost:8080` nel browser.
 ## Le Due Modalità di Gioco
 
 1. **★ MODALITÀ OPEN DAY (7–10 minuti — Pulsante arancione in cima al Menu Principale)**  
-   Missione dimostrativa autonoma progettata appositamente per i visitatori dell'Open Day: ritmo immediato, introduzione in azione di tutti e quattro i protagonisti (Prof. Ranaldo, Carlo, Ruggero e Francesco), scelte con conseguenze, sfide EIPASS/Casardi, enigmi dedicati alle passioni e scontro conclusivo sul palco dell'Aula Magna con attestato finale.
+   Missione dimostrativa autonoma progettata appositamente per i visitatori dell'Open Day: ritmo immediato, introduzione in azione di tutti e cinque i protagonisti (Carlo, Prof. Ranaldo, Daniele, Ruggero e Francesco), scelte con conseguenze, sfide EIPASS/Casardi, enigmi dedicati alle passioni e scontro conclusivo sul palco dell'Aula Magna con attestato finale.
 2. **▶ CAMPAGNA COMPLETA (35–45 minuti — 6 Capitoli, 18 Livelli, 4 Finali)**  
    L'avventura integrale attraverso i due piani della Sede Centrale di Via d'Aragona 100: *Ingresso Monumentale, Corridoi Storici Giallo-Bianchi, Cortile e Palestra, Laboratorio Multimediale da 23 Postazioni, Biblioteca Storica degli 8.000 Volumi* (con sequenza d'inseguimento!) e *Aula Magna*, con salvataggio automatico dei checkpoint, tutti i **7 Moduli EIPASS**, **12 Pagine segrete del giornale d'istituto *Pegaso*** e **4 Finali ramificati**.
 
@@ -74,11 +76,13 @@ Poi apri `http://localhost:8080` nel browser.
 - `AVVIA_GIOCO.html` / `release/index.html` — Build standalone completa eseguibile offline con doppio clic.
 - `AVVIA_OPEN_DAY.bat` / `avvia_open_day.sh` — Script di avvio rapido per Windows, Linux e macOS.
 - `index.html` & `src/` — Codice sorgente modulare ES6 completo (`config`, `state`, `audio`, `engine`, `minigames`, `narrative`, `levels`, `render/pixelFont.js`, `render/renderer.js`, `ui/hudAndMenus.js`).
-- `assets/sprites/` — Sprite sheets originali in pixel art v2.0 (`characters_sheet.png` 6×13 pose `32×36`, `portraits_sheet.png` 7×6 espressioni `64×64`, `tileset_casardi.png` `16×16`, `enemies_props.png` con 5 nemici e 3 Boss/Mid-Boss `48×60`) + `TAVOLA_PERSONAGGI.png` e `ANTEPRIMA_SCENE_CASARDI.png`.
-- `assets/audio/` — 7 tracce musicali chiptune originali `.wav` + 13 effetti sonori `.wav` (20 file `.wav` totali + motore WebAudio a 4 canali).
+- `assets/sprites/` — Sprite sheets originali in pixel art v2.0 (`characters_sheet.png` 13×7 pose `32×36` (91 frame), `portraits_sheet.png` 6×8 espressioni `64×64` (48 ritratti), `tileset_casardi.png` `16×16`, `enemies_props.png` con 5 nemici e 3 Boss/Mid-Boss `48×60`) + `TAVOLA_PERSONAGGI.png` e `ANTEPRIMA_SCENE_CASARDI.png`.
+- `assets/audio/` — 7 tracce musicali chiptune originali `.wav` + 17 effetti sonori `.wav` (**24 file** `.wav` totali, 3,3 MB) + il motore WebAudio a 4 canali che **genera la musica in tempo reale** (i WAV sono gli stessi brani esportati, per uso esterno: il gioco non li carica).
 - `tools/` — Script di generazione asset (`generate_assets.py`), compilazione (`build.py`), playtest 60Hz (`qa_playtest.mjs`) e ispezione visiva (`render_visual_check.mjs`).
 - `RICERCA_CASARDI.md` — Ricerca verificata su storia, architettura e offerta formativa del Liceo Casardi e moduli EIPASS.
-- `GAME_DESIGN.md` — Documento completo di progettazione v2.0 (narrativa, personaggi, sotto-stanze, 6 minigiochi, 12 simulatori live EIPASS, 2 Mid-Boss e 4 Finali).
+- `GAME_DESIGN.md` — Documento completo di progettazione (narrativa, **5 protagonisti**, sotto-stanze, 6 minigiochi, 12 simulatori live EIPASS sui 7 moduli, 2 Mid-Boss e 4 Finali).
+- `LICENSE` / `NOTICE_LICENSE.md` — licenza d'uso didattico del progetto.
+- `requirements.txt` — dipendenze Python dei tool (`pillow`, `playwright`).
 - `CONTROLLI.md` — Mappa completa comandi tastiera (inclusi `[C]` Assist di Squadra, `[SU+X]` abilità direzionali e `[V]` filtro CRT), mouse e controller.
 - `ASSET_CREDITS.md` — Crediti e licenze degli asset originali e riferimenti consultati.
-- `TEST_REPORT.md` — Report completo dei **496 / 496 test automatizzati 60Hz** e dell'ispezione visiva su 6 scene reali.
+- `TEST_REPORT.md` — Report completo delle **4 suite automatiche** (`qa_playtest` 511/511, `qa_text_overflow` 341/341, `qa_bugfix_regression` 193/193, `qa_mobile_touch` 30/30) e dell'ispezione visiva su 6 scene reali.

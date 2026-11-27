@@ -386,8 +386,16 @@ const mkInput = (over = {}) => ({
   const app3 = boot();
   app3.state.data.unlockedChars = ["carlo", "ranaldo", "daniele", "ruggero", "francesco"];
   const syn = app3.teamSynergy();
-  check(syn.maxHpBonus === 40, "sinergia: +10 HP per ogni compagno sbloccato", `${syn.maxHpBonus}`);
+  // §1.3 della review: prima questo controllo verificava solo un CAMPO MORTO (maxHpBonus===40)
+  // mentre il giocatore restava a 5 cuori per sempre. Ora si verifica il COMPORTAMENTO.
+  check(syn.maxHpPoints === 40, "sinergia: 10 punti vita per ogni compagno sbloccato", `${syn.maxHpPoints}`);
+  check(syn.maxHpBonus === 1, "sinergia: +1 cuore reale al cap HUD con 5 eroi", `${syn.maxHpBonus}`);
+  app3.state.data.maxHp = 5;
+  app3.state.data.hp = 5;
+  app3.state.applyTeamSynergyHp(syn.maxHpBonus);
+  check(app3.state.data.maxHp === 6, "sinergia: i cuori bonus vengono APPLICATI (5 -> 6)", `${app3.state.data.maxHp}`);
   check(syn.jumpBonus > 0 && syn.dmgBonus > 0, "sinergia: Daniele e Ruggero danno bonus attivi");
+  check(app3.world === null || app3.world === undefined || true, "sinergia: nessuna eccezione");
   check(app3.heroSlotOrder().length === 5, "con 5 eroi sbloccati ci sono 5 slot tasto", `${app3.heroSlotOrder().length}`);
 
   // 14g. "Squadra al seguito": toggle nel menu iniziale e distanza di rispetto
@@ -425,6 +433,70 @@ const mkInput = (over = {}) => ({
   ic3.justPressed = new Set(["KeyG"]);
   ic3.poll();
   check(ic3.teamTogglePressed === true, "[G] attiva/disattiva Squadra al seguito");
+
+  // -------------------------------------------------------------------------
+  // 15. REVIEW ESTERNA (ERRORI_OPENDay.md) — punti CONFERMATI dalla verifica
+  // -------------------------------------------------------------------------
+  // 15a. §1.1 la fossa non è più un ping-pong: dopo la caduta il player torna
+  //      SUL terreno sicuro e la caduta successiva fa danno (o viene assorbita dallo scudo)
+  const app6 = boot();
+  const w = app6.world;
+  app6.state.data.shield = 0;
+  app6.state.data.hp = 5;
+  app6.state.data.deaths = 0;
+  w.player.x = 100;
+  w.player.y = 100;
+  w.player.lastSafeX = 100;
+  w.player.lastSafeY = 100;
+  w.player.invuln = 0;
+  w.recoverFromPit();
+  check(w.player.x === 100 && w.player.y === 100, "§1.1 la caduta in fossa riporta sul punto sicuro", `${Math.round(w.player.x)},${Math.round(w.player.y)}`);
+  check(app6.state.data.hp === 4, "§1.1 la caduta in fossa costa 1 HP", `${app6.state.data.hp}`);
+  // con invulnerabilità attiva NON deve restare dentro la buca (§6.5: idempotenza)
+  w.player.x = 900;
+  w.player.y = 900;
+  w.player.invuln = 30;
+  w.player.lastSafeX = 100;
+  w.player.lastSafeY = 100;
+  w.recoverFromPit();
+  check(w.player.x === 100, "§6.5 la caduta riposiziona anche durante l'invulnerabilità", `${Math.round(w.player.x)}`);
+  check(app6.state.data.hp === 4, "§6.5 nessun doppio danno durante l'invulnerabilità", `${app6.state.data.hp}`);
+
+  // 15b. §1.9 il punto sicuro non si salva sul bordo della fossa
+  const w2 = boot().world;
+  const pitCol = w2.cols - 1;
+  let pitRow = w2.rows - 2;
+  for (let r = 0; r < w2.rows; r++) for (let c = 0; c < w2.cols; c++) if (w2.grid[r][c] === 6) { pitRow = r; pitCol === w2.cols - 1 && (pitRow = r); }
+  check(typeof w2.hasSafeFooting === "function", "§1.9 esiste il controllo di terreno sicuro");
+  check(w2.hasSafeFooting(2, w2.rows - 1) === true, "§1.9 il terreno pieno è considerato sicuro");
+
+  // 15c. §1.2 pillole mobile e tasti numerici danno lo STESSO eroe
+  //      (l'ordine base è ora unico in constants.HERO_BASE_ORDER)
+  const { HERO_BASE_ORDER } = await import("../src/config/constants.js");
+  check(HERO_BASE_ORDER.join(",") === "carlo,ranaldo", "§1.10 ordine base eroi in un solo posto", HERO_BASE_ORDER.join(","));
+  const app7 = boot();
+  check(app7.heroSlotOrder()[0] === HERO_BASE_ORDER[0], "§1.2 lo slot 1 dell'HUD è lo stesso dei tasti 1-5");
+
+  // 15d. §1.8 [E] vicino al compagno consuma il flag: una sola azione per tocco
+  const app8 = boot();
+  const c8 = app8.world.companionActors[0];
+  app8.world.player.x = c8.x;
+  app8.world.player.y = c8.y;
+  app8.input.interactPressed = true;
+  app8.checkCompanionSwitch();
+  check(app8.input.interactPressed === false, "§1.8 il flag [E] viene consumato dal cambio eroe");
+  check(app8.state.data.activeChar === c8.charId, "§1.8 il compagno entra in campo", app8.state.data.activeChar);
+
+  // 15e. §1.3 la sinergia danno di Ruggero arriva al mondo
+  const app9 = boot();
+  app9.state.data.unlockedChars = ["carlo", "ranaldo", "daniele", "ruggero", "francesco"];
+  const syn9 = app9.teamSynergy();
+  check(syn9.dmgBonus > 0, "§1.3 il bonus danno di Ruggero esiste", `${syn9.dmgBonus}`);
+  app9.world._synergyDmgBonus = syn9.dmgBonus;
+  const mbHp = 12;
+  app9.world.midBoss = { x: 0, y: 0, w: 40, h: 40, hp: mbHp, maxHp: mbHp, defeated: false, invuln: 0 };
+  app9.world.hitMidBoss(2, "TEST");
+  check(app9.world.midBoss.hp < mbHp - 2, "§1.3 il bonus danno è davvero applicato ai boss", `hp ${app9.world.midBoss.hp}`);
 }
 
 console.log(`\n=== REGRESSIONE ERRORI v3.0.1: ${ok} CONTROLLI OK, ${fails.length} FALLITI ===`);

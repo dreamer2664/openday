@@ -55,11 +55,13 @@ export function createFreshState(mode = "openday") {
     subRoomsVisited: [],
 
     trust: {
-      carlo: 62,
-      ranaldo: 56,
-      daniele: 56,
-      ruggero: 56,
-      francesco: 56,
+      // §1.4 della review: con questi valori la soglia "Bonus >=70%" del Dossier era
+      // praticamente irraggiungibile in una run Open Day (si fermava a 56-67%).
+      carlo: 66,
+      ranaldo: 60,
+      daniele: 60,
+      ruggero: 60,
+      francesco: 60,
     },
     eipassScore: 50,
     eipassAnswered: 0,
@@ -155,7 +157,25 @@ export class GameStateManager {
       this.data.unlockedChars.push(charId);
       const label = TRUST_DISPLAY_NAMES[charId] || charId;
       this.pushConsequence(`${label} si unisce al gruppo`, "#38e2d8");
+      // §1.3: il bonus "+1 energia massima per compagno" della sinergia ora è REALE
+      // (prima il campo esisteva ma non veniva mai applicato: restava a 5 cuori per sempre).
+      this.applyTeamSynergyHp();
     }
+  }
+
+  /** Energia massima = 5 cuori base + 1 per ogni compagno oltre il primo (max 6 = cap HUD).
+   *  Riflette main.teamSynergy().maxHpBonus espresso in cuori invece che in "punti". */
+  applyTeamSynergyHp(bonusHearts = null) {
+    const bonus =
+      bonusHearts === null
+        ? Math.min(1, Math.max(0, (this.data.unlockedChars?.length || 2) - 2))
+        : Math.max(0, Math.min(1, bonusHearts | 0));
+    const wanted = Math.min(6, 5 + bonus);
+    if (this.data.maxHp !== wanted) {
+      this.data.maxHp = Math.max(this.data.maxHp, wanted);
+      this.data.hp = Math.min(this.data.maxHp, this.data.hp + 1);
+    }
+    return this.data.maxHp;
   }
 
   modifyTrust(charId, delta) {

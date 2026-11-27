@@ -7,7 +7,7 @@ Produce sprite pixel-art ombreggiati e dettagliati al singolo pixel:
   - assets/sprites/characters_sheet.png  (6 personaggi x 13 pose = 78 frame 32x36)
   - assets/sprites/portraits_sheet.png   (7 personaggi x 6 espressioni = 42 ritratti 64x64)
   - assets/sprites/tileset_casardi.png   (32 tile architettonici 16x16 con dithering e texture)
-  - assets/sprites/enemies_props.png     (nemici animati, 2 mid-boss, Boss Sofista 48x56, oggetti Casardi)
+  - assets/sprites/enemies_props.png     (nemici animati, 2 mid-boss, Boss Sofista 48x60, oggetti Casardi)
   - assets/sprites/TAVOLA_PERSONAGGI.png (tavola di verifica 1x, 3x e silhouette)
   - assets/audio/*.wav                   (8 tracce chiptune multi-sezione + 16 SFX originali)
   - src/assets/embeddedSprites.js        (data-URI PNG per avvio istantaneo 100% offline)
@@ -1399,6 +1399,16 @@ def tri_wave(ph):
 
 
 def save_wav(path, samples, sr=22050):
+    # §5.1: prima della quantizzazione si toglie l'OFFSET DC.
+    # Senza questo, il generatore lasciava un offset di -0.10/-0.17 (udibile come "tloc"
+    # all'avvio e in chiusura del file) e i WAV non erano confrontabili fra loro.
+    samples = [float(x) for x in samples]
+    if samples:
+        dc = sum(samples) / len(samples)
+        samples = [x - dc for x in samples]
+        peak = max(1e-6, max(abs(x) for x in samples))
+        if peak > 0.92:  # normalizzazione uniforme del mastering (§5.1)
+            samples = [x * (0.92 / peak) for x in samples]
     buf = bytearray()
     for s in samples:
         buf.extend(struct.pack("<h", int(max(-1.0, min(1.0, s)) * 30000)))
@@ -1495,7 +1505,6 @@ def build_audio():
         "D3", "-", "F3", "-", "G2", "-", "D3", "-",  "C3", "-", "G2", "C3", "C3", "-", "-", "R",
     ]
     render_loop(os.path.join(AUDIO_DIR, "01_tema_casardi_main.wav"), 136, main_l, main_h, main_b, "KhShKhShKhShKSSh", 0.25)
-    render_loop(os.path.join(AUDIO_DIR, "theme_main.wav"), 136, main_l, main_h, main_b, "KhShKhShKhShKSSh", 0.25)
 
     # 2. TEMA ESPLORAZIONE SCOLASTICA ("Corridoi di Via d'Aragona" — 116 BPM)
     ex_l = [
@@ -1559,7 +1568,6 @@ def build_audio():
         "D3", "-", "F3", "-", "F3", "-", "G3", "-",  "C3", "-", "G2", "C3", "C3", "-", "-", "R",
     ]
     render_loop(os.path.join(AUDIO_DIR, "04_cortile_sportivo.wav"), 144, sp_l, sp_h, sp_b, "KhSKKhShKhSKKSSS", 0.25)
-    render_loop(os.path.join(AUDIO_DIR, "theme_sports.wav"), 144, sp_l, sp_h, sp_b, "KhSKKhShKhSKKSSS", 0.25)
 
     # 5. TEMA BIBLIOTECA & REDAZIONE PEGASO ("Inchiostro e Contrappunto" — 110 BPM)
     lib_l = [

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover"
   />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -60,6 +60,11 @@
       gap: 8px;
       width: 100%;
       height: 100%;
+      /* §3.3: un contenuto più alto del viewport spingeva #mobile-topbar in top negativo
+         (misurato -10 px a 1024x768 e -24 px a 1440x900). Ora il contenuto si comprime
+         invece di sfondare la pagina: la barra resta sempre interamente visibile. */
+      min-height: 0;
+      overflow: hidden;
       max-width: 1380px;
       padding: calc(6px + var(--safe-top)) calc(10px + var(--safe-right)) calc(6px + var(--safe-bottom)) calc(10px + var(--safe-left));
     }
@@ -122,7 +127,10 @@
 
     canvas#game-canvas {
       display: block;
-      width: min(94vw, calc((100dvh - 82px) * (16 / 9)));
+      /* §3.2: con la sola riserva di 82 px, a 850x470 e 900x500 (zoom 125% dei portatili)
+         il canvas partiva a y=-11 e l'HUD finiva fuori schermo. La riserva copre davvero
+         la barra kiosk (fino a 2 righe di pulsanti) + l'hint comandi. */
+      width: min(94vw, calc((100dvh - 190px) * (16 / 9)));
       height: auto;
       aspect-ratio: 16 / 9;
       image-rendering: pixelated;
@@ -356,6 +364,14 @@
       border-color: #ffffff;
     }
 
+    /* §3.2: sotto i 620 px di altezza la barra kiosk si compatta (2 righe, testo piccolo)
+       così il canvas 16:9 non viene spinto fuori dal bordo superiore. */
+    @media (max-height: 620px) and (pointer: fine) {
+      .kiosk-btn { padding: 3px 7px; font-size: 11px; }
+      .key-hint { display: none; }
+      #kiosk-bar { gap: 5px; padding: 4px 8px; }
+    }
+
     /* =========================================================================
        LAYOUT ATTIVO QUANDO IL GIOCO È SU TELEFONO / TOUCH (VERTICALE E ORIZZONTALE!)
        ========================================================================= */
@@ -399,7 +415,11 @@
 
       body.touch-enabled canvas#game-canvas {
         width: 100%;
-        max-height: 52dvh;
+        /* §3.1: `max-height` da solo deformava il canvas (800x600 dava 784x558, ratio 1.405).
+           Con `height:auto` l'aspect-ratio 16:9 resta sempre rispettato. */
+        height: auto;
+        max-height: 48dvh;
+        aspect-ratio: 16 / 9;
       }
 
       body.touch-enabled #mobile-hero-strip {
@@ -407,9 +427,10 @@
       }
 
       body.touch-enabled #touch-deck {
-        flex: 1;
-        max-height: none;
-        min-height: 220px;
+        flex: 1 1 auto;
+        /* §3.1: prima la console occupava 529 px su 844 (63% dello schermo) */
+        max-height: 46dvh;
+        min-height: 168px;
         background: rgba(13, 21, 40, 0.88);
         border: 1px solid #263554;
         border-radius: 18px;
@@ -467,10 +488,18 @@
       }
 
       body.touch-enabled canvas#game-canvas {
-        height: calc(100dvh - 42px - var(--safe-top) - var(--safe-bottom));
-        width: auto;
-        max-width: 98vw;
+        /* §3.1: con height fissa + max-width il rapporto veniva ignorato (800x600 -> 784x558,
+           ratio 1.405). Ora larghezza e altezza derivano dalla STESSA formula 16:9. */
+        width: min(96vw, calc((100dvh - 42px - var(--safe-top) - var(--safe-bottom)) * (16 / 9)));
+        height: auto;
+        max-width: 96vw;
+        aspect-ratio: 16 / 9;
       }
+
+      /* §3.6: in orizzontale basso (390-620 px di altezza) il canvas occupa già tutta
+         l'altezza e non resta spazio per la striscia eroe: resta nascosta e si cambia
+         eroe con il pulsante "CAMBIA EROE" della barra o con i tasti 1-5 / Q.
+         (CONTROLLI.md dice esattamente questo, senza promettere una barra che non c'è.) */
 
       body.touch-enabled #touch-deck {
         position: fixed;
@@ -537,7 +566,9 @@
     /* 3. MODALITÀ TOUCH ATTIVATA MANUALMENTE SU TABLET GRANDE / LIM / DESKTOP */
     @media (orientation: landscape) and (min-height: 621px) {
       body.touch-enabled canvas#game-canvas {
-        width: min(92vw, calc((100dvh - 210px) * (16 / 9)));
+        /* §3.3: con la sola riserva di 210 px, a 1024x768 e 1440x900 il contenuto
+           superava l'altezza e #mobile-topbar finiva a top -10 / -24 (pulsanti tagliati). */
+        width: min(92vw, calc((100dvh - 300px) * (16 / 9)));
       }
       body.touch-enabled #mobile-hero-strip {
         display: flex;
@@ -549,12 +580,12 @@
   <div id="cabinet">
     <!-- Barra compatta per Telefono / Tablet -->
     <div id="mobile-topbar">
-      <button class="m-top-btn primary" id="m-btn-openday">★ Open Day</button>
-      <button class="m-top-btn" id="m-btn-switch">CAMBIA EROE</button>
-      <button class="m-top-btn" id="m-btn-pause">II PAUSA</button>
-      <button class="m-top-btn" id="m-btn-mute">AUDIO: ON</button>
-      <button class="m-top-btn" id="m-btn-fullscreen">[ ] FULL</button>
-      <button class="m-top-btn" id="m-btn-keyboard" title="Nascondi il controller touch e usa la tastiera">⌨ TASTI</button>
+      <button type="button" class="m-top-btn primary" id="m-btn-openday" aria-label="Avvia la modalità Open Day">★ Open Day</button>
+      <button type="button" class="m-top-btn" id="m-btn-switch" aria-label="Cambia eroe attivo (ciclo)">CAMBIA EROE</button>
+      <button type="button" class="m-top-btn" id="m-btn-pause" aria-label="Pausa e Dossier">II PAUSA</button>
+      <button type="button" class="m-top-btn" id="m-btn-mute" aria-label="Attiva o disattiva audio">AUDIO: ON</button>
+      <button type="button" class="m-top-btn" id="m-btn-fullscreen" aria-label="Schermo intero">[ ] FULL</button>
+      <button type="button" class="m-top-btn" id="m-btn-keyboard" title="Nascondi il controller touch e usa la tastiera" aria-label="Nascondi i comandi touch e usa la tastiera">⌨ TASTI</button>
     </div>
 
     <!-- Schermo 16:9 480x270 -->
@@ -562,13 +593,14 @@
       <canvas id="game-canvas" width="480" height="270" tabindex="0" aria-label="Schermo di gioco Operazione EIPASS"></canvas>
     </div>
 
-    <!-- Striscia rapida selezione 4 Protagonisti (Telefono Verticale / Tablet) -->
-    <div id="mobile-hero-strip">
-      <button class="hero-pill active" data-char="ranaldo" data-action="hero1">1: RAN</button>
-      <button class="hero-pill" data-char="carlo" data-action="hero2">2: CAR</button>
-      <button class="hero-pill" data-char="daniele" data-action="hero3">3: DAN</button>
-      <button class="hero-pill" data-char="ruggero" data-action="hero4">4: RUG</button>
-      <button class="hero-pill" data-char="francesco" data-action="hero5">5: FRA</button>
+    <!-- Striscia rapida selezione 5 Protagonisti (Telefono Verticale / Tablet).
+         Ordine identico a HERO_BASE_ORDER dell'HUD e ai tasti 1-5: 1=CAR (Carlo), 2=RAN (Ranaldo). -->
+    <div id="mobile-hero-strip" role="group" aria-label="Selezione rapida eroe (1-5)">
+      <button type="button" class="hero-pill active" data-char="carlo" data-action="hero1" aria-label="Tasto 1: Carlo">1: CAR</button>
+      <button type="button" class="hero-pill" data-char="ranaldo" data-action="hero2" aria-label="Tasto 2: Ranaldo">2: RAN</button>
+      <button type="button" class="hero-pill" data-char="daniele" data-action="hero3" aria-label="Tasto 3: Daniele">3: DAN</button>
+      <button type="button" class="hero-pill" data-char="ruggero" data-action="hero4" aria-label="Tasto 4: Ruggero">4: RUG</button>
+      <button type="button" class="hero-pill" data-char="francesco" data-action="hero5" aria-label="Tasto 5: Francesco">5: FRA</button>
     </div>
 
     <!-- Console Touch Ergonomica Multi-Touch (D-Pad 2D Continuo + 4 Tasti Azione) -->
@@ -582,19 +614,19 @@
       </div>
 
       <div id="touch-actions">
-        <button class="act-btn btn-interact" data-hold="interact" id="btn-touch-interact">
+        <button type="button" class="act-btn btn-interact" data-hold="interact" id="btn-touch-interact" aria-label="Interagisci / parla / apri (E)">
           <span class="main-lbl" id="lbl-interact">USA [E]</span>
           <span class="sub-lbl" id="sub-interact">Parla/Apri</span>
         </button>
-        <button class="act-btn btn-special" data-hold="special" id="btn-touch-special">
+        <button type="button" class="act-btn btn-special" data-hold="special" id="btn-touch-special" aria-label="Abilità speciale del personaggio (X)">
           <span class="main-lbl">ABILITÀ</span>
           <span class="sub-lbl">Ballo / Tiro</span>
         </button>
-        <button class="act-btn btn-assist" data-hold="assist" id="btn-touch-assist">
+        <button type="button" class="act-btn btn-assist" data-hold="assist" id="btn-touch-assist" aria-label="Assist di squadra (C)">
           <span class="main-lbl">ASSIST</span>
           <span class="sub-lbl">Squadra [C]</span>
         </button>
-        <button class="act-btn btn-jump" data-hold="jump" id="btn-touch-jump">
+        <button type="button" class="act-btn btn-jump" data-hold="jump" id="btn-touch-jump" aria-label="Salta (Spazio)">
           <span class="main-lbl" id="lbl-jump">SALTA</span>
           <span class="sub-lbl" id="sub-jump">Tieni=Alto</span>
         </button>
@@ -603,29 +635,30 @@
 
     <!-- Barra Kiosk Desktop -->
     <div id="kiosk-bar">
-      <button class="kiosk-btn primary" id="btn-openday" title="Avvia subito la missione dimostrativa Open Day (7-10 min)">
+      <button type="button" class="kiosk-btn primary" id="btn-openday" title="Avvia subito la missione dimostrativa Open Day (7-10 min)">
         ★ Demo Open Day
       </button>
-      <button class="kiosk-btn" id="btn-campaign" title="Avvia la Campagna Completa a 6 Capitoli">
+      <button type="button" class="kiosk-btn" id="btn-campaign" title="Avvia la Campagna Completa a 6 Capitoli">
         ▶ Campagna Completa
       </button>
-      <button class="kiosk-btn" id="btn-pause" title="Apri Pausa, Dossier Fiducia e Mixer Audio [P]">
+      <button type="button" class="kiosk-btn" id="btn-pause" title="Apri Pausa, Dossier Fiducia e Mixer Audio [P]">
         ⏸ Pausa / Dossier
       </button>
-      <button class="kiosk-btn" id="btn-mute" title="Attiva/Disattiva Musica ed Effetti [M]">
+      <button type="button" class="kiosk-btn" id="btn-mute" title="Attiva/Disattiva Musica ed Effetti [M]">
         🔊 Audio ON/OFF
       </button>
-      <button class="kiosk-btn" id="btn-touch-toggle" title="Mostra/Nascondi il Controller Touch per Telefono/LIM">
+      <button type="button" class="kiosk-btn" id="btn-touch-toggle" title="Mostra/Nascondi il Controller Touch per Telefono/LIM">
         📱 Comandi Touch
       </button>
-      <button class="kiosk-btn" id="btn-reset" title="Reset immediato per il prossimo visitatore [F9]">
+      <button type="button" class="kiosk-btn" id="btn-reset" title="Reset immediato per il prossimo visitatore [F9]">
         ↻ Nuovo Visitatore (F9)
       </button>
-      <button class="kiosk-btn" id="btn-fullscreen" title="Attiva schermo intero per postazione Open Day">
+      <button type="button" class="kiosk-btn" id="btn-fullscreen" title="Attiva schermo intero per postazione Open Day">
         ⛶ Schermo Intero
       </button>
       <span class="key-hint">
-        <b>Frecce/AD</b> Muovi · <b>Spazio</b> Salta · <b>X</b> Abilità · <b>C</b> Assist · <b>E</b> Interagisci · <b>1-5/Q</b> Eroe
+        <b>Frecce/AD</b> Muovi · <b>Spazio</b> Salta · <b>X</b> Abilità · <b>C</b> Assist · <b>E</b> Interagisci · <b>1-5/Q</b> Eroe ·
+        <b>P/ESC</b> Pausa · <b>M</b> Audio · <b>V</b> CRT · <b>Y</b> Schermo intero · <b>F1/?</b> Guida · <b>F9</b> Reset
       </span>
     </div>
   </div>

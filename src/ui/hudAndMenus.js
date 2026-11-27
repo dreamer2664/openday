@@ -7,12 +7,14 @@ import {
   CHARACTERS,
   CHAR_ORDER,
   CONTROLS_HELP,
+  HERO_BASE_ORDER,
   EIPASS_MODULES,
   PEGASO_LORE,
   CHAR_SPRITE_W,
   CHAR_SPRITE_H,
   PORTRAIT_SIZE,
 } from "../config/constants.js";
+import { GAME_VERSION } from "../config/constants.js";
 import {
   drawPixelText,
   drawPixelTextCentered,
@@ -87,7 +89,7 @@ export class UIManager {
     );
     drawPixelTextCentered(
       ctx,
-      "Carlo • Ranaldo • Daniele • Ruggero • Francesco",
+      `Carlo • Ranaldo • Daniele • Ruggero • Francesco   ${GAME_VERSION}`,
       SCREEN_W / 2,
       42,
       "#fde047",
@@ -219,13 +221,16 @@ export class UIManager {
         ctx.fillRect(hx + 1, 8, 2, 2);
       }
     }
+    // §4.1: il contatore scudo finiva SOTTO il riquadro dell'eroe attivo (con 5 cuori
+    // il testo partiva da x=73 e le pillole da x=94). Ora sta su una micro-riga dedicata
+    // sotto i cuori (y=18), dove c'è spazio reale e non si sovrappone a niente.
     if (d.shield > 0) {
-      drawPixelText(ctx, `+${d.shield}SC`, 8 + d.maxHp * 13, 9, "#38bdf8", 1);
+      drawPixelText(ctx, `SCUDO x${d.shield}`, 7, 18, "#38bdf8", 1);
     }
 
     // Selettore rapido dei Protagonisti: 1=Carlo, 2=Ranaldo, poi gli altri acquisiti.
     // Lo stesso ordine usato dai tasti numerici (main.heroSlotOrder), così non si sfalsano.
-    const baseOrder = ["carlo", "ranaldo"];
+    const baseOrder = HERO_BASE_ORDER;
     const rosterKey = (d.unlockedChars || []).join(",");
     if (this._rosterCacheKey !== rosterKey) {
       this._rosterCacheKey = rosterKey;
@@ -288,10 +293,12 @@ export class UIManager {
       const alpha = Math.min(1, this.bannerTimer / 28);
       ctx.save();
       ctx.globalAlpha = alpha;
-      drawPixelPanel(ctx, 64, 32, 352, 34, "rgba(11, 17, 32, 0.93)", "#ffd147", "#1e3a8a");
-      drawPixelTextCentered(ctx, this.bannerText.slice(0, 54), SCREEN_W / 2, 38, "#ffd147", 1);
+      drawPixelPanel(ctx, 64, 32, 400, 34, "rgba(11, 17, 32, 0.93)", "#ffd147", "#1e3a8a");
+      // §4.4: pannello allargato a 400 px e testo MISURATO con ellissi di parola,
+      // così i nomi dei boss ("Il Sofista Ω", 455 px) non escono più dal bordo.
+      drawPixelTextCentered(ctx, fitPixelText(this.bannerText, 396, 1, 1)[0], SCREEN_W / 2, 38, "#ffd147", 1);
       if (this.bannerSub) {
-        drawPixelTextCentered(ctx, this.bannerSub.slice(0, 56), SCREEN_W / 2, 51, "#cbd5e1", 1);
+        drawPixelTextCentered(ctx, fitPixelText(this.bannerSub, 396, 1, 1)[0], SCREEN_W / 2, 51, "#cbd5e1", 1);
       }
       ctx.restore();
     }
@@ -423,8 +430,11 @@ export class UIManager {
 
     // Barra Titolo Postazione EIPASS
     ctx.fillStyle = "#0369a1";
-    ctx.fillRect(15, 15, SCREEN_W - 30, 19);
-    drawPixelText(ctx, fitPixelText(`${q.badge} • ${q.title}`, SCREEN_W - 44, 1, 1)[0], 22, 21, "#fef08a", 1);
+    ctx.fillRect(15, 15, SCREEN_W - 30, 27);
+    // §4.2: badge e titolo su DUE righe misurate (la barra passa da 19 a 28 px):
+    // i 10 titoli su 12 che prima finivano con "…" ora si leggono per intero.
+    drawPixelText(ctx, fitPixelText(q.badge, SCREEN_W - 44, 1, 1)[0], 22, 18, "#bae6fd", 1);
+    drawPixelText(ctx, fitPixelText(q.title, SCREEN_W - 44, 1, 1)[0], 22, 28, "#fef08a", 1);
 
     if (!qState.answered) {
       // Pannello Simulatore Visivo Dinamico in tempo reale (y = 37..111)!
@@ -432,7 +442,7 @@ export class UIManager {
 
       const pLines = wrapPixelText(q.prompt, SCREEN_W - 40, 1, true);
       pLines.slice(0, 2).forEach((pln, pi) => {
-        drawPixelText(ctx, pln, 20, 113 + pi * 10, "#bae6fd", 1);
+        drawPixelText(ctx, pln, 20, 118 + pi * 10, "#bae6fd", 1);
       });
 
       // Le opzioni si dimensionano sul testo reale: nessuna etichetta tagliata a metà
@@ -534,9 +544,9 @@ export class UIManager {
   renderQuizLiveSimulator(ctx, q, selIdx) {
     const opt = q.options[selIdx] || q.options[0];
     const sx = 20;
-    const sy = 37;
+    const sy = 46;
     const sw = SCREEN_W - 40;
-    const sh = 74;
+    const sh = 68;
 
     drawPixelPanel(ctx, sx, sy, sw, sh, "#0b1120", "#475569", "#162038");
 

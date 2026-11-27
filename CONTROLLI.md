@@ -7,15 +7,15 @@ Il gioco è **100% giocabile da Telefono / Smartphone (iOS Safari e Android Chro
 ## 0. Giocare da Telefono / Smartphone (Verticale e Orizzontale)
 
 Aprendo il gioco su qualsiasi smartphone o tablet, si attiva automaticamente la **Console Touch Multi-Touch**:
-- **Telefono in Verticale (Portrait — stile Game Boy / GBA):** lo schermo `16:9` resta **100% libero dalle dita** in alto, con la barra dei **4 Protagonisti (`1: RANALDO`, `2: CARLO`, `3: RUGGERO`, `4: FRANC.`)** subito sotto e il controller ergonomico nella metà inferiore.
-- **Telefono in Orizzontale (Landscape — stile Switch):** lo schermo `16:9` si espande a tutta altezza con **D-Pad semitrasparente a sinistra** e **4 pulsanti arcade a destra**.
+- **Telefono in Verticale (Portrait — stile Game Boy / GBA):** lo schermo `16:9` resta **100% libero dalle dita** in alto, con la barra dei **5 Protagonisti (`1: CAR`, `2: RAN`, `3: DAN`, `4: RUG`, `5: FRA`)** subito sotto e il controller ergonomico nella metà inferiore.
+- **Telefono in Orizzontale (Landscape — stile Switch):** lo schermo `16:9` si espande a tutta altezza con **D-Pad semitrasparente a sinistra** e **4 pulsanti arcade a destra**. Sui telefoni in orizzontale con meno di 620 px di altezza la striscia `1-5` **non c'è** (non c'è spazio sotto lo schermo): si cambia eroe con il pulsante **`CAMBIA EROE`** della barra in alto o con i tasti `1`-`5` / `Q` se è collegata una tastiera.
 - **D-Pad 2D a Scorrimento Continuo (Pollice Sinistro):** trascina il pollice senza staccarlo per correre `SX / DX` o mirare in diagonale alta (`SU + ABILITÀ` per la parabola alta di Carlo!) senza salti involontari.
 - **4 Pulsanti Azione Multi-Touch (Pollice Destro):**
   - **`SALTA`** (azzurro): tocco breve = salto basso; tieni premuto = salto alto calibrato.
   - **`ABILITÀ`** (arancione): mossa speciale del protagonista attivo (combinabile col D-Pad in alto!).
   - **`USA [E]`** (oro): **si illumina e pulsa automaticamente** quando sei davanti a porte d'aula, NPC, terminali EIPASS o postazioni minigioco, e diventa `OK / AVANTI` nei dialoghi.
   - **`ASSIST`** (verde acqua): evoca il compagno di squadra in combo Tag-Team!
-- **Tocco Diretto sullo Schermo:** puoi anche toccare direttamente tutte le voci dei Menu, la barra superiore HUD (eroi `1-4`, `[C]OK`, `[P]`), le scelte dei dialoghi, le opzioni dei 12 Simulatori EIPASS e **tutti e 6 i Minigiochi** (tasti del pianoforte, contenitori SSD/Quarantena, corsie Firewall, porta da calcio, canestro da basket e parabola matematica)!
+- **Tocco Diretto sullo Schermo:** puoi anche toccare direttamente tutte le voci dei Menu, la barra superiore HUD (eroi `1-5`, `[C]OK`, `[P]`), le scelte dei dialoghi, le opzioni dei 12 Simulatori EIPASS e **tutti e 6 i Minigiochi** (tasti del pianoforte, contenitori SSD/Quarantena, corsie Firewall, porta da calcio, canestro da basket e parabola matematica)!
 
 ---
 
@@ -24,15 +24,19 @@ Aprendo il gioco su qualsiasi smartphone o tablet, si attiva automaticamente la 
 | Azione | Tasti Principali | Tasti Alternativi |
 |---|---|---|
 | **Muoviti a sinistra / destra** | `Freccia Sinistra` / `Freccia Destra` | `A` / `D` |
-| **Salta** *(pressione breve = salto basso; lunga = salto alto)* | `SPAZIO` | `Z`, `W`, `Freccia Su` |
+| **Salta** *(pressione breve = salto basso; lunga = salto alto)* | `SPAZIO` | `Z`, tasto `A` del gamepad *(attenzione: `W` e `Freccia Su` sono la DIREZIONE, non il salto)* |
 | **Abilità Speciale del Protagonista** *(anche direzionale `SU + X`!)* | `X` | `K`, `SHIFT` |
-| **Assist di Squadra Tag-Team** *(evoca un compagno in azione!)* | `C` | `J`, `L` |
+| **Assist di Squadra Tag-Team** *(evoca un compagno in azione!)* | `C` | `L` |
 | **Interagisci / Parla / Esamina Postazione EIPASS / Entra in Aula** | `E` | `INVIO`, `F` |
 | **Conferma nei Dialoghi e Menu** | `INVIO` | `SPAZIO`, `E` |
-| **Seleziona Prof. Ranaldo** *(Matematica)* | `1` | `Q` / `TAB` *(ciclo)* |
-| **Seleziona Carlo** *(Basket)* | `2` | `Q` / `TAB` *(ciclo)* |
-| **Seleziona Ruggero** *(Calcio)* | `3` | `Q` / `TAB` *(ciclo)* |
-| **Seleziona Francesco** *(Pianoforte)* | `4` | `Q` / `TAB` *(ciclo)* |
+| **Seleziona Carlo** *(Basket — slot 1)* | `1` | `Q` / `TAB` *(ciclo)* |
+| **Seleziona Prof. Ranaldo** *(Matematica — slot 2)* | `2` | `Q` / `TAB` *(ciclo)* |
+| **Seleziona Daniele** *(Informatica — slot 3, dopo l'incontro)* | `3` | `Q` / `TAB` *(ciclo)* |
+| **Seleziona Ruggero** *(Calcio — slot 4)* | `4` | `Q` / `TAB` *(ciclo)* |
+| **Seleziona Francesco** *(Pianoforte — slot 5)* | `5` | `Q` / `TAB` *(ciclo)* |
+| **Cambia eroe con il compagno accanto** | `E` | tocco sul compagno |
+| **Schermo intero** | `Y` | pulsante `⛶ Schermo Intero` |
+| **Guida comandi & Mixer Audio (apre/chiude)** | `F1` | `?` |
 | **Menu Pausa, Dossier Fiducia & Mixer Audio** | `P` | `ESC` |
 | **Audio Muto ON / OFF istantaneo** | `M` | Pulsante barra inferiore |
 | **Filtro Arcade Scanline CRT ON / OFF** | `V` | Opzionale in qualsiasi momento |
@@ -42,13 +46,13 @@ Aprendo il gioco su qualsiasi smartphone o tablet, si attiva automaticamente la 
 
 ## 2. Abilità Uniche (`[X]`, `[SU + X]`) e Assist di Squadra (`[C]`)
 
-1. **`[1]` Prof. Ranaldo — *Vettore Cartesiano & Compasso Aureo***  
+1. **`[2]` Prof. Ranaldo — *Vettore Cartesiano & Compasso Aureo***  
    Proietta **2 piattaforme paraboliche dorate** (`3` con Fiducia ≥ 70%), scaglia in avanti il **Compasso Aureo** offensivo (`SU + X` per parabola diagonale alta) e stordisce i nemici vicini.
-2. **`[2]` Carlo — *Tiro a Parabola Basket (#23)***  
+2. **`[1]` Carlo — *Tiro a Parabola Basket (canotta colorata)*  
    Lancia il pallone da basket a rimbalzo (`SU + X` per **Arco Alto** sopra le barriere): attiva i **Canestri-Relè** sopraelevati e abbatte droni e Mid-Boss. Salto base +7%.
-3. **`[3]` Ruggero — *Tiro Teso & Scivolata Calcio (#10)***  
+3. **`[4]` Ruggero — *Tiro Teso & Scivolata Calcio (#10)***  
    Scatta e calcia ad alta velocità lungo il terreno (`SU + X` per **Pallonetto a Pallonetto Diagonale**): **sfonda i Muri Incrinati Glitch** e ribalta i `Ransom-Crab`. Velocità di corsa +11%.
-4. **`[4]` Francesco — *Accordo di Risonanza & Doppie Note Musicali***  
+4. **`[5]` Francesco — *Accordo di Risonanza & Doppie Note Musicali***  
    Diffonde un'onda armonica circolare che **solidifica i Ponti Sonori azzurri** e spazza via i proiettili ostili, lanciando al contempo **due Note Musicali** offensive!
 5. **`[C]` Assist di Squadra Tag-Team:**  
    Evoca istantaneamente al tuo fianco il compagno successivo sbloccato che esegue la sua mossa speciale insieme a te senza cambiare l'eroe attivo!

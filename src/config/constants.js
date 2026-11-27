@@ -147,7 +147,15 @@ export const CHARACTERS = {
 
 // ORDINE UFFICIALE DEI 5 SLOT (identico a: tasti 1-5, pillole mobile, striscia eroi e pausa)
 // 1 Carlo · 2 Ranaldo · 3 Daniele · 4 Ruggero · 5 Francesco
+/** Versione del gioco: UNICA fonte di verità, mostrata nel marquee del titolo (§2.4). */
+export const GAME_VERSION = "v3.0.8";
 export const CHAR_ORDER = ["carlo", "ranaldo", "daniele", "ruggero", "francesco"];
+/**
+ * Ordine BASE delle pillole eroe e dei tasti 1-5 (§1.10 della review).
+ * Era scritto in tre posti diversi (qui, main.heroSlotOrder, hud.baseOrder) + l'HTML
+ * statico delle pillole: la copia HTML era invertita e cambiava eroe sbagliato (§1.2).
+ */
+export const HERO_BASE_ORDER = ["carlo", "ranaldo"];
 
 export const EIPASS_MODULES = [
   { id: 1, code: "MOD. 1", title: "I fondamenti dell'ICT", icon: "CPU" },

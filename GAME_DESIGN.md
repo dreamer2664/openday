@@ -12,9 +12,9 @@
 È il pomeriggio che precede il grande **Open Day** del Liceo Casardi. Nella Sede Centrale di Via Ferdinando I d'Aragona 100 tutto è quasi pronto: le LIM brillano, i 23 PC del Laboratorio Multimediale stanno sincronizzando i progetti degli studenti e in Aula Magna il pianoforte a coda nero è appena stato accordato.
 
 Mentre il **Prof. Ranaldo** e i tre studenti **Carlo**, **Francesco** e **Ruggero** caricano sul server scolastico il pacchetto conclusivo del percorso **EIPASS**, una postazione rimasta incustodita esegue un file trappola camuffato da circolare urgente (`"Circolare_Premio_OpenDay_ allegato.pdf.exe"`).  
-Dalla rete locale prende forma **IL SOFISTA DIGITALE (ERRORE 404-Ω)**: un'anomalia informatica teatrale, retorica e dispettosa che detesta il rigore matematico e la competenza digitale. Il Sofista sigilla elettronicamente l'edificio, disperde **7 Sigilli Corrotti** (corrispondenti ai **7 Moduli EIPASS**) nei luoghi simbolo della Sede Centrale e minaccia di mandare in onda durante l'Open Day presentazioni sabotate, cataloghi della Biblioteca mescolati e allarmi impazziti.
+Dalla rete locale prende forma **IL SOFISTA DIGITALE (ERRORE 404-Ω)**: un'anomalia informatica teatrale, retorica e dispettosa che detesta il rigore matematico e la competenza digitale. Il Sofista sigilla elettronicamente l'edificio, disperde le **7 competenze EIPASS** (una per modulo) nei luoghi simbolo della Sede Centrale e minaccia di mandare in onda durante l'Open Day presentazioni sabotate, cataloghi della Biblioteca mescolati e allarmi impazziti.
 
-**Obiettivo immediato:** Entrare dalle due grandi colonne bianche di Via d'Aragona, alternare in tempo reale i quattro protagonisti sfruttando le loro abilità uniche (Matematica, Basket, Pianoforte, Calcio) e le competenze EIPASS, neutralizzare i 7 Sigilli e sconfiggere il Sofista Digitale sul palco dell'Aula Magna prima dell'arrivo dei visitatori!
+**Obiettivo immediato:** Entrare dalle due grandi colonne bianche di Via d'Aragona, alternare in tempo reale i cinque protagonisti sfruttando le loro abilità uniche (Matematica, Basket, Informatica, Calcio, Pianoforte) e le competenze EIPASS, neutralizzare le 7 competenze corrotte e sconfiggere il Sofista Digitale sul palco dell'Aula Magna prima dell'arrivo dei visitatori!
 
 ---
 
@@ -72,7 +72,8 @@ Tutti e quattro i protagonisti sono **giocabili e intercambiabili in qualsiasi m
 
 ### 4. RUGGERO — Appassionato di Calcio
 - **Aspetto canonico obbligatorio:** Capelli castano scuro/neri, spettinati e *messy*, con ciocche/frangia disordinata sulla parte anteriore della testa.
-- **Abbigliamento e Palette:** Giacca sportiva **biancorossa (`#c82333` cremisi con bande bianche)** — omaggio cromatico sportivo —, pantaloni tecnici blu notte, scarpini agili e **pallone da calcio bianco-nero** ai piedi (piccoli palleggi di piede nell'animazione idle!).
+- **Daniele (nuovo protagonista, v3.0):** fade, occhiali sottili ambrati e giacca avorio; abilità legata ai sistemi informatici (porte logiche, note di rete) e al modulo EIPASS della sicurezza.
+- **Abbigliamento e Palette:** Giacca sportiva **biancorossa (`#f45565` corallo con bande bianche)** — omaggio cromatico sportivo —, pantaloni tecnici blu notte, scarpini agili e **pallone da calcio bianco-nero** ai piedi (piccoli palleggi di piede nell'animazione idle!).
 - **Personalità narrativa:** Rapido, concreto, battuta pronta da spogliatoio, specialista negli inserimenti veloci e nel togliere le castagne dal fuoco quando il tempo stringe.
 - **Funzione nel Gameplay:**
   - **Velocità di scatto a terra leggermente superiore (+10% sprint)** per sezioni a tempo e inseguimenti.
@@ -120,7 +121,7 @@ Accessibile con pulsante dedicato in primo piano nel Menu Principale. Progettata
 4. **Zona 4 — Aula Magna: Resa dei Conti (~2 min):** Sul palco in graniglia accanto al pianoforte a coda nero e ai busti classici, sfida finale compatta contro il **Sofista Digitale** dove tutti e quattro i protagonisti intervengono, seguita dalla **Schermata Certificato Visitatore Open Day**, invito alla Campagna Completa e pulsante **Reset Immediato Nuovo Visitatore (`F9`)**.
 
 ### B. CAMPAGNA COMPLETA (6 Capitoli — 35–45 Minuti di Gameplay Effettivo)
-Ogni capitolo comprende **3 ampie sezioni interconnesse** (18 grandi mappe totali nella campagna + arene minigiochi + stanze segrete), checkpoint frequenti, collezionabili *Pagine di Pegaso*, dialoghi ramificati, terminali dei **7 Moduli EIPASS** e sfide dedicate ai quattro protagonisti:
+Ogni capitolo comprende **3 ampie sezioni interconnesse** (18 grandi mappe totali nella campagna + arene minigiochi + stanze segrete), checkpoint frequenti, collezionabili *Pagine di Pegaso*, dialoghi ramificati, terminali dei **7 Moduli EIPASS** e sfide dedicate ai cinque protagonisti:
 
 - **Capitolo 1 — *Via d'Aragona 100: Il Portale Sigillato*** *(Esterno Monumentale, Gradinata & Portico, Atrio d'Ingresso e Scalone)* — Modulo 1 EIPASS (*Fondamenti ICT*), introduzione cambio personaggio Ranaldo/Carlo, segreto sopra la loggia delle bandiere. (~6 min)
 - **Capitolo 2 — *Corridoi del Primo Piano: Voci di Corridoio e Fake News*** *(Ala Classica Est, Snodo delle LIM, Ala Musicale Ovest)* — Moduli 2 e 3 EIPASS (*Ricerca Web/Fonti* e *Comunicare in Rete: PEC & CCN*), bivi alto/basso, porte interattive, sblocco di Ruggero in squadra. (~6–7 min)

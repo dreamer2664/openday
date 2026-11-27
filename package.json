@@ -1,0 +1,11 @@
+{
+  "name": "operazione-eipass-casardi-8bit",
+  "version": "3.0.8",
+  "private": true,
+  "type": "module",
+  "description": "OPERAZIONE EIPASS — Il Casardi in 8 Bit: gioco platform 2D offline per l'Open Day del Liceo A. Casardi di Barletta",
+  "scripts": {
+    "build": "python3 tools/sync_builds.py",
+    "qa": "node tools/qa_playtest.mjs && node tools/qa_text_overflow.mjs && node tools/qa_bugfix_regression.mjs && node tools/qa_mobile_touch.mjs"
+  }
+}
