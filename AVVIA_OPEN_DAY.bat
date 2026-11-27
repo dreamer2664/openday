@@ -1,0 +1,3 @@
+@echo off
+echo Avvio di OPERAZIONE EIPASS - Il Casardi in 8 Bit...
+start "" "%~dp0AVVIA_GIOCO.html"

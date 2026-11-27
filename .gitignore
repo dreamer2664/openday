@@ -1,0 +1,17 @@
+# Il gioco è 100% offline: nessuna dipendenza da installare
+node_modules/
+__pycache__/
+*.pyc
+
+# Backup locale pre-v3 (conservato solo nel workspace)
+backups_pre_v3/
+
+# Artefatti QA/generati (rigenerabili con i tool)
+assets/sprites/audit_48_scene/
+assets/sprites/qa_v3/*.png
+assets/sprites/qa_v3/report.json
+assets/sprites/*_raw/
+
+# File di sistema
+.DS_Store
+Thumbs.db
