@@ -1,3 +1,20 @@
+## Fase I — Squadra al seguito (v3.0.3, 26/11/2026)
+
+**Richiesta:** «È fastidioso che i personaggi ti seguono ovunque vai. Aggiungi un toggle all'inizio del gioco
+per scegliere se tenere o no questa funzione, e comunque se la tieni i personaggi ti stanno a una distanza
+per i fatti propri, non ti seguono.»
+
+**Intervento (chirurgico: 4 file, nessun refactor)**
+- `world.js`: `updateCompanions()` riscritto in due rami. Opzione **off** → ogni compagno ha un `homeX` e si
+  aggira intorno al suo punto (mai verso il giocatore). Opzione **on** → resta accanto a 70-160 px alternati
+  destra/sinistra. Rimosso l'inseguimento a catena. `clampCompanionX()` evita che finiscano fuori schermo.
+- `gameState.js`: `audioPrefs.followTeam` (default `false`) salvato con le altre preferenze.
+- `main.js`: voce `team_follow` nel menu iniziale e in pausa, tasto **`G`** ovunque, `toggleTeamFollow()`.
+- `input.js` + `constants.js`: `teamTogglePressed` e voce `G` nella guida comandi (12 voci).
+- Test: nuovo blocco 14g in `qa_bugfix_regression.mjs` (9 controlli su toggle e distanze minime).
+
+**Verifica:** playtest 511 · mobile 30 · testi 341 · regressione 178 · 0 errori JS.
+
 ## Fase H — Comandi PC (v3.0.2, 26/11/2026)
 
 **Sintomo riferito dall'utente:** «Nella modalità PC alcuni comandi non funzionano, come cambiare i

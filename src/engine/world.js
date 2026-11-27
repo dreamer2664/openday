@@ -327,10 +327,21 @@ export class WorldRuntime {
     for (const cid of others) {
       if (this.companionActors.some((a) => a.charId === cid)) continue;
       const idx = this.companionActors.length;
+      // Ogni compagno ha il SUO posto: senza "segui" resta lì e si aggira in zona, non ti pedina.
+      // Si sistemano alternati a destra e sinistra, a distanza di rispetto (70-160px).
+      const side = idx % 2 === 0 ? -1 : 1;
+      const spread = 70 + Math.floor(idx / 2) * 55;
+      const homeX = this.clampCompanionX(this.player.x + side * spread);
       this.companionActors.push({
         charId: cid,
-        x: this.player.x - 26 - idx * 24,
+        x: homeX,
         y: this.player.y,
+        homeX,
+        homeY: this.player.y,
+        targetX: homeX,
+        targetY: this.player.y,
+        waitTimer: 40 + idx * 55,
+        wander: idx + 1,
         bob: idx * 10,
         facing: 1,
         label: CHARACTERS[cid].shortName,
@@ -339,20 +350,69 @@ export class WorldRuntime {
   }
 
   /** I compagni seguono con un certo ritardo e non entrano nei muri. */
+  /** Tiene i compagni dentro i bordi della stanza (mai fuori schermo). */
+  clampCompanionX(x) {
+    const maxX = Math.min(this.camMaxX || this.cols * TILE, this.cols * TILE) - 44;
+    return Math.max(14, Math.min(maxX, x));
+  }
+
+  /** Opzione "Squadra al seguito": la decide il giocatore nel menu iniziale o in pausa. */
+  isTeamFollowEnabled() {
+    return !!(this.state.audioPrefs && this.state.audioPrefs.followTeam);
+  }
+
+  /**
+   * Compagni in scena. Due comportamenti, scelti dall'opzione "Squadra al seguito"
+   * nel menu iniziale o in pausa:
+   *  - followTeam = true  -> ti seguono a catena (vecchio comportamento);
+   *  - followTeam = false -> restano dalle loro parti: si aggirano intorno al loro punto
+   *    e ti si riavvicinano solo se ti allontani troppo (non ti stanno addosso).
+   */
   updateCompanions() {
     this.syncCompanions();
     const p = this.player;
-    let prevX = p.x;
-    let prevY = p.y;
+    this.companionTick = (this.companionTick || 0) + 1;
+    // Nessuno ti pedina: ogni compagno ha la sua distanza di rispetto (70-160px).
+    const follow = this.isTeamFollowEnabled();
     this.companionActors.forEach((a, i) => {
-      const targetX = prevX - 24 * (i + 1);
-      const targetY = prevY;
-      a.x += (targetX - a.x) * 0.08;
-      a.y += (targetY - a.y) * 0.14;
-      a.facing = targetX > a.x ? 1 : -1;
+      if (a.homeX === undefined) {
+        a.homeX = a.x;
+        a.homeY = a.y;
+        a.targetX = a.x;
+        a.targetY = a.y;
+        a.waitTimer = 40 + i * 50;
+      }
+      const side = i % 2 === 0 ? -1 : 1;
+      const spread = 70 + Math.floor(i / 2) * 55;
+
+      if (follow) {
+        // Opzione attiva: ti restano accanto, ma alla loro distanza (mai addosso)
+        const tx = this.clampCompanionX(p.x + side * spread);
+        a.x += (tx - a.x) * 0.06;
+        a.y += (p.y - a.y) * 0.09;
+        a.facing = tx > a.x ? 1 : -1;
+        a.homeX = tx;
+        a.homeY = p.y;
+      } else {
+        // Opzione spenta: ognuno si aggira intorno al SUO punto e non ti segue
+        a.waitTimer = (a.waitTimer || 0) - 1;
+        if (a.waitTimer <= 0) {
+          // si aggira solo ALLONTANANDOSI dal giocatore: mai addosso
+          const away = Math.sign(a.homeX - p.x) || (i % 2 === 0 ? -1 : 1);
+          a.targetX = this.clampCompanionX(
+            a.homeX + away * Math.abs(Math.round(Math.sin((this.companionTick + i * 37) * 0.013) * 26))
+          );
+          a.targetY = a.homeY;
+          a.waitTimer = 70 + ((i * 41 + this.companionTick) % 90);
+        }
+        const dx = a.targetX - a.x;
+        const dy = a.targetY - a.y;
+        a.x += dx * 0.035;
+        a.y += dy * 0.05;
+        a.facing =
+          (Math.abs(dx) > 0.6 ? Math.sign(dx) : Math.cos((this.companionTick + i * 20) * 0.02)) > 0 ? 1 : -1;
+      }
       a.bob = (a.bob + 1) % 90;
-      prevX = a.x;
-      prevY = a.y;
     });
   }
 

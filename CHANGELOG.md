@@ -1,5 +1,18 @@
 # CHANGELOG — OPERAZIONE EIPASS: IL CASARDI IN 8 BIT
 
+## v3.0.3 — Squadra al seguito: opzione (26/11/2026)
+
+- Nuova opzione **SQUADRA AL SEGUITO: SI/NO**, scelta **nel menu iniziale** (terza voce), ripetibile
+  **in pausa** e al volo con il tasto **`G`**. Viene salvata insieme alle preferenze audio.
+- **Default: NO.** I compagni non pedinano più il giocatore: ognuno si aggira intorno al proprio punto
+  (mai addosso, distanza minima ~25-90 px) e si sposta solo allontanandosi.
+- Con l'opzione **SI** i compagni restano accanto al giocatore ma a **distanza di rispetto** (70-160 px),
+  alternati a destra e sinistra: niente più fila indiana incollata alle spalle.
+- Rimosso l'inseguimento "a catena" (era la causa del fastidio segnalato).
+- I compagni restano dentro i bordi della stanza e continuano a funzionare come punti di cambio eroe
+  (`[E]` vicino / click).
+- Guida comandi: nuova voce `G` (12 voci, tutte con tasto).
+
 ## v3.0.2 — Comandi PC: cambio eroe e tasti mancanti (26/11/2026)
 
 **Cambio personaggio in modalità PC (segnalazione principale)**

@@ -389,6 +389,42 @@ const mkInput = (over = {}) => ({
   check(syn.maxHpBonus === 40, "sinergia: +10 HP per ogni compagno sbloccato", `${syn.maxHpBonus}`);
   check(syn.jumpBonus > 0 && syn.dmgBonus > 0, "sinergia: Daniele e Ruggero danno bonus attivi");
   check(app3.heroSlotOrder().length === 5, "con 5 eroi sbloccati ci sono 5 slot tasto", `${app3.heroSlotOrder().length}`);
+
+  // 14g. "Squadra al seguito": toggle nel menu iniziale e distanza di rispetto
+  const app4 = boot();
+  app4.state.audioPrefs = { musicVol: 0.7, sfxVol: 0.85, muted: false, crt: false, followTeam: false };
+  check(app4.state.audioPrefs.followTeam === false, "opzione squadra al seguito: spenta di default");
+  const titleOpts = app4.getTitleOptions().map((o) => o.id);
+  check(titleOpts.includes("team_follow"), "il menu iniziale ha la voce Squadra al seguito", titleOpts.join(","));
+  check(app4.getPauseItems().some((i) => i.id === "team_follow"), "anche il menu pausa ha la voce Squadra al seguito");
+  app4.toggleTeamFollow();
+  check(app4.state.audioPrefs.followTeam === true, "il toggle accende l'opzione");
+  app4.toggleTeamFollow();
+  check(app4.state.audioPrefs.followTeam === false, "il toggle spegne l'opzione");
+
+  // i compagni non stanno addosso: minima distanza di rispetto in entrambe le modalità
+  const app5 = boot();
+  app5.state.audioPrefs = { musicVol: 0.7, sfxVol: 0.85, muted: false, crt: false, followTeam: false };
+  app5.world.syncCompanions();
+  const runFrames = (n) => {
+    for (let k = 0; k < n; k++) app5.world.update(mkInput());
+  };
+  runFrames(180);
+  const distOff = app5.world.companionActors.map((a) => Math.abs(a.x - app5.world.player.x));
+  check(distOff.length > 0 && Math.min(...distOff) >= 18, "senza opzione i compagni stanno a distanza (>=18px)", distOff.map((d) => Math.round(d)).join(","));
+  app5.state.audioPrefs.followTeam = true;
+  runFrames(120);
+  const distOn = app5.world.companionActors.map((a) => Math.abs(a.x - app5.world.player.x));
+  check(Math.min(...distOn) >= 18, "con l'opzione i compagni restano accanto ma non addosso (>=18px)", distOn.map((d) => Math.round(d)).join(","));
+  const compX = app5.world.companionActors[0].x;
+  app5.world.player.x += 400;
+  runFrames(60);
+  check(Math.abs(app5.world.companionActors[0].x - compX) < 420, "i compagni non pedinano il giocatore con uno scatto istantaneo");
+  const ic3 = new InputController(null);
+  ic3.keys = new Set();
+  ic3.justPressed = new Set(["KeyG"]);
+  ic3.poll();
+  check(ic3.teamTogglePressed === true, "[G] attiva/disattiva Squadra al seguito");
 }
 
 console.log(`\n=== REGRESSIONE ERRORI v3.0.1: ${ok} CONTROLLI OK, ${fails.length} FALLITI ===`);

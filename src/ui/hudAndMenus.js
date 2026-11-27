@@ -739,13 +739,13 @@ export class UIManager {
     drawPixelPanel(ctx, 12, 10, SCREEN_W - 24, SCREEN_H - 20, "#0b1326", "#38bdf8", "#1e293b");
     drawPixelTextCentered(ctx, "COMANDI DI GIOCO & MIXER AUDIO CHIPTUNE", SCREEN_W / 2, 20, "#ffd147", 1);
 
-    // 11 voci, 16px per riga: ogni descrizione sta su UNA riga del pannello reale
+    // 12 voci, 15px per riga: ogni descrizione sta su UNA riga del pannello reale
     CONTROLS_HELP.forEach((c, i) => {
-      const y = 30 + i * 16;
+      const y = 30 + i * 15;
       ctx.fillStyle = "#1e293b";
-      ctx.fillRect(24, y, 136, 14);
+      ctx.fillRect(24, y, 136, 13);
       ctx.strokeStyle = "#475569";
-      ctx.strokeRect(24, y, 136, 14);
+      ctx.strokeRect(24, y, 136, 13);
       const keysTxt = fitPixelText(c.keys, 130, 1, 1)[0];
       drawPixelText(ctx, keysTxt, 29, y + 4, "#38bdf8", 1);
       const desc = fitPixelText(c.action, SCREEN_W - 24 - 168 - 8, 1, 1)[0];

@@ -82,6 +82,7 @@ export class CasardiGameApp {
             if (opt.id === "openday") this.startMode("openday", false);
             else if (opt.id === "campaign_new") this.startMode("campaign", false);
             else if (opt.id === "campaign_continue") this.startMode("campaign", true);
+            else if (opt.id === "team_follow") this.toggleTeamFollow();
             else if (opt.id === "controls") this.showControlsModal = true;
           }
         });
@@ -114,6 +115,8 @@ export class CasardiGameApp {
               this.state.audioPrefs.sfxVol = this.audio.sfxVol;
               this.state.saveAudioPrefs();
               this.audio.playSfx("confirm");
+            } else if (it.id === "team_follow") {
+              this.toggleTeamFollow();
             } else {
               this.input.justPressed.add("Enter");
             }
@@ -417,6 +420,11 @@ export class CasardiGameApp {
         sub: "Riprendi dal checkpoint salvato",
       });
     }
+    opts.push({
+      id: "team_follow",
+      label: `SQUADRA AL SEGUITO: ${this.state.audioPrefs.followTeam ? "SI" : "NO"}`,
+      sub: "I compagni ti restano accanto [G]",
+    });
     opts.push({
       id: "controls",
       label: "COMANDI & MIXER AUDIO",
@@ -724,6 +732,17 @@ export class CasardiGameApp {
     }
     // F2 = pausa audio rapida? no: [M] già presente.
 
+    // [G] cambia al volo "Squadra al seguito" (stessa opzione del menu iniziale e della pausa)
+    if (this.input.teamTogglePressed) {
+      const on = this.toggleTeamFollow();
+      this.world?.addFloatingText(
+        this.world.player.x - 24,
+        this.world.player.y - 26,
+        on ? "SQUADRA AL SEGUITO: SI" : "SQUADRA AL SEGUITO: NO",
+        on ? "#4ade80" : "#94a3b8"
+      );
+    }
+
     // F1 (o "?") apre la guida comandi da qualsiasi schermata, anche in partita
     if (this.input.helpPressed && this.scene !== "title") {
       if (!this.showControlsModal) {
@@ -797,6 +816,7 @@ export class CasardiGameApp {
       if (pick.id === "openday") this.startMode("openday", false);
       else if (pick.id === "campaign_new") this.startMode("campaign", false);
       else if (pick.id === "campaign_continue") this.startMode("campaign", true);
+      else if (pick.id === "team_follow") this.toggleTeamFollow();
       else if (pick.id === "controls") this.showControlsModal = true;
     }
   }
@@ -877,6 +897,14 @@ export class CasardiGameApp {
     this.switchActiveChar(nearest.charId);
   }
 
+  /** Opzione "Squadra al seguito": i compagni restano accanto a distanza invece di vagare. */
+  toggleTeamFollow() {
+    this.state.audioPrefs.followTeam = !this.state.audioPrefs.followTeam;
+    this.state.saveAudioPrefs();
+    this.audio.playSfx(this.state.audioPrefs.followTeam ? "confirm" : "blip", 420);
+    return this.state.audioPrefs.followTeam;
+  }
+
   /**
    * SINERGIA DI SQUADRA: ogni nuovo membro sbloccato lascia un bonus passivo
    * permanente (così "cambiare personaggio" non è solo cosmetico anche quando
@@ -925,6 +953,7 @@ export class CasardiGameApp {
       { id: "resume", label: "Riprendi Partita" },
       { id: "music_vol", label: `Volume Musica: ${mPct}% (SX/DX)` },
       { id: "sfx_vol", label: `Volume Effetti: ${sPct}% (SX/DX)` },
+      { id: "team_follow", label: `Squadra al Seguito: ${this.state.audioPrefs.followTeam ? "SI" : "NO"}` },
       { id: "controls", label: "Guida Comandi Completa" },
       { id: "restart_room", label: "Ricomincia Zona Corrente" },
       { id: "openday_reset", label: "Reset Nuovo Visitatore Open Day" },
@@ -1007,6 +1036,7 @@ export class CasardiGameApp {
     if (this.input.confirmPressed) {
       this.audio.playSfx("confirm");
       if (cur.id === "resume") this.scene = "playing";
+      else if (cur.id === "team_follow") this.toggleTeamFollow();
       else if (cur.id === "controls") this.showControlsModal = true;
       else if (cur.id === "restart_room") {
         this.scene = "playing";

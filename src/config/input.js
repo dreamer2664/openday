@@ -31,6 +31,7 @@ export class InputController {
     this.numberPressed = 0; // 1..8
     this.fullscreenPressed = false;
     this.helpPressed = false;
+    this.teamTogglePressed = false;
 
     this._prevGpButtons = [];
     this.bindEvents();
@@ -217,6 +218,7 @@ export class InputController {
     this.quickResetPressed = jp.has("F9");                                   // F9
     this.fullscreenPressed = jp.has("KeyY");                                 // Y = schermo intero
     this.helpPressed = jp.has("F1") || jp.has("Slash") || jp.has("NumpadDivide"); // F1 / ?  -> guida comandi
+    this.teamTogglePressed = jp.has("KeyG");                                 // G -> squadra al seguito
 
     this.numberPressed = 0;
     for (let n = 1; n <= 8; n++) {

@@ -96,10 +96,10 @@ export class GameStateManager {
     const raw = SafeStorage.get(AUDIO_PREF_KEY);
     if (raw) {
       try {
-        return JSON.parse(raw);
+        return { musicVol: 0.7, sfxVol: 0.85, muted: false, crt: false, followTeam: false, ...JSON.parse(raw) };
       } catch (_) {}
     }
-    return { musicVol: 0.7, sfxVol: 0.85, muted: false, crt: false };
+    return { musicVol: 0.7, sfxVol: 0.85, muted: false, crt: false, followTeam: false };
   }
 
   saveAudioPrefs() {
