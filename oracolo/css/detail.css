@@ -42,6 +42,7 @@
 .stage::before, .stage::after { width: 7px; height: 7px; background: #eed49d; box-shadow: 0 0 0 2px #171f2d, 0 0 0 3px #9a7c52; }
 .stone-floor { height: 24px; margin-top: -24px; background: url('../assets/stone-tiles.svg') repeat-x bottom left / 128px 24px; }
 .sanctuary-art { opacity: 1; }
+#pythiaCanvas { width: auto; height: 118%; max-width: none; position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%); }
 .pythia-aura { width: 165px; height: 225px; opacity: .09; }
 [data-state='consulting'] .pythia-aura { opacity: .3; background: #b7a4e0; }
 [data-state='speaking'] .pythia-aura { opacity: .21; }

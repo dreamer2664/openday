@@ -1,9 +1,11 @@
 /* Cache autonoma: solo file dell'app, mai domande o responsi. */
 'use strict';
-const CACHE = 'delfi-arcade-deluxe-6';
+const CACHE = 'delfi-arcade-pizia-nes-1';
 const SHELL = [
   './', './index.html', './css/style.css', './css/detail.css',
-  './js/app.js', './js/audio.js', './js/responsi.js', './js/pythia-face-options.js', './js/pythia-sprites.js', './js/scenery.js',
+  './js/app.js', './js/audio.js', './js/responsi.js', './js/pythia-sprites.js', './js/scenery.js',
+  './assets/pizia/riposo.png', './assets/pizia/battito.png', './assets/pizia/sorriso.png',
+  './assets/pizia/attesa.png', './assets/pizia/parla.png', './assets/pizia/media.png', './assets/pizia/aperta.png',
   './assets/favicon.svg', './assets/laurel.svg', './assets/sanctuary.svg',
   './assets/meander.svg', './assets/panel-grain.svg', './assets/stone-tiles.svg', './assets/oracle-seal.svg',
   './assets/fonts/fonts.css',
