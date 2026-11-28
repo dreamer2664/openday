@@ -1,0 +1,27 @@
+{
+  "result": "FAIL",
+  "platform": "Linux same-source binary + real Cloudflare public HTTPS",
+  "checks": [
+    {
+      "name": "Internet is disabled until explicitly requested",
+      "result": "PASS"
+    },
+    {
+      "name": "Official pinned helper downloaded/verified; actual public HTTPS origin self-check passed",
+      "result": "PASS"
+    },
+    {
+      "name": "QR independently decoded to the real public download URL, not the creator",
+      "result": "PASS"
+    }
+  ],
+  "physical_windows": "NOT TESTED",
+  "physical_4g_5g_school_network": "NOT TESTED",
+  "public_hostname": "course-python-decision-workforce.trycloudflare.com",
+  "error": "('/', 403)",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/user/.cache/casardi-qr-internet/casardi_postcard/scripts/qr_internet_live_test.py\", line 52, in main\n    assert rr.status_code==404,(path,rr.status_code)\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: ('/', 403)\n",
+  "service_exit": 0,
+  "service_stderr": "",
+  "seconds": 14.29,
+  "html_sha256": "b168f803d604113ff0d3ee909dc9d119deb4cfac53ba62c4d30150bf6aa915c7"
+}

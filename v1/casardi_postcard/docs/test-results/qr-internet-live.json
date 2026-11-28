@@ -1,0 +1,54 @@
+{
+  "result": "PASS",
+  "platform": "Linux same-source binary + real Cloudflare public HTTPS",
+  "checks": [
+    {
+      "name": "Internet is disabled until explicitly requested",
+      "result": "PASS"
+    },
+    {
+      "name": "Official pinned helper downloaded/verified; actual public HTTPS origin self-check passed",
+      "result": "PASS"
+    },
+    {
+      "name": "QR independently decoded to the real public download URL, not the creator",
+      "result": "PASS"
+    },
+    {
+      "name": "Actual public tunnel exposes no root, creator, admin API, source or owner key",
+      "result": "PASS"
+    },
+    {
+      "name": "Forged loopback proxy headers denied by edge or dedicated listener",
+      "result": "PASS",
+      "http_status": 403
+    },
+    {
+      "name": "Original 3000x2000 PNG downloaded byte-exact through real Cloudflare HTTPS",
+      "result": "PASS",
+      "png_bytes": 424989,
+      "sha256": "1290a1f3e33389829164d4d8df179c95af6c94790ab8c7ae2fd17dc22f2281c5"
+    },
+    {
+      "name": "Public writes rejected",
+      "result": "PASS"
+    },
+    {
+      "name": "New postcard/reset revokes all three public download routes immediately",
+      "result": "PASS"
+    },
+    {
+      "name": "Disabling Internet explicitly restores LAN mode",
+      "result": "PASS"
+    }
+  ],
+  "physical_windows": "NOT TESTED",
+  "physical_4g_5g_school_network": "NOT TESTED",
+  "public_hostname": "magazines-beth-initial-practitioner.trycloudflare.com",
+  "service_exit": 0,
+  "service_stderr": "",
+  "seconds": 10.37,
+  "html_sha256": "c90f4b809ab06f905d2eedfef3660f7091246d75437162ef1b20cc2c9cdcf1b0",
+  "go_source_files": 27,
+  "go_source_sha256": "1f7b04e89216e5505d88c3f90bebe20180d13c337ee7aa8b90ca16013f4d713d"
+}

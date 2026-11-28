@@ -151,7 +151,8 @@
   "nes_art": "Twelve AI-assisted architectural paintings, native 600x400, 64 colours each; canonical PNG hashes and references in assets/nes/manifest.json.",
   "runtime_network": "None",
   "visitor_storage": "Memory of the open page only; no project persistence.",
-  "qr": "AVVIA_CARTOLINA_WINDOWS.exe serves this full HTML and hosts its actual finished PNG via temporary LAN URL. Raw standalone HTML exports locally without hosting other devices.",
+  "bridge_revision": "qr-internet-1 (creator unchanged: 3.3.1)",
+  "qr": "Windows serves the complete HTML and finished PNG using LAN or explicitly enabled Cloudflare HTTPS Internet QR. Standalone file exports locally; it never starts a tunnel.",
   "lpc_commit": "86a3719ee4a7e2e9fb27c7c152e29a741d3e930a",
   "lpc_parts": 56,
   "lpc_pose_atlases": 85,
@@ -189,6 +190,6 @@
       "nes": "485ca08cbf56b7360d66f1064993f46560a403f5855e9b0b682ccbc4a1f40640"
     }
   },
-  "bytes": 24820033,
-  "sha256": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea"
+  "bytes": 24825551,
+  "sha256": "c90f4b809ab06f905d2eedfef3660f7091246d75437162ef1b20cc2c9cdcf1b0"
 }

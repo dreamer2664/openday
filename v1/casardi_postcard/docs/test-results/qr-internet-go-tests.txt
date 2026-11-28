@@ -1,0 +1,102 @@
+=== RUN   TestInternetPublicListenerHasNoAdminOrCreator
+--- PASS: TestInternetPublicListenerHasNoAdminOrCreator (4.14s)
+=== RUN   TestInternetPublicDownloadExactAndDisclosed
+--- PASS: TestInternetPublicDownloadExactAndDisclosed (1.27s)
+=== RUN   TestInternetPublicResetExpiryAndStop
+--- PASS: TestInternetPublicResetExpiryAndStop (2.36s)
+=== RUN   TestInternetPublicProbeAndNotReady
+--- PASS: TestInternetPublicProbeAndNotReady (1.14s)
+=== RUN   TestInternetStateDoesNotInventLANFallback
+--- PASS: TestInternetStateDoesNotInventLANFallback (1.46s)
+=== RUN   TestInternetQuickURLStrictAllowList
+--- PASS: TestInternetQuickURLStrictAllowList (0.00s)
+=== RUN   TestInternetPinnedArtifacts
+--- PASS: TestInternetPinnedArtifacts (0.00s)
+=== RUN   TestInternetDownloaderChecksumAtomicAndSize
+=== RUN   TestInternetDownloaderChecksumAtomicAndSize/good
+=== RUN   TestInternetDownloaderChecksumAtomicAndSize/bad-hash
+=== RUN   TestInternetDownloaderChecksumAtomicAndSize/oversize
+=== RUN   TestInternetDownloaderChecksumAtomicAndSize/short
+=== RUN   TestInternetDownloaderChecksumAtomicAndSize/http-error
+--- PASS: TestInternetDownloaderChecksumAtomicAndSize (0.01s)
+    --- PASS: TestInternetDownloaderChecksumAtomicAndSize/good (0.00s)
+    --- PASS: TestInternetDownloaderChecksumAtomicAndSize/bad-hash (0.00s)
+    --- PASS: TestInternetDownloaderChecksumAtomicAndSize/oversize (0.00s)
+    --- PASS: TestInternetDownloaderChecksumAtomicAndSize/short (0.00s)
+    --- PASS: TestInternetDownloaderChecksumAtomicAndSize/http-error (0.00s)
+=== RUN   TestInternetDownloadCancellation
+--- PASS: TestInternetDownloadCancellation (0.00s)
+=== RUN   TestInternetDoesNotStartWithoutOptInAndStartsOnce
+--- PASS: TestInternetDoesNotStartWithoutOptInAndStartsOnce (0.01s)
+=== RUN   TestInternetAPIIsOwnerOnlyAndStrict
+--- PASS: TestInternetAPIIsOwnerOnlyAndStrict (0.04s)
+=== RUN   TestInternetEnvironmentDoesNotInheritTunnelConfig
+--- PASS: TestInternetEnvironmentDoesNotInheritTunnelConfig (0.00s)
+=== RUN   TestInternetPublicConcurrencyIsBounded
+--- PASS: TestInternetPublicConcurrencyIsBounded (1.18s)
+=== RUN   TestInternetJSONStateDoesNotContainProbeOrOwnerKey
+--- PASS: TestInternetJSONStateDoesNotContainProbeOrOwnerKey (0.04s)
+=== RUN   TestUnpredictable192BitTokens
+--- PASS: TestUnpredictable192BitTokens (0.00s)
+=== RUN   TestPNGUploadAndOriginalBytes
+--- PASS: TestPNGUploadAndOriginalBytes (1.19s)
+=== RUN   TestExpiryAtExactDeadline
+--- PASS: TestExpiryAtExactDeadline (1.16s)
+=== RUN   TestEveryDownloadRouteChecksExpiry
+=== RUN   TestEveryDownloadRouteChecksExpiry/#00
+=== RUN   TestEveryDownloadRouteChecksExpiry//image
+=== RUN   TestEveryDownloadRouteChecksExpiry//file
+--- PASS: TestEveryDownloadRouteChecksExpiry (3.55s)
+    --- PASS: TestEveryDownloadRouteChecksExpiry/#00 (1.18s)
+    --- PASS: TestEveryDownloadRouteChecksExpiry//image (1.19s)
+    --- PASS: TestEveryDownloadRouteChecksExpiry//file (1.18s)
+=== RUN   TestResetRevokesAndWipesMemory
+--- PASS: TestResetRevokesAndWipesMemory (1.22s)
+=== RUN   TestNewExportReplacesPrevious
+--- PASS: TestNewExportReplacesPrevious (2.41s)
+=== RUN   TestNewPCSessionRevokesPrevious
+--- PASS: TestNewPCSessionRevokesPrevious (1.22s)
+=== RUN   TestPhoneCreatorDoesNotResetOrRevealKey
+--- PASS: TestPhoneCreatorDoesNotResetOrRevealKey (1.16s)
+=== RUN   TestRemoteRootDoesNotRevealOwnerKey
+--- PASS: TestRemoteRootDoesNotRevealOwnerKey (0.00s)
+=== RUN   TestOwnerCapabilityRequired
+--- PASS: TestOwnerCapabilityRequired (0.00s)
+=== RUN   TestRemoteCannotWriteEvenWithKey
+--- PASS: TestRemoteCannotWriteEvenWithKey (0.00s)
+=== RUN   TestCrossOriginRejected
+--- PASS: TestCrossOriginRejected (0.00s)
+=== RUN   TestDNSRebindingHostRejected
+--- PASS: TestDNSRebindingHostRejected (0.00s)
+=== RUN   TestStaleGenerationCannotUpload
+--- PASS: TestStaleGenerationCannotUpload (0.04s)
+=== RUN   TestInflightUploadCannotResurrectAfterReset
+--- PASS: TestInflightUploadCannotResurrectAfterReset (0.97s)
+=== RUN   TestBadDimensionsAndCorruptPNGRejected
+--- PASS: TestBadDimensionsAndCorruptPNGRejected (0.49s)
+=== RUN   TestBodySizeIsBounded
+--- PASS: TestBodySizeIsBounded (0.40s)
+=== RUN   TestNoDirectoryBrowsingOrSourceFiles
+--- PASS: TestNoDirectoryBrowsingOrSourceFiles (0.00s)
+=== RUN   TestGETCannotResetAndNoCookieOrCache
+--- PASS: TestGETCannotResetAndNoCookieOrCache (0.00s)
+=== RUN   TestPNGInlineAndMobilePage
+--- PASS: TestPNGInlineAndMobilePage (1.17s)
+=== RUN   TestNetworkSelectionValidated
+--- PASS: TestNetworkSelectionValidated (0.05s)
+=== RUN   TestNoLANDoesNotInventReachableURL
+--- PASS: TestNoLANDoesNotInventReachableURL (0.97s)
+=== RUN   TestCleanerDeletesWithoutHTTPRequests
+--- PASS: TestCleanerDeletesWithoutHTTPRequests (2.20s)
+=== RUN   TestShutdownWipesMemory
+--- PASS: TestShutdownWipesMemory (1.20s)
+=== RUN   TestQRIsARealPNGWithQuietBorder
+--- PASS: TestQRIsARealPNGWithQuietBorder (0.21s)
+=== RUN   TestHeadNeverReturnsPNGBody
+--- PASS: TestHeadNeverReturnsPNGBody (1.27s)
+=== RUN   TestInternetStateSequenceMonotonicAcrossReadsAndModeChanges
+--- PASS: TestInternetStateSequenceMonotonicAcrossReadsAndModeChanges (0.11s)
+=== RUN   TestInternetExistingVersionGuard
+--- PASS: TestInternetExistingVersionGuard (0.00s)
+PASS
+ok  	casardi.local/postcard-service	33.687s

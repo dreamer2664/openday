@@ -1,0 +1,52 @@
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "name": "Standalone file:// still creates a licensed 3000x2000 PNG completely offline; no Internet controls or HTTP requests",
+      "result": "PASS"
+    },
+    {
+      "name": "Visible Internet option; cancelling consent does not start any tunnel",
+      "result": "PASS"
+    },
+    {
+      "name": "Internet enabled by the actual UI, official helper started and real public HTTPS verified",
+      "result": "PASS"
+    },
+    {
+      "name": "Final PNG QR uses the HTTPS public download, labels cross-network use and discloses Cloudflare transit",
+      "result": "PASS",
+      "bytes": 661352,
+      "sha256": "20e8c45644ad4a8c46ee2267a1dd52f2abcb1eea289587bcddc0b1ad980f1fe8"
+    },
+    {
+      "name": "Separate touch browser opens real public URL and downloads byte-identical PNG; no shared cookies or local network URL",
+      "result": "PASS"
+    },
+    {
+      "name": "Actual New postcard button revokes previous public QR and clears its image",
+      "result": "PASS"
+    },
+    {
+      "name": "Real helper termination hides invalid public QR, shows an error, and preserves full local PNG download",
+      "result": "PASS"
+    },
+    {
+      "name": "Delayed pre-stop state response cannot restore a stale Internet mode or QR",
+      "result": "PASS"
+    },
+    {
+      "name": "No JavaScript exceptions, cookies, localStorage or sessionStorage; test images/tokens reset",
+      "result": "PASS"
+    }
+  ],
+  "javascript_errors": [],
+  "native_windows": "NOT TESTED",
+  "physical_phone_4g_school_network": "NOT TESTED",
+  "service_exit": 0,
+  "service_stderr": "",
+  "seconds": 25.41,
+  "html_sha256": "c90f4b809ab06f905d2eedfef3660f7091246d75437162ef1b20cc2c9cdcf1b0",
+  "go_source_files": 27,
+  "go_source_sha256": "1f7b04e89216e5505d88c3f90bebe20180d13c337ee7aa8b90ca16013f4d713d"
+}

@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "baseline_archive_sha256": "9fb4a649948ded763cb3436d3b82b12f58f196f8429e65abbd8dfe18bdf5a12f",
+  "baseline_html_sha256": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea",
+  "html_sha256": "c90f4b809ab06f905d2eedfef3660f7091246d75437162ef1b20cc2c9cdcf1b0",
+  "asset_files_byte_exact": 473,
+  "embedded_data_byte_exact": true,
+  "embedded_data_sha256": "ca778f26dc8bcea6d60768429f0b03e5595e74271c3f65bcf65134bd93232c10",
+  "renderer_and_drag_unchanged": true,
+  "creator_source_sha256": {
+    "app.js": "b8aba402e33995e1e842deb8a30710ad3be7b3ed72e8e0d2853e048436685b85",
+    "render.js": "5104e281b886ab8989342f9f8f1921aa4e242de089f32bd924681d7abc629f16",
+    "composition.js": "d06c41e21797ba7295b66ab26507ee43cc8b3f866c4adfee0ae4688cd16d2b1f",
+    "layout-editor.js": "78aa15df7e466ccfb006a6b58fb99bd9ea844ce64bb3b549d3b280e5ce2ec7c4",
+    "layout-editor.css": "a348ebe27c0bf4f3bd2a76f104e8b03938a0443500888c4c32e6924c4ea8b945",
+    "sprites.js": "6ebfa143997192a8dc569ce7237b257bfd690197bd8d264a114bb8418c725989"
+  },
+  "start_cmd_unchanged": true,
+  "production_android_arena_fix_claimed": false,
+  "embedded_fonts_byte_exact": true,
+  "original_interface_css_preserved": true
+}

@@ -1,0 +1,59 @@
+{
+  "status": "QA_COMPLETE",
+  "feature": "qr-internet-1",
+  "creator_revision": "3.3.1",
+  "repository": "dreamer2664/openday",
+  "branch": "cartolina",
+  "update_parent": "c6f08ed166c5049560c58a0072bd2a7bcc592924",
+  "tests": {
+    "go_race_top_level_pass": 42,
+    "real_cloudflare_https_checks": 9,
+    "browser_checks": 9,
+    "extracted_copy_checks": 6,
+    "javascript_errors": []
+  },
+  "artifacts": {
+    "Cartolina_Casardi_PC_e_Telefono.html": {
+      "path": "Cartolina_Casardi_PC_e_Telefono.html",
+      "mode": "100644",
+      "bytes": 24825551,
+      "sha256": "c90f4b809ab06f905d2eedfef3660f7091246d75437162ef1b20cc2c9cdcf1b0",
+      "git_blob_sha1": "1649ff48cff9fe6f6137dc468c969d21d30c4acb"
+    },
+    "Cartolina_Casardi_Windows_LPC_QR_2026-27.zip": {
+      "path": "Cartolina_Casardi_Windows_LPC_QR_2026-27.zip",
+      "mode": "100644",
+      "bytes": 75699674,
+      "sha256": "31574bec32b72d3174ff8c15c72dcac7e41cf7fcd9fb256402460b7f61593650",
+      "git_blob_sha1": "230f73d3e8f3a7ad53c40248079b12773c36a446"
+    },
+    "v1/casardi_postcard/AVVIA_CARTOLINA_WINDOWS.exe": {
+      "path": "v1/casardi_postcard/AVVIA_CARTOLINA_WINDOWS.exe",
+      "mode": "100755",
+      "bytes": 10529280,
+      "sha256": "771387706a9b54175c23e90ef4cd4a6b3be7f98a8924e15fa83265d0e251072d",
+      "git_blob_sha1": "69939e12844a9b665935a7ff964a640723c9f739"
+    }
+  },
+  "runtime_files": 544,
+  "runtime_sha256": "143b63363669443cc2d62288811d6b0578e1576a1d483585356c7f18a5fa8944",
+  "go_source_files": 27,
+  "go_source_sha256": "1f7b04e89216e5505d88c3f90bebe20180d13c337ee7aa8b90ca16013f4d713d",
+  "source_package_files": 747,
+  "asset_files_byte_exact": 473,
+  "renderer_drag_embedded_data_fonts_unchanged": true,
+  "internet_opt_in": true,
+  "public_listener": "Separate loopback read-only download handler; no owner controls or creator",
+  "token_bits": 192,
+  "max_ttl_seconds": 600,
+  "png_disk_storage": false,
+  "cloudflare_content_transit": true,
+  "cloudflared_version": "2026.11.2",
+  "cloudflared_bundled": false,
+  "code_signing": "Unsigned",
+  "native_windows_job_object_smartscreen": "NOT TESTED",
+  "physical_phone_4g_5g_school_network": "NOT TESTED",
+  "android_arena_drag_fix_claimed": false,
+  "stable_solution_research": "See SOLUZIONE_STABILE_GRATUITA_QR.md; no persistent service/account/DNS created.",
+  "publication_status": "QA receipt; remote commit and download verification are recorded separately after push."
+}

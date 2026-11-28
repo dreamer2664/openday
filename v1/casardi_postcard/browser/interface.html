@@ -96,14 +96,15 @@
       <p class="eyebrow">DAL PC AL TELEFONO</p><h3 id="transfer-title">Scansiona e scarica.</h3>
       <p id="transfer-status" role="status" aria-live="polite"></p>
       <div id="transfer-loading" class="transfer-loading" hidden><span class="spinner" aria-hidden="true"></span> Preparazione del QR…</div>
-      <div id="transfer-code" class="transfer-code" hidden><img id="transfer-qr" alt="QR del PNG finale da scaricare sul telefono"><div><strong>Questo QR apre la cartolina già pronta.</strong><p id="transfer-time" class="transfer-time"></p><a id="transfer-link" target="_blank" rel="noopener noreferrer" class="transfer-link"></a><p class="hint">Non si apre? Controlla stessa Wi-Fi, rete privata di Windows e assenza di isolamento tra dispositivi. Il salvataggio sul PC è sempre disponibile qui sotto.</p></div></div>
+      <div id="transfer-code" class="transfer-code" hidden><img id="transfer-qr" alt="QR del PNG finale da scaricare sul telefono"><div><strong>Questo QR apre la cartolina già pronta.</strong><p id="transfer-time" class="transfer-time"></p><a id="transfer-link" target="_blank" rel="noopener noreferrer" class="transfer-link"></a><p class="hint" id="transfer-help">Per reti diverse, attiva QR Internet. Il salvataggio sul PC è sempre disponibile qui sotto.</p></div></div>
+      <button id="transfer-internet" class="secondary">Attiva QR Internet · telefono su altra rete</button>
       <button id="transfer-retry" class="secondary" hidden>Crea un nuovo QR per questo PNG</button>
      </section>
      <div class="save-actions"><a class="primary" id="save" download="cartolina-casardi.png">Scarica PNG <span aria-hidden="true">↓</span></a><button class="secondary" id="share" hidden>Condividi / Salva…</button><a class="secondary" id="open-image" target="_blank" rel="noopener">Apri l’immagine</a></div>
      <p class="hint">Su telefono: se il download non parte, apri l’immagine e usa la pressione prolungata o il menu Condividi del browser per salvarla. Le opzioni dipendono dal sistema.</p>
      <details class="image-fallback"><summary>Mostra il PNG da salvare con pressione prolungata</summary><img id="save-image" alt="PNG finale: tieni premuto per salvarlo sul telefono"></details>
      <a class="text-button" id="save-credits" download="crediti-cartolina.txt">Scarica anche i crediti di foto e personaggio</a>
-     <p id="transfer-local-only" class="standalone-transfer-note">Stai usando il file autonomo: il PNG è salvabile su questo dispositivo. Un normale QR non può contenere il PNG HD né rendere remoto il file locale: anche su Android serve un servizio raggiungibile. Nessun cloud o accoppiamento a due QR è stato aggiunto. Per trasferirlo dal PC a un altro telefono con il servizio LAN già incluso, sul PC apri <strong>AVVIA_CARTOLINA_WINDOWS.exe</strong> dal pacchetto completo: si apre lo studio con il servizio locale, senza terminale né Python.</p>
+     <p id="transfer-local-only" class="standalone-transfer-note">Stai usando il file autonomo: il PNG è salvabile su questo dispositivo. Un normale QR non può contenere il PNG HD né rendere remoto il file locale: anche su Android serve un servizio raggiungibile. Nessun cloud o accoppiamento a due QR è stato aggiunto. Per trasferirlo dal PC a un altro telefono con il servizio Windows già incluso (LAN o QR Internet facoltativo), sul PC apri <strong>AVVIA_CARTOLINA_WINDOWS.exe</strong> dal pacchetto completo: si apre lo studio con il servizio locale, senza terminale né Python.</p>
      <p class="privacy-note" id="result-privacy">Il file viene creato qui, non caricato online. Le copie già scaricate restano sul dispositivo.</p>
      <button class="secondary new-button" id="new">Ho finito · Nuova cartolina</button>
     </section>
@@ -118,12 +119,20 @@
   <header><h2 id="info-title">Informazioni e fonti.</h2><button class="quiet" id="close-info">Chiudi <span aria-hidden="true">×</span></button></header>
   <div class="info-sections">
    <section id="service-controls" class="service-controls" hidden>
-    <h3>Servizio dello stand · Rete locale</h3>
-    <p>Il servizio Windows è attivo. Il <strong>QR della cartolina pronta</strong> compare dopo «Genera PNG». La sua copia temporanea esiste solo in memoria, non su disco.</p>
+    <h3>Servizio dello stand · QR LAN o Internet</h3>
+    <p>Il <strong>QR della cartolina già pronta</strong> compare dopo «Genera PNG». Il PNG resta nella RAM del PC, non su disco. Per telefoni su 4G/5G o un’altra Wi-Fi attiva la modalità Internet.</p>
+    <section class="internet-controls" aria-labelledby="internet-title">
+     <h4 id="internet-title">QR Internet · reti diverse</h4>
+     <p>Download HTTPS tramite <strong>Cloudflare Quick Tunnel</strong>, fornitore esterno. PC e telefono devono avere Internet; il PC e questo programma devono restare accesi. Il primo avvio scarica circa 55 MB nella cache dell’utente, verificati con SHA-256. Non richiede account, terminale o privilegi amministratore.</p>
+     <p>È una soluzione temporanea senza garanzia di disponibilità. Solo il download viene esposto: non i controlli del PC. Chi possiede il link può scaricare il PNG fino alla scadenza o a «Nuova cartolina». Non è una cifratura end-to-end rispetto a Cloudflare, né una promessa di assenza di log del fornitore.</p>
+     <p id="internet-status" role="status" aria-live="polite"></p>
+     <div class="internet-actions"><button id="internet-start" class="secondary">Attiva QR Internet · anche 4G/5G</button><button id="internet-stop" class="secondary" hidden>Disattiva QR Internet · torna a LAN</button></div>
+    </section>
+    <h4>QR LAN · stessa rete locale</h4>
     <label id="network-select-wrap" for="network-ip">Scheda di rete del PC<select id="network-ip"></select></label>
-    <p id="network-missing" class="hint" hidden>Nessun indirizzo privato rilevato. Collega il PC alla Wi-Fi o al cavo di rete e riapri l’avvio Windows. Internet non è necessario.</p>
-    <details class="creator-qr-info"><summary>QR distinto: creare una nuova cartolina sul telefono</summary><p>Questo apre il creatore completo, <strong>non il PNG già generato</strong>. Il telefono deve restare sulla stessa rete del PC per il primo caricamento.</p><img id="creator-qr" alt="QR del creatore completo per telefono"><a id="creator-link" target="_blank" rel="noopener noreferrer"></a></details>
-    <p class="hint">Alla richiesta di Windows consenti il programma soltanto sulla rete privata della scuola. Non aprire porte sul router. Se la Wi-Fi ospiti isola i dispositivi, chiedi una LAN non isolata all’operatore.</p>
+    <p id="network-missing" class="hint" hidden>Nessun indirizzo privato rilevato per il QR LAN. Puoi usare QR Internet, oppure collegare il PC alla LAN autorizzata e riaprire il programma.</p>
+    <details class="creator-qr-info"><summary>QR LAN distinto: creare una nuova cartolina sul telefono</summary><p>Questo apre il creatore completo, <strong>non il PNG già generato</strong>. Richiede sempre la stessa rete locale del PC per il primo caricamento; non viene pubblicato dal tunnel Internet.</p><img id="creator-qr" alt="QR LAN del creatore completo per telefono"><a id="creator-link" target="_blank" rel="noopener noreferrer"></a></details>
+    <p class="hint">Non aprire porte sul router e non disattivare firewall, antivirus o policy. Se la scuola blocca i tunnel, serve l’autorizzazione dell’IT. Il QR LAN resta un’alternativa separata.</p>
     <button id="service-stop" class="secondary">Arresta servizio locale</button><p id="service-warning" role="alert" hidden></p>
    </section>
    <h3>Un solo file, anche sul telefono</h3>
@@ -133,8 +142,8 @@
    <h3>Salvataggio e privacy</h3>
    <p>Il PNG è composto su un canvas a 3000 × 2000 pixel, indipendente dallo schermo. Gli sprite rimangono nitidi; la versione NES nasce sulla griglia 600 × 400 e viene ingrandita ×5 senza interpolazione.</p>
    <p>«Condividi / Salva…» compare solo se il browser supporta la condivisione di file. In alternativa usa «Scarica PNG», «Apri l’immagine» o la pressione prolungata sul PNG. Non tutti i browser mobili trattano i file locali nello stesso modo.</p>
-   <p>Nome e scelte restano solo nella memoria della pagina. Non ci sono analytics, cookie, cronologia dei progetti, cloud o salvataggi automatici. «Ricomincia» libera il PNG della pagina e azzera le scelte; non può cancellare le copie già salvate in Download o Foto. La chiusura o ricarica della pagina perde le modifiche.</p>
-   <p><strong>PC Windows dello stand:</strong> estrai tutto lo ZIP e apri <code>AVVIA_CARTOLINA_WINDOWS.exe</code>. Il browser si apre da solo e, dopo la generazione, mostra il QR del PNG. Non servono Python, installazioni o comandi. Il file HTML aperto da solo rimane autonomo, ma non può ospitare un PNG per un altro dispositivo. Il servizio non può eliminare copie già scaricate, né completare un trasferimento se la rete scolastica isola PC e telefoni.</p>
+   <p>Nome e scelte restano nella memoria della pagina. Non ci sono analytics, cookie, cronologia dei progetti o salvataggi automatici. La creazione offline non invia dati online. Soltanto attivando QR Internet nel servizio Windows il download del PNG transita da Cloudflare, come indicato prima dell’attivazione. «Ricomincia» libera il PNG della pagina e azzera le scelte; non può cancellare le copie già salvate in Download o Foto. La chiusura o ricarica della pagina perde le modifiche.</p>
+   <p><strong>PC Windows dello stand:</strong> estrai tutto lo ZIP e apri <code>AVVIA_CARTOLINA_WINDOWS.exe</code>. Il browser si apre da solo e, dopo la generazione, mostra il QR del PNG. Non servono Python, installazioni o comandi. Il file HTML aperto da solo rimane autonomo, ma non può ospitare un PNG per un altro dispositivo. Il servizio non può eliminare copie già scaricate. Per reti diverse usa QR Internet, con connessione autorizzata; il solo file HTML non avvia un tunnel.</p>
    <h3>Compatibilità dichiarata</h3>
    <p>Verificata tramite i test documentati con Chromium, anche con viewport e touch emulati. Un’emulazione non è una prova su un telefono fisico. Safari/iOS, Firefox, hardware touch e Wi-Fi della scuola vanno verificati prima dell’evento. Servono JavaScript, Canvas e memoria sufficiente; sui telefoni meno recenti la generazione può richiedere più tempo.</p>
    <h3>Fotografie autentiche</h3>

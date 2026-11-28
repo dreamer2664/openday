@@ -60,7 +60,7 @@ def main():
     report=dict(date='2026-11-27',file=OUTPUT.name,editions='One responsive standalone HTML: full desktop and touch-phone creator.',
                 renderer='Independent JavaScript + Canvas; artist-drawn LPC indexed atlases + translated original equipment/animals; no Python runtime.',
                 photos={},fonts={},nes_art='Twelve AI-assisted architectural paintings, native 600x400, 64 colours each; canonical PNG hashes and references in assets/nes/manifest.json.',runtime_network='None',visitor_storage='Memory of the open page only; no project persistence.',
-                qr='AVVIA_CARTOLINA_WINDOWS.exe serves this full HTML and hosts its actual finished PNG via temporary LAN URL. Raw standalone HTML exports locally without hosting other devices.',lpc_commit=lpc['commit'],lpc_parts=len(lpc['parts']),lpc_pose_atlases=len(lpc['atlases']))
+                bridge_revision='qr-internet-1 (creator unchanged: 3.3.1)',qr='Windows serves the complete HTML and finished PNG using LAN or explicitly enabled Cloudflare HTTPS Internet QR. Standalone file exports locally; it never starts a tunnel.',lpc_commit=lpc['commit'],lpc_parts=len(lpc['parts']),lpc_pose_atlases=len(lpc['atlases']))
     data['stickerManifest']=json.loads((ROOT/'assets/stickers/manifest.json').read_text())
     data['stickerImages']={sid:{mode:uri((ROOT/record['paths'][mode]).read_bytes(),'image/png') for mode in ('photo','nes')} for sid,record in data['stickerManifest']['stickers'].items()}
     data['licenses']['Logo Casardi — fonte e ambito del riuso']=(ROOT/'assets/stickers/FONTE_LOGO_E_LICENZA.txt').read_text()

@@ -32,6 +32,7 @@ import (
 )
 
 const appID = "casardi-postcard-lan-3"
+const bridgeRevision = "qr-internet-1"
 const maxPNG = 24 << 20
 const minTTL = 300
 const maxTTL = 600
@@ -55,6 +56,7 @@ type Bridge struct {
 	html       []byte
 	key        string
 	generation uint64
+	stateSeq   uint64
 	card       *Card
 	networks   []Network
 	selected   string
@@ -63,6 +65,7 @@ type Bridge struct {
 	now        func() time.Time
 	preview    bool
 	stop       func()
+	internet   *InternetTunnel
 }
 
 func randomKey(n int) string {
@@ -219,13 +222,21 @@ func qrData(link string) string {
 	return "data:image/png;base64," + base64.StdEncoding.EncodeToString(raw)
 }
 func (b *Bridge) stateLocked(includeKey bool) map[string]any {
+	b.stateSeq++ // Lets the browser discard out-of-order state responses.
 	b.expireLocked()
 	base := b.baseURL()
-	creator := ""
-	if base != "" {
-		creator = base + "/telefono"
+	lanBase := base
+	mode := "lan"
+	internet := b.internet.snapshot()
+	if internet.Status != "off" {
+		mode = "internet"
+		base = internet.URL
 	}
-	result := map[string]any{"app": appID, "generation": b.generation, "ttl_seconds": int(b.ttl.Seconds()), "networks": b.networks, "selected_ip": b.selected, "creator_url": creator, "creator_qr": qrData(creator), "server_time": b.now().UnixMilli(), "local_service": true}
+	creator := ""
+	if lanBase != "" {
+		creator = lanBase + "/telefono"
+	}
+	result := map[string]any{"app": appID, "generation": b.generation, "state_seq": b.stateSeq, "ttl_seconds": int(b.ttl.Seconds()), "networks": b.networks, "selected_ip": b.selected, "creator_url": creator, "creator_qr": qrData(creator), "server_time": b.now().UnixMilli(), "local_service": true, "transfer_mode": mode, "internet": internet}
 	if includeKey {
 		result["key"] = b.key
 	}
@@ -296,6 +307,8 @@ func (b *Bridge) api(w http.ResponseWriter, r *http.Request) {
 		state := b.stateLocked(false)
 		b.mu.Unlock()
 		jsonReply(w, 200, state)
+	case "/bridge/internet":
+		b.internetAPI(w, r)
 	case "/bridge/export":
 		b.upload(w, r)
 	case "/bridge/network":
@@ -337,6 +350,7 @@ func (b *Bridge) api(w http.ResponseWriter, r *http.Request) {
 		b.generation++
 		b.mu.Unlock()
 		jsonReply(w, 200, map[string]bool{"stopped": true})
+		b.internet.stop()
 		if b.stop != nil {
 			go func() { time.Sleep(100 * time.Millisecond); b.stop() }()
 		}
@@ -394,9 +408,12 @@ func (b *Bridge) upload(w http.ResponseWriter, r *http.Request) {
 
 var phoneTemplate = template.Must(template.New("phone").Parse(`<!doctype html><html lang="it"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>La tua cartolina · Casardi</title><style>
 @font-face{font-family:Pixel;src:url(data:font/woff;base64,` + phoneFontData + `) format('woff');font-display:swap}
-*{box-sizing:border-box}body{margin:0;background:#101426;color:#f6efd9;font:15px/1.8 ui-monospace,Consolas,monospace}main{max-width:780px;margin:auto;padding:29px 20px 40px}small{font:7px/2 Pixel,monospace;color:#b7c1d4}h1{font:clamp(17px,4.5vw,27px)/1.8 Pixel,monospace;margin:24px 0;color:#f6efd9}img{width:100%;height:auto;border:3px solid #667493;box-shadow:5px 5px 0 #050918;image-rendering:pixelated}a{display:block;min-height:56px;text-align:center;background:#82e4c4;color:#101a2b;padding:15px 16px;border:2px solid #bdffdf;box-shadow:3px 3px 0 #050918;text-decoration:none;margin:19px 0;font-weight:700}a:focus-visible{outline:3px solid #f1c675;outline-offset:4px}a.secondary{background:#1a2038;color:#f6efd9;border-color:#667493}p.note{font-size:12px;color:#b4bdd1}.badge{color:#f1c675;font:8px/2 Pixel,monospace;border-top:1px solid #495574;padding-top:22px;margin-top:22px}.expired{padding:20px;background:#263047;border:2px solid #f1c675;color:#f6efd9;font-size:14px}code{word-break:break-word}</style><main><small>LICEO ALFREDO CASARDI · BARLETTA</small>{{if .Available}}<p class="badge">OPEN DAY 2026/27</p><h1>La tua cartolina<br>è pronta.</h1><p>PNG originale · 3000 × 2000 pixel</p><img src="{{.Image}}" alt="La tua cartolina pronta da salvare"><a href="{{.File}}" download="Cartolina_Casardi.png">Scarica il PNG</a><a class="secondary" href="{{.Image}}" target="_blank" rel="noopener">Apri l’immagine</a><p>Su iPhone o se il download non parte: apri l’immagine, tieni premuto e scegli «Salva in Foto» oppure usa il menu Condividi del browser.</p><p class="note">Collegamento temporaneo: valido ancora circa {{.Minutes}} minuti, salvo «Nuova cartolina» sul PC. Salva prima di lasciare lo stand. La copia già scaricata resta tua; i crediti sono nei metadati del PNG.</p>{{else}}<h1>Questo collegamento<br>non è più valido.</h1><p class="expired">La cartolina è scaduta o la postazione è stata azzerata. Torna al PC dello stand per generarne una nuova. Le copie già salvate sul telefono non vengono cancellate.</p>{{end}}<p class="note">Trasferimento diretto sulla rete locale. Nessun account, cloud o pubblicazione online.</p></main></html>`))
+*{box-sizing:border-box}body{margin:0;background:#101426;color:#f6efd9;font:15px/1.8 ui-monospace,Consolas,monospace}main{max-width:780px;margin:auto;padding:29px 20px 40px}small{font:7px/2 Pixel,monospace;color:#b7c1d4}h1{font:clamp(17px,4.5vw,27px)/1.8 Pixel,monospace;margin:24px 0;color:#f6efd9}img{width:100%;height:auto;border:3px solid #667493;box-shadow:5px 5px 0 #050918;image-rendering:pixelated}a{display:block;min-height:56px;text-align:center;background:#82e4c4;color:#101a2b;padding:15px 16px;border:2px solid #bdffdf;box-shadow:3px 3px 0 #050918;text-decoration:none;margin:19px 0;font-weight:700}a:focus-visible{outline:3px solid #f1c675;outline-offset:4px}a.secondary{background:#1a2038;color:#f6efd9;border-color:#667493}p.note{font-size:12px;color:#b4bdd1}.badge{color:#f1c675;font:8px/2 Pixel,monospace;border-top:1px solid #495574;padding-top:22px;margin-top:22px}.expired{padding:20px;background:#263047;border:2px solid #f1c675;color:#f6efd9;font-size:14px}code{word-break:break-word}</style><main><small>LICEO ALFREDO CASARDI · BARLETTA</small>{{if .Available}}<p class="badge">OPEN DAY 2026/27</p><h1>La tua cartolina<br>è pronta.</h1><p>PNG originale · 3000 × 2000 pixel</p><img src="{{.Image}}" alt="La tua cartolina pronta da salvare"><a href="{{.File}}" download="Cartolina_Casardi.png">Scarica il PNG</a><a class="secondary" href="{{.Image}}" target="_blank" rel="noopener">Apri l’immagine</a><p>Su iPhone o se il download non parte: apri l’immagine, tieni premuto e scegli «Salva in Foto» oppure usa il menu Condividi del browser.</p><p class="note">Collegamento temporaneo: valido ancora circa {{.Minutes}} minuti, salvo «Nuova cartolina» sul PC. Salva prima di lasciare lo stand. La copia già scaricata resta tua; i crediti sono nei metadati del PNG.</p>{{else}}<h1>Questo collegamento<br>non è più valido.</h1><p class="expired">La cartolina è scaduta o la postazione è stata azzerata. Torna al PC dello stand per generarne una nuova. Le copie già salvate sul telefono non vengono cancellate.</p>{{end}}<p class="note">{{if .Internet}}Trasferimento Internet tramite Cloudflare. Il PNG transita dal fornitore esterno; il PC deve restare acceso e connesso. Chi possiede questo link puo scaricare il PNG finche e valido.{{else}}Trasferimento diretto sulla rete locale. Nessun account, cloud o pubblicazione online.{{end}}</p></main></html>`))
 
 func (b *Bridge) download(w http.ResponseWriter, r *http.Request) {
+	b.downloadWithMode(w, r, false)
+}
+func (b *Bridge) downloadWithMode(w http.ResponseWriter, r *http.Request, internet bool) {
 	if r.Method != "GET" && r.Method != "HEAD" {
 		http.Error(w, "Metodo non consentito", 405)
 		return
@@ -424,7 +441,7 @@ func (b *Bridge) download(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Security-Policy", "default-src 'none'; style-src 'unsafe-inline'; font-src data:; base-uri 'none'; frame-ancestors 'none'")
 		w.WriteHeader(410)
 		if r.Method == "GET" {
-			_ = phoneTemplate.Execute(w, map[string]any{"Available": false})
+			_ = phoneTemplate.Execute(w, map[string]any{"Available": false, "Internet": internet})
 		}
 		return
 	}
@@ -434,7 +451,7 @@ func (b *Bridge) download(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/html; charset=utf-8")
 		w.Header().Set("Content-Security-Policy", "default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; font-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'")
 		if r.Method == "GET" {
-			_ = phoneTemplate.Execute(w, map[string]any{"Available": true, "Image": "/download/" + token + "/image", "File": "/download/" + token + "/file", "Minutes": minutes})
+			_ = phoneTemplate.Execute(w, map[string]any{"Available": true, "Image": "/download/" + token + "/image", "File": "/download/" + token + "/file", "Minutes": minutes, "Internet": internet})
 		}
 		return
 	}
@@ -464,7 +481,7 @@ func (b *Bridge) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, "Metodo non consentito", 405)
 			return
 		}
-		jsonReply(w, 200, map[string]any{"app": appID, "version": "3.0"})
+		jsonReply(w, 200, map[string]any{"app": appID, "version": "3.0", "bridge_revision": bridgeRevision})
 	case strings.HasPrefix(r.URL.Path, "/bridge/"):
 		b.api(w, r)
 	case strings.HasPrefix(r.URL.Path, "/download/"):
@@ -509,11 +526,15 @@ func findListener() (net.Listener, int, bool, error) {
 		res, e := client.Get(fmt.Sprintf("http://127.0.0.1:%d/health", port))
 		if e == nil {
 			var state struct {
-				App string `json:"app"`
+				App            string `json:"app"`
+				BridgeRevision string `json:"bridge_revision"`
 			}
 			_ = json.NewDecoder(io.LimitReader(res.Body, 2048)).Decode(&state)
 			res.Body.Close()
 			if state.App == appID {
+				if state.BridgeRevision != bridgeRevision {
+					return nil, 0, false, errors.New("E gia in esecuzione una versione precedente della Cartolina. Nella vecchia finestra apri Info, poi Arresta servizio locale. Quindi riapri AVVIA_CARTOLINA_WINDOWS.exe dal nuovo pacchetto QR Internet.")
+				}
 				return nil, port, true, nil
 			}
 		}
@@ -545,6 +566,8 @@ func main() {
 		ttl = v
 	}
 	b := newBridge(data, port, time.Duration(ttl)*time.Second, localNetworks())
+	b.internet = newInternetTunnel(b)
+	defer b.internet.stop()
 	b.preview = os.Getenv("CASARDI_TRUST_PREVIEW") == "1"
 	// Explicit QA-only loopback/link-local network, never used by the normal
 	// Windows double-click launch. It does not certify school-Wi-Fi access.
@@ -559,6 +582,7 @@ func main() {
 	go b.cleanup(ctx)
 	server := &http.Server{Handler: b, ReadHeaderTimeout: 8 * time.Second, ReadTimeout: 90 * time.Second, WriteTimeout: 90 * time.Second, IdleTimeout: 45 * time.Second, MaxHeaderBytes: 16 << 10, ErrorLog: log.New(io.Discard, "", 0)}
 	b.stop = func() {
+		b.internet.stop()
 		cancel()
 		shutdown, c := context.WithTimeout(context.Background(), 3*time.Second)
 		defer c()

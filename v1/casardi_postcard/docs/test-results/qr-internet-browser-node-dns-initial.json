@@ -1,0 +1,38 @@
+{
+  "result": "FAIL",
+  "checks": [
+    {
+      "name": "Standalone file:// still creates a licensed 3000x2000 PNG completely offline; no Internet controls or HTTP requests",
+      "result": "PASS"
+    },
+    {
+      "name": "Visible Internet option; cancelling consent does not start any tunnel",
+      "result": "PASS"
+    },
+    {
+      "name": "Internet enabled by the actual UI, official helper started and real public HTTPS verified",
+      "result": "PASS"
+    },
+    {
+      "name": "Final PNG QR uses the HTTPS public download, labels cross-network use and discloses Cloudflare transit",
+      "result": "PASS",
+      "bytes": 661352,
+      "sha256": "20e8c45644ad4a8c46ee2267a1dd52f2abcb1eea289587bcddc0b1ad980f1fe8"
+    },
+    {
+      "name": "Separate touch browser opens real public URL and downloads byte-identical PNG; no shared cookies or local network URL",
+      "result": "PASS"
+    }
+  ],
+  "javascript_errors": [],
+  "native_windows": "NOT TESTED",
+  "physical_phone_4g_school_network": "NOT TESTED",
+  "error": "APIRequestContext.get: getaddrinfo ENOTFOUND effects-language-notre-scale.trycloudflare.com\nCall log:\n  - → GET https://effects-language-notre-scale.trycloudflare.com/download/REVOKED_TEST_TOKEN/file\n    - user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/159.0.8154.6 Safari/537.36\n    - accept: */*\n    - accept-encoding: gzip,deflate,br\n",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/user/.cache/casardi-qr-internet/casardi_postcard/scripts/qr_internet_ui_test.py\", line 68, in main\n    assert (await event.value).status==200;assert (await phone_ctx.request.get(url+'/file')).status==410\n                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/async_api/_generated.py\", line 607, in get\n    await self._impl_obj.get(\n    ...<11 lines>...\n    )\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/fetch.py\", line 344, in get\n    return await self.fetch(\n           ^^^^^^^^^^^^^^^^^\n    ...<12 lines>...\n    )\n    ^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py\", line 387, in finish\n    raise e from None\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py\", line 352, in finish\n    result = await zone.run_async(lambda: awaitable)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/utils/zones.py\", line 58, in run_async\n    return await func()\n           ^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/fetch.py\", line 464, in fetch\n    return await self._inner_fetch(\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<13 lines>...\n    )\n    ^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/fetch.py\", line 589, in _inner_fetch\n    result = await self._channel.fetch(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<19 lines>...\n    )\n    ^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py\", line 398, in _mapped\n    return mapper(await awaitable)\n                  ^^^^^^^^^^^^^^^\nplaywright._impl._errors.Error: APIRequestContext.get: getaddrinfo ENOTFOUND effects-language-notre-scale.trycloudflare.com\nCall log:\n  - → GET https://effects-language-notre-scale.trycloudflare.com/download/REVOKED_TEST_TOKEN/file\n    - user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/159.0.8154.6 Safari/537.36\n    - accept: */*\n    - accept-encoding: gzip,deflate,br\n\n",
+  "service_exit": 0,
+  "service_stderr": "",
+  "seconds": 23.74,
+  "html_sha256": "c90f4b809ab06f905d2eedfef3660f7091246d75437162ef1b20cc2c9cdcf1b0",
+  "go_source_files": 27,
+  "go_source_sha256": "1f7b04e89216e5505d88c3f90bebe20180d13c337ee7aa8b90ca16013f4d713d"
+}

@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "bridge_revision": "qr-internet-1",
+  "creator_revision": "3.3.1",
+  "go_race_top_level_pass": 42,
+  "actual_public_tunnel_checks": 9,
+  "browser_checks": 9,
+  "asset_files_byte_exact": 473,
+  "embedded_assets_and_rendering_unchanged": true,
+  "runtime_files": 544,
+  "runtime_sha256": "143b63363669443cc2d62288811d6b0578e1576a1d483585356c7f18a5fa8944",
+  "html_sha256": "c90f4b809ab06f905d2eedfef3660f7091246d75437162ef1b20cc2c9cdcf1b0",
+  "go_source_sha256": "1f7b04e89216e5505d88c3f90bebe20180d13c337ee7aa8b90ca16013f4d713d",
+  "windows_exe_sha256": "771387706a9b54175c23e90ef4cd4a6b3be7f98a8924e15fa83265d0e251072d",
+  "cloudflared_bundled": false,
+  "credentials_bundled": false,
+  "native_windows": "NOT TESTED",
+  "physical_phone_school_network": "NOT TESTED",
+  "android_arena_drag_fix_claimed": false,
+  "extracted_smoke": "PASS",
+  "historical_reports": "Preserved; not represented as rerun results for changed runtime."
+}

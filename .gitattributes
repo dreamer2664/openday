@@ -16,3 +16,9 @@
 /casardi_diagnostica/** -text
 /esperimenti/** -text
 /archivio_cartolina/** -text
+
+# QR Internet 1: preserve packaged source bytes and current guides.
+/v1/casardi_postcard/** -text
+/Guida_QR_Internet_Casardi.md -text
+/SOLUZIONE_STABILE_GRATUITA_QR.md -text
+/Verifica_QR_Internet_Casardi.json -text

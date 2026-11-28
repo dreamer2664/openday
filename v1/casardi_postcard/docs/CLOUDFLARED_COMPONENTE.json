@@ -1,0 +1,20 @@
+{
+  "version": "2026.11.2",
+  "official_release": "https://github.com/cloudflare/cloudflared/releases/tag/2026.11.2",
+  "license": "Apache-2.0; external official component, not bundled in this ZIP",
+  "license_url": "https://github.com/cloudflare/cloudflared/blob/2026.11.2/LICENSE",
+  "artifacts": [
+    {
+      "name": "cloudflared-linux-amd64",
+      "size": 40334417,
+      "digest": "sha256:56f13335143ec0e22772963290683a84a04114a35ec64cbc794a4d39ff9bb8cf",
+      "browser_download_url": "https://github.com/cloudflare/cloudflared/releases/download/2026.11.2/cloudflared-linux-amd64"
+    },
+    {
+      "name": "cloudflared-windows-amd64.exe",
+      "size": 55470800,
+      "digest": "sha256:555b46c85582461d189cac30d14ad05480d612613801be9f110b8ce08c5b2113",
+      "browser_download_url": "https://github.com/cloudflare/cloudflared/releases/download/2026.11.2/cloudflared-windows-amd64.exe"
+    }
+  ]
+}

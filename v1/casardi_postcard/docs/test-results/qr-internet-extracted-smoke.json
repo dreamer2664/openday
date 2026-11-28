@@ -1,0 +1,40 @@
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "name": "Every ZIP member CRC and SHA256 verified; extracted runtime byte-identical to tested delivery",
+      "result": "PASS"
+    },
+    {
+      "name": "Packaged Windows executable is PE x64 GUI and equals the reported build",
+      "result": "PASS"
+    },
+    {
+      "name": "Extracted Go sources compile offline with the vendored dependency",
+      "result": "PASS"
+    },
+    {
+      "name": "Native extracted service reads adjacent packaged HTML from a different cwd; Internet is opt-in",
+      "result": "PASS"
+    },
+    {
+      "name": "Extracted runtime accepts real HD PNG, revokes on reset and does not expose source/files",
+      "result": "PASS"
+    },
+    {
+      "name": "Stop closes the extracted service; no background process left",
+      "result": "PASS"
+    }
+  ],
+  "seconds": 2.45,
+  "candidate_archive_sha256": "46c46dba26f5b33c70b10e19340c616f0f0cf10ea53bf2882b0ef2335a18d9a4",
+  "candidate_archive_members": 746,
+  "manifest_verified_entries": 745,
+  "runtime_files": 544,
+  "runtime_sha256": "143b63363669443cc2d62288811d6b0578e1576a1d483585356c7f18a5fa8944",
+  "html_sha256": "c90f4b809ab06f905d2eedfef3660f7091246d75437162ef1b20cc2c9cdcf1b0",
+  "windows_exe_sha256": "771387706a9b54175c23e90ef4cd4a6b3be7f98a8924e15fa83265d0e251072d",
+  "native_windows_execution": "NOT TESTED",
+  "public_4g_hardware": "NOT TESTED; real public tunnel/browser checks are separate",
+  "candidate_vs_final": "Final ZIP may add this documentation report, but package preflight requires this same byte-exact runtime."
+}

@@ -1,0 +1,20 @@
+{
+  "result": "FAIL",
+  "checks": [
+    {
+      "name": "Standalone file:// still creates a licensed 3000x2000 PNG completely offline; no Internet controls or HTTP requests",
+      "result": "PASS"
+    }
+  ],
+  "javascript_errors": [],
+  "native_windows": "NOT TESTED",
+  "physical_phone_4g_school_network": "NOT TESTED",
+  "error": "Response.text: Protocol error (Network.getResponseBody): Request content was evicted from inspector cache\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation.",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/user/.cache/casardi-qr-internet/casardi_postcard/scripts/qr_internet_ui_test.py\", line 44, in main\n    response=await page.goto(base);cfg=json.loads(re.search(r'id=\"local-service-config\">(.*?)</script>',await response.text(),re.S)[1]);headers={'X-Casardi-Key':cfg['key'],'Origin':base}\n                                                                                                        ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/async_api/_generated.py\", line 22277, in text\n    return mapping.from_maybe_impl(await self._impl_obj.text())\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/network.py\", line 1057, in text\n    content = await self.body()\n              ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/network.py\", line 1053, in body\n    (await self._channel.body(timeout=NO_TIMEOUT))[\"binary\"]\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py\", line 398, in _mapped\n    return mapper(await awaitable)\n                  ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py\", line 387, in finish\n    raise e from None\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py\", line 352, in finish\n    result = await zone.run_async(lambda: awaitable)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/utils/zones.py\", line 58, in run_async\n    return await func()\n           ^^^^^^^^^^^^\nplaywright._impl._errors.Error: Response.text: Protocol error (Network.getResponseBody): Request content was evicted from inspector cache\nResponse body is not available for a response that was navigated away from. Read response.body() before triggering any navigation.\n",
+  "service_exit": 0,
+  "service_stderr": "",
+  "seconds": 15.6,
+  "html_sha256": "c90f4b809ab06f905d2eedfef3660f7091246d75437162ef1b20cc2c9cdcf1b0",
+  "go_source_files": 27,
+  "go_source_sha256": "1f7b04e89216e5505d88c3f90bebe20180d13c337ee7aa8b90ca16013f4d713d"
+}

@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "bridge_revision": "qr-internet-1",
+  "creator_revision": "3.3.1",
+  "built_at_workspace_utc": "2026-11-28T09:14:53.320912+00:00",
+  "compiler": "go version go1.27.4 linux/amd64",
+  "build_host": "Linux x86_64",
+  "target": "windows/amd64, GUI subsystem, CGO_ENABLED=0",
+  "file": "AVVIA_CARTOLINA_WINDOWS.exe",
+  "bytes": 10529280,
+  "sha256": "771387706a9b54175c23e90ef4cd4a6b3be7f98a8924e15fa83265d0e251072d",
+  "source_files": 27,
+  "source_sha256": "1f7b04e89216e5505d88c3f90bebe20180d13c337ee7aa8b90ca16013f4d713d",
+  "dependency": "Vendored github.com/skip2/go-qrcode (MIT)",
+  "source_network": "Disabled: GOPROXY=off and GOSUMDB=off; verified Go toolchain preinstalled.",
+  "cloudflared": "Official 2026.11.2, not bundled; first opt-in downloads a pinned artifact with size/SHA256 verification.",
+  "runtime": "No Python/Go/Node runtime; keep paired full HTML beside EXE.",
+  "native_windows_execution": "NOT TESTED",
+  "windows_job_object_native": "NOT TESTED; cross-compiled kill-on-close ownership implementation",
+  "code_signing": "Unsigned; no signing certificate supplied.",
+  "linux_qa_binary_sha256": "c92b535ff64e3830decd8a4d487a122137baebd0a164cd69237982be43110a84"
+}
