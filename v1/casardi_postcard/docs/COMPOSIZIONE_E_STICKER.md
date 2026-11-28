@@ -1,4 +1,4 @@
-# Composizione libera e ultimi tocchi · revisione 3.3
+# Composizione libera e ultimi tocchi · revisione 3.3.1
 ## Liceo Alfredo Casardi · Barletta · Open Day 2026/27
 
 Le aggiunte si trovano **alla fine**, nell’ultimo passaggio **Anteprima**, prima di Genera PNG. Non sono richieste per proseguire. All’inizio non ci sono sticker, simboli, indicazioni del percorso o nuove finiture.
@@ -8,6 +8,7 @@ Le aggiunte si trovano **alla fine**, nell’ultimo passaggio **Anteprima**, pri
 - Porta il puntatore sul personaggio: compare il piccolo indicatore di spostamento. **Premi e trascina**, quindi rilascia. Su telefono trascina con **un dito**.
 - Il companion, se scelto, segue lo stesso spostamento e conserva il rapporto di scala. Il gruppo è contenuto nella cornice.
 - Mentre trascini vedi il vero ritaglio del personaggio e del companion, non un segnaposto. Al rilascio si ricompongono ombre, contatto e occlusione.
+- **Gesto interrotto:** se il browser perde il trascinamento o la finestra diventa inattiva, viene annullato solo il gesto in corso. Le modifiche già confermate restano; puoi riprendere senza Ricomincia.
 - Per la tastiera: raggiungi il personaggio con **Tab**, poi usa **← ↑ → ↓**. **Maiusc + freccia** effettua uno spostamento più ampio. Esc annulla un trascinamento in corso.
 - Apri **Personaggio · dimensione e posizione**: il cursore offre **Piccolo, Medio e Grande**, tre scale effettivamente distinte a passi di pixel interi. Non introduce una riscalatura sfocata dello sprite.
 - **Posizione consigliata** riporta appoggio e dimensione a quelli del luogo, senza rimuovere gli sticker o la targhetta.

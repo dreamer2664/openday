@@ -55,9 +55,9 @@
     }
   ],
   "actual_ui_alternative_clicks": 137,
-  "html_sha256": "e8e28940e478a985e2b5113606045b4eac8677c58c27055a8392b719605a392a",
+  "html_sha256": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea",
   "javascript_errors": [],
   "standalone_http_requests": [],
-  "seconds": 13.51,
+  "seconds": 13.98,
   "environment": "Chromium Linux, file:// offline and loopback HTTP; 390px responsive emulation, not a physical Android/iOS phone."
 }

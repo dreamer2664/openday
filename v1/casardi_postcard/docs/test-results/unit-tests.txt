@@ -80,6 +80,6 @@ test_phone_route_full_creator_no_owner_or_card (test_standalone.StandaloneTests.
 test_translator_current_and_rejects_unsupported_syntax (test_standalone.StandaloneTests.test_translator_current_and_rejects_unsupported_syntax) ... ok
 
 ----------------------------------------------------------------------
-Ran 76 tests in 10.743s
+Ran 76 tests in 11.086s
 
 OK

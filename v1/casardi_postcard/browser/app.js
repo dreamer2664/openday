@@ -90,8 +90,8 @@
  async function preview(){
   editor.setRendering();previewController?.abort();const ctl=previewController=new AbortController(),epoch=state.epoch;$('#preview-loading').hidden=false;$('#export').disabled=true;
   let c=null;try{c=await R.compose(job(),matchMedia('(max-width: 760px)').matches?900:1200,{signal:ctl.signal,editor:true});if(epoch!==state.epoch||ctl.signal.aborted)return;const data={image:c.toDataURL('image/png'),clean:c.editor.clean.toDataURL('image/png'),ghost:c.editor.ghost.toDataURL('image/png'),meta:c.editor.meta};const image=$('#final-preview');image.src=data.image;await image.decode();if(epoch!==state.epoch||ctl.signal.aborted)return;await editor.setPreview(data);$('#export').disabled=false;}
-  catch(e){if(e.name!=='AbortError'){editor.failed();notice(e.message||'Anteprima non riuscita. Riprova o chiudi altre schede per liberare memoria.',true);}}
-  finally{R.dispose(c);if(previewController===ctl)$('#preview-loading').hidden=true;}
+  catch(e){if(previewController===ctl&&epoch===state.epoch&&!ctl.signal.aborted){editor.failed();notice(e.name==='AbortError'?'Anteprima interrotta. Puoi continuare a modificare la composizione o tornare indietro e riprovare.':e.message||'Anteprima non riuscita. Riprova o chiudi altre schede per liberare memoria.',true);}}
+  finally{R.dispose(c);if(previewController===ctl&&epoch===state.epoch){editor.setRendering(false);$('#preview-loading').hidden=true;}}
  }
  function show(n){
   if(!state.ready)return;if(state.busy){notice('Attendi il PNG oppure usa Ricomincia per annullare.');return;}if(n>0&&!state.styleChosen)return;if(n>state.highest+1)return;
@@ -108,7 +108,7 @@
  $$('[data-mode]').forEach(b=>b.addEventListener('click',()=>{changed();state.mode=b.dataset.mode;state.styleChosen=true;mode();scenes();animals();live();show(1);}));
  $('#nickname').addEventListener('input',e=>{state.name=R.cleanName(e.target.value);if(Array.from(e.target.value).length>28)e.target.value=state.name;changed();});
  $('#export').addEventListener('click',async()=>{
-  if(state.busy)return;state.busy=true;editor.setBusy(true);const epoch=state.epoch,ctl=exportController=new AbortController(),data=job();discardFile();$('#export').disabled=true;$('#export').textContent='Composizione HD…';$('#export-progress').hidden=false;$('#progress').value=0;
+  if(state.busy)return;editor.setBusy(true);state.busy=true;const epoch=state.epoch,ctl=exportController=new AbortController(),data=job();discardFile();$('#export').disabled=true;$('#export').textContent='Composizione HD…';$('#export-progress').hidden=false;$('#progress').value=0;
   let c=null;try{
    c=await R.compose(data,3000,{signal:ctl.signal,onProgress:v=>$('#progress').value=v});const blob=await R.pngBlob(c,data,ctl.signal);R.dispose(c);c=null;if(epoch!==state.epoch||ctl.signal.aborted)return;
    const filename='cartolina-casardi-'+data.scene+'-'+(data.mode==='nes'?'pixel':'foto')+'.png';state.file=new File([blob],filename,{type:'image/png'});fileURL=URL.createObjectURL(blob);creditsURL=URL.createObjectURL(new Blob([R.credit(data).text],{type:'text/plain;charset=utf-8'}));

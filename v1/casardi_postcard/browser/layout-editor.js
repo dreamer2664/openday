@@ -63,20 +63,37 @@ globalThis.CasardiEditor=(()=>{
   function restoreImage(){ghost.hidden=true;if(urls){image.src=urls.main;delete urls.pendingDelta;}}
   function position(e){const r=image.getBoundingClientRect();return{x:(e.clientX-r.left)*600/r.width,y:(e.clientY-r.top)*400/r.height};}
   overlay.addEventListener('pointerdown',e=>{
-   const target=e.target.closest('[data-drag]');if(!target||busy||rendering||!meta||drag||e.pointerType==='mouse'&&e.button!==0)return;e.preventDefault();target.focus({preventScroll:true});target.setPointerCapture(e.pointerId);const key=target.dataset.drag;active=key==='actor'?'actor':Number(key);const c=get();drag={kind:key,id:e.pointerId,target,start:position(e),before:copy(c),origin:key==='actor'?{x:meta.actor.x,y:meta.actor.y}:{x:geom(c.stickers[Number(key)]).cx,y:geom(c.stickers[Number(key)]).cy},delta:{x:0,y:0},moved:false};if(key==='actor')showGhost(drag.delta);draw();controls();
+   const target=e.target.closest('[data-drag]');if(!target||busy||rendering||!meta||drag||e.pointerType==='mouse'&&e.button!==0)return;e.preventDefault();target.focus({preventScroll:true});const key=target.dataset.drag;active=key==='actor'?'actor':Number(key);const c=get();drag={kind:key,id:e.pointerId,target,start:position(e),before:copy(c),origin:key==='actor'?{x:meta.actor.x,y:meta.actor.y}:{x:geom(c.stickers[Number(key)]).cx,y:geom(c.stickers[Number(key)]).cy},delta:{x:0,y:0},moved:false,captured:false};try{target.setPointerCapture(e.pointerId);drag.captured=true;}catch(_){}if(key==='actor')showGhost(drag.delta);draw();controls();
   });
-  overlay.addEventListener('pointermove',e=>{
-   if(!drag||e.pointerId!==drag.id)return;e.preventDefault();const p=position(e),dx=p.x-drag.start.x,dy=p.y-drag.start.y;if(Math.abs(dx)+Math.abs(dy)<1&&!drag.moved)return;drag.moved=true;const c=copy(get());
+  // Listen on the window as well as using pointer capture: a release outside
+  // the postcard must always settle the gesture, even if capture is unavailable.
+  window.addEventListener('pointermove',e=>{
+   if(!drag||e.pointerId!==drag.id)return;if(e.buttons===0&&e.pointerType!=='touch'){end(true);return;}if(e.cancelable)e.preventDefault();const p=position(e),dx=p.x-drag.start.x,dy=p.y-drag.start.y;if(Math.abs(dx)+Math.abs(dy)<1&&!drag.moved)return;drag.moved=true;const c=copy(get());
    if(drag.kind==='actor'){c.actor=actorPoint(drag.origin.x+dx,drag.origin.y+dy);drag.delta={x:c.actor.x-meta.actor.x,y:c.actor.y-meta.actor.y};showGhost(drag.delta);}
-   else{const s=c.stickers[Number(drag.kind)];s.x=Math.round(clamp(drag.origin.x+dx,0,600));s.y=Math.round(clamp(drag.origin.y+dy,0,400));const g=geom(s);s.x=Math.round(g.cx);s.y=Math.round(g.cy);}
+   else{const s=c.stickers[Number(drag.kind)];if(!s){end(true);return;}s.x=Math.round(clamp(drag.origin.x+dx,0,600));s.y=Math.round(clamp(drag.origin.y+dy,0,400));const g=geom(s);s.x=Math.round(g.cx);s.y=Math.round(g.cy);}
    cfg.onChange(c,{render:false,reason:'drag'});draw();
-  });
+  },{capture:true,passive:false});
   function end(cancel=false){if(!drag)return;const d=drag;drag=null;try{d.target.releasePointerCapture(d.id);}catch(_){}
    if(cancel){cfg.onChange(d.before,{render:false,reason:'cancel'});restoreImage();}
    else if(d.moved){push(d.before);if(d.kind==='actor'){urls.pendingDelta=d.delta;rendering=true;cfg.onChange(copy(get()),{render:true,reason:'actor'});}}
    else restoreImage();draw();controls();
   }
-  overlay.addEventListener('pointerup',e=>{if(drag?.id===e.pointerId)end();});overlay.addEventListener('pointercancel',e=>{if(drag?.id===e.pointerId)end(true);});
+  // Every termination path is idempotent. In 3.3 only up/cancel on the
+  // overlay cleared `drag`: lost capture left it permanently occupied, thereby
+  // rejecting all subsequent actor AND sticker drags. Cancel only this gesture;
+  // previous edits/history stay intact, with no visitor reset or watchdog timer.
+  window.addEventListener('pointerup',e=>{if(drag?.id===e.pointerId)end();},true);
+  window.addEventListener('pointercancel',e=>{if(drag?.id===e.pointerId)end(true);},true);
+  document.addEventListener('lostpointercapture',e=>{if(drag?.id===e.pointerId)end(true);},true);
+  window.addEventListener('blur',()=>end(true));
+  window.addEventListener('pagehide',()=>end(true));
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)end(true);});
+  window.addEventListener('pointerdown',e=>{
+   if(drag&&(e.pointerId===drag.id||!drag.target.isConnected||!overlay.contains(e.target)||(drag.captured&&!drag.target.hasPointerCapture(drag.id))))end(true);
+  },true);
+  window.addEventListener('keydown',e=>{
+   if(drag&&!['Shift','Control','Alt','Meta'].includes(e.key)){end(true);if(e.key==='Escape')e.preventDefault();}
+  },true);
   overlay.addEventListener('keydown',e=>{
    if(e.key==='Escape'&&drag){e.preventDefault();end(true);return;}const target=e.target.closest('[data-drag]');if(!target||busy||rendering||!meta)return;const key=target.dataset.drag,step=e.shiftKey?10:2,delta={ArrowLeft:[-step,0],ArrowRight:[step,0],ArrowUp:[0,-step],ArrowDown:[0,step]}[e.key];active=key==='actor'?'actor':Number(key);
    if((e.key==='Delete'||e.key==='Backspace')&&key!=='actor'){e.preventDefault();const c=copy(get());c.stickers.splice(Number(key),1);active='actor';change(c,false,'remove');return;}
@@ -86,9 +103,9 @@ globalThis.CasardiEditor=(()=>{
   });
   controls();
   return{
-   async setPreview(data){meta=data.meta;urls={main:data.image,clean:data.clean,ghost:data.ghost};image.src=data.image;rendering=false;ghost.hidden=true;draw();controls();},
-   setRendering(value=true){rendering=value;},
-   setBusy(value){busy=value;fieldset.disabled=value;root.classList.toggle('editor-busy',value);undo.disabled=value||!history.length;clear.disabled=value;draw();},
+   async setPreview(data){if(drag)end(true);meta=data.meta;urls={main:data.image,clean:data.clean,ghost:data.ghost};image.src=data.image;rendering=false;ghost.hidden=true;draw();controls();},
+   setRendering(value=true){if(value&&drag)end(true);rendering=value;},
+   setBusy(value){if(value&&drag)end(true);busy=value;fieldset.disabled=value;root.classList.toggle('editor-busy',value);undo.disabled=value||!history.length;clear.disabled=value;draw();},
    failed(){rendering=false;restoreImage();draw();},
    reset(){if(drag)end(true);meta=null;urls=null;history=[];active='actor';ghost.hidden=true;ghost.removeAttribute('src');for(const n of nodes.values())n.remove();nodes.clear();rendering=false;busy=false;fieldset.disabled=false;controls();},
    refresh(){draw();controls();}

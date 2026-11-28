@@ -1,4 +1,4 @@
-"""Generate the release QA summary from executed, hash-pinned 3.3 evidence.
+"""Generate the release QA summary from executed, hash-pinned 3.3.1 evidence.
 Run after package_smoke.py, before the final package.py. Does not run tests.
 """
 from pathlib import Path
@@ -17,13 +17,24 @@ def main():
  for d in (stand,opt,control,retro,service,launch,http):assert all(t.get('result',t.get('status'))=='PASS' for t in d['tests'])
  n,digest=runtime_fingerprint();assert (n,digest)==(smoke['runtime_files_equal'],smoke['runtime_sha256'])
  count,seconds=re.search(r'Ran (\d+) tests in ([\d.]+)s',units).groups();assert units.rstrip().endswith('OK')
+ recovery=load('drag-recovery-tests.json');assert recovery['result']=='PASS' and recovery['html_sha256']==h
+ for path,d in recovery['sources'].items():assert sha(ROOT/path)==d
+ assets=load('unchanged-assets-3.3.1.json');assert assets['result']=='PASS' and assets['asset_files_byte_identical']==473
  go=load('windows-build.json');moved=[v['changed_export_pixels'] for v in opt['exports'] if v.get('operation')=='character mouse drag']
- report=f'''# Report di collaudo · 3.3 · Composizione libera e sticker
+ report=f'''# Report di collaudo · 3.3.1 · Correzione del blocco trascinamenti
 
 **27 novembre 2026 · Linux / Python 3.13 / Chromium Playwright / Go 1.27.4.**
-Questo report riassume prove realmente eseguite. I JSON/TXT completi sono in `docs/test-results/`. Il target dei test browser è l’HTML finale con SHA-256 **`{h}`**. Il campo storico «revision: 3.2» del piano `control-ui-tests.json` identifica le regressioni dei controlli precedenti: il file HTML nuovamente provato è quello 3.3 fissato dall’hash.
+Questo report riassume prove realmente eseguite. I JSON/TXT completi sono in `docs/test-results/`. Il target dei test browser è l’HTML finale con SHA-256 **`{h}`**. Il campo storico «revision: 3.2» del piano `control-ui-tests.json` identifica le regressioni dei controlli precedenti: il file HTML nuovamente provato è quello 3.3.1 fissato dall’hash.
 
-## 1 · Nuove funzionalità verificate
+## 0 · Bug segnalato: riproduzione e correzione verificata
+
+La 3.3 rilasciata (`004f06af…`, HTML SHA `e8e28940e478a985e2b5113606045b4eac8677c58c27055a8392b719605a392a`) si blocca se un gesto perde la cattura e termina fuori dalla cartolina: il vecchio `drag` non viene mai chiuso. Personaggio e sticker condividono quel blocco. La prova riproduce entrambi fermi, **senza caricamento o esportazione in corso**. Il contesto/browser e il gesto preciso dell’utente non sono noti: è una causa riprodotta con lo stesso sintomo, non una conferma forense del suo dispositivo.
+
+`drag-recovery-tests.json`: **{len(recovery['checks'])} verifiche PASS**, **{recovery['gesture_starts_attempted']} tentativi di gesto**, **240 trascinamenti consecutivi effettivamente verificati**, **6 PNG HD scaricati**, {recovery['seconds']} s. Con mouse e touch emulato, nei due stili: perdita di cattura, cancel, blur, pagina nascosta, pagehide, Esc; fine gesto fuori dall’overlay anche con cattura indisponibile; riuso di **entrambi** gli oggetti e annullamento senza perdita delle modifiche precedenti. Gli errori di decodifica dell’anteprima sono iniettati esplicitamente; la richiesta obsoleta non può sbloccare quella corrente. I quattro download Canvas dopo le prove sono identici alla ricomposizione indipendente dagli asset; ulteriori due provengono dall’UI Pillow.
+
+Il fix chiude il gesto in ogni via di interruzione, scarta solo lo spostamento incompleto e libera sempre lo stato di attesa dell’anteprima posseduto dalla richiesta corrente. Nessun timer che azzeri la cartolina e nessun allentamento CSP. **473 file di asset identici byte per byte alla 3.3**, compresi sfondi, LPC e logo: `unchanged-assets-3.3.1.json`. Qualità/risoluzione del logo non sono oggetto di questa patch. [Diagnosi ripetibile](docs/BUG_TRASCINAMENTO_3.3.1.md).
+
+## 1 · Funzionalità conservate e nuovamente verificate
 
 - Trascinamento del personaggio con mouse, dito emulato e tastiera, con companion solidale e contenimento nella cornice. Tre taglie effettivamente diverse a passi interi, non una serie di percentuali senza cambiamento dei pixel.
 - Ultimo pannello facoltativo: otto sticker, fino a sei presenti; trascinamento, ridimensionamento, inclinazione, rimozione, ordinamento, annullamento. Il logo istituzionale conserva proporzioni e orientamento.
@@ -78,11 +89,13 @@ I test del clock UI e della scadenza reale sono distinti: solo il secondo attend
 
 `scripts/package_smoke.py` è stato eseguito su una copia estratta esterna all’albero sorgente: sorgenti Go vendorizzati ricompilati nella copia, proprio eseguibile Linux, HTML letto accanto. Il solo HTML è stato copiato da solo e aperto offline, generando **cartoline decorate e con personaggio spostato** nei due stili. Il servizio estratto ha consegnato gli stessi byte attraverso veri URL/QR decodificati; reset/RAM vuota, `/telefono` completo senza chiave e nessun directory browsing PASS. Il PE Windows viene confrontato, non eseguito in Linux.
 
+EXE e `start.sh` mantengono i permessi eseguibili sul filesystem, nello ZIP e nell’albero Git; il packager rifiuta un file senza questi bit.
+
 La distribuzione finale è generata dopo questa verifica con `scripts/package.py`: prove e hash correnti, sintassi, dimensioni/attribuzioni, CRC ZIP e SHA-256 di ogni membro in `MANIFEST.sha256`. Esclusi credenziali, cache/toolchain, binari Linux di QA e file visitatori. Il sidecar `.zip.sha256` copre l’archivio, evitando un hash circolare all’interno del report.
 
 ## 5 · Errori di sviluppo e limiti dichiarati
 
-I tentativi interrotti durante le modifiche non sono conteggiati come PASS. Il confronto Python/JS ha individuato una differenza sulla validazione dei valori nulli: corretta e rieseguiti tutti i 745 casi. Un primo test UI del servizio chiudeva per errore un accordion già aperto al secondo ciclo: corretta la condizione del test, poi rieseguite tutte le 15 verifiche. Un primo test scaricava un URL relativo senza base nel client di QA: corretto il test e rieseguite le prove complete. Il blocco CSP di una prima istruzione di attesa del test non è stato risolto allentando la policy dell’app. Le tre taglie discrete evitano percentuali intermedie che, sulla piccola griglia NES, non cambierebbero lo sprite.
+I tentativi interrotti durante le modifiche non sono conteggiati come PASS. Nella prima catena 3.3.1 Chromium ha restituito `Target crashed` durante una prova con più servizi e memoria di collaudo attivi: quella catena non è dichiarata riuscita; la suite editor è stata rieseguita separatamente dopo l’arresto dei servizi non necessari. Questo episodio non dimostra che il blocco segnalato dall’utente fosse un esaurimento di memoria. Il confronto Python/JS ha individuato una differenza sulla validazione dei valori nulli: corretta e rieseguiti tutti i 745 casi. Un primo test UI del servizio chiudeva per errore un accordion già aperto al secondo ciclo: corretta la condizione del test, poi rieseguite tutte le 15 verifiche. Un primo test scaricava un URL relativo senza base nel client di QA: corretto il test e rieseguite le prove complete. Il blocco CSP di una prima istruzione di attesa del test non è stato risolto allentando la policy dell’app. Le tre taglie discrete evitano percentuali intermedie che, sulla piccola griglia NES, non cambierebbero lo sprite.
 
 La finitura foto, i font e le ombre dei renderer non sono pixel-identici; la parità esatta attestata riguarda sprite e geometria. Posizionamento libero non significa supporto fisicamente credibile in ogni punto. Le fotografie mantengono licenze proprie; il Casardi fotografico è **1936, 707 × 491**, non una foto attuale. Il logo è soggetto alle eccezioni delle note legali e ai diritti di marchio: nessuna approvazione istituzionale o liberatoria generale inventata.
 

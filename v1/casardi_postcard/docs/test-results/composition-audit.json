@@ -17,8 +17,8 @@
     "app/catalogue.py": "62a2effa4383ae0a783226a3087704e4e7f99f0721a4d154cd62d72a87772d67",
     "app/postcard.py": "f52c593c2c9983e4f62ff627d332d90a673f916a28984111df3a601d18e60bfa",
     "browser/composition.js": "d06c41e21797ba7295b66ab26507ee43cc8b3f866c4adfee0ae4688cd16d2b1f",
-    "browser/render.js": "d345a1efb1b088a543c3e5d7775979a67ad2ec93fb7dc33b544854061057acbc",
-    "browser/layout-editor.js": "e39a64825b4b7bfca502febc55fba350d267f913e5cc2861bef91bb067a0ebb2",
+    "browser/render.js": "5104e281b886ab8989342f9f8f1921aa4e242de089f32bd924681d7abc629f16",
+    "browser/layout-editor.js": "78aa15df7e466ccfb006a6b58fb99bd9ea844ce64bb3b549d3b280e5ce2ec7c4",
     "browser/layout-editor.css": "a348ebe27c0bf4f3bd2a76f104e8b03938a0443500888c4c32e6924c4ea8b945",
     "assets/stickers/manifest.json": "379640ff03e290f59d3c5846246e264885cee9bc0fc7763323e463b3f1367ff0"
   },

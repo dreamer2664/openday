@@ -73,8 +73,8 @@
       3000,
       2000
     ],
-    "sha256": "01c7ba97fff4ad8b3e3fe1ac0c0f4f9a62f93bacafac6fbc1cbd8f6525aba170",
-    "bytes": 11007153
+    "sha256": "5b7a6d0abac6277112cf952c48c10781c9197574fdb1f87ab4c362df9f0ca109",
+    "bytes": 11007155
   },
   {
     "path": "renders/Z_33_cartolina_nes_decorata.png",
@@ -150,7 +150,7 @@
       3000,
       2000
     ],
-    "sha256": "be4d72cba8d8b18b60376495b43ace61e3fb313d606d63a51ab7d0538c5aa002",
-    "bytes": 541563
+    "sha256": "e0e9b897500b9b651c54eba08ac5774daa8cbda506a927122fa11b366a480b6e",
+    "bytes": 541565
   }
 ]

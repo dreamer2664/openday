@@ -1,4 +1,4 @@
-"""Build/verify the 3.3 optional-composition Windows + LPC + finished-PNG-QR distribution.
+"""Build/verify the 3.3.1 drag-recovery optional-composition Windows + LPC + finished-PNG-QR distribution.
 
 python scripts/package.py --candidate   # before independent extracted smoke
 python scripts/package.py               # final, requires current runtime smoke
@@ -136,6 +136,16 @@ def check(candidate=False):
         assert smoke['standalone_html_sha256']==html_hash and smoke['windows_exe_sha256']==windows['sha256']
         assert len(smoke['checks'])==2 and passed(smoke['checks']) and len(smoke['standalone_file_only_offline'])==2 and passed(smoke['standalone_file_only_offline'])
         assert smoke['phone_creator_http']==smoke['reset_and_memory_cleanup']==smoke['no_directory_browsing']=='PASS'
+    recovery=report('drag-recovery-tests.json');assert recovery['result']=='PASS' and recovery['html_sha256']==html_hash
+    assert len(recovery['checks'])==72 and passed(recovery['checks']) and len(recovery['exports'])==6
+    assert sum(t.get('verified_drags',0) for t in recovery['checks'])==240
+    assert recovery['baseline']['released_html_sha256']=='e8e28940e478a985e2b5113606045b4eac8677c58c27055a8392b719605a392a'
+    assert recovery['baseline']['actor_frozen'] and recovery['baseline']['sticker_frozen']
+    assert not recovery['javascript_errors'] and not recovery['standalone_http_requests']
+    for name,digest in recovery['sources'].items():assert sha((ROOT/name).read_bytes())==digest,name
+    assets=report('unchanged-assets-3.3.1.json');assert assets['result']=='PASS' and assets['asset_files_byte_identical']==473
+    for name,digest in assets['all_asset_sha256'].items():assert sha((ROOT/name).read_bytes())==digest,name
+    assert (ROOT/'docs/BUG_TRASCINAMENTO_3.3.1.md').is_file()
     optional=report('composition-ui-tests.json');assert optional['result']=='PASS' and optional['html_sha256']==html_hash
     assert len(optional['tests'])==26 and passed(optional['tests']) and len(optional['exports'])==6
     assert not optional['javascript_errors'] and not optional['standalone_http_requests']
@@ -162,7 +172,7 @@ def check(candidate=False):
         node='PASS'
     except FileNotFoundError:pass
     assert (ROOT/'docs/GUIDA_RAPIDA.pdf').read_bytes().startswith(b'%PDF-')
-    return dict(optional_composition_checks=26,manual_layout_cases=3240,sticker_layout_cases=324,composition_validation_cases=745,optional_stickers=8,decorated_hd_examples=2,photo_sources=12,nes_backgrounds=12,retained_3_1_backgrounds_unchanged=6,lpc_parts=56,source_lpc_pngs=255,hd_png_examples=13,jpg_examples=24,
+    return dict(drag_recovery_checks=72,consecutive_verified_stress_drags=240,original_freeze_reproduced=True,assets_unchanged_from_3_3=473,optional_composition_checks=26,manual_layout_cases=3240,sticker_layout_cases=324,composition_validation_cases=745,optional_stickers=8,decorated_hd_examples=2,photo_sources=12,nes_backgrounds=12,retained_3_1_backgrounds_unchanged=6,lpc_parts=56,source_lpc_pngs=255,hd_png_examples=13,jpg_examples=24,
                 screenshots=shot_counts,unit_tests=unit_count,nes_art_integrity='PASS: twelve canonical 600x400 paintings, at most 64 colours each',nes_redesign_checks=8,control_pixel_comparisons=3250,zero_pixel_alternatives_explicitly_reported=563,actual_control_ui_clicks=controls['actual_ui_alternative_clicks'],
                 layout_cases=12096,all_standalone_hd_exports=24,all_python_http_hd_exports=24,go_top_level_race_tests=26,service_browser_checks=15,standalone_browser_checks=22,
                 independently_extracted_copy='PENDING: candidate only' if candidate else 'PASS',
@@ -173,7 +183,7 @@ def check(candidate=False):
 
 def build(candidate=False):
     checks=check(candidate)
-    data=dict(result='CANDIDATE' if candidate else 'PASS',date='2026-11-27',revision='3.3: mouse/touch character placement, optional final stickers and nameplate, authentic Casardi logo; retained twelve places / LPC / offline HD / Windows LAN PNG QR',
+    data=dict(result='CANDIDATE' if candidate else 'PASS',date='2026-11-27',revision='3.3.1: shared drag interruption/capture-loss recovery and preview ownership; all 473 assets unchanged from 3.3; retained twelve places / LPC / offline HD / Windows LAN PNG QR',
               archive=OUTPUT.name,preflight=checks,archive_crc='Verified after writing',manifest_sha256='Verified against every included ZIP member',
               excluded='All var files except README, visitor PNGs, caches, virtualenvs, toolchains and QA Linux binaries.',
               windows_native='NOT TESTED; only cross-compilation and same-source Linux checks',physical_phone='NOT TESTED — required on school LAN')

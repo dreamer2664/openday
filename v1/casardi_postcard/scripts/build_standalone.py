@@ -52,9 +52,9 @@ def main():
     for name in ('layout-editor.js','layout-editor.css'):shutil.copyfile(ROOT/'browser'/name,ROOT/'web/static'/name)
     sprites=generate(ROOT);(ROOT/'browser/sprites.js').write_text(sprites,encoding='utf-8')
     lpc,lpc_credits=bundle()
-    cat=public_catalogue(600,'browser-3.3')
+    cat=public_catalogue(600,'browser-3.3.1')
     for item in cat['scenes']:item.pop('thumbs',None)
-    data=dict(version='3.3',lpc=lpc,lpcCredits=lpc_credits,date='2026-11-27',catalogue=cat,palette=COLORS,
+    data=dict(version='3.3.1',lpc=lpc,lpcCredits=lpc_credits,date='2026-11-27',catalogue=cat,palette=COLORS,
               colorFields={k:list(dict.fromkeys(c[0] for c in v)) for k,v in COLOR_FIELDS.items()},
               photo=PHOTO_SCENES,nes=NES_SCENES,nesArt=json.loads((ROOT/'assets/nes/manifest.json').read_text()),metadata=photo_metadata(),images={},thumbs={},examples={},licenses={})
     report=dict(date='2026-11-27',file=OUTPUT.name,editions='One responsive standalone HTML: full desktop and touch-phone creator.',

@@ -1,11 +1,13 @@
 # Cartolina digitale · Liceo Alfredo Casardi
-## Open Day 2026/27 · Barletta — edizione 3.3 · Composizione libera e sticker
+## Open Day 2026/27 · Barletta — edizione 3.3.1 · Correzione trascinamenti
 
 **Pacchetto di questa revisione: `Cartolina_Casardi_Windows_LPC_QR_2026-27.zip`.** Sostituisce la consegna precedente; i due file principali sono già pronti nella cartella, non vanno ricreati dai sorgenti.
 
 Studio completo per creare cartoline **PNG 3000 × 2000, orizzontali 3:2**. Dodici ambientazioni autentiche, modalità fotografica e ricostruzione NES, nome facoltativo, personaggio modulare e otto companion facoltativi. Nessun account, cloud, servizio a pagamento o asset di videogiochi commerciali.
 
-**Novità 3.3:** nell’ultimo passaggio puoi **trascinare il personaggio sulla cartolina con mouse o dito**; il companion lo segue. Tre taglie nitide, frecce/Maiusc+frecce, annullamento e ripristino della posizione consigliata. Il pannello **Ultimi tocchi · facoltativi**, prima del PNG, offre **otto sticker** (fino a sei per cartolina) e aggiunte opzionali alla targhetta: finitura, simbolo, percorso e angolo. Nessuna decorazione è attiva di default.
+**Correzione 3.3.1:** risolto un blocco comune a personaggi e sticker quando un trascinamento perdeva la cattura del puntatore o veniva interrotto. Il gesto incompleto viene annullato, senza azzerare la cartolina o le modifiche precedenti; si può riprendere subito a trascinare. Sistemata anche la chiusura dello stato di attesa dell’anteprima. Asset e qualità del logo non sono modificati da questo intervento. [Diagnosi e prove](docs/BUG_TRASCINAMENTO_3.3.1.md).
+
+**Novità 3.3, conservate:** nell’ultimo passaggio puoi **trascinare il personaggio sulla cartolina con mouse o dito**; il companion lo segue. Tre taglie nitide, frecce/Maiusc+frecce, annullamento e ripristino della posizione consigliata. Il pannello **Ultimi tocchi · facoltativi**, prima del PNG, offre **otto sticker** (fino a sei per cartolina) e aggiunte opzionali alla targhetta: finitura, simbolo, percorso e angolo. Nessuna decorazione è attiva di default.
 
 **Sticker:** alloro, Pegaso decorativo, lira, libro, maschere teatrali, capitello ionico, rosa dei venti e **logo ufficiale Casardi autentico**, ricavato dalla brochure scolastica 2026/27, non generato o sostituito dallo stemma della Repubblica. Il logo conserva proporzioni/orientamento e fondo della fonte; i sette sticker decorativi sono originali assistiti da IA. Fonte, licenze ed eccezioni in [Fonti del logo](docs/FONTI_LOGO.md). [Guida a spostamento, sticker e targhetta](docs/COMPOSIZIONE_E_STICKER.md).
 

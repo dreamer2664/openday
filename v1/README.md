@@ -1,4 +1,6 @@
-# Cartolina Casardi · Open Day 2026/27 · revisione 3.3
+# Cartolina Casardi · Open Day 2026/27 · revisione 3.3.1
+
+**Correzione 3.3.1:** risolto il blocco condiviso di personaggi e sticker dopo un trascinamento interrotto/perdita di cattura. Il gesto incompleto viene annullato senza perdere la cartolina. Corretto anche lo stato di attesa delle anteprime. [Diagnosi e prova ripetibile](casardi_postcard/docs/BUG_TRASCINAMENTO_3.3.1.md): riprodotto sulla 3.3, 72 nuove verifiche, 240 trascinamenti consecutivi e sei export HD. Tutti i 473 asset, logo compreso, restano identici alla 3.3.
 
 **Personaggio spostabile con mouse, dito o frecce; ultimi tocchi facoltativi alla fine.** Otto sticker: alloro, Pegaso decorativo, lira, libro, maschere, capitello, rosa dei venti e logo ufficiale autentico dalla brochure Casardi. Fino a sei sticker, dimensioni/inclinazione/livelli e annulla. Targhetta opzionale: finitura, simbolo, percorso e posizione. Nessuna decorazione di default.
 

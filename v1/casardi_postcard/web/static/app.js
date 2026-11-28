@@ -304,12 +304,12 @@
   async function loadPreview(){
     editor.setRendering();
     const seq=++previewSeq,epoch=state.epoch;
-    if(previewAbort)previewAbort.abort();previewAbort=new AbortController();
+    if(previewAbort)previewAbort.abort();const ctl=previewAbort=new AbortController();
     $('#preview-loading').hidden=false;$('#btn-export').disabled=true;$('#result').hidden=true;
     try{
       let response;
       for(let attempt=0;attempt<6;attempt++){
-        try{response=await api('/api/editor-preview',payload(),previewAbort.signal);break;}
+        try{response=await api('/api/editor-preview',payload(),ctl.signal);break;}
         catch(e){if(e.status===429&&attempt<5){await sleep(500);continue;}throw e;}
       }
       const data=await response.json();

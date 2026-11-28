@@ -1,8 +1,8 @@
 {
   "result": "PASS",
   "date": "2026-11-27",
-  "seconds": 60.09,
-  "html_sha256": "e8e28940e478a985e2b5113606045b4eac8677c58c27055a8392b719605a392a",
+  "seconds": 70.02,
+  "html_sha256": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea",
   "tests": [
     {
       "name": "photo: cartolina iniziale senza sticker né aggiunte obbligatorie",
@@ -130,8 +130,8 @@
         3000,
         2000
       ],
-      "sha256": "f3411eff57bf676e1a89466d87fe7b6befc6b9e1b12c84369531d5151aa1615b",
-      "bytes": 11969664
+      "sha256": "9cf4a818715179bb96b03998842523992ea04ed9a9ba4806e74470b62b57ec62",
+      "bytes": 11969666
     },
     {
       "mode": "photo",
@@ -141,8 +141,8 @@
         3000,
         2000
       ],
-      "sha256": "01c7ba97fff4ad8b3e3fe1ac0c0f4f9a62f93bacafac6fbc1cbd8f6525aba170",
-      "bytes": 11007153
+      "sha256": "5b7a6d0abac6277112cf952c48c10781c9197574fdb1f87ab4c362df9f0ca109",
+      "bytes": 11007155
     },
     {
       "mode": "nes",
@@ -153,8 +153,8 @@
         3000,
         2000
       ],
-      "sha256": "1373c4773ce6faf887e9fb0e59cc04e43128ad7f9c775eb81046104727200f0d",
-      "bytes": 541528
+      "sha256": "5eb4ed11fa6de479d0abf7a46ed6ac27c0bfceae1e5ccbc6d305a4b65e01d052",
+      "bytes": 541530
     },
     {
       "mode": "nes",
@@ -164,8 +164,8 @@
         3000,
         2000
       ],
-      "sha256": "be4d72cba8d8b18b60376495b43ace61e3fb313d606d63a51ab7d0538c5aa002",
-      "bytes": 541563
+      "sha256": "e0e9b897500b9b651c54eba08ac5774daa8cbda506a927122fa11b366a480b6e",
+      "bytes": 541565
     },
     {
       "edition": "python",
@@ -176,8 +176,8 @@
         3000,
         2000
       ],
-      "sha256": "c1ba43e19eeaae82a4dba9f8c2a3d1e0c151ae5e3896478ddf0c3f4566843250",
-      "bytes": 8335506
+      "sha256": "1104e5828a8b71ef08f420bd3cc4d3b58d2e19ec04300231e3d9744018a3f490",
+      "bytes": 8335508
     },
     {
       "edition": "python",
@@ -188,8 +188,8 @@
         3000,
         2000
       ],
-      "sha256": "8c48f7b14b9c2894d9aa2b47e48d9c5f4013a327e0608ce5b38e6d4a06c7bad2",
-      "bytes": 339338
+      "sha256": "7bacc4983059c0cefaa389f310da88e9e088b191df23538f554c271b35e749e3",
+      "bytes": 339340
     }
   ],
   "javascript_errors": [],

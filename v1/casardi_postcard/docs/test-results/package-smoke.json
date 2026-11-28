@@ -3,9 +3,9 @@
   "date": "2026-11-27",
   "procedure": "ZIP extracted outside source tree; its own Go native service built from extracted vendored sources; standalone HTML copied alone and opened file:// with browser network disabled.",
   "runtime_files_equal": 538,
-  "runtime_sha256": "7c1492883fd95b085ccdfce5d9a65f9e76d8e4aa6ba281106f6554193837cab3",
+  "runtime_sha256": "c4e76ad1e82228b2ef83298b20c8b5e00bb0a7b6cd5908e42dec4d74f3352c20",
   "windows_exe_sha256": "f49fcf7d0d69b01e0d52f0bceb6893722c7598cbc7bff28504b1ea3a7b87d465",
-  "standalone_html_sha256": "e8e28940e478a985e2b5113606045b4eac8677c58c27055a8392b719605a392a",
+  "standalone_html_sha256": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea",
   "standalone_file_only_offline": [
     {
       "mode": "photo",
@@ -14,7 +14,7 @@
         3000,
         2000
       ],
-      "sha256": "caaee135bb096c4d7a6c6848d0d4ca7ba3952379b278d4ae0f1531165d825aeb"
+      "sha256": "43e78abcd28f7513d7d4d56da3456ce4ad4fd2d8b742069ce9401c72886aae51"
     },
     {
       "mode": "nes",
@@ -23,7 +23,7 @@
         3000,
         2000
       ],
-      "sha256": "a66225691b23a176d3639f2e70417d15bf6252bb878f046d34a831cf01132413"
+      "sha256": "f932901a1c2f34a5a3e7ce125414d2698c520b386b6b13494eb677d45e6cc12e"
     }
   ],
   "phone_creator_http": "PASS",
@@ -35,7 +35,7 @@
         3000,
         2000
       ],
-      "png_sha256": "caaee135bb096c4d7a6c6848d0d4ca7ba3952379b278d4ae0f1531165d825aeb",
+      "png_sha256": "43e78abcd28f7513d7d4d56da3456ce4ad4fd2d8b742069ce9401c72886aae51",
       "qr_independently_decoded": true,
       "download_identical_bytes": true,
       "seconds": 0.15
@@ -47,7 +47,7 @@
         3000,
         2000
       ],
-      "png_sha256": "a66225691b23a176d3639f2e70417d15bf6252bb878f046d34a831cf01132413",
+      "png_sha256": "f932901a1c2f34a5a3e7ce125414d2698c520b386b6b13494eb677d45e6cc12e",
       "qr_independently_decoded": true,
       "download_identical_bytes": true,
       "seconds": 0.05

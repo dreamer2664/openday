@@ -248,7 +248,7 @@ globalThis.CasardiRender=(()=>{
  function chunk(type,body){const out=new Uint8Array(body.length+12),dv=new DataView(out.buffer),enc=new TextEncoder();dv.setUint32(0,body.length);out.set(enc.encode(type),4);out.set(body,8);let crc=0xffffffff;for(let i=4;i<body.length+8;i++)crc=crcTable[(crc^out[i])&255]^(crc>>>8);dv.setUint32(body.length+8,(crc^0xffffffff)>>>0);return out;}
  async function pngBlob(c,job,signal){
   check(signal);const b=await new Promise((resolve,reject)=>c.toBlob(blob=>blob?resolve(blob):reject(new Error('Il browser non ha memoria sufficiente per il PNG. Chiudi altre schede e riprova.')),'image/png'));check(signal);
-  const raw=new Uint8Array(await b.arrayBuffer()),view=new DataView(raw.buffer),enc=new TextEncoder(),cr=credit(job),fields={Title:'LICEO ALFREDO CASARDI — OPEN DAY 2026/27 — BARLETTA',Author:cr.author,Source:cr.source,Copyright:cr.copyright,Description:cr.text,Software:'Casardi Postcard Studio 3.3 Composizione libera · Canvas locale'};
+  const raw=new Uint8Array(await b.arrayBuffer()),view=new DataView(raw.buffer),enc=new TextEncoder(),cr=credit(job),fields={Title:'LICEO ALFREDO CASARDI — OPEN DAY 2026/27 — BARLETTA',Author:cr.author,Source:cr.source,Copyright:cr.copyright,Description:cr.text,Software:'Casardi Postcard Studio 3.3.1 Composizione libera · Canvas locale'};
   const parts=[raw.subarray(0,33)];
   for(const [key,text]of Object.entries(fields))parts.push(chunk('iTXt',enc.encode(key+'\0\0\0\0\0'+text)));
   const dpi=new Uint8Array(9),dv=new DataView(dpi.buffer);dv.setUint32(0,11811);dv.setUint32(4,11811);dpi[8]=1;parts.push(chunk('pHYs',dpi));

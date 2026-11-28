@@ -1,0 +1,612 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "revision": "3.3.1",
+  "seconds": 141.14,
+  "html_sha256": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea",
+  "baseline": {
+    "released_html_sha256": "e8e28940e478a985e2b5113606045b4eac8677c58c27055a8392b719605a392a",
+    "actor_frozen": true,
+    "sticker_frozen": true,
+    "loading_visible": false,
+    "export_disabled": false,
+    "trace": [
+      {
+        "type": "pointerdown",
+        "id": 1,
+        "key": null,
+        "buttons": 1
+      },
+      {
+        "type": "pointerup",
+        "id": 1,
+        "key": null,
+        "buttons": 0
+      },
+      {
+        "type": "pointerdown",
+        "id": 1,
+        "key": null,
+        "buttons": 1
+      },
+      {
+        "type": "pointerup",
+        "id": 1,
+        "key": null,
+        "buttons": 0
+      },
+      {
+        "type": "pointerdown",
+        "id": 1,
+        "key": null,
+        "buttons": 1
+      },
+      {
+        "type": "pointerup",
+        "id": 1,
+        "key": null,
+        "buttons": 0
+      },
+      {
+        "type": "pointerdown",
+        "id": 1,
+        "key": null,
+        "buttons": 1
+      },
+      {
+        "type": "pointerup",
+        "id": 1,
+        "key": null,
+        "buttons": 0
+      },
+      {
+        "type": "pointerdown",
+        "id": 1,
+        "key": null,
+        "buttons": 1
+      },
+      {
+        "type": "pointerup",
+        "id": 1,
+        "key": null,
+        "buttons": 0
+      },
+      {
+        "type": "pointerdown",
+        "id": 1,
+        "key": null,
+        "buttons": 1
+      },
+      {
+        "type": "pointerup",
+        "id": 1,
+        "key": null,
+        "buttons": 0
+      },
+      {
+        "type": "pointerdown",
+        "id": 1,
+        "key": null,
+        "buttons": 1
+      },
+      {
+        "type": "pointerup",
+        "id": 1,
+        "key": null,
+        "buttons": 0
+      },
+      {
+        "type": "pointerdown",
+        "id": 1,
+        "key": null,
+        "buttons": 1
+      },
+      {
+        "type": "pointerup",
+        "id": 1,
+        "key": null,
+        "buttons": 0
+      },
+      {
+        "type": "pointerdown",
+        "id": 1,
+        "key": null,
+        "buttons": 1
+      },
+      {
+        "type": "pointerup",
+        "id": 1,
+        "key": null,
+        "buttons": 0
+      },
+      {
+        "type": "pointerdown",
+        "id": 2,
+        "key": "actor",
+        "buttons": 1
+      },
+      {
+        "type": "lostpointercapture",
+        "id": 2,
+        "key": "actor",
+        "buttons": 1
+      },
+      {
+        "type": "pointerup",
+        "id": 2,
+        "key": null,
+        "buttons": 0
+      },
+      {
+        "type": "pointerdown",
+        "id": 3,
+        "key": "actor",
+        "buttons": 1
+      },
+      {
+        "type": "pointerup",
+        "id": 3,
+        "key": "actor",
+        "buttons": 0
+      },
+      {
+        "type": "lostpointercapture",
+        "id": 3,
+        "key": "actor",
+        "buttons": 0
+      },
+      {
+        "type": "pointerdown",
+        "id": 4,
+        "key": "0",
+        "buttons": 1
+      },
+      {
+        "type": "pointerup",
+        "id": 4,
+        "key": "0",
+        "buttons": 0
+      },
+      {
+        "type": "lostpointercapture",
+        "id": 4,
+        "key": "0",
+        "buttons": 0
+      }
+    ],
+    "method": "Real CDP touch events; explicit releasePointerCapture followed by real touch end outside the postcard. Controlled interruption, not a claim of the exact user gesture."
+  },
+  "checks": [
+    {
+      "name": "Released 3.3: interrupted gesture reproduces total actor + sticker drag freeze",
+      "result": "PASS",
+      "expected_defect_reproduced": true
+    },
+    {
+      "name": "photo/mouse: actor / capture-loss cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: actor / cancel cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: actor / blur cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: actor / hidden cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: actor / pagehide cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: actor / escape cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: 0 / capture-loss cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: 0 / cancel cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: 0 / blur cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: 0 / hidden cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: 0 / pagehide cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: 0 / escape cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: failed capture + real outside release does not strand the editor",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: 60 consecutive verified actor/sticker drags with six stickers, no visitor reset",
+      "result": "PASS",
+      "verified_drags": 60
+    },
+    {
+      "name": "photo/mouse: unexpected active-preview decode AbortError releases lock; real subsequent drag + render succeeds",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: obsolete preview error cannot unlock/corrupt the newer preview; subsequent drags work",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: real HD download after stress and recovery; identical to independent asset recomposition",
+      "result": "PASS"
+    },
+    {
+      "name": "photo/touch-emulated: actor / capture-loss cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch-emulated: actor / cancel cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch-emulated: actor / blur cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch-emulated: actor / hidden cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch-emulated: actor / pagehide cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch-emulated: actor / escape cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch-emulated: 0 / capture-loss cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch-emulated: 0 / cancel cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch-emulated: 0 / blur cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch-emulated: 0 / hidden cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch-emulated: 0 / pagehide cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch-emulated: 0 / escape cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch-emulated: failed capture + real outside release does not strand the editor",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch-emulated: 60 consecutive verified actor/sticker drags with six stickers, no visitor reset",
+      "result": "PASS",
+      "verified_drags": 60
+    },
+    {
+      "name": "photo/touch-emulated: real HD download after stress and recovery; identical to independent asset recomposition",
+      "result": "PASS"
+    },
+    {
+      "name": "nes/mouse: actor / capture-loss cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: actor / cancel cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: actor / blur cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: actor / hidden cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: actor / pagehide cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: actor / escape cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: 0 / capture-loss cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: 0 / cancel cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: 0 / blur cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: 0 / hidden cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: 0 / pagehide cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: 0 / escape cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: failed capture + real outside release does not strand the editor",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: 60 consecutive verified actor/sticker drags with six stickers, no visitor reset",
+      "result": "PASS",
+      "verified_drags": 60
+    },
+    {
+      "name": "nes/mouse: unexpected active-preview decode AbortError releases lock; real subsequent drag + render succeeds",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: obsolete preview error cannot unlock/corrupt the newer preview; subsequent drags work",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: real HD download after stress and recovery; identical to independent asset recomposition",
+      "result": "PASS"
+    },
+    {
+      "name": "nes/touch-emulated: actor / capture-loss cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch-emulated: actor / cancel cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch-emulated: actor / blur cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch-emulated: actor / hidden cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch-emulated: actor / pagehide cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch-emulated: actor / escape cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch-emulated: 0 / capture-loss cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch-emulated: 0 / cancel cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch-emulated: 0 / blur cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch-emulated: 0 / hidden cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch-emulated: 0 / pagehide cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch-emulated: 0 / escape cancels one gesture; actor + sticker work again; undo retains earlier edits",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch-emulated: failed capture + real outside release does not strand the editor",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch-emulated: 60 consecutive verified actor/sticker drags with six stickers, no visitor reset",
+      "result": "PASS",
+      "verified_drags": 60
+    },
+    {
+      "name": "nes/touch-emulated: real HD download after stress and recovery; identical to independent asset recomposition",
+      "result": "PASS"
+    },
+    {
+      "name": "Python photo: actor capture-loss recovery, both object types movable and undo intact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "Python photo: 0 capture-loss recovery, both object types movable and undo intact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "Python photo: actual decorated 3000×2000 PNG after interrupted gestures",
+      "result": "PASS"
+    },
+    {
+      "name": "Python nes: actor capture-loss recovery, both object types movable and undo intact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "Python nes: 0 capture-loss recovery, both object types movable and undo intact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "Python nes: actual decorated 3000×2000 PNG after interrupted gestures",
+      "result": "PASS"
+    },
+    {
+      "name": "All recovery cases: zero uncaught JavaScript errors; standalone makes zero HTTP requests",
+      "result": "PASS"
+    }
+  ],
+  "failure_details": null,
+  "complete_suite": true,
+  "gesture_starts_attempted": 427,
+  "exports": [
+    {
+      "edition": "standalone",
+      "case": "photo-mouse",
+      "sha256": "5dfa1aa979e39867933a7cba0acbad1783cec0cb6d5bea7dfc3478afa6a299bb",
+      "bytes": 11041640,
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "independent_asset_recomposition_identical": true
+    },
+    {
+      "edition": "standalone",
+      "case": "photo-touch-emulated",
+      "sha256": "b35c0b66b18f6be05a2643ac3588fe9a83e8a22ed28cc4c38d34e7e97871bcf6",
+      "bytes": 11653501,
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "independent_asset_recomposition_identical": true
+    },
+    {
+      "edition": "standalone",
+      "case": "nes-mouse",
+      "sha256": "77121d8df9ab6a141aac8d17f9dbf1ea24eef887a3aa1e069a649c5ead238c66",
+      "bytes": 558688,
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "independent_asset_recomposition_identical": true
+    },
+    {
+      "edition": "standalone",
+      "case": "nes-touch-emulated",
+      "sha256": "305c2068ba737beb3297747a2d6dff01d0e9ecea4010449acc21cb9bfd99943c",
+      "bytes": 561535,
+      "dimensions": [
+        3000,
+        2000
+      ],
+      "independent_asset_recomposition_identical": true
+    },
+    {
+      "edition": "python",
+      "case": "python-photo",
+      "sha256": "ac7eaccb281d429645b9efd6e1ea82d6fd390ea2d107fbc48640561b3807e79b",
+      "bytes": 8486877,
+      "dimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "edition": "python",
+      "case": "python-nes",
+      "sha256": "8e880bff4c72793c5f74091493309cd989a272a6e11363fdf9be969aa5698b06",
+      "bytes": 344496,
+      "dimensions": [
+        3000,
+        2000
+      ]
+    }
+  ],
+  "javascript_errors": [],
+  "standalone_http_requests": [],
+  "sources": {
+    "browser/layout-editor.js": "78aa15df7e466ccfb006a6b58fb99bd9ea844ce64bb3b549d3b280e5ce2ec7c4",
+    "browser/app.js": "b8aba402e33995e1e842deb8a30710ad3be7b3ed72e8e0d2853e048436685b85",
+    "web/static/app.js": "ac4bd34061c714ee62e59d674fcbaf5c534fc0de02a35fa95f3a483b556e0069"
+  },
+  "environment": "Linux Chromium; real mouse/CDP touch. Capture-loss and window lifecycle/preview errors explicitly injected. Not native Windows, Safari/Firefox, physical phone or school LAN.",
+  "user_exact_trigger": "Unknown: browser/device and the original interrupted gesture were not provided. Controlled reproduction proves a matching failure mode, not that no other cause exists."
+}

@@ -1,9 +1,13 @@
 {
   "result": "PASS",
   "date": "2026-11-27",
-  "revision": "3.3: mouse/touch character placement, optional final stickers and nameplate, authentic Casardi logo; retained twelve places / LPC / offline HD / Windows LAN PNG QR",
+  "revision": "3.3.1: shared drag interruption/capture-loss recovery and preview ownership; all 473 assets unchanged from 3.3; retained twelve places / LPC / offline HD / Windows LAN PNG QR",
   "archive": "Cartolina_Casardi_Windows_LPC_QR_2026-27.zip",
   "preflight": {
+    "drag_recovery_checks": 72,
+    "consecutive_verified_stress_drags": 240,
+    "original_freeze_reproduced": true,
+    "assets_unchanged_from_3_3": 473,
     "optional_composition_checks": 26,
     "manual_layout_cases": 3240,
     "sticker_layout_cases": 324,

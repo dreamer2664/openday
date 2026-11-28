@@ -3,7 +3,7 @@
   "date": "2026-11-27",
   "clock": "Real server wall clock, no time travel",
   "configured_ttl_seconds": 300,
-  "observed_after_seconds": 301.45,
+  "observed_after_seconds": 301.48,
   "decoded_qr": "PASS",
   "download_identical_sha256": "1290a1f3e33389829164d4d8df179c95af6c94790ab8c7ae2fd17dc22f2281c5",
   "expired_routes": [
@@ -23,7 +23,7 @@
   "service_transfer_removed": true,
   "storage": "Memory only; no PNG is written by the Go service",
   "environment": "Linux build of the same Go source; QA loopback HTTP, not Windows-native or a physical school phone",
-  "html_sha256": "e8e28940e478a985e2b5113606045b4eac8677c58c27055a8392b719605a392a",
+  "html_sha256": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea",
   "served_html_matches": "PASS",
   "go_source_sha256": "a2d19278837a05e253a2a7dd35874720651c21b5f262b754fe11d330ee994122"
 }
