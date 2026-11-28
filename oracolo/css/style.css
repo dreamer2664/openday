@@ -82,11 +82,14 @@ a { color: inherit; }
 .stage-mist { position: absolute; bottom: 45px; left: 0; right: 0; height: 120px; z-index: -1; background: linear-gradient(0deg, #273d4b77, transparent); pointer-events: none; }
 .scene { position: relative; display: grid; grid-template-columns: 42% 58%; align-items: center; min-height: 456px; padding: 20px 44px 30px 22px; gap: 0; }
 .stone-floor { height: 18px; margin-top: -18px; z-index: -1; position: relative; background: repeating-linear-gradient(90deg, transparent 0 88px, #151f2e 88px 91px), linear-gradient(#4c5264 0 3px, #343e50 3px 10px, #242f43 10px 13px, #161f30 13px); }
-.pythia-zone { position: relative; height: 406px; min-width: 0; align-self: end; }
-.sanctuary-art { position: absolute; width: 336px; height: 363px; left: 50%; bottom: 43px; transform: translateX(-50%); opacity: .92; }
-.pythia { position: absolute; width: 240px; height: 320px; bottom: 51px; left: 50%; transform: translateX(-50%); z-index: 2; }
-#pythiaCanvas { width: 100%; height: 100%; display: block; }
-.pythia-aura { position: absolute; width: 180px; height: 200px; bottom: 85px; left: 50%; transform: translateX(-50%); border-radius: 50%; background: #a88be0; filter: blur(50px); opacity: .06; pointer-events: none; transition: opacity .4s; }
+.pythia-zone { position: relative; height: 406px; min-width: 0; align-self: end; container-type: inline-size; }
+.sanctuary-slot { position: absolute; z-index: 1; width: 336px; height: 363px; left: 50%; bottom: 43px; transform: translateX(-50%); }
+.sanctuary-art { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .92; }
+/* Vano di sanctuary.svg: la cornice finisce a y=61, i piedi poggiano sul gradino a y=154.
+   La scatola non deve superare questa frazione: il canvas al 118% usciva dalla cornice. */
+.pythia { position: absolute; left: 50%; bottom: calc(100% * 10 / 164); height: calc(100% * 87 / 164); width: auto; max-width: 44%; aspect-ratio: 160 / 326; transform: translateX(-50%); z-index: 2; overflow: hidden; }
+#pythiaCanvas { width: 100%; height: 100%; min-width: 0; min-height: 0; display: block; }
+.pythia-aura { position: absolute; width: 28%; height: 34%; bottom: 24%; left: 50%; transform: translateX(-50%); border-radius: 50%; background: #a88be0; filter: blur(40px); opacity: .06; pointer-events: none; transition: opacity .4s; }
 [data-state='consulting'] .pythia-aura { opacity: .3; }
 [data-state='speaking'] .pythia-aura { opacity: .18; background: var(--gold); }
 .pythia-name { position: absolute; bottom: 12px; left: 0; right: 0; display: flex; gap: 13px; align-items: center; justify-content: center; color: var(--gold); font-family: var(--pixel); font-size: 10px; letter-spacing: 1px; z-index: 2; }
@@ -228,14 +231,12 @@ kbd { font: 10px var(--terminal); padding: 1px 4px; border: 1px solid #70757b; c
   .marquee { padding-top: 38px; padding-bottom: 42px; }
   .scene { min-height: 510px; padding-top: 35px; padding-bottom: 45px; }
   .pythia-zone { height: 430px; }
-  .pythia { width: 264px; height: 352px; }
-  .sanctuary-art { width: 360px; height: 388px; }
+  .sanctuary-slot { width: 360px; height: 388px; }
 }
 @media (max-width: 1080px) {
   .cabinet { padding: 0 28px; }
   .scene { grid-template-columns: 39% 61%; padding-left: 12px; padding-right: 28px; }
-  .sanctuary-art { width: 304px; height: 328px; bottom: 49px; }
-  .pythia { width: 216px; height: 288px; bottom: 57px; }
+  .sanctuary-slot { width: 304px; height: 328px; bottom: 49px; }
   .pythia-zone { height: 385px; }
   .brazier-left { left: calc(50% - 111px); }
   .brazier-right { right: calc(50% - 111px); }
@@ -254,8 +255,7 @@ kbd { font: 10px var(--terminal); padding: 1px 4px; border: 1px solid #70757b; c
   .title-wrap { gap: 28px; }
   .scene { grid-template-columns: 35% 65%; padding-left: 8px; padding-right: 23px; }
   .pythia-zone { height: 355px; }
-  .sanctuary-art { width: min(250px, calc(100% + 8px)); height: auto; aspect-ratio: 152 / 164; bottom: 50px; }
-  .pythia { width: min(192px, calc(100% - 32px)); height: auto; aspect-ratio: 3 / 4; bottom: 50px; }
+  .sanctuary-slot { width: min(250px, calc(100% + 8px)); height: calc(min(250px, 100cqi + 8px) * 164 / 152); aspect-ratio: 152 / 164; bottom: 50px; }
   .brazier-left { left: calc(50% - 83px); }
   .brazier-right { display: none; }
   .brazier { bottom: 50px; transform: scale(.85); }
@@ -292,8 +292,7 @@ kbd { font: 10px var(--terminal); padding: 1px 4px; border: 1px solid #70757b; c
   .stage-location { display: none; }
   .scene { grid-template-columns: 1fr; min-height: 0; padding: 0 21px 26px; gap: 20px; }
   .pythia-zone { height: 244px; }
-  .sanctuary-art { width: 200px; height: 216px; bottom: 24px; }
-  .pythia { width: 168px; height: 224px; bottom: 24px; }
+  .sanctuary-slot { width: 200px; height: 216px; bottom: 24px; }
   .pythia-name { bottom: 9px; font-size: 9px; }
   .pythia-caption { bottom: -12px; font-size: 15px; }
   .brazier { bottom: 28px; transform: scale(.85); }

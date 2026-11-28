@@ -87,7 +87,8 @@ class SantuarioScena {
     }
 
     // Luna scavata a pixel: alone a gradini, zone d'ombra e piccoli crateri.
-    const mx=Math.max(19,Math.round(w*.057)), my=Math.round(Math.min(30,h*.12));
+    const mx=Math.max(19,Math.min(w-19,Math.round(w*.057))), my=Math.max(19,Math.min(h-19,Math.round(Math.min(30,h*.12))));
+    if(w>=40&&h>=40){
     for(let y=-19;y<=19;y++)for(let x=-19;x<=19;x++){
       const d=x*x+y*y;
       if(d<=361&&d>225)r(mx+x,my+y,1,1,d>289?'#c8bc8510':'#d4c28b15');
@@ -99,6 +100,7 @@ class SantuarioScena {
     }
     [[-9,0,2,3],[-5,8,3,2],[-10,-5,2,2]].forEach(([x,y,a,b])=>r(mx+x,my+y,a,b,'#adac8a'));
     r(mx-9,my-6,2,1,'#fff0bd');
+    }
 
     // Nuvole di foschia orizzontali, a densità bassa, senza sfocare i pixel.
     for(let i=0;i<6;i++){
@@ -116,7 +118,7 @@ class SantuarioScena {
         while(segment<points.length-2&&t>points[segment+1][0])segment++;
         const a=points[segment],b=points[segment+1];
         const y=Math.round((base+a[1]+(b[1]-a[1])*(t-a[0])/(b[0]-a[0]))*h);
-        heights[x]=y;heights[x+1]=y;
+        heights[x]=y;if(x+1<heights.length)heights[x+1]=y;
         ctx.lineTo(x,previous);ctx.lineTo(x,y);previous=y;
       }
       ctx.lineTo(w+2,h);ctx.closePath();ctx.fillStyle=palette[0];ctx.fill();
@@ -124,7 +126,7 @@ class SantuarioScena {
       // Petites facettes et stries, toujours à l'intérieur de la silhouette.
       for(let x=2;x<w;x+=4){
         const top=heights[x];
-        if(heights[Math.min(w,x+4)]<top)r(x,top,3,1,palette[1]);
+        if(x+4<w&&heights[x+4]<top)r(x,top,3,1,palette[1]);
       }
       for(let i=0;i<texture;i++){
         const x=Math.floor(rand()*w),top=heights[x],y=top+rand()*(h-top);

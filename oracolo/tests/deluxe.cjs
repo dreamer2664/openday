@@ -44,11 +44,11 @@ async function audit(page){
  await context.setOffline(true);
  const page=await context.newPage();watch(page);
 
- await test('Apertura del solo HTML offline: immagini, font, sprite 120 × 160 e nessun autoplay',async()=>{
+ await test('Apertura del solo HTML offline: immagini, font, sprite 160 × 326 e nessun autoplay',async()=>{
   await page.goto(fileURL,{waitUntil:'load'});await page.evaluate(()=>document.fonts.ready);
   assert.equal(await page.locator('#cabinet').getAttribute('data-state'),'ask');
-  assert.equal(await page.locator('#pythiaCanvas').getAttribute('width'),'120');
-  assert.equal(await page.locator('#pythiaCanvas').getAttribute('height'),'160');
+  assert.equal(await page.locator('#pythiaCanvas').getAttribute('width'),'160');
+  assert.equal(await page.locator('#pythiaCanvas').getAttribute('height'),'326');
   assert.equal(await page.locator('script[src],link[rel="stylesheet"]').count(),0);
   assert.ok(await page.locator('img').evaluateAll(images=>images.every(image=>image.complete&&image.naturalWidth>0)));
   assert.ok(await page.evaluate(()=>document.fonts.check('12px "Press Start 2P"')&&document.fonts.check('12px "VT323"')));

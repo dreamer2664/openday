@@ -49,7 +49,7 @@ css/style.css              Layout responsive e animazioni di base
 css/detail.css             Finiture pixel e mixer audio
 js/app.js                  Stati, validazione, rivelazione e sincronizzazione
 js/responsi.js             Archivio dei 50 responsi e controllo locale
-js/pythia-sprites.js       Pizia originale su griglia 120 × 160
+js/pythia-sprites.js       Pose NES della Pizia, 160 × 326, in assets/pizia/
 js/scenery.js              Paesaggio e particelle
 js/audio.js                Partitura, sintesi, effetti e trasporto audio
 assets/                    SVG originali e font con licenze

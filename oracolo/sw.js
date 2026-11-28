@@ -1,6 +1,6 @@
 /* Cache autonoma: solo file dell'app, mai domande o responsi. */
 'use strict';
-const CACHE = 'delfi-arcade-pizia-nes-1';
+const CACHE = 'delfi-arcade-pizia-nes-2';
 const SHELL = [
   './', './index.html', './css/style.css', './css/detail.css',
   './js/app.js', './js/audio.js', './js/responsi.js', './js/pythia-sprites.js', './js/scenery.js',

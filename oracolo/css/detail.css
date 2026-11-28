@@ -42,8 +42,8 @@
 .stage::before, .stage::after { width: 7px; height: 7px; background: #eed49d; box-shadow: 0 0 0 2px #171f2d, 0 0 0 3px #9a7c52; }
 .stone-floor { height: 24px; margin-top: -24px; background: url('../assets/stone-tiles.svg') repeat-x bottom left / 128px 24px; }
 .sanctuary-art { opacity: 1; }
-#pythiaCanvas { width: auto; height: 118%; max-width: none; position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%); }
-.pythia-aura { width: 165px; height: 225px; opacity: .09; }
+#pythiaCanvas { position: static; left: auto; bottom: auto; width: 100%; height: 100%; max-width: 100%; min-width: 0; min-height: 0; transform: none; }
+.pythia-aura { width: 28%; height: 34%; opacity: .09; }
 [data-state='consulting'] .pythia-aura { opacity: .3; background: #b7a4e0; }
 [data-state='speaking'] .pythia-aura { opacity: .21; }
 .pythia-name { text-shadow: 1px 2px #10192c; }
@@ -137,7 +137,7 @@
   .mini-btn { padding: 7px; gap: 5px; font-size: 14px; }
   .utility-controls { gap: 4px; }
   .audio-settings summary { width: 32px; }
-  .audio-popover { right: -26px; }
+  .audio-popover { right: 0; width: min(234px, calc(100vw - 28px)); }
   .btn-consult .btn-gem { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {

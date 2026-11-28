@@ -207,6 +207,14 @@
   }
 
   form.addEventListener('submit', consult);
+  document.querySelector('.skip-link').addEventListener('click', (event) => {
+    if (!field.disabled) return;
+    event.preventDefault();
+    const target = !againButton.hidden ? againButton : !consultView.hidden ? consultView : byId('santuario');
+    if (target.id === 'santuario') target.tabIndex = -1;
+    target.focus({ preventScroll: true });
+    target.scrollIntoView({ block: 'start', behavior: motionQuery.matches ? 'instant' : 'smooth' });
+  });
   field.addEventListener('input', updateField);
   field.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' && !event.shiftKey && !event.isComposing && event.keyCode !== 229) {

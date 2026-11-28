@@ -169,11 +169,14 @@ a { color: inherit; }
 .stage-mist { position: absolute; bottom: 45px; left: 0; right: 0; height: 120px; z-index: -1; background: linear-gradient(0deg, #273d4b77, transparent); pointer-events: none; }
 .scene { position: relative; display: grid; grid-template-columns: 42% 58%; align-items: center; min-height: 456px; padding: 20px 44px 30px 22px; gap: 0; }
 .stone-floor { height: 18px; margin-top: -18px; z-index: -1; position: relative; background: repeating-linear-gradient(90deg, transparent 0 88px, #151f2e 88px 91px), linear-gradient(#4c5264 0 3px, #343e50 3px 10px, #242f43 10px 13px, #161f30 13px); }
-.pythia-zone { position: relative; height: 406px; min-width: 0; align-self: end; }
-.sanctuary-art { position: absolute; width: 336px; height: 363px; left: 50%; bottom: 43px; transform: translateX(-50%); opacity: .92; }
-.pythia { position: absolute; width: 240px; height: 320px; bottom: 51px; left: 50%; transform: translateX(-50%); z-index: 2; }
-#pythiaCanvas { width: 100%; height: 100%; display: block; }
-.pythia-aura { position: absolute; width: 180px; height: 200px; bottom: 85px; left: 50%; transform: translateX(-50%); border-radius: 50%; background: #a88be0; filter: blur(50px); opacity: .06; pointer-events: none; transition: opacity .4s; }
+.pythia-zone { position: relative; height: 406px; min-width: 0; align-self: end; container-type: inline-size; }
+.sanctuary-slot { position: absolute; z-index: 1; width: 336px; height: 363px; left: 50%; bottom: 43px; transform: translateX(-50%); }
+.sanctuary-art { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .92; }
+/* Vano di sanctuary.svg: la cornice finisce a y=61, i piedi poggiano sul gradino a y=154.
+   La scatola non deve superare questa frazione: il canvas al 118% usciva dalla cornice. */
+.pythia { position: absolute; left: 50%; bottom: calc(100% * 10 / 164); height: calc(100% * 87 / 164); width: auto; max-width: 44%; aspect-ratio: 160 / 326; transform: translateX(-50%); z-index: 2; overflow: hidden; }
+#pythiaCanvas { width: 100%; height: 100%; min-width: 0; min-height: 0; display: block; }
+.pythia-aura { position: absolute; width: 28%; height: 34%; bottom: 24%; left: 50%; transform: translateX(-50%); border-radius: 50%; background: #a88be0; filter: blur(40px); opacity: .06; pointer-events: none; transition: opacity .4s; }
 [data-state='consulting'] .pythia-aura { opacity: .3; }
 [data-state='speaking'] .pythia-aura { opacity: .18; background: var(--gold); }
 .pythia-name { position: absolute; bottom: 12px; left: 0; right: 0; display: flex; gap: 13px; align-items: center; justify-content: center; color: var(--gold); font-family: var(--pixel); font-size: 10px; letter-spacing: 1px; z-index: 2; }
@@ -315,14 +318,12 @@ kbd { font: 10px var(--terminal); padding: 1px 4px; border: 1px solid #70757b; c
   .marquee { padding-top: 38px; padding-bottom: 42px; }
   .scene { min-height: 510px; padding-top: 35px; padding-bottom: 45px; }
   .pythia-zone { height: 430px; }
-  .pythia { width: 264px; height: 352px; }
-  .sanctuary-art { width: 360px; height: 388px; }
+  .sanctuary-slot { width: 360px; height: 388px; }
 }
 @media (max-width: 1080px) {
   .cabinet { padding: 0 28px; }
   .scene { grid-template-columns: 39% 61%; padding-left: 12px; padding-right: 28px; }
-  .sanctuary-art { width: 304px; height: 328px; bottom: 49px; }
-  .pythia { width: 216px; height: 288px; bottom: 57px; }
+  .sanctuary-slot { width: 304px; height: 328px; bottom: 49px; }
   .pythia-zone { height: 385px; }
   .brazier-left { left: calc(50% - 111px); }
   .brazier-right { right: calc(50% - 111px); }
@@ -341,8 +342,7 @@ kbd { font: 10px var(--terminal); padding: 1px 4px; border: 1px solid #70757b; c
   .title-wrap { gap: 28px; }
   .scene { grid-template-columns: 35% 65%; padding-left: 8px; padding-right: 23px; }
   .pythia-zone { height: 355px; }
-  .sanctuary-art { width: min(250px, calc(100% + 8px)); height: auto; aspect-ratio: 152 / 164; bottom: 50px; }
-  .pythia { width: min(192px, calc(100% - 32px)); height: auto; aspect-ratio: 3 / 4; bottom: 50px; }
+  .sanctuary-slot { width: min(250px, calc(100% + 8px)); height: calc(min(250px, 100cqi + 8px) * 164 / 152); aspect-ratio: 152 / 164; bottom: 50px; }
   .brazier-left { left: calc(50% - 83px); }
   .brazier-right { display: none; }
   .brazier { bottom: 50px; transform: scale(.85); }
@@ -379,8 +379,7 @@ kbd { font: 10px var(--terminal); padding: 1px 4px; border: 1px solid #70757b; c
   .stage-location { display: none; }
   .scene { grid-template-columns: 1fr; min-height: 0; padding: 0 21px 26px; gap: 20px; }
   .pythia-zone { height: 244px; }
-  .sanctuary-art { width: 200px; height: 216px; bottom: 24px; }
-  .pythia { width: 168px; height: 224px; bottom: 24px; }
+  .sanctuary-slot { width: 200px; height: 216px; bottom: 24px; }
   .pythia-name { bottom: 9px; font-size: 9px; }
   .pythia-caption { bottom: -12px; font-size: 15px; }
   .brazier { bottom: 28px; transform: scale(.85); }
@@ -498,8 +497,8 @@ kbd { font: 10px var(--terminal); padding: 1px 4px; border: 1px solid #70757b; c
 .stage::before, .stage::after { width: 7px; height: 7px; background: #eed49d; box-shadow: 0 0 0 2px #171f2d, 0 0 0 3px #9a7c52; }
 .stone-floor { height: 24px; margin-top: -24px; background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMjQiIHNoYXBlLXJlbmRlcmluZz0iY3Jpc3BFZGdlcyI+PHJlY3Qgd2lkdGg9IjEyOCIgaGVpZ2h0PSIyNCIgZmlsbD0iIzI2MzU0YSIvPjxwYXRoIGQ9Ik0wIDBoMTI4djJIMHoiIGZpbGw9IiNhNTlhOGMiLz48cGF0aCBkPSJNMCAyaDEyOHYySDB6IiBmaWxsPSIjNjM3MDgzIi8+PHBhdGggZD0iTTEgNGgzOHY3SDF6bTQxIDBoNDJ2N0g0MnptNDUgMGg0MHY3SDg3eiIgZmlsbD0iIzRhNTg2YyIvPjxwYXRoIGQ9Ik0xIDRoMzh2MUgxem00MSAwaDQydjFINDJ6bTQ1IDBoNDB2MUg4N3oiIGZpbGw9IiM3MzgwOTIiLz48cGF0aCBkPSJNMCAxMmgxMjh2MkgweiIgZmlsbD0iIzE3MjgzOSIvPjxwYXRoIGQ9Ik0wIDE0aDE4djdIMHptMjEgMGg0MHY3SDIxem00MyAwaDM5djdINjR6bTQyIDBoMjJ2N2gtMjJ6IiBmaWxsPSIjMzg0ODVlIi8+PHBhdGggZD0iTTAgMTRoMTh2MUgwem0yMSAwaDQwdjFIMjF6bTQzIDBoMzl2MUg2NHptNDIgMGgyMnYxaC0yMnoiIGZpbGw9IiM1NjY3N2EiLz48cGF0aCBkPSJNMCAyMmgxMjh2MkgweiIgZmlsbD0iIzE1MjMzNiIvPjxwYXRoIGQ9Ik03IDZoN3YxSDd6bTQ2IDJoNHYxaC00em00My0yaDl2MWgtOXpNMjcgMTdoNHYxaC00em00NyAxaDd2MWgtN3ptNDEtMmg0djFoLTR6IiBmaWxsPSIjOGI4ZjkxIiBvcGFjaXR5PSIuNSIvPjxwYXRoIGQ9Ik02NiA0aDF2M2gtMnYyaDJ2MmgtMVY5aC0yVjdoMnpNMzcgMTVoMXYyaDN2MmgtMXYtMWgtM3oiIGZpbGw9IiMyNDM3NDkiLz48cGF0aCBkPSJNMiAxaDR2MUgyem05MCAwaDN2MWgtM3oiIGZpbGw9IiNkMWJkOTYiLz48L3N2Zz4K") repeat-x bottom left / 128px 24px; }
 .sanctuary-art { opacity: 1; }
-#pythiaCanvas { width: auto; height: 118%; max-width: none; position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%); }
-.pythia-aura { width: 165px; height: 225px; opacity: .09; }
+#pythiaCanvas { position: static; left: auto; bottom: auto; width: 100%; height: 100%; max-width: 100%; min-width: 0; min-height: 0; transform: none; }
+.pythia-aura { width: 28%; height: 34%; opacity: .09; }
 [data-state='consulting'] .pythia-aura { opacity: .3; background: #b7a4e0; }
 [data-state='speaking'] .pythia-aura { opacity: .21; }
 .pythia-name { text-shadow: 1px 2px #10192c; }
@@ -593,7 +592,7 @@ kbd { font: 10px var(--terminal); padding: 1px 4px; border: 1px solid #70757b; c
   .mini-btn { padding: 7px; gap: 5px; font-size: 14px; }
   .utility-controls { gap: 4px; }
   .audio-settings summary { width: 32px; }
-  .audio-popover { right: -26px; }
+  .audio-popover { right: 0; width: min(234px, calc(100vw - 28px)); }
   .btn-consult .btn-gem { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -657,10 +656,12 @@ kbd { font: 10px var(--terminal); padding: 1px 4px; border: 1px solid #70757b; c
 
     <section class="scene" aria-label="Santuario di Delfi">
       <div class="pythia-zone">
-        <img class="sanctuary-art" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTIgMTY0IiBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPgo8IS0tIFNhbnR1YXJpbyBvcmlnaW5hbGU6IG1hcm1vIGluY2lzbywgZnJlZ2lvIGEgZ3JlY2EsIGFjcm90ZXJpLCBsdWNlcm5lIGUgYW5mb3JlLiAtLT4KPGRlZnM+CiA8cGF0dGVybiBpZD0iZ3JlY2EiIHdpZHRoPSIxMiIgaGVpZ2h0PSI3IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNMCAxaDl2NEg1VjNoMnYxSDZ2MWgzVjFIMXY2SDB6IiBmaWxsPSIjZDhiYjg1Ii8+PHJlY3QgeT0iNiIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEiIGZpbGw9IiM3NDYwNzQiLz48L3BhdHRlcm4+CiA8cGF0dGVybiBpZD0icGlldHJhIiB3aWR0aD0iMjQiIGhlaWdodD0iMjkiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0zIDRoMnYxSDN6bTE1IDEwaDN2MWgtM3ptLTkgMTNoMXYxSDl6IiBmaWxsPSIjZjJlNGMyIiBvcGFjaXR5PSIuMTciLz48cGF0aCBkPSJNMTEgN2gydjFoLTJ6bTEwIDEzaDF2MmgtMXoiIGZpbGw9IiM1NDRlNjUiIG9wYWNpdHk9Ii4xNSIvPjwvcGF0dGVybj4KPC9kZWZzPgo8IS0tIFJlY2Vzc28gZGVsIHRlbXBpbyBlIHNvZmZpdHRvIGEgY2Fzc2V0dG9uaS4gLS0+CjxwYXRoIGQ9Ik0zMiA1M2g4OHY5OUgzMnoiIGZpbGw9IiMyMDI4M2EiLz4KPHBhdGggZD0iTTM2IDU5aDgwdjkxSDM2eiIgZmlsbD0iIzI4MzA0NCIvPjxwYXRoIGQ9Ik00MiA2NGg2OHY4Nkg0MnoiIGZpbGw9IiMyMjJiM2MiLz4KPHBhdGggZD0iTTQyIDY1aDI0djNINDJ6bTQzIDBoMjV2M0g4NXpNMzggNzJoMnY2MmgtMnptNzQgMGgydjYyaC0yeiIgZmlsbD0iIzRiNDI1NiIvPgo8cGF0aCBkPSJNNDUgNzFoMTd2MUg0NXptNDMgMGgxN3YxSDg4ek00OCA3M2gxMnYxSDQ4em00MiAwaDEydjFIOTB6IiBmaWxsPSIjNjk2MDZiIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNNDkgODRoM3YzNWgtM3ptNDkgMGgzdjM1aC0zeiIgZmlsbD0iIzM1MzU0OCIvPjxwYXRoIGQ9Ik01MCA4NmgxdjMwaC0xem00OSAwaDF2MzBoLTF6IiBmaWxsPSIjNzQ3MDYwIiBvcGFjaXR5PSIuMzUiLz4KPCEtLSBTYWdvbWEgZSBmYWxkZSBkZWwgdGltcGFuby4gLS0+CjxwYXRoIGQ9Ik02IDQwaDh2LTRoOHYtNGg4di00aDh2LTRoOHYtNGg4di00aDh2LTRoOFY4aDEydjRoOHY0aDh2NGg4djRoOHY0aDh2NGg4djRoOHY0aDh2OEg2eiIgZmlsbD0iIzUwNDY1OCIvPgo8cGF0aCBkPSJNOCAzOGg4di00aDh2LTRoOHYtNGg4di00aDh2LTRoOHYtNGg4di00aDhWNmg4djRoOHY0aDh2NGg4djRoOHY0aDh2NGg4djRoOHY0aDh2N0g4eiIgZmlsbD0iI2M5YWY4ZCIvPgo8cGF0aCBkPSJNOCAzOGg4di00aDh2LTRoOHYtNGg4di00aDh2LTRoOHYtNGg4di00aDhWNmg4djRoOHY0aDh2NGg4djRoOHY0aDh2NGg4djRoOHY0aDgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2YxZDlhYyIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxwYXRoIGQ9Ik0xOCAzOGgxNHYtNGg4di00aDh2LTRoOHYtNGg4di00aDh2LTRoOHY0aDh2NGg4djRoOHY0aDh2NGg4djRoMTR2NEgxOHoiIGZpbGw9IiM4MjcwODIiLz4KPHBhdGggZD0iTTI5IDM4aDExdi00aDh2LTRoOHYtNGg4di00aDh2LTRoOHY0aDh2NGg4djRoOHY0aDh2NGgxMXYzSDI5eiIgZmlsbD0iIzRiNDE1YSIvPgo8cGF0aCBkPSJNNDIgMzhoOHYtNGg4di00aDh2LTRoOHYtNGg0djRoOHY0aDh2NGg4djRoOHYySDQyeiIgZmlsbD0iIzMwMmU0NiIvPgo8cGF0aCBkPSJNMTAgNDNoMTMydjJIMTB6IiBmaWxsPSIjOWQ4Mjc1Ii8+CjwhLS0gUGljY29saSBibG9jY2hpIGRpIG1hcm1vIGUgYWNyb3RlcmkgYSBwYWxtZXR0YS4gLS0+CjxwYXRoIGQ9Ik03MyA0aDZ2M2gtNnptMS0zaDR2NGgtNHpNMTAgMzVoNHYzaC00em0xMjggMGg0djNoLTR6IiBmaWxsPSIjZTVjODliIi8+CjxwYXRoIGQ9Ik03MiAyaDJ2MmgtMnptNiAwaDJ2MmgtMnoiIGZpbGw9IiNiODk5NzMiLz4KPHBhdGggZD0iTTI1IDM0aDR2MWgtNHptMTYtOWg0djFoLTR6bTIwLTloM3YxaC0zem0zMyA0aDR2MWgtNHptMTYgOGgzdjFoLTN6bTE2IDloNnYxaC02eiIgZmlsbD0iI2Y3ZTNiNiIvPgo8cGF0aCBkPSJNMzUgMjl2NGgtMXYtM2gtNHYtMXptODAgM3YzaDR2MWgtNXYtNHoiIGZpbGw9IiM5MDc5ODgiLz4KPCEtLSBTb2xlIGRpIEFwb2xsbyBpbiByaWxpZXZvOiBvdHRvIHJhZ2dpLCBvbWJyYSBlIGNlbnRybyBhIHRlc3NlcmUuIC0tPgo8cGF0aCBkPSJNNzQgMjVoNHYzaDN2MmgzdjRoLTN2M2gtM3YzaC00di0zaC0zdi0zaC0zdi00aDN2LTJoM3oiIGZpbGw9IiM4YzY2NWEiLz4KPHBhdGggZD0iTTc0IDI0aDR2NGgzdjJoM3Y0aC00djNoLTJ2M2gtNHYtM2gtMnYtM2gtNHYtNGgzdi0yaDN6IiBmaWxsPSIjZGZiODcwIi8+CjxwYXRoIGQ9Ik03NCAyOGg0djJoMnY0aC0ydjJoLTR2LTJoLTJ2LTRoMnoiIGZpbGw9IiNmZmYwYjUiLz48cmVjdCB4PSI3NCIgeT0iMzAiIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiNhZjhmNmQiLz48cmVjdCB4PSI3NSIgeT0iMzAiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiNlM2M1OGUiLz4KPHBhdGggZD0iTTYzIDMyaDN2MWgtM3ptMjMgMGgzdjFoLTN6bS0xOC02aDJ2MmgtMnptMTQgMGgydjJoLTJ6IiBmaWxsPSIjYjc5MjY0Ii8+CjxwYXRoIGQ9Ik01MyAzNmg0djFoLTR6bTMtM2g0djFoLTR6bTQwIDBoNHYxaC00em0zIDNoNHYxaC00eiIgZmlsbD0iIzgwNmM3MCIvPgo8IS0tIENvcm5pY2lvbmUgc3RyYXRpZmljYXRvLCBkZW50ZWxsaSBlIGZyZWdpbyBjb250aW51by4gLS0+CjxwYXRoIGQ9Ik0zIDQ0aDE0NnYzSDN6IiBmaWxsPSIjZjFkZmJhIi8+PHBhdGggZD0iTTUgNDdoMTQydjNINXoiIGZpbGw9IiNjMmE3OGMiLz4KPHBhdGggZD0iTTggNTBoMTM2djhIOHoiIGZpbGw9IiM4MzcxN2IiLz48cmVjdCB4PSIxMCIgeT0iNTAiIHdpZHRoPSIxMzIiIGhlaWdodD0iNyIgZmlsbD0idXJsKCNncmVjYSkiLz4KPHBhdGggZD0iTTkgNTdoMTM0djJIOXoiIGZpbGw9IiNjOGFlOGEiLz48cGF0aCBkPSJNMTIgNTloMTI4djJIMTJ6IiBmaWxsPSIjNWI1MTY2Ii8+CjxwYXRoIGQ9Ik0xNSA0OGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6IiBmaWxsPSIjNjY1ODY3Ii8+CjwhLS0gQ2FwaXRlbGxpIGRvcmljaSwgZWNoaW5vLCBjb2xsYXJpbm8uIC0tPgo8cGF0aCBkPSJNMTEgNjBoMjd2NEgxMXptMTAzIDBoMjd2NGgtMjd6IiBmaWxsPSIjZTlkNWIxIi8+CjxwYXRoIGQ9Ik0xMyA2NGgyM3YzSDEzem0xMDMgMGgyM3YzaC0yM3oiIGZpbGw9IiNiYmE0OTIiLz4KPHBhdGggZD0iTTE1IDY3aDE5djJIMTV6bTEwMyAwaDE5djJoLTE5eiIgZmlsbD0iIzhiN2Y4NyIvPgo8cGF0aCBkPSJNMTYgNjloMTd2MkgxNnptMTAzIDBoMTd2MmgtMTd6IiBmaWxsPSIjZGVkMGIxIi8+CjwhLS0gQ29sb25uZSBzY2FuYWxhdGUsIGNpYXNjdW5hIHNjb2xwaXRhIGNvbiBjaW5xdWUgdG9uYWxpdMOgLiAtLT4KPHBhdGggZD0iTTE3IDcxaDE2djc0SDE3em0xMDMgMGgxNnY3NGgtMTZ6IiBmaWxsPSIjYjZhYWEwIi8+CjxwYXRoIGQ9Ik0xNyA3MWgydjc0aC0yem0xMDMgMGgydjc0aC0yeiIgZmlsbD0iI2VkZGZiYyIvPgo8cGF0aCBkPSJNMjAgNzFoMnY3NGgtMnptMTAzIDBoMnY3NGgtMnoiIGZpbGw9IiNkMmM3YWIiLz4KPHBhdGggZD0iTTIyIDcxaDF2NzRoLTF6bTEwMyAwaDF2NzRoLTF6IiBmaWxsPSIjODE3Yzg5Ii8+CjxwYXRoIGQ9Ik0yNCA3MWgydjc0aC0yem0xMDMgMGgydjc0aC0yeiIgZmlsbD0iI2UyZDNiMiIvPgo8cGF0aCBkPSJNMjYgNzFoMnY3NGgtMnptMTAzIDBoMnY3NGgtMnoiIGZpbGw9IiM5YzkxYTAiLz4KPHBhdGggZD0iTTI5IDcxaDJ2NzRoLTJ6bTEwMyAwaDJ2NzRoLTJ6IiBmaWxsPSIjYzViNjlmIi8+CjxwYXRoIGQ9Ik0zMSA3MWgydjc0aC0yem0xMDMgMGgydjc0aC0yeiIgZmlsbD0iIzY1NWU3NiIvPgo8cGF0aCBkPSJNMTcgOTRoMTZ2MUgxN3ptMTAzIDBoMTZ2MWgtMTZ6TTE3IDEyMWgxNnYxSDE3em0xMDMgMGgxNnYxaC0xNnoiIGZpbGw9IiM2NDVjNmMiIG9wYWNpdHk9Ii4zNSIvPgo8cGF0aCBkPSJNMTcgOTVoNHYxaC00em0xMDcgMjdoNHYxaC00ek0yOSAxMDhoMnYxaC0yem05NS0yOGgydjFoLTJ6IiBmaWxsPSIjZjVlOGNhIiBvcGFjaXR5PSIuNjUiLz4KPHBhdGggZD0iTTMwIDg0aDJ2MWgtMnptLTUgNDhoMnYxaC0yem05OC0yNGgxdjNoLTF6bTctMTFoMnYxaC0yeiIgZmlsbD0iIzc5Njk3ZCIvPgo8cGF0aCBkPSJNMTcgNzFoMTZ2NzRIMTd6bTEwMyAwaDE2djc0aC0xNnoiIGZpbGw9InVybCgjcGlldHJhKSIvPgo8IS0tIER1ZSBsdWNlcm5lIGFwcGVzZSBhbCBzb2ZmaXR0by4gLS0+CjxwYXRoIGQ9Ik00MyA2MWgxdjEzaC0xem02NSAwaDF2MTNoLTF6IiBmaWxsPSIjYjg5YjY5Ii8+PHBhdGggZD0iTTQwIDc0aDd2MmgtN3ptNjUgMGg3djJoLTd6IiBmaWxsPSIjYzRhMDc0Ii8+CjxwYXRoIGQ9Ik00MSA3Nmg1djJoLTV6bTY1IDBoNXYyaC01eiIgZmlsbD0iIzhiNmU2NSIvPgo8cGF0aCBkPSJNNDMgNzFoMXYzaC0xem02NSAwaDF2M2gtMXoiIGZpbGw9IiNmZmRkYTAiLz4KPCEtLSBCYXNpIGUgdHJlIGdyYWRpbmkgY29uIGZ1Z2hlLCBjcmVwZSBlIHRlc3NlcmUgbHVtaW5vc2UuIC0tPgo8cGF0aCBkPSJNMTUgMTQ1aDIwdjNIMTV6bTEwMyAwaDIwdjNoLTIweiIgZmlsbD0iI2RmYzlhNiIvPgo8cGF0aCBkPSJNMTIgMTQ4aDI2djNIMTJ6bTEwMyAwaDI2djNoLTI2eiIgZmlsbD0iI2E1OTU5MSIvPgo8cGF0aCBkPSJNOSAxNTFoMTM0djRIOXoiIGZpbGw9IiNiZWFhOTYiLz48cGF0aCBkPSJNOSAxNTFoMTM0djFIOXoiIGZpbGw9IiNlNmNmYWEiLz4KPHBhdGggZD0iTTQgMTU1aDE0NHY1SDR6IiBmaWxsPSIjODI3YjhhIi8+PHBhdGggZD0iTTQgMTU1aDE0NHYxSDR6IiBmaWxsPSIjYjlhYTliIi8+CjxwYXRoIGQ9Ik0wIDE2MGgxNTJ2NEgweiIgZmlsbD0iIzRkNTI2ZCIvPjxwYXRoIGQ9Ik0wIDE2MGgxNTJ2MUgweiIgZmlsbD0iIzhjODI5MCIvPgo8cGF0aCBkPSJNNDEgMTUyaDF2M2gtMXptNTEgMGgxdjNoLTF6TTIxIDE1NmgxdjRoLTF6bTUzIDBoMXY0aC0xem00OCAwaDF2NGgtMXpNNDcgMTYxaDF2M2gtMXptNTkgMGgxdjNoLTF6IiBmaWxsPSIjNGY0ZDY3Ii8+CjxwYXRoIGQ9Ik0xNiAxNTJoOHYxaC04em0zMCAwaDR2MWgtNHptNjUgMGg5djFoLTl6TTEyIDE1N2g2djFoLTZ6bTcyIDBoNHYxaC00em00NCAwaDZ2MWgtNnoiIGZpbGw9IiNkM2JhYTAiIG9wYWNpdHk9Ii42NSIvPgo8cGF0aCBkPSJNOTkgMTU1aDN2MmgydjFoNHYxaC01di0xaC0ydi0yaC0yeiIgZmlsbD0iIzU4NTU2OCIvPgo8IS0tIEFuZm9yYSBkaSB0ZXJyYWNvdHRhIGNvbiBkdWUgYW5zZSBlIGZhc2NpYSBkZWNvcmF0aXZhLiAtLT4KPHBhdGggZD0iTTM3IDEzMWg4djJoLTF2NWgydjJoMXY3aC0ydjNoLTl2LTNoLTJ2LTdoMnYtMmgydi01aC0xeiIgZmlsbD0iIzY4NGQ1OCIvPgo8cGF0aCBkPSJNMzggMTMzaDV2NmgydjhoLTJ2MmgtNnYtM2gtMXYtNmgyeiIgZmlsbD0iI2I2Nzk2MSIvPgo8cGF0aCBkPSJNMzggMTM5aDJ2OGgtMnptMS02aDJ2NWgtMnoiIGZpbGw9IiNlMGE0N2MiLz4KPHBhdGggZD0iTTM0IDEzNmgzdjFoLTJ2NmgxdjFoLTN2LTZoMXptMTAgMGgzdjFoMXY2aC0zdi0xaDJ2LTVoLTN6IiBmaWxsPSIjYmE4YzcwIi8+CjxwYXRoIGQ9Ik0zNiAxNDFoOXYyaC05eiIgZmlsbD0iIzU4NDQ1MSIvPjxwYXRoIGQ9Ik0zOCAxNDFoMXYxaC0xem0zIDFoMXYxaC0xeiIgZmlsbD0iI2RmYmQ4YyIvPgo8cGF0aCBkPSJNMzcgMTMxaDd2MWgtN3ptMSAxN2g1djFoLTV6IiBmaWxsPSIjZDRhMjdjIi8+CjwhLS0gUGV0aXQgYmFzc2luIHZvdGlmIGV0IHJhbWVhdXggZCdvbGl2aWVyLiAtLT4KPHBhdGggZD0iTTEwNSAxNDBoMTJ2M2gtMXY2aC0xMHYtNGgtMXoiIGZpbGw9IiM4YjcxNjgiLz4KPHBhdGggZD0iTTEwNiAxNDFoMTB2MmgtMTB6bTIgM2g2djRoLTZ6IiBmaWxsPSIjZDRiNDg4Ii8+PHBhdGggZD0iTTEwOCAxNDhoNnYyaC02eiIgZmlsbD0iI2IwOGI2ZSIvPgo8cGF0aCBkPSJNMTExIDEyM2gxdjE4aC0xem0tMi05aDF2MTBoLTF6IiBmaWxsPSIjNzM4NzZjIi8+CjxwYXRoIGQ9Ik0xMDYgMTE3aDN2M2gtMnYtMWgtMXptNSA1aDR2MmgtMnYyaC0yem0tNiA2aDV2M2gtM3YtMWgtMnptNyA1aDV2MmgtM3YyaC0yeiIgZmlsbD0iIzc5OTc3ZCIvPgo8cGF0aCBkPSJNMTA2IDExN2gydjFoLTJ6bTcgNWgydjFoLTJ6bS03IDZoMnYxaC0yem04IDVoMnYxaC0yeiIgZmlsbD0iI2MxYzA4ZCIvPgo8IS0tIExpZXJyZSBkaXNjcmV0IHN1ciBsZSBjw7R0w6kgb21icmFnw6kgZGUgbGEgY29sb25uZS4gLS0+CjxwYXRoIGQ9Ik0zMiAxMTNoMXYxM2gydjEwaC0xdjEwaC0xdi0xMGgtMXYtOWgtMXYtMTBoMXoiIGZpbGw9IiM1MzZiNjMiLz4KPHBhdGggZD0iTTMxIDExNWgtM3YzaDN6bTMgNmgzdjNoLTN6bS0yIDloLTR2Mmg0em0zIDhoM3YzaC0zeiIgZmlsbD0iIzZmOGE3NCIvPgo8cGF0aCBkPSJNMjggMTE1aDJ2MWgtMnptNyA2aDJ2MWgtMnptLTcgOWgydjFoLTJ6IiBmaWxsPSIjYTFhYjgyIi8+Cjwvc3ZnPgo=" width="456" height="492" alt="">
-        <div class="pythia-aura" aria-hidden="true"></div>
-        <div class="pythia" id="pythia" role="img" aria-label="La Pizia, sacerdotessa di Delfi in pixel art, in attesa della tua domanda" data-pose="idle">
-          <canvas id="pythiaCanvas" width="160" height="326" aria-hidden="true"></canvas>
+        <div class="sanctuary-slot">
+          <img class="sanctuary-art" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTIgMTY0IiBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPgo8IS0tIFNhbnR1YXJpbyBvcmlnaW5hbGU6IG1hcm1vIGluY2lzbywgZnJlZ2lvIGEgZ3JlY2EsIGFjcm90ZXJpLCBsdWNlcm5lIGUgYW5mb3JlLiAtLT4KPGRlZnM+CiA8cGF0dGVybiBpZD0iZ3JlY2EiIHdpZHRoPSIxMiIgaGVpZ2h0PSI3IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNMCAxaDl2NEg1VjNoMnYxSDZ2MWgzVjFIMXY2SDB6IiBmaWxsPSIjZDhiYjg1Ii8+PHJlY3QgeT0iNiIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEiIGZpbGw9IiM3NDYwNzQiLz48L3BhdHRlcm4+CiA8cGF0dGVybiBpZD0icGlldHJhIiB3aWR0aD0iMjQiIGhlaWdodD0iMjkiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0zIDRoMnYxSDN6bTE1IDEwaDN2MWgtM3ptLTkgMTNoMXYxSDl6IiBmaWxsPSIjZjJlNGMyIiBvcGFjaXR5PSIuMTciLz48cGF0aCBkPSJNMTEgN2gydjFoLTJ6bTEwIDEzaDF2MmgtMXoiIGZpbGw9IiM1NDRlNjUiIG9wYWNpdHk9Ii4xNSIvPjwvcGF0dGVybj4KPC9kZWZzPgo8IS0tIFJlY2Vzc28gZGVsIHRlbXBpbyBlIHNvZmZpdHRvIGEgY2Fzc2V0dG9uaS4gLS0+CjxwYXRoIGQ9Ik0zMiA1M2g4OHY5OUgzMnoiIGZpbGw9IiMyMDI4M2EiLz4KPHBhdGggZD0iTTM2IDU5aDgwdjkxSDM2eiIgZmlsbD0iIzI4MzA0NCIvPjxwYXRoIGQ9Ik00MiA2NGg2OHY4Nkg0MnoiIGZpbGw9IiMyMjJiM2MiLz4KPHBhdGggZD0iTTQyIDY1aDI0djNINDJ6bTQzIDBoMjV2M0g4NXpNMzggNzJoMnY2MmgtMnptNzQgMGgydjYyaC0yeiIgZmlsbD0iIzRiNDI1NiIvPgo8cGF0aCBkPSJNNDUgNzFoMTd2MUg0NXptNDMgMGgxN3YxSDg4ek00OCA3M2gxMnYxSDQ4em00MiAwaDEydjFIOTB6IiBmaWxsPSIjNjk2MDZiIiBvcGFjaXR5PSIuNSIvPgo8cGF0aCBkPSJNNDkgODRoM3YzNWgtM3ptNDkgMGgzdjM1aC0zeiIgZmlsbD0iIzM1MzU0OCIvPjxwYXRoIGQ9Ik01MCA4NmgxdjMwaC0xem00OSAwaDF2MzBoLTF6IiBmaWxsPSIjNzQ3MDYwIiBvcGFjaXR5PSIuMzUiLz4KPCEtLSBTYWdvbWEgZSBmYWxkZSBkZWwgdGltcGFuby4gLS0+CjxwYXRoIGQ9Ik02IDQwaDh2LTRoOHYtNGg4di00aDh2LTRoOHYtNGg4di00aDh2LTRoOFY4aDEydjRoOHY0aDh2NGg4djRoOHY0aDh2NGg4djRoOHY0aDh2OEg2eiIgZmlsbD0iIzUwNDY1OCIvPgo8cGF0aCBkPSJNOCAzOGg4di00aDh2LTRoOHYtNGg4di00aDh2LTRoOHYtNGg4di00aDhWNmg4djRoOHY0aDh2NGg4djRoOHY0aDh2NGg4djRoOHY0aDh2N0g4eiIgZmlsbD0iI2M5YWY4ZCIvPgo8cGF0aCBkPSJNOCAzOGg4di00aDh2LTRoOHYtNGg4di00aDh2LTRoOHYtNGg4di00aDhWNmg4djRoOHY0aDh2NGg4djRoOHY0aDh2NGg4djRoOHY0aDgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2YxZDlhYyIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxwYXRoIGQ9Ik0xOCAzOGgxNHYtNGg4di00aDh2LTRoOHYtNGg4di00aDh2LTRoOHY0aDh2NGg4djRoOHY0aDh2NGg4djRoMTR2NEgxOHoiIGZpbGw9IiM4MjcwODIiLz4KPHBhdGggZD0iTTI5IDM4aDExdi00aDh2LTRoOHYtNGg4di00aDh2LTRoOHY0aDh2NGg4djRoOHY0aDh2NGgxMXYzSDI5eiIgZmlsbD0iIzRiNDE1YSIvPgo8cGF0aCBkPSJNNDIgMzhoOHYtNGg4di00aDh2LTRoOHYtNGg0djRoOHY0aDh2NGg4djRoOHYySDQyeiIgZmlsbD0iIzMwMmU0NiIvPgo8cGF0aCBkPSJNMTAgNDNoMTMydjJIMTB6IiBmaWxsPSIjOWQ4Mjc1Ii8+CjwhLS0gUGljY29saSBibG9jY2hpIGRpIG1hcm1vIGUgYWNyb3RlcmkgYSBwYWxtZXR0YS4gLS0+CjxwYXRoIGQ9Ik03MyA0aDZ2M2gtNnptMS0zaDR2NGgtNHpNMTAgMzVoNHYzaC00em0xMjggMGg0djNoLTR6IiBmaWxsPSIjZTVjODliIi8+CjxwYXRoIGQ9Ik03MiAyaDJ2MmgtMnptNiAwaDJ2MmgtMnoiIGZpbGw9IiNiODk5NzMiLz4KPHBhdGggZD0iTTI1IDM0aDR2MWgtNHptMTYtOWg0djFoLTR6bTIwLTloM3YxaC0zem0zMyA0aDR2MWgtNHptMTYgOGgzdjFoLTN6bTE2IDloNnYxaC02eiIgZmlsbD0iI2Y3ZTNiNiIvPgo8cGF0aCBkPSJNMzUgMjl2NGgtMXYtM2gtNHYtMXptODAgM3YzaDR2MWgtNXYtNHoiIGZpbGw9IiM5MDc5ODgiLz4KPCEtLSBTb2xlIGRpIEFwb2xsbyBpbiByaWxpZXZvOiBvdHRvIHJhZ2dpLCBvbWJyYSBlIGNlbnRybyBhIHRlc3NlcmUuIC0tPgo8cGF0aCBkPSJNNzQgMjVoNHYzaDN2MmgzdjRoLTN2M2gtM3YzaC00di0zaC0zdi0zaC0zdi00aDN2LTJoM3oiIGZpbGw9IiM4YzY2NWEiLz4KPHBhdGggZD0iTTc0IDI0aDR2NGgzdjJoM3Y0aC00djNoLTJ2M2gtNHYtM2gtMnYtM2gtNHYtNGgzdi0yaDN6IiBmaWxsPSIjZGZiODcwIi8+CjxwYXRoIGQ9Ik03NCAyOGg0djJoMnY0aC0ydjJoLTR2LTJoLTJ2LTRoMnoiIGZpbGw9IiNmZmYwYjUiLz48cmVjdCB4PSI3NCIgeT0iMzAiIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiNhZjhmNmQiLz48cmVjdCB4PSI3NSIgeT0iMzAiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiNlM2M1OGUiLz4KPHBhdGggZD0iTTYzIDMyaDN2MWgtM3ptMjMgMGgzdjFoLTN6bS0xOC02aDJ2MmgtMnptMTQgMGgydjJoLTJ6IiBmaWxsPSIjYjc5MjY0Ii8+CjxwYXRoIGQ9Ik01MyAzNmg0djFoLTR6bTMtM2g0djFoLTR6bTQwIDBoNHYxaC00em0zIDNoNHYxaC00eiIgZmlsbD0iIzgwNmM3MCIvPgo8IS0tIENvcm5pY2lvbmUgc3RyYXRpZmljYXRvLCBkZW50ZWxsaSBlIGZyZWdpbyBjb250aW51by4gLS0+CjxwYXRoIGQ9Ik0zIDQ0aDE0NnYzSDN6IiBmaWxsPSIjZjFkZmJhIi8+PHBhdGggZD0iTTUgNDdoMTQydjNINXoiIGZpbGw9IiNjMmE3OGMiLz4KPHBhdGggZD0iTTggNTBoMTM2djhIOHoiIGZpbGw9IiM4MzcxN2IiLz48cmVjdCB4PSIxMCIgeT0iNTAiIHdpZHRoPSIxMzIiIGhlaWdodD0iNyIgZmlsbD0idXJsKCNncmVjYSkiLz4KPHBhdGggZD0iTTkgNTdoMTM0djJIOXoiIGZpbGw9IiNjOGFlOGEiLz48cGF0aCBkPSJNMTIgNTloMTI4djJIMTJ6IiBmaWxsPSIjNWI1MTY2Ii8+CjxwYXRoIGQ9Ik0xNSA0OGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6bTkgMGgzdjJoLTN6IiBmaWxsPSIjNjY1ODY3Ii8+CjwhLS0gQ2FwaXRlbGxpIGRvcmljaSwgZWNoaW5vLCBjb2xsYXJpbm8uIC0tPgo8cGF0aCBkPSJNMTEgNjBoMjd2NEgxMXptMTAzIDBoMjd2NGgtMjd6IiBmaWxsPSIjZTlkNWIxIi8+CjxwYXRoIGQ9Ik0xMyA2NGgyM3YzSDEzem0xMDMgMGgyM3YzaC0yM3oiIGZpbGw9IiNiYmE0OTIiLz4KPHBhdGggZD0iTTE1IDY3aDE5djJIMTV6bTEwMyAwaDE5djJoLTE5eiIgZmlsbD0iIzhiN2Y4NyIvPgo8cGF0aCBkPSJNMTYgNjloMTd2MkgxNnptMTAzIDBoMTd2MmgtMTd6IiBmaWxsPSIjZGVkMGIxIi8+CjwhLS0gQ29sb25uZSBzY2FuYWxhdGUsIGNpYXNjdW5hIHNjb2xwaXRhIGNvbiBjaW5xdWUgdG9uYWxpdMOgLiAtLT4KPHBhdGggZD0iTTE3IDcxaDE2djc0SDE3em0xMDMgMGgxNnY3NGgtMTZ6IiBmaWxsPSIjYjZhYWEwIi8+CjxwYXRoIGQ9Ik0xNyA3MWgydjc0aC0yem0xMDMgMGgydjc0aC0yeiIgZmlsbD0iI2VkZGZiYyIvPgo8cGF0aCBkPSJNMjAgNzFoMnY3NGgtMnptMTAzIDBoMnY3NGgtMnoiIGZpbGw9IiNkMmM3YWIiLz4KPHBhdGggZD0iTTIyIDcxaDF2NzRoLTF6bTEwMyAwaDF2NzRoLTF6IiBmaWxsPSIjODE3Yzg5Ii8+CjxwYXRoIGQ9Ik0yNCA3MWgydjc0aC0yem0xMDMgMGgydjc0aC0yeiIgZmlsbD0iI2UyZDNiMiIvPgo8cGF0aCBkPSJNMjYgNzFoMnY3NGgtMnptMTAzIDBoMnY3NGgtMnoiIGZpbGw9IiM5YzkxYTAiLz4KPHBhdGggZD0iTTI5IDcxaDJ2NzRoLTJ6bTEwMyAwaDJ2NzRoLTJ6IiBmaWxsPSIjYzViNjlmIi8+CjxwYXRoIGQ9Ik0zMSA3MWgydjc0aC0yem0xMDMgMGgydjc0aC0yeiIgZmlsbD0iIzY1NWU3NiIvPgo8cGF0aCBkPSJNMTcgOTRoMTZ2MUgxN3ptMTAzIDBoMTZ2MWgtMTZ6TTE3IDEyMWgxNnYxSDE3em0xMDMgMGgxNnYxaC0xNnoiIGZpbGw9IiM2NDVjNmMiIG9wYWNpdHk9Ii4zNSIvPgo8cGF0aCBkPSJNMTcgOTVoNHYxaC00em0xMDcgMjdoNHYxaC00ek0yOSAxMDhoMnYxaC0yem05NS0yOGgydjFoLTJ6IiBmaWxsPSIjZjVlOGNhIiBvcGFjaXR5PSIuNjUiLz4KPHBhdGggZD0iTTMwIDg0aDJ2MWgtMnptLTUgNDhoMnYxaC0yem05OC0yNGgxdjNoLTF6bTctMTFoMnYxaC0yeiIgZmlsbD0iIzc5Njk3ZCIvPgo8cGF0aCBkPSJNMTcgNzFoMTZ2NzRIMTd6bTEwMyAwaDE2djc0aC0xNnoiIGZpbGw9InVybCgjcGlldHJhKSIvPgo8IS0tIER1ZSBsdWNlcm5lIGFwcGVzZSBhbCBzb2ZmaXR0by4gLS0+CjxwYXRoIGQ9Ik00MyA2MWgxdjEzaC0xem02NSAwaDF2MTNoLTF6IiBmaWxsPSIjYjg5YjY5Ii8+PHBhdGggZD0iTTQwIDc0aDd2MmgtN3ptNjUgMGg3djJoLTd6IiBmaWxsPSIjYzRhMDc0Ii8+CjxwYXRoIGQ9Ik00MSA3Nmg1djJoLTV6bTY1IDBoNXYyaC01eiIgZmlsbD0iIzhiNmU2NSIvPgo8cGF0aCBkPSJNNDMgNzFoMXYzaC0xem02NSAwaDF2M2gtMXoiIGZpbGw9IiNmZmRkYTAiLz4KPCEtLSBCYXNpIGUgdHJlIGdyYWRpbmkgY29uIGZ1Z2hlLCBjcmVwZSBlIHRlc3NlcmUgbHVtaW5vc2UuIC0tPgo8cGF0aCBkPSJNMTUgMTQ1aDIwdjNIMTV6bTEwMyAwaDIwdjNoLTIweiIgZmlsbD0iI2RmYzlhNiIvPgo8cGF0aCBkPSJNMTIgMTQ4aDI2djNIMTJ6bTEwMyAwaDI2djNoLTI2eiIgZmlsbD0iI2E1OTU5MSIvPgo8cGF0aCBkPSJNOSAxNTFoMTM0djRIOXoiIGZpbGw9IiNiZWFhOTYiLz48cGF0aCBkPSJNOSAxNTFoMTM0djFIOXoiIGZpbGw9IiNlNmNmYWEiLz4KPHBhdGggZD0iTTQgMTU1aDE0NHY1SDR6IiBmaWxsPSIjODI3YjhhIi8+PHBhdGggZD0iTTQgMTU1aDE0NHYxSDR6IiBmaWxsPSIjYjlhYTliIi8+CjxwYXRoIGQ9Ik0wIDE2MGgxNTJ2NEgweiIgZmlsbD0iIzRkNTI2ZCIvPjxwYXRoIGQ9Ik0wIDE2MGgxNTJ2MUgweiIgZmlsbD0iIzhjODI5MCIvPgo8cGF0aCBkPSJNNDEgMTUyaDF2M2gtMXptNTEgMGgxdjNoLTF6TTIxIDE1NmgxdjRoLTF6bTUzIDBoMXY0aC0xem00OCAwaDF2NGgtMXpNNDcgMTYxaDF2M2gtMXptNTkgMGgxdjNoLTF6IiBmaWxsPSIjNGY0ZDY3Ii8+CjxwYXRoIGQ9Ik0xNiAxNTJoOHYxaC04em0zMCAwaDR2MWgtNHptNjUgMGg5djFoLTl6TTEyIDE1N2g2djFoLTZ6bTcyIDBoNHYxaC00em00NCAwaDZ2MWgtNnoiIGZpbGw9IiNkM2JhYTAiIG9wYWNpdHk9Ii42NSIvPgo8cGF0aCBkPSJNOTkgMTU1aDN2MmgydjFoNHYxaC01di0xaC0ydi0yaC0yeiIgZmlsbD0iIzU4NTU2OCIvPgo8IS0tIEFuZm9yYSBkaSB0ZXJyYWNvdHRhIGNvbiBkdWUgYW5zZSBlIGZhc2NpYSBkZWNvcmF0aXZhLiAtLT4KPHBhdGggZD0iTTM3IDEzMWg4djJoLTF2NWgydjJoMXY3aC0ydjNoLTl2LTNoLTJ2LTdoMnYtMmgydi01aC0xeiIgZmlsbD0iIzY4NGQ1OCIvPgo8cGF0aCBkPSJNMzggMTMzaDV2NmgydjhoLTJ2MmgtNnYtM2gtMXYtNmgyeiIgZmlsbD0iI2I2Nzk2MSIvPgo8cGF0aCBkPSJNMzggMTM5aDJ2OGgtMnptMS02aDJ2NWgtMnoiIGZpbGw9IiNlMGE0N2MiLz4KPHBhdGggZD0iTTM0IDEzNmgzdjFoLTJ2NmgxdjFoLTN2LTZoMXptMTAgMGgzdjFoMXY2aC0zdi0xaDJ2LTVoLTN6IiBmaWxsPSIjYmE4YzcwIi8+CjxwYXRoIGQ9Ik0zNiAxNDFoOXYyaC05eiIgZmlsbD0iIzU4NDQ1MSIvPjxwYXRoIGQ9Ik0zOCAxNDFoMXYxaC0xem0zIDFoMXYxaC0xeiIgZmlsbD0iI2RmYmQ4YyIvPgo8cGF0aCBkPSJNMzcgMTMxaDd2MWgtN3ptMSAxN2g1djFoLTV6IiBmaWxsPSIjZDRhMjdjIi8+CjwhLS0gUGV0aXQgYmFzc2luIHZvdGlmIGV0IHJhbWVhdXggZCdvbGl2aWVyLiAtLT4KPHBhdGggZD0iTTEwNSAxNDBoMTJ2M2gtMXY2aC0xMHYtNGgtMXoiIGZpbGw9IiM4YjcxNjgiLz4KPHBhdGggZD0iTTEwNiAxNDFoMTB2MmgtMTB6bTIgM2g2djRoLTZ6IiBmaWxsPSIjZDRiNDg4Ii8+PHBhdGggZD0iTTEwOCAxNDhoNnYyaC02eiIgZmlsbD0iI2IwOGI2ZSIvPgo8cGF0aCBkPSJNMTExIDEyM2gxdjE4aC0xem0tMi05aDF2MTBoLTF6IiBmaWxsPSIjNzM4NzZjIi8+CjxwYXRoIGQ9Ik0xMDYgMTE3aDN2M2gtMnYtMWgtMXptNSA1aDR2MmgtMnYyaC0yem0tNiA2aDV2M2gtM3YtMWgtMnptNyA1aDV2MmgtM3YyaC0yeiIgZmlsbD0iIzc5OTc3ZCIvPgo8cGF0aCBkPSJNMTA2IDExN2gydjFoLTJ6bTcgNWgydjFoLTJ6bS03IDZoMnYxaC0yem04IDVoMnYxaC0yeiIgZmlsbD0iI2MxYzA4ZCIvPgo8IS0tIExpZXJyZSBkaXNjcmV0IHN1ciBsZSBjw7R0w6kgb21icmFnw6kgZGUgbGEgY29sb25uZS4gLS0+CjxwYXRoIGQ9Ik0zMiAxMTNoMXYxM2gydjEwaC0xdjEwaC0xdi0xMGgtMXYtOWgtMXYtMTBoMXoiIGZpbGw9IiM1MzZiNjMiLz4KPHBhdGggZD0iTTMxIDExNWgtM3YzaDN6bTMgNmgzdjNoLTN6bS0yIDloLTR2Mmg0em0zIDhoM3YzaC0zeiIgZmlsbD0iIzZmOGE3NCIvPgo8cGF0aCBkPSJNMjggMTE1aDJ2MWgtMnptNyA2aDJ2MWgtMnptLTcgOWgydjFoLTJ6IiBmaWxsPSIjYTFhYjgyIi8+Cjwvc3ZnPgo=" width="456" height="492" alt="">
+          <div class="pythia-aura" aria-hidden="true"></div>
+          <div class="pythia" id="pythia" role="img" aria-label="La Pizia, sacerdotessa di Delfi in pixel art, in attesa della tua domanda" data-pose="idle">
+            <canvas id="pythiaCanvas" width="160" height="326" aria-hidden="true"></canvas>
+          </div>
         </div>
         <div class="brazier brazier-left" aria-hidden="true"><span class="smoke"></span><span class="flame"></span><span class="bowl"></span><span class="stand"></span></div>
         <div class="brazier brazier-right" aria-hidden="true"><span class="smoke"></span><span class="flame"></span><span class="bowl"></span><span class="stand"></span></div>
@@ -858,7 +859,8 @@ const OracoloMotore = (() => {
 </script>
 <script>
 /* Pizia NES: stesso personaggio in ogni posa.
- * Le immagini sono allineate sui piedi, così il corpo non salta. */
+ * Le immagini sono allineate sui piedi. La scatola è il vano del tempio,
+ * non l'intera scena: ingrandirla la fa uscire dalla cornice. */
 'use strict';
 
 const PIZIA_FRAMES = {
@@ -887,9 +889,62 @@ class PiziaSprite {
     canvas.width = 160;
     canvas.height = 326;
     this.context.imageSmoothingEnabled = false;
+    this.fitToFrame = this.fitToFrame.bind(this);
+    this.fitObserver = new ResizeObserver(this.fitToFrame);
+    const slot = this.root.closest('.sanctuary-slot');
+    const zone = this.root.closest('.pythia-zone');
+    if (slot) this.fitObserver.observe(slot);
+    if (zone) this.fitObserver.observe(zone);
+    this.fitToFrame();
     this.load();
     this.tick = this.tick.bind(this);
     this.tick(0);
+  }
+
+  // Cornice a y=61, piedi sul gradino a y=154, apertura tra le colonne x=33..103.
+  fitToFrame() {
+    const slot = this.root.closest('.sanctuary-slot');
+    const stage = this.root.closest('.stage');
+    if (!slot || !stage) return;
+    const slotBox = slot.getBoundingClientRect();
+    const stageBox = stage.getBoundingClientRect();
+    if (slotBox.width < 40 || slotBox.height < 40) return;
+
+    const head = 67 / 164;
+    const feet = 154 / 164;
+    let height = slotBox.height * (feet - head);
+    let width = height * (160 / 326);
+    const opening = slotBox.width * (68 / 152);
+    if (width > opening) {
+      width = opening;
+      height = width * (326 / 160);
+    }
+
+    let bottom = slotBox.height * (1 - feet);
+    let top = slotBox.bottom - bottom - height;
+    const limitTop = stageBox.top + 4;
+    const limitBottom = stageBox.bottom - 4;
+    if (top < limitTop) {
+      height -= limitTop - top;
+      width = height * (160 / 326);
+      top = limitTop;
+    }
+    if (top + height > limitBottom) {
+      const lost = top + height - limitBottom;
+      height -= lost;
+      width = height * (160 / 326);
+      bottom += lost;
+    }
+    if (!(height >= 32) || !(width >= 16)) return;
+
+    const nextHeight = `${Math.round(height)}px`;
+    const nextWidth = `${Math.round(width)}px`;
+    const nextBottom = `${Math.round(Math.max(0, bottom))}px`;
+    if (this.root.style.height === nextHeight && this.root.style.width === nextWidth && this.root.style.bottom === nextBottom) return;
+    this.root.style.height = nextHeight;
+    this.root.style.width = nextWidth;
+    this.root.style.bottom = nextBottom;
+    this.root.style.maxWidth = 'none';
   }
 
   load() {
@@ -937,27 +992,24 @@ class PiziaSprite {
   }
 
   choose(time) {
-    if (this.state === 'waiting') {
-      return { name: 'attesa', eyes: 'closed', dy: this.reducedMotion ? 0 : (Math.floor(time / 680) % 2) * 2 };
-    }
+    if (this.state === 'waiting') return { name: 'attesa', eyes: 'closed' };
     if (this.state === 'speaking') {
       let name = 'riposo';
       if (this.mouth === 1) name = 'media';
       else if (this.mouth === 2) name = Math.floor(time / 170) % 2 ? 'aperta' : 'parla';
-      return { name, eyes: 'open', dy: 0 };
+      return { name, eyes: 'open' };
     }
     const blink = !this.reducedMotion && time % 5200 > 4980;
     const smile = time < this.smileUntil;
     return {
       name: smile ? 'sorriso' : blink ? 'battito' : 'riposo',
-      eyes: blink ? 'closed' : 'open',
-      dy: this.reducedMotion ? 0 : -(Math.floor(time / 1700) % 2)
+      eyes: blink ? 'closed' : 'open'
     };
   }
 
   render(time, force = false) {
     const choice = this.choose(time);
-    const key = [this.state, this.mouth, choice.name, choice.dy, this.ready].join(':');
+    const key = [this.state, this.mouth, choice.name, this.ready].join(':');
     if (key === this.lastKey && !force) return;
     this.lastKey = key;
     this.canvas.dataset.mouth = String(this.mouth);
@@ -968,12 +1020,13 @@ class PiziaSprite {
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     const image = this.images[choice.name] || this.images.riposo;
     if (!image) return;
-    ctx.drawImage(image, 0, choice.dy);
+    ctx.drawImage(image, 0, 0);
   }
 
   destroy() {
     this.running = false;
     cancelAnimationFrame(this.frameRequest);
+    if (this.fitObserver) this.fitObserver.disconnect();
   }
 }
 
@@ -1068,7 +1121,8 @@ class SantuarioScena {
     }
 
     // Luna scavata a pixel: alone a gradini, zone d'ombra e piccoli crateri.
-    const mx=Math.max(19,Math.round(w*.057)), my=Math.round(Math.min(30,h*.12));
+    const mx=Math.max(19,Math.min(w-19,Math.round(w*.057))), my=Math.max(19,Math.min(h-19,Math.round(Math.min(30,h*.12))));
+    if(w>=40&&h>=40){
     for(let y=-19;y<=19;y++)for(let x=-19;x<=19;x++){
       const d=x*x+y*y;
       if(d<=361&&d>225)r(mx+x,my+y,1,1,d>289?'#c8bc8510':'#d4c28b15');
@@ -1080,6 +1134,7 @@ class SantuarioScena {
     }
     [[-9,0,2,3],[-5,8,3,2],[-10,-5,2,2]].forEach(([x,y,a,b])=>r(mx+x,my+y,a,b,'#adac8a'));
     r(mx-9,my-6,2,1,'#fff0bd');
+    }
 
     // Nuvole di foschia orizzontali, a densità bassa, senza sfocare i pixel.
     for(let i=0;i<6;i++){
@@ -1097,7 +1152,7 @@ class SantuarioScena {
         while(segment<points.length-2&&t>points[segment+1][0])segment++;
         const a=points[segment],b=points[segment+1];
         const y=Math.round((base+a[1]+(b[1]-a[1])*(t-a[0])/(b[0]-a[0]))*h);
-        heights[x]=y;heights[x+1]=y;
+        heights[x]=y;if(x+1<heights.length)heights[x+1]=y;
         ctx.lineTo(x,previous);ctx.lineTo(x,y);previous=y;
       }
       ctx.lineTo(w+2,h);ctx.closePath();ctx.fillStyle=palette[0];ctx.fill();
@@ -1105,7 +1160,7 @@ class SantuarioScena {
       // Petites facettes et stries, toujours à l'intérieur de la silhouette.
       for(let x=2;x<w;x+=4){
         const top=heights[x];
-        if(heights[Math.min(w,x+4)]<top)r(x,top,3,1,palette[1]);
+        if(x+4<w&&heights[x+4]<top)r(x,top,3,1,palette[1]);
       }
       for(let i=0;i<texture;i++){
         const x=Math.floor(rand()*w),top=heights[x],y=top+rand()*(h-top);
@@ -1830,6 +1885,14 @@ const OracoloAudio = (() => {
 
   form.addEventListener('submit', consult);
   consultButton.addEventListener('click', consult);
+  document.querySelector('.skip-link').addEventListener('click', (event) => {
+    if (!field.disabled) return;
+    event.preventDefault();
+    const target = !againButton.hidden ? againButton : !consultView.hidden ? consultView : byId('santuario');
+    if (target.id === 'santuario') target.tabIndex = -1;
+    target.focus({ preventScroll: true });
+    target.scrollIntoView({ block: 'start', behavior: motionQuery.matches ? 'instant' : 'smooth' });
+  });
   field.addEventListener('input', updateField);
   field.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' && !event.shiftKey && !event.isComposing && event.keyCode !== 229) {

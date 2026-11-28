@@ -80,11 +80,10 @@ async function audit(page) {
     await capture(page, '01-schermata-iniziale.png');
   });
 
-  await test('Pizia idle: respiro, battito di ciglia e bocca chiusa', async () => {
+  await test('Pizia idle: battito di ciglia e bocca chiusa', async () => {
     await page.waitForFunction(() => document.querySelector('#pythiaCanvas').dataset.eyes === 'closed');
     await page.waitForFunction(() => document.querySelector('#pythiaCanvas').dataset.eyes === 'open');
-    const breath = await page.locator('#pythiaCanvas').getAttribute('data-breath');
-    await page.waitForFunction(previous => document.querySelector('#pythiaCanvas').dataset.breath !== previous, breath);
+    assert.equal(await page.locator('#pythiaCanvas').getAttribute('data-frame'), 'riposo');
     assert.equal(await page.locator('#pythiaCanvas').getAttribute('data-mouth'), '0');
     const idleBox = await page.locator('.pythia-zone').boundingBox();
     await page.screenshot({path:path.join(renders, '02-pizia-idle.png'), clip:{x:idleBox.x, y:idleBox.y-5, width:idleBox.width, height:idleBox.height+24}});
