@@ -1,0 +1,230 @@
+{
+  "suite": "browser",
+  "browser": "159.0.8154.6",
+  "url": "http://127.0.0.1:8080/",
+  "results": [
+    {
+      "test": "Apertura desktop, font locali, nessun overflow",
+      "status": "PASS",
+      "durationMs": 946
+    },
+    {
+      "test": "Pizia idle: respiro, battito di ciglia e bocca chiusa",
+      "status": "PASS",
+      "durationMs": 4529
+    },
+    {
+      "test": "Campo vuoto e soli spazi: avviso, focus e nessuna consultazione",
+      "status": "PASS",
+      "durationMs": 560
+    },
+    {
+      "test": "Domanda acquisita; doppio clic bloccato; Pizia in concentrazione per 1–2 secondi",
+      "status": "PASS",
+      "durationMs": 318
+    },
+    {
+      "test": "Rivelazione progressiva sincronizzata con tre bocche; ritorno idle e pannello stabile",
+      "status": "PASS",
+      "durationMs": 3226,
+      "detail": {
+        "waitMs": 1355,
+        "mouthFrames": [
+          "0",
+          "1",
+          "2"
+        ],
+        "sampledFrames": 49
+      }
+    },
+    {
+      "test": "Accessibilità automatica WCAG A/AA sul responso",
+      "status": "PASS",
+      "durationMs": 334,
+      "detail": {
+        "checks": 23,
+        "violations": 0
+      }
+    },
+    {
+      "test": "Reset completo e dodici nuove consultazioni senza ricaricare né ripetere gli ultimi otto responsi",
+      "status": "PASS",
+      "durationMs": 3467,
+      "detail": {
+        "cycles": 13,
+        "uniqueResponses": 13
+      }
+    },
+    {
+      "test": "Domande lunghe: taglio a 140, contatore, eco completa e reset",
+      "status": "PASS",
+      "durationMs": 323
+    },
+    {
+      "test": "Controllo locale: frase fissa, nessun sorteggio; reset ripristina il gioco",
+      "status": "PASS",
+      "durationMs": 523
+    },
+    {
+      "test": "Invio da tastiera; testo trattato letteralmente, non come HTML",
+      "status": "PASS",
+      "durationMs": 326
+    },
+    {
+      "test": "Audio facoltativo: attivazione Web Audio, oscillatori originali e silenziamento",
+      "status": "PASS",
+      "durationMs": 641,
+      "detail": {
+        "oscillatorEvents": 7,
+        "audioContextResumes": 1,
+        "physicalSpeakers": "non verificati nel sandbox"
+      }
+    },
+    {
+      "test": "Comando schermo intero: entrata e uscita",
+      "status": "PASS",
+      "durationMs": 131
+    },
+    {
+      "test": "Offline: consultazione, ricaricamento dalla cache e nuova consultazione",
+      "status": "PASS",
+      "durationMs": 653
+    },
+    {
+      "test": "Nessun dato della domanda in cookie, storage o richieste esterne",
+      "status": "PASS",
+      "durationMs": 3
+    },
+    {
+      "test": "Accessibilità automatica WCAG A/AA sul modulo iniziale",
+      "status": "PASS",
+      "durationMs": 230,
+      "detail": {
+        "checks": 26,
+        "violations": 0
+      }
+    },
+    {
+      "test": "Mobile touch 390 × 844: ciclo completo e Pizia visibile durante la consultazione",
+      "status": "PASS",
+      "durationMs": 3606
+    },
+    {
+      "test": "Mobile: domanda lunga e nota di sicurezza senza testo fuori dal pannello",
+      "status": "PASS",
+      "durationMs": 637
+    },
+    {
+      "test": "Layout responsive da 320 a 1920 pixel, inclusi i limiti 640/641 e 700",
+      "status": "PASS",
+      "durationMs": 8573
+    },
+    {
+      "test": "Riduzione del movimento rispettata e nessun errore JavaScript",
+      "status": "PASS",
+      "durationMs": 905
+    }
+  ],
+  "errors": [],
+  "snapshots": [
+    {
+      "filename": "01-schermata-iniziale.png",
+      "phase": "ask",
+      "mouth": "0",
+      "text": "",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scrollY": 0
+    },
+    {
+      "filename": "08-campo-vuoto.png",
+      "phase": "ask",
+      "mouth": "0",
+      "text": "",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scrollY": 73
+    },
+    {
+      "filename": "03-consultazione.png",
+      "phase": "consulting",
+      "mouth": "0",
+      "text": "",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scrollY": 73
+    },
+    {
+      "filename": "04-responso-parlato.png",
+      "phase": "speaking",
+      "mouth": "1",
+      "text": "L'ombra copre questo cammi",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scrollY": 73
+    },
+    {
+      "filename": "05-responso-completo.png",
+      "phase": "answered",
+      "mouth": "0",
+      "text": "L'ombra copre questo cammino. Scegline un altro.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scrollY": 73
+    },
+    {
+      "filename": "09-domanda-delicata.png",
+      "phase": "safety",
+      "mouth": "0",
+      "text": "Una questione così importante merita l'aiuto di una persona competente, non di un oracolo.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "scrollY": 73
+    },
+    {
+      "filename": "06-mobile-iniziale.png",
+      "phase": "ask",
+      "mouth": "0",
+      "text": "",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollY": 0
+    },
+    {
+      "filename": "07-mobile-responso.png",
+      "phase": "answered",
+      "mouth": "0",
+      "text": "Fermati: il presagio è contrario.",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollY": 226
+    },
+    {
+      "filename": "10-mobile-nota-importante.png",
+      "phase": "safety",
+      "mouth": "0",
+      "text": "Una questione così importante merita l'aiuto di una persona competente, non di un oracolo.",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollY": 296
+    }
+  ]
+}

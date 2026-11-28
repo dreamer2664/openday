@@ -1,0 +1,141 @@
+{
+  "file": "Oracolo-di-Delfi-Deluxe.html",
+  "browser": "159.0.8154.6",
+  "results": [
+    {
+      "test": "Apertura del solo HTML offline: immagini, font, sprite 120 × 160 e nessun autoplay",
+      "status": "PASS",
+      "durationMs": 527
+    },
+    {
+      "test": "Musica indipendente dagli effetti; partitura originale di 16 battute a 78 BPM",
+      "status": "PASS",
+      "durationMs": 601,
+      "detail": {
+        "title": "Vento sul Parnaso",
+        "bpm": 78,
+        "bars": 16,
+        "loopSeconds": 49.23076923076923
+      }
+    },
+    {
+      "test": "Mixer: volume via tastiera, chiusura con Esc e pannello accessibile",
+      "status": "PASS",
+      "durationMs": 619,
+      "detail": {
+        "checks": 26,
+        "violations": 0
+      }
+    },
+    {
+      "test": "Campo vuoto, contatore e limite di 140 caratteri",
+      "status": "PASS",
+      "durationMs": 329
+    },
+    {
+      "test": "Attesa, doppio invio bloccato e musica attenuata durante la consultazione",
+      "status": "PASS",
+      "durationMs": 302
+    },
+    {
+      "test": "Tre bocche sincronizzate, ritorno idle, reset disponibile e layout stabile",
+      "status": "PASS",
+      "durationMs": 3209,
+      "detail": {
+        "waitMs": 1354,
+        "mouthFrames": [
+          "0",
+          "1",
+          "2"
+        ]
+      }
+    },
+    {
+      "test": "Otto nuove consultazioni complete con musica attiva, senza ripetizioni ravvicinate",
+      "status": "PASS",
+      "durationMs": 27588,
+      "detail": {
+        "cycles": 9,
+        "unique": 9
+      }
+    },
+    {
+      "test": "Protezione locale e testo letterale, senza responsi casuali per le emergenze",
+      "status": "PASS",
+      "durationMs": 3946
+    },
+    {
+      "test": "Rendering stereo PCM della soundtrack intera e degli effetti: segnale finito, udibile e senza clipping",
+      "status": "PASS",
+      "durationMs": 10231,
+      "detail": {
+        "music": {
+          "seconds": 52,
+          "peak": 0.18654710054397583,
+          "rms": 0.029329628505060403,
+          "nonfinite": 0,
+          "channels": 2,
+          "sampleRate": 44100
+        },
+        "effects": {
+          "seconds": 8,
+          "peak": 0.12976154685020447,
+          "rms": 0.012788201607771575,
+          "nonfinite": 0,
+          "channels": 2,
+          "sampleRate": 44100
+        }
+      }
+    },
+    {
+      "test": "La riproduzione reale supera un giro completo senza accumulare voci",
+      "status": "PASS",
+      "durationMs": 4959,
+      "detail": {
+        "scheduledSteps": 270,
+        "activeMusicVoices": 7
+      }
+    },
+    {
+      "test": "Pausa su scheda nascosta e ripresa senza doppio trasporto",
+      "status": "PASS",
+      "durationMs": 364
+    },
+    {
+      "test": "Musica OFF indipendente dagli effetti; spegnimento completo e riattivazioni rapide senza perdite",
+      "status": "PASS",
+      "durationMs": 2807
+    },
+    {
+      "test": "Audit automatico di accessibilità del gioco",
+      "status": "PASS",
+      "durationMs": 254,
+      "detail": {
+        "checks": 27,
+        "violations": 0
+      }
+    },
+    {
+      "test": "Mobile touch: controlli audio, volume, consultazione e reset",
+      "status": "PASS",
+      "durationMs": 3534
+    },
+    {
+      "test": "Lettura in iframe isolato: nessun server, permesso form o origine condivisa richiesti",
+      "status": "PASS",
+      "durationMs": 1065
+    },
+    {
+      "test": "Responsive, mixer e domande lunghe da 320 a 1920 pixel",
+      "status": "PASS",
+      "durationMs": 5622
+    },
+    {
+      "test": "Nessuna richiesta esterna, errore di script o risorsa mancante",
+      "status": "PASS",
+      "durationMs": 0
+    }
+  ],
+  "errors": [],
+  "externalRequests": []
+}

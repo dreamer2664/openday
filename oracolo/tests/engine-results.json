@@ -1,0 +1,26 @@
+{
+  "suite": "engine",
+  "runtime": "v22.23.1",
+  "results": [
+    {
+      "test": "50 responsi distinti, verificati e non vuoti",
+      "status": "PASS"
+    },
+    {
+      "test": "10.000 estrazioni: equilibrio esatto e nessuna ripetizione nelle ultime 8",
+      "status": "PASS"
+    },
+    {
+      "test": "Selezione robusta anche agli estremi del generatore casuale",
+      "status": "PASS"
+    },
+    {
+      "test": "Termini espliciti di emergenza e scelte mediche attivano la risposta fissa",
+      "status": "PASS"
+    },
+    {
+      "test": "Le normali domande non attivano il controllo locale",
+      "status": "PASS"
+    }
+  ]
+}

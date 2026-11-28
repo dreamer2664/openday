@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Un piccolo santuario in pixel art. Poni una domanda alla Pizia e scopri il tuo responso: un gioco per l'Open Day, tutto offline.">
+  <meta name="theme-color" content="#101925">
+  <title>L'Oracolo di Delfi — Un incontro con il destino</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+<a class="skip-link" href="#domanda">Salta al campo domanda</a>
+<div class="cabinet" id="cabinet" data-state="ask">
+  <div class="sky" aria-hidden="true"><canvas id="stars"></canvas></div>
+
+  <header class="topbar">
+    <a class="wordmark" href="index.html" aria-label="L'Oracolo di Delfi, pagina iniziale">
+      <img src="assets/favicon.svg" width="28" height="28" alt="">
+      <span>DELFI<span class="wordmark-edition"> / ARCADE</span></span>
+    </a>
+    <span class="open-badge"><i aria-hidden="true"></i> IL SANTUARIO È APERTO</span>
+    <div class="utility-controls">
+      <button type="button" class="mini-btn sound-toggle" id="btnSound" aria-pressed="false" aria-label="Attiva gli effetti sonori" title="Effetti sonori">
+        <svg viewBox="0 0 20 20" width="18" height="18" shape-rendering="crispEdges" aria-hidden="true"><path d="M2 7h4V5h2V3h2v14H8v-2H6v-2H2z" fill="currentColor"/><path class="sound-wave" d="M13 6h2v2h2v4h-2v2h-2v-2h2V8h-2z" fill="currentColor"/><path class="sound-off" d="M13 7h2v2h2V7h2v2h-2v2h2v2h-2v-2h-2v2h-2v-2h2V9h-2z" fill="currentColor"/></svg>
+        <span id="soundLabel"><span class="control-name">SUONI </span><span id="soundState">OFF</span></span>
+      </button>
+      <button type="button" class="mini-btn music-toggle" id="btnMusic" aria-pressed="false" aria-label="Attiva la musica" title="Musica originale: Vento sul Parnaso">
+        <svg viewBox="0 0 20 20" width="18" height="18" shape-rendering="crispEdges" aria-hidden="true"><path d="M2 2h4v2H4v7h2v3h2v2h4v-2h2v-3h2V4h-2V2h4v10h-2v3h-2v3H6v-3H4v-3H2zM5 5h10v2H5zM7 7h1v7H7zm3 0h1v8h-1zm3 0h1v7h-1z" fill="currentColor"/></svg>
+        <span id="musicLabel"><span class="control-name">MUSICA</span> <span id="musicState">OFF</span></span>
+      </button>
+      <details class="audio-settings" id="audioSettings">
+        <summary class="mini-btn" aria-label="Impostazioni del volume" title="Volume e soundtrack">
+          <svg viewBox="0 0 20 20" width="18" height="18" shape-rendering="crispEdges" aria-hidden="true"><path d="M3 2h2v5H3zm0 9h2v7H3zM9 2h2v9H9zm0 13h2v3H9zM15 2h2v3h-2zm0 7h2v9h-2zM1 7h6v4H1zm6 4h6v4H7zm6-6h6v4h-6z" fill="currentColor"/></svg>
+        </summary>
+        <div class="audio-popover">
+          <p class="audio-track-title">VENTO SUL PARNASO</p>
+          <p class="audio-track-description">Brano originale · lira, archi e 78 BPM</p>
+          <div class="volume-caption"><label for="volumeRange">Volume</label><output id="volumeValue" for="volumeRange">45%</output></div>
+          <input id="volumeRange" type="range" min="0" max="100" value="45" step="1" aria-label="Volume di musica ed effetti sonori">
+          <p class="audio-settings-note">Suoni e musica si attivano separatamente.<br>Nessuna riproduzione automatica.</p>
+        </div>
+      </details>
+      <button type="button" class="mini-btn fullscreen-toggle" id="btnFullscreen" aria-label="Attiva schermo intero" title="Schermo intero">
+        <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M2 2h6v2H4v4H2zm10 0h6v6h-2V4h-4zM2 12h2v4h4v2H2zm14 0h2v6h-6v-2h4z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="marquee">
+    <p class="kicker"><span aria-hidden="true">✦</span> UN INCONTRO CON IL DESTINO <span aria-hidden="true">✦</span></p>
+    <div class="title-wrap">
+      <img class="laurel left" src="assets/laurel.svg" width="42" height="74" alt="">
+      <h1 class="title"><span class="title-small">L'ORACOLO</span><span class="title-big">DI DELFI</span></h1>
+      <img class="laurel right" src="assets/laurel.svg" width="42" height="74" alt="">
+    </div>
+    <p class="subtitle">Poni la tua domanda. <span>Gli dèi daranno risposta.</span></p>
+  </div>
+
+  <main class="stage" id="santuario">
+    <div class="stage-topline"><span>GRECIA ANTICA · UN TEMPO SOSPESO</span><span class="stage-location"><span aria-hidden="true">◆</span> SANTUARIO DI APOLLO</span></div>
+    <canvas class="landscape" id="landscape" aria-hidden="true"></canvas>
+    <div class="stage-mist" aria-hidden="true"></div>
+
+    <section class="scene" aria-label="Santuario di Delfi">
+      <div class="pythia-zone">
+        <img class="sanctuary-art" src="assets/sanctuary.svg" width="456" height="492" alt="">
+        <div class="pythia-aura" aria-hidden="true"></div>
+        <div class="pythia" id="pythia" role="img" aria-label="La Pizia, sacerdotessa di Delfi in pixel art, in attesa della tua domanda" data-pose="idle">
+          <canvas id="pythiaCanvas" data-face="e" width="120" height="160" aria-hidden="true"></canvas>
+        </div>
+        <div class="brazier brazier-left" aria-hidden="true"><span class="smoke"></span><span class="flame"></span><span class="bowl"></span><span class="stand"></span></div>
+        <div class="brazier brazier-right" aria-hidden="true"><span class="smoke"></span><span class="flame"></span><span class="bowl"></span><span class="stand"></span></div>
+        <div class="pythia-name"><span class="name-line" aria-hidden="true"></span><span>LA PIZIA</span><span class="name-line" aria-hidden="true"></span></div>
+        <p class="pythia-caption" id="pythiaCaption">Custode dei responsi</p>
+      </div>
+
+      <div class="oracle-panel" id="oraclePanel">
+        <span class="panel-corner tl" aria-hidden="true"></span><span class="panel-corner tr" aria-hidden="true"></span>
+        <span class="panel-corner bl" aria-hidden="true"></span><span class="panel-corner br" aria-hidden="true"></span>
+        <div class="panel-sheen" aria-hidden="true"></div>
+        <canvas id="fx" aria-hidden="true"></canvas>
+
+        <form class="panel-state state-ask" id="stateAsk" novalidate>
+          <p class="panel-label"><span class="tiny-star" aria-hidden="true">✦</span> IL DESTINO TI ASCOLTA <span class="label-rule" aria-hidden="true"></span> <span class="step-index">01 / 02</span></p>
+          <label class="question-label" for="domanda">Cosa vuoi chiedere<br>all'Oracolo?</label>
+          <p class="panel-intro">Scrivi una domanda e scopri il responso.</p>
+          <div class="question-wrap" id="questionWrap">
+            <textarea id="domanda" name="domanda" rows="2" maxlength="140" placeholder="Dovrei provarci?" aria-describedby="questionHint charCount emptyWarn" autocomplete="off" spellcheck="false" enterkeyhint="send"></textarea>
+            <div class="input-bottom"><span class="input-decoration" aria-hidden="true">···</span><span class="char-count" id="charCount">0 / 140</span></div>
+          </div>
+          <p class="hint" id="questionHint">Una domanda breve, meglio se da sì o no.</p>
+          <button type="submit" class="btn btn-consult" id="btnConsult"><span class="btn-gem" aria-hidden="true">✦</span><span class="btn-text">CONSULTA L'ORACOLO</span><span class="btn-arrow" aria-hidden="true">→</span></button>
+          <div class="input-feedback"><p class="error-msg" id="emptyWarn" role="alert" hidden>L'Oracolo attende una domanda. Scrivila qui sopra.</p><p class="keyboard-hint" id="keyboardHint"><span class="keyboard-shortcut"><kbd>INVIO</kbd> per consultare <span aria-hidden="true">·</span> </span>lascia fare al destino</p></div>
+        </form>
+
+        <div class="panel-state state-consult" id="stateConsult" tabindex="-1" aria-label="Consultazione in corso" hidden>
+          <p class="panel-label"><span class="tiny-star" aria-hidden="true">✦</span> IL VELO SI SOLLEVA <span class="label-rule" aria-hidden="true"></span><span class="step-index">02 / 02</span></p>
+          <p class="question-echo">«<span id="questionEcho"></span>»</p>
+          <div class="consult-anim" aria-hidden="true"><span class="orbit o1"></span><span class="orbit o2"></span><span class="oracle-sigil"><img src="assets/oracle-seal.svg" width="86" height="86" alt=""></span><i class="spark s1"></i><i class="spark s2"></i><i class="spark s3"></i></div>
+          <p class="consult-heading">Gli dèi sussurrano<span class="dots" aria-hidden="true">...</span></p>
+          <p class="consult-text">La Pizia ascolta. Il tuo responso sta arrivando.</p>
+          <div class="waiting-track" aria-hidden="true"><span></span></div>
+        </div>
+
+        <div class="panel-state state-answer" id="stateAnswer" hidden>
+          <p class="panel-label"><span class="tiny-star" aria-hidden="true">✦</span><span id="answerLabel">L'ORACOLO HA PARLATO</span><span class="label-rule" aria-hidden="true"></span><span class="step-index">02 / 02</span></p>
+          <p class="question-echo small">«<span id="questionEcho2"></span>»</p>
+          <div class="answer-ornament" aria-hidden="true"><span></span>◆<span></span></div>
+          <blockquote class="response" id="responseBox"><span id="responseText"></span><span class="caret" id="caret" aria-hidden="true"></span></blockquote>
+          <p class="safety-note" id="safetyNote" hidden>In caso di pericolo immediato, chiama il <strong>112</strong> o chiedi subito aiuto a una persona adulta di fiducia.</p>
+          <div class="again-slot"><button type="button" class="btn btn-again" id="btnAgain" hidden><span class="btn-gem" aria-hidden="true">↻</span><span class="btn-text">PONI UN'ALTRA DOMANDA</span><span class="btn-arrow" aria-hidden="true">→</span></button></div>
+          <p class="answer-footnote" id="answerFootnote">Il futuro non è scritto. Il prossimo passo è tuo.</p>
+        </div>
+      </div>
+    </section>
+    <div class="stone-floor" aria-hidden="true"></div>
+    <div class="stage-bottomline"><span><i class="status-pixel" aria-hidden="true"></i> <span id="sceneStatus">IN ATTESA DI UNA DOMANDA</span></span><span class="no-coin">NESSUNA MONETA RICHIESTA <span aria-hidden="true">✦</span></span></div>
+  </main>
+
+  <div class="how-it-works" aria-label="Come si gioca"><span><b>01</b> PONI UNA DOMANDA</span><i aria-hidden="true">·</i><span><b>02</b> INTERROGA IL DESTINO</span><i aria-hidden="true">·</i><span><b>03</b> PORTA CON TE UN SEGNO</span></div>
+
+  <footer class="cabinet-footer">
+    <p class="disclaimer">Un gioco, non una guida per le grandi decisioni.<br><span>Responsi casuali, come in un libro delle risposte. Per le questioni importanti, affidati a una persona competente.</span></p>
+    <div class="footer-meta"><span class="open-day-label">OPEN DAY <span aria-hidden="true">/</span> EDIZIONE 8-BIT</span><span class="privacy-note"><svg viewBox="0 0 12 14" width="10" height="12" aria-hidden="true"><path d="M2 6V2h2V0h4v2h2v4h2v8H0V6zm2 0h4V2H4zm1 3v3h2V9z" fill="currentColor"/></svg> Le tue domande restano qui. Non vengono salvate.</span><span class="offline-indicator" id="offlineStatus">100% LOCALE</span></div>
+  </footer>
+  <div class="sr-only" id="announcer" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div class="utility-notice" id="utilityNotice" role="status" hidden></div>
+  <noscript><p class="noscript-note">Per consultare l'Oracolo, attiva JavaScript nel browser. Non serve una connessione a Internet.</p></noscript>
+</div>
+<script src="js/responsi.js"></script>
+<script src="js/pythia-face-options.js"></script>
+<script src="js/pythia-sprites.js"></script>
+<script src="js/scenery.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

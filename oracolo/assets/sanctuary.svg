@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 164" shape-rendering="crispEdges">
+<!-- Santuario originale: marmo inciso, fregio a greca, acroteri, lucerne e anfore. -->
+<defs>
+ <pattern id="greca" width="12" height="7" patternUnits="userSpaceOnUse"><path d="M0 1h9v4H5V3h2v1H6v1h3V1H1v6H0z" fill="#d8bb85"/><rect y="6" width="12" height="1" fill="#746074"/></pattern>
+ <pattern id="pietra" width="24" height="29" patternUnits="userSpaceOnUse"><path d="M3 4h2v1H3zm15 10h3v1h-3zm-9 13h1v1H9z" fill="#f2e4c2" opacity=".17"/><path d="M11 7h2v1h-2zm10 13h1v2h-1z" fill="#544e65" opacity=".15"/></pattern>
+</defs>
+<!-- Recesso del tempio e soffitto a cassettoni. -->
+<path d="M32 53h88v99H32z" fill="#20283a"/>
+<path d="M36 59h80v91H36z" fill="#283044"/><path d="M42 64h68v86H42z" fill="#222b3c"/>
+<path d="M42 65h24v3H42zm43 0h25v3H85zM38 72h2v62h-2zm74 0h2v62h-2z" fill="#4b4256"/>
+<path d="M45 71h17v1H45zm43 0h17v1H88zM48 73h12v1H48zm42 0h12v1H90z" fill="#69606b" opacity=".5"/>
+<path d="M49 84h3v35h-3zm49 0h3v35h-3z" fill="#353548"/><path d="M50 86h1v30h-1zm49 0h1v30h-1z" fill="#747060" opacity=".35"/>
+<!-- Sagoma e falde del timpano. -->
+<path d="M6 40h8v-4h8v-4h8v-4h8v-4h8v-4h8v-4h8v-4h8V8h12v4h8v4h8v4h8v4h8v4h8v4h8v4h8v4h8v8H6z" fill="#504658"/>
+<path d="M8 38h8v-4h8v-4h8v-4h8v-4h8v-4h8v-4h8v-4h8V6h8v4h8v4h8v4h8v4h8v4h8v4h8v4h8v4h8v7H8z" fill="#c9af8d"/>
+<path d="M8 38h8v-4h8v-4h8v-4h8v-4h8v-4h8v-4h8v-4h8V6h8v4h8v4h8v4h8v4h8v4h8v4h8v4h8v4h8" fill="none" stroke="#f1d9ac" stroke-width="1"/>
+<path d="M18 38h14v-4h8v-4h8v-4h8v-4h8v-4h8v-4h8v4h8v4h8v4h8v4h8v4h8v4h14v4H18z" fill="#827082"/>
+<path d="M29 38h11v-4h8v-4h8v-4h8v-4h8v-4h8v4h8v4h8v4h8v4h8v4h11v3H29z" fill="#4b415a"/>
+<path d="M42 38h8v-4h8v-4h8v-4h8v-4h4v4h8v4h8v4h8v4h8v2H42z" fill="#302e46"/>
+<path d="M10 43h132v2H10z" fill="#9d8275"/>
+<!-- Piccoli blocchi di marmo e acroteri a palmetta. -->
+<path d="M73 4h6v3h-6zm1-3h4v4h-4zM10 35h4v3h-4zm128 0h4v3h-4z" fill="#e5c89b"/>
+<path d="M72 2h2v2h-2zm6 0h2v2h-2z" fill="#b89973"/>
+<path d="M25 34h4v1h-4zm16-9h4v1h-4zm20-9h3v1h-3zm33 4h4v1h-4zm16 8h3v1h-3zm16 9h6v1h-6z" fill="#f7e3b6"/>
+<path d="M35 29v4h-1v-3h-4v-1zm80 3v3h4v1h-5v-4z" fill="#907988"/>
+<!-- Sole di Apollo in rilievo: otto raggi, ombra e centro a tessere. -->
+<path d="M74 25h4v3h3v2h3v4h-3v3h-3v3h-4v-3h-3v-3h-3v-4h3v-2h3z" fill="#8c665a"/>
+<path d="M74 24h4v4h3v2h3v4h-4v3h-2v3h-4v-3h-2v-3h-4v-4h3v-2h3z" fill="#dfb870"/>
+<path d="M74 28h4v2h2v4h-2v2h-4v-2h-2v-4h2z" fill="#fff0b5"/><rect x="74" y="30" width="4" height="4" fill="#af8f6d"/><rect x="75" y="30" width="2" height="2" fill="#e3c58e"/>
+<path d="M63 32h3v1h-3zm23 0h3v1h-3zm-18-6h2v2h-2zm14 0h2v2h-2z" fill="#b79264"/>
+<path d="M53 36h4v1h-4zm3-3h4v1h-4zm40 0h4v1h-4zm3 3h4v1h-4z" fill="#806c70"/>
+<!-- Cornicione stratificato, dentelli e fregio continuo. -->
+<path d="M3 44h146v3H3z" fill="#f1dfba"/><path d="M5 47h142v3H5z" fill="#c2a78c"/>
+<path d="M8 50h136v8H8z" fill="#83717b"/><rect x="10" y="50" width="132" height="7" fill="url(#greca)"/>
+<path d="M9 57h134v2H9z" fill="#c8ae8a"/><path d="M12 59h128v2H12z" fill="#5b5166"/>
+<path d="M15 48h3v2h-3zm9 0h3v2h-3zm9 0h3v2h-3zm9 0h3v2h-3zm9 0h3v2h-3zm9 0h3v2h-3zm9 0h3v2h-3zm9 0h3v2h-3zm9 0h3v2h-3zm9 0h3v2h-3zm9 0h3v2h-3zm9 0h3v2h-3zm9 0h3v2h-3zm9 0h3v2h-3z" fill="#665867"/>
+<!-- Capitelli dorici, echino, collarino. -->
+<path d="M11 60h27v4H11zm103 0h27v4h-27z" fill="#e9d5b1"/>
+<path d="M13 64h23v3H13zm103 0h23v3h-23z" fill="#bba492"/>
+<path d="M15 67h19v2H15zm103 0h19v2h-19z" fill="#8b7f87"/>
+<path d="M16 69h17v2H16zm103 0h17v2h-17z" fill="#ded0b1"/>
+<!-- Colonne scanalate, ciascuna scolpita con cinque tonalità. -->
+<path d="M17 71h16v74H17zm103 0h16v74h-16z" fill="#b6aaa0"/>
+<path d="M17 71h2v74h-2zm103 0h2v74h-2z" fill="#eddfbc"/>
+<path d="M20 71h2v74h-2zm103 0h2v74h-2z" fill="#d2c7ab"/>
+<path d="M22 71h1v74h-1zm103 0h1v74h-1z" fill="#817c89"/>
+<path d="M24 71h2v74h-2zm103 0h2v74h-2z" fill="#e2d3b2"/>
+<path d="M26 71h2v74h-2zm103 0h2v74h-2z" fill="#9c91a0"/>
+<path d="M29 71h2v74h-2zm103 0h2v74h-2z" fill="#c5b69f"/>
+<path d="M31 71h2v74h-2zm103 0h2v74h-2z" fill="#655e76"/>
+<path d="M17 94h16v1H17zm103 0h16v1h-16zM17 121h16v1H17zm103 0h16v1h-16z" fill="#645c6c" opacity=".35"/>
+<path d="M17 95h4v1h-4zm107 27h4v1h-4zM29 108h2v1h-2zm95-28h2v1h-2z" fill="#f5e8ca" opacity=".65"/>
+<path d="M30 84h2v1h-2zm-5 48h2v1h-2zm98-24h1v3h-1zm7-11h2v1h-2z" fill="#79697d"/>
+<path d="M17 71h16v74H17zm103 0h16v74h-16z" fill="url(#pietra)"/>
+<!-- Due lucerne appese al soffitto. -->
+<path d="M43 61h1v13h-1zm65 0h1v13h-1z" fill="#b89b69"/><path d="M40 74h7v2h-7zm65 0h7v2h-7z" fill="#c4a074"/>
+<path d="M41 76h5v2h-5zm65 0h5v2h-5z" fill="#8b6e65"/>
+<path d="M43 71h1v3h-1zm65 0h1v3h-1z" fill="#ffdda0"/>
+<!-- Basi e tre gradini con fughe, crepe e tessere luminose. -->
+<path d="M15 145h20v3H15zm103 0h20v3h-20z" fill="#dfc9a6"/>
+<path d="M12 148h26v3H12zm103 0h26v3h-26z" fill="#a59591"/>
+<path d="M9 151h134v4H9z" fill="#beaa96"/><path d="M9 151h134v1H9z" fill="#e6cfaa"/>
+<path d="M4 155h144v5H4z" fill="#827b8a"/><path d="M4 155h144v1H4z" fill="#b9aa9b"/>
+<path d="M0 160h152v4H0z" fill="#4d526d"/><path d="M0 160h152v1H0z" fill="#8c8290"/>
+<path d="M41 152h1v3h-1zm51 0h1v3h-1zM21 156h1v4h-1zm53 0h1v4h-1zm48 0h1v4h-1zM47 161h1v3h-1zm59 0h1v3h-1z" fill="#4f4d67"/>
+<path d="M16 152h8v1h-8zm30 0h4v1h-4zm65 0h9v1h-9zM12 157h6v1h-6zm72 0h4v1h-4zm44 0h6v1h-6z" fill="#d3baa0" opacity=".65"/>
+<path d="M99 155h3v2h2v1h4v1h-5v-1h-2v-2h-2z" fill="#585568"/>
+<!-- Anfora di terracotta con due anse e fascia decorativa. -->
+<path d="M37 131h8v2h-1v5h2v2h1v7h-2v3h-9v-3h-2v-7h2v-2h2v-5h-1z" fill="#684d58"/>
+<path d="M38 133h5v6h2v8h-2v2h-6v-3h-1v-6h2z" fill="#b67961"/>
+<path d="M38 139h2v8h-2zm1-6h2v5h-2z" fill="#e0a47c"/>
+<path d="M34 136h3v1h-2v6h1v1h-3v-6h1zm10 0h3v1h1v6h-3v-1h2v-5h-3z" fill="#ba8c70"/>
+<path d="M36 141h9v2h-9z" fill="#584451"/><path d="M38 141h1v1h-1zm3 1h1v1h-1z" fill="#dfbd8c"/>
+<path d="M37 131h7v1h-7zm1 17h5v1h-5z" fill="#d4a27c"/>
+<!-- Petit bassin votif et rameaux d'olivier. -->
+<path d="M105 140h12v3h-1v6h-10v-4h-1z" fill="#8b7168"/>
+<path d="M106 141h10v2h-10zm2 3h6v4h-6z" fill="#d4b488"/><path d="M108 148h6v2h-6z" fill="#b08b6e"/>
+<path d="M111 123h1v18h-1zm-2-9h1v10h-1z" fill="#73876c"/>
+<path d="M106 117h3v3h-2v-1h-1zm5 5h4v2h-2v2h-2zm-6 6h5v3h-3v-1h-2zm7 5h5v2h-3v2h-2z" fill="#79977d"/>
+<path d="M106 117h2v1h-2zm7 5h2v1h-2zm-7 6h2v1h-2zm8 5h2v1h-2z" fill="#c1c08d"/>
+<!-- Lierre discret sur le côté ombragé de la colonne. -->
+<path d="M32 113h1v13h2v10h-1v10h-1v-10h-1v-9h-1v-10h1z" fill="#536b63"/>
+<path d="M31 115h-3v3h3zm3 6h3v3h-3zm-2 9h-4v2h4zm3 8h3v3h-3z" fill="#6f8a74"/>
+<path d="M28 115h2v1h-2zm7 6h2v1h-2zm-7 9h2v1h-2z" fill="#a1ab82"/>
+</svg>

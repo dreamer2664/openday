@@ -1,0 +1,19 @@
+{
+  "suite": "portability",
+  "browser": "159.0.8154.6",
+  "results": [
+    {
+      "test": "Apertura diretta di index.html offline, font inclusi e ciclo completo",
+      "status": "PASS"
+    },
+    {
+      "test": "Server incluso: avvio su porta libera e risorse relative",
+      "status": "PASS"
+    },
+    {
+      "test": "Nessun errore JavaScript o risorsa mancante",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

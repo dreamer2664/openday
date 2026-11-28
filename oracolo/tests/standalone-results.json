@@ -1,0 +1,36 @@
+{
+  "file": "Oracolo-di-Delfi.html",
+  "browser": "159.0.8154.6",
+  "results": [
+    {
+      "test": "HTML copiato da solo in una cartella vuota: apertura offline senza server",
+      "status": "PASS"
+    },
+    {
+      "test": "Validazione, consultazione, tre fotogrammi della bocca e ritorno idle",
+      "status": "PASS"
+    },
+    {
+      "test": "Reset, nota per domande delicate e audio facoltativo",
+      "status": "PASS"
+    },
+    {
+      "test": "Riapertura e navigazione interna senza richiedere altri file",
+      "status": "PASS"
+    },
+    {
+      "test": "HTML autonomo su viewport mobile e touch emulato",
+      "status": "PASS"
+    },
+    {
+      "test": "Apertura come documento incorporato in iframe isolato, senza origine condivisa",
+      "status": "PASS"
+    },
+    {
+      "test": "Zero richieste di rete, errori JavaScript o risorse mancanti",
+      "status": "PASS"
+    }
+  ],
+  "externalRequests": [],
+  "errors": []
+}

@@ -1,0 +1,144 @@
+/* Finiture Deluxe: marmo inciso, bronzo, greche e controlli della soundtrack.
+ * La struttura responsive rimane quella di style.css. */
+:root { --gold: #ebc57e; --gold-dark: #a47e51; }
+.topbar { position: relative; z-index: 15; }
+.utility-controls { gap: 7px; }
+.mini-btn { min-height: 44px; box-shadow: inset 0 1px #b3bbbd12, 0 2px 0 #070f1c55; }
+.mini-btn svg { flex-shrink: 0; shape-rendering: crispEdges; }
+.mini-btn:active { transform: translateY(2px); box-shadow: inset 0 1px #b3bbbd12; }
+.music-toggle[aria-pressed='true'] { color: #b4d6ba; border-color: #718f7d; background: #223730; }
+.sound-toggle[aria-pressed='true'] { border-color: #9e8155; background: #33302a; }
+.music-toggle { letter-spacing: 0; }
+.music-toggle[aria-pressed='true'] svg { filter: drop-shadow(0 0 4px #a3c49d33); }
+.audio-settings { position: relative; flex: 0 0 auto; }
+.audio-settings summary { list-style: none; cursor: pointer; width: 40px; padding: 9px; }
+.audio-settings summary::-webkit-details-marker { display: none; }
+.audio-settings[open] summary { color: var(--gold); border-color: #a08459; }
+.audio-popover { position: absolute; z-index: 20; right: 0; top: calc(100% + 12px); width: 250px; padding: 20px; border: 1px solid #b99a63; background: #192534; box-shadow: 0 0 0 3px #101925, 0 0 0 4px #5c5549, 5px 6px 0 #050b1788; text-align: left; }
+.audio-popover::before { content: ''; position: absolute; top: -5px; right: 15px; width: 8px; height: 8px; background: #192534; border-top: 1px solid #b99a63; border-left: 1px solid #b99a63; transform: rotate(45deg); }
+.audio-track-title { font: 17px var(--terminal); letter-spacing: 1px; margin: 0 0 4px; color: var(--gold); }
+.audio-track-description { font: 11px var(--body); margin: 0 0 21px; color: #b7bfc5; line-height: 1.6; }
+.volume-caption { display: flex; justify-content: space-between; margin-bottom: 10px; font: 12px var(--body); color: var(--cream); }
+#volumeValue { color: var(--gold); font-variant-numeric: tabular-nums; }
+#volumeRange { width: 100%; height: 18px; padding: 0; margin: 0; cursor: pointer; accent-color: var(--gold); appearance: none; background: transparent; }
+#volumeRange::-webkit-slider-runnable-track { height: 5px; background: #3e4a58; border-bottom: 1px solid #73808a; }
+#volumeRange::-webkit-slider-thumb { appearance: none; width: 12px; height: 16px; margin-top: -6px; background: #eccb85; border: 2px solid #f6e5b9; border-bottom-color: #ad8656; box-shadow: 2px 2px #0d1524; border-radius: 0; }
+#volumeRange::-moz-range-track { height: 5px; background: #3e4a58; }
+#volumeRange::-moz-range-thumb { width: 10px; height: 14px; background: #eccb85; border: 2px solid #f6e5b9; border-radius: 0; }
+.audio-settings-note { color: #b4bac0; margin: 16px 0 0; font-size: 10px; line-height: 1.7; }
+
+/* L'insegna conserva i caratteri netti, con un doppio rilievo a pixel. */
+.title { text-shadow: 0 2px #d7bc8999, 0 5px #755343, 3px 8px #080f1a; }
+.title-big { color: #edc57c; text-shadow: 0 -1px #fff0b4, 0 3px #bf925e, 0 6px #725044, 3px 9px #080f1a; }
+.laurel { opacity: 1; }
+.kicker { color: #e2bb77; }
+.marquee::after { content: ''; display: block; position: absolute; width: 76px; height: 4px; left: calc(50% - 38px); bottom: 13px; background: linear-gradient(90deg, transparent 0 9px, #8c764c 9px 30px, transparent 30px 35px, #dfbd7a 35px 41px, transparent 41px 46px, #8c764c 46px 67px, transparent 67px); clip-path: polygon(0 40%, 45% 40%, 45% 0, 55% 0, 55% 40%, 100% 40%, 100% 60%, 55% 60%, 55% 100%, 45% 100%, 45% 60%, 0 60%); }
+
+/* Fregio, lastricato e superfici: dettagli poco contrastati dietro ai contenuti. */
+.stage { border-color: #9c886a; box-shadow: 0 8px 0 #080f1a77, 0 0 0 3px #111c2a, 0 0 0 5px #4c5263, 0 0 0 6px #1a2638; }
+.stage-topline { border-bottom: 3px solid #7f725b; box-shadow: inset 0 -1px #ddc18a88, 0 2px 0 #111a2a; background: #14202de8; }
+.stage-topline::after { content: ''; position: absolute; left: 0; right: 0; height: 8px; bottom: -11px; background: url('../assets/meander.svg') repeat-x left center / 24px 12px; opacity: .22; pointer-events: none; }
+.stage-bottomline { border-top: 2px solid #9c8c70; box-shadow: inset 0 1px #e5c99222; }
+.stage::before, .stage::after { width: 7px; height: 7px; background: #eed49d; box-shadow: 0 0 0 2px #171f2d, 0 0 0 3px #9a7c52; }
+.stone-floor { height: 24px; margin-top: -24px; background: url('../assets/stone-tiles.svg') repeat-x bottom left / 128px 24px; }
+.sanctuary-art { opacity: 1; }
+.pythia-aura { width: 165px; height: 225px; opacity: .09; }
+[data-state='consulting'] .pythia-aura { opacity: .3; background: #b7a4e0; }
+[data-state='speaking'] .pythia-aura { opacity: .21; }
+.pythia-name { text-shadow: 1px 2px #10192c; }
+.pythia-caption { text-shadow: 1px 1px #142039; }
+.name-line { background: #c09e6399; box-shadow: 0 2px #152033; }
+.name-line::before { width: 4px; height: 3px; background: #ecd39b; }
+
+/* Bronzo inciso e brace, con scintille minute separate dalla fiamma. */
+.bowl { box-shadow: inset 0 2px #ffdfa1, inset 0 -2px #80605b, 0 1px #312b3e; background: repeating-linear-gradient(90deg, #b28d64 0 4px, #d1ac77 4px 5px); }
+.bowl::after { background: linear-gradient(90deg, #725660 0 2px, #c59c6a 2px 5px, #9b775e 5px 15px, #6b5362 15px); box-shadow: 4px 5px 0 -1px #b4916d, 0 -1px #f1ca87; }
+.stand { box-shadow: 1px 0 #edcc8d, 4px 0 #655962; }
+.stand::before, .stand::after { box-shadow: 2px 1px #5b4b59; }
+.flame { background: linear-gradient(#f8bb67 0 20%, #ed9b55 20% 45%, #cd6650 45% 90%, #8b4c53 90%); filter: drop-shadow(0 0 10px #e9a55075); animation-duration: .85s; }
+.flame::before { background: linear-gradient(#ffe4a0 0 35%, #ffc176 35% 80%, #e29859 80%); }
+.flame::after { background: #fff0b8; box-shadow: 0 -3px #ffe1a0; }
+.brazier::before { content: ''; position: absolute; width: 2px; height: 3px; left: 11px; top: -15px; background: #ffcf79; box-shadow: 5px -14px #d3955877, -3px -24px #ffda8c44; animation: ember-rise 2.7s steps(7) infinite; pointer-events: none; }
+.brazier-right::before { animation-delay: -1.4s; }
+.smoke { width: 3px; height: 3px; background: #baabc04d; box-shadow: 4px -9px #aaa1bd33, 1px -21px #b4aabd22, 7px -30px #c9b8ca13; }
+
+/* Tavoletta in pietra blu, bordi a scalino e piccoli innesti di bronzo. */
+.oracle-panel { background: url('../assets/panel-grain.svg') repeat, linear-gradient(135deg, #1d2c3efb, #192536fc); background-size: 128px 128px, auto; border-color: #c2a16b; box-shadow: 0 0 0 2px #142131, 0 0 0 4px #8a7454, 0 0 0 5px #1e2634, 7px 8px 0 #0c142377; }
+.oracle-panel::before { inset: 5px; border-color: #d7b97530; box-shadow: inset 0 1px #ffffdd06; }
+.panel-corner { width: 11px; height: 11px; background: #f8df9f; border: 3px solid #1b2736; outline: 1px solid #e0b976; box-shadow: inset 1px 1px #fff0bd, 0 1px #6d5343; }
+.panel-corner::before { content: ''; position: absolute; width: 19px; height: 1px; background: #c2a16b; left: -4px; top: 8px; opacity: .55; }
+.panel-corner.br::before, .panel-corner.bl::before { top: -5px; }
+.panel-corner.tr::before, .panel-corner.br::before { left: -10px; }
+.panel-label { color: #efcf90; }
+.label-rule { background: linear-gradient(90deg, #bf9e5e44, #bf9e5e0d); }
+.tiny-star { font-size: 0; width: 9px; height: 9px; flex: 0 0 9px; background: #dfbd79; clip-path: polygon(40% 0,60% 0,60% 30%,70% 30%,70% 40%,100% 40%,100% 60%,70% 60%,70% 70%,60% 70%,60% 100%,40% 100%,40% 70%,30% 70%,30% 60%,0 60%,0 40%,30% 40%,30% 30%,40% 30%); }
+.question-wrap { background: #111e2d; border-color: #63717e; box-shadow: inset 0 2px #0b1524, inset 2px 0 #0b1524; }
+.question-wrap::after { content: ''; position: absolute; right: -1px; bottom: -1px; width: 9px; height: 9px; border-right: 2px solid #98a49f; border-bottom: 2px solid #98a49f; pointer-events: none; }
+.question-wrap:focus-within { box-shadow: inset 0 2px #0b1524, 0 0 0 2px #e8c17b16; }
+.question-wrap:focus-within::after { border-color: #e3c389; }
+.input-decoration { color: #ba9f6c; }
+
+/* Boutons en bronze doré: relief net, bord gravé et flèche à pixels. */
+.btn-consult { background: linear-gradient(#efd59d 0 3px, #e7bd75 3px calc(100% - 3px), #c89b5d calc(100% - 3px)); box-shadow: 0 4px #8c6546, -3px 0 #d6ac6a, 3px 0 #d6ac6a, 0 -3px #f7e2ae, 0 6px #0e1728; }
+.btn-consult:hover:not(:disabled) { background: linear-gradient(#fff0c2 0 3px, #f2cf8a 3px calc(100% - 3px), #d6ac6a calc(100% - 3px)); box-shadow: 0 4px #a67d50, -3px 0 #f2cf8a, 3px 0 #f2cf8a, 0 -3px #ffedbc, 0 6px #0e1728; }
+.btn-consult .btn-gem { width: 13px; height: 13px; font-size: 0; background: currentColor; clip-path: polygon(38% 0,62% 0,62% 23%,77% 23%,77% 38%,100% 38%,100% 62%,77% 62%,77% 77%,62% 77%,62% 100%,38% 100%,38% 77%,23% 77%,23% 62%,0 62%,0 38%,23% 38%,23% 23%,38% 23%); }
+.btn-arrow { font-size: 0 !important; display: block; width: 16px; height: 12px; flex-shrink: 0; background: currentColor; clip-path: polygon(0 33%,60% 33%,60% 0,75% 0,75% 17%,88% 17%,88% 33%,100% 33%,100% 66%,88% 66%,88% 83%,75% 83%,75% 100%,60% 100%,60% 66%,0 66%); }
+.btn-again { background: linear-gradient(#3c4655 0 2px, #2c3747 2px calc(100% - 2px), #1d2938 calc(100% - 2px)); }
+.btn-text { text-shadow: 0 1px #fff3c240; }
+.btn-again .btn-text { text-shadow: 1px 1px #0e1724; }
+.answer-ornament { letter-spacing: 2px; text-shadow: 0 2px #a67c4b55; }
+.answer-ornament > span { width: 38px; background: linear-gradient(90deg, transparent, #ceb17977); }
+.answer-ornament > span:last-child { transform: scaleX(-1); }
+.response { color: #f3dfb6; text-shadow: 0 2px #111b2a; }
+.oracle-sigil img { width: 86px; height: 86px; display: block; }
+.oracle-sigil { animation: seal-breathe 2.8s steps(8) infinite; }
+.orbit { border-color: #b9a16c33; animation-timing-function: steps(24); }
+.o2 { border-color: #a1b5bb17; animation-timing-function: steps(32); }
+.waiting-track { height: 4px; border-bottom: 1px solid #60717b; background: #0f1b2d; }
+.waiting-track span { height: 3px; background: repeating-linear-gradient(90deg, #eccb88 0 7px, #af8a52 7px 8px); }
+.cabinet-footer .footer-meta { border-top-color: #66715c33; }
+
+@keyframes ember-rise { from { transform: translate(0, 8px); opacity: .85; } to { transform: translate(5px, -20px); opacity: 0; } }
+@keyframes seal-breathe { 0%,100% { transform: translateY(1px); opacity: .85; } 50% { transform: translateY(-1px); opacity: 1; } }
+@media (min-width: 641px) {
+  .pythia-name { bottom: 19px; }
+  .pythia-caption { bottom: -2px; }
+}
+@media (max-width: 1080px) {
+  .open-badge { font-size: 13px; letter-spacing: .6px; }
+  .mini-btn { font-size: 15px; padding: 8px 9px; gap: 7px; }
+}
+@media (max-width: 800px) {
+  .open-badge { display: none; }
+  .audio-settings summary { width: 38px; }
+}
+@media (max-width: 640px) {
+  .utility-controls { gap: 5px; }
+  .control-name { display: none; }
+  .music-toggle .control-name { display: inline; }
+  .music-toggle svg, #musicState { display: none; }
+  .music-toggle::after { content: ''; width: 4px; height: 4px; flex-shrink: 0; background: #77877d; }
+  .music-toggle[aria-pressed='true']::after { background: #c7e0b8; box-shadow: 0 0 4px #b4d6ba44; }
+  .mini-btn { min-height: 42px; padding: 8px; font-size: 15px; gap: 6px; }
+  .mini-btn svg { width: 16px; height: 16px; }
+  .audio-settings summary { width: 34px; padding: 8px; }
+  .fullscreen-toggle { padding: 8px; }
+  .audio-popover { width: 234px; padding: 18px; }
+  .marquee::after { bottom: 7px; }
+  .stage-topline::after { height: 5px; bottom: -7px; background-size: 18px 9px; }
+  .panel-corner { width: 9px; height: 9px; border-width: 2px; }
+  .title { text-shadow: 0 3px #755343, 2px 5px #080f1a; }
+  .title-big { text-shadow: 0 -1px #fff0b4, 0 2px #bf925e, 0 4px #725044, 2px 6px #080f1a; }
+}
+@media (max-width: 370px) {
+  .wordmark { gap: 6px; font-size: 8px; }
+  .wordmark img { width: 20px; height: 20px; }
+  .mini-btn { padding: 7px; gap: 5px; font-size: 14px; }
+  .utility-controls { gap: 4px; }
+  .audio-settings summary { width: 32px; }
+  .audio-popover { right: -26px; }
+  .btn-consult .btn-gem { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
