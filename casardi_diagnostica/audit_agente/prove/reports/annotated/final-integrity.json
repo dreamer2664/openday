@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "source_files_unchanged": 84,
+  "asset_files_unchanged": 473,
+  "zip_members": 717,
+  "zip_crc_pass": true,
+  "production_html_sha256": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea",
+  "diagnostic_a1_sha256": "2806e32423451c4ef7eeb5d37260b645a5ba06a11dba14474c99c5e6447e8992",
+  "zip_sha256": "9fb4a649948ded763cb3436d3b82b12f58f196f8429e65abbd8dfe18bdf5a12f",
+  "prototype_sha256": "a01ca4759b499979e8a9b0591f6b4a007fb11654d874053e0444be3c7b33245e",
+  "prototype_renderer_composition_sprites_bridge_and_embedded_data_unchanged": true,
+  "release_or_publication": false,
+  "seconds": 2.16,
+  "_audit_provenance": {
+    "original_sha256": "3d3b496feaace57b4426c3c01b5648304f24faa66e1f52d105ece94698c19012",
+    "report_file_written_at_workspace_utc": "2026-11-28T06:35:40.753639+00:00",
+    "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+    "original_hardcoded_date": "2026-11-27",
+    "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+  }
+}

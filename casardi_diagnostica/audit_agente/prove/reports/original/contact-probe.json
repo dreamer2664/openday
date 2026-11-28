@@ -1,0 +1,8916 @@
+{
+  "results": [
+    {
+      "scale": 100,
+      "radius": 1,
+      "point": "center",
+      "bb": {
+        "x": 151.71875,
+        "y": 304.453125,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 354,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 354,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 347,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 347,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4140625,
+          "y": 321.5625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 354,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 354,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4140625,
+          "y": 317.5625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 354,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 347,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 1,
+      "point": "left-inner",
+      "bb": {
+        "x": 135.6875,
+        "y": 300.15625,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 347,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 347,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 340,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 340,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 137.6875,
+          "y": 317.265625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 347,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 347,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 347,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 347,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 153.6875,
+          "y": 313.265625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 347,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 340,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 1,
+      "point": "left-outer",
+      "bb": {
+        "x": 151.71875,
+        "y": 295.875,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 340,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 340,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 333,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 333,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 147.71875,
+          "y": 312.984375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 340,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 340,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 340,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 340,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 131.71875,
+          "y": 308.984375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 340,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 333,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 1,
+      "point": "right-inner",
+      "bb": {
+        "x": 135.6875,
+        "y": 291.578125,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 333,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 333,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 326,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 326,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 215.078125,
+          "y": 308.6875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 333,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 333,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 333,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 333,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 231.078125,
+          "y": 304.6875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 333,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 326,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 1,
+      "point": "right-outer",
+      "bb": {
+        "x": 151.71875,
+        "y": 287.28125,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 326,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 326,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 319,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 319,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 237.109375,
+          "y": 304.390625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 326,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 326,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 326,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 326,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 221.109375,
+          "y": 300.390625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 326,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 319,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 1,
+      "point": "top-inner",
+      "bb": {
+        "x": 135.6875,
+        "y": 282.984375,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 319,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 319,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 312,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 312,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3828125,
+          "y": 235.984375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 319,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 319,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 319,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 319,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3828125,
+          "y": 231.984375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 319,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 312,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 1,
+      "point": "top-outer",
+      "bb": {
+        "x": 151.71875,
+        "y": 278.6875,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 312,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 312,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 305,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 305,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4140625,
+          "y": 225.6875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 312,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 312,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 312,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 312,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4140625,
+          "y": 221.6875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 312,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 305,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 1,
+      "point": "bottom-inner",
+      "bb": {
+        "x": 135.6875,
+        "y": 274.40625,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 305,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 305,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 298,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 298,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3828125,
+          "y": 355.625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 305,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 305,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 305,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 305,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3828125,
+          "y": 351.625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 305,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 298,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 1,
+      "point": "bottom-outer",
+      "bb": {
+        "x": 151.71875,
+        "y": 270.109375,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 298,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 298,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 291,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 291,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4140625,
+          "y": 357.328125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 298,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 298,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 298,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 298,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4140625,
+          "y": 353.328125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 298,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 291,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 8,
+      "point": "center",
+      "bb": {
+        "x": 135.6875,
+        "y": 265.8125,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 291,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 291,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 284,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 284,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3828125,
+          "y": 282.921875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 291,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 291,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 291,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 291,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3828125,
+          "y": 278.921875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 291,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 284,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 8,
+      "point": "left-inner",
+      "bb": {
+        "x": 151.71875,
+        "y": 261.515625,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 284,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 284,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 277,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 277,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 153.71875,
+          "y": 278.625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 284,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 284,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 284,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 284,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 137.71875,
+          "y": 274.625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 284,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 277,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 8,
+      "point": "left-outer",
+      "bb": {
+        "x": 135.6875,
+        "y": 257.234375,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 277,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 277,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 270,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 270,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 131.6875,
+          "y": 274.34375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 277,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 277,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 277,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 277,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 147.6875,
+          "y": 270.34375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 277,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 270,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 8,
+      "point": "right-inner",
+      "bb": {
+        "x": 151.71875,
+        "y": 252.9375,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 270,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 270,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 263,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 263,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 231.109375,
+          "y": 270.046875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 270,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 270,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 270,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 270,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 215.109375,
+          "y": 266.046875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 270,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 263,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 8,
+      "point": "right-outer",
+      "bb": {
+        "x": 135.6875,
+        "y": 248.640625,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 263,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 263,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 256,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 256,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 221.078125,
+          "y": 265.75,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 263,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 263,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 263,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 263,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 237.078125,
+          "y": 261.75,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 263,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 256,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 8,
+      "point": "top-inner",
+      "bb": {
+        "x": 151.71875,
+        "y": 244.34375,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 256,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 256,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 249,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 249,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4140625,
+          "y": 197.34375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 256,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 256,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 256,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 256,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4140625,
+          "y": 193.34375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 256,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 249,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 8,
+      "point": "top-outer",
+      "bb": {
+        "x": 135.6875,
+        "y": 240.0625,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 249,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 249,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 242,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 242,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3828125,
+          "y": 187.0625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 249,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 249,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 249,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 249,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3828125,
+          "y": 183.0625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 249,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 242,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 8,
+      "point": "bottom-inner",
+      "bb": {
+        "x": 151.71875,
+        "y": 235.765625,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 242,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 242,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 235,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 235,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4140625,
+          "y": 316.984375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 242,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 242,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 242,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 242,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4140625,
+          "y": 312.984375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 242,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 235,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 8,
+      "point": "bottom-outer",
+      "bb": {
+        "x": 135.6875,
+        "y": 231.46875,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 235,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 235,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3828125,
+          "y": 318.6875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 235,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 235,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 235,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 235,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3828125,
+          "y": 314.6875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 235,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 16,
+      "point": "center",
+      "bb": {
+        "x": 151.71875,
+        "y": 227.171875,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4140625,
+          "y": 244.28125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4140625,
+          "y": 240.28125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 16,
+      "point": "left-inner",
+      "bb": {
+        "x": 135.6875,
+        "y": 227.171875,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 137.6875,
+          "y": 244.28125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 153.6875,
+          "y": 240.28125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 16,
+      "point": "left-outer",
+      "bb": {
+        "x": 151.71875,
+        "y": 227.171875,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 147.71875,
+          "y": 244.28125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 131.71875,
+          "y": 240.28125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 16,
+      "point": "right-inner",
+      "bb": {
+        "x": 135.6875,
+        "y": 227.171875,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 215.078125,
+          "y": 244.28125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 231.078125,
+          "y": 240.28125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 16,
+      "point": "right-outer",
+      "bb": {
+        "x": 151.71875,
+        "y": 227.171875,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 237.109375,
+          "y": 244.28125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 221.109375,
+          "y": 240.28125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 16,
+      "point": "top-inner",
+      "bb": {
+        "x": 135.6875,
+        "y": 227.171875,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3828125,
+          "y": 180.171875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3828125,
+          "y": 176.171875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 16,
+      "point": "top-outer",
+      "bb": {
+        "x": 151.71875,
+        "y": 227.171875,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4140625,
+          "y": 174.171875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4140625,
+          "y": 170.171875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 16,
+      "point": "bottom-inner",
+      "bb": {
+        "x": 135.6875,
+        "y": 227.171875,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3828125,
+          "y": 308.390625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3828125,
+          "y": 304.390625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 100,
+      "radius": 16,
+      "point": "bottom-outer",
+      "bb": {
+        "x": 151.71875,
+        "y": 227.171875,
+        "width": 81.390625,
+        "height": 132.21875
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 278,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        },
+        "model": {
+          "x": 252,
+          "y": 228,
+          "scale": 100
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4140625,
+          "y": 314.390625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4140625,
+          "y": 310.390625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 228,
+              "scale": 100
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 1,
+      "point": "center",
+      "bb": {
+        "x": 150.5,
+        "y": 275.265625,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 228,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 228,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 221,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 221,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3984375,
+          "y": 268.3359375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 228,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3984375,
+          "y": 264.3359375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 228,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 221,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 1,
+      "point": "left-inner",
+      "bb": {
+        "x": 166.53125,
+        "y": 270.96875,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 221,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 221,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 214,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 214,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 168.53125,
+          "y": 264.0390625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 221,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 221,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 221,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 221,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 152.53125,
+          "y": 260.0390625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 221,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 214,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 1,
+      "point": "left-outer",
+      "bb": {
+        "x": 150.5,
+        "y": 266.671875,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 214,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 214,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 207,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 207,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 146.5,
+          "y": 259.7421875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 214,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 214,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 214,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 214,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 162.5,
+          "y": 255.7421875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 214,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 207,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 1,
+      "point": "right-inner",
+      "bb": {
+        "x": 166.53125,
+        "y": 262.375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 207,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 207,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 200,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 200,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 216.328125,
+          "y": 255.4453125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 207,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 207,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 207,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 207,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 200.328125,
+          "y": 251.4453125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 207,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 200,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 1,
+      "point": "right-outer",
+      "bb": {
+        "x": 150.5,
+        "y": 258.09375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 200,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 200,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 193,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 193,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 206.296875,
+          "y": 251.1640625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 200,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 200,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 200,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 200,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 222.296875,
+          "y": 247.1640625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 200,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 193,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 1,
+      "point": "top-inner",
+      "bb": {
+        "x": 166.53125,
+        "y": 253.796875,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 193,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 193,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 186,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 186,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4296875,
+          "y": 206.796875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 193,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 193,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 193,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 193,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4296875,
+          "y": 202.796875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 193,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 186,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 1,
+      "point": "top-outer",
+      "bb": {
+        "x": 150.5,
+        "y": 249.5,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 186,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 186,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 179,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 179,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3984375,
+          "y": 196.5,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 186,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 186,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 186,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 186,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3984375,
+          "y": 192.5,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 186,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 179,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 1,
+      "point": "bottom-inner",
+      "bb": {
+        "x": 166.53125,
+        "y": 245.203125,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 179,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 179,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 172,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 172,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4296875,
+          "y": 278.34375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 179,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 179,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 179,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 179,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4296875,
+          "y": 274.34375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 179,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 172,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 1,
+      "point": "bottom-outer",
+      "bb": {
+        "x": 150.5,
+        "y": 240.90625,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 172,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 172,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 165,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 165,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3984375,
+          "y": 280.046875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 172,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 172,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 172,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 172,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3984375,
+          "y": 276.046875,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 172,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 165,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 8,
+      "point": "center",
+      "bb": {
+        "x": 166.53125,
+        "y": 236.625,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 165,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 165,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 158,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 158,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4296875,
+          "y": 229.6953125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 165,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 165,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 165,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 165,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4296875,
+          "y": 225.6953125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 165,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 158,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 8,
+      "point": "left-inner",
+      "bb": {
+        "x": 150.5,
+        "y": 232.328125,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 158,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 158,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 151,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 151,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 152.5,
+          "y": 225.3984375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 158,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 158,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 158,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 158,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 168.5,
+          "y": 221.3984375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 158,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 151,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 8,
+      "point": "left-outer",
+      "bb": {
+        "x": 166.53125,
+        "y": 228.03125,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 151,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 151,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 162.53125,
+          "y": 221.1015625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 151,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 151,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 151,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 151,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 146.53125,
+          "y": 217.1015625,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 151,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 8,
+      "point": "right-inner",
+      "bb": {
+        "x": 150.5,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 200.296875,
+          "y": 220.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 216.296875,
+          "y": 216.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 8,
+      "point": "right-outer",
+      "bb": {
+        "x": 166.53125,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 222.328125,
+          "y": 220.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 206.328125,
+          "y": 216.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 8,
+      "point": "top-inner",
+      "bb": {
+        "x": 150.5,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3984375,
+          "y": 179.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3984375,
+          "y": 175.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 8,
+      "point": "top-outer",
+      "bb": {
+        "x": 166.53125,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4296875,
+          "y": 173.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4296875,
+          "y": 169.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 8,
+      "point": "bottom-inner",
+      "bb": {
+        "x": 150.5,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3984375,
+          "y": 260.078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3984375,
+          "y": 256.078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 8,
+      "point": "bottom-outer",
+      "bb": {
+        "x": 166.53125,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4296875,
+          "y": 266.078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4296875,
+          "y": 262.078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 16,
+      "point": "center",
+      "bb": {
+        "x": 150.5,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3984375,
+          "y": 220.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3984375,
+          "y": 216.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 16,
+      "point": "left-inner",
+      "bb": {
+        "x": 166.53125,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 168.53125,
+          "y": 220.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 152.53125,
+          "y": 216.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 16,
+      "point": "left-outer",
+      "bb": {
+        "x": 150.5,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 146.5,
+          "y": 220.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 162.5,
+          "y": 216.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 16,
+      "point": "right-inner",
+      "bb": {
+        "x": 166.53125,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 216.328125,
+          "y": 220.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 200.328125,
+          "y": 216.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 16,
+      "point": "right-outer",
+      "bb": {
+        "x": 150.5,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 206.296875,
+          "y": 220.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 222.296875,
+          "y": 216.0078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 16,
+      "point": "top-inner",
+      "bb": {
+        "x": 166.53125,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4296875,
+          "y": 179.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4296875,
+          "y": 175.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 16,
+      "point": "top-outer",
+      "bb": {
+        "x": 150.5,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3984375,
+          "y": 173.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3984375,
+          "y": 169.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 16,
+      "point": "bottom-inner",
+      "bb": {
+        "x": 166.53125,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.4296875,
+          "y": 260.078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.4296875,
+          "y": 256.078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 65,
+      "radius": 16,
+      "point": "bottom-outer",
+      "bb": {
+        "x": 150.5,
+        "y": 226.9375,
+        "width": 51.796875,
+        "height": 84.140625
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 252,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 149.20000000000002,
+          "scale": 65
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 65
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.3984375,
+          "y": 266.078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 252,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.3984375,
+          "y": 262.078125,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 149.20000000000002,
+              "scale": 65
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 65
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 1,
+      "point": "center",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 149,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.421875,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 149,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.421875,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 1,
+      "point": "left-inner",
+      "bb": {
+        "x": 120.890625,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 122.890625,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 138.890625,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 1,
+      "point": "left-outer",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 132.921875,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 116.921875,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 1,
+      "point": "right-inner",
+      "bb": {
+        "x": 120.890625,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 229.890625,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 245.890625,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 1,
+      "point": "right-outer",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 251.921875,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 235.921875,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 1,
+      "point": "top-inner",
+      "bb": {
+        "x": 120.890625,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.390625,
+          "y": 179.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.390625,
+          "y": 175.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 1,
+      "point": "top-outer",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.421875,
+          "y": 173.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.421875,
+          "y": 169.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 1,
+      "point": "bottom-inner",
+      "bb": {
+        "x": 120.890625,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.390625,
+          "y": 356.25,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.390625,
+          "y": 352.25,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 1,
+      "point": "bottom-outer",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.421875,
+          "y": 362.25,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.421875,
+          "y": 358.25,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 8,
+      "point": "center",
+      "bb": {
+        "x": 120.890625,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.390625,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.390625,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 8,
+      "point": "left-inner",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 138.921875,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 122.921875,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 8,
+      "point": "left-outer",
+      "bb": {
+        "x": 120.890625,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 116.890625,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 132.890625,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 8,
+      "point": "right-inner",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 245.921875,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 229.921875,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 8,
+      "point": "right-outer",
+      "bb": {
+        "x": 120.890625,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 235.890625,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 251.890625,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 8,
+      "point": "top-inner",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.421875,
+          "y": 179.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.421875,
+          "y": 175.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 8,
+      "point": "top-outer",
+      "bb": {
+        "x": 120.890625,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.390625,
+          "y": 173.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.390625,
+          "y": 169.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 8,
+      "point": "bottom-inner",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.421875,
+          "y": 356.25,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.421875,
+          "y": 352.25,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 8,
+      "point": "bottom-outer",
+      "bb": {
+        "x": 120.890625,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.390625,
+          "y": 362.25,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.390625,
+          "y": 358.25,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 16,
+      "point": "center",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.421875,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.421875,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 16,
+      "point": "left-inner",
+      "bb": {
+        "x": 120.890625,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 122.890625,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 138.890625,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 16,
+      "point": "left-outer",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 132.921875,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 116.921875,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 16,
+      "point": "right-inner",
+      "bb": {
+        "x": 120.890625,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 229.890625,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 245.890625,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 16,
+      "point": "right-outer",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 251.921875,
+          "y": 268.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 235.921875,
+          "y": 264.09375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 16,
+      "point": "top-inner",
+      "bb": {
+        "x": 120.890625,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.390625,
+          "y": 179.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.390625,
+          "y": 175.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 16,
+      "point": "top-outer",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.421875,
+          "y": 173.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.421875,
+          "y": 169.9375,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 16,
+      "point": "bottom-inner",
+      "bb": {
+        "x": 120.890625,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 176.390625,
+          "y": 356.25,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 192.390625,
+          "y": 352.25,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scale": 135,
+      "radius": 16,
+      "point": "bottom-outer",
+      "bb": {
+        "x": 136.921875,
+        "y": 226.9375,
+        "width": 111,
+        "height": 180.3125
+      },
+      "before": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 278,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "after": {
+        "busy": false,
+        "rendering": false,
+        "drag": null,
+        "actor": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        },
+        "model": {
+          "x": 252,
+          "y": 306,
+          "scale": 135
+        }
+      },
+      "moved": true,
+      "trace": [
+        {
+          "t": "pointerdown",
+          "key": "actor",
+          "x": 192.421875,
+          "y": 362.25,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "focusin",
+          "key": "actor",
+          "x": null,
+          "y": null,
+          "ptr": null,
+          "state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "key": "actor",
+          "x": 176.421875,
+          "y": 358.25,
+          "ptr": "touch",
+          "state": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 278,
+              "y": 306,
+              "scale": 135
+            },
+            "model": {
+              "x": 252,
+              "y": 306,
+              "scale": 135
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "seconds": 34.52945899963379
+}

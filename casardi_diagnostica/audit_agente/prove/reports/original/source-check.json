@@ -1,0 +1,637 @@
+{
+  "date": "2026-11-27",
+  "result": "PASS",
+  "seconds": 1.06,
+  "scope": "Static syntax, all non-vendor code/template/style inventory and exact build integration. Does not claim every line is dynamically covered or manually reviewed.",
+  "checks": [
+    {
+      "name": "Exact source included once in released HTML",
+      "source": "browser/sprites.js",
+      "result": "PASS"
+    },
+    {
+      "name": "Exact source included once in released HTML",
+      "source": "browser/composition.js",
+      "result": "PASS"
+    },
+    {
+      "name": "Exact source included once in released HTML",
+      "source": "browser/render.js",
+      "result": "PASS"
+    },
+    {
+      "name": "Exact source included once in released HTML",
+      "source": "browser/layout-editor.js",
+      "result": "PASS"
+    },
+    {
+      "name": "Exact source included once in released HTML",
+      "source": "browser/bridge.js",
+      "result": "PASS"
+    },
+    {
+      "name": "Exact source included once in released HTML",
+      "source": "browser/app.js",
+      "result": "PASS"
+    },
+    {
+      "name": "All generated sprite code exactly regenerates from original Python and browser helpers",
+      "result": "PASS"
+    },
+    {
+      "name": "Shared browser/kiosk layout-editor.js byte equality",
+      "result": "PASS"
+    },
+    {
+      "name": "Shared browser/kiosk layout-editor.css byte equality",
+      "result": "PASS"
+    },
+    {
+      "name": "A1 minus documented read-only diagnostics equals production exactly; no alternate touch/drag logic",
+      "result": "PASS"
+    }
+  ],
+  "inventory": [
+    {
+      "path": "app/__init__.py",
+      "lines": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/animals.py",
+      "lines": 431,
+      "bytes": 19718,
+      "sha256": "a434493fb0e1d93c38be8f58a2b784648ebe29edcbf70fd788a8330812188dd4",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/catalogue.py",
+      "lines": 110,
+      "bytes": 5545,
+      "sha256": "62a2effa4383ae0a783226a3087704e4e7f99f0721a4d154cd62d72a87772d67",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/character.py",
+      "lines": 198,
+      "bytes": 12857,
+      "sha256": "f0b29178f68995e412928c473a577123b062281a66f9cbbe3405bff140100af5",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/control_effects.py",
+      "lines": 84,
+      "bytes": 3500,
+      "sha256": "c479ac758b84e6dcdf519cc7ad006af75a9d4e68f2c8394dd77415cc5c3c6492",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/credits.py",
+      "lines": 50,
+      "bytes": 3297,
+      "sha256": "0ec996187361d827fbd2054dcb39b3a4428c8cf1dc37c1aa72d76e102f622f13",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/cyber_layers.py",
+      "lines": 202,
+      "bytes": 10564,
+      "sha256": "50c6e0f4b81bc8048dea980dbdb23d3dcddb99b4eff93c890754f7b8382ec1a5",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/imgutil.py",
+      "lines": 15,
+      "bytes": 519,
+      "sha256": "53d9d1fc12859f71da815078f92c2d5eee645a87fd746477e965c6dff3dbe69f",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/layout_edit.py",
+      "lines": 118,
+      "bytes": 9700,
+      "sha256": "c28d6ffd88a824cd51380f6a04d989a5bbe599b965792b275163a732dd61722c",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/nes_art.py",
+      "lines": 30,
+      "bytes": 1226,
+      "sha256": "005fdd67bcbfa0f970c59a63b0ee5fb3bcf7296f6f053e3aa0816e624bef8b61",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/palette.py",
+      "lines": 186,
+      "bytes": 5907,
+      "sha256": "c578ba383d8f8f81e9c8629b983cfc4b47fbbb83ba043b7bbda60ea7126249d0",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/pixel.py",
+      "lines": 244,
+      "bytes": 9010,
+      "sha256": "1fe133b661d19834de8f3da03da2104ad4bbe6dcfeff4caa287dfbf1c92a97fa",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/postcard.py",
+      "lines": 679,
+      "bytes": 29703,
+      "sha256": "f52c593c2c9983e4f62ff627d332d90a673f916a28984111df3a601d18e60bfa",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/scenes.py",
+      "lines": 134,
+      "bytes": 11215,
+      "sha256": "e32d61c6c4fedaff19cdd683e60c8611f9dde3b4bc90165e5716cff28ad5c660",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/server.py",
+      "lines": 481,
+      "bytes": 20346,
+      "sha256": "c213b7c3b6d43cae5c9e36ae7100a118b8a285f6006b34499442c667923853ad",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/sprite_geometry.py",
+      "lines": 43,
+      "bytes": 1606,
+      "sha256": "7f1764403f4cba536706ee280cf4c779e23ca53f9f121977ec67f68c4389b483",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "app/storage.py",
+      "lines": 126,
+      "bytes": 4288,
+      "sha256": "f4865e8675808843e583cd33d4fd406fd8a1f417ca91363e56f64b42af64be0d",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "browser/app.js",
+      "lines": 153,
+      "bytes": 24944,
+      "sha256": "b8aba402e33995e1e842deb8a30710ad3be7b3ed72e8e0d2853e048436685b85",
+      "syntax": "node --check PASS"
+    },
+    {
+      "path": "browser/bridge.js",
+      "lines": 73,
+      "bytes": 7483,
+      "sha256": "0617eb42553d04e79a25a126201bb2f2bef4a1eeffb3700f602d0816f5f88286",
+      "syntax": "node --check PASS"
+    },
+    {
+      "path": "browser/composition.js",
+      "lines": 59,
+      "bytes": 7892,
+      "sha256": "d06c41e21797ba7295b66ab26507ee43cc8b3f866c4adfee0ae4688cd16d2b1f",
+      "syntax": "node --check PASS"
+    },
+    {
+      "path": "browser/interface.css",
+      "lines": 26,
+      "bytes": 34931,
+      "sha256": "b13c38954d67a4a8c3fcaabee1b73b819d46b73c1a70a1a1da301733e05d5e52"
+    },
+    {
+      "path": "browser/interface.html",
+      "lines": 163,
+      "bytes": 21233,
+      "sha256": "c7a20072aac20ae3befe2399c07daf4ba99c48f26d06c18c3b9ea520fd1ef442"
+    },
+    {
+      "path": "browser/layout-editor.css",
+      "lines": 54,
+      "bytes": 7791,
+      "sha256": "a348ebe27c0bf4f3bd2a76f104e8b03938a0443500888c4c32e6924c4ea8b945"
+    },
+    {
+      "path": "browser/layout-editor.js",
+      "lines": 115,
+      "bytes": 17411,
+      "sha256": "78aa15df7e466ccfb006a6b58fb99bd9ea844ce64bb3b549d3b280e5ce2ec7c4",
+      "syntax": "node --check PASS"
+    },
+    {
+      "path": "browser/lpc.js",
+      "lines": 56,
+      "bytes": 5263,
+      "sha256": "6beff9b87f030f6711d9f34a6b58bb359c28f47e17ed4156f31fe28f1320e91d",
+      "syntax": "node --check PASS"
+    },
+    {
+      "path": "browser/pixels.js",
+      "lines": 50,
+      "bytes": 5373,
+      "sha256": "d0f3700300fdd972c1f9df49a9b195ea77edc7c1d0297682e5c556852958c711",
+      "syntax": "node --check PASS"
+    },
+    {
+      "path": "browser/render.js",
+      "lines": 260,
+      "bytes": 24368,
+      "sha256": "5104e281b886ab8989342f9f8f1921aa4e242de089f32bd924681d7abc629f16",
+      "syntax": "node --check PASS"
+    },
+    {
+      "path": "browser/sprites.js",
+      "lines": 886,
+      "bytes": 39356,
+      "sha256": "6ebfa143997192a8dc569ce7237b257bfd690197bd8d264a114bb8418c725989",
+      "syntax": "node --check PASS"
+    },
+    {
+      "path": "web/static/app.css",
+      "lines": 407,
+      "bytes": 23547,
+      "sha256": "91d03b822d46aef4f2e9214f270515ff67fc4234ce5a87434aa56e95b4fd7deb"
+    },
+    {
+      "path": "web/static/app.js",
+      "lines": 430,
+      "bytes": 29687,
+      "sha256": "ac4bd34061c714ee62e59d674fcbaf5c534fc0de02a35fa95f3a483b556e0069",
+      "syntax": "node --check PASS"
+    },
+    {
+      "path": "web/static/layout-editor.css",
+      "lines": 54,
+      "bytes": 7791,
+      "sha256": "a348ebe27c0bf4f3bd2a76f104e8b03938a0443500888c4c32e6924c4ea8b945"
+    },
+    {
+      "path": "web/static/layout-editor.js",
+      "lines": 115,
+      "bytes": 17411,
+      "sha256": "78aa15df7e466ccfb006a6b58fb99bd9ea844ce64bb3b549d3b280e5ce2ec7c4",
+      "syntax": "node --check PASS"
+    },
+    {
+      "path": "web/static/mobile.js",
+      "lines": 17,
+      "bytes": 798,
+      "sha256": "51e0d7a849c1424452f3d44f5a515cc28b127c1902b69c9fe5f269ca5a2134f6",
+      "syntax": "node --check PASS"
+    },
+    {
+      "path": "web/templates/expired.html",
+      "lines": 1,
+      "bytes": 829,
+      "sha256": "ae8a92569ff43a34a64b2ac55bf6c2c2a95bb51801b4615c365ccb9377578163"
+    },
+    {
+      "path": "web/templates/index.html",
+      "lines": 195,
+      "bytes": 12277,
+      "sha256": "0cbd1d6473a25922cf21d062a1ed50d462430fc806d65c05550e5e88be550a5f"
+    },
+    {
+      "path": "web/templates/mobile.html",
+      "lines": 25,
+      "bytes": 4280,
+      "sha256": "9b030bda853b8b89e1d0024daa2d2859c9b305a7449572728b829ba2bfb1ccc0"
+    },
+    {
+      "path": "web/templates/network.html",
+      "lines": 1,
+      "bytes": 881,
+      "sha256": "0f64d7043056888fe022cc4cfaf12f49f0f1642b762216490ac9785f25846abd"
+    },
+    {
+      "path": "scripts/asset_audit.py",
+      "lines": 87,
+      "bytes": 6492,
+      "sha256": "9a3153352eb5c7ca66374e805eb459f7ece22f3f01b0dd2eb9b9fe9ce6bd5ac8",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/browser_sprite_audit.py",
+      "lines": 64,
+      "bytes": 3924,
+      "sha256": "acaa94d0ba250b18e660dacb1d398b6582ec730805bbdaaf106badde7b30c15d",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/build_examples.py",
+      "lines": 20,
+      "bytes": 1155,
+      "sha256": "7b9d59b4b7d33ecdc52d5174f76242e7d094001a86fe5ab6821b54447a5fcd58",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/build_guides.py",
+      "lines": 19,
+      "bytes": 786,
+      "sha256": "1b0d6c3661a3be5384c7a91840bc913ed72956d08ece891e658f8cb53bf03393",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/build_phone_font.py",
+      "lines": 14,
+      "bytes": 782,
+      "sha256": "9149bd405e359fbda55f2cc36ed8ed9e9818ebe1da42e7c4b86e9c32e3d242f9",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/build_review_sheets.py",
+      "lines": 35,
+      "bytes": 1902,
+      "sha256": "37aaf28f98f975c007e7562d4005b254be9ac873c78abda78fa189c0f3544742",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/build_service.py",
+      "lines": 57,
+      "bytes": 2895,
+      "sha256": "c3f0c813761769d3dd9f2b79a693485b73610a42845c03356b227f5063426250",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/build_standalone.py",
+      "lines": 102,
+      "bytes": 7763,
+      "sha256": "67cc59f7633383f0e0accd787a2575222682656ec138234c7777c1a03a78fd59",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/commons_info.py",
+      "lines": 19,
+      "bytes": 1029,
+      "sha256": "9a2ab70105c9ada170c60609dc2e83c5ffd02d8c252295e170a02c7e1ccddc87",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/commons_search.py",
+      "lines": 20,
+      "bytes": 1071,
+      "sha256": "fc4f98eb989415ddf9dff8735591c226206a5569bba21040fa909f5ccd04950f",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/composition_audit.py",
+      "lines": 53,
+      "bytes": 5692,
+      "sha256": "24fee2bf51a759180e72c08c7407f74f2cae9e9783c27fc770802f6003da1dae",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/composition_ui_test.py",
+      "lines": 109,
+      "bytes": 16838,
+      "sha256": "79993689e086fc70f4db38894abf721d8e6e8b07e4769363989e24b1c8a2b046",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/control_effect_audit.py",
+      "lines": 97,
+      "bytes": 7521,
+      "sha256": "34fe75ef1d763affe97bfaaa84200156d68e9510f855009b5064992a1a508e20",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/control_ui_test.py",
+      "lines": 89,
+      "bytes": 9500,
+      "sha256": "e43618eda788f9d15869a148b2888d1f6c14378a79d8cd6345350d8d4c7cdefd",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/curate_lpc.py",
+      "lines": 173,
+      "bytes": 11154,
+      "sha256": "034c86ec7d1f56583c4d8eda793050354ed52221f781c849618656471fc5e0bc",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/drag_recovery_test.py",
+      "lines": 177,
+      "bytes": 17893,
+      "sha256": "4765f97ac3a6576903aa1d74abaa71e9d53fbd836cdfe0779f3531757522e989",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/fetch_photos.py",
+      "lines": 53,
+      "bytes": 2806,
+      "sha256": "5ea999f3fbdcc27a27bf174bcee2c8ed49e99c8f990001660b22103f8bafae6a",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/finalize_release_docs.py",
+      "lines": 116,
+      "bytes": 14632,
+      "sha256": "f6a94c4a6f1c27a8133fa3da5f810a52c5c78ad0ff1b93e792ad7bc0a46055fb",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/import_nes_art.py",
+      "lines": 74,
+      "bytes": 7658,
+      "sha256": "b29423b2886d8adc7372fb82587acd1d92272509b358f3c8d2b4f662a330971a",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/layout_audit.py",
+      "lines": 61,
+      "bytes": 3509,
+      "sha256": "ae21badab4d97ce675ebf49448f28c6a5839d155c89c6a85929f855126f03c1c",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/live_http_test.py",
+      "lines": 160,
+      "bytes": 8643,
+      "sha256": "80aed3cf87ed9fa2c0e51f4872f06c4a0ce927cbf83447fcc73a14b2b7de2b5c",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/lpc_bundle.py",
+      "lines": 55,
+      "bytes": 3630,
+      "sha256": "c135761bd367ba960a395b2fa3df229bfbbebd59958384c5a5a0598bf5dde800",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/nes_art_audit.py",
+      "lines": 43,
+      "bytes": 3269,
+      "sha256": "4dd92e0ec073a0082ac4af05d0ce99155538019caa50d6287e2352e564286003",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/nes_ui_test.py",
+      "lines": 57,
+      "bytes": 4709,
+      "sha256": "e4d0d46626c93296cf82237ffcc1939df80498bdccee823f941334fc5e70a1db",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/package.py",
+      "lines": 210,
+      "bytes": 17089,
+      "sha256": "e323b4c69069bde6afd024cb84179d396ca876734fdd5f8226825e7f74790400",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/package_smoke.py",
+      "lines": 117,
+      "bytes": 8007,
+      "sha256": "510c1c433e3eb6e0eaca4664bd25f08ea34096748d5f830c3252e99cca185799",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/prepare_stickers.py",
+      "lines": 38,
+      "bytes": 5356,
+      "sha256": "1d6c2253bc2954f568dd7126750424bba5858099dda7887475d29086d932d699",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/render_gallery.py",
+      "lines": 66,
+      "bytes": 7273,
+      "sha256": "a06f74f892bd49e25717dcf1ea5b3276c34e67867190e507225a02974d65617f",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/runtime_fingerprint.py",
+      "lines": 21,
+      "bytes": 920,
+      "sha256": "04f74a0df220cd1ce7899669852ebb517a002e3a2f00e500aee3a894eaa2ef7b",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/service_expiry_test.py",
+      "lines": 47,
+      "bytes": 3170,
+      "sha256": "f30c38ad9299c7b783f436bed26fef6ee747328c04d5edf8fc3a12507774630f",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/service_launch_test.py",
+      "lines": 103,
+      "bytes": 6636,
+      "sha256": "30c667617d340d0028616862c355542de69e001099695a27c74d9683b1d0b8d1",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/service_ui_test.py",
+      "lines": 99,
+      "bytes": 11797,
+      "sha256": "909d1aebbf2cf7b2965d0984de548dbc84b55c79c2c548665823098df565f38e",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/sprite_to_js.py",
+      "lines": 141,
+      "bytes": 9223,
+      "sha256": "2709566d05fdb292cc1a6e548a9a55bf8b6116200e858b2ef5858b241da7e5ac",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/standalone_ui_test.py",
+      "lines": 139,
+      "bytes": 16252,
+      "sha256": "58a0b15e15a38e2f9eaaa4c8c6f16112818aac2889187d66faa70d62856efd0e",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/stress_http_test.py",
+      "lines": 54,
+      "bytes": 2848,
+      "sha256": "c17798f562913744afc1a7f0212be55a1b596099e7d04cc66ceba11c81292dca",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/ui_test.py",
+      "lines": 196,
+      "bytes": 14491,
+      "sha256": "019723370407a8569ede36d3438e18c454446dfda027b4b8d4e90fdb240ebc34",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "scripts/wm.py",
+      "lines": 53,
+      "bytes": 2449,
+      "sha256": "5b3f882c4dd6bef607c075371f431831436bd8107e4cf270723efbdb4ba96fcc",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "tests/test_composition.py",
+      "lines": 77,
+      "bytes": 8411,
+      "sha256": "29e1648d52de7de64ad68cd79af56d6a908c5e039261c2df20c1ec8f5227514e",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "tests/test_controls.py",
+      "lines": 89,
+      "bytes": 4723,
+      "sha256": "45d84db750c57d6ae2845e0d1ee387370588385918f94f052053a6b629a21dc8",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "tests/test_core.py",
+      "lines": 247,
+      "bytes": 12054,
+      "sha256": "1b4d6d8ed1e764a021ac4081f040b8e0e55adc30e4e1c3585b69bd1d4837f66a",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "tests/test_nes_art.py",
+      "lines": 78,
+      "bytes": 4237,
+      "sha256": "1ad03db540653d48f2b847b8ed8e3d165c2457b8293ad112e3568be87e7dfca9",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "tests/test_standalone.py",
+      "lines": 98,
+      "bytes": 5330,
+      "sha256": "8802a1e1fda6015c12fe45fd7f9980d90ee5c0a03cd300bc7eb66bb2fdf52525",
+      "syntax": "Python AST PASS"
+    },
+    {
+      "path": "service/main.go",
+      "lines": 590,
+      "bytes": 19789,
+      "sha256": "9bc83a5b234cca7c94729df076d7ac62903e1863ed9db015dd1e4391f47ca8a4"
+    },
+    {
+      "path": "service/main_test.go",
+      "lines": 411,
+      "bytes": 12149,
+      "sha256": "ea5f614c1c2ef9d079d94e6fe44d46e1198ad9cb672dd2d593d51fb9a93c0b1c"
+    },
+    {
+      "path": "service/phone_font.go",
+      "lines": 5,
+      "bytes": 45365,
+      "sha256": "6ffc8400a5700a531889857f90a9c558632568e61da860a157ff0340cd84ff4a"
+    },
+    {
+      "path": "service/platform_other.go",
+      "lines": 18,
+      "bytes": 312,
+      "sha256": "09873f279a390c4fc9aae08d5579e2583b6965191005e7ae50b2d9c9cfaf56a5"
+    },
+    {
+      "path": "service/platform_windows.go",
+      "lines": 22,
+      "bytes": 603,
+      "sha256": "7d8aa77db42be5ecb49bf457d1f77252454486bdc0a2553db1c972d25c02007e"
+    }
+  ],
+  "counts": {
+    "files": 84,
+    "lines": 10944,
+    "python": 59,
+    "javascript": 11
+  },
+  "production_html_sha256": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea"
+}

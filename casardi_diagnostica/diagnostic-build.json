@@ -1,0 +1,11 @@
+{
+  "test": "ANDROID-ARENA-A1",
+  "purpose": "Read-only instrumentation for user-device diagnosis, not a bugfix or production release",
+  "baseline_sha256": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea",
+  "diagnostic_sha256": "2806e32423451c4ef7eeb5d37260b645a5ba06a11dba14474c99c5e6447e8992",
+  "diagnostic_file": "Cartolina_Casardi_DIAGNOSTICA_ANDROID_A1.html",
+  "bytes": 24825145,
+  "network": "No added requests",
+  "storage": "RAM only; no visitor name, PNG or transfer token recorded",
+  "changes": "Expose read-only editor readiness and geometry; add passive event trace and on-screen local diagnostic panel; unique filename to distinguish viewer cache."
+}

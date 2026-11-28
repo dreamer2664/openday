@@ -1,0 +1,2168 @@
+{
+  "result": "PASS",
+  "started_at_workspace_utc": "2026-11-28T07:11:30.659224+00:00",
+  "finished_at_workspace_utc": "2026-11-28T07:14:08.469400+00:00",
+  "seconds": 157.81,
+  "scope": "Natural fast drag -> parent deselect -> second touch held >250ms after loading overlay hides. Same preset chosen in production/A1/Canvas, photo/NES, two nested opaque srcdoc. Passive POINTER-only tracing added, source/handlers unchanged; no fault injection. Linux Chromium touch emulation, not physical Android/Arena. Recovery verified with a fresh third contact.",
+  "source_sha256": {
+    "production": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea",
+    "A1": "2806e32423451c4ef7eeb5d37260b645a5ba06a11dba14474c99c5e6447e8992",
+    "Canvas": "a01ca4759b499979e8a9b0591f6b4a007fb11654d874053e0444be3c7b33245e"
+  },
+  "actor_contacts_attempted": 75,
+  "parent_deselect_taps": 25,
+  "rows": [
+    {
+      "variant": "production",
+      "mode": "photo",
+      "trials": [
+        {
+          "trial": 0,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 11,
+            "target": "actor",
+            "loading": false,
+            "at": 20671.89999999944
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 11,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 20671.89999999944
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 20955.599999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 20962.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 20995.5
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21028.599999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21062.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21095.5
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21128.89999999944
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 1,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 15,
+            "target": "actor",
+            "loading": false,
+            "at": 22228.700000000186
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 15,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22228.700000000186
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22505.599999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22512.299999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22545.700000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22578.799999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22612.39999999944
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22645.599999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22678.700000000186
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 2,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 19,
+            "target": "preview-loading",
+            "loading": true,
+            "at": 23765.799999999814
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 19,
+            "hidden_overlay_has_capture": true,
+            "actor_has_capture": false,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": false,
+            "focused": "BODY",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": false,
+          "ghost_visible_after_moves": false,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": true,
+              "at": 23765.799999999814
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24088.89999999944
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24089
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24122.099999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24155.5
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24188.89999999944
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24222.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24255.39999999944
+            }
+          ],
+          "second_started_on_loading": true,
+          "ready_but_stranded_screenshot_sha256": "860d050010059cfa9b7612a899275686fcbd7bb5b8718cb194175c78b09f9549",
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 3,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 23,
+            "target": "preview-loading",
+            "loading": true,
+            "at": 25038.200000000186
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 23,
+            "hidden_overlay_has_capture": true,
+            "actor_has_capture": false,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": false,
+            "focused": "BODY",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": false,
+          "ghost_visible_after_moves": false,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 23,
+              "target": "preview-loading",
+              "loading": true,
+              "at": 25038.200000000186
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 23,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 25688.799999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 25688.89999999944
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 25722.099999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 25755.5
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 25788.89999999944
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 25822.099999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 25855.5
+            }
+          ],
+          "second_started_on_loading": true,
+          "ready_but_stranded_screenshot_sha256": "0ab1b093f48c086ea493771d31b29dc295eb78476ad53774fb06981db6c5fd57",
+          "fresh_third_contact_committed_movement": true
+        }
+      ],
+      "naturally_stranded_second_contacts": 2
+    },
+    {
+      "variant": "production",
+      "mode": "nes",
+      "trials": [
+        {
+          "trial": 0,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 11,
+            "target": "preview-loading",
+            "loading": true,
+            "at": 20217.299999999814
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 11,
+            "hidden_overlay_has_capture": true,
+            "actor_has_capture": false,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": false,
+            "focused": "BODY",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": false,
+          "ghost_visible_after_moves": false,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": true,
+              "at": 20217.299999999814
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 20483.700000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 20483.700000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 20517
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 20550.299999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 20583.60000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 20617
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 20650.200000000186
+            }
+          ],
+          "second_started_on_loading": true,
+          "ready_but_stranded_screenshot_sha256": "1f016ab3e1b4d15e92e9630b371d4ec0540b4c0dde0a23745a992076075237b4",
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 1,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 15,
+            "target": "actor",
+            "loading": false,
+            "at": 21284.700000000186
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 15,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 21284.700000000186
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 21550.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 21551.400000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 21584.900000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 21618.299999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 21651.5
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 21684.900000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 21718.200000000186
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 2,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 19,
+            "target": "actor",
+            "loading": false,
+            "at": 22407.700000000186
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 19,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 22407.700000000186
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 22683.5
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 22684.700000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 22718
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 22751.299999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 22784.60000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 22818
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 22851.299999999814
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 3,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 23,
+            "target": "actor",
+            "loading": false,
+            "at": 23551.60000000056
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 23,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 23551.60000000056
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 23816.799999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 23818
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 23851.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 23884.799999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 23918
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 23951.400000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 23984.900000000373
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 4,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 27,
+            "target": "actor",
+            "loading": false,
+            "at": 24654.10000000056
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 27,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 27,
+              "target": "actor",
+              "loading": false,
+              "at": 24654.10000000056
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 27,
+              "target": "actor",
+              "loading": false,
+              "at": 24933.5
+            },
+            {
+              "type": "pointermove",
+              "id": 27,
+              "target": "actor",
+              "loading": false,
+              "at": 24934.799999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 27,
+              "target": "actor",
+              "loading": false,
+              "at": 24968
+            },
+            {
+              "type": "pointermove",
+              "id": 27,
+              "target": "actor",
+              "loading": false,
+              "at": 25001.299999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 27,
+              "target": "actor",
+              "loading": false,
+              "at": 25034.700000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 27,
+              "target": "actor",
+              "loading": false,
+              "at": 25068
+            },
+            {
+              "type": "pointermove",
+              "id": 27,
+              "target": "actor",
+              "loading": false,
+              "at": 25101.299999999814
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 5,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 31,
+            "target": "actor",
+            "loading": false,
+            "at": 25720.10000000056
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 31,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 31,
+              "target": "actor",
+              "loading": false,
+              "at": 25720.10000000056
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 31,
+              "target": "actor",
+              "loading": false,
+              "at": 26000.10000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 31,
+              "target": "actor",
+              "loading": false,
+              "at": 26001.400000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 31,
+              "target": "actor",
+              "loading": false,
+              "at": 26034.60000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 31,
+              "target": "actor",
+              "loading": false,
+              "at": 26068.10000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 31,
+              "target": "actor",
+              "loading": false,
+              "at": 26101.400000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 31,
+              "target": "actor",
+              "loading": false,
+              "at": 26134.60000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 31,
+              "target": "actor",
+              "loading": false,
+              "at": 26167.900000000373
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 6,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 35,
+            "target": "preview-loading",
+            "loading": true,
+            "at": 26817.200000000186
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 35,
+            "hidden_overlay_has_capture": true,
+            "actor_has_capture": false,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": false,
+            "focused": "BODY",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": false,
+          "ghost_visible_after_moves": false,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 35,
+              "target": "preview-loading",
+              "loading": true,
+              "at": 26817.200000000186
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 35,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 27083.299999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 35,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 27083.299999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 35,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 27116.900000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 35,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 27150.10000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 35,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 27183.60000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 35,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 27216.900000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 35,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 27250.10000000056
+            }
+          ],
+          "second_started_on_loading": true,
+          "ready_but_stranded_screenshot_sha256": "858fd34ed0a2cab6d569db251b8db77fc523e838ea17f9de7f9640c2aa926b87",
+          "fresh_third_contact_committed_movement": true
+        }
+      ],
+      "naturally_stranded_second_contacts": 2
+    },
+    {
+      "variant": "A1",
+      "mode": "photo",
+      "trials": [
+        {
+          "trial": 0,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 11,
+            "target": "preview-loading",
+            "loading": true,
+            "at": 20889.900000000373
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 11,
+            "hidden_overlay_has_capture": true,
+            "actor_has_capture": false,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": false,
+            "focused": "BODY",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": false,
+          "ghost_visible_after_moves": false,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": true,
+              "at": 20889.900000000373
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 21538.10000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 21538.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 21571.60000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 21604.799999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 21638.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 21671.60000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 21704.799999999814
+            }
+          ],
+          "second_started_on_loading": true,
+          "ready_but_stranded_screenshot_sha256": "ecc5997e6acbdb4d44e02ab88f024da6eb7532555c4eb28f95455ece5d50b89b",
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 1,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 15,
+            "target": "actor",
+            "loading": false,
+            "at": 22614
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 15,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22614
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22904.700000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22911.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22944.400000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22977.900000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 23011.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 23044.60000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 23080.900000000373
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 2,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 19,
+            "target": "preview-loading",
+            "loading": true,
+            "at": 24070.60000000056
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 19,
+            "hidden_overlay_has_capture": true,
+            "actor_has_capture": false,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": false,
+            "focused": "BODY",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": false,
+          "ghost_visible_after_moves": false,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": true,
+              "at": 24070.60000000056
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24721.400000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24721.400000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24754.60000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24788
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24821.299999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24854.700000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24888
+            }
+          ],
+          "second_started_on_loading": true,
+          "ready_but_stranded_screenshot_sha256": "cf71e722ca84a4ff1d6d812c93bf88399fd227682d88416d38333bcdcb5cb96e",
+          "fresh_third_contact_committed_movement": true
+        }
+      ],
+      "naturally_stranded_second_contacts": 2
+    },
+    {
+      "variant": "A1",
+      "mode": "nes",
+      "trials": [
+        {
+          "trial": 0,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 11,
+            "target": "preview-loading",
+            "loading": true,
+            "at": 21609.5
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 11,
+            "hidden_overlay_has_capture": true,
+            "actor_has_capture": false,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": false,
+            "focused": "BODY",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": false,
+          "ghost_visible_after_moves": false,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": true,
+              "at": 21609.5
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 21879.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 21879.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 21912.5
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 21945.900000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 21979.099999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 22012.400000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 22045.799999999814
+            }
+          ],
+          "second_started_on_loading": true,
+          "ready_but_stranded_screenshot_sha256": "dc5dc565fdb3855321b8990adcb343c94045e501dbbdc63b55d38e6a1891f45e",
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 1,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 15,
+            "target": "actor",
+            "loading": false,
+            "at": 22617.099999999627
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 15,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22617.099999999627
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22895.799999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22897
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22930.099999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22963.5
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22996.900000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 23030.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 23063.700000000186
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 2,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 19,
+            "target": "preview-loading",
+            "loading": true,
+            "at": 23717.900000000373
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 19,
+            "hidden_overlay_has_capture": true,
+            "actor_has_capture": false,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": false,
+            "focused": "BODY",
+            "focus_visible": false,
+            "outline": "3px none rgb(246, 239, 217)",
+            "background": "rgba(0, 0, 0, 0)"
+          },
+          "second_model_proxy_moved": false,
+          "ghost_visible_after_moves": false,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": true,
+              "at": 23717.900000000373
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24012.5
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24012.5
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24045.799999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24079.099999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24112.400000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24145.700000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "preview-loading",
+              "loading": false,
+              "at": 24179
+            }
+          ],
+          "second_started_on_loading": true,
+          "ready_but_stranded_screenshot_sha256": "587fbdc66b2acdb980d98d450e50f620f9a9cd55a2ab20870cb5e044ff0b11b4",
+          "fresh_third_contact_committed_movement": true
+        }
+      ],
+      "naturally_stranded_second_contacts": 2
+    },
+    {
+      "variant": "Canvas",
+      "mode": "photo",
+      "trials": [
+        {
+          "trial": 0,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 11,
+            "target": "actor",
+            "loading": false,
+            "at": 21194.5
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 11,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "1px dashed rgb(162, 246, 225)",
+            "background": "rgba(162, 246, 225, 0.03)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21194.5
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21474.10000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21474.400000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21507.700000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21541.10000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21574.299999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21608
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21640.900000000373
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 1,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 15,
+            "target": "actor",
+            "loading": false,
+            "at": 22260.5
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 15,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "1px dashed rgb(162, 246, 225)",
+            "background": "rgba(162, 246, 225, 0.03)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22260.5
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22540.700000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22540.900000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22574.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22607.60000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22640.900000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22674.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22707.799999999814
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 2,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 19,
+            "target": "actor",
+            "loading": false,
+            "at": 23310.10000000056
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 19,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "1px dashed rgb(162, 246, 225)",
+            "background": "rgba(162, 246, 225, 0.03)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23310.10000000056
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23590.700000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23590.900000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23624.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23657.5
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23691
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23724.10000000056
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23757.5
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 3,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 23,
+            "target": "actor",
+            "loading": false,
+            "at": 24394
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 23,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "1px dashed rgb(162, 246, 225)",
+            "background": "rgba(162, 246, 225, 0.03)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24394
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24673.900000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24674.200000000186
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24707.400000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24740.900000000373
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24774.299999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24807.5
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24841.10000000056
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        }
+      ],
+      "naturally_stranded_second_contacts": 0
+    },
+    {
+      "variant": "Canvas",
+      "mode": "nes",
+      "trials": [
+        {
+          "trial": 0,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 11,
+            "target": "actor",
+            "loading": false,
+            "at": 21186.099999999627
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 11,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "1px dashed rgb(162, 246, 225)",
+            "background": "rgba(162, 246, 225, 0.03)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21186.099999999627
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21458.799999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21459.099999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21492.299999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21525.799999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21559
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21592.299999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 11,
+              "target": "actor",
+              "loading": false,
+              "at": 21625.699999999255
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 1,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 15,
+            "target": "actor",
+            "loading": false,
+            "at": 22137.299999999814
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 15,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "1px dashed rgb(162, 246, 225)",
+            "background": "rgba(162, 246, 225, 0.03)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22137.299999999814
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22408.699999999255
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22409
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22442.299999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22478.5
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22509
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22542.39999999944
+            },
+            {
+              "type": "pointermove",
+              "id": 15,
+              "target": "actor",
+              "loading": false,
+              "at": 22575.799999999814
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 2,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 19,
+            "target": "actor",
+            "loading": false,
+            "at": 23093.799999999814
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 19,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": true,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "1px dashed rgb(162, 246, 225)",
+            "background": "rgba(162, 246, 225, 0.03)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23093.799999999814
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23375.39999999944
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23375.599999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23408.89999999944
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23442.199999999255
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23475.5
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23508.799999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 19,
+              "target": "actor",
+              "loading": false,
+              "at": 23542.199999999255
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        },
+        {
+          "trial": 3,
+          "second_down": {
+            "type": "pointerdown",
+            "id": 23,
+            "target": "actor",
+            "loading": false,
+            "at": 24045.299999999814
+          },
+          "state_after_250ms_while_held": {
+            "pointer_id": 23,
+            "hidden_overlay_has_capture": false,
+            "actor_has_capture": true,
+            "overlay_hidden": true,
+            "export_enabled": false,
+            "ghost_visible": true,
+            "focused": "actor",
+            "focus_visible": false,
+            "outline": "1px dashed rgb(162, 246, 225)",
+            "background": "rgba(162, 246, 225, 0.03)"
+          },
+          "second_model_proxy_moved": true,
+          "ghost_visible_after_moves": true,
+          "second_contact_sequence": [
+            {
+              "type": "pointerdown",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24045.299999999814
+            },
+            {
+              "type": "gotpointercapture",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24308.599999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24308.799999999814
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24342.099999999627
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24375.39999999944
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24408.699999999255
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24442.199999999255
+            },
+            {
+              "type": "pointermove",
+              "id": 23,
+              "target": "actor",
+              "loading": false,
+              "at": 24475.39999999944
+            }
+          ],
+          "second_started_on_loading": false,
+          "fresh_third_contact_committed_movement": true
+        }
+      ],
+      "naturally_stranded_second_contacts": 0
+    }
+  ],
+  "errors": [],
+  "failure": null
+}

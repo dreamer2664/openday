@@ -1,0 +1,148 @@
+--- a/browser/layout-editor.js
++++ b/browser/layout-editor.js
+@@ -11,7 +11,9 @@
+   let meta=null,urls=null,active='actor',drag=null,busy=false,rendering=false,history=[];
+   const nodes=new Map(),get=()=>cfg.getComposition()||defaults();
+   const el=(tag,attrs={},...kids)=>{const e=document.createElement(tag);for(const[k,v]of Object.entries(attrs)){if(k==='class')e.className=v;else if(k.startsWith('on'))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v);}for(const kid of kids)if(kid!==null)e.append(kid.nodeType?kid:document.createTextNode(String(kid)));return e;};
+-  const overlay=el('div',{class:'composition-overlay','aria-label':'Elementi della cartolina'}),ghost=el('img',{class:'composition-ghost',alt:'',draggable:'false'});ghost.hidden=true;overlay.append(ghost);wrap.append(overlay);wrap.classList.add('editable-card');
++  const overlay=el('div',{class:'composition-overlay','aria-label':'Elementi della cartolina'});
++  let ghost=el(cfg.canvasPreview?'canvas':'img',{class:'composition-ghost',alt:'',draggable:'false'}),cleanLayer=cfg.canvasPreview?el('canvas',{class:'composition-clean','aria-hidden':'true'}):null;
++  ghost.hidden=true;if(cleanLayer){cleanLayer.hidden=true;overlay.append(cleanLayer);}overlay.append(ghost);wrap.append(overlay);wrap.classList.add('editable-card');
+   const status=el('p',{class:'editor-status',role:'status','aria-live':'polite'},'Nessuna decorazione selezionata. Tutto facoltativo.');
+   const undo=el('button',{type:'button',class:'editor-small',onclick:()=>{if(!history.length||busy)return;const before=history.pop();active='actor';cfg.onChange(before,{render:true,reason:'undo'});draw();controls();}},'↶ Annulla'),clear=el('button',{type:'button',class:'editor-small',onclick:()=>{if(busy)return;change(defaults(),true,'clear');active='actor';draw();controls();}},'Ripristina composizione');
+   const fieldset=el('fieldset',{class:'editor-fields'});root.classList.add('composition-panel');root.append(el('div',{class:'editor-heading'},el('div',{},el('p',{class:'editor-kicker'},'ULTIMI TOCCHI · FACOLTATIVI'),el('h3',{},'Falla ancora più tua.')),el('div',{class:'editor-history'},undo,clear)),el('p',{class:'editor-help'},'Trascina il personaggio con il mouse o con un dito. Il companion lo segue. Puoi anche selezionare un elemento e usare le frecce; Maiusc + freccia lo sposta più velocemente.'),fieldset,status);
+@@ -59,11 +61,12 @@
+    }
+   }
+   function actorPoint(x,y){const rel={left:meta.group.x-meta.actor.x,right:meta.group.x+meta.group.w-meta.actor.x,top:meta.group.y-meta.actor.y};return{x:Math.round(clamp(x,12-rel.left,588-rel.right)),y:Math.round(clamp(y,12-rel.top,388)),scale:get().actor?.scale??100};}
+-  function showGhost(delta){if(!urls)return;image.src=urls.clean;ghost.src=urls.ghost;ghost.hidden=false;rect(ghost,{...meta.ghost,x:meta.ghost.x+delta.x,y:meta.ghost.y+delta.y});}
+-  function restoreImage(){ghost.hidden=true;if(urls){image.src=urls.main;delete urls.pendingDelta;}}
++  function showGhost(delta){if(!urls)return;if(cfg.canvasPreview){cleanLayer.hidden=false;image.style.visibility='hidden';ghost.hidden=false;}else if(ghost.hidden){image.src=urls.clean;ghost.src=urls.ghost;ghost.hidden=false;}rect(ghost,{...meta.ghost,x:meta.ghost.x+delta.x,y:meta.ghost.y+delta.y});}
++  function restoreImage(){ghost.hidden=true;if(cfg.canvasPreview){cleanLayer.hidden=true;image.style.visibility='';}if(urls){if(!cfg.canvasPreview)image.src=urls.main;delete urls.pendingDelta;}}
++  function restoreBefore(d){if(cfg.canvasPreview&&d.priorDelta){urls.pendingDelta=d.priorDelta;showGhost(d.priorDelta);return true;}restoreImage();return false;}
+   function position(e){const r=image.getBoundingClientRect();return{x:(e.clientX-r.left)*600/r.width,y:(e.clientY-r.top)*400/r.height};}
+   overlay.addEventListener('pointerdown',e=>{
+-   const target=e.target.closest('[data-drag]');if(!target||busy||rendering||!meta||drag||e.pointerType==='mouse'&&e.button!==0)return;e.preventDefault();target.focus({preventScroll:true});const key=target.dataset.drag;active=key==='actor'?'actor':Number(key);const c=get();drag={kind:key,id:e.pointerId,target,start:position(e),before:copy(c),origin:key==='actor'?{x:meta.actor.x,y:meta.actor.y}:{x:geom(c.stickers[Number(key)]).cx,y:geom(c.stickers[Number(key)]).cy},delta:{x:0,y:0},moved:false,captured:false};try{target.setPointerCapture(e.pointerId);drag.captured=true;}catch(_){}if(key==='actor')showGhost(drag.delta);draw();controls();
++   const target=e.target.closest('[data-drag]');if(!target||busy||rendering||!meta||drag||e.pointerType==='mouse'&&e.button!==0)return;e.preventDefault();cfg.onInteractionStart?.();target.focus({preventScroll:true});const key=target.dataset.drag;active=key==='actor'?'actor':Number(key);const c=get(),priorDelta=cfg.canvasPreview&&urls?.pendingDelta?{...urls.pendingDelta}:null,delta=priorDelta||{x:0,y:0};drag={kind:key,id:e.pointerId,target,start:position(e),before:copy(c),priorDelta,origin:key==='actor'?{x:meta.actor.x+delta.x,y:meta.actor.y+delta.y}:{x:geom(c.stickers[Number(key)]).cx,y:geom(c.stickers[Number(key)]).cy},delta:{...delta},moved:false,captured:false};try{target.setPointerCapture(e.pointerId);drag.captured=true;}catch(_){}if(key==='actor')showGhost(drag.delta);draw();controls();
+   });
+   // Listen on the window as well as using pointer capture: a release outside
+   // the postcard must always settle the gesture, even if capture is unavailable.
+@@ -73,10 +76,10 @@
+    else{const s=c.stickers[Number(drag.kind)];if(!s){end(true);return;}s.x=Math.round(clamp(drag.origin.x+dx,0,600));s.y=Math.round(clamp(drag.origin.y+dy,0,400));const g=geom(s);s.x=Math.round(g.cx);s.y=Math.round(g.cy);}
+    cfg.onChange(c,{render:false,reason:'drag'});draw();
+   },{capture:true,passive:false});
+-  function end(cancel=false){if(!drag)return;const d=drag;drag=null;try{d.target.releasePointerCapture(d.id);}catch(_){}
+-   if(cancel){cfg.onChange(d.before,{render:false,reason:'cancel'});restoreImage();}
+-   else if(d.moved){push(d.before);if(d.kind==='actor'){urls.pendingDelta=d.delta;rendering=true;cfg.onChange(copy(get()),{render:true,reason:'actor'});}}
+-   else restoreImage();draw();controls();
++  function end(cancel=false,quiet=false){if(!drag)return;const d=drag;drag=null;try{d.target.releasePointerCapture(d.id);}catch(_){}
++   if(cancel){const pending=restoreBefore(d);cfg.onChange(d.before,{render:pending&&!quiet,reason:pending?'settle':'cancel'});}
++   else if(d.moved){push(d.before);if(d.kind==='actor'){urls.pendingDelta=d.delta;if(!cfg.canvasPreview)rendering=true;cfg.onChange(copy(get()),{render:true,reason:'actor'});}else if(cfg.canvasPreview&&d.priorDelta)cfg.onChange(copy(get()),{render:true,reason:'settle'});}
++   else {const pending=restoreBefore(d);if(pending)cfg.onChange(copy(get()),{render:true,reason:'settle'});}draw();controls();
+   }
+   // Every termination path is idempotent. In 3.3 only up/cancel on the
+   // overlay cleared `drag`: lost capture left it permanently occupied, thereby
+@@ -104,10 +107,21 @@
+   controls();
+   return{
+    async setPreview(data){if(drag)end(true);meta=data.meta;urls={main:data.image,clean:data.clean,ghost:data.ghost};image.src=data.image;rendering=false;ghost.hidden=true;draw();controls();},
+-   setRendering(value=true){if(value&&drag)end(true);rendering=value;},
+-   setBusy(value){if(value&&drag)end(true);busy=value;fieldset.disabled=value;root.classList.toggle('editor-busy',value);undo.disabled=value||!history.length;clear.disabled=value;draw();},
+-   failed(){rendering=false;restoreImage();draw();},
+-   reset(){if(drag)end(true);meta=null;urls=null;history=[];active='actor';ghost.hidden=true;ghost.removeAttribute('src');for(const n of nodes.values())n.remove();nodes.clear();rendering=false;busy=false;fieldset.disabled=false;controls();},
++   setCanvasPreview(card){
++    if(!cfg.canvasPreview||drag)return false;
++    const parts=card.editor;if(!parts?.clean||!parts?.ghost)throw new Error('Livelli Canvas dell’anteprima mancanti.');
++    // Synchronous commit: all pixels already exist. No image.src/decode barrier.
++    image.width=card.width;image.height=card.height;image.getContext('2d').drawImage(card,0,0);
++    const oldClean=cleanLayer,oldGhost=ghost;cleanLayer=parts.clean;ghost=parts.ghost;
++    cleanLayer.className='composition-clean';cleanLayer.setAttribute('aria-hidden','true');cleanLayer.hidden=true;
++    ghost.className='composition-ghost';ghost.setAttribute('aria-hidden','true');ghost.hidden=true;
++    oldClean.replaceWith(cleanLayer);oldGhost.replaceWith(ghost);cfg.dispose(oldClean);cfg.dispose(oldGhost);
++    meta=parts.meta;urls={canvas:true};delete card.editor;image.style.visibility='';rendering=false;draw();controls();return true;
++   },
++   setRendering(value=true){if(value&&drag)end(true,true);rendering=value;},
++   setBusy(value){if(value&&drag)end(true,true);busy=value;fieldset.disabled=value;root.classList.toggle('editor-busy',value);undo.disabled=value||!history.length;clear.disabled=value;draw();},
++   failed(){rendering=false;if(cfg.canvasPreview&&urls?.pendingDelta)showGhost(urls.pendingDelta);else restoreImage();draw();},
++   reset(){if(drag)end(true,true);meta=null;urls=null;history=[];active='actor';ghost.hidden=true;ghost.removeAttribute('src');if(cfg.canvasPreview){cfg.dispose(cleanLayer);cfg.dispose(ghost);cleanLayer.hidden=true;image.style.visibility='';image.width=1;image.height=1;}for(const n of nodes.values())n.remove();nodes.clear();rendering=false;busy=false;fieldset.disabled=false;controls();},
+    refresh(){draw();controls();}
+   };
+  }
+--- a/browser/app.js
++++ b/browser/app.js
+@@ -11,7 +11,7 @@
+  const faceFields=['hair','face','beard','hat','glasses','expression','eye_shape','brows','nose','mouth'];
+  const titles=['Stile','Luogo','Nome','Personaggio','Companion','Anteprima'];
+  const notes=['Scegli uno stile per iniziare.','Dodici luoghi, lo stesso stile.','Il nome è facoltativo.','Le scelte coperte sono spiegate, non simulate.','Anche nessun animale va benissimo.','PNG locale · Nessun caricamento online.'];
+- let previewController=null,exportController=null,previewURL=null,fileURL=null,creditsURL=null,liveOpen=null,liveClosed=null,liveTicket=0,toastTimer=null;
++ let previewController=null,previewInteractive=false,exportController=null,previewURL=null,fileURL=null,creditsURL=null,liveOpen=null,liveClosed=null,liveTicket=0,toastTimer=null;
+  const release=u=>{if(u)URL.revokeObjectURL(u);};
+  function el(tag,attrs={},...children){const n=document.createElement(tag);for(const[k,v]of Object.entries(attrs)){if(k==='class')n.className=v;else if(k.startsWith('on'))n.addEventListener(k.slice(2),v);else if(v!==null&&v!==undefined)n.setAttribute(k,v);}for(const c of children)if(c!==null&&c!==undefined)n.append(c.nodeType?c:document.createTextNode(String(c)));return n;}
+  function notice(text,error=false){clearTimeout(toastTimer);$('#toast span').textContent=text;$('#toast').classList.toggle('error',error);$('#toast').hidden=false;if(!error)toastTimer=setTimeout(()=>$('#toast').hidden=true,8000);}
+@@ -86,12 +86,17 @@
+    const list=el('div',{class:'variant-options'});for(const v of values){const b=el('button',{class:'option','data-comp-field':key,'data-value':v.id,onclick:()=>{changed();state.companion[key]=v.id;companionOptions();live();$('#companion-options [data-comp-field="'+key+'"][data-value="'+v.id+'"]').focus({preventScroll:true});}},v.hex?el('span',{class:'color-dot',style:'background:'+v.hex}):null,v.label);selected(b,state.companion[key]===v.id);list.append(b);}box.append(group(title,list));
+   }
+  }
+- const editor=CasardiEditor.mount({root:$('#composition-panel'),wrap:$('.preview-wrap'),image:$('#final-preview'),stickers:O.stickers,getComposition:()=>state.composition,getMode:()=>state.mode,imageFor:id=>PORTABLE.stickerImages[id][state.mode],notify:notice,onChange:(composition,{render})=>{if(state.busy)return;state.composition=composition;changed();if(render){$('#export').disabled=true;preview();}}});
+- async function preview(){
+-  editor.setRendering();previewController?.abort();const ctl=previewController=new AbortController(),epoch=state.epoch;$('#preview-loading').hidden=false;$('#export').disabled=true;
+-  let c=null;try{c=await R.compose(job(),matchMedia('(max-width: 760px)').matches?900:1200,{signal:ctl.signal,editor:true});if(epoch!==state.epoch||ctl.signal.aborted)return;const data={image:c.toDataURL('image/png'),clean:c.editor.clean.toDataURL('image/png'),ghost:c.editor.ghost.toDataURL('image/png'),meta:c.editor.meta};const image=$('#final-preview');image.src=data.image;await image.decode();if(epoch!==state.epoch||ctl.signal.aborted)return;await editor.setPreview(data);$('#export').disabled=false;}
+-  catch(e){if(previewController===ctl&&epoch===state.epoch&&!ctl.signal.aborted){editor.failed();notice(e.name==='AbortError'?'Anteprima interrotta. Puoi continuare a modificare la composizione o tornare indietro e riprovare.':e.message||'Anteprima non riuscita. Riprova o chiudi altre schede per liberare memoria.',true);}}
+-  finally{R.dispose(c);if(previewController===ctl&&epoch===state.epoch){editor.setRendering(false);$('#preview-loading').hidden=true;}}
++ const editor=CasardiEditor.mount({root:$('#composition-panel'),wrap:$('.preview-wrap'),image:$('#final-preview'),canvasPreview:true,dispose:R.dispose,onInteractionStart:()=>{if(previewInteractive)stopPreview();},stickers:O.stickers,getComposition:()=>state.composition,getMode:()=>state.mode,imageFor:id=>PORTABLE.stickerImages[id][state.mode],notify:notice,onChange:(composition,{render,reason})=>{if(state.busy)return;state.composition=composition;changed();if(render){$('#export').disabled=true;preview({interactive:reason==='actor'||reason==='settle'});}}});
++ function stopPreview(){previewController?.abort();previewController=null;previewInteractive=false;editor.setRendering(false);$('#preview-loading').hidden=true;$('.preview-wrap').setAttribute('aria-busy','false');}
++ async function preview({interactive=false}={}){
++  previewController?.abort();previewInteractive=interactive;editor.setRendering(!interactive);
++  const ctl=previewController=new AbortController(),epoch=state.epoch;$('#preview-loading').hidden=interactive;$('#export').disabled=true;$('.preview-wrap').setAttribute('aria-busy','true');
++  let c=null;try{
++   c=await R.compose(job(),matchMedia('(max-width: 760px)').matches?900:1200,{signal:ctl.signal,editor:true});
++   if(previewController!==ctl||epoch!==state.epoch||ctl.signal.aborted)return;
++   if(editor.setCanvasPreview(c))$('#export').disabled=false;
++  }catch(e){if(previewController===ctl&&epoch===state.epoch&&!ctl.signal.aborted){editor.failed();notice(e.message||'Anteprima non riuscita. Riprova o chiudi altre schede per liberare memoria.',true);}}
++  finally{R.dispose(c);if(previewController===ctl&&epoch===state.epoch){previewController=null;previewInteractive=false;editor.setRendering(false);$('#preview-loading').hidden=true;$('.preview-wrap').setAttribute('aria-busy','false');}}
+  }
+  function show(n){
+   if(!state.ready)return;if(state.busy){notice('Attendi il PNG oppure usa Ricomincia per annullare.');return;}if(n>0&&!state.styleChosen)return;if(n>state.highest+1)return;
+@@ -99,11 +104,11 @@
+   $$('.pane').forEach(p=>p.hidden=Number(p.dataset.pane)!==state.step);
+   $$('.steps button').forEach(b=>{const i=Number(b.dataset.step);b.disabled=i>state.highest+1||i>0&&!state.styleChosen;b.classList.toggle('current',i===state.step);b.classList.toggle('done',i<state.step);if(i===state.step)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
+   $('#step-kicker').textContent='PASSAGGIO '+(state.step+1)+' DI 6 · '+titles[state.step].toLocaleUpperCase('it');$('#prev').disabled=state.step===0;$('#next').hidden=state.step===5;$('#next').disabled=state.step===0&&!state.styleChosen;$('#navigation-note').textContent=notes[state.step];
+-  if(state.step===3)creator();if(state.step===5){if(!state.file)preview();}else{previewController?.abort();}
++  if(state.step===3)creator();if(state.step===5){if(!state.file)preview();}else{stopPreview();}
+   window.scrollTo({top:0,behavior:'instant'});$('#main-content').focus({preventScroll:true});
+  }
+  $('#start').addEventListener('click',()=>{if(!state.ready)return;state.visited=true;$('#welcome').hidden=true;$('#studio').hidden=false;show(state.step);});
+- $('#brand-home').addEventListener('click',e=>{e.preventDefault();if(state.busy){notice('Attendi il PNG oppure usa Ricomincia per annullare.');return;}previewController?.abort();$('#studio').hidden=true;$('#welcome').hidden=false;$('#start').firstChild.textContent='Continua ';window.scrollTo({top:0,behavior:'instant'});});
++ $('#brand-home').addEventListener('click',e=>{e.preventDefault();if(state.busy){notice('Attendi il PNG oppure usa Ricomincia per annullare.');return;}stopPreview();$('#studio').hidden=true;$('#welcome').hidden=false;$('#start').firstChild.textContent='Continua ';window.scrollTo({top:0,behavior:'instant'});});
+  $$('.steps button').forEach(b=>b.addEventListener('click',()=>show(Number(b.dataset.step))));$('#prev').addEventListener('click',()=>show(state.step-1));$('#next').addEventListener('click',()=>show(state.step+1));$('#edit').addEventListener('click',()=>show(3));
+  $$('[data-mode]').forEach(b=>b.addEventListener('click',()=>{changed();state.mode=b.dataset.mode;state.styleChosen=true;mode();scenes();animals();live();show(1);}));
+  $('#nickname').addEventListener('input',e=>{state.name=R.cleanName(e.target.value);if(Array.from(e.target.value).length>28)e.target.value=state.name;changed();});
+@@ -120,7 +125,7 @@
+  });
+  $('#share').addEventListener('click',async()=>{if(!state.file)return;try{await navigator.share({files:[state.file],title:'Cartolina Casardi · Open Day 2026/27'});}catch(e){if(e.name!=='AbortError')notice('Condivisione non disponibile. Usa Scarica PNG oppure Apri l’immagine.',true);}});
+  function reset(){
+-  ++state.epoch;previewController?.abort();exportController?.abort();state.busy=false;discardFile(false);CasardiBridge.clear(true);release(previewURL);previewURL=null;editor.reset();R.clear();
++  ++state.epoch;stopPreview();exportController?.abort();state.busy=false;discardFile(false);CasardiBridge.clear(true);release(previewURL);previewURL=null;editor.reset();R.clear();
+   Object.assign(state,{mode:'photo',styleChosen:false,scene:'casardi',name:'',character:{...O.defaults.character},companion:null,composition:CasardiEditor.defaults(),tab:'body',step:0,highest:0,visited:false});++liveTicket;
+   $('#nickname').value='';$('#final-preview').removeAttribute('src');$('#export-progress').hidden=true;$('#progress').value=0;$('#export').disabled=true;$('#export').innerHTML='Genera PNG 3000 × 2000 <span aria-hidden="true">↓</span>';$('#studio').hidden=true;$('#welcome').hidden=false;$('#start').firstChild.textContent='Inizia ';$('#toast').hidden=true;mode();scenes();animals();companionOptions();live();window.scrollTo({top:0,behavior:'instant'});$('#start').focus({preventScroll:true});
+  }
+--- a/browser/layout-editor.css
++++ b/browser/layout-editor.css
+@@ -52,3 +52,6 @@
+ @media print{.composition-panel,.composition-overlay{display:none!important}}
+ 
+ .editable-card .composition-overlay button.card-sticker::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:100%;height:100%;min-width:44px;min-height:44px;background:transparent}
++
++.editable-card .composition-clean{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none;z-index:-1}
++.editable-card .composition-clean[hidden]{display:none!important}
+--- a/browser/interface.html
++++ b/browser/interface.html
+@@ -86,7 +86,7 @@
+    </section>
+    <section class="pane" data-pane="5" hidden>
+     <h2>La tua cartolina.</h2><p class="sub">Sposta il personaggio sulla cartolina. Se vuoi, aggiungi gli ultimi tocchi qui sotto, poi genera il PNG HD.</p>
+-    <div class="preview-wrap"><img id="final-preview" alt="Anteprima completa della cartolina"><div class="loading" id="preview-loading" hidden><span class="spinner" aria-hidden="true"></span><span>Composizione dell’anteprima…</span></div></div>
++    <div class="preview-wrap"><canvas id="final-preview" role="img" aria-label="Anteprima completa della cartolina">Anteprima completa della cartolina</canvas><div class="loading" id="preview-loading" hidden><span class="spinner" aria-hidden="true"></span><span>Composizione dell’anteprima…</span></div></div>
+     <div id="composition-panel"></div>
+     <div class="preview-actions"><button class="secondary" id="edit">Modifica</button><button class="primary" id="export" disabled>Genera PNG 3000 × 2000 <span aria-hidden="true">↓</span></button></div>
+     <div id="export-progress" class="export-progress" role="status" hidden><label for="progress">Generazione locale del PNG…</label><progress id="progress" max="1" value="0"></progress><p>Non chiudere la pagina. Puoi annullare con Ricomincia.</p></div>

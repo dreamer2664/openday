@@ -1,0 +1,218 @@
+PASS photo/touch: three actor gestures while old previews pending; late completion discarded; undo exact
+PASS photo/touch: stationary tap during pending preview settles instead of stranding export
+PASS photo/touch: cancel rolls back only second in-flight gesture, retains first edit/history
+PASS photo/touch: sticker gesture during actor preview retains both edits, settles, undo exact
+PASS photo/touch: five capture/lifecycle cancellations, then real movement and exact undo
+PASS photo/touch: current render error leaves actor usable, visible pending position and history intact
+PASS photo/touch: 12 touch/mouse stress edits; no preview PNG encode, image decode or src mutation
+Traceback (most recent call last):
+  File "/home/user/.cache/casardi-rootcause/canvas_race_qa.py", line 95, in main
+    await p.locator('#export').click();await expect(p.locator('#result')).to_be_visible(timeout=60000)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/playwright/async_api/_generated.py", line 11036, in click
+    await self._impl_obj.click(
+    ...<11 lines>...
+    )
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/locator.py", line 222, in click
+    return await self._frame.click(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/frame.py", line 587, in click
+    return await self._channel.click(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py", line 387, in finish
+    raise e from None
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py", line 352, in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/utils/zones.py", line 58, in run_async
+    return await func()
+           ^^^^^^^^^^^^
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#export")
+    - locator resolved to <button id="export" class="primary">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div id="toast" role="status" aria-live="polite" class="toast error">…</div> intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <footer class="navigation">…</footer> intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div id="toast" role="status" aria-live="polite" class="toast error">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    14 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div id="toast" role="status" aria-live="polite" class="toast error">…</div> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+       - waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <footer class="navigation">…</footer> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+       - waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div id="toast" role="status" aria-live="polite" class="toast error">…</div> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+       - waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div id="toast" role="status" aria-live="polite" class="toast error">…</div> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div id="toast" role="status" aria-live="polite" class="toast error">…</div> intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <footer class="navigation">…</footer> intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+
+DONE FAIL 7 checks 32 gestures 0 HD files
+Traceback (most recent call last):
+  File "/home/user/.cache/casardi-rootcause/canvas_race_qa.py", line 116, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "/usr/local/lib/python3.13/asyncio/runners.py", line 196, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/asyncio/runners.py", line 119, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 726, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/user/.cache/casardi-rootcause/canvas_race_qa.py", line 115, in main
+    if failure:raise RuntimeError(failure)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Traceback (most recent call last):
+  File "/home/user/.cache/casardi-rootcause/canvas_race_qa.py", line 95, in main
+    await p.locator('#export').click();await expect(p.locator('#result')).to_be_visible(timeout=60000)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/playwright/async_api/_generated.py", line 11036, in click
+    await self._impl_obj.click(
+    ...<11 lines>...
+    )
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/locator.py", line 222, in click
+    return await self._frame.click(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/frame.py", line 587, in click
+    return await self._channel.click(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<13 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py", line 387, in finish
+    raise e from None
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py", line 352, in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/utils/zones.py", line 58, in run_async
+    return await func()
+           ^^^^^^^^^^^^
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#export")
+    - locator resolved to <button id="export" class="primary">…</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div id="toast" role="status" aria-live="polite" class="toast error">…</div> intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <footer class="navigation">…</footer> intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div id="toast" role="status" aria-live="polite" class="toast error">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    14 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div id="toast" role="status" aria-live="polite" class="toast error">…</div> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+       - waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <footer class="navigation">…</footer> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+       - waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div id="toast" role="status" aria-live="polite" class="toast error">…</div> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+       - waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <div id="toast" role="status" aria-live="polite" class="toast error">…</div> intercepts pointer events
+     - retrying click action
+       - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div id="toast" role="status" aria-live="polite" class="toast error">…</div> intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <footer class="navigation">…</footer> intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+

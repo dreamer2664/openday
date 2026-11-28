@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "executed_at_workspace_utc": "2026-11-28T07:17:12.864432+00:00",
+  "generated_font_bytes": 33884,
+  "sha256": "8fdef2c154c718da88681041141e6353cf1639b91308fe7496f79d7dc5a406a9",
+  "generator_byte_equal": true,
+  "embedded_in_production_html": true,
+  "internal_names": [
+    "Casardi Pixel",
+    "Casardi Pixel",
+    "CasardiPixel"
+  ],
+  "glyph_count": 602,
+  "unicode_points": 597
+}

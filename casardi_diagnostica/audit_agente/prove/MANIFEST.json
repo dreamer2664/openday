@@ -1,0 +1,848 @@
+{
+  "created_at_workspace_utc": "2026-11-28T07:19:05.256823+00:00",
+  "production_commit": "1b627eeb721826bf9b628753e81fa8c2b1088ad9",
+  "production_zip_sha256": "9fb4a649948ded763cb3436d3b82b12f58f196f8429e65abbd8dfe18bdf5a12f",
+  "manifest_covers": "Every archive member other than MANIFEST.json itself",
+  "entries": [
+    {
+      "path": "SCOPE.md",
+      "bytes": 236,
+      "sha256": "80cb7aa099401ace81f28c156ebc51c739436f85c9a6d4221d840fb9038582f9"
+    },
+    {
+      "path": "capture-index.json",
+      "bytes": 4192,
+      "sha256": "7575008920ad639b7210ec669fcdfce48a14fa9925362ef5551b2d4107a228d7"
+    },
+    {
+      "path": "date-provenance.json",
+      "bytes": 17061,
+      "sha256": "5184f89c314b9d0fb30baea40b02273a1b3751d26758c76496bca089aedaf068"
+    },
+    {
+      "path": "experimental_non_release/canvas/browser/app.js",
+      "bytes": 25166,
+      "sha256": "2088386c02711a49bf513a6644bd29e1f4daf90dbb48fcc6ebe461b8f0910fa5"
+    },
+    {
+      "path": "experimental_non_release/canvas/browser/interface.html",
+      "bytes": 21297,
+      "sha256": "dc6a2f5ec2609e61bf9b92953a6d50d58272c4c9f8c47628321f1286b00c731a"
+    },
+    {
+      "path": "experimental_non_release/canvas/browser/layout-editor.css",
+      "bytes": 7992,
+      "sha256": "27ed7f000183641a496fb01de281678351380c26953f74f5c35dc0696ab407eb"
+    },
+    {
+      "path": "experimental_non_release/canvas/browser/layout-editor.js",
+      "bytes": 19561,
+      "sha256": "67e8742c9e4a3640c1e1ba9a6dd760a2c1a597a24d199c634b06075908303123"
+    },
+    {
+      "path": "experimental_non_release/canvas/canvas-preview-experiment.patch",
+      "bytes": 20995,
+      "sha256": "bff9616d919593d1387b8ddca4e55ccb874446d4d409661ac55a0bb90a9689a7"
+    },
+    {
+      "path": "experimental_non_release/canvas/experiment-build.json",
+      "bytes": 512,
+      "sha256": "ff4dae10d8970c1a1efe92737d475926e4cd0ef9ab6426d4ba26f5dfb2a81eca"
+    },
+    {
+      "path": "experimental_non_release/http/kiosk-ownership-candidate.js",
+      "bytes": 29776,
+      "sha256": "404092dba58d07995120de7fe76b2fc6fad40f2ee9dab48ede72fc21f0d0ae10"
+    },
+    {
+      "path": "experimental_non_release/http/kiosk-ownership-candidate.patch",
+      "bytes": 829,
+      "sha256": "49483d5dde01e804d4e5eaa33d3a0470b42306759517b9d73b2ee4caaa8a0a8c"
+    },
+    {
+      "path": "go-unit-audit-summary.json",
+      "bytes": 1470,
+      "sha256": "e6daf8f508ba9fd6c2964f75797d2f1a887fbece1ec565683f458b1d827925be"
+    },
+    {
+      "path": "harness-adaptations.json",
+      "bytes": 3902,
+      "sha256": "5d3a236b54c311f68ab984be23077a06d45569ddff63c6c9fc19d47d6e0ef8d2"
+    },
+    {
+      "path": "harness/original/analyze_timing_ownership.py",
+      "bytes": 3568,
+      "sha256": "f305e00a69c72c8d8cd830608517f30620841b967edb3a82d72bc3bea88cd595"
+    },
+    {
+      "path": "harness/original/audit_integrity.py",
+      "bytes": 2654,
+      "sha256": "cbd73c5f69cfdf657650accf5c42cb8e9845afdae9200e7703ea9a2291e06113"
+    },
+    {
+      "path": "harness/original/browser_geometry_envelope.js",
+      "bytes": 1677,
+      "sha256": "c0714c80080cce0663c3ee2c6ec37709edc845681b87fc32a1c1492ee0200e2f"
+    },
+    {
+      "path": "harness/original/canvas_embedding_test.py",
+      "bytes": 5607,
+      "sha256": "0ccab94218af68c6e075b2d383d494d2db3102ac6b5a86ae0fecb0383c581ce5"
+    },
+    {
+      "path": "harness/original/canvas_pixel_qa.py",
+      "bytes": 4535,
+      "sha256": "c5d9ddac3e7dc08ea6852342f26b7e58f0a5892c2ec13d563090f7bdd2a86c62"
+    },
+    {
+      "path": "harness/original/canvas_race_qa.py",
+      "bytes": 12262,
+      "sha256": "12e06f380b179d98d964082f1a75df299a76d16da943ab25702f4410e538d6bd"
+    },
+    {
+      "path": "harness/original/canvas_resource_first_incomplete_tracking.py",
+      "bytes": 4513,
+      "sha256": "fe57f8151b10cbb31c95dd6750c30453b6bcef731ad48258a6973e33f7801cd6"
+    },
+    {
+      "path": "harness/original/canvas_resource_qa.py",
+      "bytes": 4571,
+      "sha256": "77b83a8637cee1668a9afa5615aa6b6d72ba800962bdd178bae287872a6732a2"
+    },
+    {
+      "path": "harness/original/canvas_timing_probe.py",
+      "bytes": 4629,
+      "sha256": "bad9e98bde06ac9224b2583b4a3ca7114d732acee7d6388ed81c72cc573095fe"
+    },
+    {
+      "path": "harness/original/compositor_gesture_first_crash.py",
+      "bytes": 12355,
+      "sha256": "1ed2e2a3eb53df918dffa881654e66372a6f7fa616fcda28cf99cf6259be737b"
+    },
+    {
+      "path": "harness/original/compositor_gesture_qa.py",
+      "bytes": 12637,
+      "sha256": "2b38e12a94983019727b4e82c324d34cef7beb7e533dbe059af0bf8f3b2b1d9e"
+    },
+    {
+      "path": "harness/original/contact_probe.py",
+      "bytes": 3546,
+      "sha256": "08426cb22125e4e468ae1b427a9e5c8fe2e49b5135a42991b974815b35aacf96"
+    },
+    {
+      "path": "harness/original/embed_host.py",
+      "bytes": 1780,
+      "sha256": "66ed5adaa9448e49742b918a50edff98df0ed29c38fe87c9dad1a0f0763727b0"
+    },
+    {
+      "path": "harness/original/embed_host_previsual.py",
+      "bytes": 1670,
+      "sha256": "e70bcbf08d790e4b3f19cc1d1ae3d1fd2e89b1193e4a632ca7b026e5136f3888"
+    },
+    {
+      "path": "harness/original/focus_probe.py",
+      "bytes": 4133,
+      "sha256": "31a2bafd0fb8297ce71f47a0d48b3accd8003c0ad873c9458b570f66bbabff10"
+    },
+    {
+      "path": "harness/original/geometry_envelope_probe.py",
+      "bytes": 4272,
+      "sha256": "a1e7dadc1f73a5e5e8be83c320d5db2ffca08e0ebdeee2f318e9935b290a81f2"
+    },
+    {
+      "path": "harness/original/held_contact_ownership_qa.py",
+      "bytes": 8149,
+      "sha256": "9affd3208a3b4c925c2b58357c9acb039796ec6cd64e0f7c810350def3aef620"
+    },
+    {
+      "path": "harness/original/image_probe.py",
+      "bytes": 3298,
+      "sha256": "1249b7b9b75e1c4112aad5da6188a2c2e4d57b51de01a59127e1210f3a5c5ce3"
+    },
+    {
+      "path": "harness/original/kiosk-ownership-candidate.js",
+      "bytes": 29776,
+      "sha256": "404092dba58d07995120de7fe76b2fc6fad40f2ee9dab48ede72fc21f0d0ae10"
+    },
+    {
+      "path": "harness/original/kiosk_ownership_probe.py",
+      "bytes": 6257,
+      "sha256": "a1c85cfe8f0f362eca847d5857332276b43729fd786549f040459074843a0d55"
+    },
+    {
+      "path": "harness/original/make_canvas_experiment.py",
+      "bytes": 11047,
+      "sha256": "4071fd15e919dcd6c42f27ae26d0f669551e339237eadcd2cd1756a0e2f4ba58"
+    },
+    {
+      "path": "harness/original/native_embedding_edges.py",
+      "bytes": 5237,
+      "sha256": "9afc2066f43916f34fbb9f05b15fdc0d9bf64d9e18c2f0ed57d243e81e49f3b2"
+    },
+    {
+      "path": "harness/original/persist_audit.py",
+      "bytes": 12318,
+      "sha256": "253972b56cf91816f1828e21d7adf101fc3819cfc55d3c0678755958134b7fd0"
+    },
+    {
+      "path": "harness/original/pristine_embedding_test.py",
+      "bytes": 5565,
+      "sha256": "1de1d7220ed2e3145cdd3f7b50700944ef28565cff96dc4f2ae41777cdd94cc5"
+    },
+    {
+      "path": "harness/original/source_check.py",
+      "bytes": 3444,
+      "sha256": "596800724d456425559d6df8eb0162f0476c9d5e431bff64a306f448cd6b1565"
+    },
+    {
+      "path": "harness/original/support_integrity_qa.py",
+      "bytes": 3973,
+      "sha256": "00f1fb82fd5849eed13dac13f87acb86a8c4dc6c6557c09a55705b45f595df49"
+    },
+    {
+      "path": "harness/original/timing_probe.py",
+      "bytes": 4593,
+      "sha256": "38ccec414d515c62847e9d9c6167ef091c1033edf602744c409b381914a59af6"
+    },
+    {
+      "path": "harness/original/whole_release_integrity.py",
+      "bytes": 2494,
+      "sha256": "81064b41fc1f79aa80711b73d5501759395d1ce06b27c489dc6248593e54623a"
+    },
+    {
+      "path": "harness/rerunnable/analyze_timing_ownership.py",
+      "bytes": 3568,
+      "sha256": "f305e00a69c72c8d8cd830608517f30620841b967edb3a82d72bc3bea88cd595"
+    },
+    {
+      "path": "harness/rerunnable/audit_integrity.py",
+      "bytes": 2779,
+      "sha256": "74a96d1439ff910b8f2da900674695a020cbb41d3f3d3e2cd6d270be4911f45a"
+    },
+    {
+      "path": "harness/rerunnable/browser_geometry_envelope.js",
+      "bytes": 1701,
+      "sha256": "c893db970994479e3066b17bdbbedeb2e0728eaad8253f2b13e46aa45553b86e"
+    },
+    {
+      "path": "harness/rerunnable/canvas_embedding_test.py",
+      "bytes": 5738,
+      "sha256": "74cbd4632b9903e7db75de53f534035fd59b846d7b92910a30efb5129020df32"
+    },
+    {
+      "path": "harness/rerunnable/canvas_pixel_qa.py",
+      "bytes": 4660,
+      "sha256": "1ec2f2754b9979c62cf711e786de4c5755c807b862386a0263a7a27148689de4"
+    },
+    {
+      "path": "harness/rerunnable/canvas_race_qa.py",
+      "bytes": 12387,
+      "sha256": "15e8f52325d54b2abcb5ca4280053079d8109bad48a9e6d4ff2c5823b2109828"
+    },
+    {
+      "path": "harness/rerunnable/canvas_resource_first_incomplete_tracking.py",
+      "bytes": 4513,
+      "sha256": "fe57f8151b10cbb31c95dd6750c30453b6bcef731ad48258a6973e33f7801cd6"
+    },
+    {
+      "path": "harness/rerunnable/canvas_resource_qa.py",
+      "bytes": 4571,
+      "sha256": "77b83a8637cee1668a9afa5615aa6b6d72ba800962bdd178bae287872a6732a2"
+    },
+    {
+      "path": "harness/rerunnable/canvas_timing_probe.py",
+      "bytes": 4629,
+      "sha256": "bad9e98bde06ac9224b2583b4a3ca7114d732acee7d6388ed81c72cc573095fe"
+    },
+    {
+      "path": "harness/rerunnable/compositor_gesture_first_crash.py",
+      "bytes": 12355,
+      "sha256": "1ed2e2a3eb53df918dffa881654e66372a6f7fa616fcda28cf99cf6259be737b"
+    },
+    {
+      "path": "harness/rerunnable/compositor_gesture_qa.py",
+      "bytes": 12637,
+      "sha256": "2b38e12a94983019727b4e82c324d34cef7beb7e533dbe059af0bf8f3b2b1d9e"
+    },
+    {
+      "path": "harness/rerunnable/contact_probe.py",
+      "bytes": 3546,
+      "sha256": "08426cb22125e4e468ae1b427a9e5c8fe2e49b5135a42991b974815b35aacf96"
+    },
+    {
+      "path": "harness/rerunnable/embed_host.py",
+      "bytes": 1780,
+      "sha256": "66ed5adaa9448e49742b918a50edff98df0ed29c38fe87c9dad1a0f0763727b0"
+    },
+    {
+      "path": "harness/rerunnable/embed_host_previsual.py",
+      "bytes": 1670,
+      "sha256": "e70bcbf08d790e4b3f19cc1d1ae3d1fd2e89b1193e4a632ca7b026e5136f3888"
+    },
+    {
+      "path": "harness/rerunnable/focus_probe.py",
+      "bytes": 4133,
+      "sha256": "31a2bafd0fb8297ce71f47a0d48b3accd8003c0ad873c9458b570f66bbabff10"
+    },
+    {
+      "path": "harness/rerunnable/geometry_envelope_probe.py",
+      "bytes": 4397,
+      "sha256": "886ac65df56ea8fbd2967121a6d8d640291a4253ee4f568bcda1fc82383bf23d"
+    },
+    {
+      "path": "harness/rerunnable/held_contact_ownership_qa.py",
+      "bytes": 8149,
+      "sha256": "9affd3208a3b4c925c2b58357c9acb039796ec6cd64e0f7c810350def3aef620"
+    },
+    {
+      "path": "harness/rerunnable/image_probe.py",
+      "bytes": 3298,
+      "sha256": "1249b7b9b75e1c4112aad5da6188a2c2e4d57b51de01a59127e1210f3a5c5ce3"
+    },
+    {
+      "path": "harness/rerunnable/kiosk-ownership-candidate.js",
+      "bytes": 29776,
+      "sha256": "404092dba58d07995120de7fe76b2fc6fad40f2ee9dab48ede72fc21f0d0ae10"
+    },
+    {
+      "path": "harness/rerunnable/kiosk_ownership_probe.py",
+      "bytes": 6382,
+      "sha256": "9c1dcc08595c7e2e0446bb59fb79a4e87252ab68bcd381af08662f766a36040e"
+    },
+    {
+      "path": "harness/rerunnable/make_canvas_experiment.py",
+      "bytes": 11047,
+      "sha256": "4071fd15e919dcd6c42f27ae26d0f669551e339237eadcd2cd1756a0e2f4ba58"
+    },
+    {
+      "path": "harness/rerunnable/native_embedding_edges.py",
+      "bytes": 5362,
+      "sha256": "343406e899a1774c5ea66e9b86b1df11ec8d89e71445a76ba983a1e53ea45cca"
+    },
+    {
+      "path": "harness/rerunnable/persist_audit.py",
+      "bytes": 12318,
+      "sha256": "253972b56cf91816f1828e21d7adf101fc3819cfc55d3c0678755958134b7fd0"
+    },
+    {
+      "path": "harness/rerunnable/pristine_embedding_test.py",
+      "bytes": 5690,
+      "sha256": "3ae9f5d259eb0e5842078d57afd17f9cfbcb40eae590b516758a31323993abe5"
+    },
+    {
+      "path": "harness/rerunnable/source_check.py",
+      "bytes": 3569,
+      "sha256": "52b0e985e5d214b4bb47e59722c18cfdbabe377cdf93ff0351ea6b2b8164a23a"
+    },
+    {
+      "path": "harness/rerunnable/support_integrity_qa.py",
+      "bytes": 3973,
+      "sha256": "00f1fb82fd5849eed13dac13f87acb86a8c4dc6c6557c09a55705b45f595df49"
+    },
+    {
+      "path": "harness/rerunnable/timing_probe.py",
+      "bytes": 4593,
+      "sha256": "38ccec414d515c62847e9d9c6167ef091c1033edf602744c409b381914a59af6"
+    },
+    {
+      "path": "harness/rerunnable/whole_release_integrity.py",
+      "bytes": 2494,
+      "sha256": "81064b41fc1f79aa80711b73d5501759395d1ce06b27c489dc6248593e54623a"
+    },
+    {
+      "path": "logs/browser-install.log",
+      "bytes": 6847,
+      "sha256": "62d201c0c9d85c61414a350c512e264fed749b96135f19b184627e86d1f0c45f"
+    },
+    {
+      "path": "logs/canvas-embedding.log",
+      "bytes": 1033,
+      "sha256": "4c3a09ca982a18892eb49948bf931a22ca6d18266819836e0050f8c981eb4357"
+    },
+    {
+      "path": "logs/canvas-pixel.log",
+      "bytes": 58,
+      "sha256": "125a19b1543dcd1dfc7b31bde21c15b53f7e1075b2471524a57f2572eea1c7e0"
+    },
+    {
+      "path": "logs/canvas-race-qa-first-harness-failure.log",
+      "bytes": 10271,
+      "sha256": "87f3d6d00ed41c076e9c8d4fad2863528af1f7982bda51f8ebc4c9b923b7c750"
+    },
+    {
+      "path": "logs/canvas-race-qa.log",
+      "bytes": 3504,
+      "sha256": "50052946ed8b68eed416344006e64f1d10957ea9a656d0137efd0302c325ce95"
+    },
+    {
+      "path": "logs/canvas-resource-first-incomplete-tracking.log",
+      "bytes": 152,
+      "sha256": "b96a37d604ac7e014cf741573be2c3fd63a622e38477e226528f6d5c92e16b57"
+    },
+    {
+      "path": "logs/canvas-resource.log",
+      "bytes": 152,
+      "sha256": "a29f5372eed014280d96412f2a9d87800b0d18244b159d87ee070f1def7c7acf"
+    },
+    {
+      "path": "logs/canvas-timing-probe.log",
+      "bytes": 202,
+      "sha256": "057b5c2bca85b16d51e5969c0a9db6a46c5ece53699673d68102fb168f685e54"
+    },
+    {
+      "path": "logs/compositor-gesture-first-crash.log",
+      "bytes": 4992,
+      "sha256": "1cfdf923033fd82f9082073985e3f3e43244bb6ff264d7b755782fc86cc6442b"
+    },
+    {
+      "path": "logs/compositor-gesture-smoke.log",
+      "bytes": 229,
+      "sha256": "aca778717fa96c895b8003e7cd3d34e8a6a384e21948ce3c805fa592d2a7adc0"
+    },
+    {
+      "path": "logs/compositor-gesture.log",
+      "bytes": 7227,
+      "sha256": "99f6ac7bcbad26b74b1cd5396bfacc46b6f35e8daccea61d6391ba5b20f9da29"
+    },
+    {
+      "path": "logs/contact-probe.log",
+      "bytes": 2806,
+      "sha256": "d1a36424d6ccaf405c64157b4db38af4bb561459d26798633c806078a8365e97"
+    },
+    {
+      "path": "logs/deps.log",
+      "bytes": 14509,
+      "sha256": "3ca306e4662595cbb75d2a8a98bb8ed95d4d7c7b89e9855a8148487a1c3a7146"
+    },
+    {
+      "path": "logs/focus-probe.log",
+      "bytes": 7742,
+      "sha256": "555a09334382596f0080c79fe7cf6e27086d03848ee38f5fb6ebdc08f78a7b73"
+    },
+    {
+      "path": "logs/go-unit-audit.log",
+      "bytes": 2775,
+      "sha256": "ee6e2e1884d7f90caf7149e5b5feabd560c620f780b185b4d32b2c29ae94c2fb"
+    },
+    {
+      "path": "logs/held-contact-ownership.log",
+      "bytes": 526,
+      "sha256": "100a0773a418676237f5c6e77505c032523194f64e7f4ef94d75bf9f3e2efed6"
+    },
+    {
+      "path": "logs/image-probe.log",
+      "bytes": 125,
+      "sha256": "363c08d37744f0e9f076908f8cba995efda75312c624af770d830d2cfe806e39"
+    },
+    {
+      "path": "logs/install.log",
+      "bytes": 111,
+      "sha256": "fc9f87f593e88b3cbbc962179117c6c7e269e10a3ceb0e4f2b2f3d8d9e28132c"
+    },
+    {
+      "path": "logs/kiosk-ownership.log",
+      "bytes": 245,
+      "sha256": "5e9a390708264b509866b24d20ba088fe8eec698db0c55d24666077e4f63fa3a"
+    },
+    {
+      "path": "logs/native-embedding-edges.log",
+      "bytes": 270,
+      "sha256": "8f289973e4a02ac6d3ee78d902bc9408aecca4d864307e4fa6e65b97bd713867"
+    },
+    {
+      "path": "logs/pristine-embedding.log",
+      "bytes": 1033,
+      "sha256": "4c3a09ca982a18892eb49948bf931a22ca6d18266819836e0050f8c981eb4357"
+    },
+    {
+      "path": "logs/timing-probe.log",
+      "bytes": 202,
+      "sha256": "5f045922ec9e0e5fdabb14addaa8c13f76248761136e87fc67b9cdb15718e9f7"
+    },
+    {
+      "path": "logs/unit-audit.log",
+      "bytes": 10056,
+      "sha256": "062e07c7eb6acb4d692fc3182bf8b15ef8bd1fcdbb70672f23cf44f12636cda3"
+    },
+    {
+      "path": "reports/annotated/audit-environment.json",
+      "bytes": 795,
+      "sha256": "2f14a81c6b0b1e55747f116a5fef96ded9124c3431d88a27dc83ce8d9c932eab"
+    },
+    {
+      "path": "reports/annotated/browser-geometry-envelope-results.json",
+      "bytes": 1145,
+      "sha256": "159bd0bdf6bc3d93696495ab261599823b3fd4ed3fa5857bfa9629494b9116ff"
+    },
+    {
+      "path": "reports/annotated/canvas-embedding-results.json",
+      "bytes": 57634,
+      "sha256": "75bf496abed59e1ce7b966b9ab258be627d212f060fc57023287f6ea0032f4de"
+    },
+    {
+      "path": "reports/annotated/canvas-pixel-results.json",
+      "bytes": 56647,
+      "sha256": "4c6cd4ecf2ab7142f2bcc5a9feeaaea5330eab95231da808eeeb6b17b010784d"
+    },
+    {
+      "path": "reports/annotated/canvas-race-qa-first-harness-failure.json",
+      "bytes": 7021,
+      "sha256": "aa5772369a5f85d0b83694e61103eb7a405637e63c083d222a1142c2eb688bc8"
+    },
+    {
+      "path": "reports/annotated/canvas-race-qa.json",
+      "bytes": 8272,
+      "sha256": "459acf6afe9ed891203336564c8194cbe044f1c1b0a6e2032183ea2c0c7b0e2b"
+    },
+    {
+      "path": "reports/annotated/canvas-resource-first-incomplete-tracking.json",
+      "bytes": 4145,
+      "sha256": "49bcce4b28edb887ff470f58bc311ec2f62155c9875837fefddc3d2b420ed67a"
+    },
+    {
+      "path": "reports/annotated/canvas-resource-results.json",
+      "bytes": 4639,
+      "sha256": "c0167f968206594297e3300ed07d5845e5900e5d4bb2ab976069764843c4ff33"
+    },
+    {
+      "path": "reports/annotated/canvas-timing-probe.json",
+      "bytes": 349581,
+      "sha256": "ab2266b1a7c7d6dc11b82ffbf453670c044e29c33149e2c7cf2f54d0cc906c64"
+    },
+    {
+      "path": "reports/annotated/compositor-adjudication.json",
+      "bytes": 2162,
+      "sha256": "76c3f136065c5b37fe0a94b759072cbfa269957c9c9a582cf7198c5f8e14b81e"
+    },
+    {
+      "path": "reports/annotated/compositor-gesture-first-crash.json",
+      "bytes": 13920,
+      "sha256": "58a94e7aedbbc22e5042abccf50d402a106425a74b450eea16872981b1bdc717"
+    },
+    {
+      "path": "reports/annotated/compositor-gesture-results.json",
+      "bytes": 74311,
+      "sha256": "b5c77c2432a34a9f56bb8086baa8adf31515ee01f39aa8ad5b1e3adc5fa1f736"
+    },
+    {
+      "path": "reports/annotated/compositor-gesture-smoke-results.json",
+      "bytes": 14187,
+      "sha256": "daa18c506729b48650a67fb680f196f18303a80fee5eef10795b274b66a25243"
+    },
+    {
+      "path": "reports/annotated/contact-probe.json",
+      "bytes": 187201,
+      "sha256": "b39fb8b4ae3a2a90f3611c9555991575a4ce99ff1779f3c7a09e63f76ca36159"
+    },
+    {
+      "path": "reports/annotated/final-integrity.json",
+      "bytes": 1282,
+      "sha256": "61bc38431da1a6319ec74be3ef7c0cde13b25d07dafe21b5c6b19bad37500999"
+    },
+    {
+      "path": "reports/annotated/focus-probe.json",
+      "bytes": 6048,
+      "sha256": "1a8ab9b230017e32ba02a32a4caa01b4c45e86ad4e837a75f5125ecf654fbf6a"
+    },
+    {
+      "path": "reports/annotated/font-integrity.json",
+      "bytes": 783,
+      "sha256": "b26ddeef4d835b2114cc67e8857198a60972778d6de566d37fcbe144b8e5270d"
+    },
+    {
+      "path": "reports/annotated/geometry-envelope-input.json",
+      "bytes": 33232,
+      "sha256": "3f669e0a22ccbaede0c5a3d96a5b2b6506a8a8f51896e8a82729a59d58c986ce"
+    },
+    {
+      "path": "reports/annotated/geometry-envelope-results.json",
+      "bytes": 10686,
+      "sha256": "cd63e59f54d365addce890438dcc6f374282afb355f464bb74909395268a86c3"
+    },
+    {
+      "path": "reports/annotated/go-toolchain.json",
+      "bytes": 567,
+      "sha256": "dfe3f8898e7f76afd8af7f66a22eb4718754f5579e24273894da1f261eb7af8d"
+    },
+    {
+      "path": "reports/annotated/held-contact-ownership-results.json",
+      "bytes": 65482,
+      "sha256": "aaa0cbd9d375c10a5ab49d3b6becc8c4da8ff9d315126bb75a44834ab2d4aecd"
+    },
+    {
+      "path": "reports/annotated/host-version-provenance.json",
+      "bytes": 1043,
+      "sha256": "f0f741a652c8ff0693e70dc024d6d616327c3f446365d20e4cec3feba1a62208"
+    },
+    {
+      "path": "reports/annotated/image-probe.json",
+      "bytes": 344623,
+      "sha256": "7af31a478f6ee9d655df8bc79bb20cf285fcc03e490055ff5e34d972b9a68a69"
+    },
+    {
+      "path": "reports/annotated/kiosk-ownership-results.json",
+      "bytes": 1573,
+      "sha256": "4824cac41cea1fba2140c143530025708cd657ff2936433f7a146561ebc66172"
+    },
+    {
+      "path": "reports/annotated/native-embedding-edges.json",
+      "bytes": 18422,
+      "sha256": "fc2171aa10441a49d0d12f7dc63147673349088e191154b860e7387c21e1353e"
+    },
+    {
+      "path": "reports/annotated/pristine-embedding-results.json",
+      "bytes": 57591,
+      "sha256": "52b8726e23c4365cb5c9c8d95f59a96613f0ddbd11bf6bfda3b9a7257d546476"
+    },
+    {
+      "path": "reports/annotated/source-check.json",
+      "bytes": 19706,
+      "sha256": "acf79d60d384b67869f263894c85b758ba4ccee8f941510020160a96c770c825"
+    },
+    {
+      "path": "reports/annotated/support-review.json",
+      "bytes": 2922,
+      "sha256": "7db18400aadfb2b87baa3437a066c91fc83560fc152683ec1af6bfca5f623568"
+    },
+    {
+      "path": "reports/annotated/timing-contact-ownership.json",
+      "bytes": 27438,
+      "sha256": "624a0ea2b77919271af86520196521c9e3e8139194e6a943e54bb970829a7b6e"
+    },
+    {
+      "path": "reports/annotated/timing-probe.json",
+      "bytes": 348578,
+      "sha256": "8685c88b24cbf4c85fe276ed9f47e1442b37b0f013b28494549c9b8ef2cfc71b"
+    },
+    {
+      "path": "reports/annotated/vendor-data-integrity.json",
+      "bytes": 2634,
+      "sha256": "902754fa3fc65b9ae7218074a29208058ad7eac5f0a5f1d962e769b1e8a5225d"
+    },
+    {
+      "path": "reports/annotated/whole-release-integrity.json",
+      "bytes": 1200,
+      "sha256": "8a2cc421aa117da0f97fc95c83e26514256e90ddfb667af8c653d791adef97dc"
+    },
+    {
+      "path": "reports/original/audit-environment.json",
+      "bytes": 420,
+      "sha256": "cf54c7ae0b8c48eb31db7efc59d4e61744a51ac1e44534d4d4484f1fd5ac76ee"
+    },
+    {
+      "path": "reports/original/browser-geometry-envelope-results.json",
+      "bytes": 522,
+      "sha256": "cb04534b8a718d0948ac1373cc084fb1d5f386b1da5b28f1fb8fad373df2c398"
+    },
+    {
+      "path": "reports/original/canvas-embedding-results.json",
+      "bytes": 57011,
+      "sha256": "d2bb6d284a7425d534e0cc08dc22c69d7643e406b19b7c2c7676c0f164276f54"
+    },
+    {
+      "path": "reports/original/canvas-pixel-results.json",
+      "bytes": 56024,
+      "sha256": "06c7a15e67e1b2f312ae9e02827002f70a110852799b4e0a96d6806b38cac3b5"
+    },
+    {
+      "path": "reports/original/canvas-race-qa-first-harness-failure.json",
+      "bytes": 6223,
+      "sha256": "712d79be248ca37191e481e2093dc785fe27706d6c99c312ec2e479db926f6cf"
+    },
+    {
+      "path": "reports/original/canvas-race-qa.json",
+      "bytes": 7649,
+      "sha256": "d7f54c83c3ec1a241f27b45dcbdc63b0553905e3be1ffc481fabaae396426a14"
+    },
+    {
+      "path": "reports/original/canvas-resource-first-incomplete-tracking.json",
+      "bytes": 3592,
+      "sha256": "e3853dd69ceb5c0dbf9afa8bfeb945db672fae9fb1f637469ee9df3bcd2f0473"
+    },
+    {
+      "path": "reports/original/canvas-resource-results.json",
+      "bytes": 4264,
+      "sha256": "cd65178366c170f1427932941a203e2b72ae4ba1e87e61746a9d26ce2108d971"
+    },
+    {
+      "path": "reports/original/canvas-timing-probe.json",
+      "bytes": 349206,
+      "sha256": "e13e2f51ff27442fab01392fad93b2435f919bc2cb50d5ed5a04d3f88c3e963e"
+    },
+    {
+      "path": "reports/original/compositor-adjudication.json",
+      "bytes": 1787,
+      "sha256": "d50c5605c6502f1c6a7e4f741c0b6241964f00d1211a0656802df9f5614805d2"
+    },
+    {
+      "path": "reports/original/compositor-gesture-first-crash.json",
+      "bytes": 13279,
+      "sha256": "e126f837bcf4eaf3b259a412055c0654c36519dd09b3a14fe1ab03e9d583b08d"
+    },
+    {
+      "path": "reports/original/compositor-gesture-results.json",
+      "bytes": 73708,
+      "sha256": "7326d2f259ad60ef805500ac46653af813d9d892b5a7574e75b923e575bc0a70"
+    },
+    {
+      "path": "reports/original/compositor-gesture-smoke-results.json",
+      "bytes": 13604,
+      "sha256": "ef72dec6d2d3096e45134a0b8eb54c35ddc27deae406341e1175711c6f3a8c01"
+    },
+    {
+      "path": "reports/original/contact-probe.json",
+      "bytes": 186826,
+      "sha256": "30285608dc76178fa30abef23978cf3dd2012daf69ace484dc798b0e7bd926e7"
+    },
+    {
+      "path": "reports/original/final-integrity.json",
+      "bytes": 659,
+      "sha256": "3d3b496feaace57b4426c3c01b5648304f24faa66e1f52d105ece94698c19012"
+    },
+    {
+      "path": "reports/original/focus-probe.json",
+      "bytes": 5673,
+      "sha256": "a5e61d6b1bfd26423291bcbc326d061be22c5f1300fea7466db8affa25d3df00"
+    },
+    {
+      "path": "reports/original/font-integrity.json",
+      "bytes": 408,
+      "sha256": "b56ed2247e5d7e9f056ee516a995317f6ab05fca8480b1109afbf2e007a6da1a"
+    },
+    {
+      "path": "reports/original/geometry-envelope-input.json",
+      "bytes": 20886,
+      "sha256": "81cefb6a678b229e958d879b323014435d67b406e4a760a591f22feca9539c0a"
+    },
+    {
+      "path": "reports/original/geometry-envelope-results.json",
+      "bytes": 10063,
+      "sha256": "49dfdbf9ab0c9fa8ffe6c251cd4bb3162ffba49b9b7d3a7620f677c26f23df67"
+    },
+    {
+      "path": "reports/original/go-toolchain.json",
+      "bytes": 192,
+      "sha256": "f3ed73150f4d7c0ccb484cc5b9b4d03d59c3cf8104ec57f14726fcf292aca18f"
+    },
+    {
+      "path": "reports/original/held-contact-ownership-results.json",
+      "bytes": 65107,
+      "sha256": "ab3edd98942ac11b71e7b431facdaafb674947713bc065cf3edd19f26513cb4a"
+    },
+    {
+      "path": "reports/original/host-version-provenance.json",
+      "bytes": 668,
+      "sha256": "d820687b3fe7c1b4fca32a7d6f10055fcf544fd99054a80029624c5a425c53aa"
+    },
+    {
+      "path": "reports/original/image-probe.json",
+      "bytes": 344248,
+      "sha256": "dbaa92ca5bec86f6b4a4ecf670c47dbc9d218556c526e1dfc060647b03688c3a"
+    },
+    {
+      "path": "reports/original/kiosk-ownership-results.json",
+      "bytes": 950,
+      "sha256": "0e572050e7defb9c664406c8c479c67401a0f0614a37ab96cd97aa8355349b55"
+    },
+    {
+      "path": "reports/original/native-embedding-edges.json",
+      "bytes": 17799,
+      "sha256": "9896d287adfea91a6b0bbee33ffe02a80df70ab81e1245dd19bbc434e2e9c4ee"
+    },
+    {
+      "path": "reports/original/pristine-embedding-results.json",
+      "bytes": 56968,
+      "sha256": "8dede0c312aa6998804d736ec69123f275551b42ce9805bbae48f1d02831b860"
+    },
+    {
+      "path": "reports/original/source-check.json",
+      "bytes": 19083,
+      "sha256": "cb32e8987b516ecdea9878bfdb08e65828992e97070beeb577a9b13c07387236"
+    },
+    {
+      "path": "reports/original/support-review.json",
+      "bytes": 2547,
+      "sha256": "dc818152709d0016b986cc098b5789fe4c0433790fed23188a686ab6fafd45d8"
+    },
+    {
+      "path": "reports/original/timing-contact-ownership.json",
+      "bytes": 27063,
+      "sha256": "36c48570c6f355a18b8c1abb13773479ab4d2f186c79488efee4c504d5765acc"
+    },
+    {
+      "path": "reports/original/timing-probe.json",
+      "bytes": 348203,
+      "sha256": "5bff3d56808ecf69b35e5a591aae4e056ad184b6dc20c47b65bd9e8709e6309d"
+    },
+    {
+      "path": "reports/original/vendor-data-integrity.json",
+      "bytes": 2259,
+      "sha256": "69b5cc4a311dbdf1078e02f59737809252531539fb5e586e28157833f54b9df0"
+    },
+    {
+      "path": "reports/original/whole-release-integrity.json",
+      "bytes": 825,
+      "sha256": "30db3f18406792881c0d9e7ca8841a70464c84ed3a9a9b7b1f0ad28fa24a9991"
+    },
+    {
+      "path": "review-coverage.json",
+      "bytes": 46733,
+      "sha256": "59d547d8077f3eb00f0721e6f9cdac65dcdbe0b84c85165638604ecd9df3bc34"
+    },
+    {
+      "path": "screenshots/compositor/headless-shell-production-nes-preset0-gesture2-actual.png",
+      "bytes": 193050,
+      "sha256": "f491ab86467443f0caed3014592ae1e81022b21d01c00b57ae4dae10b07b2088"
+    },
+    {
+      "path": "screenshots/compositor/headless-shell-production-nes-preset0-gesture2-moving-ref.png",
+      "bytes": 193000,
+      "sha256": "6914a21819fe0a73a3e6ab76637938d391ccbdc29dea280b1339cf8a79a8e822"
+    },
+    {
+      "path": "screenshots/compositor/headless-shell-production-nes-preset0-gesture2-stationary-ref.png",
+      "bytes": 192982,
+      "sha256": "f91071bb8c8a8c3d2dfee8cec14d6212161b5b0ee1fe35789b70bc9b9481c55b"
+    },
+    {
+      "path": "screenshots/compositor/headless-shell-production-photo-preset0-gesture2-actual.png",
+      "bytes": 951931,
+      "sha256": "74f2d349a91466f49436da4b38aa9d3158d86bc0e4357b1ff9523bb08f33a66f"
+    },
+    {
+      "path": "screenshots/compositor/headless-shell-production-photo-preset0-gesture2-moving-ref.png",
+      "bytes": 952628,
+      "sha256": "c5eff02185c5c4906dc92ef3b0d79c45c01131d199cfa4f8aa2d2ad48aad1f64"
+    },
+    {
+      "path": "screenshots/compositor/headless-shell-production-photo-preset0-gesture2-stationary-ref.png",
+      "bytes": 949951,
+      "sha256": "7e3a082fb1bb71b818994d5bea02244dd7753b6529d6390de9b0caf739ae8af7"
+    },
+    {
+      "path": "screenshots/held_contact/held-contact-A1-nes-sample.png",
+      "bytes": 121558,
+      "sha256": "587fbdc66b2acdb980d98d450e50f620f9a9cd55a2ab20870cb5e044ff0b11b4"
+    },
+    {
+      "path": "screenshots/held_contact/held-contact-A1-photo-sample.png",
+      "bytes": 222262,
+      "sha256": "cf71e722ca84a4ff1d6d812c93bf88399fd227682d88416d38333bcdcb5cb96e"
+    },
+    {
+      "path": "screenshots/held_contact/held-contact-production-nes-sample.png",
+      "bytes": 112156,
+      "sha256": "858fd34ed0a2cab6d569db251b8db77fc523e838ea17f9de7f9640c2aa926b87"
+    },
+    {
+      "path": "screenshots/held_contact/held-contact-production-photo-sample.png",
+      "bytes": 212680,
+      "sha256": "0ab1b093f48c086ea493771d31b29dc295eb78476ad53774fb06981db6c5fd57"
+    },
+    {
+      "path": "timing-classification.json",
+      "bytes": 11334,
+      "sha256": "2d262d9cb6661c296ccb6cc47540974de5e3785b6ff6c68c84c3dc5d157fa094"
+    }
+  ]
+}

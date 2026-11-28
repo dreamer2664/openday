@@ -1,0 +1,39 @@
+{
+  "result": "PARTIAL",
+  "analysed_at_workspace_utc": "2026-11-28T07:12:08.465003+00:00",
+  "input_file": "compositor-gesture-results.json",
+  "input_sha256": "7326d2f259ad60ef805500ac46653af813d9d892b5a7574e75b923e575bc0a70",
+  "full_run_result": "FAIL",
+  "completed_headless_submatrix": {
+    "result": "PASS",
+    "conditions": 24,
+    "held_contacts_with_visual_assertions": 72,
+    "variants": [
+      "production",
+      "A1",
+      "Canvas"
+    ],
+    "styles": [
+      "photo",
+      "nes"
+    ],
+    "same_presets_per_variant": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "minimum_fraction_pixels_within_24_of_moving_reference": 0.9669074939793172,
+    "maximum_mean_rgb_error_moving_reference": 2.4400063964748315,
+    "minimum_mean_rgb_error_stationary_reference": 68.60364024222406,
+    "maximum_moving_to_stationary_error_ratio": 0.0305893692883696
+  },
+  "incomplete_headed_swiftshader_submatrix": {
+    "visual_contacts_attempted": 0,
+    "outcome": "Target crashed during UI setup before any drag. Full run remains FAIL, not rewritten as PASS.",
+    "cause": "Not established. This is a page crash in the lab, not the reported live blue-square/drag freeze."
+  },
+  "earlier_smoke": "First route-fulfilled smoke passed three photo visual assertions then crashed on its second document. Preserved separately. Subsequent direct-HTTP/per-condition browser-isolated smoke passed six visual assertions.",
+  "numpy_version": "2.3.5",
+  "limits": "Static expected layout uses existing renderer clean/ghost pixels, not a second renderer. Tolerance-based screenshot comparison, not exact RGBA. Screenshot/read observation can alter scheduling. Linux software rendering only; original Android/Arena cause remains unproven. No new execution is claimed by this adjudication."
+}

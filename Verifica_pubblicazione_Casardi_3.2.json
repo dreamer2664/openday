@@ -1,0 +1,30 @@
+{
+  "result": "PASS",
+  "repository": "https://github.com/dreamer2664/openday",
+  "branch": "v1",
+  "folder": "v1/",
+  "commit": "de2c3ae57dffd5e2a40463fbdaceccf89a5edd14",
+  "parent": "c12c103beb818d15cda4fdaa9372053b6fa9faae",
+  "main_before": "c4c4fc9637d387369eb9911d66d24de94b85b3fa",
+  "main_after": "c4c4fc9637d387369eb9911d66d24de94b85b3fa",
+  "unchanged_outside_v1_entries": 117,
+  "v1_files": 683,
+  "all_remote_git_tree_entries_verified": 1054,
+  "public_downloads": {
+    "zip": {
+      "url": "https://raw.githubusercontent.com/dreamer2664/openday/de2c3ae57dffd5e2a40463fbdaceccf89a5edd14/v1/Cartolina_Casardi_Windows_LPC_QR_2026-27.zip",
+      "bytes": 62413155,
+      "sha256": "b03b5f3c5e80f49cc60be8961334cabfb4c3700bf3115850763fbf24be01ab5d",
+      "unauthenticated_download_verified": true
+    },
+    "html": {
+      "url": "https://raw.githubusercontent.com/dreamer2664/openday/de2c3ae57dffd5e2a40463fbdaceccf89a5edd14/v1/casardi_postcard/Cartolina_Casardi_PC_e_Telefono.html",
+      "bytes": 24318425,
+      "sha256": "48cca47603d4eb53db38680ace4151c9b3dac134b38c02bbd7f0849403d7e049",
+      "unauthenticated_download_verified": true
+    }
+  },
+  "credentials_in_delivery": false,
+  "temporary_askpass_removed": true,
+  "executable_modes_preserved": true
+}

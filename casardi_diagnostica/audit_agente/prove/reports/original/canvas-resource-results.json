@@ -1,0 +1,171 @@
+{
+  "result": "PASS",
+  "started_at_workspace_utc": "2026-11-28T06:40:07.006932+00:00",
+  "finished_at_workspace_utc": "2026-11-28T06:40:42.493495+00:00",
+  "seconds": 35.49,
+  "scope": "Diagnostic WeakRef/forced-GC observation in Linux Chromium, 120 real CDP gesture edits. Retained Canvas backing-store area and DOM topology, NOT total process/native image memory or a physical Android limit.",
+  "rows": [
+    {
+      "mode": "photo",
+      "verified_drags": 60,
+      "before": {
+        "canvas_allocations": 67,
+        "live_canvases": 4,
+        "live_pixel_area": 1695570,
+        "large_canvases": [
+          {
+            "width": 900,
+            "height": 600,
+            "id": "",
+            "class": "",
+            "connected": false
+          },
+          {
+            "width": 900,
+            "height": 600,
+            "id": "",
+            "class": "composition-clean",
+            "connected": true
+          },
+          {
+            "width": 229,
+            "height": 330,
+            "id": "",
+            "class": "composition-ghost",
+            "connected": true
+          },
+          {
+            "width": 900,
+            "height": 600,
+            "id": "final-preview",
+            "class": "",
+            "connected": true
+          }
+        ],
+        "dom_canvases": 3,
+        "dom_hit_buttons": 1
+      },
+      "after": {
+        "canvas_allocations": 667,
+        "live_canvases": 4,
+        "live_pixel_area": 1695570,
+        "large_canvases": [
+          {
+            "width": 900,
+            "height": 600,
+            "id": "",
+            "class": "",
+            "connected": false
+          },
+          {
+            "width": 900,
+            "height": 600,
+            "id": "",
+            "class": "composition-clean",
+            "connected": true
+          },
+          {
+            "width": 229,
+            "height": 330,
+            "id": "",
+            "class": "composition-ghost",
+            "connected": true
+          },
+          {
+            "width": 900,
+            "height": 600,
+            "id": "final-preview",
+            "class": "",
+            "connected": true
+          }
+        ],
+        "dom_canvases": 3,
+        "dom_hit_buttons": 1
+      },
+      "reset": {
+        "canvas_allocations": 687,
+        "live_canvases": 3,
+        "live_pixel_area": 0,
+        "large_canvases": [],
+        "dom_canvases": 3,
+        "dom_hit_buttons": 0
+      },
+      "result": "PASS"
+    },
+    {
+      "mode": "nes",
+      "verified_drags": 60,
+      "before": {
+        "canvas_allocations": 65,
+        "live_canvases": 3,
+        "live_pixel_area": 801840,
+        "large_canvases": [
+          {
+            "width": 600,
+            "height": 400,
+            "id": "",
+            "class": "composition-clean",
+            "connected": true
+          },
+          {
+            "width": 112,
+            "height": 195,
+            "id": "",
+            "class": "composition-ghost",
+            "connected": true
+          },
+          {
+            "width": 900,
+            "height": 600,
+            "id": "final-preview",
+            "class": "",
+            "connected": true
+          }
+        ],
+        "dom_canvases": 3,
+        "dom_hit_buttons": 1
+      },
+      "after": {
+        "canvas_allocations": 605,
+        "live_canvases": 3,
+        "live_pixel_area": 801840,
+        "large_canvases": [
+          {
+            "width": 600,
+            "height": 400,
+            "id": "",
+            "class": "composition-clean",
+            "connected": true
+          },
+          {
+            "width": 112,
+            "height": 195,
+            "id": "",
+            "class": "composition-ghost",
+            "connected": true
+          },
+          {
+            "width": 900,
+            "height": 600,
+            "id": "final-preview",
+            "class": "",
+            "connected": true
+          }
+        ],
+        "dom_canvases": 3,
+        "dom_hit_buttons": 1
+      },
+      "reset": {
+        "canvas_allocations": 625,
+        "live_canvases": 3,
+        "live_pixel_area": 0,
+        "large_canvases": [],
+        "dom_canvases": 3,
+        "dom_hit_buttons": 0
+      },
+      "result": "PASS"
+    }
+  ],
+  "errors": [],
+  "failure": null
+}

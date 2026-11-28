@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "engine": "v20.20.2",
+  "geometry_cases": 1465440,
+  "minimum_horizontal_range": 140.79999999999995,
+  "minimum_vertical_range": 69.19999999999999,
+  "seconds": 1.577792204,
+  "source_sha256": "d06c41e21797ba7295b66ab26507ee43cc8b3f866c4adfee0ae4688cd16d2b1f",
+  "scope": "Actual shared browser actorGeometry through Node, conservative 64x64/mandatory-height envelope, all 71 scales, all scenes/styles/42 companion variants and poses plus none. Not DOM or touch evidence."
+}

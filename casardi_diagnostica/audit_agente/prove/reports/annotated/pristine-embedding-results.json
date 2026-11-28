@@ -1,0 +1,2422 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "seconds": 437.73,
+  "html_sha256": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea",
+  "pristine_html": true,
+  "injected_page_scripts": false,
+  "conditions": [
+    {
+      "nested": false,
+      "mode": "photo",
+      "preset": 0,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 81.390625,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 81.390625,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 81.390625,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 81.390625,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 81.390625,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 81.390625,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "photo",
+      "preset": 0,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 51.796875,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 51.796875,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 51.796875,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 51.796875,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 51.796875,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 51.796875,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "photo",
+      "preset": 0,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 111,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 111,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 111,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 111,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 111,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 111,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "photo",
+      "preset": 1,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 77.6875,
+          "height": 136.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 77.6875,
+          "height": 136.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 77.6875,
+          "height": 136.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 77.6875,
+          "height": 136.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 77.6875,
+          "height": 136.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 77.6875,
+          "height": 136.515625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "photo",
+      "preset": 1,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 51.796875,
+          "height": 91.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 51.796875,
+          "height": 91.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 51.796875,
+          "height": 91.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 51.796875,
+          "height": 91.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 51.796875,
+          "height": 91.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 51.796875,
+          "height": 91.015625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "photo",
+      "preset": 1,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 103.59375,
+          "height": 182.03125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 103.59375,
+          "height": 182.03125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 103.59375,
+          "height": 182.03125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 103.59375,
+          "height": 182.03125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 103.59375,
+          "height": 182.03125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 103.59375,
+          "height": 182.03125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "photo",
+      "preset": 2,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 85.09375,
+          "height": 135.40625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 85.09375,
+          "height": 135.40625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 85.09375,
+          "height": 135.40625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 85.09375,
+          "height": 135.40625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 85.09375,
+          "height": 135.40625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 85.09375,
+          "height": 135.40625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "photo",
+      "preset": 2,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "photo",
+      "preset": 2,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 114.6875,
+          "height": 182.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 114.6875,
+          "height": 182.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 114.6875,
+          "height": 182.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 114.6875,
+          "height": 182.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 114.6875,
+          "height": 182.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 114.6875,
+          "height": 182.515625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "photo",
+      "preset": 3,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 86.8125,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 86.8125,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 86.8125,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 86.8125,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 86.8125,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 86.8125,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "photo",
+      "preset": 3,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 55.25,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.25,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 55.25,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.25,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 55.25,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 55.25,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "photo",
+      "preset": 3,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 118.390625,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 118.390625,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 118.390625,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 118.390625,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 118.390625,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 118.390625,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "nes",
+      "preset": 0,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 74,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 74,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 74,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 74,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 74,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 74,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "nes",
+      "preset": 0,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 55.5,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 55.5,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "nes",
+      "preset": 0,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 92.5,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 92.5,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 92.5,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 92.5,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 92.5,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 92.5,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "nes",
+      "preset": 1,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 97.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 97.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 97.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 97.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 55.5,
+          "height": 97.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 55.5,
+          "height": 97.515625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "nes",
+      "preset": 1,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 37,
+          "height": 65,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 37,
+          "height": 65,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 37,
+          "height": 65,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 37,
+          "height": 65,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 37,
+          "height": 65,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 37,
+          "height": 65,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "nes",
+      "preset": 1,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 74,
+          "height": 130.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 74,
+          "height": 130.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 74,
+          "height": 130.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 74,
+          "height": 130.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 74,
+          "height": 130.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 74,
+          "height": 130.015625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "nes",
+      "preset": 2,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 74,
+          "height": 117.75,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 74,
+          "height": 117.75,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 74,
+          "height": 117.75,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 74,
+          "height": 117.75,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 74,
+          "height": 117.75,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 74,
+          "height": 117.75,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "nes",
+      "preset": 2,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "nes",
+      "preset": 2,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 92.5,
+          "height": 147.1875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 92.5,
+          "height": 147.1875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 92.5,
+          "height": 147.1875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 92.5,
+          "height": 147.1875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 92.5,
+          "height": 147.1875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 92.5,
+          "height": 147.1875,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "nes",
+      "preset": 3,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 78.921875,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 78.921875,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 78.921875,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 78.921875,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 78.921875,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 78.921875,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "nes",
+      "preset": 3,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 59.1875,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 59.1875,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 59.1875,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 59.1875,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 59.1875,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 59.1875,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": false,
+      "mode": "nes",
+      "preset": 3,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 98.65625,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 98.65625,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 98.65625,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 98.65625,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 98.65625,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 98.65625,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "photo",
+      "preset": 0,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 81.390625,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 81.390625,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 81.390625,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 81.390625,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 81.390625,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 81.390625,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "photo",
+      "preset": 0,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 51.796875,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 51.796875,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 51.796875,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 51.796875,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 51.796875,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 51.796875,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "photo",
+      "preset": 0,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 111,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 111,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 111,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 111,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 111,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 111,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "photo",
+      "preset": 1,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 77.6875,
+          "height": 136.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 77.6875,
+          "height": 136.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 77.6875,
+          "height": 136.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 77.6875,
+          "height": 136.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 77.6875,
+          "height": 136.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 77.6875,
+          "height": 136.515625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "photo",
+      "preset": 1,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 51.796875,
+          "height": 91.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 51.796875,
+          "height": 91.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 51.796875,
+          "height": 91.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 51.796875,
+          "height": 91.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 51.796875,
+          "height": 91.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 51.796875,
+          "height": 91.015625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "photo",
+      "preset": 1,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 103.59375,
+          "height": 182.03125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 103.59375,
+          "height": 182.03125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 103.59375,
+          "height": 182.03125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 103.59375,
+          "height": 182.03125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 103.59375,
+          "height": 182.03125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 103.59375,
+          "height": 182.03125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "photo",
+      "preset": 2,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 85.09375,
+          "height": 135.40625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 85.09375,
+          "height": 135.40625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 85.09375,
+          "height": 135.40625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 85.09375,
+          "height": 135.40625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 85.09375,
+          "height": 135.40625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 85.09375,
+          "height": 135.40625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "photo",
+      "preset": 2,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "photo",
+      "preset": 2,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 114.6875,
+          "height": 182.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 114.6875,
+          "height": 182.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 114.6875,
+          "height": 182.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 114.6875,
+          "height": 182.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 114.6875,
+          "height": 182.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 114.6875,
+          "height": 182.515625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "photo",
+      "preset": 3,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 86.8125,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 86.8125,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 86.8125,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 86.8125,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 86.8125,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 86.8125,
+          "height": 132.21875,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "photo",
+      "preset": 3,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 55.25,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.25,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 55.25,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.25,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 55.25,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 55.25,
+          "height": 84.140625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "photo",
+      "preset": 3,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 118.390625,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 118.390625,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 118.390625,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 118.390625,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 118.390625,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 118.390625,
+          "height": 180.3125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "nes",
+      "preset": 0,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 74,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 74,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 74,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 74,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 74,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 74,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "nes",
+      "preset": 0,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 55.5,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 55.5,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "nes",
+      "preset": 0,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 92.5,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 92.5,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 92.5,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 92.5,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 92.5,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 92.5,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "nes",
+      "preset": 1,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 97.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 97.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 97.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 97.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 55.5,
+          "height": 97.515625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 55.5,
+          "height": 97.515625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "nes",
+      "preset": 1,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 37,
+          "height": 65,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 37,
+          "height": 65,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 37,
+          "height": 65,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 37,
+          "height": 65,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 37,
+          "height": 65,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 37,
+          "height": 65,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "nes",
+      "preset": 1,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 74,
+          "height": 130.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 74,
+          "height": 130.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 74,
+          "height": 130.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 74,
+          "height": 130.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 74,
+          "height": 130.015625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 74,
+          "height": 130.015625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "nes",
+      "preset": 2,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 74,
+          "height": 117.75,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 74,
+          "height": 117.75,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 74,
+          "height": 117.75,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 74,
+          "height": 117.75,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 74,
+          "height": 117.75,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 74,
+          "height": 117.75,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "nes",
+      "preset": 2,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 55.5,
+          "height": 88.3125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "nes",
+      "preset": 2,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 92.5,
+          "height": 147.1875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 92.5,
+          "height": 147.1875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 92.5,
+          "height": 147.1875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 92.5,
+          "height": 147.1875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 92.5,
+          "height": 147.1875,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 92.5,
+          "height": 147.1875,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "nes",
+      "preset": 3,
+      "size": 100,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 78.921875,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 78.921875,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 78.921875,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 78.921875,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 78.921875,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 78.921875,
+          "height": 120.203125,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "nes",
+      "preset": 3,
+      "size": 65,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 59.1875,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 59.1875,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 59.1875,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 59.1875,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 59.1875,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 59.1875,
+          "height": 90.15625,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    },
+    {
+      "nested": true,
+      "mode": "nes",
+      "preset": 3,
+      "size": 135,
+      "gestures": [
+        {
+          "case": "deselect-outer",
+          "width": 98.65625,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 98.65625,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-outer",
+          "width": 98.65625,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "deselect-background",
+          "width": 98.65625,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-page-freeze-resume",
+          "width": 98.65625,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        },
+        {
+          "case": "after-other-tab",
+          "width": 98.65625,
+          "height": 150.25,
+          "moved_live": true,
+          "committed": true
+        }
+      ]
+    }
+  ],
+  "gesture_attempts": 288,
+  "errors": [],
+  "child_frame_network_requests": [],
+  "failure": null,
+  "scope": "Linux Chromium Pixel 7 emulation; one/two opaque-origin sandbox allow-scripts srcdoc levels; four actual preset choices, three native actor sizes, no stickers. Does not reproduce a physical Android/Arena session.",
+  "_audit_provenance": {
+    "original_sha256": "8dede0c312aa6998804d736ec69123f275551b42ce9805bbae48f1d02831b860",
+    "report_file_written_at_workspace_utc": "2026-11-28T06:04:12.441639+00:00",
+    "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+    "original_hardcoded_date": "2026-11-27",
+    "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+  }
+}

@@ -1,0 +1,13 @@
+--- a/web/static/app.js
++++ b/web/static/app.js
+@@ -317,8 +317,8 @@
+       $('#final-preview').src=data.image;
+       await $('#final-preview').decode();
+       if(seq===previewSeq&&epoch===state.epoch){await editor.setPreview(data);$('#btn-export').disabled=false;}
+-    }catch(e){if(e.name!=='AbortError'){editor.failed();notify(e.message,true);}}
+-    finally{if(seq===previewSeq&&epoch===state.epoch)$('#preview-loading').hidden=true;}
++    }catch(e){if(seq===previewSeq&&epoch===state.epoch&&!ctl.signal.aborted&&e.name!=='AbortError'){editor.failed();notify(e.message,true);}}
++    finally{if(seq===previewSeq&&epoch===state.epoch){editor.setRendering(false);$('#preview-loading').hidden=true;}}
+   }
+   $('#btn-back-edit').addEventListener('click',()=>showStep(3));
+   $('#btn-export').addEventListener('click',async()=>{

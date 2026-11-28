@@ -1,0 +1,35 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "seconds": 5.44,
+  "scope": "Optional HTTP/Pillow kiosk only. Deliberate stale image.decode error, not physical Android trigger or portable/Arena reproduction.",
+  "source_sha256": "ac4bd34061c714ee62e59d674fcbaf5c534fc0de02a35fa95f3a483b556e0069",
+  "checks": [
+    {
+      "candidate": false,
+      "observed": {
+        "rendering": false,
+        "failed_calls": 1,
+        "loading": true,
+        "status": true,
+        "latest_src_retained": true
+      },
+      "result": "PASS",
+      "meaning": "Ownership defect reproduced under controlled stale-decode rejection"
+    },
+    {
+      "candidate": true,
+      "observed": {
+        "rendering": true,
+        "failed_calls": 0,
+        "loading": true,
+        "status": false,
+        "latest_src_retained": true
+      },
+      "result": "PASS",
+      "meaning": "Stale-error isolation verified"
+    }
+  ],
+  "errors": [],
+  "failure": null
+}

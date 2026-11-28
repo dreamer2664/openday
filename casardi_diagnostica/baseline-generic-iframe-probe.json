@@ -1,0 +1,15 @@
+{
+  "results": [
+    {
+      "mode": "photo",
+      "result": "NO FREEZE",
+      "gestures": 30
+    },
+    {
+      "mode": "nes",
+      "result": "NO FREEZE",
+      "gestures": 30
+    }
+  ],
+  "errors": []
+}

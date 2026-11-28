@@ -1,0 +1,21 @@
+{
+  "executed_at_workspace_utc": "2026-11-28T06:41:28.732659+00:00",
+  "python": "3.13.18",
+  "node": "20.20.2",
+  "chromium": "159.0.8154.6 (Playwright build 1255)",
+  "go": "go1.27.4 linux/amd64",
+  "platform": "Linux-6.1.189+-x86_64-with-glibc2.41",
+  "packages": {
+    "playwright": "1.65.2",
+    "Pillow": "13.0.0",
+    "fonttools": "4.69.1",
+    "Flask": "3.1.3",
+    "qrcode": "8.2",
+    "waitress": "3.0.2"
+  },
+  "_audit_provenance": {
+    "original_sha256": "cf54c7ae0b8c48eb31db7efc59d4e61744a51ac1e44534d4d4484f1fd5ac76ee",
+    "report_file_written_at_workspace_utc": "2026-11-28T06:41:28.757639+00:00",
+    "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+  }
+}

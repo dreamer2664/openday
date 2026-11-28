@@ -1,0 +1,11 @@
+{
+  "version": "go1.27.4",
+  "file": "go1.27.4.linux-amd64.tar.gz",
+  "sha256": "7226736c2339719cda28fbf3a54d71aa63bcefe376e98cef00034268dab24840",
+  "source": "https://go.dev/dl/?mode=json",
+  "_audit_provenance": {
+    "original_sha256": "f3ed73150f4d7c0ccb484cc5b9b4d03d59c3cf8104ec57f14726fcf292aca18f",
+    "report_file_written_at_workspace_utc": "2026-11-28T06:28:22.345639+00:00",
+    "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+  }
+}

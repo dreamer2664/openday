@@ -1,0 +1,268 @@
+{
+  "results": [
+    {
+      "mode": "photo",
+      "result": "No freeze",
+      "trials": 36,
+      "trace_tail": [
+        {
+          "t": "pointermove",
+          "id": 85,
+          "pt": "touch",
+          "btn": 1,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": false,
+            "drag": {
+              "kind": "actor",
+              "id": 85,
+              "moved": true
+            },
+            "actor": {
+              "x": 307,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 285,
+              "y": 351,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointermove",
+          "id": 85,
+          "pt": "touch",
+          "btn": 1,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": false,
+            "drag": {
+              "kind": "actor",
+              "id": 85,
+              "moved": true
+            },
+            "actor": {
+              "x": 307,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 281,
+              "y": 353,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointermove",
+          "id": 85,
+          "pt": "touch",
+          "btn": 1,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": false,
+            "drag": {
+              "kind": "actor",
+              "id": 85,
+              "moved": true
+            },
+            "actor": {
+              "x": 307,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "id": 85,
+          "pt": "touch",
+          "btn": 0,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 307,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "lostpointercapture",
+          "id": 85,
+          "pt": "touch",
+          "btn": 0,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 307,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "mode": "nes",
+      "result": "No freeze",
+      "trials": 36,
+      "trace_tail": [
+        {
+          "t": "pointermove",
+          "id": 85,
+          "pt": "touch",
+          "btn": 1,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": false,
+            "drag": {
+              "kind": "actor",
+              "id": 85,
+              "moved": true
+            },
+            "actor": {
+              "x": 301,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 279,
+              "y": 351,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointermove",
+          "id": 85,
+          "pt": "touch",
+          "btn": 1,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": false,
+            "drag": {
+              "kind": "actor",
+              "id": 85,
+              "moved": true
+            },
+            "actor": {
+              "x": 301,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 275,
+              "y": 353,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointermove",
+          "id": 85,
+          "pt": "touch",
+          "btn": 1,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": false,
+            "drag": {
+              "kind": "actor",
+              "id": 85,
+              "moved": true
+            },
+            "actor": {
+              "x": 301,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 272,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "id": 85,
+          "pt": "touch",
+          "btn": 0,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 301,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 272,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "lostpointercapture",
+          "id": 85,
+          "pt": "touch",
+          "btn": 0,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 301,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 272,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "_audit_provenance": {
+    "original_sha256": "a5e61d6b1bfd26423291bcbc326d061be22c5f1300fea7466db8affa25d3df00",
+    "report_file_written_at_workspace_utc": "2026-11-28T05:48:30.953640+00:00",
+    "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+  }
+}

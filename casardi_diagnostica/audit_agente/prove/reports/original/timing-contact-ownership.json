@@ -1,0 +1,899 @@
+{
+  "result": "PASS",
+  "analysed_at_workspace_utc": "2026-11-28T07:08:30.675319+00:00",
+  "scope": "Reanalysis of stored minimally instrumented Linux Chromium touch traces, not new gestures. Event target/flag/model observation; no conclusion about the original physical-device failure.",
+  "finding": "Seven second contacts began on visible preview-loading. Even after it was hidden and rendering false, 26 subsequent pointermoves still targeted preview-loading with drag unset. Pointerup and lostpointercapture arrived there at contact end. Thus finishing the preview does not rescue a contact that began on the blocker.",
+  "causal_boundary": "Demonstrated readiness/target-ownership failure for the WHOLE affected contact; not a permanent deadlock across new contacts. Does not identify the source of the user-described blue square.",
+  "results": {
+    "timing-probe.json": {
+      "input_sha256": "5bff3d56808ecf69b35e5a591aae4e056ad184b6dc20c47b65bd9e8709e6309d",
+      "second_contact_attempts": 36,
+      "model_unchanged_contacts": 7,
+      "lost_contacts_with_movements_targeting_hidden_overlay_after_ready": 7,
+      "total_pointermoves_targeting_hidden_overlay_after_ready": 26,
+      "lost_contacts": [
+        {
+          "mode": "photo",
+          "cpu_rate": 1,
+          "trial": 1,
+          "pointer_id": 13,
+          "second_pointerdown_target": "preview-loading",
+          "model_changed": false,
+          "second_pointerdown_loading": true,
+          "second_pointerdown_rendering": true,
+          "pointermoves": 4,
+          "pointermoves_observed_after_ready": 4,
+          "pointermove_targets_after_ready": [
+            "preview-loading",
+            "preview-loading",
+            "preview-loading",
+            "preview-loading"
+          ],
+          "final_state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "meta": {
+              "actor": {
+                "x": 459,
+                "y": 371,
+                "scale": 100
+              },
+              "character": {
+                "x": 393,
+                "y": 155.39999999999998,
+                "w": 132,
+                "h": 215.60000000000002,
+                "scale": 4.4,
+                "cx": 459,
+                "ground": 371
+              }
+            },
+            "model": {
+              "x": 459,
+              "y": 371,
+              "scale": 100
+            }
+          },
+          "sequence": [
+            {
+              "t": "pointerdown",
+              "at": 2948.100000000093,
+              "id": 13,
+              "x": 304.0390625,
+              "y": 467.984375,
+              "target": "preview-loading",
+              "rendering": true,
+              "drag": null,
+              "loading": true
+            },
+            {
+              "t": "pointermove",
+              "at": 3001,
+              "id": 13,
+              "x": 300.5390625,
+              "y": 468.734375,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 3034.3000000000466,
+              "id": 13,
+              "x": 297.0390625,
+              "y": 469.484375,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 3067.600000000093,
+              "id": 13,
+              "x": 293.5390625,
+              "y": 470.234375,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 3101,
+              "id": 13,
+              "x": 290.0390625,
+              "y": 470.984375,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointerup",
+              "at": 3118.20000000007,
+              "id": 13,
+              "x": 290.0390625,
+              "y": 470.984375,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "lostpointercapture",
+              "at": 3118.3000000000466,
+              "id": 13,
+              "x": 290.0390625,
+              "y": 470.984375,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            }
+          ],
+          "minimum_contact_time_observed_ineffective_after_ready_ms": 117.2,
+          "capture_loss_observed_only_at_end": true
+        },
+        {
+          "mode": "photo",
+          "cpu_rate": 1,
+          "trial": 2,
+          "pointer_id": 16,
+          "second_pointerdown_target": "preview-loading",
+          "model_changed": false,
+          "second_pointerdown_loading": true,
+          "second_pointerdown_rendering": true,
+          "pointermoves": 4,
+          "pointermoves_observed_after_ready": 4,
+          "pointermove_targets_after_ready": [
+            "preview-loading",
+            "preview-loading",
+            "preview-loading",
+            "preview-loading"
+          ],
+          "final_state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "meta": {
+              "actor": {
+                "x": 482,
+                "y": 366,
+                "scale": 100
+              },
+              "character": {
+                "x": 416,
+                "y": 150.39999999999998,
+                "w": 132,
+                "h": 215.60000000000002,
+                "scale": 4.4,
+                "cx": 482,
+                "ground": 366
+              }
+            },
+            "model": {
+              "x": 482,
+              "y": 366,
+              "scale": 100
+            }
+          },
+          "sequence": [
+            {
+              "t": "pointerdown",
+              "at": 3466.5,
+              "id": 16,
+              "x": 318.2265625,
+              "y": 464.921875,
+              "target": "preview-loading",
+              "rendering": true,
+              "drag": null,
+              "loading": true
+            },
+            {
+              "t": "pointermove",
+              "at": 3517.70000000007,
+              "id": 16,
+              "x": 314.7265625,
+              "y": 465.671875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 3551,
+              "id": 16,
+              "x": 311.2265625,
+              "y": 466.421875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 3584.3000000000466,
+              "id": 16,
+              "x": 307.7265625,
+              "y": 467.171875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 3617.70000000007,
+              "id": 16,
+              "x": 304.2265625,
+              "y": 467.921875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointerup",
+              "at": 3634.8000000000466,
+              "id": 16,
+              "x": 304.2265625,
+              "y": 467.921875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "lostpointercapture",
+              "at": 3634.9000000000233,
+              "id": 16,
+              "x": 304.2265625,
+              "y": 467.921875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            }
+          ],
+          "minimum_contact_time_observed_ineffective_after_ready_ms": 117.1,
+          "capture_loss_observed_only_at_end": true
+        },
+        {
+          "mode": "photo",
+          "cpu_rate": 1,
+          "trial": 3,
+          "pointer_id": 19,
+          "second_pointerdown_target": "preview-loading",
+          "model_changed": false,
+          "second_pointerdown_loading": true,
+          "second_pointerdown_rendering": true,
+          "pointermoves": 4,
+          "pointermoves_observed_after_ready": 3,
+          "pointermove_targets_after_ready": [
+            "preview-loading",
+            "preview-loading",
+            "preview-loading"
+          ],
+          "final_state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "meta": {
+              "actor": {
+                "x": 505,
+                "y": 361,
+                "scale": 100
+              },
+              "character": {
+                "x": 439,
+                "y": 145.39999999999998,
+                "w": 132,
+                "h": 215.60000000000002,
+                "scale": 4.4,
+                "cx": 505,
+                "ground": 361
+              }
+            },
+            "model": {
+              "x": 505,
+              "y": 361,
+              "scale": 100
+            }
+          },
+          "sequence": [
+            {
+              "t": "pointerdown",
+              "at": 3916.70000000007,
+              "id": 19,
+              "x": 332.3984375,
+              "y": 461.859375,
+              "target": "preview-loading",
+              "rendering": true,
+              "drag": null,
+              "loading": true
+            },
+            {
+              "t": "pointermove",
+              "at": 3950.8000000000466,
+              "id": 19,
+              "x": 328.8984375,
+              "y": 462.609375,
+              "target": "preview-loading",
+              "rendering": true,
+              "drag": null,
+              "loading": true
+            },
+            {
+              "t": "pointermove",
+              "at": 4091.70000000007,
+              "id": 19,
+              "x": 325.3984375,
+              "y": 463.359375,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 4134.100000000093,
+              "id": 19,
+              "x": 321.8984375,
+              "y": 464.109375,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 4167.5,
+              "id": 19,
+              "x": 318.3984375,
+              "y": 464.859375,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointerup",
+              "at": 4184.600000000093,
+              "id": 19,
+              "x": 318.3984375,
+              "y": 464.859375,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "lostpointercapture",
+              "at": 4184.70000000007,
+              "id": 19,
+              "x": 318.3984375,
+              "y": 464.859375,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            }
+          ],
+          "minimum_contact_time_observed_ineffective_after_ready_ms": 92.9,
+          "capture_loss_observed_only_at_end": true
+        },
+        {
+          "mode": "photo",
+          "cpu_rate": 1,
+          "trial": 4,
+          "pointer_id": 22,
+          "second_pointerdown_target": "preview-loading",
+          "model_changed": false,
+          "second_pointerdown_loading": true,
+          "second_pointerdown_rendering": true,
+          "pointermoves": 4,
+          "pointermoves_observed_after_ready": 4,
+          "pointermove_targets_after_ready": [
+            "preview-loading",
+            "preview-loading",
+            "preview-loading",
+            "preview-loading"
+          ],
+          "final_state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "meta": {
+              "actor": {
+                "x": 522,
+                "y": 356,
+                "scale": 100
+              },
+              "character": {
+                "x": 456,
+                "y": 140.39999999999998,
+                "w": 132,
+                "h": 215.60000000000002,
+                "scale": 4.4,
+                "cx": 522,
+                "ground": 356
+              }
+            },
+            "model": {
+              "x": 522,
+              "y": 356,
+              "scale": 100
+            }
+          },
+          "sequence": [
+            {
+              "t": "pointerdown",
+              "at": 4552,
+              "id": 22,
+              "x": 342.8828125,
+              "y": 458.796875,
+              "target": "preview-loading",
+              "rendering": true,
+              "drag": null,
+              "loading": true
+            },
+            {
+              "t": "pointermove",
+              "at": 4584.100000000093,
+              "id": 22,
+              "x": 339.3828125,
+              "y": 459.546875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 4617.600000000093,
+              "id": 22,
+              "x": 335.8828125,
+              "y": 460.296875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 4650.900000000023,
+              "id": 22,
+              "x": 332.3828125,
+              "y": 461.046875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 4684.20000000007,
+              "id": 22,
+              "x": 328.8828125,
+              "y": 461.796875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointerup",
+              "at": 4701.5,
+              "id": 22,
+              "x": 328.8828125,
+              "y": 461.796875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "lostpointercapture",
+              "at": 4701.600000000093,
+              "id": 22,
+              "x": 328.8828125,
+              "y": 461.796875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            }
+          ],
+          "minimum_contact_time_observed_ineffective_after_ready_ms": 117.4,
+          "capture_loss_observed_only_at_end": true
+        },
+        {
+          "mode": "nes",
+          "cpu_rate": 1,
+          "trial": 0,
+          "pointer_id": 10,
+          "second_pointerdown_target": "preview-loading",
+          "model_changed": false,
+          "second_pointerdown_loading": true,
+          "second_pointerdown_rendering": true,
+          "pointermoves": 4,
+          "pointermoves_observed_after_ready": 4,
+          "pointermove_targets_after_ready": [
+            "preview-loading",
+            "preview-loading",
+            "preview-loading",
+            "preview-loading"
+          ],
+          "final_state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "meta": {
+              "actor": {
+                "x": 447,
+                "y": 367,
+                "scale": 100
+              },
+              "character": {
+                "x": 387,
+                "y": 171,
+                "w": 120,
+                "h": 196,
+                "scale": 4,
+                "cx": 447,
+                "ground": 367
+              }
+            },
+            "model": {
+              "x": 447,
+              "y": 367,
+              "scale": 100
+            }
+          },
+          "sequence": [
+            {
+              "t": "pointerdown",
+              "at": 1769.5,
+              "id": 10,
+              "x": 296.640625,
+              "y": 471.5546875,
+              "target": "preview-loading",
+              "rendering": true,
+              "drag": null,
+              "loading": true
+            },
+            {
+              "t": "pointermove",
+              "at": 1806.5,
+              "id": 10,
+              "x": 293.140625,
+              "y": 472.3046875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 1839.9000000000233,
+              "id": 10,
+              "x": 289.640625,
+              "y": 473.0546875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 1873.2000000000698,
+              "id": 10,
+              "x": 286.140625,
+              "y": 473.8046875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 1906.5999999999767,
+              "id": 10,
+              "x": 282.640625,
+              "y": 474.5546875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointerup",
+              "at": 1923.5,
+              "id": 10,
+              "x": 282.640625,
+              "y": 474.5546875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "lostpointercapture",
+              "at": 1923.5999999999767,
+              "id": 10,
+              "x": 282.640625,
+              "y": 474.5546875,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            }
+          ],
+          "minimum_contact_time_observed_ineffective_after_ready_ms": 117.0,
+          "capture_loss_observed_only_at_end": true
+        },
+        {
+          "mode": "nes",
+          "cpu_rate": 1,
+          "trial": 1,
+          "pointer_id": 13,
+          "second_pointerdown_target": "preview-loading",
+          "model_changed": false,
+          "second_pointerdown_loading": true,
+          "second_pointerdown_rendering": true,
+          "pointermoves": 4,
+          "pointermoves_observed_after_ready": 3,
+          "pointermove_targets_after_ready": [
+            "preview-loading",
+            "preview-loading",
+            "preview-loading"
+          ],
+          "final_state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "meta": {
+              "actor": {
+                "x": 470,
+                "y": 362,
+                "scale": 100
+              },
+              "character": {
+                "x": 410,
+                "y": 166,
+                "w": 120,
+                "h": 196,
+                "scale": 4,
+                "cx": 470,
+                "ground": 362
+              }
+            },
+            "model": {
+              "x": 470,
+              "y": 362,
+              "scale": 100
+            }
+          },
+          "sequence": [
+            {
+              "t": "pointerdown",
+              "at": 2158.5999999999767,
+              "id": 13,
+              "x": 310.828125,
+              "y": 468.4765625,
+              "target": "preview-loading",
+              "rendering": true,
+              "drag": null,
+              "loading": true
+            },
+            {
+              "t": "pointermove",
+              "at": 2189.9000000000233,
+              "id": 13,
+              "x": 307.328125,
+              "y": 469.2265625,
+              "target": "preview-loading",
+              "rendering": true,
+              "drag": null,
+              "loading": true
+            },
+            {
+              "t": "pointermove",
+              "at": 2239.9000000000233,
+              "id": 13,
+              "x": 303.828125,
+              "y": 469.9765625,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 2273.20000000007,
+              "id": 13,
+              "x": 300.328125,
+              "y": 470.7265625,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 2306.5999999999767,
+              "id": 13,
+              "x": 296.828125,
+              "y": 471.4765625,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointerup",
+              "at": 2323.5999999999767,
+              "id": 13,
+              "x": 296.828125,
+              "y": 471.4765625,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "lostpointercapture",
+              "at": 2323.5999999999767,
+              "id": 13,
+              "x": 296.828125,
+              "y": 471.4765625,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            }
+          ],
+          "minimum_contact_time_observed_ineffective_after_ready_ms": 83.7,
+          "capture_loss_observed_only_at_end": true
+        },
+        {
+          "mode": "nes",
+          "cpu_rate": 1,
+          "trial": 5,
+          "pointer_id": 25,
+          "second_pointerdown_target": "preview-loading",
+          "model_changed": false,
+          "second_pointerdown_loading": true,
+          "second_pointerdown_rendering": true,
+          "pointermoves": 4,
+          "pointermoves_observed_after_ready": 4,
+          "pointermove_targets_after_ready": [
+            "preview-loading",
+            "preview-loading",
+            "preview-loading",
+            "preview-loading"
+          ],
+          "final_state": {
+            "busy": false,
+            "rendering": false,
+            "drag": null,
+            "meta": {
+              "actor": {
+                "x": 493,
+                "y": 357,
+                "scale": 100
+              },
+              "character": {
+                "x": 433,
+                "y": 161,
+                "w": 120,
+                "h": 196,
+                "scale": 4,
+                "cx": 493,
+                "ground": 357
+              }
+            },
+            "model": {
+              "x": 493,
+              "y": 357,
+              "scale": 100
+            }
+          },
+          "sequence": [
+            {
+              "t": "pointerdown",
+              "at": 4014.3000000000466,
+              "id": 25,
+              "x": 325.015625,
+              "y": 465.4140625,
+              "target": "preview-loading",
+              "rendering": true,
+              "drag": null,
+              "loading": true
+            },
+            {
+              "t": "pointermove",
+              "at": 4039.8000000000466,
+              "id": 25,
+              "x": 321.515625,
+              "y": 466.1640625,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 4073.0999999999767,
+              "id": 25,
+              "x": 318.015625,
+              "y": 466.9140625,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 4106.5,
+              "id": 25,
+              "x": 314.515625,
+              "y": 467.6640625,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointermove",
+              "at": 4139.800000000047,
+              "id": 25,
+              "x": 311.015625,
+              "y": 468.4140625,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "pointerup",
+              "at": 4156.800000000047,
+              "id": 25,
+              "x": 311.015625,
+              "y": 468.4140625,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            },
+            {
+              "t": "lostpointercapture",
+              "at": 4156.800000000047,
+              "id": 25,
+              "x": 311.015625,
+              "y": 468.4140625,
+              "target": "preview-loading",
+              "rendering": false,
+              "drag": null,
+              "loading": false
+            }
+          ],
+          "minimum_contact_time_observed_ineffective_after_ready_ms": 117.0,
+          "capture_loss_observed_only_at_end": true
+        }
+      ]
+    },
+    "canvas-timing-probe.json": {
+      "input_sha256": "e13e2f51ff27442fab01392fad93b2435f919bc2cb50d5ed5a04d3f88c3e963e",
+      "second_contact_attempts": 36,
+      "model_unchanged_contacts": 0,
+      "lost_contacts_with_movements_targeting_hidden_overlay_after_ready": 0,
+      "total_pointermoves_targeting_hidden_overlay_after_ready": 0,
+      "lost_contacts": []
+    }
+  }
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "file": "audit_integrity.py",
+    "changes": [
+      "Replace hardcoded date metadata with dynamic workspace UTC date; no test-logic change"
+    ],
+    "original_sha256": "cbd73c5f69cfdf657650accf5c42cb8e9845afdae9200e7703ea9a2291e06113",
+    "adapted_sha256": "74a96d1439ff910b8f2da900674695a020cbb41d3f3d3e2cd6d270be4911f45a",
+    "adaptation_only_not_rerun": true
+  },
+  {
+    "file": "browser_geometry_envelope.js",
+    "changes": [
+      "Replace hardcoded date metadata with dynamic workspace UTC date"
+    ],
+    "original_sha256": "c0714c80080cce0663c3ee2c6ec37709edc845681b87fc32a1c1492ee0200e2f",
+    "adapted_sha256": "c893db970994479e3066b17bdbbedeb2e0728eaad8253f2b13e46aa45553b86e",
+    "adaptation_only_not_rerun": true
+  },
+  {
+    "file": "canvas_embedding_test.py",
+    "changes": [
+      "Replace hardcoded date metadata with dynamic workspace UTC date; no test-logic change",
+      "Clarify inherited docstring: experiment is not pristine production HTML"
+    ],
+    "original_sha256": "0ccab94218af68c6e075b2d383d494d2db3102ac6b5a86ae0fecb0383c581ce5",
+    "adapted_sha256": "74cbd4632b9903e7db75de53f534035fd59b846d7b92910a30efb5129020df32",
+    "adaptation_only_not_rerun": true
+  },
+  {
+    "file": "canvas_pixel_qa.py",
+    "changes": [
+      "Replace hardcoded date metadata with dynamic workspace UTC date; no test-logic change"
+    ],
+    "original_sha256": "c5d9ddac3e7dc08ea6852342f26b7e58f0a5892c2ec13d563090f7bdd2a86c62",
+    "adapted_sha256": "1ec2f2754b9979c62cf711e786de4c5755c807b862386a0263a7a27148689de4",
+    "adaptation_only_not_rerun": true
+  },
+  {
+    "file": "canvas_race_qa.py",
+    "changes": [
+      "Replace hardcoded date metadata with dynamic workspace UTC date; no test-logic change"
+    ],
+    "original_sha256": "12e06f380b179d98d964082f1a75df299a76d16da943ab25702f4410e538d6bd",
+    "adapted_sha256": "15e8f52325d54b2abcb5ca4280053079d8109bad48a9e6d4ff2c5823b2109828",
+    "adaptation_only_not_rerun": true
+  },
+  {
+    "file": "geometry_envelope_probe.py",
+    "changes": [
+      "Replace hardcoded date metadata with dynamic workspace UTC date; no test-logic change"
+    ],
+    "original_sha256": "a1e7dadc1f73a5e5e8be83c320d5db2ffca08e0ebdeee2f318e9935b290a81f2",
+    "adapted_sha256": "886ac65df56ea8fbd2967121a6d8d640291a4253ee4f568bcda1fc82383bf23d",
+    "adaptation_only_not_rerun": true
+  },
+  {
+    "file": "kiosk_ownership_probe.py",
+    "changes": [
+      "Replace hardcoded date metadata with dynamic workspace UTC date; no test-logic change"
+    ],
+    "original_sha256": "a1c85cfe8f0f362eca847d5857332276b43729fd786549f040459074843a0d55",
+    "adapted_sha256": "9c1dcc08595c7e2e0446bb59fb79a4e87252ab68bcd381af08662f766a36040e",
+    "adaptation_only_not_rerun": true
+  },
+  {
+    "file": "native_embedding_edges.py",
+    "changes": [
+      "Replace hardcoded date metadata with dynamic workspace UTC date; no test-logic change"
+    ],
+    "original_sha256": "9afc2066f43916f34fbb9f05b15fdc0d9bf64d9e18c2f0ed57d243e81e49f3b2",
+    "adapted_sha256": "343406e899a1774c5ea66e9b86b1df11ec8d89e71445a76ba983a1e53ea45cca",
+    "adaptation_only_not_rerun": true
+  },
+  {
+    "file": "pristine_embedding_test.py",
+    "changes": [
+      "Replace hardcoded date metadata with dynamic workspace UTC date; no test-logic change"
+    ],
+    "original_sha256": "1de1d7220ed2e3145cdd3f7b50700944ef28565cff96dc4f2ae41777cdd94cc5",
+    "adapted_sha256": "3ae9f5d259eb0e5842078d57afd17f9cfbcb40eae590b516758a31323993abe5",
+    "adaptation_only_not_rerun": true
+  },
+  {
+    "file": "source_check.py",
+    "changes": [
+      "Replace hardcoded date metadata with dynamic workspace UTC date; no test-logic change"
+    ],
+    "original_sha256": "596800724d456425559d6df8eb0162f0476c9d5e431bff64a306f448cd6b1565",
+    "adapted_sha256": "52b0e985e5d214b4bb47e59722c18cfdbabe377cdf93ff0351ea6b2b8164a23a",
+    "adaptation_only_not_rerun": true
+  }
+]

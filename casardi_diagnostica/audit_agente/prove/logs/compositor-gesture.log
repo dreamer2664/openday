@@ -1,0 +1,119 @@
+PASS headless-shell/production/photo/preset0 three held gestures, including inner/outer deselect
+PASS headless-shell/production/photo/preset1 three held gestures, including inner/outer deselect
+PASS headless-shell/production/photo/preset2 three held gestures, including inner/outer deselect
+PASS headless-shell/production/photo/preset3 three held gestures, including inner/outer deselect
+PASS headless-shell/production/nes/preset0 three held gestures, including inner/outer deselect
+PASS headless-shell/production/nes/preset1 three held gestures, including inner/outer deselect
+PASS headless-shell/production/nes/preset2 three held gestures, including inner/outer deselect
+PASS headless-shell/production/nes/preset3 three held gestures, including inner/outer deselect
+PASS headless-shell/A1/photo/preset0 three held gestures, including inner/outer deselect
+PASS headless-shell/A1/photo/preset1 three held gestures, including inner/outer deselect
+PASS headless-shell/A1/photo/preset2 three held gestures, including inner/outer deselect
+PASS headless-shell/A1/photo/preset3 three held gestures, including inner/outer deselect
+PASS headless-shell/A1/nes/preset0 three held gestures, including inner/outer deselect
+PASS headless-shell/A1/nes/preset1 three held gestures, including inner/outer deselect
+PASS headless-shell/A1/nes/preset2 three held gestures, including inner/outer deselect
+PASS headless-shell/A1/nes/preset3 three held gestures, including inner/outer deselect
+PASS headless-shell/Canvas/photo/preset0 three held gestures, including inner/outer deselect
+PASS headless-shell/Canvas/photo/preset1 three held gestures, including inner/outer deselect
+PASS headless-shell/Canvas/photo/preset2 three held gestures, including inner/outer deselect
+PASS headless-shell/Canvas/photo/preset3 three held gestures, including inner/outer deselect
+PASS headless-shell/Canvas/nes/preset0 three held gestures, including inner/outer deselect
+PASS headless-shell/Canvas/nes/preset1 three held gestures, including inner/outer deselect
+PASS headless-shell/Canvas/nes/preset2 three held gestures, including inner/outer deselect
+PASS headless-shell/Canvas/nes/preset3 three held gestures, including inner/outer deselect
+Traceback (most recent call last):
+  File "/home/user/.cache/casardi-rootcause/compositor_gesture_qa.py", line 49, in main
+    await f.locator('#start').tap();await f.locator('[data-mode='+mode+']').tap();await f.locator('[data-scene=pantheon]').tap();await f.locator('#next').tap();await f.locator('.preset-grid button').nth(preset).tap();await f.locator('#next').tap();await f.locator('#next').tap()
+                                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/playwright/async_api/_generated.py", line 13403, in tap
+    await self._impl_obj.tap(
+    ...<7 lines>...
+    )
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/locator.py", line 859, in tap
+    return await self._frame.tap(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/frame.py", line 716, in tap
+    return await self._channel.tap(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py", line 387, in finish
+    raise e from None
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py", line 352, in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/utils/zones.py", line 58, in run_async
+    return await func()
+           ^^^^^^^^^^^^
+playwright._impl._errors.Error: Locator.tap: Target crashed 
+Call log:
+  - waiting for locator("#next")
+    - locator resolved to <button id="next" class="primary">…</button>
+  - attempting tap action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+
+
+DONE FAIL 72 contacts 72 visual checks
+Traceback (most recent call last):
+  File "/home/user/.cache/casardi-rootcause/compositor_gesture_qa.py", line 128, in <module>
+    parser=argparse.ArgumentParser();parser.add_argument('--smoke',action='store_true');args=parser.parse_args();asyncio.run(main(args.smoke))
+                                                                                                                 ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/asyncio/runners.py", line 196, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/asyncio/runners.py", line 119, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/asyncio/base_events.py", line 726, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/home/user/.cache/casardi-rootcause/compositor_gesture_qa.py", line 126, in main
+    if failure:raise RuntimeError(failure)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Traceback (most recent call last):
+  File "/home/user/.cache/casardi-rootcause/compositor_gesture_qa.py", line 49, in main
+    await f.locator('#start').tap();await f.locator('[data-mode='+mode+']').tap();await f.locator('[data-scene=pantheon]').tap();await f.locator('#next').tap();await f.locator('.preset-grid button').nth(preset).tap();await f.locator('#next').tap();await f.locator('#next').tap()
+                                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/playwright/async_api/_generated.py", line 13403, in tap
+    await self._impl_obj.tap(
+    ...<7 lines>...
+    )
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/locator.py", line 859, in tap
+    return await self._frame.tap(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/frame.py", line 716, in tap
+    return await self._channel.tap(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py", line 387, in finish
+    raise e from None
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py", line 352, in finish
+    result = await zone.run_async(lambda: awaitable)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/playwright/_impl/utils/zones.py", line 58, in run_async
+    return await func()
+           ^^^^^^^^^^^^
+playwright._impl._errors.Error: Locator.tap: Target crashed 
+Call log:
+  - waiting for locator("#next")
+    - locator resolved to <button id="next" class="primary">…</button>
+  - attempting tap action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+
+

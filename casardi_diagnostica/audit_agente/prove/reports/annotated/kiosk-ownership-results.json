@@ -1,0 +1,42 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "seconds": 5.44,
+  "scope": "Optional HTTP/Pillow kiosk only. Deliberate stale image.decode error, not physical Android trigger or portable/Arena reproduction.",
+  "source_sha256": "ac4bd34061c714ee62e59d674fcbaf5c534fc0de02a35fa95f3a483b556e0069",
+  "checks": [
+    {
+      "candidate": false,
+      "observed": {
+        "rendering": false,
+        "failed_calls": 1,
+        "loading": true,
+        "status": true,
+        "latest_src_retained": true
+      },
+      "result": "PASS",
+      "meaning": "Ownership defect reproduced under controlled stale-decode rejection"
+    },
+    {
+      "candidate": true,
+      "observed": {
+        "rendering": true,
+        "failed_calls": 0,
+        "loading": true,
+        "status": false,
+        "latest_src_retained": true
+      },
+      "result": "PASS",
+      "meaning": "Stale-error isolation verified"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "_audit_provenance": {
+    "original_sha256": "0e572050e7defb9c664406c8c479c67401a0f0614a37ab96cd97aa8355349b55",
+    "report_file_written_at_workspace_utc": "2026-11-28T06:32:25.021639+00:00",
+    "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+    "original_hardcoded_date": "2026-11-27",
+    "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "executed_at_workspace_utc": "2026-11-28T07:17:12.864432+00:00",
+  "generated_font_bytes": 33884,
+  "sha256": "8fdef2c154c718da88681041141e6353cf1639b91308fe7496f79d7dc5a406a9",
+  "generator_byte_equal": true,
+  "embedded_in_production_html": true,
+  "internal_names": [
+    "Casardi Pixel",
+    "Casardi Pixel",
+    "CasardiPixel"
+  ],
+  "glyph_count": 602,
+  "unicode_points": 597,
+  "_audit_provenance": {
+    "original_sha256": "b56ed2247e5d7e9f056ee516a995317f6ab05fca8480b1109afbf2e007a6da1a",
+    "report_file_written_at_workspace_utc": "2026-11-28T07:17:12.869639+00:00",
+    "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+  }
+}

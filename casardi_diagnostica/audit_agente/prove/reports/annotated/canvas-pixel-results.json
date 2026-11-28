@@ -1,0 +1,2324 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "seconds": 27.78,
+  "html_sha256": "a01ca4759b499979e8a9b0591f6b4a007fb11654d874053e0444be3c7b33245e",
+  "scope": "Isolated module/Canvas commit equivalence: unmodified renderer output vs committed main/clean/ghost RGBA and DOM hit rectangle. Direct calls, not gesture/device/root-cause evidence.",
+  "cases": 288,
+  "maximum_canonical_hit_error": 0.027042406178026113,
+  "rows": [
+    {
+      "mode": "photo",
+      "scene": "casardi",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "casardi",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.026608860587970184
+    },
+    {
+      "mode": "photo",
+      "scene": "casardi",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017070857607372147
+    },
+    {
+      "mode": "photo",
+      "scene": "casardi",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.027042406178026113
+    },
+    {
+      "mode": "photo",
+      "scene": "casardi",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017531499796746175
+    },
+    {
+      "mode": "photo",
+      "scene": "casardi",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02478448275863343
+    },
+    {
+      "mode": "photo",
+      "scene": "casardi",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "photo",
+      "scene": "casardi",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01939655172412813
+    },
+    {
+      "mode": "photo",
+      "scene": "casardi",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02514564422165222
+    },
+    {
+      "mode": "photo",
+      "scene": "casardi",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025646551724150868
+    },
+    {
+      "mode": "photo",
+      "scene": "casardi",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.026608860587970184
+    },
+    {
+      "mode": "photo",
+      "scene": "casardi",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017070857607372147
+    },
+    {
+      "mode": "photo",
+      "scene": "pantheon",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "pantheon",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.026608860587970184
+    },
+    {
+      "mode": "photo",
+      "scene": "pantheon",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017070857607372147
+    },
+    {
+      "mode": "photo",
+      "scene": "pantheon",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.013792169082790906
+    },
+    {
+      "mode": "photo",
+      "scene": "pantheon",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023303075464042422
+    },
+    {
+      "mode": "photo",
+      "scene": "pantheon",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01325023709519968
+    },
+    {
+      "mode": "photo",
+      "scene": "pantheon",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "pantheon",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.022629310344825626
+    },
+    {
+      "mode": "photo",
+      "scene": "pantheon",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017341823601157103
+    },
+    {
+      "mode": "photo",
+      "scene": "pantheon",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025646551724150868
+    },
+    {
+      "mode": "photo",
+      "scene": "pantheon",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.026608860587970184
+    },
+    {
+      "mode": "photo",
+      "scene": "pantheon",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017070857607372147
+    },
+    {
+      "mode": "photo",
+      "scene": "foro",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.022629310344825626
+    },
+    {
+      "mode": "photo",
+      "scene": "foro",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "photo",
+      "scene": "foro",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "foro",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.022629310344825626
+    },
+    {
+      "mode": "photo",
+      "scene": "foro",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.026094025199824955
+    },
+    {
+      "mode": "photo",
+      "scene": "foro",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551726686
+    },
+    {
+      "mode": "photo",
+      "scene": "foro",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.026337894594178124
+    },
+    {
+      "mode": "photo",
+      "scene": "foro",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0238450074515697
+    },
+    {
+      "mode": "photo",
+      "scene": "foro",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "foro",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018588267172447104
+    },
+    {
+      "mode": "photo",
+      "scene": "foro",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "photo",
+      "scene": "foro",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025646551724150868
+    },
+    {
+      "mode": "photo",
+      "scene": "epidauro",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "epidauro",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.026608860587970184
+    },
+    {
+      "mode": "photo",
+      "scene": "epidauro",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017070857607372147
+    },
+    {
+      "mode": "photo",
+      "scene": "epidauro",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.027042406178026113
+    },
+    {
+      "mode": "photo",
+      "scene": "epidauro",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017531499796746175
+    },
+    {
+      "mode": "photo",
+      "scene": "epidauro",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02478448275863343
+    },
+    {
+      "mode": "photo",
+      "scene": "epidauro",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "photo",
+      "scene": "epidauro",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01939655172412813
+    },
+    {
+      "mode": "photo",
+      "scene": "epidauro",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02514564422165222
+    },
+    {
+      "mode": "photo",
+      "scene": "epidauro",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025646551724150868
+    },
+    {
+      "mode": "photo",
+      "scene": "epidauro",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.026608860587970184
+    },
+    {
+      "mode": "photo",
+      "scene": "epidauro",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017070857607372147
+    },
+    {
+      "mode": "photo",
+      "scene": "biblioteca",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "photo",
+      "scene": "biblioteca",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01939655172412813
+    },
+    {
+      "mode": "photo",
+      "scene": "biblioteca",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02603983200107507
+    },
+    {
+      "mode": "photo",
+      "scene": "biblioteca",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.027042406178026113
+    },
+    {
+      "mode": "photo",
+      "scene": "biblioteca",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017531499796746175
+    },
+    {
+      "mode": "photo",
+      "scene": "biblioteca",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02478448275863343
+    },
+    {
+      "mode": "photo",
+      "scene": "biblioteca",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "photo",
+      "scene": "biblioteca",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01939655172412813
+    },
+    {
+      "mode": "photo",
+      "scene": "biblioteca",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02514564422165222
+    },
+    {
+      "mode": "photo",
+      "scene": "biblioteca",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0180192385855662
+    },
+    {
+      "mode": "photo",
+      "scene": "biblioteca",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.026077586206866954
+    },
+    {
+      "mode": "photo",
+      "scene": "biblioteca",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02603983200107507
+    },
+    {
+      "mode": "photo",
+      "scene": "paestum",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018886329765621213
+    },
+    {
+      "mode": "photo",
+      "scene": "paestum",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "photo",
+      "scene": "paestum",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017260533802982536
+    },
+    {
+      "mode": "photo",
+      "scene": "paestum",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551726686
+    },
+    {
+      "mode": "photo",
+      "scene": "paestum",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551725265
+    },
+    {
+      "mode": "photo",
+      "scene": "paestum",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01939655172412813
+    },
+    {
+      "mode": "photo",
+      "scene": "paestum",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "paestum",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017666982793627994
+    },
+    {
+      "mode": "photo",
+      "scene": "paestum",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02478448275863343
+    },
+    {
+      "mode": "photo",
+      "scene": "paestum",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021767241379279767
+    },
+    {
+      "mode": "photo",
+      "scene": "paestum",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.010296707763188806
+    },
+    {
+      "mode": "photo",
+      "scene": "paestum",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.022413793103453372
+    },
+    {
+      "mode": "photo",
+      "scene": "colosseo",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.020474137931032033
+    },
+    {
+      "mode": "photo",
+      "scene": "colosseo",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018886329765621213
+    },
+    {
+      "mode": "photo",
+      "scene": "colosseo",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "colosseo",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.020474137931032033
+    },
+    {
+      "mode": "photo",
+      "scene": "colosseo",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551726686
+    },
+    {
+      "mode": "photo",
+      "scene": "colosseo",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01658311881857344
+    },
+    {
+      "mode": "photo",
+      "scene": "colosseo",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.020474137931046243
+    },
+    {
+      "mode": "photo",
+      "scene": "colosseo",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "colosseo",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551725265
+    },
+    {
+      "mode": "photo",
+      "scene": "colosseo",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.019612068965500384
+    },
+    {
+      "mode": "photo",
+      "scene": "colosseo",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021767241379279767
+    },
+    {
+      "mode": "photo",
+      "scene": "colosseo",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023922413793115993
+    },
+    {
+      "mode": "photo",
+      "scene": "acropoli",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.020474137931046243
+    },
+    {
+      "mode": "photo",
+      "scene": "acropoli",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "acropoli",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0267985367836161
+    },
+    {
+      "mode": "photo",
+      "scene": "acropoli",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.020474137931032033
+    },
+    {
+      "mode": "photo",
+      "scene": "acropoli",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.013792169082790906
+    },
+    {
+      "mode": "photo",
+      "scene": "acropoli",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "acropoli",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.020474137931046243
+    },
+    {
+      "mode": "photo",
+      "scene": "acropoli",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "acropoli",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551725265
+    },
+    {
+      "mode": "photo",
+      "scene": "acropoli",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02543103448272177
+    },
+    {
+      "mode": "photo",
+      "scene": "acropoli",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025646551724150868
+    },
+    {
+      "mode": "photo",
+      "scene": "acropoli",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0267985367836161
+    },
+    {
+      "mode": "photo",
+      "scene": "pompei",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551726686
+    },
+    {
+      "mode": "photo",
+      "scene": "pompei",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "pompei",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01745020999860003
+    },
+    {
+      "mode": "photo",
+      "scene": "pompei",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02478448275861922
+    },
+    {
+      "mode": "photo",
+      "scene": "pompei",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023706896551715317
+    },
+    {
+      "mode": "photo",
+      "scene": "pompei",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01939655172412813
+    },
+    {
+      "mode": "photo",
+      "scene": "pompei",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551726686
+    },
+    {
+      "mode": "photo",
+      "scene": "pompei",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "pompei",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.024712098631653134
+    },
+    {
+      "mode": "photo",
+      "scene": "pompei",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021982758620694653
+    },
+    {
+      "mode": "photo",
+      "scene": "pompei",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023922413793115993
+    },
+    {
+      "mode": "photo",
+      "scene": "pompei",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01745020999860003
+    },
+    {
+      "mode": "photo",
+      "scene": "taormina",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.020474137931046243
+    },
+    {
+      "mode": "photo",
+      "scene": "taormina",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "taormina",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0267985367836161
+    },
+    {
+      "mode": "photo",
+      "scene": "taormina",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.020474137931032033
+    },
+    {
+      "mode": "photo",
+      "scene": "taormina",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.013792169082790906
+    },
+    {
+      "mode": "photo",
+      "scene": "taormina",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "taormina",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.020474137931046243
+    },
+    {
+      "mode": "photo",
+      "scene": "taormina",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "taormina",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551725265
+    },
+    {
+      "mode": "photo",
+      "scene": "taormina",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02543103448272177
+    },
+    {
+      "mode": "photo",
+      "scene": "taormina",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025646551724150868
+    },
+    {
+      "mode": "photo",
+      "scene": "taormina",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0267985367836161
+    },
+    {
+      "mode": "photo",
+      "scene": "casteldelmonte",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551726686
+    },
+    {
+      "mode": "photo",
+      "scene": "casteldelmonte",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0267985367836161
+    },
+    {
+      "mode": "photo",
+      "scene": "casteldelmonte",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01939655172412813
+    },
+    {
+      "mode": "photo",
+      "scene": "casteldelmonte",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02478448275861922
+    },
+    {
+      "mode": "photo",
+      "scene": "casteldelmonte",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023706896551715317
+    },
+    {
+      "mode": "photo",
+      "scene": "casteldelmonte",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01939655172412813
+    },
+    {
+      "mode": "photo",
+      "scene": "casteldelmonte",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551726686
+    },
+    {
+      "mode": "photo",
+      "scene": "casteldelmonte",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551725265
+    },
+    {
+      "mode": "photo",
+      "scene": "casteldelmonte",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01939655172412813
+    },
+    {
+      "mode": "photo",
+      "scene": "casteldelmonte",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021982758620694653
+    },
+    {
+      "mode": "photo",
+      "scene": "casteldelmonte",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0267985367836161
+    },
+    {
+      "mode": "photo",
+      "scene": "casteldelmonte",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.020689655172418497
+    },
+    {
+      "mode": "photo",
+      "scene": "castellobarletta",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "castellobarletta",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017639886194274368
+    },
+    {
+      "mode": "photo",
+      "scene": "castellobarletta",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.026229508196692564
+    },
+    {
+      "mode": "photo",
+      "scene": "castellobarletta",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551726686
+    },
+    {
+      "mode": "photo",
+      "scene": "castellobarletta",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01831896551725265
+    },
+    {
+      "mode": "photo",
+      "scene": "castellobarletta",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.01939655172412813
+    },
+    {
+      "mode": "photo",
+      "scene": "castellobarletta",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02586206896552312
+    },
+    {
+      "mode": "photo",
+      "scene": "castellobarletta",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.017666982793627994
+    },
+    {
+      "mode": "photo",
+      "scene": "castellobarletta",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02478448275863343
+    },
+    {
+      "mode": "photo",
+      "scene": "castellobarletta",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025646551724150868
+    },
+    {
+      "mode": "photo",
+      "scene": "castellobarletta",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025000000000005684
+    },
+    {
+      "mode": "photo",
+      "scene": "castellobarletta",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.026229508196692564
+    },
+    {
+      "mode": "nes",
+      "scene": "casardi",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "casardi",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "casardi",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02641918439235269
+    },
+    {
+      "mode": "nes",
+      "scene": "casardi",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025199837420402105
+    },
+    {
+      "mode": "nes",
+      "scene": "casardi",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.024251456442215158
+    },
+    {
+      "mode": "nes",
+      "scene": "casardi",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023303075464042422
+    },
+    {
+      "mode": "nes",
+      "scene": "casardi",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "casardi",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025470803414179954
+    },
+    {
+      "mode": "nes",
+      "scene": "casardi",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.013548299688395105
+    },
+    {
+      "mode": "nes",
+      "scene": "casardi",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0180192385855662
+    },
+    {
+      "mode": "nes",
+      "scene": "casardi",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.010296707763188806
+    },
+    {
+      "mode": "nes",
+      "scene": "casardi",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02641918439235269
+    },
+    {
+      "mode": "nes",
+      "scene": "pantheon",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "pantheon",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "pantheon",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02641918439235269
+    },
+    {
+      "mode": "nes",
+      "scene": "pantheon",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025199837420402105
+    },
+    {
+      "mode": "nes",
+      "scene": "pantheon",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.024251456442215158
+    },
+    {
+      "mode": "nes",
+      "scene": "pantheon",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023303075464042422
+    },
+    {
+      "mode": "nes",
+      "scene": "pantheon",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "pantheon",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025470803414179954
+    },
+    {
+      "mode": "nes",
+      "scene": "pantheon",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.013548299688395105
+    },
+    {
+      "mode": "nes",
+      "scene": "pantheon",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0180192385855662
+    },
+    {
+      "mode": "nes",
+      "scene": "pantheon",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.010296707763188806
+    },
+    {
+      "mode": "nes",
+      "scene": "pantheon",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02641918439235269
+    },
+    {
+      "mode": "nes",
+      "scene": "foro",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "foro",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "foro",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "foro",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025199837420402105
+    },
+    {
+      "mode": "nes",
+      "scene": "foro",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.024251456442215158
+    },
+    {
+      "mode": "nes",
+      "scene": "foro",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023303075464042422
+    },
+    {
+      "mode": "nes",
+      "scene": "foro",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0238450074515697
+    },
+    {
+      "mode": "nes",
+      "scene": "foro",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "foro",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025470803414179954
+    },
+    {
+      "mode": "nes",
+      "scene": "foro",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "foro",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0180192385855662
+    },
+    {
+      "mode": "nes",
+      "scene": "foro",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.010296707763188806
+    },
+    {
+      "mode": "nes",
+      "scene": "epidauro",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "epidauro",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "epidauro",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02641918439235269
+    },
+    {
+      "mode": "nes",
+      "scene": "epidauro",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025199837420402105
+    },
+    {
+      "mode": "nes",
+      "scene": "epidauro",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.024251456442215158
+    },
+    {
+      "mode": "nes",
+      "scene": "epidauro",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023303075464042422
+    },
+    {
+      "mode": "nes",
+      "scene": "epidauro",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "epidauro",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025470803414179954
+    },
+    {
+      "mode": "nes",
+      "scene": "epidauro",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.013548299688395105
+    },
+    {
+      "mode": "nes",
+      "scene": "epidauro",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0180192385855662
+    },
+    {
+      "mode": "nes",
+      "scene": "epidauro",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.010296707763188806
+    },
+    {
+      "mode": "nes",
+      "scene": "epidauro",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02641918439235269
+    },
+    {
+      "mode": "nes",
+      "scene": "biblioteca",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "biblioteca",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "biblioteca",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02641918439235269
+    },
+    {
+      "mode": "nes",
+      "scene": "biblioteca",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025199837420402105
+    },
+    {
+      "mode": "nes",
+      "scene": "biblioteca",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.024251456442215158
+    },
+    {
+      "mode": "nes",
+      "scene": "biblioteca",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023303075464042422
+    },
+    {
+      "mode": "nes",
+      "scene": "biblioteca",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "biblioteca",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025470803414179954
+    },
+    {
+      "mode": "nes",
+      "scene": "biblioteca",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.013548299688395105
+    },
+    {
+      "mode": "nes",
+      "scene": "biblioteca",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0180192385855662
+    },
+    {
+      "mode": "nes",
+      "scene": "biblioteca",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.010296707763188806
+    },
+    {
+      "mode": "nes",
+      "scene": "biblioteca",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02641918439235269
+    },
+    {
+      "mode": "nes",
+      "scene": "paestum",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "paestum",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "paestum",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02641918439235269
+    },
+    {
+      "mode": "nes",
+      "scene": "paestum",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025199837420402105
+    },
+    {
+      "mode": "nes",
+      "scene": "paestum",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.024251456442215158
+    },
+    {
+      "mode": "nes",
+      "scene": "paestum",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023303075464042422
+    },
+    {
+      "mode": "nes",
+      "scene": "paestum",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "paestum",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025470803414179954
+    },
+    {
+      "mode": "nes",
+      "scene": "paestum",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.013548299688395105
+    },
+    {
+      "mode": "nes",
+      "scene": "paestum",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0180192385855662
+    },
+    {
+      "mode": "nes",
+      "scene": "paestum",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.010296707763188806
+    },
+    {
+      "mode": "nes",
+      "scene": "paestum",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.02641918439235269
+    },
+    {
+      "mode": "nes",
+      "scene": "colosseo",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "colosseo",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "colosseo",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "colosseo",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025199837420402105
+    },
+    {
+      "mode": "nes",
+      "scene": "colosseo",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.024251456442215158
+    },
+    {
+      "mode": "nes",
+      "scene": "colosseo",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023303075464042422
+    },
+    {
+      "mode": "nes",
+      "scene": "colosseo",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0238450074515697
+    },
+    {
+      "mode": "nes",
+      "scene": "colosseo",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "colosseo",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025470803414179954
+    },
+    {
+      "mode": "nes",
+      "scene": "colosseo",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "colosseo",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0180192385855662
+    },
+    {
+      "mode": "nes",
+      "scene": "colosseo",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.010296707763188806
+    },
+    {
+      "mode": "nes",
+      "scene": "acropoli",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "acropoli",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "acropoli",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "acropoli",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025199837420402105
+    },
+    {
+      "mode": "nes",
+      "scene": "acropoli",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.024251456442215158
+    },
+    {
+      "mode": "nes",
+      "scene": "acropoli",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023303075464042422
+    },
+    {
+      "mode": "nes",
+      "scene": "acropoli",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0238450074515697
+    },
+    {
+      "mode": "nes",
+      "scene": "acropoli",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "acropoli",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025470803414179954
+    },
+    {
+      "mode": "nes",
+      "scene": "acropoli",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "acropoli",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0180192385855662
+    },
+    {
+      "mode": "nes",
+      "scene": "acropoli",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.010296707763188806
+    },
+    {
+      "mode": "nes",
+      "scene": "pompei",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "pompei",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "pompei",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "pompei",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025199837420402105
+    },
+    {
+      "mode": "nes",
+      "scene": "pompei",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.024251456442215158
+    },
+    {
+      "mode": "nes",
+      "scene": "pompei",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023303075464042422
+    },
+    {
+      "mode": "nes",
+      "scene": "pompei",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0238450074515697
+    },
+    {
+      "mode": "nes",
+      "scene": "pompei",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "pompei",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025470803414179954
+    },
+    {
+      "mode": "nes",
+      "scene": "pompei",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "pompei",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0180192385855662
+    },
+    {
+      "mode": "nes",
+      "scene": "pompei",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.010296707763188806
+    },
+    {
+      "mode": "nes",
+      "scene": "taormina",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "taormina",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "taormina",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "taormina",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025199837420402105
+    },
+    {
+      "mode": "nes",
+      "scene": "taormina",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.024251456442215158
+    },
+    {
+      "mode": "nes",
+      "scene": "taormina",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023303075464042422
+    },
+    {
+      "mode": "nes",
+      "scene": "taormina",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0238450074515697
+    },
+    {
+      "mode": "nes",
+      "scene": "taormina",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "taormina",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025470803414179954
+    },
+    {
+      "mode": "nes",
+      "scene": "taormina",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "taormina",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0180192385855662
+    },
+    {
+      "mode": "nes",
+      "scene": "taormina",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.010296707763188806
+    },
+    {
+      "mode": "nes",
+      "scene": "casteldelmonte",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "casteldelmonte",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "casteldelmonte",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "casteldelmonte",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025199837420402105
+    },
+    {
+      "mode": "nes",
+      "scene": "casteldelmonte",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.024251456442215158
+    },
+    {
+      "mode": "nes",
+      "scene": "casteldelmonte",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023303075464042422
+    },
+    {
+      "mode": "nes",
+      "scene": "casteldelmonte",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0238450074515697
+    },
+    {
+      "mode": "nes",
+      "scene": "casteldelmonte",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "casteldelmonte",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025470803414179954
+    },
+    {
+      "mode": "nes",
+      "scene": "casteldelmonte",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "casteldelmonte",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0180192385855662
+    },
+    {
+      "mode": "nes",
+      "scene": "casteldelmonte",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.010296707763188806
+    },
+    {
+      "mode": "nes",
+      "scene": "castellobarletta",
+      "preset": 0,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "castellobarletta",
+      "preset": 0,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "castellobarletta",
+      "preset": 0,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "castellobarletta",
+      "preset": 1,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025199837420402105
+    },
+    {
+      "mode": "nes",
+      "scene": "castellobarletta",
+      "preset": 1,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.024251456442215158
+    },
+    {
+      "mode": "nes",
+      "scene": "castellobarletta",
+      "preset": 1,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.023303075464042422
+    },
+    {
+      "mode": "nes",
+      "scene": "castellobarletta",
+      "preset": 2,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0238450074515697
+    },
+    {
+      "mode": "nes",
+      "scene": "castellobarletta",
+      "preset": 2,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.021551724137935935
+    },
+    {
+      "mode": "nes",
+      "scene": "castellobarletta",
+      "preset": 2,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.025470803414179954
+    },
+    {
+      "mode": "nes",
+      "scene": "castellobarletta",
+      "preset": 3,
+      "size": 65,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.018696653569975297
+    },
+    {
+      "mode": "nes",
+      "scene": "castellobarletta",
+      "preset": 3,
+      "size": 100,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.0180192385855662
+    },
+    {
+      "mode": "nes",
+      "scene": "castellobarletta",
+      "preset": 3,
+      "size": 135,
+      "main_clean_ghost_rgba_exact": true,
+      "canonical_hit_error": 0.010296707763188806
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "_audit_provenance": {
+    "original_sha256": "06c7a15e67e1b2f312ae9e02827002f70a110852799b4e0a96d6806b38cac3b5",
+    "report_file_written_at_workspace_utc": "2026-11-28T06:34:03.113639+00:00",
+    "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+    "original_hardcoded_date": "2026-11-27",
+    "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "earlier_host": {
+    "file": "embed_host_previsual.py",
+    "sha256": "e70bcbf08d790e4b3f19cc1d1ae3d1fd2e89b1193e4a632ca7b026e5136f3888",
+    "source": "Preserved from the first durable audit evidence archive before adding the A1 route."
+  },
+  "current_host": {
+    "file": "embed_host.py",
+    "sha256": "66ed5adaa9448e49742b918a50edff98df0ed29c38fe87c9dad1a0f0763727b0",
+    "change": "Only /base.html?a1=1 additionally serves exact existing A1. Baseline/exp=1 document selection, srcdoc wrappers and CSS are unchanged. No source or output HTML modified."
+  },
+  "purpose": "Actual serving for later visual comparison; not a change inside test applications.",
+  "_audit_provenance": {
+    "original_sha256": "d820687b3fe7c1b4fca32a7d6f10055fcf544fd99054a80029624c5a425c53aa",
+    "report_file_written_at_workspace_utc": "2026-11-28T07:06:08.765640+00:00",
+    "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+  }
+}

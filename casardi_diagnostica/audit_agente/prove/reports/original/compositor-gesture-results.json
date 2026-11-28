@@ -1,0 +1,1369 @@
+{
+  "result": "FAIL",
+  "started_at_workspace_utc": "2026-11-28T06:55:02.834051+00:00",
+  "finished_at_workspace_utc": "2026-11-28T07:06:51.206653+00:00",
+  "seconds": 708.37,
+  "scope": "Actual composited browser screenshots during held genuine CDP touch; pristine production/A1/nonrelease Canvas, same four chosen presets, two styles, nested opaque srcdoc. Software Linux rendering, NOT physical Android/Arena or original unknown outfit. Static reference layout uses the same renderer layer pixels; not an independent renderer. Screenshot/DOM observation can affect scheduling. Ready-to-ready, not the rapid-loading interception test.",
+  "smoke": false,
+  "source_sha256": {
+    "production": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea",
+    "A1": "2806e32423451c4ef7eeb5d37260b645a5ba06a11dba14474c99c5e6447e8992",
+    "Canvas": "a01ca4759b499979e8a9b0591f6b4a007fb11654d874053e0444be3c7b33245e"
+  },
+  "contacts_attempted": 72,
+  "visual_movement_checks": 72,
+  "engines": [
+    {
+      "label": "headless-shell",
+      "browser_version": "159.0.8154.6",
+      "devices": [
+        {
+          "vendorId": 65535,
+          "deviceId": 65535,
+          "vendorString": "Google Inc. (Google)",
+          "deviceString": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+          "driverVendor": "SwANGLE",
+          "driverVersion": "5.0.0"
+        }
+      ],
+      "feature_status": {
+        "2d_canvas": "unavailable_software",
+        "direct_rendering_display_compositor": "disabled_off_ok",
+        "gpu_compositing": "disabled_software",
+        "multiple_raster_threads": "disabled_off",
+        "opengl": "disabled_off",
+        "rasterization": "disabled_software",
+        "skia_graphite": "disabled_off",
+        "trees_in_viz": "disabled_off",
+        "video_decode": "disabled_software",
+        "video_encode": "disabled_software",
+        "vulkan": "disabled_off",
+        "webgl": "unavailable_software",
+        "webgpu": "unavailable_software",
+        "webgpu_on_vk_via_gl_interop": "disabled_off",
+        "webnn": "unavailable_software"
+      },
+      "aux_attributes": {
+        "amdSwitchable": false,
+        "canSupportThreadedTextureMailbox": false,
+        "directRenderingVersion": "",
+        "displayType": "ANGLE_SWIFTSHADER",
+        "glExtensions": "GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_blob_cache GL_ANGLE_client_arrays GL_ANGLE_clip_cull_distance GL_ANGLE_compressed_texture_etc GL_ANGLE_copy_texture_3d GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_image GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_memory_object_flags GL_ANGLE_memory_size GL_ANGLE_multi_draw GL_ANGLE_pack_reverse_row_order GL_ANGLE_polygon_mode GL_ANGLE_program_binary_readiness_query GL_ANGLE_program_cache_control GL_ANGLE_read_only_depth_stencil_feedback_loops GL_ANGLE_relaxed_vertex_attribute_type GL_ANGLE_renderability_validation GL_ANGLE_request_extension GL_ANGLE_rgbx_internal_format GL_ANGLE_robust_client_memory GL_ANGLE_robust_fragment_shader_output GL_ANGLE_robust_resource_initialization GL_ANGLE_shader_pixel_local_storage GL_ANGLE_shader_pixel_local_storage_coherent GL_ANGLE_stencil_texturing GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_texture_usage GL_ANGLE_translated_shader_source GL_ANGLE_vulkan_image GL_ANGLE_yuv_internal_format GL_APPLE_clip_distance GL_ARM_rgba8 GL_ARM_shader_framebuffer_fetch GL_ARM_shader_framebuffer_fetch_depth_stencil GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_compressed_texture GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_EXT_EGL_image_array GL_EXT_EGL_image_external_wrap_modes GL_EXT_EGL_image_storage GL_EXT_base_instance GL_EXT_blend_minmax GL_EXT_buffer_storage GL_EXT_clear_texture GL_EXT_clip_control GL_EXT_clip_cull_distance GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_conservative_depth GL_EXT_copy_image GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_depth_clamp GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_occlusion_query_boolean GL_EXT_polygon_offset_clamp GL_EXT_read_format_bgra GL_EXT_robustness GL_EXT_sRGB GL_EXT_sRGB_write_control GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_separate_shader_objects GL_EXT_shader_framebuffer_fetch GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_non_constant_global_initializers GL_EXT_shader_texture_lod GL_EXT_shadow_samplers GL_EXT_texture_border_clamp GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp_to_edge GL_EXT_texture_rg GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_storage GL_EXT_texture_type_2_10_10_10_REV GL_EXT_unpack_subimage GL_KHR_blend_equation_advanced GL_KHR_debug GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_NV_fence GL_NV_framebuffer_blit GL_NV_pack_subimage GL_NV_pixel_buffer_object GL_NV_polygon_mode GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_NV_shader_noperspective_interpolation GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_image_external_essl3 GL_OES_EGL_sync GL_OES_compressed_ETC1_RGB8_texture GL_OES_compressed_paletted_texture GL_OES_copy_image GL_OES_depth24 GL_OES_depth32 GL_OES_depth_texture GL_OES_depth_texture_cube_map GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_required_internalformat GL_OES_rgb8_rgba8 GL_OES_sample_shading GL_OES_sample_variables GL_OES_shader_multisample_interpolation GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_3D GL_OES_texture_border_clamp GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_texture_storage_multisample_2d_array GL_OES_vertex_array_object GL_OES_vertex_half_float GL_OES_vertex_type_10_10_10_2 GL_OVR_multiview GL_OVR_multiview2 GL_QCOM_texture_lod_bias ",
+        "glImplementationParts": "(gl=egl-angle,angle=swiftshader)",
+        "glRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+        "glResetNotificationStrategy": 33362,
+        "glVendor": "Google Inc. (Google)",
+        "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29394 git hash: 29d18232e803)",
+        "glWsExtensions": "EGL_EXT_create_context_robustness EGL_ANGLE_surface_orientation EGL_KHR_create_context EGL_KHR_image EGL_KHR_image_base EGL_EXT_image_gl_colorspace EGL_KHR_gl_colorspace EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_get_all_proc_addresses EGL_KHR_fence_sync EGL_KHR_wait_sync EGL_ANGLE_create_context_webgl_compatibility EGL_CHROMIUM_create_context_bind_generates_resource EGL_KHR_swap_buffers_with_damage EGL_EXT_pixel_format_float EGL_KHR_surfaceless_context EGL_ANGLE_display_texture_share_group EGL_ANGLE_display_semaphore_share_group EGL_ANGLE_create_context_client_arrays EGL_ANGLE_program_cache_control EGL_ANGLE_robust_resource_initialization EGL_ANGLE_create_context_extensions_enabled EGL_ANDROID_blob_cache EGL_ANDROID_recordable EGL_ANGLE_create_context_backwards_compatible EGL_KHR_no_config_context EGL_IMG_context_priority EGL_KHR_create_context_no_error EGL_KHR_reusable_sync EGL_EXT_buffer_age EGL_ANGLE_create_surface_swap_interval EGL_ANGLE_vulkan_image EGL_KHR_partial_update EGL_ANGLE_global_fence_sync EGL_ANGLE_memory_usage_report EGL_ANGLE_query_renderer_strings ",
+        "glWsVendor": "Google Inc. (Google)",
+        "glWsVersion": "1.5 (ANGLE 2.1.29394 git hash: 29d18232e803)",
+        "hardwareSupportsVulkan": false,
+        "inProcessGpu": false,
+        "initializationTime": 0.038024,
+        "isAsan": false,
+        "isClangCoverage": false,
+        "jpegDecodeAcceleratorSupported": false,
+        "optimus": false,
+        "passthroughCmdDecoder": true,
+        "pixelShaderVersion": "3.00",
+        "processCrashCount": 0,
+        "sandboxed": false,
+        "skiaBackendType": "None",
+        "subpixelFontRendering": true,
+        "targetCpuBits": 64,
+        "vertexShaderVersion": "3.00",
+        "visibilityCallbackCallCount": 0
+      }
+    },
+    {
+      "label": "headed-swiftshader",
+      "browser_version": "159.0.8154.6",
+      "devices": [
+        {
+          "vendorId": 65535,
+          "deviceId": 65535,
+          "vendorString": "Google Inc. (Google)",
+          "deviceString": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+          "driverVendor": "SwANGLE",
+          "driverVersion": "5.0.0"
+        }
+      ],
+      "feature_status": {
+        "2d_canvas": "enabled",
+        "direct_rendering_display_compositor": "disabled_off_ok",
+        "gpu_compositing": "enabled",
+        "multiple_raster_threads": "disabled_off",
+        "opengl": "enabled_on",
+        "rasterization": "enabled",
+        "skia_graphite": "disabled_off",
+        "trees_in_viz": "disabled_off",
+        "video_decode": "enabled",
+        "video_encode": "disabled_software",
+        "vulkan": "disabled_off",
+        "webgl": "enabled",
+        "webgpu": "unavailable_software",
+        "webgpu_on_vk_via_gl_interop": "disabled_off",
+        "webnn": "disabled_off"
+      },
+      "aux_attributes": {
+        "amdSwitchable": false,
+        "canSupportThreadedTextureMailbox": false,
+        "directRenderingVersion": "",
+        "displayType": "ANGLE_SWIFTSHADER",
+        "glExtensions": "GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_blob_cache GL_ANGLE_client_arrays GL_ANGLE_clip_cull_distance GL_ANGLE_compressed_texture_etc GL_ANGLE_copy_texture_3d GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_image GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_memory_object_flags GL_ANGLE_memory_size GL_ANGLE_multi_draw GL_ANGLE_pack_reverse_row_order GL_ANGLE_polygon_mode GL_ANGLE_program_binary_readiness_query GL_ANGLE_program_cache_control GL_ANGLE_read_only_depth_stencil_feedback_loops GL_ANGLE_relaxed_vertex_attribute_type GL_ANGLE_renderability_validation GL_ANGLE_request_extension GL_ANGLE_rgbx_internal_format GL_ANGLE_robust_client_memory GL_ANGLE_robust_fragment_shader_output GL_ANGLE_robust_resource_initialization GL_ANGLE_shader_pixel_local_storage GL_ANGLE_shader_pixel_local_storage_coherent GL_ANGLE_stencil_texturing GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_texture_usage GL_ANGLE_translated_shader_source GL_ANGLE_vulkan_image GL_ANGLE_yuv_internal_format GL_APPLE_clip_distance GL_ARM_rgba8 GL_ARM_shader_framebuffer_fetch GL_ARM_shader_framebuffer_fetch_depth_stencil GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_compressed_texture GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_EXT_EGL_image_array GL_EXT_EGL_image_external_wrap_modes GL_EXT_EGL_image_storage GL_EXT_base_instance GL_EXT_blend_minmax GL_EXT_buffer_storage GL_EXT_clear_texture GL_EXT_clip_control GL_EXT_clip_cull_distance GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_compressed_ETC1_RGB8_sub_texture GL_EXT_conservative_depth GL_EXT_copy_image GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_depth_clamp GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_occlusion_query_boolean GL_EXT_polygon_offset_clamp GL_EXT_read_format_bgra GL_EXT_robustness GL_EXT_sRGB GL_EXT_sRGB_write_control GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_separate_shader_objects GL_EXT_shader_framebuffer_fetch GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_non_constant_global_initializers GL_EXT_shader_texture_lod GL_EXT_shadow_samplers GL_EXT_texture_border_clamp GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp_to_edge GL_EXT_texture_rg GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_storage GL_EXT_texture_type_2_10_10_10_REV GL_EXT_unpack_subimage GL_KHR_blend_equation_advanced GL_KHR_debug GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_NV_fence GL_NV_framebuffer_blit GL_NV_pack_subimage GL_NV_pixel_buffer_object GL_NV_polygon_mode GL_NV_read_depth GL_NV_read_depth_stencil GL_NV_read_stencil GL_NV_shader_noperspective_interpolation GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_image_external_essl3 GL_OES_EGL_sync GL_OES_compressed_ETC1_RGB8_texture GL_OES_compressed_paletted_texture GL_OES_copy_image GL_OES_depth24 GL_OES_depth32 GL_OES_depth_texture GL_OES_depth_texture_cube_map GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_required_internalformat GL_OES_rgb8_rgba8 GL_OES_sample_shading GL_OES_sample_variables GL_OES_shader_multisample_interpolation GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_3D GL_OES_texture_border_clamp GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_texture_storage_multisample_2d_array GL_OES_vertex_array_object GL_OES_vertex_half_float GL_OES_vertex_type_10_10_10_2 GL_OVR_multiview GL_OVR_multiview2 GL_QCOM_texture_lod_bias ",
+        "glImplementationParts": "(gl=egl-angle,angle=swiftshader)",
+        "glRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)",
+        "glResetNotificationStrategy": 33362,
+        "glVendor": "Google Inc. (Google)",
+        "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.29394 git hash: 29d18232e803)",
+        "glWsExtensions": "EGL_EXT_create_context_robustness EGL_ANGLE_surface_orientation EGL_KHR_create_context EGL_KHR_image EGL_KHR_image_base EGL_EXT_image_gl_colorspace EGL_KHR_gl_colorspace EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_get_all_proc_addresses EGL_KHR_fence_sync EGL_KHR_wait_sync EGL_ANGLE_create_context_webgl_compatibility EGL_CHROMIUM_create_context_bind_generates_resource EGL_KHR_swap_buffers_with_damage EGL_EXT_pixel_format_float EGL_KHR_surfaceless_context EGL_ANGLE_display_texture_share_group EGL_ANGLE_display_semaphore_share_group EGL_ANGLE_create_context_client_arrays EGL_ANGLE_program_cache_control EGL_ANGLE_robust_resource_initialization EGL_ANGLE_create_context_extensions_enabled EGL_ANDROID_blob_cache EGL_ANDROID_recordable EGL_ANGLE_create_context_backwards_compatible EGL_KHR_no_config_context EGL_IMG_context_priority EGL_KHR_create_context_no_error EGL_KHR_reusable_sync EGL_EXT_buffer_age EGL_ANGLE_create_surface_swap_interval EGL_ANGLE_vulkan_image EGL_KHR_partial_update EGL_ANGLE_global_fence_sync EGL_ANGLE_memory_usage_report EGL_ANGLE_query_renderer_strings ",
+        "glWsVendor": "Google Inc. (Google)",
+        "glWsVersion": "1.5 (ANGLE 2.1.29394 git hash: 29d18232e803)",
+        "hardwareSupportsVulkan": false,
+        "inProcessGpu": false,
+        "initializationTime": 0.048286,
+        "isAsan": false,
+        "isClangCoverage": false,
+        "jpegDecodeAcceleratorSupported": false,
+        "optimus": false,
+        "passthroughCmdDecoder": true,
+        "pixelShaderVersion": "3.00",
+        "processCrashCount": 0,
+        "sandboxed": false,
+        "skiaBackendType": "GaneshGL",
+        "subpixelFontRendering": true,
+        "targetCpuBits": 64,
+        "vertexShaderVersion": "3.00",
+        "visibilityCallbackCallCount": 0
+      }
+    }
+  ],
+  "rows": [
+    {
+      "case": "headless-shell/production/photo/preset0",
+      "gesture": 0,
+      "actual_sha256": "adb52ec9bd849c89f3fcb6d81c3ce2975b6fd5515e6e897476aef5c5962d7f87",
+      "correct_reference_sha256": "388ba906c7085ae7234853ad6c769224e600fd5379424c06019770bd64aa1fa5",
+      "stationary_reference_sha256": "e4c532eb532cf26db6d4a3ec7924a0b10bafe30abcb3dec30f18559092df29cb",
+      "movement_signal_pixels": 59133,
+      "mean_rgb_error_moving_reference": 1.638408333756109,
+      "mean_rgb_error_stationary_reference": 96.67302521434732,
+      "fraction_within_24_of_moving_reference": 0.98905856290058,
+      "actual_dom_delta": [
+        22.203125,
+        -7.984375
+      ],
+      "opaque_ghost_pixels": 38928,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/photo/preset0",
+      "gesture": 1,
+      "actual_sha256": "f4c6c22de01be163202e6da4da9a682ede409e99e3df8b94d3fe8bdc367981f7",
+      "correct_reference_sha256": "07c1413e9c5a9c736bd54ef656a8ccb531ead0adf0257132aa8eb54f2da34f8c",
+      "stationary_reference_sha256": "fa19ac2acf714ac90a6dd49d0f9be94ad3eccbe320fc1f23ecd11a0b450b34ba",
+      "movement_signal_pixels": 55203,
+      "mean_rgb_error_moving_reference": 1.8005180877850842,
+      "mean_rgb_error_stationary_reference": 94.63077489749953,
+      "fraction_within_24_of_moving_reference": 0.9852906544934152,
+      "actual_dom_delta": [
+        -17.890625,
+        6.75
+      ],
+      "opaque_ghost_pixels": 38928,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/photo/preset0",
+      "gesture": 2,
+      "actual_sha256": "85d7a9df37493fc77e7c8542d6be1d4f37508604ce74b999a404db76c7b033bc",
+      "correct_reference_sha256": "50f10ac2ed98826cef6318fe2c10ed546766d5ebee3590d6a551c6816ccb7bf6",
+      "stationary_reference_sha256": "8420c2fa03e45c0338a5d4416616effa8de984019c006e4bf29274ec6e422a07",
+      "movement_signal_pixels": 56281,
+      "mean_rgb_error_moving_reference": 2.4400063964748315,
+      "mean_rgb_error_stationary_reference": 93.89927921204907,
+      "fraction_within_24_of_moving_reference": 0.9785895772996216,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 38928,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/photo/preset1",
+      "gesture": 0,
+      "actual_sha256": "2c96e2f8288df0da876c0c3b254de8405845b8e1b968738a834ac035ff6c20c1",
+      "correct_reference_sha256": "37a7b692fd16248ed1e4fb3d84c692ed6ffb877db51fd8929453d7127584ce0d",
+      "stationary_reference_sha256": "a56d8af918fa0c834da4f5b71d40f94151aa23fd9a1d1e18c1992e65246de1af",
+      "movement_signal_pixels": 53431,
+      "mean_rgb_error_moving_reference": 2.0679755198293126,
+      "mean_rgb_error_stationary_reference": 93.27880818251577,
+      "fraction_within_24_of_moving_reference": 0.9822949224233123,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 34812,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/photo/preset1",
+      "gesture": 1,
+      "actual_sha256": "8564455fc7a5eb948752ebf2de39d90fa36e3e2c517105cf96857c936224c86e",
+      "correct_reference_sha256": "b9fb9bc4d80ba534399f162885179e2da29e05cbb07afc79e4cc5e042938d68c",
+      "stationary_reference_sha256": "b52d49fe8ac10570396f92b6f961b303dfb85395bfc6bad54228d876e3887831",
+      "movement_signal_pixels": 49905,
+      "mean_rgb_error_moving_reference": 2.0118425007514276,
+      "mean_rgb_error_stationary_reference": 92.10196039141034,
+      "fraction_within_24_of_moving_reference": 0.9823464582707143,
+      "actual_dom_delta": [
+        -17.890625,
+        6.734375
+      ],
+      "opaque_ghost_pixels": 34812,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/photo/preset1",
+      "gesture": 2,
+      "actual_sha256": "195b459f54daca3edab97dabb34126bdc698caaeeba2351e9415f5799df73eea",
+      "correct_reference_sha256": "2e9041599c4bb146eefaff070655eb644d3b91ca9b5744da247b3cb5343f6789",
+      "stationary_reference_sha256": "a950fd83dc50a1be0b0c36bbb258190a26004c6acc985ae893e058e37399c6bb",
+      "movement_signal_pixels": 52120,
+      "mean_rgb_error_moving_reference": 2.008346124328473,
+      "mean_rgb_error_stationary_reference": 91.92845356868764,
+      "fraction_within_24_of_moving_reference": 0.9824443591711435,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 34812,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/photo/preset2",
+      "gesture": 0,
+      "actual_sha256": "4c635e6eb54153d14addff70fc00ec5a577b00f4db46cc9e83f9859dceb27521",
+      "correct_reference_sha256": "0ca660914b846af61b76bb1c1060cf2b831327a90d1d8292c8eac1278f6a243f",
+      "stationary_reference_sha256": "2fcd5efe903fea23fb400273f33ee497e12ba9349217673cbaf484d30ab2e4cb",
+      "movement_signal_pixels": 57439,
+      "mean_rgb_error_moving_reference": 2.2619590638184275,
+      "mean_rgb_error_stationary_reference": 82.76857767950928,
+      "fraction_within_24_of_moving_reference": 0.9797872525635892,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 38206,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/photo/preset2",
+      "gesture": 1,
+      "actual_sha256": "1b20192aba7c9d4e91d71b032b182ddf47332628f5f14e49696e66fb3958b40c",
+      "correct_reference_sha256": "8b815d25fe2e2a7aeb083eaf412dcfa0f99065c805147321b6db956ba65cfdf0",
+      "stationary_reference_sha256": "c8126231d9310189ed43fabf6fd8e4e435931e7adc9a68b862a8b013e91bd1e6",
+      "movement_signal_pixels": 53810,
+      "mean_rgb_error_moving_reference": 1.8256334014743232,
+      "mean_rgb_error_stationary_reference": 80.89209564517128,
+      "fraction_within_24_of_moving_reference": 0.9825125441367776,
+      "actual_dom_delta": [
+        -17.890625,
+        6.75
+      ],
+      "opaque_ghost_pixels": 38206,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/photo/preset2",
+      "gesture": 2,
+      "actual_sha256": "360b5ac1ba6303ee52dfacb939a3cdc3aff87bafee56793721bd506c5392e73e",
+      "correct_reference_sha256": "a4c8299534a84b212c62c130dc3900035a988eadaf562d7c08c4a726c51397c7",
+      "stationary_reference_sha256": "1961c953b8fda02b951e1e4b0baaf3315f146a6500deb9c14a503aade14affee",
+      "movement_signal_pixels": 55063,
+      "mean_rgb_error_moving_reference": 2.027302060064532,
+      "mean_rgb_error_stationary_reference": 80.91126527795434,
+      "fraction_within_24_of_moving_reference": 0.9841999164593284,
+      "actual_dom_delta": [
+        20.96875,
+        -6.140625
+      ],
+      "opaque_ghost_pixels": 38206,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/photo/preset3",
+      "gesture": 0,
+      "actual_sha256": "bea7ac6aa34a2ff6e52c25acb35336a1241c837b9b2e6fba26ed86ba900b763b",
+      "correct_reference_sha256": "a20975d6a0dd53ae8a33ae4afd3e64a39ef9919885d5899201c920a3a1b58b18",
+      "stationary_reference_sha256": "a4c164821cf0c712044d513ca1e764d839e8bf3204f42f73393ff43f532d58ca",
+      "movement_signal_pixels": 66118,
+      "mean_rgb_error_moving_reference": 1.7886203454429959,
+      "mean_rgb_error_stationary_reference": 94.44997328009518,
+      "fraction_within_24_of_moving_reference": 0.9866753380320034,
+      "actual_dom_delta": [
+        22.1875,
+        -7.984375
+      ],
+      "opaque_ghost_pixels": 43899,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/photo/preset3",
+      "gesture": 1,
+      "actual_sha256": "b16722c36ec1ffb92e8865a671a9200bd7b4c4e029c7cda7ed7c8d808de8838a",
+      "correct_reference_sha256": "7826b748e5faba1f29a0b1785c7b412f627e2acd753d865dc0c272ff00358255",
+      "stationary_reference_sha256": "6a518d8594d87acc1c1b67bd752f2cecb1f44db1407565bcec587d195b677fc3",
+      "movement_signal_pixels": 62610,
+      "mean_rgb_error_moving_reference": 1.646472874407709,
+      "mean_rgb_error_stationary_reference": 92.15702496938721,
+      "fraction_within_24_of_moving_reference": 0.9882127455678007,
+      "actual_dom_delta": [
+        -17.875,
+        6.75
+      ],
+      "opaque_ghost_pixels": 43899,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/photo/preset3",
+      "gesture": 2,
+      "actual_sha256": "7d46788c7cf2cf9fe91326ffea49088b087cbdd3e9b046414beea0cdbaf05b2b",
+      "correct_reference_sha256": "9f50382a6f7450cfdb16d3ae19690cc7abdd6eba18a37e49a572cda09acb537c",
+      "stationary_reference_sha256": "be4375a2e59fa10eef6e0e39451be58ae3ad42aef5d51e015901f4d131d705a0",
+      "movement_signal_pixels": 63756,
+      "mean_rgb_error_moving_reference": 2.246345441997616,
+      "mean_rgb_error_stationary_reference": 93.92980007110442,
+      "fraction_within_24_of_moving_reference": 0.9800018821757952,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 43899,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/nes/preset0",
+      "gesture": 0,
+      "actual_sha256": "70e9e6092dd18c872c1e82b3cdafc3e7aa9863e25c11fbbb6cd490de0a7be75d",
+      "correct_reference_sha256": "f08fea008c2ecd0501c970aa29c885cf8a8bc5563c5bd3fdceee6e07b4a27666",
+      "stationary_reference_sha256": "a1c12a86b668340b4af824ec83d28ee6daf8801894b888e34353dca8625f161c",
+      "movement_signal_pixels": 50714,
+      "mean_rgb_error_moving_reference": 1.855128761288796,
+      "mean_rgb_error_stationary_reference": 84.78328140815817,
+      "fraction_within_24_of_moving_reference": 0.9721575896202233,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 14336,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/nes/preset0",
+      "gesture": 1,
+      "actual_sha256": "0257eb8ba118ab773785aebb8571cd92000d2018f5235b4821775ac59b045f9e",
+      "correct_reference_sha256": "b212f192b70845b3dc13f38fefb569df38c8c2684a20ad77e61d0ad3118445da",
+      "stationary_reference_sha256": "f08fea008c2ecd0501c970aa29c885cf8a8bc5563c5bd3fdceee6e07b4a27666",
+      "movement_signal_pixels": 47583,
+      "mean_rgb_error_moving_reference": 1.5423435540704313,
+      "mean_rgb_error_stationary_reference": 86.04722274761995,
+      "fraction_within_24_of_moving_reference": 0.9769035159615829,
+      "actual_dom_delta": [
+        -17.875,
+        6.734375
+      ],
+      "opaque_ghost_pixels": 14336,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/nes/preset0",
+      "gesture": 2,
+      "actual_sha256": "9b5b107eab809a7bc4c97827f274ced66c452a258c1990d6ee8a3220e7414642",
+      "correct_reference_sha256": "e0049eddf6e9790b6c26b39bcfc026db9b89b54a0eed3e3ad550c06027acf245",
+      "stationary_reference_sha256": "b212f192b70845b3dc13f38fefb569df38c8c2684a20ad77e61d0ad3118445da",
+      "movement_signal_pixels": 49022,
+      "mean_rgb_error_moving_reference": 2.1407667305835476,
+      "mean_rgb_error_stationary_reference": 85.11888539839256,
+      "fraction_within_24_of_moving_reference": 0.9693810942026029,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 14336,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/nes/preset1",
+      "gesture": 0,
+      "actual_sha256": "65740497d76a70ed126fc9efde542e9beab589e0e308441292d867fc2c58fed1",
+      "correct_reference_sha256": "bab44f8da25d026ff9eff4c8a94713ab7103da98fdaab4309618c33a650d6a16",
+      "stationary_reference_sha256": "a05600a6bbb2f0c4a692a331919b8b043c2da95901fe1212bd6323f89df7c2c4",
+      "movement_signal_pixels": 35295,
+      "mean_rgb_error_moving_reference": 2.1485951740095386,
+      "mean_rgb_error_stationary_reference": 79.76773858431316,
+      "fraction_within_24_of_moving_reference": 0.9669074939793172,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 8703,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/nes/preset1",
+      "gesture": 1,
+      "actual_sha256": "ac65846615d2916d644110d33f2b56c3d9bfe6b96e2fa2e9eeb5bcfe068de773",
+      "correct_reference_sha256": "8d4013a1b96a82f9e10d4e6666c408d6cdcac9d2a3940e26b3ad09df675be6f7",
+      "stationary_reference_sha256": "bab44f8da25d026ff9eff4c8a94713ab7103da98fdaab4309618c33a650d6a16",
+      "movement_signal_pixels": 32429,
+      "mean_rgb_error_moving_reference": 1.7640897550546322,
+      "mean_rgb_error_stationary_reference": 79.69690708933362,
+      "fraction_within_24_of_moving_reference": 0.9712294551173333,
+      "actual_dom_delta": [
+        -17.875,
+        6.75
+      ],
+      "opaque_ghost_pixels": 8703,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/nes/preset1",
+      "gesture": 2,
+      "actual_sha256": "1abb60260995f7d5ca28ac3799a81d30330e867ac106b6f6cf482037b73136fc",
+      "correct_reference_sha256": "fecb1928ed3573a5a3b8ead81732ffeb9c4f30ff4252c4f6696dc78c999aa3b7",
+      "stationary_reference_sha256": "8d4013a1b96a82f9e10d4e6666c408d6cdcac9d2a3940e26b3ad09df675be6f7",
+      "movement_signal_pixels": 34190,
+      "mean_rgb_error_moving_reference": 1.9395047284781126,
+      "mean_rgb_error_stationary_reference": 79.58020863800331,
+      "fraction_within_24_of_moving_reference": 0.96855805791167,
+      "actual_dom_delta": [
+        20.96875,
+        -6.140625
+      ],
+      "opaque_ghost_pixels": 8703,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/nes/preset2",
+      "gesture": 0,
+      "actual_sha256": "362364866d8930e9b0878cbd40bd739131aef5da6a72978ac5a40281914a2f9c",
+      "correct_reference_sha256": "e825b87528414966533df71850e33709724d80e4273d40b41ce51a69d04c88e4",
+      "stationary_reference_sha256": "d8ef13edfd675887cbf928512ee2e6465cab2203c4f6589e52ca18003801449d",
+      "movement_signal_pixels": 48347,
+      "mean_rgb_error_moving_reference": 1.8787239470218766,
+      "mean_rgb_error_stationary_reference": 68.93426686247336,
+      "fraction_within_24_of_moving_reference": 0.9693879661612923,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 14064,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/nes/preset2",
+      "gesture": 1,
+      "actual_sha256": "ee483f099d834894b2b54423d7d9f82d6945ab4c22d0d94d5c6ee83daf0d5c52",
+      "correct_reference_sha256": "8466b29389cefe28dd5aa1846a4a723a086c9bf9973e3d13788dd07b716d7126",
+      "stationary_reference_sha256": "e825b87528414966533df71850e33709724d80e4273d40b41ce51a69d04c88e4",
+      "movement_signal_pixels": 46041,
+      "mean_rgb_error_moving_reference": 1.6822325029140694,
+      "mean_rgb_error_stationary_reference": 70.50725078372176,
+      "fraction_within_24_of_moving_reference": 0.9733715601311874,
+      "actual_dom_delta": [
+        -17.875,
+        6.734375
+      ],
+      "opaque_ghost_pixels": 14064,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/nes/preset2",
+      "gesture": 2,
+      "actual_sha256": "bb50b4120525bb996d8c65f9d06ff76356d800ee3d8df628226477c9f462031e",
+      "correct_reference_sha256": "1ab390e5fded86d1098bc6951825254beff4fea7c690f9aa9f0613fcbfc81618",
+      "stationary_reference_sha256": "8466b29389cefe28dd5aa1846a4a723a086c9bf9973e3d13788dd07b716d7126",
+      "movement_signal_pixels": 47198,
+      "mean_rgb_error_moving_reference": 1.6637993135302342,
+      "mean_rgb_error_stationary_reference": 69.68534683673037,
+      "fraction_within_24_of_moving_reference": 0.9719479638967753,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 14064,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/nes/preset3",
+      "gesture": 0,
+      "actual_sha256": "214942bfa36cfac468a6e9d6fd1db563d5f08f5aa87d9965e3611dae23764d72",
+      "correct_reference_sha256": "a9c84bbb22d5d103b2fa7de9a46e04af1a91cde3397575f2688ab216647fef04",
+      "stationary_reference_sha256": "a20abbab36f0a2c9cda68054b3a43288d81ab76a425d55abf0cd8740ec79a22f",
+      "movement_signal_pixels": 58260,
+      "mean_rgb_error_moving_reference": 1.6607392150131595,
+      "mean_rgb_error_stationary_reference": 89.3092802380135,
+      "fraction_within_24_of_moving_reference": 0.9714555441125987,
+      "actual_dom_delta": [
+        22.1875,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 16128,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/nes/preset3",
+      "gesture": 1,
+      "actual_sha256": "bd608a4d28d9f08031e88faa9624510d71a908e55c9f8657c9aec8f73f14804a",
+      "correct_reference_sha256": "b0f2b075fe1d0d773ac80e63e5a4ff6cf57659950ca9179c1ac0d57046dc38bf",
+      "stationary_reference_sha256": "a9c84bbb22d5d103b2fa7de9a46e04af1a91cde3397575f2688ab216647fef04",
+      "movement_signal_pixels": 54309,
+      "mean_rgb_error_moving_reference": 1.4714995059136915,
+      "mean_rgb_error_stationary_reference": 86.7227469971214,
+      "fraction_within_24_of_moving_reference": 0.9759892467178553,
+      "actual_dom_delta": [
+        -17.875,
+        6.734375
+      ],
+      "opaque_ghost_pixels": 16128,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/production/nes/preset3",
+      "gesture": 2,
+      "actual_sha256": "67d118efca2821a561db62acaef88ce07175fc6c41b765e698847f7697495731",
+      "correct_reference_sha256": "3c266135baca366f16017fdc999073f24ee694c6b5b5d14593d790ea9666de74",
+      "stationary_reference_sha256": "b0f2b075fe1d0d773ac80e63e5a4ff6cf57659950ca9179c1ac0d57046dc38bf",
+      "movement_signal_pixels": 56256,
+      "mean_rgb_error_moving_reference": 1.8089981513083049,
+      "mean_rgb_error_stationary_reference": 87.40037210845658,
+      "fraction_within_24_of_moving_reference": 0.9702431740614335,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 16128,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/photo/preset0",
+      "gesture": 0,
+      "actual_sha256": "c9510b2940cbdf81a998d627edd23e95425255fcb602a96d9383ea88efb46af6",
+      "correct_reference_sha256": "388ba906c7085ae7234853ad6c769224e600fd5379424c06019770bd64aa1fa5",
+      "stationary_reference_sha256": "e4c532eb532cf26db6d4a3ec7924a0b10bafe30abcb3dec30f18559092df29cb",
+      "movement_signal_pixels": 59133,
+      "mean_rgb_error_moving_reference": 1.638408333756109,
+      "mean_rgb_error_stationary_reference": 96.67302521434732,
+      "fraction_within_24_of_moving_reference": 0.98905856290058,
+      "actual_dom_delta": [
+        22.203125,
+        -7.984375
+      ],
+      "opaque_ghost_pixels": 38928,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/photo/preset0",
+      "gesture": 1,
+      "actual_sha256": "f72981f7a27eba92c95f5c3535f99ff883ba726a9bbfd1c2075f0b8a5dcd92d9",
+      "correct_reference_sha256": "07c1413e9c5a9c736bd54ef656a8ccb531ead0adf0257132aa8eb54f2da34f8c",
+      "stationary_reference_sha256": "fa19ac2acf714ac90a6dd49d0f9be94ad3eccbe320fc1f23ecd11a0b450b34ba",
+      "movement_signal_pixels": 55203,
+      "mean_rgb_error_moving_reference": 1.8005180877850842,
+      "mean_rgb_error_stationary_reference": 94.63077489749953,
+      "fraction_within_24_of_moving_reference": 0.9852906544934152,
+      "actual_dom_delta": [
+        -17.890625,
+        6.75
+      ],
+      "opaque_ghost_pixels": 38928,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/photo/preset0",
+      "gesture": 2,
+      "actual_sha256": "abdc930205ca992f7b2767f65430b0f84974386537852ebdea83c6b7611370a5",
+      "correct_reference_sha256": "50f10ac2ed98826cef6318fe2c10ed546766d5ebee3590d6a551c6816ccb7bf6",
+      "stationary_reference_sha256": "8420c2fa03e45c0338a5d4416616effa8de984019c006e4bf29274ec6e422a07",
+      "movement_signal_pixels": 56281,
+      "mean_rgb_error_moving_reference": 2.4400063964748315,
+      "mean_rgb_error_stationary_reference": 93.89927921204907,
+      "fraction_within_24_of_moving_reference": 0.9785895772996216,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 38928,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/photo/preset1",
+      "gesture": 0,
+      "actual_sha256": "f285a4c31696d7cb62d42025dee3cfd380973f7088e676bb1358dd73f93d55b8",
+      "correct_reference_sha256": "37a7b692fd16248ed1e4fb3d84c692ed6ffb877db51fd8929453d7127584ce0d",
+      "stationary_reference_sha256": "a56d8af918fa0c834da4f5b71d40f94151aa23fd9a1d1e18c1992e65246de1af",
+      "movement_signal_pixels": 53431,
+      "mean_rgb_error_moving_reference": 2.0679755198293126,
+      "mean_rgb_error_stationary_reference": 93.27880818251577,
+      "fraction_within_24_of_moving_reference": 0.9822949224233123,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 34812,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/photo/preset1",
+      "gesture": 1,
+      "actual_sha256": "38d4dc3da6197cd2f9a50202b80e42236f48a82ced8f99af3ef4af22f2d7f657",
+      "correct_reference_sha256": "b9fb9bc4d80ba534399f162885179e2da29e05cbb07afc79e4cc5e042938d68c",
+      "stationary_reference_sha256": "b52d49fe8ac10570396f92b6f961b303dfb85395bfc6bad54228d876e3887831",
+      "movement_signal_pixels": 49905,
+      "mean_rgb_error_moving_reference": 2.0118425007514276,
+      "mean_rgb_error_stationary_reference": 92.10196039141034,
+      "fraction_within_24_of_moving_reference": 0.9823464582707143,
+      "actual_dom_delta": [
+        -17.890625,
+        6.734375
+      ],
+      "opaque_ghost_pixels": 34812,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/photo/preset1",
+      "gesture": 2,
+      "actual_sha256": "fa341183568f024d32b65ff3045581b20173fd66e089c417314cf9a1ec8c34aa",
+      "correct_reference_sha256": "2e9041599c4bb146eefaff070655eb644d3b91ca9b5744da247b3cb5343f6789",
+      "stationary_reference_sha256": "a950fd83dc50a1be0b0c36bbb258190a26004c6acc985ae893e058e37399c6bb",
+      "movement_signal_pixels": 52120,
+      "mean_rgb_error_moving_reference": 2.008346124328473,
+      "mean_rgb_error_stationary_reference": 91.92845356868764,
+      "fraction_within_24_of_moving_reference": 0.9824443591711435,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 34812,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/photo/preset2",
+      "gesture": 0,
+      "actual_sha256": "5b7cff5472bab9556cfa4a32bbe5da51938051e6a461105bff2ac571da0b7a8a",
+      "correct_reference_sha256": "0ca660914b846af61b76bb1c1060cf2b831327a90d1d8292c8eac1278f6a243f",
+      "stationary_reference_sha256": "2fcd5efe903fea23fb400273f33ee497e12ba9349217673cbaf484d30ab2e4cb",
+      "movement_signal_pixels": 57439,
+      "mean_rgb_error_moving_reference": 2.2619590638184275,
+      "mean_rgb_error_stationary_reference": 82.76857767950928,
+      "fraction_within_24_of_moving_reference": 0.9797872525635892,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 38206,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/photo/preset2",
+      "gesture": 1,
+      "actual_sha256": "ec12c7bbec617fab62c61e7b614c5324401f9aacc3ed761ae2b2183d9ee96d20",
+      "correct_reference_sha256": "8b815d25fe2e2a7aeb083eaf412dcfa0f99065c805147321b6db956ba65cfdf0",
+      "stationary_reference_sha256": "c8126231d9310189ed43fabf6fd8e4e435931e7adc9a68b862a8b013e91bd1e6",
+      "movement_signal_pixels": 53810,
+      "mean_rgb_error_moving_reference": 1.8256334014743232,
+      "mean_rgb_error_stationary_reference": 80.89209564517128,
+      "fraction_within_24_of_moving_reference": 0.9825125441367776,
+      "actual_dom_delta": [
+        -17.890625,
+        6.75
+      ],
+      "opaque_ghost_pixels": 38206,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/photo/preset2",
+      "gesture": 2,
+      "actual_sha256": "38fc1b3713f6dffd99e4482578a6aabeb0e596d56b654470b735b43a137604aa",
+      "correct_reference_sha256": "a4c8299534a84b212c62c130dc3900035a988eadaf562d7c08c4a726c51397c7",
+      "stationary_reference_sha256": "1961c953b8fda02b951e1e4b0baaf3315f146a6500deb9c14a503aade14affee",
+      "movement_signal_pixels": 55063,
+      "mean_rgb_error_moving_reference": 2.027302060064532,
+      "mean_rgb_error_stationary_reference": 80.91126527795434,
+      "fraction_within_24_of_moving_reference": 0.9841999164593284,
+      "actual_dom_delta": [
+        20.96875,
+        -6.140625
+      ],
+      "opaque_ghost_pixels": 38206,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/photo/preset3",
+      "gesture": 0,
+      "actual_sha256": "1ce02e18eb730c8395ab79c1668347bbd5efa8bb49fd00b62d05e8ba8504ae4d",
+      "correct_reference_sha256": "a20975d6a0dd53ae8a33ae4afd3e64a39ef9919885d5899201c920a3a1b58b18",
+      "stationary_reference_sha256": "a4c164821cf0c712044d513ca1e764d839e8bf3204f42f73393ff43f532d58ca",
+      "movement_signal_pixels": 66118,
+      "mean_rgb_error_moving_reference": 1.7886203454429959,
+      "mean_rgb_error_stationary_reference": 94.44997328009518,
+      "fraction_within_24_of_moving_reference": 0.9866753380320034,
+      "actual_dom_delta": [
+        22.1875,
+        -7.984375
+      ],
+      "opaque_ghost_pixels": 43899,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/photo/preset3",
+      "gesture": 1,
+      "actual_sha256": "595c635c924be2b7778d6ec6c77ec99212cb8ce56a37b908062c25e74c9853ea",
+      "correct_reference_sha256": "7826b748e5faba1f29a0b1785c7b412f627e2acd753d865dc0c272ff00358255",
+      "stationary_reference_sha256": "6a518d8594d87acc1c1b67bd752f2cecb1f44db1407565bcec587d195b677fc3",
+      "movement_signal_pixels": 62610,
+      "mean_rgb_error_moving_reference": 1.646472874407709,
+      "mean_rgb_error_stationary_reference": 92.15702496938721,
+      "fraction_within_24_of_moving_reference": 0.9882127455678007,
+      "actual_dom_delta": [
+        -17.875,
+        6.75
+      ],
+      "opaque_ghost_pixels": 43899,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/photo/preset3",
+      "gesture": 2,
+      "actual_sha256": "435cbf735061c5cf15b7bc20b2369b939654e1bb406d814b375c69cb34958c80",
+      "correct_reference_sha256": "9f50382a6f7450cfdb16d3ae19690cc7abdd6eba18a37e49a572cda09acb537c",
+      "stationary_reference_sha256": "be4375a2e59fa10eef6e0e39451be58ae3ad42aef5d51e015901f4d131d705a0",
+      "movement_signal_pixels": 63756,
+      "mean_rgb_error_moving_reference": 2.246345441997616,
+      "mean_rgb_error_stationary_reference": 93.92980007110442,
+      "fraction_within_24_of_moving_reference": 0.9800018821757952,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 43899,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/nes/preset0",
+      "gesture": 0,
+      "actual_sha256": "1722c2a358f96e01b63c56f45c1e196932f28aca716cb51300c3ebdfcda85170",
+      "correct_reference_sha256": "f08fea008c2ecd0501c970aa29c885cf8a8bc5563c5bd3fdceee6e07b4a27666",
+      "stationary_reference_sha256": "a1c12a86b668340b4af824ec83d28ee6daf8801894b888e34353dca8625f161c",
+      "movement_signal_pixels": 50714,
+      "mean_rgb_error_moving_reference": 1.855128761288796,
+      "mean_rgb_error_stationary_reference": 84.78328140815817,
+      "fraction_within_24_of_moving_reference": 0.9721575896202233,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 14336,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/nes/preset0",
+      "gesture": 1,
+      "actual_sha256": "614a1eb9a7c475246201e8aca36a69df9680c01b640e413e0db1f33a5d6bf4dd",
+      "correct_reference_sha256": "b212f192b70845b3dc13f38fefb569df38c8c2684a20ad77e61d0ad3118445da",
+      "stationary_reference_sha256": "f08fea008c2ecd0501c970aa29c885cf8a8bc5563c5bd3fdceee6e07b4a27666",
+      "movement_signal_pixels": 47583,
+      "mean_rgb_error_moving_reference": 1.5423435540704313,
+      "mean_rgb_error_stationary_reference": 86.04722274761995,
+      "fraction_within_24_of_moving_reference": 0.9769035159615829,
+      "actual_dom_delta": [
+        -17.875,
+        6.734375
+      ],
+      "opaque_ghost_pixels": 14336,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/nes/preset0",
+      "gesture": 2,
+      "actual_sha256": "ce1946b510196fc3b6df93c13257d55f1798f28be3ac1e6264b161cd1ba46a82",
+      "correct_reference_sha256": "e0049eddf6e9790b6c26b39bcfc026db9b89b54a0eed3e3ad550c06027acf245",
+      "stationary_reference_sha256": "b212f192b70845b3dc13f38fefb569df38c8c2684a20ad77e61d0ad3118445da",
+      "movement_signal_pixels": 49022,
+      "mean_rgb_error_moving_reference": 2.1407667305835476,
+      "mean_rgb_error_stationary_reference": 85.11888539839256,
+      "fraction_within_24_of_moving_reference": 0.9693810942026029,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 14336,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/nes/preset1",
+      "gesture": 0,
+      "actual_sha256": "e6abeb6eb7c38e388e9f51a86a7333d367d3f85777182bfb27231d64d5ca7f6f",
+      "correct_reference_sha256": "bab44f8da25d026ff9eff4c8a94713ab7103da98fdaab4309618c33a650d6a16",
+      "stationary_reference_sha256": "a05600a6bbb2f0c4a692a331919b8b043c2da95901fe1212bd6323f89df7c2c4",
+      "movement_signal_pixels": 35295,
+      "mean_rgb_error_moving_reference": 2.1485951740095386,
+      "mean_rgb_error_stationary_reference": 79.76773858431316,
+      "fraction_within_24_of_moving_reference": 0.9669074939793172,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 8703,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/nes/preset1",
+      "gesture": 1,
+      "actual_sha256": "e63e39122418601e16e7bb16091a68d23a48423b3e3fa39865b65549c433de5f",
+      "correct_reference_sha256": "8d4013a1b96a82f9e10d4e6666c408d6cdcac9d2a3940e26b3ad09df675be6f7",
+      "stationary_reference_sha256": "bab44f8da25d026ff9eff4c8a94713ab7103da98fdaab4309618c33a650d6a16",
+      "movement_signal_pixels": 32429,
+      "mean_rgb_error_moving_reference": 1.7640897550546322,
+      "mean_rgb_error_stationary_reference": 79.69690708933362,
+      "fraction_within_24_of_moving_reference": 0.9712294551173333,
+      "actual_dom_delta": [
+        -17.875,
+        6.75
+      ],
+      "opaque_ghost_pixels": 8703,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/nes/preset1",
+      "gesture": 2,
+      "actual_sha256": "12b1a82d7867adf8ee8c9f1d7e14dc82525485bbc9d829c22b0e05596e79fc6e",
+      "correct_reference_sha256": "fecb1928ed3573a5a3b8ead81732ffeb9c4f30ff4252c4f6696dc78c999aa3b7",
+      "stationary_reference_sha256": "8d4013a1b96a82f9e10d4e6666c408d6cdcac9d2a3940e26b3ad09df675be6f7",
+      "movement_signal_pixels": 34190,
+      "mean_rgb_error_moving_reference": 1.9395047284781126,
+      "mean_rgb_error_stationary_reference": 79.58020863800331,
+      "fraction_within_24_of_moving_reference": 0.96855805791167,
+      "actual_dom_delta": [
+        20.96875,
+        -6.140625
+      ],
+      "opaque_ghost_pixels": 8703,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/nes/preset2",
+      "gesture": 0,
+      "actual_sha256": "8d8c5a73e1a9f9b650662ee4913bf9e79ccdb6d9876760cdb0f7b76376966134",
+      "correct_reference_sha256": "e825b87528414966533df71850e33709724d80e4273d40b41ce51a69d04c88e4",
+      "stationary_reference_sha256": "d8ef13edfd675887cbf928512ee2e6465cab2203c4f6589e52ca18003801449d",
+      "movement_signal_pixels": 48347,
+      "mean_rgb_error_moving_reference": 1.8787239470218766,
+      "mean_rgb_error_stationary_reference": 68.93426686247336,
+      "fraction_within_24_of_moving_reference": 0.9693879661612923,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 14064,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/nes/preset2",
+      "gesture": 1,
+      "actual_sha256": "60cdb9d69327b64d951b0b1dbc18bdfd0ce29ce269c473bfb93e5295e83d33b6",
+      "correct_reference_sha256": "8466b29389cefe28dd5aa1846a4a723a086c9bf9973e3d13788dd07b716d7126",
+      "stationary_reference_sha256": "e825b87528414966533df71850e33709724d80e4273d40b41ce51a69d04c88e4",
+      "movement_signal_pixels": 46041,
+      "mean_rgb_error_moving_reference": 1.6822325029140694,
+      "mean_rgb_error_stationary_reference": 70.50725078372176,
+      "fraction_within_24_of_moving_reference": 0.9733715601311874,
+      "actual_dom_delta": [
+        -17.875,
+        6.734375
+      ],
+      "opaque_ghost_pixels": 14064,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/nes/preset2",
+      "gesture": 2,
+      "actual_sha256": "35440449577341bf5e0c136f6cbba0d550a1e1d006ef00305dc2efc7ac744b4c",
+      "correct_reference_sha256": "1ab390e5fded86d1098bc6951825254beff4fea7c690f9aa9f0613fcbfc81618",
+      "stationary_reference_sha256": "8466b29389cefe28dd5aa1846a4a723a086c9bf9973e3d13788dd07b716d7126",
+      "movement_signal_pixels": 47198,
+      "mean_rgb_error_moving_reference": 1.6637993135302342,
+      "mean_rgb_error_stationary_reference": 69.68534683673037,
+      "fraction_within_24_of_moving_reference": 0.9719479638967753,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 14064,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/nes/preset3",
+      "gesture": 0,
+      "actual_sha256": "98f3f99ffab96b98c5aa5656fd0a827e23f9a47ef12a93118153881393e9c5f8",
+      "correct_reference_sha256": "a9c84bbb22d5d103b2fa7de9a46e04af1a91cde3397575f2688ab216647fef04",
+      "stationary_reference_sha256": "a20abbab36f0a2c9cda68054b3a43288d81ab76a425d55abf0cd8740ec79a22f",
+      "movement_signal_pixels": 58260,
+      "mean_rgb_error_moving_reference": 1.6607392150131595,
+      "mean_rgb_error_stationary_reference": 89.3092802380135,
+      "fraction_within_24_of_moving_reference": 0.9714555441125987,
+      "actual_dom_delta": [
+        22.1875,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 16128,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/nes/preset3",
+      "gesture": 1,
+      "actual_sha256": "dc67ec5c2a75a7c9744f80f63741664e619a820e31564f49865d8e726fc50ffb",
+      "correct_reference_sha256": "b0f2b075fe1d0d773ac80e63e5a4ff6cf57659950ca9179c1ac0d57046dc38bf",
+      "stationary_reference_sha256": "a9c84bbb22d5d103b2fa7de9a46e04af1a91cde3397575f2688ab216647fef04",
+      "movement_signal_pixels": 54309,
+      "mean_rgb_error_moving_reference": 1.4714995059136915,
+      "mean_rgb_error_stationary_reference": 86.7227469971214,
+      "fraction_within_24_of_moving_reference": 0.9759892467178553,
+      "actual_dom_delta": [
+        -17.875,
+        6.734375
+      ],
+      "opaque_ghost_pixels": 16128,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/A1/nes/preset3",
+      "gesture": 2,
+      "actual_sha256": "c8034c44c510314ef05e5da1462bc937209a9121b01909e31608f7f1f7b6fa27",
+      "correct_reference_sha256": "3c266135baca366f16017fdc999073f24ee694c6b5b5d14593d790ea9666de74",
+      "stationary_reference_sha256": "b0f2b075fe1d0d773ac80e63e5a4ff6cf57659950ca9179c1ac0d57046dc38bf",
+      "movement_signal_pixels": 56256,
+      "mean_rgb_error_moving_reference": 1.8089981513083049,
+      "mean_rgb_error_stationary_reference": 87.40037210845658,
+      "fraction_within_24_of_moving_reference": 0.9702431740614335,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 16128,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/photo/preset0",
+      "gesture": 0,
+      "actual_sha256": "7daa6422aa16d04f1b2960519ec6998ea6b8d8523668921961af52ebc69a4a8a",
+      "correct_reference_sha256": "388ba906c7085ae7234853ad6c769224e600fd5379424c06019770bd64aa1fa5",
+      "stationary_reference_sha256": "e4c532eb532cf26db6d4a3ec7924a0b10bafe30abcb3dec30f18559092df29cb",
+      "movement_signal_pixels": 59133,
+      "mean_rgb_error_moving_reference": 1.6374838640578582,
+      "mean_rgb_error_stationary_reference": 96.67258552753961,
+      "fraction_within_24_of_moving_reference": 0.98905856290058,
+      "actual_dom_delta": [
+        22.203125,
+        -7.984375
+      ],
+      "opaque_ghost_pixels": 38928,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/photo/preset0",
+      "gesture": 1,
+      "actual_sha256": "6cc47c97e142dbfb270a3ff558338f288c29d03d8b1939b2defd51e14df879f2",
+      "correct_reference_sha256": "07c1413e9c5a9c736bd54ef656a8ccb531ead0adf0257132aa8eb54f2da34f8c",
+      "stationary_reference_sha256": "fa19ac2acf714ac90a6dd49d0f9be94ad3eccbe320fc1f23ecd11a0b450b34ba",
+      "movement_signal_pixels": 55203,
+      "mean_rgb_error_moving_reference": 1.799564033355675,
+      "mean_rgb_error_stationary_reference": 94.63117342656498,
+      "fraction_within_24_of_moving_reference": 0.9852906544934152,
+      "actual_dom_delta": [
+        -17.890625,
+        6.75
+      ],
+      "opaque_ghost_pixels": 38928,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/photo/preset0",
+      "gesture": 2,
+      "actual_sha256": "5a1ba4e09938c533fdfbf1be8b5ede80bc9ea1489b88e1d22a7f616605079280",
+      "correct_reference_sha256": "50f10ac2ed98826cef6318fe2c10ed546766d5ebee3590d6a551c6816ccb7bf6",
+      "stationary_reference_sha256": "8420c2fa03e45c0338a5d4416616effa8de984019c006e4bf29274ec6e422a07",
+      "movement_signal_pixels": 56281,
+      "mean_rgb_error_moving_reference": 2.4391239198545396,
+      "mean_rgb_error_stationary_reference": 93.89962864910005,
+      "fraction_within_24_of_moving_reference": 0.9785895772996216,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 38928,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/photo/preset1",
+      "gesture": 0,
+      "actual_sha256": "bba15ee149d0c8c1f30c1ccad290dd0937356fb82c5c7240f594d9bf2f5b2cce",
+      "correct_reference_sha256": "37a7b692fd16248ed1e4fb3d84c692ed6ffb877db51fd8929453d7127584ce0d",
+      "stationary_reference_sha256": "a56d8af918fa0c834da4f5b71d40f94151aa23fd9a1d1e18c1992e65246de1af",
+      "movement_signal_pixels": 53431,
+      "mean_rgb_error_moving_reference": 2.0670334949124416,
+      "mean_rgb_error_stationary_reference": 93.27917625847667,
+      "fraction_within_24_of_moving_reference": 0.9822949224233123,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 34812,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/photo/preset1",
+      "gesture": 1,
+      "actual_sha256": "cb4f42e267f7396c72262cfe91edf37b183095b16bd6929aeb77da0fa2d7a448",
+      "correct_reference_sha256": "b9fb9bc4d80ba534399f162885179e2da29e05cbb07afc79e4cc5e042938d68c",
+      "stationary_reference_sha256": "b52d49fe8ac10570396f92b6f961b303dfb85395bfc6bad54228d876e3887831",
+      "movement_signal_pixels": 49905,
+      "mean_rgb_error_moving_reference": 2.011394983802558,
+      "mean_rgb_error_stationary_reference": 92.10157966803594,
+      "fraction_within_24_of_moving_reference": 0.9823464582707143,
+      "actual_dom_delta": [
+        -17.890625,
+        6.734375
+      ],
+      "opaque_ghost_pixels": 34812,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/photo/preset1",
+      "gesture": 2,
+      "actual_sha256": "de223aaa0757b20af4c1662b63d93a9d562967c60743fae1b99a8850ce8cb855",
+      "correct_reference_sha256": "2e9041599c4bb146eefaff070655eb644d3b91ca9b5744da247b3cb5343f6789",
+      "stationary_reference_sha256": "a950fd83dc50a1be0b0c36bbb258190a26004c6acc985ae893e058e37399c6bb",
+      "movement_signal_pixels": 52120,
+      "mean_rgb_error_moving_reference": 2.007936812484011,
+      "mean_rgb_error_stationary_reference": 91.92813379380915,
+      "fraction_within_24_of_moving_reference": 0.9824443591711435,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 34812,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/photo/preset2",
+      "gesture": 0,
+      "actual_sha256": "5c5d9cb99b6e2147bc0fa3a378041134a69ec17df821b0895b3c6c63509dfd3f",
+      "correct_reference_sha256": "0ca660914b846af61b76bb1c1060cf2b831327a90d1d8292c8eac1278f6a243f",
+      "stationary_reference_sha256": "2fcd5efe903fea23fb400273f33ee497e12ba9349217673cbaf484d30ab2e4cb",
+      "movement_signal_pixels": 57439,
+      "mean_rgb_error_moving_reference": 2.2610073295147894,
+      "mean_rgb_error_stationary_reference": 82.76796253416668,
+      "fraction_within_24_of_moving_reference": 0.9797872525635892,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 38206,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/photo/preset2",
+      "gesture": 1,
+      "actual_sha256": "e7c12a46a110a20eee400252da4816764a2ac7ce1efae8291d430f6246273698",
+      "correct_reference_sha256": "8b815d25fe2e2a7aeb083eaf412dcfa0f99065c805147321b6db956ba65cfdf0",
+      "stationary_reference_sha256": "c8126231d9310189ed43fabf6fd8e4e435931e7adc9a68b862a8b013e91bd1e6",
+      "movement_signal_pixels": 53810,
+      "mean_rgb_error_moving_reference": 1.8246670383447934,
+      "mean_rgb_error_stationary_reference": 80.89188502756613,
+      "fraction_within_24_of_moving_reference": 0.9825125441367776,
+      "actual_dom_delta": [
+        -17.890625,
+        6.75
+      ],
+      "opaque_ghost_pixels": 38206,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/photo/preset2",
+      "gesture": 2,
+      "actual_sha256": "13a1bc3de022b8c7f6b2f4f23a0abc055cb50da9019543880b9ed20de396c267",
+      "correct_reference_sha256": "a4c8299534a84b212c62c130dc3900035a988eadaf562d7c08c4a726c51397c7",
+      "stationary_reference_sha256": "1961c953b8fda02b951e1e4b0baaf3315f146a6500deb9c14a503aade14affee",
+      "movement_signal_pixels": 55063,
+      "mean_rgb_error_moving_reference": 2.026394009286333,
+      "mean_rgb_error_stationary_reference": 80.91162849826563,
+      "fraction_within_24_of_moving_reference": 0.9841999164593284,
+      "actual_dom_delta": [
+        20.96875,
+        -6.140625
+      ],
+      "opaque_ghost_pixels": 38206,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/photo/preset3",
+      "gesture": 0,
+      "actual_sha256": "f8622897ec958af15c751a0b08dd5838a82ae974a9413826b7f014f331d315c0",
+      "correct_reference_sha256": "a20975d6a0dd53ae8a33ae4afd3e64a39ef9919885d5899201c920a3a1b58b18",
+      "stationary_reference_sha256": "a4c164821cf0c712044d513ca1e764d839e8bf3204f42f73393ff43f532d58ca",
+      "movement_signal_pixels": 66118,
+      "mean_rgb_error_moving_reference": 1.7878288312814463,
+      "mean_rgb_error_stationary_reference": 94.4502102301945,
+      "fraction_within_24_of_moving_reference": 0.9866753380320034,
+      "actual_dom_delta": [
+        22.1875,
+        -7.984375
+      ],
+      "opaque_ghost_pixels": 43899,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/photo/preset3",
+      "gesture": 1,
+      "actual_sha256": "c02e9543c0e3ea7c78b8bf463f07e8e415c7a9b755b9023b776dbca5984e8dda",
+      "correct_reference_sha256": "7826b748e5faba1f29a0b1785c7b412f627e2acd753d865dc0c272ff00358255",
+      "stationary_reference_sha256": "6a518d8594d87acc1c1b67bd752f2cecb1f44db1407565bcec587d195b677fc3",
+      "movement_signal_pixels": 62610,
+      "mean_rgb_error_moving_reference": 1.645471969333972,
+      "mean_rgb_error_stationary_reference": 92.15741894266091,
+      "fraction_within_24_of_moving_reference": 0.9882127455678007,
+      "actual_dom_delta": [
+        -17.875,
+        6.75
+      ],
+      "opaque_ghost_pixels": 43899,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/photo/preset3",
+      "gesture": 2,
+      "actual_sha256": "8bdb956cc6d5f344b1141e651704b0a1eb289cc79242561b62f6dd8a490e73b6",
+      "correct_reference_sha256": "9f50382a6f7450cfdb16d3ae19690cc7abdd6eba18a37e49a572cda09acb537c",
+      "stationary_reference_sha256": "be4375a2e59fa10eef6e0e39451be58ae3ad42aef5d51e015901f4d131d705a0",
+      "movement_signal_pixels": 63756,
+      "mean_rgb_error_moving_reference": 2.245514147688061,
+      "mean_rgb_error_stationary_reference": 93.9298471254993,
+      "fraction_within_24_of_moving_reference": 0.9800018821757952,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 43899,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/nes/preset0",
+      "gesture": 0,
+      "actual_sha256": "aee0d9d940019ae221f783471f1d69c6f2239aab0111bc17cb76eb5659397f50",
+      "correct_reference_sha256": "61b3876207559082725709a829b4b5eff8510dc83aca61c5bd10f8c5dd4eeb71",
+      "stationary_reference_sha256": "d2e787f2348d0712442b7642c5bcc57cd760eb2a1ae815a4bd217e907612c5b4",
+      "movement_signal_pixels": 50649,
+      "mean_rgb_error_moving_reference": 1.9472579254608515,
+      "mean_rgb_error_stationary_reference": 84.66675222281454,
+      "fraction_within_24_of_moving_reference": 0.985211948903236,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 14336,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/nes/preset0",
+      "gesture": 1,
+      "actual_sha256": "ce79774796634524097aadd0936c5ba159a3a6ec1542c57a1c5363e4576d563e",
+      "correct_reference_sha256": "1c68097cb6156970764a6c565852e495f680b966eec08b8d5da81d1b871a1a42",
+      "stationary_reference_sha256": "61b3876207559082725709a829b4b5eff8510dc83aca61c5bd10f8c5dd4eeb71",
+      "movement_signal_pixels": 47451,
+      "mean_rgb_error_moving_reference": 1.5752741424487016,
+      "mean_rgb_error_stationary_reference": 86.01697891860375,
+      "fraction_within_24_of_moving_reference": 0.9855640555520432,
+      "actual_dom_delta": [
+        -17.875,
+        6.734375
+      ],
+      "opaque_ghost_pixels": 14336,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/nes/preset0",
+      "gesture": 2,
+      "actual_sha256": "3cc3117f648e50a714463ba1c29742c263cf83f7289229a27c4a24d5b4ec5487",
+      "correct_reference_sha256": "58c461b210ab1d29cb0c5c3caf2437fdff75a1614e742361a888590d315ef0d9",
+      "stationary_reference_sha256": "1c68097cb6156970764a6c565852e495f680b966eec08b8d5da81d1b871a1a42",
+      "movement_signal_pixels": 48947,
+      "mean_rgb_error_moving_reference": 2.203859957368855,
+      "mean_rgb_error_stationary_reference": 84.82213414509572,
+      "fraction_within_24_of_moving_reference": 0.9813267411690195,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 14336,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/nes/preset1",
+      "gesture": 0,
+      "actual_sha256": "1ffa39eb3401e64a8823b474530e799dbe779f53c07e2b6bc6b0a369a932426a",
+      "correct_reference_sha256": "7c1e836500df47a34444231070fc2c2336fb3facae1f3974078745e9704314b6",
+      "stationary_reference_sha256": "42d7aff148192e2fc161f823ae871faaad389885386a2ae682c779fe0098224f",
+      "movement_signal_pixels": 35443,
+      "mean_rgb_error_moving_reference": 2.424108192496873,
+      "mean_rgb_error_stationary_reference": 79.24675300247345,
+      "fraction_within_24_of_moving_reference": 0.9777106904043111,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 8703,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/nes/preset1",
+      "gesture": 1,
+      "actual_sha256": "bee9e9d27b17f9d1d54c25d05cecc1e7b9e7adb89de700a35daee8cf36612b8e",
+      "correct_reference_sha256": "3f8152d6490b28066d7f6dc80c70800d5bc342ad67a7662295b17922d46a9e90",
+      "stationary_reference_sha256": "7c1e836500df47a34444231070fc2c2336fb3facae1f3974078745e9704314b6",
+      "movement_signal_pixels": 32565,
+      "mean_rgb_error_moving_reference": 1.7806847842775986,
+      "mean_rgb_error_stationary_reference": 79.32299503556989,
+      "fraction_within_24_of_moving_reference": 0.9816674343620452,
+      "actual_dom_delta": [
+        -17.875,
+        6.75
+      ],
+      "opaque_ghost_pixels": 8703,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/nes/preset1",
+      "gesture": 2,
+      "actual_sha256": "c2b335a1ac9979309822d289787cf319fdf69d70ed666e19a88f33d9d16a8aa1",
+      "correct_reference_sha256": "a579ebf5b146dcbc6a901385d7658e8b0b94717e30f668cec5816c4f0dd5ce16",
+      "stationary_reference_sha256": "3f8152d6490b28066d7f6dc80c70800d5bc342ad67a7662295b17922d46a9e90",
+      "movement_signal_pixels": 34273,
+      "mean_rgb_error_moving_reference": 1.971250449819586,
+      "mean_rgb_error_stationary_reference": 79.0851982610218,
+      "fraction_within_24_of_moving_reference": 0.9794006944241823,
+      "actual_dom_delta": [
+        20.96875,
+        -6.140625
+      ],
+      "opaque_ghost_pixels": 8703,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/nes/preset2",
+      "gesture": 0,
+      "actual_sha256": "4854f99977d8bc8ca7d904fb934a0c4f186acad767467cda4dfd35291d906018",
+      "correct_reference_sha256": "c46240c628e55a81ec21fc63f5260e9f27d0b575887f2f3955dffcde929fc90d",
+      "stationary_reference_sha256": "7a67d59938b91400aed4b1dda84fd39f3225a3b6805e6fe9ae56e1e3311f502b",
+      "movement_signal_pixels": 48440,
+      "mean_rgb_error_moving_reference": 1.9475364712358931,
+      "mean_rgb_error_stationary_reference": 68.60364024222406,
+      "fraction_within_24_of_moving_reference": 0.9822667217175888,
+      "actual_dom_delta": [
+        22.203125,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 14064,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/nes/preset2",
+      "gesture": 1,
+      "actual_sha256": "537ee9a0b76cf8bd673b836814a2c566a399a33fb6e1e13071c3d307dfc27c1e",
+      "correct_reference_sha256": "3a748c54ac65a479eb9f6319e5c83d802c2f12711993f079b595a53f8bfcc820",
+      "stationary_reference_sha256": "c46240c628e55a81ec21fc63f5260e9f27d0b575887f2f3955dffcde929fc90d",
+      "movement_signal_pixels": 46142,
+      "mean_rgb_error_moving_reference": 1.7076633002470634,
+      "mean_rgb_error_stationary_reference": 70.11684943579964,
+      "fraction_within_24_of_moving_reference": 0.9820120497594382,
+      "actual_dom_delta": [
+        -17.875,
+        6.734375
+      ],
+      "opaque_ghost_pixels": 14064,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/nes/preset2",
+      "gesture": 2,
+      "actual_sha256": "8d989b3d5558ad50b5c9a3bf93b61bf16553bb22b5496235f278ef9029646fe8",
+      "correct_reference_sha256": "b42b5dd2ed0f934ef7fd87d8e0f593be166637d19ef9c09bf9458427ece22bff",
+      "stationary_reference_sha256": "3a748c54ac65a479eb9f6319e5c83d802c2f12711993f079b595a53f8bfcc820",
+      "movement_signal_pixels": 47321,
+      "mean_rgb_error_moving_reference": 1.7262667032959291,
+      "mean_rgb_error_stationary_reference": 69.1799905609208,
+      "fraction_within_24_of_moving_reference": 0.983390038249403,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 14064,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/nes/preset3",
+      "gesture": 0,
+      "actual_sha256": "f2c89fb240e4d0f73561815697aa782eeb132cf554fe59dc3f8ef76a3710e16d",
+      "correct_reference_sha256": "b7987a2a1a2bde0a015788d399d1d389e395cf2f085bf98a68cb83f60563d58d",
+      "stationary_reference_sha256": "2778cead2be75a4eccd44e275d3fec7fd16ac731ae9b5a2522ff12db4ac1c54f",
+      "movement_signal_pixels": 58321,
+      "mean_rgb_error_moving_reference": 1.6696844475689145,
+      "mean_rgb_error_stationary_reference": 88.94881775003859,
+      "fraction_within_24_of_moving_reference": 0.9855969547847259,
+      "actual_dom_delta": [
+        22.1875,
+        -7.96875
+      ],
+      "opaque_ghost_pixels": 16128,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/nes/preset3",
+      "gesture": 1,
+      "actual_sha256": "0f3baf32c1d77901a467662c2d37628bbc72d03f37423dad156262d3e32d66f1",
+      "correct_reference_sha256": "752e775f53e8f1efb5d57524833fb84758f62071825a272baa1cbf9ed53ab4d8",
+      "stationary_reference_sha256": "b7987a2a1a2bde0a015788d399d1d389e395cf2f085bf98a68cb83f60563d58d",
+      "movement_signal_pixels": 54384,
+      "mean_rgb_error_moving_reference": 1.4717686574482691,
+      "mean_rgb_error_stationary_reference": 86.51980361871139,
+      "fraction_within_24_of_moving_reference": 0.9852530155928214,
+      "actual_dom_delta": [
+        -17.875,
+        6.734375
+      ],
+      "opaque_ghost_pixels": 16128,
+      "visual_movement_verified": true
+    },
+    {
+      "case": "headless-shell/Canvas/nes/preset3",
+      "gesture": 2,
+      "actual_sha256": "eede6c9165594378f41a31c51b4d7aa0c77ab188e1b72299cd6338ef9abd7a80",
+      "correct_reference_sha256": "97fba47376aab2edd6d98f4bc684e3f22e7b5de521a0cc517a1c0d6abe2d056e",
+      "stationary_reference_sha256": "752e775f53e8f1efb5d57524833fb84758f62071825a272baa1cbf9ed53ab4d8",
+      "movement_signal_pixels": 56219,
+      "mean_rgb_error_moving_reference": 1.8272232993590543,
+      "mean_rgb_error_stationary_reference": 87.12831960725022,
+      "fraction_within_24_of_moving_reference": 0.9829061349365873,
+      "actual_dom_delta": [
+        20.96875,
+        -6.125
+      ],
+      "opaque_ghost_pixels": 16128,
+      "visual_movement_verified": true
+    }
+  ],
+  "errors": [],
+  "failure": "Traceback (most recent call last):\n  File \"/home/user/.cache/casardi-rootcause/compositor_gesture_qa.py\", line 49, in main\n    await f.locator('#start').tap();await f.locator('[data-mode='+mode+']').tap();await f.locator('[data-scene=pantheon]').tap();await f.locator('#next').tap();await f.locator('.preset-grid button').nth(preset).tap();await f.locator('#next').tap();await f.locator('#next').tap()\n                                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/async_api/_generated.py\", line 13403, in tap\n    await self._impl_obj.tap(\n    ...<7 lines>...\n    )\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/locator.py\", line 859, in tap\n    return await self._frame.tap(\n           ^^^^^^^^^^^^^^^^^^^^^^\n    ...<9 lines>...\n    )\n    ^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/frame.py\", line 716, in tap\n    return await self._channel.tap(\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<8 lines>...\n    )\n    ^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py\", line 387, in finish\n    raise e from None\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/channel_owner.py\", line 352, in finish\n    result = await zone.run_async(lambda: awaitable)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/site-packages/playwright/_impl/utils/zones.py\", line 58, in run_async\n    return await func()\n           ^^^^^^^^^^^^\nplaywright._impl._errors.Error: Locator.tap: Target crashed \nCall log:\n  - waiting for locator(\"#next\")\n    - locator resolved to <button id=\"next\" class=\"primary\">\u2026</button>\n  - attempting tap action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n\n"
+}

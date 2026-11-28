@@ -2,3 +2,17 @@
 *.png binary
 *.wav binary
 *.zip binary
+
+# Byte-exact Cartolina deliverables/evidence on this dedicated branch.
+/README.md -text
+/.gitattributes -text
+/Cartolina_Casardi* -text
+/Analisi_blocco_Android_Arena.md -text
+/Diagnosi_blocco_Casardi* -text
+/Guida_Casardi* -text
+/LEGGIMI_CASARDI* -text
+/Verifica_pubblicazione_Casardi* -text
+/PUBBLICAZIONE_CARTOLINA.json -text
+/casardi_diagnostica/** -text
+/esperimenti/** -text
+/archivio_cartolina/** -text

@@ -1,0 +1,2 @@
+PASS candidate False {'rendering': False, 'failed_calls': 1, 'loading': True, 'status': True, 'latest_src_retained': True}
+PASS candidate True {'rendering': True, 'failed_calls': 0, 'loading': True, 'status': False, 'latest_src_retained': True}

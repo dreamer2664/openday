@@ -1,0 +1,16 @@
+{
+  "result": "NO ZERO-RANGE GEOMETRY FOUND",
+  "date": "2026-11-27",
+  "hypothesis": "Some outfit/pose could make the whole movable group too large, leaving no movement range.",
+  "normalised_profiles_rendered": 473,
+  "unique_person_bounds": 45,
+  "companion_variants_and_poses": 42,
+  "geometry_cases": 139320,
+  "smallest_remaining_horizontal_units": 210.922,
+  "smallest_remaining_vertical_units": 70.0,
+  "locked_cases": [],
+  "seconds": 2.38,
+  "scope": "Python sprite alpha bounds and canonical geometry, all 12 places/both styles/three sizes, sampled appearance profiles. Not exhaustive outfit combinations, real browser touch, the user original outfit, or physical Android/Arena.",
+  "production_source_modified": false,
+  "user_reported_bug": "STILL OPEN; A1 working with a different outfit does not establish a fix or an outfit cause."
+}

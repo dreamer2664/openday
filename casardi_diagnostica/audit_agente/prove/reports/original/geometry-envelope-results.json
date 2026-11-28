@@ -1,0 +1,462 @@
+{
+  "date": "2026-11-27",
+  "result": "PASS",
+  "scope": "Conservative alpha/geometry envelope for every valid character appearance, all native heights allowed by mandatory opaque body/head, all 71 validated scales, all scenes/styles and 42 animal variants/poses plus none. Not a touch/browser/device proof.",
+  "assumptions": [
+    "Mandatory body/head remain opaque under alpha-over and equipment painting; manually checked renderer algorithm.",
+    "All character drawing is clipped to native 64x64; crop anchor is 32-crop_left.",
+    "Companion descriptors and reference heights enumerated for every allowed variant/pose."
+  ],
+  "mandatory_body_head_cases": 48,
+  "minimum_opaque_height": 45,
+  "character_heights": [
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64
+  ],
+  "validated_scales": 71,
+  "companion_states": 43,
+  "geometry_cases": 1465440,
+  "minimum_horizontal_range": 140.79999999999995,
+  "minimum_vertical_range": 69.19999999999999,
+  "worst_horizontal": {
+    "scene": "biblioteca",
+    "mode": "photo",
+    "zoom": 134,
+    "height": 45,
+    "companion": null,
+    "group": {
+      "x": 82.39999999999998,
+      "y": 43.99999999999994,
+      "w": 435.20000000000005,
+      "h": 306.00000000000006
+    }
+  },
+  "worst_vertical": {
+    "scene": "casardi",
+    "mode": "photo",
+    "zoom": 135,
+    "height": 59,
+    "companion": null,
+    "group": {
+      "x": 133.6,
+      "y": 43.19999999999999,
+      "w": 332.8,
+      "h": 306.8
+    }
+  },
+  "mandatory_bounds": [
+    {
+      "build": "snello",
+      "face": "ovale",
+      "pose": 0,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "snello",
+      "face": "ovale",
+      "pose": 1,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "snello",
+      "face": "ovale",
+      "pose": 2,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "snello",
+      "face": "ovale",
+      "pose": 3,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "snello",
+      "face": "squadrato",
+      "pose": 0,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "snello",
+      "face": "squadrato",
+      "pose": 1,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "snello",
+      "face": "squadrato",
+      "pose": 2,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "snello",
+      "face": "squadrato",
+      "pose": 3,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "snello",
+      "face": "affusolato",
+      "pose": 0,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "snello",
+      "face": "affusolato",
+      "pose": 1,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "snello",
+      "face": "affusolato",
+      "pose": 2,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "snello",
+      "face": "affusolato",
+      "pose": 3,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "snello",
+      "face": "tondo",
+      "pose": 0,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "snello",
+      "face": "tondo",
+      "pose": 1,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "snello",
+      "face": "tondo",
+      "pose": 2,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "snello",
+      "face": "tondo",
+      "pose": 3,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "medio",
+      "face": "ovale",
+      "pose": 0,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "medio",
+      "face": "ovale",
+      "pose": 1,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "medio",
+      "face": "ovale",
+      "pose": 2,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "medio",
+      "face": "ovale",
+      "pose": 3,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "medio",
+      "face": "squadrato",
+      "pose": 0,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "medio",
+      "face": "squadrato",
+      "pose": 1,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "medio",
+      "face": "squadrato",
+      "pose": 2,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "medio",
+      "face": "squadrato",
+      "pose": 3,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "medio",
+      "face": "affusolato",
+      "pose": 0,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "medio",
+      "face": "affusolato",
+      "pose": 1,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "medio",
+      "face": "affusolato",
+      "pose": 2,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "medio",
+      "face": "affusolato",
+      "pose": 3,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "medio",
+      "face": "tondo",
+      "pose": 0,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "medio",
+      "face": "tondo",
+      "pose": 1,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "medio",
+      "face": "tondo",
+      "pose": 2,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "medio",
+      "face": "tondo",
+      "pose": 3,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "minuto",
+      "face": "ovale",
+      "pose": 0,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "minuto",
+      "face": "ovale",
+      "pose": 1,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "minuto",
+      "face": "ovale",
+      "pose": 2,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "minuto",
+      "face": "ovale",
+      "pose": 3,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "minuto",
+      "face": "squadrato",
+      "pose": 0,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "minuto",
+      "face": "squadrato",
+      "pose": 1,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "minuto",
+      "face": "squadrato",
+      "pose": 2,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "minuto",
+      "face": "squadrato",
+      "pose": 3,
+      "opaque_top": 17,
+      "opaque_bottom": 61,
+      "min_final_height": 45
+    },
+    {
+      "build": "minuto",
+      "face": "affusolato",
+      "pose": 0,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "minuto",
+      "face": "affusolato",
+      "pose": 1,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "minuto",
+      "face": "affusolato",
+      "pose": 2,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "minuto",
+      "face": "affusolato",
+      "pose": 3,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "minuto",
+      "face": "tondo",
+      "pose": 0,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "minuto",
+      "face": "tondo",
+      "pose": 1,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "minuto",
+      "face": "tondo",
+      "pose": 2,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    },
+    {
+      "build": "minuto",
+      "face": "tondo",
+      "pose": 3,
+      "opaque_top": 15,
+      "opaque_bottom": 61,
+      "min_final_height": 47
+    }
+  ],
+  "seconds": 14.8,
+  "sources": {
+    "app/character.py": "f0b29178f68995e412928c473a577123b062281a66f9cbbe3405bff140100af5",
+    "app/cyber_layers.py": "50c6e0f4b81bc8048dea980dbdb23d3dcddb99b4eff93c890754f7b8382ec1a5",
+    "app/layout_edit.py": "c28d6ffd88a824cd51380f6a04d989a5bbe599b965792b275163a732dd61722c",
+    "app/animals.py": "a434493fb0e1d93c38be8f58a2b784648ebe29edcbf70fd788a8330812188dd4",
+    "browser/lpc.js": "6beff9b87f030f6711d9f34a6b58bb359c28f47e17ed4156f31fe28f1320e91d",
+    "browser/pixels.js": "d0f3700300fdd972c1f9df49a9b195ea77edc7c1d0297682e5c556852958c711",
+    "browser/composition.js": "d06c41e21797ba7295b66ab26507ee43cc8b3f866c4adfee0ae4688cd16d2b1f",
+    "browser/render.js": "5104e281b886ab8989342f9f8f1921aa4e242de089f32bd924681d7abc629f16"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "revision": "3.3",
+  "repository": "dreamer2664/openday",
+  "branch": "v1",
+  "folder": "v1/",
+  "commit": "004f06afe7c0b33be85d42fa0b08aba696b22f17",
+  "parent": "de2c3ae57dffd5e2a40463fbdaceccf89a5edd14",
+  "changed_paths": 102,
+  "all_changes_inside_v1": true,
+  "outside_tree_entries_preserved": 117,
+  "remote_tree_entries_verified": 1089,
+  "repository_delivery_files": 717,
+  "zip_members": 713,
+  "zip_bytes": 75370094,
+  "zip_sha256": "280284d37cadd0b3965867426f211b1e19a37e7de61eb18455d4224cdf7f839d",
+  "html_bytes": 24818408,
+  "html_sha256": "e8e28940e478a985e2b5113606045b4eac8677c58c27055a8392b719605a392a",
+  "public_zip_verified": true,
+  "public_html_verified": true,
+  "executable_modes": "100755 for Windows EXE and start.sh",
+  "other_branch_heads_unchanged": true,
+  "heads_before": {
+    "refs/heads/main": "c4c4fc9637d387369eb9911d66d24de94b85b3fa",
+    "refs/heads/quiz": "2a22eeae7a79346c09b06f8b7d31e78f243fed76",
+    "refs/heads/v1": "de2c3ae57dffd5e2a40463fbdaceccf89a5edd14"
+  },
+  "heads_after": {
+    "refs/heads/main": "c4c4fc9637d387369eb9911d66d24de94b85b3fa",
+    "refs/heads/quiz": "2a22eeae7a79346c09b06f8b7d31e78f243fed76",
+    "refs/heads/v1": "004f06afe7c0b33be85d42fa0b08aba696b22f17"
+  },
+  "credentials_scanned_and_absent": true,
+  "zip_url": "https://raw.githubusercontent.com/dreamer2664/openday/004f06afe7c0b33be85d42fa0b08aba696b22f17/v1/Cartolina_Casardi_Windows_LPC_QR_2026-27.zip",
+  "html_url": "https://raw.githubusercontent.com/dreamer2664/openday/004f06afe7c0b33be85d42fa0b08aba696b22f17/v1/casardi_postcard/Cartolina_Casardi_PC_e_Telefono.html",
+  "windows_native": "NOT TESTED",
+  "physical_phone_school_wifi": "NOT TESTED"
+}

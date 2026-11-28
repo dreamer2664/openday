@@ -1,0 +1,231 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "purpose": "QA for a non-production experiment; controlled failures are not the physical user trigger",
+  "html_sha256": "a01ca4759b499979e8a9b0591f6b4a007fb11654d874053e0444be3c7b33245e",
+  "seconds": 50.22,
+  "checks": [
+    {
+      "name": "photo/touch: three actor gestures while old previews pending; late completion discarded; undo exact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch: stationary tap during pending preview settles instead of stranding export",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch: cancel rolls back only second in-flight gesture, retains first edit/history",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch: sticker gesture during actor preview retains both edits, settles, undo exact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch: five capture/lifecycle cancellations, then real movement and exact undo",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch: current render error leaves actor usable, visible pending position and history intact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/touch: 12 touch/mouse stress edits; no preview PNG encode, image decode or src mutation",
+      "result": "PASS",
+      "counters": {
+        "encodes": 0,
+        "decodes": 0,
+        "srcMutations": 0
+      }
+    },
+    {
+      "name": "photo/touch: real HD download after races/stress, byte-identical independent asset recomposition",
+      "result": "PASS"
+    },
+    {
+      "name": "photo/touch: visitor reset during held gesture cannot resurrect old canvas or hit boxes",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: three actor gestures while old previews pending; late completion discarded; undo exact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: stationary tap during pending preview settles instead of stranding export",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: cancel rolls back only second in-flight gesture, retains first edit/history",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: sticker gesture during actor preview retains both edits, settles, undo exact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: five capture/lifecycle cancellations, then real movement and exact undo",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: current render error leaves actor usable, visible pending position and history intact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "photo/mouse: 12 touch/mouse stress edits; no preview PNG encode, image decode or src mutation",
+      "result": "PASS",
+      "counters": {
+        "encodes": 0,
+        "decodes": 0,
+        "srcMutations": 0
+      }
+    },
+    {
+      "name": "photo/mouse: real HD download after races/stress, byte-identical independent asset recomposition",
+      "result": "PASS"
+    },
+    {
+      "name": "photo/mouse: visitor reset during held gesture cannot resurrect old canvas or hit boxes",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch: three actor gestures while old previews pending; late completion discarded; undo exact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch: stationary tap during pending preview settles instead of stranding export",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch: cancel rolls back only second in-flight gesture, retains first edit/history",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch: sticker gesture during actor preview retains both edits, settles, undo exact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch: five capture/lifecycle cancellations, then real movement and exact undo",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch: current render error leaves actor usable, visible pending position and history intact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/touch: 12 touch/mouse stress edits; no preview PNG encode, image decode or src mutation",
+      "result": "PASS",
+      "counters": {
+        "encodes": 0,
+        "decodes": 0,
+        "srcMutations": 0
+      }
+    },
+    {
+      "name": "nes/touch: real HD download after races/stress, byte-identical independent asset recomposition",
+      "result": "PASS"
+    },
+    {
+      "name": "nes/touch: visitor reset during held gesture cannot resurrect old canvas or hit boxes",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: three actor gestures while old previews pending; late completion discarded; undo exact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: stationary tap during pending preview settles instead of stranding export",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: cancel rolls back only second in-flight gesture, retains first edit/history",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: sticker gesture during actor preview retains both edits, settles, undo exact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: five capture/lifecycle cancellations, then real movement and exact undo",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: current render error leaves actor usable, visible pending position and history intact",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "name": "nes/mouse: 12 touch/mouse stress edits; no preview PNG encode, image decode or src mutation",
+      "result": "PASS",
+      "counters": {
+        "encodes": 0,
+        "decodes": 0,
+        "srcMutations": 0
+      }
+    },
+    {
+      "name": "nes/mouse: real HD download after races/stress, byte-identical independent asset recomposition",
+      "result": "PASS"
+    },
+    {
+      "name": "nes/mouse: visitor reset during held gesture cannot resurrect old canvas or hit boxes",
+      "result": "PASS",
+      "fault_injection": true
+    }
+  ],
+  "gesture_attempts": 136,
+  "exports": [
+    {
+      "case": "photo/touch",
+      "bytes": 3810694,
+      "sha256": "a968d6a23e51b1dc2baad8b59eda5e39d51a6184936eeeccf4aa5b06221780b9",
+      "independent_asset_recomposition_identical": true
+    },
+    {
+      "case": "photo/mouse",
+      "bytes": 3810694,
+      "sha256": "a968d6a23e51b1dc2baad8b59eda5e39d51a6184936eeeccf4aa5b06221780b9",
+      "independent_asset_recomposition_identical": true
+    },
+    {
+      "case": "nes/touch",
+      "bytes": 683387,
+      "sha256": "64f3dbc7d37c4841b2791098730758db0b3b3e9b63cef494bd6b36cbb7c409b3",
+      "independent_asset_recomposition_identical": true
+    },
+    {
+      "case": "nes/mouse",
+      "bytes": 683387,
+      "sha256": "64f3dbc7d37c4841b2791098730758db0b3b3e9b63cef494bd6b36cbb7c409b3",
+      "independent_asset_recomposition_identical": true
+    }
+  ],
+  "errors": [],
+  "http_requests": [],
+  "failure": null
+}

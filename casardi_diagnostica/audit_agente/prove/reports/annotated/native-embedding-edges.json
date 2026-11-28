@@ -1,0 +1,738 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "seconds": 363.95,
+  "gesture_attempts": 96,
+  "rows": [
+    {
+      "experimental": false,
+      "mode": "photo",
+      "layout": "normal",
+      "controls": [
+        {
+          "requested": 65,
+          "actual_native_value": "65",
+          "label": "Piccolo"
+        },
+        {
+          "requested": 100,
+          "actual_native_value": "100",
+          "label": "Medio"
+        },
+        {
+          "requested": 135,
+          "actual_native_value": "135",
+          "label": "Grande"
+        }
+      ],
+      "gestures": [
+        {
+          "case": "after-outer-deselect-size-65",
+          "live_movement": true,
+          "committed": true,
+          "width": 55.25
+        },
+        {
+          "case": "after-outer-deselect-size-100",
+          "live_movement": true,
+          "committed": true,
+          "width": 86.8125
+        },
+        {
+          "case": "after-outer-deselect-size-135",
+          "live_movement": true,
+          "committed": true,
+          "width": 118.3906
+        },
+        {
+          "case": "long-press-before-move",
+          "live_movement": true,
+          "committed": true,
+          "width": 118.3906
+        },
+        {
+          "case": "after-native-two-finger-contact",
+          "live_movement": true,
+          "committed": true,
+          "width": 118.3906
+        },
+        {
+          "case": "after-cross-frame-release",
+          "live_movement": true,
+          "committed": true,
+          "width": 118.3906
+        }
+      ]
+    },
+    {
+      "experimental": false,
+      "mode": "photo",
+      "layout": "narrow",
+      "controls": [
+        {
+          "requested": 65,
+          "actual_native_value": "65",
+          "label": "Piccolo"
+        },
+        {
+          "requested": 100,
+          "actual_native_value": "100",
+          "label": "Medio"
+        },
+        {
+          "requested": 135,
+          "actual_native_value": "135",
+          "label": "Grande"
+        }
+      ],
+      "gestures": [
+        {
+          "case": "after-outer-deselect-size-65",
+          "live_movement": true,
+          "committed": true,
+          "width": 36.7344
+        },
+        {
+          "case": "after-outer-deselect-size-100",
+          "live_movement": true,
+          "committed": true,
+          "width": 57.7188
+        },
+        {
+          "case": "after-outer-deselect-size-135",
+          "live_movement": true,
+          "committed": true,
+          "width": 78.7188
+        },
+        {
+          "case": "long-press-before-move",
+          "live_movement": true,
+          "committed": true,
+          "width": 78.7188
+        },
+        {
+          "case": "after-native-two-finger-contact",
+          "live_movement": true,
+          "committed": true,
+          "width": 78.7188
+        },
+        {
+          "case": "after-cross-frame-release",
+          "live_movement": true,
+          "committed": true,
+          "width": 78.7188
+        }
+      ]
+    },
+    {
+      "experimental": false,
+      "mode": "photo",
+      "layout": "scaled",
+      "controls": [
+        {
+          "requested": 65,
+          "actual_native_value": "65",
+          "label": "Piccolo"
+        },
+        {
+          "requested": 100,
+          "actual_native_value": "100",
+          "label": "Medio"
+        },
+        {
+          "requested": 135,
+          "actual_native_value": "135",
+          "label": "Grande"
+        }
+      ],
+      "gestures": [
+        {
+          "case": "after-outer-deselect-size-65",
+          "live_movement": true,
+          "committed": true,
+          "width": 52.125
+        },
+        {
+          "case": "after-outer-deselect-size-100",
+          "live_movement": true,
+          "committed": true,
+          "width": 81.9062
+        },
+        {
+          "case": "after-outer-deselect-size-135",
+          "live_movement": true,
+          "committed": true,
+          "width": 111.6719
+        },
+        {
+          "case": "long-press-before-move",
+          "live_movement": true,
+          "committed": true,
+          "width": 111.6719
+        },
+        {
+          "case": "after-native-two-finger-contact",
+          "live_movement": true,
+          "committed": true,
+          "width": 111.6719
+        },
+        {
+          "case": "after-cross-frame-release",
+          "live_movement": true,
+          "committed": true,
+          "width": 111.6875
+        }
+      ]
+    },
+    {
+      "experimental": false,
+      "mode": "nes",
+      "layout": "normal",
+      "controls": [
+        {
+          "requested": 65,
+          "actual_native_value": "65",
+          "label": "Piccolo"
+        },
+        {
+          "requested": 100,
+          "actual_native_value": "100",
+          "label": "Medio"
+        },
+        {
+          "requested": 135,
+          "actual_native_value": "135",
+          "label": "Grande"
+        }
+      ],
+      "gestures": [
+        {
+          "case": "after-outer-deselect-size-65",
+          "live_movement": true,
+          "committed": true,
+          "width": 59.1875
+        },
+        {
+          "case": "after-outer-deselect-size-100",
+          "live_movement": true,
+          "committed": true,
+          "width": 78.9219
+        },
+        {
+          "case": "after-outer-deselect-size-135",
+          "live_movement": true,
+          "committed": true,
+          "width": 98.6562
+        },
+        {
+          "case": "long-press-before-move",
+          "live_movement": true,
+          "committed": true,
+          "width": 98.6562
+        },
+        {
+          "case": "after-native-two-finger-contact",
+          "live_movement": true,
+          "committed": true,
+          "width": 98.6562
+        },
+        {
+          "case": "after-cross-frame-release",
+          "live_movement": true,
+          "committed": true,
+          "width": 98.6562
+        }
+      ]
+    },
+    {
+      "experimental": false,
+      "mode": "nes",
+      "layout": "narrow",
+      "controls": [
+        {
+          "requested": 65,
+          "actual_native_value": "65",
+          "label": "Piccolo"
+        },
+        {
+          "requested": 100,
+          "actual_native_value": "100",
+          "label": "Medio"
+        },
+        {
+          "requested": 135,
+          "actual_native_value": "135",
+          "label": "Grande"
+        }
+      ],
+      "gestures": [
+        {
+          "case": "after-outer-deselect-size-65",
+          "live_movement": true,
+          "committed": true,
+          "width": 39.3594
+        },
+        {
+          "case": "after-outer-deselect-size-100",
+          "live_movement": true,
+          "committed": true,
+          "width": 52.4688
+        },
+        {
+          "case": "after-outer-deselect-size-135",
+          "live_movement": true,
+          "committed": true,
+          "width": 65.5938
+        },
+        {
+          "case": "long-press-before-move",
+          "live_movement": true,
+          "committed": true,
+          "width": 65.5938
+        },
+        {
+          "case": "after-native-two-finger-contact",
+          "live_movement": true,
+          "committed": true,
+          "width": 65.5938
+        },
+        {
+          "case": "after-cross-frame-release",
+          "live_movement": true,
+          "committed": true,
+          "width": 65.5938
+        }
+      ]
+    },
+    {
+      "experimental": false,
+      "mode": "nes",
+      "layout": "scaled",
+      "controls": [
+        {
+          "requested": 65,
+          "actual_native_value": "65",
+          "label": "Piccolo"
+        },
+        {
+          "requested": 100,
+          "actual_native_value": "100",
+          "label": "Medio"
+        },
+        {
+          "requested": 135,
+          "actual_native_value": "135",
+          "label": "Grande"
+        }
+      ],
+      "gestures": [
+        {
+          "case": "after-outer-deselect-size-65",
+          "live_movement": true,
+          "committed": true,
+          "width": 55.8281
+        },
+        {
+          "case": "after-outer-deselect-size-100",
+          "live_movement": true,
+          "committed": true,
+          "width": 74.4531
+        },
+        {
+          "case": "after-outer-deselect-size-135",
+          "live_movement": true,
+          "committed": true,
+          "width": 93.0625
+        },
+        {
+          "case": "long-press-before-move",
+          "live_movement": true,
+          "committed": true,
+          "width": 93.0625
+        },
+        {
+          "case": "after-native-two-finger-contact",
+          "live_movement": true,
+          "committed": true,
+          "width": 93.0625
+        },
+        {
+          "case": "after-cross-frame-release",
+          "live_movement": true,
+          "committed": true,
+          "width": 93.0625
+        }
+      ]
+    },
+    {
+      "experimental": true,
+      "mode": "photo",
+      "layout": "normal",
+      "controls": [
+        {
+          "requested": 65,
+          "actual_native_value": "65",
+          "label": "Piccolo"
+        },
+        {
+          "requested": 100,
+          "actual_native_value": "100",
+          "label": "Medio"
+        },
+        {
+          "requested": 135,
+          "actual_native_value": "135",
+          "label": "Grande"
+        }
+      ],
+      "gestures": [
+        {
+          "case": "after-outer-deselect-size-65",
+          "live_movement": true,
+          "committed": true,
+          "width": 55.25
+        },
+        {
+          "case": "after-outer-deselect-size-100",
+          "live_movement": true,
+          "committed": true,
+          "width": 86.8125
+        },
+        {
+          "case": "after-outer-deselect-size-135",
+          "live_movement": true,
+          "committed": true,
+          "width": 118.3906
+        },
+        {
+          "case": "long-press-before-move",
+          "live_movement": true,
+          "committed": true,
+          "width": 118.3906
+        },
+        {
+          "case": "after-native-two-finger-contact",
+          "live_movement": true,
+          "committed": true,
+          "width": 118.3906
+        },
+        {
+          "case": "after-cross-frame-release",
+          "live_movement": true,
+          "committed": true,
+          "width": 118.3906
+        }
+      ]
+    },
+    {
+      "experimental": true,
+      "mode": "photo",
+      "layout": "narrow",
+      "controls": [
+        {
+          "requested": 65,
+          "actual_native_value": "65",
+          "label": "Piccolo"
+        },
+        {
+          "requested": 100,
+          "actual_native_value": "100",
+          "label": "Medio"
+        },
+        {
+          "requested": 135,
+          "actual_native_value": "135",
+          "label": "Grande"
+        }
+      ],
+      "gestures": [
+        {
+          "case": "after-outer-deselect-size-65",
+          "live_movement": true,
+          "committed": true,
+          "width": 36.7344
+        },
+        {
+          "case": "after-outer-deselect-size-100",
+          "live_movement": true,
+          "committed": true,
+          "width": 57.7188
+        },
+        {
+          "case": "after-outer-deselect-size-135",
+          "live_movement": true,
+          "committed": true,
+          "width": 78.7188
+        },
+        {
+          "case": "long-press-before-move",
+          "live_movement": true,
+          "committed": true,
+          "width": 78.7188
+        },
+        {
+          "case": "after-native-two-finger-contact",
+          "live_movement": true,
+          "committed": true,
+          "width": 78.7188
+        },
+        {
+          "case": "after-cross-frame-release",
+          "live_movement": true,
+          "committed": true,
+          "width": 78.7188
+        }
+      ]
+    },
+    {
+      "experimental": true,
+      "mode": "photo",
+      "layout": "scaled",
+      "controls": [
+        {
+          "requested": 65,
+          "actual_native_value": "65",
+          "label": "Piccolo"
+        },
+        {
+          "requested": 100,
+          "actual_native_value": "100",
+          "label": "Medio"
+        },
+        {
+          "requested": 135,
+          "actual_native_value": "135",
+          "label": "Grande"
+        }
+      ],
+      "gestures": [
+        {
+          "case": "after-outer-deselect-size-65",
+          "live_movement": true,
+          "committed": true,
+          "width": 52.125
+        },
+        {
+          "case": "after-outer-deselect-size-100",
+          "live_movement": true,
+          "committed": true,
+          "width": 81.9062
+        },
+        {
+          "case": "after-outer-deselect-size-135",
+          "live_movement": true,
+          "committed": true,
+          "width": 111.6719
+        },
+        {
+          "case": "long-press-before-move",
+          "live_movement": true,
+          "committed": true,
+          "width": 111.6719
+        },
+        {
+          "case": "after-native-two-finger-contact",
+          "live_movement": true,
+          "committed": true,
+          "width": 111.6719
+        },
+        {
+          "case": "after-cross-frame-release",
+          "live_movement": true,
+          "committed": true,
+          "width": 111.6875
+        }
+      ]
+    },
+    {
+      "experimental": true,
+      "mode": "nes",
+      "layout": "normal",
+      "controls": [
+        {
+          "requested": 65,
+          "actual_native_value": "65",
+          "label": "Piccolo"
+        },
+        {
+          "requested": 100,
+          "actual_native_value": "100",
+          "label": "Medio"
+        },
+        {
+          "requested": 135,
+          "actual_native_value": "135",
+          "label": "Grande"
+        }
+      ],
+      "gestures": [
+        {
+          "case": "after-outer-deselect-size-65",
+          "live_movement": true,
+          "committed": true,
+          "width": 59.1875
+        },
+        {
+          "case": "after-outer-deselect-size-100",
+          "live_movement": true,
+          "committed": true,
+          "width": 78.9219
+        },
+        {
+          "case": "after-outer-deselect-size-135",
+          "live_movement": true,
+          "committed": true,
+          "width": 98.6562
+        },
+        {
+          "case": "long-press-before-move",
+          "live_movement": true,
+          "committed": true,
+          "width": 98.6562
+        },
+        {
+          "case": "after-native-two-finger-contact",
+          "live_movement": true,
+          "committed": true,
+          "width": 98.6562
+        },
+        {
+          "case": "after-cross-frame-release",
+          "live_movement": true,
+          "committed": true,
+          "width": 98.6562
+        }
+      ]
+    },
+    {
+      "experimental": true,
+      "mode": "nes",
+      "layout": "narrow",
+      "controls": [
+        {
+          "requested": 65,
+          "actual_native_value": "65",
+          "label": "Piccolo"
+        },
+        {
+          "requested": 100,
+          "actual_native_value": "100",
+          "label": "Medio"
+        },
+        {
+          "requested": 135,
+          "actual_native_value": "135",
+          "label": "Grande"
+        }
+      ],
+      "gestures": [
+        {
+          "case": "after-outer-deselect-size-65",
+          "live_movement": true,
+          "committed": true,
+          "width": 39.3594
+        },
+        {
+          "case": "after-outer-deselect-size-100",
+          "live_movement": true,
+          "committed": true,
+          "width": 52.4688
+        },
+        {
+          "case": "after-outer-deselect-size-135",
+          "live_movement": true,
+          "committed": true,
+          "width": 65.5938
+        },
+        {
+          "case": "long-press-before-move",
+          "live_movement": true,
+          "committed": true,
+          "width": 65.5938
+        },
+        {
+          "case": "after-native-two-finger-contact",
+          "live_movement": true,
+          "committed": true,
+          "width": 65.5938
+        },
+        {
+          "case": "after-cross-frame-release",
+          "live_movement": true,
+          "committed": true,
+          "width": 65.5938
+        }
+      ]
+    },
+    {
+      "experimental": true,
+      "mode": "nes",
+      "layout": "scaled",
+      "controls": [
+        {
+          "requested": 65,
+          "actual_native_value": "65",
+          "label": "Piccolo"
+        },
+        {
+          "requested": 100,
+          "actual_native_value": "100",
+          "label": "Medio"
+        },
+        {
+          "requested": 135,
+          "actual_native_value": "135",
+          "label": "Grande"
+        }
+      ],
+      "gestures": [
+        {
+          "case": "after-outer-deselect-size-65",
+          "live_movement": true,
+          "committed": true,
+          "width": 55.8281
+        },
+        {
+          "case": "after-outer-deselect-size-100",
+          "live_movement": true,
+          "committed": true,
+          "width": 74.4531
+        },
+        {
+          "case": "after-outer-deselect-size-135",
+          "live_movement": true,
+          "committed": true,
+          "width": 93.0625
+        },
+        {
+          "case": "long-press-before-move",
+          "live_movement": true,
+          "committed": true,
+          "width": 93.0625
+        },
+        {
+          "case": "after-native-two-finger-contact",
+          "live_movement": true,
+          "committed": true,
+          "width": 93.0625
+        },
+        {
+          "case": "after-cross-frame-release",
+          "live_movement": true,
+          "committed": true,
+          "width": 93.0625
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "scope": "Linux Chromium Pixel 7 emulation; actual CDP touch input, native range controls; nested opaque srcdoc, no scripts injected into child. Normal/narrow/parent-transform layouts, not the actual Arena host implementation or a physical phone.",
+  "_audit_provenance": {
+    "original_sha256": "9896d287adfea91a6b0bbee33ffe02a80df70ab81e1245dd19bbc434e2e9c4ee",
+    "report_file_written_at_workspace_utc": "2026-11-28T06:31:45.313639+00:00",
+    "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+    "original_hardcoded_date": "2026-11-27",
+    "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+  }
+}

@@ -1,0 +1,88 @@
+# OPERAZIONE EIPASS — IL CASARDI IN 8 BIT
+
+
+> **v3.0.8** — Correzione dei 20 punti reali della review esterna `ERRORI_OPENDay.md`: fossa letale/respawn corretto, pillole eroe mobile riallineate, sinergia di squadra applicata davvero (HP + danno), `F1` come vero toggle anche sul titolo, `[E]` che non fa più due azioni, layout mobile 800×600 e viewport bassi, titoli EIPASS su due righe, contatori HUD, WAV senza offset DC e documentazione allineata.
+>
+> **v3.0.7** — Ranaldo ridisegnato sulle foto (capelli argento a punte, barba che segue la mascella, maglietta blu navy) e canotta da basket **colorata senza numero** per Carlo.
+>
+> **v3.0.6** — Ranaldo dalle foto (capelli argento, barba brizzolata, occhi azzurri), Carlo con la **canotta #35 OKC di Durant (2013-14)** e Francesco in blazer nero con frangia più bassa.
+>
+> **v3.0.5** — Daniele e Francesco ridisegnati **dalle foto reali**: fade + occhiali sottili + giacca avorio per Daniele, frangia folta + blazer nero da concerto per Francesco.
+>
+> **v3.0.4** — personaggi rifiniti (Daniele con le note al posto dell'aggeggio di rete, volti più leggibili) e **facciata del Casardi ricostruita sulle foto** (colonne, loggia con bandiere, portale in legno, targa, gradini, bacheca).
+>
+> **v3.0.3** — nuovo toggle **SQUADRA AL SEGUITO** (menu iniziale / pausa / tasto `G`): i compagni non ti pedinano più.
+>
+> **v3.0.2** — comandi PC a posto: cambio eroe con `1`-`5`, `Q`/`TAB`, click sulle pillole dell'HUD o sul compagno, prompt `[E]`; ogni comando della guida ha un tasto (`F1`/`?` = guida, `Y` = schermo intero); mixer attivo nella guida. Vedi `CHANGELOG.md` e `DEVLOG.md`.
+
+Videogioco originale narrativo-platform a 8-bit realizzato per l'**Open Day del Liceo Classico, delle Scienze Umane e Musicale Statale *"Alfredo Casardi"* di Barletta** (Sede Centrale di Via Ferdinando I d'Aragona, 100) come prodotto finale del percorso **EIPASS**.
+
+**Protagonisti giocabili (5):** **Prof. Ranaldo** *(Matematica)*, **Carlo** *(Basket)*, **Daniele** *(Ballo Latino-Americano)*, **Ruggero** *(Atletica Leggera)* e **Francesco** *(Pianoforte)*.
+
+**Gioca subito dal browser:** https://dreamer2664.github.io/openday/ — build standalone v3.0.7, nessuna installazione.
+
+**Repository:** https://github.com/dreamer2664/openday (sorgente `src/`, strumenti `tools/`, documentazione e storico).
+
+**Build consigliate v3.0:** `AVVIA_GIOCO_PC_V3.html` (postazione Open Day) e `AVVIA_GIOCO_MOBILE_V3.html` (telefono/tablet).
+
+---
+
+## Avvio Immediato (Zero Installazione, 100% Offline)
+
+Il gioco è pronto all'uso e **non richiede connessione Internet, account, librerie esterne o installazioni**:
+
+### Metodo 1 — Doppio Clic Diretto (Consigliato per la Postazione Open Day)
+1. Apri la cartella `CASARDI_8BIT_GAME/`.
+2. Fai **doppio clic** sul file **`AVVIA_GIOCO.html`** *(oppure su `release/index.html`, o `AVVIA_OPEN_DAY.bat` su Windows / `avvia_open_day.sh` su Linux-macOS)*.
+3. Il gioco si apre istantaneamente in qualsiasi browser moderno (Chrome, Edge, Firefox, Safari). Clicca o premi un tasto qualsiasi per attivare la **musichetta chiptune 8-bit**!
+
+### Metodo 2 — Server Locale (Opzionale, per sviluppo sui moduli sorgente `src/`)
+```bash
+cd CASARDI_8BIT_GAME
+python3 -m http.server 8080
+```
+Poi apri `http://localhost:8080` nel browser.
+
+---
+
+## Le Due Modalità di Gioco
+
+1. **★ MODALITÀ OPEN DAY (7–10 minuti — Pulsante arancione in cima al Menu Principale)**  
+   Missione dimostrativa autonoma progettata appositamente per i visitatori dell'Open Day: ritmo immediato, introduzione in azione di tutti e cinque i protagonisti (Carlo, Prof. Ranaldo, Daniele, Ruggero e Francesco), scelte con conseguenze, sfide EIPASS/Casardi, enigmi dedicati alle passioni e scontro conclusivo sul palco dell'Aula Magna con attestato finale.
+2. **▶ CAMPAGNA COMPLETA (35–45 minuti — 6 Capitoli, 18 Livelli, 4 Finali)**  
+   L'avventura integrale attraverso i due piani della Sede Centrale di Via d'Aragona 100: *Ingresso Monumentale, Corridoi Storici Giallo-Bianchi, Cortile e Palestra, Laboratorio Multimediale da 23 Postazioni, Biblioteca Storica degli 8.000 Volumi* (con sequenza d'inseguimento!) e *Aula Magna*, con salvataggio automatico dei checkpoint, tutti i **7 Moduli EIPASS**, **12 Pagine segrete del giornale d'istituto *Pegaso*** e **4 Finali ramificati**.
+
+---
+
+## Guida Rapida per chi Gestisce la Postazione Open Day
+
+- **Preparazione mattina Open Day (30 secondi):**
+  1. Apri `AVVIA_GIOCO.html` su PC collegato a monitor grande o LIM/Touch TV.
+  2. Premi il pulsante **`⛶ Schermo Intero`** nella barra in basso.
+  3. Verifica che le casse siano accese (puoi regolare separatamente Volume Musica ed Effetti dal menu `Comandi & Mixer Audio` o premendo `P`).
+- **Come far iniziare un visitatore:**
+  - Basta premere `INVIO` / `SPAZIO` o cliccare su **`★ Demo Open Day`**! I comandi compaiono subito in modo visivo.
+- **Come resettare il gioco tra un visitatore e il successivo (1 secondo):**
+  - Premi il tasto **`F9`** sulla tastiera *(oppure clicca il pulsante **`↻ Nuovo Visitatore (F9)`** sotto lo schermo)*. Il gioco torna istantaneamente al menu iniziale azzerando la sessione dimostrativa.
+- **Risoluzione rapida problemi comuni:**
+  - *Non si sente la musica all'apertura della scheda?* Fai un clic qualsiasi dentro lo schermo o premi `SPAZIO`: i browser sbloccano l'audio al primo tocco. Controlla anche che non sia attivo il Muto (`Tasto M`).
+  - *I tasti freccia non rispondono?* Clicca una volta al centro del riquadro di gioco per ridare il focus alla finestra.
+  - *Un visitatore vuole interrompere a metà?* Premi **`F9`** per riportare subito la postazione pronta per il prossimo ospite.
+
+---
+
+## Struttura della Directory `CASARDI_8BIT_GAME/`
+
+- `AVVIA_GIOCO.html` / `release/index.html` — Build standalone completa eseguibile offline con doppio clic.
+- `AVVIA_OPEN_DAY.bat` / `avvia_open_day.sh` — Script di avvio rapido per Windows, Linux e macOS.
+- `index.html` & `src/` — Codice sorgente modulare ES6 completo (`config`, `state`, `audio`, `engine`, `minigames`, `narrative`, `levels`, `render/pixelFont.js`, `render/renderer.js`, `ui/hudAndMenus.js`).
+- `assets/sprites/` — Sprite sheets originali in pixel art v2.0 (`characters_sheet.png` 13×7 pose `32×36` (91 frame), `portraits_sheet.png` 6×8 espressioni `64×64` (48 ritratti), `tileset_casardi.png` `16×16`, `enemies_props.png` con 5 nemici e 3 Boss/Mid-Boss `48×60`) + `TAVOLA_PERSONAGGI.png` e `ANTEPRIMA_SCENE_CASARDI.png`.
+- `assets/audio/` — 7 tracce musicali chiptune originali `.wav` + 17 effetti sonori `.wav` (**24 file** `.wav` totali, 3,3 MB) + il motore WebAudio a 4 canali che **genera la musica in tempo reale** (i WAV sono gli stessi brani esportati, per uso esterno: il gioco non li carica).
+- `tools/` — Script di generazione asset (`generate_assets.py`), compilazione (`build.py`), playtest 60Hz (`qa_playtest.mjs`) e ispezione visiva (`render_visual_check.mjs`).
+- `RICERCA_CASARDI.md` — Ricerca verificata su storia, architettura e offerta formativa del Liceo Casardi e moduli EIPASS.
+- `GAME_DESIGN.md` — Documento completo di progettazione (narrativa, **5 protagonisti**, sotto-stanze, 6 minigiochi, 12 simulatori live EIPASS sui 7 moduli, 2 Mid-Boss e 4 Finali).
+- `LICENSE` / `NOTICE_LICENSE.md` — licenza d'uso didattico del progetto.
+- `requirements.txt` — dipendenze Python dei tool (`pillow`, `playwright`).
+- `CONTROLLI.md` — Mappa completa comandi tastiera (inclusi `[C]` Assist di Squadra, `[SU+X]` abilità direzionali e `[V]` filtro CRT), mouse e controller.
+- `ASSET_CREDITS.md` — Crediti e licenze degli asset originali e riferimenti consultati.
+- `TEST_REPORT.md` — Report completo delle **4 suite automatiche** (`qa_playtest` 511/511, `qa_text_overflow` 341/341, `qa_bugfix_regression` 193/193, `qa_mobile_touch` 30/30) e dell'ispezione visiva su 6 scene reali.

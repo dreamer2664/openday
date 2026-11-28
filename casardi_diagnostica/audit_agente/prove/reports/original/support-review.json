@@ -1,0 +1,50 @@
+{
+  "recorded_at_workspace_utc": "2026-11-28T07:06:08.767765+00:00",
+  "scope": "Six additional metadata/license/static-guide files outside the 93-source inventory and eight launch/config/dependency files. Does not expand dynamic code coverage.",
+  "files": [
+    {
+      "path": "service/vendor/github.com/skip2/go-qrcode/README.md",
+      "bytes": 3292,
+      "physical_lines": 86,
+      "sha256": "e39a612cf1728fe944bd78b14d9aedb515655da9f37f9a005fbde15513a0b20a",
+      "review": "Read completely. No runtime change or native execution; vendored CI YAML is historical metadata, not run. Static guide has HTML/CSS, no application JS."
+    },
+    {
+      "path": "service/vendor/github.com/skip2/go-qrcode/.travis.yml",
+      "bytes": 55,
+      "physical_lines": 8,
+      "sha256": "c4a338ec0db13520cebdb3751dab3d0533755a8bda0eb4a03212b9783f131d3a",
+      "review": "Read completely. No runtime change or native execution; vendored CI YAML is historical metadata, not run. Static guide has HTML/CSS, no application JS."
+    },
+    {
+      "path": "service/vendor/github.com/skip2/go-qrcode/.gitignore",
+      "bytes": 38,
+      "physical_lines": 4,
+      "sha256": "d07f16b8766aa0136ee46574551916e6259a2f8b0723a807c5fe0ff51db19a16",
+      "review": "Read completely. No runtime change or native execution; vendored CI YAML is historical metadata, not run. Static guide has HTML/CSS, no application JS."
+    },
+    {
+      "path": "service/vendor/github.com/skip2/go-qrcode/LICENSE",
+      "bytes": 1055,
+      "physical_lines": 19,
+      "sha256": "4cdab772de606bdf53e174b2f5d6a2c398156380ca1f763122198cece531d02c",
+      "review": "Read completely. No runtime change or native execution; vendored CI YAML is historical metadata, not run. Static guide has HTML/CSS, no application JS."
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 67,
+      "physical_lines": 7,
+      "sha256": "e9b39715a7e46bbe217cd4a9d4cb4f4a7e8c85e0dca10d895a38b5453c45e1dc",
+      "review": "Read completely. No runtime change or native execution; vendored CI YAML is historical metadata, not run. Static guide has HTML/CSS, no application JS."
+    },
+    {
+      "path": "docs/GUIDA_RAPIDA.html",
+      "bytes": 5826,
+      "physical_lines": 14,
+      "sha256": "c53803d6c8a5c1c775428d1bcd6af59c5ed7e9411afb34135b31a1192f67202d",
+      "review": "Read completely. No runtime change or native execution; vendored CI YAML is historical metadata, not run. Static guide has HTML/CSS, no application JS."
+    }
+  ],
+  "total_files": 6,
+  "total_physical_lines": 138
+}

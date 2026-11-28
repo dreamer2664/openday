@@ -1,0 +1,335 @@
+photo 0 outside True
+photo 1 background-tap True
+photo 2 background-long-press True
+photo 3 background-drag True
+photo 4 background-long-drag True
+photo 5 rapid-outside True
+photo 6 outside True
+photo 7 background-tap True
+photo 8 background-long-press True
+photo 9 background-drag True
+photo 10 background-long-drag True
+photo 11 rapid-outside True
+photo 12 outside True
+photo 13 background-tap True
+photo 14 background-long-press True
+photo 15 background-drag True
+photo 16 background-long-drag True
+photo 17 rapid-outside True
+photo 18 outside True
+photo 19 background-tap True
+photo 20 background-long-press True
+photo 21 background-drag True
+photo 22 background-long-drag True
+photo 23 rapid-outside True
+photo 24 outside True
+photo 25 background-tap True
+photo 26 background-long-press True
+photo 27 background-drag True
+photo 28 background-long-drag True
+photo 29 rapid-outside True
+photo 30 outside True
+photo 31 background-tap True
+photo 32 background-long-press True
+photo 33 background-drag True
+photo 34 background-long-drag True
+photo 35 rapid-outside True
+nes 0 outside True
+nes 1 background-tap True
+nes 2 background-long-press True
+nes 3 background-drag True
+nes 4 background-long-drag True
+nes 5 rapid-outside True
+nes 6 outside True
+nes 7 background-tap True
+nes 8 background-long-press True
+nes 9 background-drag True
+nes 10 background-long-drag True
+nes 11 rapid-outside True
+nes 12 outside True
+nes 13 background-tap True
+nes 14 background-long-press True
+nes 15 background-drag True
+nes 16 background-long-drag True
+nes 17 rapid-outside True
+nes 18 outside True
+nes 19 background-tap True
+nes 20 background-long-press True
+nes 21 background-drag True
+nes 22 background-long-drag True
+nes 23 rapid-outside True
+nes 24 outside True
+nes 25 background-tap True
+nes 26 background-long-press True
+nes 27 background-drag True
+nes 28 background-long-drag True
+nes 29 rapid-outside True
+nes 30 outside True
+nes 31 background-tap True
+nes 32 background-long-press True
+nes 33 background-drag True
+nes 34 background-long-drag True
+nes 35 rapid-outside True
+{
+  "results": [
+    {
+      "mode": "photo",
+      "result": "No freeze",
+      "trials": 36,
+      "trace_tail": [
+        {
+          "t": "pointermove",
+          "id": 85,
+          "pt": "touch",
+          "btn": 1,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": false,
+            "drag": {
+              "kind": "actor",
+              "id": 85,
+              "moved": true
+            },
+            "actor": {
+              "x": 307,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 285,
+              "y": 351,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointermove",
+          "id": 85,
+          "pt": "touch",
+          "btn": 1,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": false,
+            "drag": {
+              "kind": "actor",
+              "id": 85,
+              "moved": true
+            },
+            "actor": {
+              "x": 307,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 281,
+              "y": 353,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointermove",
+          "id": 85,
+          "pt": "touch",
+          "btn": 1,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": false,
+            "drag": {
+              "kind": "actor",
+              "id": 85,
+              "moved": true
+            },
+            "actor": {
+              "x": 307,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "id": 85,
+          "pt": "touch",
+          "btn": 0,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 307,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "lostpointercapture",
+          "id": 85,
+          "pt": "touch",
+          "btn": 0,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 307,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 278,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "mode": "nes",
+      "result": "No freeze",
+      "trials": 36,
+      "trace_tail": [
+        {
+          "t": "pointermove",
+          "id": 85,
+          "pt": "touch",
+          "btn": 1,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": false,
+            "drag": {
+              "kind": "actor",
+              "id": 85,
+              "moved": true
+            },
+            "actor": {
+              "x": 301,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 279,
+              "y": 351,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointermove",
+          "id": 85,
+          "pt": "touch",
+          "btn": 1,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": false,
+            "drag": {
+              "kind": "actor",
+              "id": 85,
+              "moved": true
+            },
+            "actor": {
+              "x": 301,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 275,
+              "y": 353,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointermove",
+          "id": 85,
+          "pt": "touch",
+          "btn": 1,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": false,
+            "drag": {
+              "kind": "actor",
+              "id": 85,
+              "moved": true
+            },
+            "actor": {
+              "x": 301,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 272,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "pointerup",
+          "id": 85,
+          "pt": "touch",
+          "btn": 0,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 301,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 272,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        },
+        {
+          "t": "lostpointercapture",
+          "id": 85,
+          "pt": "touch",
+          "btn": 0,
+          "target": "actor",
+          "s": {
+            "busy": false,
+            "rendering": true,
+            "drag": null,
+            "actor": {
+              "x": 301,
+              "y": 344,
+              "scale": 100
+            },
+            "model": {
+              "x": 272,
+              "y": 354,
+              "scale": 100
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

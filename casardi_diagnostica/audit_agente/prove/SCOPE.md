@@ -1,0 +1,1 @@
+All source artifacts and patches are NON-RELEASE audit material. Original Android/Arena root cause remains unproven. Production is unchanged. No user testing requested. See the main report in /home/user/Analisi_blocco_Android_Arena.md.

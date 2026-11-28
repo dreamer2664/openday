@@ -1,0 +1,36 @@
+{
+  "result": "PASS",
+  "date": "2026-11-27",
+  "diagnostic_file_sha256": "2806e32423451c4ef7eeb5d37260b645a5ba06a11dba14474c99c5e6447e8992",
+  "seconds": 60.63,
+  "checks": [
+    {
+      "mode": "photo",
+      "test": "srcdoc opaque-origin touch -> inside/outside blur -> touch, no stickers",
+      "verified_drags": 8,
+      "result": "PASS"
+    },
+    {
+      "mode": "photo",
+      "test": "injected readiness lock is visible; clearing the test-only lock restores drag",
+      "result": "PASS",
+      "fault_injection": true
+    },
+    {
+      "mode": "nes",
+      "test": "srcdoc opaque-origin touch -> inside/outside blur -> touch, no stickers",
+      "verified_drags": 8,
+      "result": "PASS"
+    },
+    {
+      "mode": "nes",
+      "test": "injected readiness lock is visible; clearing the test-only lock restores drag",
+      "result": "PASS",
+      "fault_injection": true
+    }
+  ],
+  "javascript_errors": [],
+  "http_requests": [],
+  "scope": "Linux Chromium Pixel 7 emulation in sandbox allow-scripts, srcdoc, opaque origin, offline; not actual Arena Android UI or physical phone.",
+  "reported_user_bug": "NOT REPRODUCED in this generic iframe. Waiting for on-device diagnostics; do not call this a bugfix."
+}

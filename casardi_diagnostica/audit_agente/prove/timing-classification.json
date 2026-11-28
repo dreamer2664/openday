@@ -1,0 +1,518 @@
+{
+  "timing-probe.json": {
+    "trials": 36,
+    "second_gestures_without_model_movement": 7,
+    "rows": [
+      {
+        "mode": "photo",
+        "cpu_rate": 1,
+        "trial": 0,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 1,
+        "trial": 1,
+        "second_target": "preview-loading",
+        "second_model_moved": false
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 1,
+        "trial": 2,
+        "second_target": "preview-loading",
+        "second_model_moved": false
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 1,
+        "trial": 3,
+        "second_target": "preview-loading",
+        "second_model_moved": false
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 1,
+        "trial": 4,
+        "second_target": "preview-loading",
+        "second_model_moved": false
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 1,
+        "trial": 5,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 4,
+        "trial": 0,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 4,
+        "trial": 1,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 4,
+        "trial": 2,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 4,
+        "trial": 3,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 4,
+        "trial": 4,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 4,
+        "trial": 5,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 8,
+        "trial": 0,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 8,
+        "trial": 1,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 8,
+        "trial": 2,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 8,
+        "trial": 3,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 8,
+        "trial": 4,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 8,
+        "trial": 5,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 1,
+        "trial": 0,
+        "second_target": "preview-loading",
+        "second_model_moved": false
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 1,
+        "trial": 1,
+        "second_target": "preview-loading",
+        "second_model_moved": false
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 1,
+        "trial": 2,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 1,
+        "trial": 3,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 1,
+        "trial": 4,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 1,
+        "trial": 5,
+        "second_target": "preview-loading",
+        "second_model_moved": false
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 4,
+        "trial": 0,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 4,
+        "trial": 1,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 4,
+        "trial": 2,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 4,
+        "trial": 3,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 4,
+        "trial": 4,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 4,
+        "trial": 5,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 8,
+        "trial": 0,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 8,
+        "trial": 1,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 8,
+        "trial": 2,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 8,
+        "trial": 3,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 8,
+        "trial": 4,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 8,
+        "trial": 5,
+        "second_target": "actor",
+        "second_model_moved": true
+      }
+    ]
+  },
+  "canvas-timing-probe.json": {
+    "trials": 36,
+    "second_gestures_without_model_movement": 0,
+    "rows": [
+      {
+        "mode": "photo",
+        "cpu_rate": 1,
+        "trial": 0,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 1,
+        "trial": 1,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 1,
+        "trial": 2,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 1,
+        "trial": 3,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 1,
+        "trial": 4,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 1,
+        "trial": 5,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 4,
+        "trial": 0,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 4,
+        "trial": 1,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 4,
+        "trial": 2,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 4,
+        "trial": 3,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 4,
+        "trial": 4,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 4,
+        "trial": 5,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 8,
+        "trial": 0,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 8,
+        "trial": 1,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 8,
+        "trial": 2,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 8,
+        "trial": 3,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 8,
+        "trial": 4,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "photo",
+        "cpu_rate": 8,
+        "trial": 5,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 1,
+        "trial": 0,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 1,
+        "trial": 1,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 1,
+        "trial": 2,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 1,
+        "trial": 3,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 1,
+        "trial": 4,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 1,
+        "trial": 5,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 4,
+        "trial": 0,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 4,
+        "trial": 1,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 4,
+        "trial": 2,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 4,
+        "trial": 3,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 4,
+        "trial": 4,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 4,
+        "trial": 5,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 8,
+        "trial": 0,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 8,
+        "trial": 1,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 8,
+        "trial": 2,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 8,
+        "trial": 3,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 8,
+        "trial": 4,
+        "second_target": "actor",
+        "second_model_moved": true
+      },
+      {
+        "mode": "nes",
+        "cpu_rate": 8,
+        "trial": 5,
+        "second_target": "actor",
+        "second_model_moved": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "scope": "Representative lab screenshots only, not original user screenshots or all captured frames. No screenshots of the original physical device were supplied in this audit.",
+  "entries": [
+    {
+      "path": "screenshots/compositor/headless-shell-production-nes-preset0-gesture2-actual.png",
+      "sha256": "f491ab86467443f0caed3014592ae1e81022b21d01c00b57ae4dae10b07b2088",
+      "kind": "Preview-area crop from a full-page device-scale screenshot or static reference. Full-page hashes in original result differ from these cropped-file hashes; case/gesture encoded in filename."
+    },
+    {
+      "path": "screenshots/compositor/headless-shell-production-nes-preset0-gesture2-moving-ref.png",
+      "sha256": "6914a21819fe0a73a3e6ab76637938d391ccbdc29dea280b1339cf8a79a8e822",
+      "kind": "Preview-area crop from a full-page device-scale screenshot or static reference. Full-page hashes in original result differ from these cropped-file hashes; case/gesture encoded in filename."
+    },
+    {
+      "path": "screenshots/compositor/headless-shell-production-nes-preset0-gesture2-stationary-ref.png",
+      "sha256": "f91071bb8c8a8c3d2dfee8cec14d6212161b5b0ee1fe35789b70bc9b9481c55b",
+      "kind": "Preview-area crop from a full-page device-scale screenshot or static reference. Full-page hashes in original result differ from these cropped-file hashes; case/gesture encoded in filename."
+    },
+    {
+      "path": "screenshots/compositor/headless-shell-production-photo-preset0-gesture2-actual.png",
+      "sha256": "74f2d349a91466f49436da4b38aa9d3158d86bc0e4357b1ff9523bb08f33a66f",
+      "kind": "Preview-area crop from a full-page device-scale screenshot or static reference. Full-page hashes in original result differ from these cropped-file hashes; case/gesture encoded in filename."
+    },
+    {
+      "path": "screenshots/compositor/headless-shell-production-photo-preset0-gesture2-moving-ref.png",
+      "sha256": "c5eff02185c5c4906dc92ef3b0d79c45c01131d199cfa4f8aa2d2ad48aad1f64",
+      "kind": "Preview-area crop from a full-page device-scale screenshot or static reference. Full-page hashes in original result differ from these cropped-file hashes; case/gesture encoded in filename."
+    },
+    {
+      "path": "screenshots/compositor/headless-shell-production-photo-preset0-gesture2-stationary-ref.png",
+      "sha256": "7e3a082fb1bb71b818994d5bea02244dd7753b6529d6390de9b0caf739ae8af7",
+      "kind": "Preview-area crop from a full-page device-scale screenshot or static reference. Full-page hashes in original result differ from these cropped-file hashes; case/gesture encoded in filename."
+    },
+    {
+      "path": "screenshots/held_contact/held-contact-A1-nes-sample.png",
+      "sha256": "587fbdc66b2acdb980d98d450e50f620f9a9cd55a2ab20870cb5e044ff0b11b4",
+      "kind": "Last observed stranded contact screenshot for this variant/style, CSS scale. Multiple earlier contact screenshot hashes remain in the trace report; only the last was saved under the sample filename."
+    },
+    {
+      "path": "screenshots/held_contact/held-contact-A1-photo-sample.png",
+      "sha256": "cf71e722ca84a4ff1d6d812c93bf88399fd227682d88416d38333bcdcb5cb96e",
+      "kind": "Last observed stranded contact screenshot for this variant/style, CSS scale. Multiple earlier contact screenshot hashes remain in the trace report; only the last was saved under the sample filename."
+    },
+    {
+      "path": "screenshots/held_contact/held-contact-production-nes-sample.png",
+      "sha256": "858fd34ed0a2cab6d569db251b8db77fc523e838ea17f9de7f9640c2aa926b87",
+      "kind": "Last observed stranded contact screenshot for this variant/style, CSS scale. Multiple earlier contact screenshot hashes remain in the trace report; only the last was saved under the sample filename."
+    },
+    {
+      "path": "screenshots/held_contact/held-contact-production-photo-sample.png",
+      "sha256": "0ab1b093f48c086ea493771d31b29dc295eb78476ad53774fb06981db6c5fd57",
+      "kind": "Last observed stranded contact screenshot for this variant/style, CSS scale. Multiple earlier contact screenshot hashes remain in the trace report; only the last was saved under the sample filename."
+    }
+  ]
+}

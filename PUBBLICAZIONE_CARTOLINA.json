@@ -1,0 +1,1702 @@
+{
+  "repository": "dreamer2664/openday",
+  "branch": "cartolina",
+  "base_branch": "v1",
+  "base_commit": "1b627eeb721826bf9b628753e81fa8c2b1088ad9",
+  "prepared_at_workspace_utc": "2026-11-28T07:46:41.165976+00:00",
+  "publication_kind": "Dedicated branch archive, not a new corrected release or a GitHub Pages deployment",
+  "production_revision": "3.3.1",
+  "deluxe_confirmed_by_user": "Cartolina_Casardi_PC_e_Telefono.html",
+  "pc_package": "Cartolina_Casardi_Windows_LPC_QR_2026-27.zip",
+  "production_source_files_inherited_byte_exact": 717,
+  "production_asset_files_unchanged": 473,
+  "physical_android_arena_root_cause": "Not proven; not declared fixed",
+  "source_directory": "v1/casardi_postcard",
+  "existing_files_intentionally_updated": [
+    "README.md",
+    ".gitattributes"
+  ],
+  "all_other_inherited_files_preserved": true,
+  "manifest_covers": "All added/replaced files other than PUBBLICAZIONE_CARTOLINA.json itself; inherited unchanged source/asset files remain in the base tree and original package manifest.",
+  "excluded": [
+    "Authentication inputs and Git helpers",
+    "Package/browser/toolchain caches",
+    "Virtual environments, Python caches",
+    "Regenerable transient instrumented test HTML copies"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "bytes": 468,
+      "sha256": "145f0c61a4371c41e4b578d0ba0471bc1796c9b08b017be0eb015cf38e08de63",
+      "git_blob_sha1": "1a7bddf1dea8d8bf33677aeee8173baec2ef5aa8"
+    },
+    {
+      "path": "Analisi_blocco_Android_Arena.md",
+      "mode": "100644",
+      "bytes": 22538,
+      "sha256": "1e5512c9b25afa86bf87a5cbcebefdc8ab707f1a043e123406efbe7058e50817",
+      "git_blob_sha1": "a75a53e908414c1c21479cce295b04400f7efb58"
+    },
+    {
+      "path": "Cartolina_Casardi_DIAGNOSTICA_ANDROID_A1.html",
+      "mode": "100644",
+      "bytes": 24825145,
+      "sha256": "2806e32423451c4ef7eeb5d37260b645a5ba06a11dba14474c99c5e6447e8992",
+      "git_blob_sha1": "90c4dba8a3c91749484644d2f58fe6f518744136"
+    },
+    {
+      "path": "Cartolina_Casardi_PC_e_Telefono.html",
+      "mode": "100644",
+      "bytes": 24820033,
+      "sha256": "8b247a2cd86bd0485f352190590371e83150aa3feb99b2cb5c59fc517d9a09ea",
+      "git_blob_sha1": "7d3d1e2bd4ba78f2fc53f050bdea6e5b10262fb6"
+    },
+    {
+      "path": "Cartolina_Casardi_Windows_LPC_QR_2026-27.zip",
+      "mode": "100644",
+      "bytes": 75407458,
+      "sha256": "9fb4a649948ded763cb3436d3b82b12f58f196f8429e65abbd8dfe18bdf5a12f",
+      "git_blob_sha1": "f6e2b3a7fe760018d115201fd3b1a53b91dea2f1"
+    },
+    {
+      "path": "Cartolina_Casardi_Windows_LPC_QR_2026-27.zip.sha256",
+      "mode": "100644",
+      "bytes": 111,
+      "sha256": "3eb5a9af1fa8790b495c6525e9e8d9e2cddabbbefb2815aa6d82f32abbf8719c",
+      "git_blob_sha1": "974609732ad9363a5815360c117731ebff459be4"
+    },
+    {
+      "path": "Diagnosi_blocco_Casardi_3.3.1.md",
+      "mode": "100644",
+      "bytes": 7665,
+      "sha256": "284d67e518b71728dce5d9f6701894a9ed298b766874785537b9bfe485afe228",
+      "git_blob_sha1": "20b97ebacf6c89dd7fddc5c8a8dfd96efb20233c"
+    },
+    {
+      "path": "Guida_Casardi_3.2.pdf",
+      "mode": "100644",
+      "bytes": 45827,
+      "sha256": "d9a4e4b620cda06eefd406cf9968aba4041365ff9670d97c1ab951d69345e338",
+      "git_blob_sha1": "d660cf06ea9372eafe935b5ffc8ebf16902045ca"
+    },
+    {
+      "path": "Guida_Casardi_3.3.1.pdf",
+      "mode": "100644",
+      "bytes": 46817,
+      "sha256": "c697bc4b6fbb1cc2e824881d0f1ea92732f165406a8c54174b596367604f7069",
+      "git_blob_sha1": "94b737903bf17cf24baa0945035dd29bf17bdf80"
+    },
+    {
+      "path": "Guida_Casardi_3.3.pdf",
+      "mode": "100644",
+      "bytes": 46819,
+      "sha256": "41d9cf2e5426b76797ac5e051c361aced34d34b4b3e69201824c036aaf943d71",
+      "git_blob_sha1": "7cba139a6be1b2e0189d4cda1f927a6f5b544e99"
+    },
+    {
+      "path": "LEGGIMI_CASARDI_3.2.md",
+      "mode": "100644",
+      "bytes": 3600,
+      "sha256": "e25b04eec315ca46a9d419a06f773d31d6e3ec5a3d8a3f9e4d7a8e0cdb511aaa",
+      "git_blob_sha1": "848f4a235dec883f72fcc605c9248cc06be0c020"
+    },
+    {
+      "path": "LEGGIMI_CASARDI_3.3.1.md",
+      "mode": "100644",
+      "bytes": 24370,
+      "sha256": "90cc6f28b3898bcdea363aa3f7d21b3ad31b7d8cdfd6d911e79b4e5daa6a89da",
+      "git_blob_sha1": "c4701fca777fc58937f8ba14f126622770ec512e"
+    },
+    {
+      "path": "LEGGIMI_CASARDI_3.3.md",
+      "mode": "100644",
+      "bytes": 3566,
+      "sha256": "d9e201268bdfe218ddfc2314640bca4c88542cf9b74592db332a7965fa01473a",
+      "git_blob_sha1": "81249210d75ad536e04a875b0a2e2ba66bf3ee55"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "bytes": 4766,
+      "sha256": "107b9801dd28e3d64c993a38059f64fa524d19708114aae67471718aa6736a03",
+      "git_blob_sha1": "a67c27623124271bd2f6bb276691c8c6e4641e49"
+    },
+    {
+      "path": "Verifica_pubblicazione_Casardi_3.2.json",
+      "mode": "100644",
+      "bytes": 1278,
+      "sha256": "a1810202bcb9864ae00a3894a16e2ee95dd677e12fefe2728f8899f6b1ecdae9",
+      "git_blob_sha1": "23a72b49951ebb8200fac04c334a8f69d1e36cd9"
+    },
+    {
+      "path": "Verifica_pubblicazione_Casardi_3.3.1.json",
+      "mode": "100644",
+      "bytes": 2004,
+      "sha256": "fbafa87d8ef8e9c86c8a062cee027b235bcd7131d7cca7261defe129f7395cc1",
+      "git_blob_sha1": "4699902756a7a46e925ea655c3e2f6c20f0cfc90"
+    },
+    {
+      "path": "Verifica_pubblicazione_Casardi_3.3.json",
+      "mode": "100644",
+      "bytes": 1731,
+      "sha256": "c9097fcb1b39b6a12ab963bc7bba4c6dd1cfeb1cc80f61ea87daaa25889a4f7f",
+      "git_blob_sha1": "baa443f00845ed622b1b6b855ac1c61702216de4"
+    },
+    {
+      "path": "archivio_cartolina/README_GIOCO_ORIGINALE.md",
+      "mode": "100644",
+      "bytes": 7896,
+      "sha256": "6290c93b2bc70e81bf297186d2b75837f75209ea9322fa8088c264bd8da21cb1",
+      "git_blob_sha1": "3073423349d7f6022fd9af91c6b725a216648a63"
+    },
+    {
+      "path": "casardi_diagnostica/STATO_DIAGNOSI.md",
+      "mode": "100644",
+      "bytes": 9259,
+      "sha256": "3b33fb23d5911b573fe28501d09ba7a3f7f0261aa28f64cc8b0796eca9b8eca8",
+      "git_blob_sha1": "92ec9ae2ef8d19ae6ea9ce6a81e332a7f2626957"
+    },
+    {
+      "path": "casardi_diagnostica/appearance-geometry-probe.json",
+      "mode": "100644",
+      "bytes": 850,
+      "sha256": "6c7ba571894409ee913eb86844a2df17baa2bffeb8c2fdcc84f9c49246dbce67",
+      "git_blob_sha1": "67046dd2f5798662d71d4e7f6e28bf7f952b3074"
+    },
+    {
+      "path": "casardi_diagnostica/appearance_geometry_probe.py",
+      "mode": "100644",
+      "bytes": 3180,
+      "sha256": "f375ed80802bb9af6284baa76bf343184d813491cc829be72d20bd9fd11cb49e",
+      "git_blob_sha1": "aeb3421d195ef148bbadbe2582e7198d55bcabe8"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/README.md",
+      "mode": "100644",
+      "bytes": 9127,
+      "sha256": "67ceeef7024e7a5b64ee49ca05b937e93ea607eda28836ff5751987902497cad",
+      "git_blob_sha1": "8e680b3c5aecc96330699bf71780a918c9fcfb76"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/MANIFEST.json",
+      "mode": "100644",
+      "bytes": 30106,
+      "sha256": "d4c563729b5e4e806a15e10f8331417b3fe6c32864972dcff9b52acd0c8b2fc5",
+      "git_blob_sha1": "7b9534175b2ac2086097c6afbea1d3240a8f3a5a"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/SCOPE.md",
+      "mode": "100644",
+      "bytes": 236,
+      "sha256": "80cb7aa099401ace81f28c156ebc51c739436f85c9a6d4221d840fb9038582f9",
+      "git_blob_sha1": "914b6dd14f591ac9f2cf06ebb3daaedb4645a1ea"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/capture-index.json",
+      "mode": "100644",
+      "bytes": 4192,
+      "sha256": "7575008920ad639b7210ec669fcdfce48a14fa9925362ef5551b2d4107a228d7",
+      "git_blob_sha1": "a07fd9e3666d48dd41a994a1244ea9cd02f826bb"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/date-provenance.json",
+      "mode": "100644",
+      "bytes": 17061,
+      "sha256": "5184f89c314b9d0fb30baea40b02273a1b3751d26758c76496bca089aedaf068",
+      "git_blob_sha1": "0f8fca1bb0b59eac4138213e802a5a09b6bb0d6f"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/experimental_non_release/canvas/browser/app.js",
+      "mode": "100644",
+      "bytes": 25166,
+      "sha256": "2088386c02711a49bf513a6644bd29e1f4daf90dbb48fcc6ebe461b8f0910fa5",
+      "git_blob_sha1": "5cee5386df42e0fa0702f97fca4a2d8b22cd93a5"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/experimental_non_release/canvas/browser/interface.html",
+      "mode": "100644",
+      "bytes": 21297,
+      "sha256": "dc6a2f5ec2609e61bf9b92953a6d50d58272c4c9f8c47628321f1286b00c731a",
+      "git_blob_sha1": "42d22540432ca1e35793d10f380ac9a79ab65cfc"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/experimental_non_release/canvas/browser/layout-editor.css",
+      "mode": "100644",
+      "bytes": 7992,
+      "sha256": "27ed7f000183641a496fb01de281678351380c26953f74f5c35dc0696ab407eb",
+      "git_blob_sha1": "ff78be065434296acd0731df5ddbbc8758100d0b"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/experimental_non_release/canvas/browser/layout-editor.js",
+      "mode": "100644",
+      "bytes": 19561,
+      "sha256": "67e8742c9e4a3640c1e1ba9a6dd760a2c1a597a24d199c634b06075908303123",
+      "git_blob_sha1": "2ce874fc14e9bb8aa4507a0a1d7f2e9d04f29b63"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/experimental_non_release/canvas/canvas-preview-experiment.patch",
+      "mode": "100644",
+      "bytes": 20995,
+      "sha256": "bff9616d919593d1387b8ddca4e55ccb874446d4d409661ac55a0bb90a9689a7",
+      "git_blob_sha1": "bd747098a388cc17d02a49f09c6ba04b0c875eb5"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/experimental_non_release/canvas/experiment-build.json",
+      "mode": "100644",
+      "bytes": 512,
+      "sha256": "ff4dae10d8970c1a1efe92737d475926e4cd0ef9ab6426d4ba26f5dfb2a81eca",
+      "git_blob_sha1": "885df8c7339735a8b3adca42b15b81be360b652f"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/experimental_non_release/http/kiosk-ownership-candidate.js",
+      "mode": "100644",
+      "bytes": 29776,
+      "sha256": "404092dba58d07995120de7fe76b2fc6fad40f2ee9dab48ede72fc21f0d0ae10",
+      "git_blob_sha1": "59e5450bd0ddfc4b4a25347524b5b1a2c1ff85b4"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/experimental_non_release/http/kiosk-ownership-candidate.patch",
+      "mode": "100644",
+      "bytes": 829,
+      "sha256": "49483d5dde01e804d4e5eaa33d3a0470b42306759517b9d73b2ee4caaa8a0a8c",
+      "git_blob_sha1": "3d765c66a35460d4d88370faa1f92907be123f51"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/go-unit-audit-summary.json",
+      "mode": "100644",
+      "bytes": 1470,
+      "sha256": "e6daf8f508ba9fd6c2964f75797d2f1a887fbece1ec565683f458b1d827925be",
+      "git_blob_sha1": "86f9d7d2362473727e23c67ead856104afda9241"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/analyze_timing_ownership.py",
+      "mode": "100644",
+      "bytes": 3568,
+      "sha256": "f305e00a69c72c8d8cd830608517f30620841b967edb3a82d72bc3bea88cd595",
+      "git_blob_sha1": "6b4d21f521e133d861e96dcc7f4a7652dc953b39"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/audit_integrity.py",
+      "mode": "100644",
+      "bytes": 2654,
+      "sha256": "cbd73c5f69cfdf657650accf5c42cb8e9845afdae9200e7703ea9a2291e06113",
+      "git_blob_sha1": "648d788aae018be7fe2f3088a7226d2f4cd455f5"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/browser_geometry_envelope.js",
+      "mode": "100644",
+      "bytes": 1677,
+      "sha256": "c0714c80080cce0663c3ee2c6ec37709edc845681b87fc32a1c1492ee0200e2f",
+      "git_blob_sha1": "70d3df13f44ce43d6a7360054e53b790d4990406"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/canvas_embedding_test.py",
+      "mode": "100644",
+      "bytes": 5607,
+      "sha256": "0ccab94218af68c6e075b2d383d494d2db3102ac6b5a86ae0fecb0383c581ce5",
+      "git_blob_sha1": "33191f22515cd5d380da78d48d992cf5a4c5ee30"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/canvas_pixel_qa.py",
+      "mode": "100644",
+      "bytes": 4535,
+      "sha256": "c5d9ddac3e7dc08ea6852342f26b7e58f0a5892c2ec13d563090f7bdd2a86c62",
+      "git_blob_sha1": "d7afcea5aab21746aa86f66c0bcedfc7ab72f162"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/canvas_race_qa.py",
+      "mode": "100644",
+      "bytes": 12262,
+      "sha256": "12e06f380b179d98d964082f1a75df299a76d16da943ab25702f4410e538d6bd",
+      "git_blob_sha1": "e84a33d129e20b28d0747df70b2f1bb25d34ccb2"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/canvas_resource_first_incomplete_tracking.py",
+      "mode": "100644",
+      "bytes": 4513,
+      "sha256": "fe57f8151b10cbb31c95dd6750c30453b6bcef731ad48258a6973e33f7801cd6",
+      "git_blob_sha1": "1c763b27594fef8c220b08a88b9dcc64244d93ea"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/canvas_resource_qa.py",
+      "mode": "100644",
+      "bytes": 4571,
+      "sha256": "77b83a8637cee1668a9afa5615aa6b6d72ba800962bdd178bae287872a6732a2",
+      "git_blob_sha1": "b1c5957fe544f35cfec3a647f4e861a0eebc91d6"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/canvas_timing_probe.py",
+      "mode": "100644",
+      "bytes": 4629,
+      "sha256": "bad9e98bde06ac9224b2583b4a3ca7114d732acee7d6388ed81c72cc573095fe",
+      "git_blob_sha1": "2017a76706beac14e6af05b3c09fc14147cdfed0"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/compositor_gesture_first_crash.py",
+      "mode": "100644",
+      "bytes": 12355,
+      "sha256": "1ed2e2a3eb53df918dffa881654e66372a6f7fa616fcda28cf99cf6259be737b",
+      "git_blob_sha1": "3a52a7bf13e10e9713789e350b204a379eb4ffc2"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/compositor_gesture_qa.py",
+      "mode": "100644",
+      "bytes": 12637,
+      "sha256": "2b38e12a94983019727b4e82c324d34cef7beb7e533dbe059af0bf8f3b2b1d9e",
+      "git_blob_sha1": "48ac54d2d5ac4138a399f45923b56721c5768752"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/contact_probe.py",
+      "mode": "100644",
+      "bytes": 3546,
+      "sha256": "08426cb22125e4e468ae1b427a9e5c8fe2e49b5135a42991b974815b35aacf96",
+      "git_blob_sha1": "0545bda27e0194e2fa0598008164b6906d75834f"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/embed_host.py",
+      "mode": "100644",
+      "bytes": 1780,
+      "sha256": "66ed5adaa9448e49742b918a50edff98df0ed29c38fe87c9dad1a0f0763727b0",
+      "git_blob_sha1": "3160ea8c919a03cab418099b97625b5069adda97"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/embed_host_previsual.py",
+      "mode": "100644",
+      "bytes": 1670,
+      "sha256": "e70bcbf08d790e4b3f19cc1d1ae3d1fd2e89b1193e4a632ca7b026e5136f3888",
+      "git_blob_sha1": "579b0ff789b00d4de973c9ab1f958a24ad0451f5"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/focus_probe.py",
+      "mode": "100644",
+      "bytes": 4133,
+      "sha256": "31a2bafd0fb8297ce71f47a0d48b3accd8003c0ad873c9458b570f66bbabff10",
+      "git_blob_sha1": "04c7bd6aa579f9e84479471cde80098f4909cba2"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/geometry_envelope_probe.py",
+      "mode": "100644",
+      "bytes": 4272,
+      "sha256": "a1e7dadc1f73a5e5e8be83c320d5db2ffca08e0ebdeee2f318e9935b290a81f2",
+      "git_blob_sha1": "8dbb951864f274976cda43dff10b332799d8a1c9"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/held_contact_ownership_qa.py",
+      "mode": "100644",
+      "bytes": 8149,
+      "sha256": "9affd3208a3b4c925c2b58357c9acb039796ec6cd64e0f7c810350def3aef620",
+      "git_blob_sha1": "f71d268c8f7467511845e24cef788027b35f69dc"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/image_probe.py",
+      "mode": "100644",
+      "bytes": 3298,
+      "sha256": "1249b7b9b75e1c4112aad5da6188a2c2e4d57b51de01a59127e1210f3a5c5ce3",
+      "git_blob_sha1": "c7d7325d78031975b761a564792d78914b1bde80"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/kiosk-ownership-candidate.js",
+      "mode": "100644",
+      "bytes": 29776,
+      "sha256": "404092dba58d07995120de7fe76b2fc6fad40f2ee9dab48ede72fc21f0d0ae10",
+      "git_blob_sha1": "59e5450bd0ddfc4b4a25347524b5b1a2c1ff85b4"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/kiosk_ownership_probe.py",
+      "mode": "100644",
+      "bytes": 6257,
+      "sha256": "a1c85cfe8f0f362eca847d5857332276b43729fd786549f040459074843a0d55",
+      "git_blob_sha1": "7d321d1411929c1fe3d45053e73b7dc49bda92cc"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/make_canvas_experiment.py",
+      "mode": "100644",
+      "bytes": 11047,
+      "sha256": "4071fd15e919dcd6c42f27ae26d0f669551e339237eadcd2cd1756a0e2f4ba58",
+      "git_blob_sha1": "a95cc44e0f961de86bb1d28d3327394ac35f72a2"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/native_embedding_edges.py",
+      "mode": "100644",
+      "bytes": 5237,
+      "sha256": "9afc2066f43916f34fbb9f05b15fdc0d9bf64d9e18c2f0ed57d243e81e49f3b2",
+      "git_blob_sha1": "c962eccc6e147c1333374f35a5423768db7a99c4"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/persist_audit.py",
+      "mode": "100644",
+      "bytes": 12318,
+      "sha256": "253972b56cf91816f1828e21d7adf101fc3819cfc55d3c0678755958134b7fd0",
+      "git_blob_sha1": "3840120e816c5553f4df4ba248c2a73fd04f7ed5"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/pristine_embedding_test.py",
+      "mode": "100644",
+      "bytes": 5565,
+      "sha256": "1de1d7220ed2e3145cdd3f7b50700944ef28565cff96dc4f2ae41777cdd94cc5",
+      "git_blob_sha1": "99163a7a2da556d19cc189581945aa73dfe5a235"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/source_check.py",
+      "mode": "100644",
+      "bytes": 3444,
+      "sha256": "596800724d456425559d6df8eb0162f0476c9d5e431bff64a306f448cd6b1565",
+      "git_blob_sha1": "ba7f98b0b84266f511a54b86d7ee0a88e08b2305"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/support_integrity_qa.py",
+      "mode": "100644",
+      "bytes": 3973,
+      "sha256": "00f1fb82fd5849eed13dac13f87acb86a8c4dc6c6557c09a55705b45f595df49",
+      "git_blob_sha1": "b6b4b55368d5714d0ab2600ca4deb5c487cc7a50"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/timing_probe.py",
+      "mode": "100644",
+      "bytes": 4593,
+      "sha256": "38ccec414d515c62847e9d9c6167ef091c1033edf602744c409b381914a59af6",
+      "git_blob_sha1": "9c412e21fd33998cd7d12740ead5239c2eae6755"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/original/whole_release_integrity.py",
+      "mode": "100644",
+      "bytes": 2494,
+      "sha256": "81064b41fc1f79aa80711b73d5501759395d1ce06b27c489dc6248593e54623a",
+      "git_blob_sha1": "4e47480682b9a12f72fe4fadd9cbce5c3bd247f6"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/analyze_timing_ownership.py",
+      "mode": "100644",
+      "bytes": 3568,
+      "sha256": "f305e00a69c72c8d8cd830608517f30620841b967edb3a82d72bc3bea88cd595",
+      "git_blob_sha1": "6b4d21f521e133d861e96dcc7f4a7652dc953b39"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/audit_integrity.py",
+      "mode": "100644",
+      "bytes": 2779,
+      "sha256": "74a96d1439ff910b8f2da900674695a020cbb41d3f3d3e2cd6d270be4911f45a",
+      "git_blob_sha1": "d0c27340dcdd5d381c5c9f63a65c8d24b57dd04b"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/browser_geometry_envelope.js",
+      "mode": "100644",
+      "bytes": 1701,
+      "sha256": "c893db970994479e3066b17bdbbedeb2e0728eaad8253f2b13e46aa45553b86e",
+      "git_blob_sha1": "25d3eb42f532be638720bc3db3cb2fe0f326beda"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/canvas_embedding_test.py",
+      "mode": "100644",
+      "bytes": 5738,
+      "sha256": "74cbd4632b9903e7db75de53f534035fd59b846d7b92910a30efb5129020df32",
+      "git_blob_sha1": "f61a2e3cd15913caa475bfc82cd060e0e3fccdaa"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/canvas_pixel_qa.py",
+      "mode": "100644",
+      "bytes": 4660,
+      "sha256": "1ec2f2754b9979c62cf711e786de4c5755c807b862386a0263a7a27148689de4",
+      "git_blob_sha1": "5100ccc5ae9494ea13b92d5c0f2d93da6ec9c1c8"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/canvas_race_qa.py",
+      "mode": "100644",
+      "bytes": 12387,
+      "sha256": "15e8f52325d54b2abcb5ca4280053079d8109bad48a9e6d4ff2c5823b2109828",
+      "git_blob_sha1": "f953e69b5e3c5c341a4e42e722818adf2d498a84"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/canvas_resource_first_incomplete_tracking.py",
+      "mode": "100644",
+      "bytes": 4513,
+      "sha256": "fe57f8151b10cbb31c95dd6750c30453b6bcef731ad48258a6973e33f7801cd6",
+      "git_blob_sha1": "1c763b27594fef8c220b08a88b9dcc64244d93ea"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/canvas_resource_qa.py",
+      "mode": "100644",
+      "bytes": 4571,
+      "sha256": "77b83a8637cee1668a9afa5615aa6b6d72ba800962bdd178bae287872a6732a2",
+      "git_blob_sha1": "b1c5957fe544f35cfec3a647f4e861a0eebc91d6"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/canvas_timing_probe.py",
+      "mode": "100644",
+      "bytes": 4629,
+      "sha256": "bad9e98bde06ac9224b2583b4a3ca7114d732acee7d6388ed81c72cc573095fe",
+      "git_blob_sha1": "2017a76706beac14e6af05b3c09fc14147cdfed0"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/compositor_gesture_first_crash.py",
+      "mode": "100644",
+      "bytes": 12355,
+      "sha256": "1ed2e2a3eb53df918dffa881654e66372a6f7fa616fcda28cf99cf6259be737b",
+      "git_blob_sha1": "3a52a7bf13e10e9713789e350b204a379eb4ffc2"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/compositor_gesture_qa.py",
+      "mode": "100644",
+      "bytes": 12637,
+      "sha256": "2b38e12a94983019727b4e82c324d34cef7beb7e533dbe059af0bf8f3b2b1d9e",
+      "git_blob_sha1": "48ac54d2d5ac4138a399f45923b56721c5768752"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/contact_probe.py",
+      "mode": "100644",
+      "bytes": 3546,
+      "sha256": "08426cb22125e4e468ae1b427a9e5c8fe2e49b5135a42991b974815b35aacf96",
+      "git_blob_sha1": "0545bda27e0194e2fa0598008164b6906d75834f"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/embed_host.py",
+      "mode": "100644",
+      "bytes": 1780,
+      "sha256": "66ed5adaa9448e49742b918a50edff98df0ed29c38fe87c9dad1a0f0763727b0",
+      "git_blob_sha1": "3160ea8c919a03cab418099b97625b5069adda97"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/embed_host_previsual.py",
+      "mode": "100644",
+      "bytes": 1670,
+      "sha256": "e70bcbf08d790e4b3f19cc1d1ae3d1fd2e89b1193e4a632ca7b026e5136f3888",
+      "git_blob_sha1": "579b0ff789b00d4de973c9ab1f958a24ad0451f5"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/focus_probe.py",
+      "mode": "100644",
+      "bytes": 4133,
+      "sha256": "31a2bafd0fb8297ce71f47a0d48b3accd8003c0ad873c9458b570f66bbabff10",
+      "git_blob_sha1": "04c7bd6aa579f9e84479471cde80098f4909cba2"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/geometry_envelope_probe.py",
+      "mode": "100644",
+      "bytes": 4397,
+      "sha256": "886ac65df56ea8fbd2967121a6d8d640291a4253ee4f568bcda1fc82383bf23d",
+      "git_blob_sha1": "350235e40b7fb493ecafdbf912737b976bd783d4"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/held_contact_ownership_qa.py",
+      "mode": "100644",
+      "bytes": 8149,
+      "sha256": "9affd3208a3b4c925c2b58357c9acb039796ec6cd64e0f7c810350def3aef620",
+      "git_blob_sha1": "f71d268c8f7467511845e24cef788027b35f69dc"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/image_probe.py",
+      "mode": "100644",
+      "bytes": 3298,
+      "sha256": "1249b7b9b75e1c4112aad5da6188a2c2e4d57b51de01a59127e1210f3a5c5ce3",
+      "git_blob_sha1": "c7d7325d78031975b761a564792d78914b1bde80"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/kiosk-ownership-candidate.js",
+      "mode": "100644",
+      "bytes": 29776,
+      "sha256": "404092dba58d07995120de7fe76b2fc6fad40f2ee9dab48ede72fc21f0d0ae10",
+      "git_blob_sha1": "59e5450bd0ddfc4b4a25347524b5b1a2c1ff85b4"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/kiosk_ownership_probe.py",
+      "mode": "100644",
+      "bytes": 6382,
+      "sha256": "9c1dcc08595c7e2e0446bb59fb79a4e87252ab68bcd381af08662f766a36040e",
+      "git_blob_sha1": "c9290ccb41976c5e07ff1f032a76f83d2bd348e5"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/make_canvas_experiment.py",
+      "mode": "100644",
+      "bytes": 11047,
+      "sha256": "4071fd15e919dcd6c42f27ae26d0f669551e339237eadcd2cd1756a0e2f4ba58",
+      "git_blob_sha1": "a95cc44e0f961de86bb1d28d3327394ac35f72a2"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/native_embedding_edges.py",
+      "mode": "100644",
+      "bytes": 5362,
+      "sha256": "343406e899a1774c5ea66e9b86b1df11ec8d89e71445a76ba983a1e53ea45cca",
+      "git_blob_sha1": "bc1405af77535d46b795435a7cdefb439d149d68"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/persist_audit.py",
+      "mode": "100644",
+      "bytes": 12318,
+      "sha256": "253972b56cf91816f1828e21d7adf101fc3819cfc55d3c0678755958134b7fd0",
+      "git_blob_sha1": "3840120e816c5553f4df4ba248c2a73fd04f7ed5"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/pristine_embedding_test.py",
+      "mode": "100644",
+      "bytes": 5690,
+      "sha256": "3ae9f5d259eb0e5842078d57afd17f9cfbcb40eae590b516758a31323993abe5",
+      "git_blob_sha1": "22b6b29b5212f380a24578de094af29055460b78"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/source_check.py",
+      "mode": "100644",
+      "bytes": 3569,
+      "sha256": "52b0e985e5d214b4bb47e59722c18cfdbabe377cdf93ff0351ea6b2b8164a23a",
+      "git_blob_sha1": "253cc50ca4f8270b0b83eedafa590148c784a3a6"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/support_integrity_qa.py",
+      "mode": "100644",
+      "bytes": 3973,
+      "sha256": "00f1fb82fd5849eed13dac13f87acb86a8c4dc6c6557c09a55705b45f595df49",
+      "git_blob_sha1": "b6b4b55368d5714d0ab2600ca4deb5c487cc7a50"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/timing_probe.py",
+      "mode": "100644",
+      "bytes": 4593,
+      "sha256": "38ccec414d515c62847e9d9c6167ef091c1033edf602744c409b381914a59af6",
+      "git_blob_sha1": "9c412e21fd33998cd7d12740ead5239c2eae6755"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness/rerunnable/whole_release_integrity.py",
+      "mode": "100644",
+      "bytes": 2494,
+      "sha256": "81064b41fc1f79aa80711b73d5501759395d1ce06b27c489dc6248593e54623a",
+      "git_blob_sha1": "4e47480682b9a12f72fe4fadd9cbce5c3bd247f6"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/harness-adaptations.json",
+      "mode": "100644",
+      "bytes": 3902,
+      "sha256": "5d3a236b54c311f68ab984be23077a06d45569ddff63c6c9fc19d47d6e0ef8d2",
+      "git_blob_sha1": "d162c4931948bcf12b5fc1816cfc19118fd04741"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/browser-install.log",
+      "mode": "100644",
+      "bytes": 6847,
+      "sha256": "62d201c0c9d85c61414a350c512e264fed749b96135f19b184627e86d1f0c45f",
+      "git_blob_sha1": "905767c653bedfc06c42176e5c6c0fa399dc103c"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/canvas-embedding.log",
+      "mode": "100644",
+      "bytes": 1033,
+      "sha256": "4c3a09ca982a18892eb49948bf931a22ca6d18266819836e0050f8c981eb4357",
+      "git_blob_sha1": "e21527b856793ce5e8ff593cba871386e0baecb8"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/canvas-pixel.log",
+      "mode": "100644",
+      "bytes": 58,
+      "sha256": "125a19b1543dcd1dfc7b31bde21c15b53f7e1075b2471524a57f2572eea1c7e0",
+      "git_blob_sha1": "a8a329c247f46d6a9177e92f311de0ce684d20d0"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/canvas-race-qa-first-harness-failure.log",
+      "mode": "100644",
+      "bytes": 10271,
+      "sha256": "87f3d6d00ed41c076e9c8d4fad2863528af1f7982bda51f8ebc4c9b923b7c750",
+      "git_blob_sha1": "e7d23ce7ad1b03d84f7368a98d0c945e45d8e366"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/canvas-race-qa.log",
+      "mode": "100644",
+      "bytes": 3504,
+      "sha256": "50052946ed8b68eed416344006e64f1d10957ea9a656d0137efd0302c325ce95",
+      "git_blob_sha1": "d7d578a0234424ca5005ec7ae857a18962160300"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/canvas-resource-first-incomplete-tracking.log",
+      "mode": "100644",
+      "bytes": 152,
+      "sha256": "b96a37d604ac7e014cf741573be2c3fd63a622e38477e226528f6d5c92e16b57",
+      "git_blob_sha1": "ab73282c5366e005a845d190552e41fd3f8444ff"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/canvas-resource.log",
+      "mode": "100644",
+      "bytes": 152,
+      "sha256": "a29f5372eed014280d96412f2a9d87800b0d18244b159d87ee070f1def7c7acf",
+      "git_blob_sha1": "8af7ffecf76cb69c8d70922bf74be4dd9eb3691a"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/canvas-timing-probe.log",
+      "mode": "100644",
+      "bytes": 202,
+      "sha256": "057b5c2bca85b16d51e5969c0a9db6a46c5ece53699673d68102fb168f685e54",
+      "git_blob_sha1": "a71c029c842eebe10064b3e579e29b0e17cbbb80"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/compositor-gesture-first-crash.log",
+      "mode": "100644",
+      "bytes": 4992,
+      "sha256": "1cfdf923033fd82f9082073985e3f3e43244bb6ff264d7b755782fc86cc6442b",
+      "git_blob_sha1": "56f7967db0c5f859ba4a66888a1f01758578b37a"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/compositor-gesture-smoke.log",
+      "mode": "100644",
+      "bytes": 229,
+      "sha256": "aca778717fa96c895b8003e7cd3d34e8a6a384e21948ce3c805fa592d2a7adc0",
+      "git_blob_sha1": "f2ac120d18ebeac582d4f74d61a17dc359dd4c82"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/compositor-gesture.log",
+      "mode": "100644",
+      "bytes": 7227,
+      "sha256": "99f6ac7bcbad26b74b1cd5396bfacc46b6f35e8daccea61d6391ba5b20f9da29",
+      "git_blob_sha1": "67946548b37406bbd969c2224d2f85b2d6e378a2"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/contact-probe.log",
+      "mode": "100644",
+      "bytes": 2806,
+      "sha256": "d1a36424d6ccaf405c64157b4db38af4bb561459d26798633c806078a8365e97",
+      "git_blob_sha1": "572b217447faa7ad1c52d6aa3e0840d948acea7f"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/deps.log",
+      "mode": "100644",
+      "bytes": 14509,
+      "sha256": "3ca306e4662595cbb75d2a8a98bb8ed95d4d7c7b89e9855a8148487a1c3a7146",
+      "git_blob_sha1": "e62ce62365b23ecdb08367e71453e8159e477ebf"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/focus-probe.log",
+      "mode": "100644",
+      "bytes": 7742,
+      "sha256": "555a09334382596f0080c79fe7cf6e27086d03848ee38f5fb6ebdc08f78a7b73",
+      "git_blob_sha1": "df961de3abd18cc1b45cf8e3c9e3205e71e17743"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/go-unit-audit.log",
+      "mode": "100644",
+      "bytes": 2775,
+      "sha256": "ee6e2e1884d7f90caf7149e5b5feabd560c620f780b185b4d32b2c29ae94c2fb",
+      "git_blob_sha1": "04e5876e3a9db98c3c47df581d208271983f5e85"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/held-contact-ownership.log",
+      "mode": "100644",
+      "bytes": 526,
+      "sha256": "100a0773a418676237f5c6e77505c032523194f64e7f4ef94d75bf9f3e2efed6",
+      "git_blob_sha1": "09e55f1a109f8d778ab74151791786ab476888b5"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/image-probe.log",
+      "mode": "100644",
+      "bytes": 125,
+      "sha256": "363c08d37744f0e9f076908f8cba995efda75312c624af770d830d2cfe806e39",
+      "git_blob_sha1": "876442cc8059c7f841aad6c669cfffa615dd4c2e"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/install.log",
+      "mode": "100644",
+      "bytes": 111,
+      "sha256": "fc9f87f593e88b3cbbc962179117c6c7e269e10a3ceb0e4f2b2f3d8d9e28132c",
+      "git_blob_sha1": "6dca052b514a1c84a857aca28bb9f0fb73fcee32"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/kiosk-ownership.log",
+      "mode": "100644",
+      "bytes": 245,
+      "sha256": "5e9a390708264b509866b24d20ba088fe8eec698db0c55d24666077e4f63fa3a",
+      "git_blob_sha1": "30ff86c7023a0cf1c36ae01258a83a32c675f22e"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/native-embedding-edges.log",
+      "mode": "100644",
+      "bytes": 270,
+      "sha256": "8f289973e4a02ac6d3ee78d902bc9408aecca4d864307e4fa6e65b97bd713867",
+      "git_blob_sha1": "74f5d5f4425b932caa07aef3784adefa71b8f239"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/pristine-embedding.log",
+      "mode": "100644",
+      "bytes": 1033,
+      "sha256": "4c3a09ca982a18892eb49948bf931a22ca6d18266819836e0050f8c981eb4357",
+      "git_blob_sha1": "e21527b856793ce5e8ff593cba871386e0baecb8"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/timing-probe.log",
+      "mode": "100644",
+      "bytes": 202,
+      "sha256": "5f045922ec9e0e5fdabb14addaa8c13f76248761136e87fc67b9cdb15718e9f7",
+      "git_blob_sha1": "a145ee15cce00b9cc2d0f685c9342f4f9d139292"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/logs/unit-audit.log",
+      "mode": "100644",
+      "bytes": 10056,
+      "sha256": "062e07c7eb6acb4d692fc3182bf8b15ef8bd1fcdbb70672f23cf44f12636cda3",
+      "git_blob_sha1": "e6ba20e7ec852facc717b12730f6d7e10b993b65"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/audit-environment.json",
+      "mode": "100644",
+      "bytes": 795,
+      "sha256": "2f14a81c6b0b1e55747f116a5fef96ded9124c3431d88a27dc83ce8d9c932eab",
+      "git_blob_sha1": "659ad26f9fef2cf21f5aa546a70aa54863de7f3f"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/browser-geometry-envelope-results.json",
+      "mode": "100644",
+      "bytes": 1145,
+      "sha256": "159bd0bdf6bc3d93696495ab261599823b3fd4ed3fa5857bfa9629494b9116ff",
+      "git_blob_sha1": "db61aeb6be516500c78e0bd34b2e5b573f90fdc4"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/canvas-embedding-results.json",
+      "mode": "100644",
+      "bytes": 57634,
+      "sha256": "75bf496abed59e1ce7b966b9ab258be627d212f060fc57023287f6ea0032f4de",
+      "git_blob_sha1": "57b7ad6b5b58d0938f66b2fd6537896316db041e"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/canvas-pixel-results.json",
+      "mode": "100644",
+      "bytes": 56647,
+      "sha256": "4c6cd4ecf2ab7142f2bcc5a9feeaaea5330eab95231da808eeeb6b17b010784d",
+      "git_blob_sha1": "75063c75dcfabadf866ef0fd1546fc74fbfc80f7"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/canvas-race-qa-first-harness-failure.json",
+      "mode": "100644",
+      "bytes": 7021,
+      "sha256": "aa5772369a5f85d0b83694e61103eb7a405637e63c083d222a1142c2eb688bc8",
+      "git_blob_sha1": "3c21e15becd707dcc60ae9b4188512ea2a48d0ac"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/canvas-race-qa.json",
+      "mode": "100644",
+      "bytes": 8272,
+      "sha256": "459acf6afe9ed891203336564c8194cbe044f1c1b0a6e2032183ea2c0c7b0e2b",
+      "git_blob_sha1": "751e85b8fcb576c63d4498b6ee8cde45b0b933c1"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/canvas-resource-first-incomplete-tracking.json",
+      "mode": "100644",
+      "bytes": 4145,
+      "sha256": "49bcce4b28edb887ff470f58bc311ec2f62155c9875837fefddc3d2b420ed67a",
+      "git_blob_sha1": "4af0b0e4b9758ee6bbb14cb3b34bf719844d2871"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/canvas-resource-results.json",
+      "mode": "100644",
+      "bytes": 4639,
+      "sha256": "c0167f968206594297e3300ed07d5845e5900e5d4bb2ab976069764843c4ff33",
+      "git_blob_sha1": "58be6a058531960aaf00856da7b5bf7a6b958c84"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/canvas-timing-probe.json",
+      "mode": "100644",
+      "bytes": 349581,
+      "sha256": "ab2266b1a7c7d6dc11b82ffbf453670c044e29c33149e2c7cf2f54d0cc906c64",
+      "git_blob_sha1": "e9fee3357921eace809df35f735a86067283288d"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/compositor-adjudication.json",
+      "mode": "100644",
+      "bytes": 2162,
+      "sha256": "76c3f136065c5b37fe0a94b759072cbfa269957c9c9a582cf7198c5f8e14b81e",
+      "git_blob_sha1": "e285ae3fa6f34c9eb25a307bf112303a4d9434a6"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/compositor-gesture-first-crash.json",
+      "mode": "100644",
+      "bytes": 13920,
+      "sha256": "58a94e7aedbbc22e5042abccf50d402a106425a74b450eea16872981b1bdc717",
+      "git_blob_sha1": "517eb4000f6031694fb6f72b4572114508e335d0"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/compositor-gesture-results.json",
+      "mode": "100644",
+      "bytes": 74311,
+      "sha256": "b5c77c2432a34a9f56bb8086baa8adf31515ee01f39aa8ad5b1e3adc5fa1f736",
+      "git_blob_sha1": "aa1ba1c710a88d528077d73467028f5404bec128"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/compositor-gesture-smoke-results.json",
+      "mode": "100644",
+      "bytes": 14187,
+      "sha256": "daa18c506729b48650a67fb680f196f18303a80fee5eef10795b274b66a25243",
+      "git_blob_sha1": "e4ddb06e51c6bf80f4b84f523506528f05e577e4"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/contact-probe.json",
+      "mode": "100644",
+      "bytes": 187201,
+      "sha256": "b39fb8b4ae3a2a90f3611c9555991575a4ce99ff1779f3c7a09e63f76ca36159",
+      "git_blob_sha1": "4ff4bf61c8da8aeb8e6e4b074da6d905c785fcdb"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/final-integrity.json",
+      "mode": "100644",
+      "bytes": 1282,
+      "sha256": "61bc38431da1a6319ec74be3ef7c0cde13b25d07dafe21b5c6b19bad37500999",
+      "git_blob_sha1": "a367f2c196529e595d2c09b16147c3f55a01aadd"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/focus-probe.json",
+      "mode": "100644",
+      "bytes": 6048,
+      "sha256": "1a8ab9b230017e32ba02a32a4caa01b4c45e86ad4e837a75f5125ecf654fbf6a",
+      "git_blob_sha1": "34b57c14ac00676e292cc3ac23f5becf3bea54b4"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/font-integrity.json",
+      "mode": "100644",
+      "bytes": 783,
+      "sha256": "b26ddeef4d835b2114cc67e8857198a60972778d6de566d37fcbe144b8e5270d",
+      "git_blob_sha1": "a432a6fbdbff2903ea9b37d45ba934d8f588b5ad"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/geometry-envelope-input.json",
+      "mode": "100644",
+      "bytes": 33232,
+      "sha256": "3f669e0a22ccbaede0c5a3d96a5b2b6506a8a8f51896e8a82729a59d58c986ce",
+      "git_blob_sha1": "394bf4513aaf91f51036507500fd4d0624d391ba"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/geometry-envelope-results.json",
+      "mode": "100644",
+      "bytes": 10686,
+      "sha256": "cd63e59f54d365addce890438dcc6f374282afb355f464bb74909395268a86c3",
+      "git_blob_sha1": "ac95c7bf420fd0510f0b7064965a22c2cce50dd0"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/go-toolchain.json",
+      "mode": "100644",
+      "bytes": 567,
+      "sha256": "dfe3f8898e7f76afd8af7f66a22eb4718754f5579e24273894da1f261eb7af8d",
+      "git_blob_sha1": "1faf5b92b6be360869de51e90c3b310e7d63d02b"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/held-contact-ownership-results.json",
+      "mode": "100644",
+      "bytes": 65482,
+      "sha256": "aaa0cbd9d375c10a5ab49d3b6becc8c4da8ff9d315126bb75a44834ab2d4aecd",
+      "git_blob_sha1": "3212d36958792089571536293645b74b6529abd0"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/host-version-provenance.json",
+      "mode": "100644",
+      "bytes": 1043,
+      "sha256": "f0f741a652c8ff0693e70dc024d6d616327c3f446365d20e4cec3feba1a62208",
+      "git_blob_sha1": "2b81c88c614bde020c7d7f2ca2e8ca68c28edaee"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/image-probe.json",
+      "mode": "100644",
+      "bytes": 344623,
+      "sha256": "7af31a478f6ee9d655df8bc79bb20cf285fcc03e490055ff5e34d972b9a68a69",
+      "git_blob_sha1": "82d24728ef8deff812742a8cbe2b9535b0eec318"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/kiosk-ownership-results.json",
+      "mode": "100644",
+      "bytes": 1573,
+      "sha256": "4824cac41cea1fba2140c143530025708cd657ff2936433f7a146561ebc66172",
+      "git_blob_sha1": "2fb6a8596fc16a04c3b8c69c3d1dcaba2a6da816"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/native-embedding-edges.json",
+      "mode": "100644",
+      "bytes": 18422,
+      "sha256": "fc2171aa10441a49d0d12f7dc63147673349088e191154b860e7387c21e1353e",
+      "git_blob_sha1": "08c58b583c6abf61db3586f6749bf739cbcb2f0f"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/pristine-embedding-results.json",
+      "mode": "100644",
+      "bytes": 57591,
+      "sha256": "52b8726e23c4365cb5c9c8d95f59a96613f0ddbd11bf6bfda3b9a7257d546476",
+      "git_blob_sha1": "49fa7979df874ec7f962ffc547160bfbc5c610fe"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/source-check.json",
+      "mode": "100644",
+      "bytes": 19706,
+      "sha256": "acf79d60d384b67869f263894c85b758ba4ccee8f941510020160a96c770c825",
+      "git_blob_sha1": "725d0fb9bd6e3f68ce18efc11bfd1e11cd0f851d"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/support-review.json",
+      "mode": "100644",
+      "bytes": 2922,
+      "sha256": "7db18400aadfb2b87baa3437a066c91fc83560fc152683ec1af6bfca5f623568",
+      "git_blob_sha1": "f818f543279cbf6fdc5b37f1c05c5ddb263dd44a"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/timing-contact-ownership.json",
+      "mode": "100644",
+      "bytes": 27438,
+      "sha256": "624a0ea2b77919271af86520196521c9e3e8139194e6a943e54bb970829a7b6e",
+      "git_blob_sha1": "fb1b278aaa43e28a8b75a078b8f77b3f7e9477d6"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/timing-probe.json",
+      "mode": "100644",
+      "bytes": 348578,
+      "sha256": "8685c88b24cbf4c85fe276ed9f47e1442b37b0f013b28494549c9b8ef2cfc71b",
+      "git_blob_sha1": "aec27ff0cc99301e8ab7183e92bca32adf7e9ce8"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/vendor-data-integrity.json",
+      "mode": "100644",
+      "bytes": 2634,
+      "sha256": "902754fa3fc65b9ae7218074a29208058ad7eac5f0a5f1d962e769b1e8a5225d",
+      "git_blob_sha1": "5e19a380427f4cf5effc3c9700af12978a28c155"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/annotated/whole-release-integrity.json",
+      "mode": "100644",
+      "bytes": 1200,
+      "sha256": "8a2cc421aa117da0f97fc95c83e26514256e90ddfb667af8c653d791adef97dc",
+      "git_blob_sha1": "89bcd4d0557549d7516e6abbfa3797a71754559f"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/audit-environment.json",
+      "mode": "100644",
+      "bytes": 420,
+      "sha256": "cf54c7ae0b8c48eb31db7efc59d4e61744a51ac1e44534d4d4484f1fd5ac76ee",
+      "git_blob_sha1": "82fc4d9bc250870919d82637894682058fa1e3cb"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/browser-geometry-envelope-results.json",
+      "mode": "100644",
+      "bytes": 522,
+      "sha256": "cb04534b8a718d0948ac1373cc084fb1d5f386b1da5b28f1fb8fad373df2c398",
+      "git_blob_sha1": "09a1d4d92f566b86884a209981060c3f5893b1ef"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/canvas-embedding-results.json",
+      "mode": "100644",
+      "bytes": 57011,
+      "sha256": "d2bb6d284a7425d534e0cc08dc22c69d7643e406b19b7c2c7676c0f164276f54",
+      "git_blob_sha1": "25b5e24a2ec0e5fc9bce0771fd49608471a7ea41"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/canvas-pixel-results.json",
+      "mode": "100644",
+      "bytes": 56024,
+      "sha256": "06c7a15e67e1b2f312ae9e02827002f70a110852799b4e0a96d6806b38cac3b5",
+      "git_blob_sha1": "ff7d59ab42c2c01a2ad2b81c69a46a4ed7e60c6d"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/canvas-race-qa-first-harness-failure.json",
+      "mode": "100644",
+      "bytes": 6223,
+      "sha256": "712d79be248ca37191e481e2093dc785fe27706d6c99c312ec2e479db926f6cf",
+      "git_blob_sha1": "df4189cc0e160a45df22d81d3389ea9c90b88c94"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/canvas-race-qa.json",
+      "mode": "100644",
+      "bytes": 7649,
+      "sha256": "d7f54c83c3ec1a241f27b45dcbdc63b0553905e3be1ffc481fabaae396426a14",
+      "git_blob_sha1": "2f33aaa509c6c43146dbefea9f3b95c8912f55f2"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/canvas-resource-first-incomplete-tracking.json",
+      "mode": "100644",
+      "bytes": 3592,
+      "sha256": "e3853dd69ceb5c0dbf9afa8bfeb945db672fae9fb1f637469ee9df3bcd2f0473",
+      "git_blob_sha1": "0dfd548e499f84aeccd5dee527c9bfa2ec305525"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/canvas-resource-results.json",
+      "mode": "100644",
+      "bytes": 4264,
+      "sha256": "cd65178366c170f1427932941a203e2b72ae4ba1e87e61746a9d26ce2108d971",
+      "git_blob_sha1": "fa898dce3ec33796548e86fcfeb3d4d1cf3c33e2"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/canvas-timing-probe.json",
+      "mode": "100644",
+      "bytes": 349206,
+      "sha256": "e13e2f51ff27442fab01392fad93b2435f919bc2cb50d5ed5a04d3f88c3e963e",
+      "git_blob_sha1": "47cbc47adb74054a5a21d5aa1572ef1cdc84ba9d"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/compositor-adjudication.json",
+      "mode": "100644",
+      "bytes": 1787,
+      "sha256": "d50c5605c6502f1c6a7e4f741c0b6241964f00d1211a0656802df9f5614805d2",
+      "git_blob_sha1": "fb9d2c2889bd4d8c1ca512f28ebf1bebb625d44a"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/compositor-gesture-first-crash.json",
+      "mode": "100644",
+      "bytes": 13279,
+      "sha256": "e126f837bcf4eaf3b259a412055c0654c36519dd09b3a14fe1ab03e9d583b08d",
+      "git_blob_sha1": "7effd0f864b92ea1cb615ff27bca84f3de14318d"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/compositor-gesture-results.json",
+      "mode": "100644",
+      "bytes": 73708,
+      "sha256": "7326d2f259ad60ef805500ac46653af813d9d892b5a7574e75b923e575bc0a70",
+      "git_blob_sha1": "85f43fd0d9d08e289e97b51baad10c60f0e485d3"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/compositor-gesture-smoke-results.json",
+      "mode": "100644",
+      "bytes": 13604,
+      "sha256": "ef72dec6d2d3096e45134a0b8eb54c35ddc27deae406341e1175711c6f3a8c01",
+      "git_blob_sha1": "2ace2b01e7b2d8c83367aed6c6c0147cccd2af55"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/contact-probe.json",
+      "mode": "100644",
+      "bytes": 186826,
+      "sha256": "30285608dc76178fa30abef23978cf3dd2012daf69ace484dc798b0e7bd926e7",
+      "git_blob_sha1": "1d6ec45700f46f7aba265c6226e6ca5a307888a5"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/final-integrity.json",
+      "mode": "100644",
+      "bytes": 659,
+      "sha256": "3d3b496feaace57b4426c3c01b5648304f24faa66e1f52d105ece94698c19012",
+      "git_blob_sha1": "98c251b1a223988e85bf9493796841af5c4fc18d"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/focus-probe.json",
+      "mode": "100644",
+      "bytes": 5673,
+      "sha256": "a5e61d6b1bfd26423291bcbc326d061be22c5f1300fea7466db8affa25d3df00",
+      "git_blob_sha1": "d931c435e38eddebf26df57fdbd4cca7cf2a65e2"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/font-integrity.json",
+      "mode": "100644",
+      "bytes": 408,
+      "sha256": "b56ed2247e5d7e9f056ee516a995317f6ab05fca8480b1109afbf2e007a6da1a",
+      "git_blob_sha1": "cea0dde9a7a69a0e9906e732a475053399fd2c62"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/geometry-envelope-input.json",
+      "mode": "100644",
+      "bytes": 20886,
+      "sha256": "81cefb6a678b229e958d879b323014435d67b406e4a760a591f22feca9539c0a",
+      "git_blob_sha1": "6b1169a53514fa84605641812a25b8c7c4ef15c6"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/geometry-envelope-results.json",
+      "mode": "100644",
+      "bytes": 10063,
+      "sha256": "49dfdbf9ab0c9fa8ffe6c251cd4bb3162ffba49b9b7d3a7620f677c26f23df67",
+      "git_blob_sha1": "4aef81346eeaac04e1febcdfe8b66be5b4261d2f"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/go-toolchain.json",
+      "mode": "100644",
+      "bytes": 192,
+      "sha256": "f3ed73150f4d7c0ccb484cc5b9b4d03d59c3cf8104ec57f14726fcf292aca18f",
+      "git_blob_sha1": "08fc0903598063f171a03401b2e4f703a8cadb4e"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/held-contact-ownership-results.json",
+      "mode": "100644",
+      "bytes": 65107,
+      "sha256": "ab3edd98942ac11b71e7b431facdaafb674947713bc065cf3edd19f26513cb4a",
+      "git_blob_sha1": "5341179a857c8cb37da37bb321429d6889fecbba"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/host-version-provenance.json",
+      "mode": "100644",
+      "bytes": 668,
+      "sha256": "d820687b3fe7c1b4fca32a7d6f10055fcf544fd99054a80029624c5a425c53aa",
+      "git_blob_sha1": "ff63b8627b8cbbace3b6a5e40bcd901a3a7c9bce"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/image-probe.json",
+      "mode": "100644",
+      "bytes": 344248,
+      "sha256": "dbaa92ca5bec86f6b4a4ecf670c47dbc9d218556c526e1dfc060647b03688c3a",
+      "git_blob_sha1": "11d4d69ef019c0cab27f45eef673d73f9b3f8caa"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/kiosk-ownership-results.json",
+      "mode": "100644",
+      "bytes": 950,
+      "sha256": "0e572050e7defb9c664406c8c479c67401a0f0614a37ab96cd97aa8355349b55",
+      "git_blob_sha1": "4b1e0288fd69f9febdcda4cc2de3d020b1dbc76e"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/native-embedding-edges.json",
+      "mode": "100644",
+      "bytes": 17799,
+      "sha256": "9896d287adfea91a6b0bbee33ffe02a80df70ab81e1245dd19bbc434e2e9c4ee",
+      "git_blob_sha1": "54d59e6866bf0455db54eca5dcc1b62079a7def0"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/pristine-embedding-results.json",
+      "mode": "100644",
+      "bytes": 56968,
+      "sha256": "8dede0c312aa6998804d736ec69123f275551b42ce9805bbae48f1d02831b860",
+      "git_blob_sha1": "132a5876352cc5376127613b6c6059b53bd9ec5f"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/source-check.json",
+      "mode": "100644",
+      "bytes": 19083,
+      "sha256": "cb32e8987b516ecdea9878bfdb08e65828992e97070beeb577a9b13c07387236",
+      "git_blob_sha1": "cb3bca6aa59d729c9e9a07ee8938d0bfcaaa2a8b"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/support-review.json",
+      "mode": "100644",
+      "bytes": 2547,
+      "sha256": "dc818152709d0016b986cc098b5789fe4c0433790fed23188a686ab6fafd45d8",
+      "git_blob_sha1": "dc034feb37774958f130db4ecb796fbeea832820"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/timing-contact-ownership.json",
+      "mode": "100644",
+      "bytes": 27063,
+      "sha256": "36c48570c6f355a18b8c1abb13773479ab4d2f186c79488efee4c504d5765acc",
+      "git_blob_sha1": "fe00e6f70fe8ab69a88a2324be29415fd0f88e12"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/timing-probe.json",
+      "mode": "100644",
+      "bytes": 348203,
+      "sha256": "5bff3d56808ecf69b35e5a591aae4e056ad184b6dc20c47b65bd9e8709e6309d",
+      "git_blob_sha1": "233591453a54e238e12581391eccbe68a527739a"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/vendor-data-integrity.json",
+      "mode": "100644",
+      "bytes": 2259,
+      "sha256": "69b5cc4a311dbdf1078e02f59737809252531539fb5e586e28157833f54b9df0",
+      "git_blob_sha1": "e6b8a8a86ac2f501b5ae43253af0f4e2c9cc9060"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/reports/original/whole-release-integrity.json",
+      "mode": "100644",
+      "bytes": 825,
+      "sha256": "30db3f18406792881c0d9e7ca8841a70464c84ed3a9a9b7b1f0ad28fa24a9991",
+      "git_blob_sha1": "0f7f820aee1477d7041d7205422b47032aaa2ace"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/review-coverage.json",
+      "mode": "100644",
+      "bytes": 46733,
+      "sha256": "59d547d8077f3eb00f0721e6f9cdac65dcdbe0b84c85165638604ecd9df3bc34",
+      "git_blob_sha1": "5112c53335514b18698fc990bbf9d02662bbb7d6"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/screenshots/compositor/headless-shell-production-nes-preset0-gesture2-actual.png",
+      "mode": "100644",
+      "bytes": 193050,
+      "sha256": "f491ab86467443f0caed3014592ae1e81022b21d01c00b57ae4dae10b07b2088",
+      "git_blob_sha1": "f934d0587e7e25fac98b60e4168971fba8456302"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/screenshots/compositor/headless-shell-production-nes-preset0-gesture2-moving-ref.png",
+      "mode": "100644",
+      "bytes": 193000,
+      "sha256": "6914a21819fe0a73a3e6ab76637938d391ccbdc29dea280b1339cf8a79a8e822",
+      "git_blob_sha1": "e84020bcb71c900f0e6f783310296fb133f4fb29"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/screenshots/compositor/headless-shell-production-nes-preset0-gesture2-stationary-ref.png",
+      "mode": "100644",
+      "bytes": 192982,
+      "sha256": "f91071bb8c8a8c3d2dfee8cec14d6212161b5b0ee1fe35789b70bc9b9481c55b",
+      "git_blob_sha1": "3c2dc75f9b8e4107f3fee74c5cb8762e329db7eb"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/screenshots/compositor/headless-shell-production-photo-preset0-gesture2-actual.png",
+      "mode": "100644",
+      "bytes": 951931,
+      "sha256": "74f2d349a91466f49436da4b38aa9d3158d86bc0e4357b1ff9523bb08f33a66f",
+      "git_blob_sha1": "a7417e44d16b3569c7cb489dd1bce240fd5687b9"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/screenshots/compositor/headless-shell-production-photo-preset0-gesture2-moving-ref.png",
+      "mode": "100644",
+      "bytes": 952628,
+      "sha256": "c5eff02185c5c4906dc92ef3b0d79c45c01131d199cfa4f8aa2d2ad48aad1f64",
+      "git_blob_sha1": "ec791bcd97fd1a2e1bb4cb4550fcd88c4f1f322b"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/screenshots/compositor/headless-shell-production-photo-preset0-gesture2-stationary-ref.png",
+      "mode": "100644",
+      "bytes": 949951,
+      "sha256": "7e3a082fb1bb71b818994d5bea02244dd7753b6529d6390de9b0caf739ae8af7",
+      "git_blob_sha1": "c96d1116309eb9179e1b3bec4e523950b2660b55"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/screenshots/held_contact/held-contact-A1-nes-sample.png",
+      "mode": "100644",
+      "bytes": 121558,
+      "sha256": "587fbdc66b2acdb980d98d450e50f620f9a9cd55a2ab20870cb5e044ff0b11b4",
+      "git_blob_sha1": "a2cba14b9c27a4ba7bf57245a5b4489ba38e61f4"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/screenshots/held_contact/held-contact-A1-photo-sample.png",
+      "mode": "100644",
+      "bytes": 222262,
+      "sha256": "cf71e722ca84a4ff1d6d812c93bf88399fd227682d88416d38333bcdcb5cb96e",
+      "git_blob_sha1": "dbdb0774d53b2591ed5208706eb6bd072fce4d9f"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/screenshots/held_contact/held-contact-production-nes-sample.png",
+      "mode": "100644",
+      "bytes": 112156,
+      "sha256": "858fd34ed0a2cab6d569db251b8db77fc523e838ea17f9de7f9640c2aa926b87",
+      "git_blob_sha1": "b47a40db580841df2c3cf4ddb203cd44b6cb16c8"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/screenshots/held_contact/held-contact-production-photo-sample.png",
+      "mode": "100644",
+      "bytes": 212680,
+      "sha256": "0ab1b093f48c086ea493771d31b29dc295eb78476ad53774fb06981db6c5fd57",
+      "git_blob_sha1": "407c262d7aaf06d530f769bd15c8642d023f2b5f"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove/timing-classification.json",
+      "mode": "100644",
+      "bytes": 11334,
+      "sha256": "2d262d9cb6661c296ccb6cc47540974de5e3785b6ff6c68c84c3dc5d157fa094",
+      "git_blob_sha1": "289f41989c3f71967635b27ba59ef0921e6849c0"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove_audit.zip",
+      "mode": "100644",
+      "bytes": 4518633,
+      "sha256": "37d8762fc9a1eec7bff5f8adc401c4707c12f22b31a966546c18375024a7f654",
+      "git_blob_sha1": "7b2b6a122b68e1eb7f01b86f852bebb704960223"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/prove_audit.zip.sha256",
+      "mode": "100644",
+      "bytes": 82,
+      "sha256": "3da420aeedee25c85e821fb4aca2554faf4e27c285ff7aeb54bcf71ccf3e9f12",
+      "git_blob_sha1": "b52e26481ccffe2cca53ca303aa0d1f0ca2d9561"
+    },
+    {
+      "path": "casardi_diagnostica/audit_agente/ripristina_laboratorio.py",
+      "mode": "100644",
+      "bytes": 2142,
+      "sha256": "0a49eb532aba548a18e05ae6bbf4382e6e2c5880bf4f897969fab54a5f67cf26",
+      "git_blob_sha1": "60a12e7ae4c516ed61f8f29d3c32a78aaf4ce5ed"
+    },
+    {
+      "path": "casardi_diagnostica/baseline-generic-iframe-probe.json",
+      "mode": "100644",
+      "bytes": 207,
+      "sha256": "b8f8a8232db40090603843fea97b8bf4aeddca281d66b431f69ee204538e7058",
+      "git_blob_sha1": "298eed25b622c144070403865cd518e403c4a3e1"
+    },
+    {
+      "path": "casardi_diagnostica/diagnostic-build.json",
+      "mode": "100644",
+      "bytes": 687,
+      "sha256": "289fa1b0323d4bd8be39e6bce0df70c84443dafef354730c30b7d59664977cf7",
+      "git_blob_sha1": "f19a0e7f932946cd6f52142aa5d4b7a3b65dff56"
+    },
+    {
+      "path": "casardi_diagnostica/diagnostic-iframe-checks.json",
+      "mode": "100644",
+      "bytes": 1226,
+      "sha256": "14b4aadf01c3550ea9b2573280c74f2c3fce16567a4230f3ea543021c678ffc0",
+      "git_blob_sha1": "fea594d0fb6fced7238229eb4ec8f5b84a97e786"
+    },
+    {
+      "path": "casardi_diagnostica/diagnostic-mobile-iframe.jpg",
+      "mode": "100644",
+      "bytes": 301352,
+      "sha256": "41dadace156b63d2dbc8460cd779f13ddedd9966072b1096f1ea20986a0c5892",
+      "git_blob_sha1": "6e463906efdab660d7e2a9717cf6644d36c179a3"
+    },
+    {
+      "path": "casardi_diagnostica/diagnostics-a1.js",
+      "mode": "100644",
+      "bytes": 4830,
+      "sha256": "736c81e3d89d76ec820a1ec775790646c1aeaa36429b8ca2b6556a3654331b36",
+      "git_blob_sha1": "a975f389d49bcfa88e47952fbf873f2ea142505c"
+    },
+    {
+      "path": "casardi_diagnostica/make_diagnostics.py",
+      "mode": "100644",
+      "bytes": 1857,
+      "sha256": "5a698f9d101dcdd9e3a6842ceba8b169267d505cc058eb0a07e32720f115ec6b",
+      "git_blob_sha1": "aca70834739ae0f1218334d1debc055ddfa3379e"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-A1-nes-preset0-gesture2-actual.png",
+      "mode": "100644",
+      "bytes": 193050,
+      "sha256": "f491ab86467443f0caed3014592ae1e81022b21d01c00b57ae4dae10b07b2088",
+      "git_blob_sha1": "f934d0587e7e25fac98b60e4168971fba8456302"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-A1-nes-preset0-gesture2-moving-ref.png",
+      "mode": "100644",
+      "bytes": 193000,
+      "sha256": "6914a21819fe0a73a3e6ab76637938d391ccbdc29dea280b1339cf8a79a8e822",
+      "git_blob_sha1": "e84020bcb71c900f0e6f783310296fb133f4fb29"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-A1-nes-preset0-gesture2-stationary-ref.png",
+      "mode": "100644",
+      "bytes": 192982,
+      "sha256": "f91071bb8c8a8c3d2dfee8cec14d6212161b5b0ee1fe35789b70bc9b9481c55b",
+      "git_blob_sha1": "3c2dc75f9b8e4107f3fee74c5cb8762e329db7eb"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-A1-photo-preset0-gesture2-actual.png",
+      "mode": "100644",
+      "bytes": 951931,
+      "sha256": "74f2d349a91466f49436da4b38aa9d3158d86bc0e4357b1ff9523bb08f33a66f",
+      "git_blob_sha1": "a7417e44d16b3569c7cb489dd1bce240fd5687b9"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-A1-photo-preset0-gesture2-moving-ref.png",
+      "mode": "100644",
+      "bytes": 952628,
+      "sha256": "c5eff02185c5c4906dc92ef3b0d79c45c01131d199cfa4f8aa2d2ad48aad1f64",
+      "git_blob_sha1": "ec791bcd97fd1a2e1bb4cb4550fcd88c4f1f322b"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-A1-photo-preset0-gesture2-stationary-ref.png",
+      "mode": "100644",
+      "bytes": 949951,
+      "sha256": "7e3a082fb1bb71b818994d5bea02244dd7753b6529d6390de9b0caf739ae8af7",
+      "git_blob_sha1": "c96d1116309eb9179e1b3bec4e523950b2660b55"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-Canvas-nes-preset0-gesture2-actual.png",
+      "mode": "100644",
+      "bytes": 475351,
+      "sha256": "9e1d75f8815c5d1a976d79a04c89cefb03df0a2a85200888f6c87a9824126f98",
+      "git_blob_sha1": "ed5bb286eeef60d55f19a549d0062e83012a3053"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-Canvas-nes-preset0-gesture2-moving-ref.png",
+      "mode": "100644",
+      "bytes": 475468,
+      "sha256": "42870bbae7136e43e8a77d09c80ef8efc19330ad1bb6970706bfec91363722c1",
+      "git_blob_sha1": "6682b7e87bb68b6bf92afae58a0e37524bc10e89"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-Canvas-nes-preset0-gesture2-stationary-ref.png",
+      "mode": "100644",
+      "bytes": 475898,
+      "sha256": "24440a1394f095b6077fe7597ae912cfd476e2654d52b91f23224490bc6aba81",
+      "git_blob_sha1": "edddbae76894a5039825282199cd99c94193cb78"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-Canvas-photo-preset0-gesture2-actual.png",
+      "mode": "100644",
+      "bytes": 951929,
+      "sha256": "cb9931dbb5ee776e6f8f1401797adbcd8255d686f11e3a2a71542ebc54ed2c15",
+      "git_blob_sha1": "c9e38744f69b45a3536ad4fb7f81682e289c4168"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-Canvas-photo-preset0-gesture2-moving-ref.png",
+      "mode": "100644",
+      "bytes": 952628,
+      "sha256": "c5eff02185c5c4906dc92ef3b0d79c45c01131d199cfa4f8aa2d2ad48aad1f64",
+      "git_blob_sha1": "ec791bcd97fd1a2e1bb4cb4550fcd88c4f1f322b"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-Canvas-photo-preset0-gesture2-stationary-ref.png",
+      "mode": "100644",
+      "bytes": 949951,
+      "sha256": "7e3a082fb1bb71b818994d5bea02244dd7753b6529d6390de9b0caf739ae8af7",
+      "git_blob_sha1": "c96d1116309eb9179e1b3bec4e523950b2660b55"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-production-nes-preset0-gesture2-actual.png",
+      "mode": "100644",
+      "bytes": 193050,
+      "sha256": "f491ab86467443f0caed3014592ae1e81022b21d01c00b57ae4dae10b07b2088",
+      "git_blob_sha1": "f934d0587e7e25fac98b60e4168971fba8456302"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-production-nes-preset0-gesture2-moving-ref.png",
+      "mode": "100644",
+      "bytes": 193000,
+      "sha256": "6914a21819fe0a73a3e6ab76637938d391ccbdc29dea280b1339cf8a79a8e822",
+      "git_blob_sha1": "e84020bcb71c900f0e6f783310296fb133f4fb29"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-production-nes-preset0-gesture2-stationary-ref.png",
+      "mode": "100644",
+      "bytes": 192982,
+      "sha256": "f91071bb8c8a8c3d2dfee8cec14d6212161b5b0ee1fe35789b70bc9b9481c55b",
+      "git_blob_sha1": "3c2dc75f9b8e4107f3fee74c5cb8762e329db7eb"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-production-photo-preset0-gesture2-actual.png",
+      "mode": "100644",
+      "bytes": 951931,
+      "sha256": "74f2d349a91466f49436da4b38aa9d3158d86bc0e4357b1ff9523bb08f33a66f",
+      "git_blob_sha1": "a7417e44d16b3569c7cb489dd1bce240fd5687b9"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-production-photo-preset0-gesture2-moving-ref.png",
+      "mode": "100644",
+      "bytes": 952628,
+      "sha256": "c5eff02185c5c4906dc92ef3b0d79c45c01131d199cfa4f8aa2d2ad48aad1f64",
+      "git_blob_sha1": "ec791bcd97fd1a2e1bb4cb4550fcd88c4f1f322b"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-captures/headless-shell-production-photo-preset0-gesture2-stationary-ref.png",
+      "mode": "100644",
+      "bytes": 949951,
+      "sha256": "7e3a082fb1bb71b818994d5bea02244dd7753b6529d6390de9b0caf739ae8af7",
+      "git_blob_sha1": "c96d1116309eb9179e1b3bec4e523950b2660b55"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-smoke-captures/headless-shell-production-nes-preset0-gesture2-actual.png",
+      "mode": "100644",
+      "bytes": 193050,
+      "sha256": "f491ab86467443f0caed3014592ae1e81022b21d01c00b57ae4dae10b07b2088",
+      "git_blob_sha1": "f934d0587e7e25fac98b60e4168971fba8456302"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-smoke-captures/headless-shell-production-nes-preset0-gesture2-moving-ref.png",
+      "mode": "100644",
+      "bytes": 193000,
+      "sha256": "6914a21819fe0a73a3e6ab76637938d391ccbdc29dea280b1339cf8a79a8e822",
+      "git_blob_sha1": "e84020bcb71c900f0e6f783310296fb133f4fb29"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-smoke-captures/headless-shell-production-nes-preset0-gesture2-stationary-ref.png",
+      "mode": "100644",
+      "bytes": 192982,
+      "sha256": "f91071bb8c8a8c3d2dfee8cec14d6212161b5b0ee1fe35789b70bc9b9481c55b",
+      "git_blob_sha1": "3c2dc75f9b8e4107f3fee74c5cb8762e329db7eb"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-smoke-captures/headless-shell-production-photo-preset0-gesture2-actual.png",
+      "mode": "100644",
+      "bytes": 951931,
+      "sha256": "74f2d349a91466f49436da4b38aa9d3158d86bc0e4357b1ff9523bb08f33a66f",
+      "git_blob_sha1": "a7417e44d16b3569c7cb489dd1bce240fd5687b9"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-smoke-captures/headless-shell-production-photo-preset0-gesture2-moving-ref.png",
+      "mode": "100644",
+      "bytes": 952628,
+      "sha256": "c5eff02185c5c4906dc92ef3b0d79c45c01131d199cfa4f8aa2d2ad48aad1f64",
+      "git_blob_sha1": "ec791bcd97fd1a2e1bb4cb4550fcd88c4f1f322b"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/compositor-gesture-smoke-captures/headless-shell-production-photo-preset0-gesture2-stationary-ref.png",
+      "mode": "100644",
+      "bytes": 949951,
+      "sha256": "7e3a082fb1bb71b818994d5bea02244dd7753b6529d6390de9b0caf739ae8af7",
+      "git_blob_sha1": "c96d1116309eb9179e1b3bec4e523950b2660b55"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/held-contact/held-contact-A1-nes-sample.png",
+      "mode": "100644",
+      "bytes": 121558,
+      "sha256": "587fbdc66b2acdb980d98d450e50f620f9a9cd55a2ab20870cb5e044ff0b11b4",
+      "git_blob_sha1": "a2cba14b9c27a4ba7bf57245a5b4489ba38e61f4"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/held-contact/held-contact-A1-photo-sample.png",
+      "mode": "100644",
+      "bytes": 222262,
+      "sha256": "cf71e722ca84a4ff1d6d812c93bf88399fd227682d88416d38333bcdcb5cb96e",
+      "git_blob_sha1": "dbdb0774d53b2591ed5208706eb6bd072fce4d9f"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/held-contact/held-contact-production-nes-sample.png",
+      "mode": "100644",
+      "bytes": 112156,
+      "sha256": "858fd34ed0a2cab6d569db251b8db77fc523e838ea17f9de7f9640c2aa926b87",
+      "git_blob_sha1": "b47a40db580841df2c3cf4ddb203cd44b6cb16c8"
+    },
+    {
+      "path": "casardi_diagnostica/screenshot_laboratorio/held-contact/held-contact-production-photo-sample.png",
+      "mode": "100644",
+      "bytes": 212680,
+      "sha256": "0ab1b093f48c086ea493771d31b29dc295eb78476ad53774fb06981db6c5fd57",
+      "git_blob_sha1": "407c262d7aaf06d530f769bd15c8642d023f2b5f"
+    },
+    {
+      "path": "casardi_diagnostica/test_iframe.py",
+      "mode": "100644",
+      "bytes": 4273,
+      "sha256": "05a1eaad92dbeb48dda3783eaa87bea9c7c3397a4229172f22d80bb0b5520972",
+      "git_blob_sha1": "4117d372c229dbb645d134108caf148ba5a539c6"
+    },
+    {
+      "path": "esperimenti/README.md",
+      "mode": "100644",
+      "bytes": 898,
+      "sha256": "07090dd2797368741346d8e628d44e23245d3310da59b44ba689336119ac3308",
+      "git_blob_sha1": "2fa501a293ff6096740fb048534aaf9b06fae901"
+    },
+    {
+      "path": "esperimenti/canvas/Cartolina_Casardi_CANVAS_SPERIMENTALE.html",
+      "mode": "100644",
+      "bytes": 24822670,
+      "sha256": "a01ca4759b499979e8a9b0591f6b4a007fb11654d874053e0444be3c7b33245e",
+      "git_blob_sha1": "38e005fd4ecf386c83216dbe643f4ae188ae8e6d"
+    },
+    {
+      "path": "esperimenti/canvas/browser/app.js",
+      "mode": "100644",
+      "bytes": 25166,
+      "sha256": "2088386c02711a49bf513a6644bd29e1f4daf90dbb48fcc6ebe461b8f0910fa5",
+      "git_blob_sha1": "5cee5386df42e0fa0702f97fca4a2d8b22cd93a5"
+    },
+    {
+      "path": "esperimenti/canvas/browser/interface.html",
+      "mode": "100644",
+      "bytes": 21297,
+      "sha256": "dc6a2f5ec2609e61bf9b92953a6d50d58272c4c9f8c47628321f1286b00c731a",
+      "git_blob_sha1": "42d22540432ca1e35793d10f380ac9a79ab65cfc"
+    },
+    {
+      "path": "esperimenti/canvas/browser/layout-editor.css",
+      "mode": "100644",
+      "bytes": 7992,
+      "sha256": "27ed7f000183641a496fb01de281678351380c26953f74f5c35dc0696ab407eb",
+      "git_blob_sha1": "ff78be065434296acd0731df5ddbbc8758100d0b"
+    },
+    {
+      "path": "esperimenti/canvas/browser/layout-editor.js",
+      "mode": "100644",
+      "bytes": 19561,
+      "sha256": "67e8742c9e4a3640c1e1ba9a6dd760a2c1a597a24d199c634b06075908303123",
+      "git_blob_sha1": "2ce874fc14e9bb8aa4507a0a1d7f2e9d04f29b63"
+    },
+    {
+      "path": "esperimenti/canvas/canvas-preview-experiment.patch",
+      "mode": "100644",
+      "bytes": 20995,
+      "sha256": "bff9616d919593d1387b8ddca4e55ccb874446d4d409661ac55a0bb90a9689a7",
+      "git_blob_sha1": "bd747098a388cc17d02a49f09c6ba04b0c875eb5"
+    },
+    {
+      "path": "esperimenti/canvas/experiment-build.json",
+      "mode": "100644",
+      "bytes": 512,
+      "sha256": "ff4dae10d8970c1a1efe92737d475926e4cd0ef9ab6426d4ba26f5dfb2a81eca",
+      "git_blob_sha1": "885df8c7339735a8b3adca42b15b81be360b652f"
+    },
+    {
+      "path": "esperimenti/http/kiosk-ownership-candidate.js",
+      "mode": "100644",
+      "bytes": 29776,
+      "sha256": "404092dba58d07995120de7fe76b2fc6fad40f2ee9dab48ede72fc21f0d0ae10",
+      "git_blob_sha1": "59e5450bd0ddfc4b4a25347524b5b1a2c1ff85b4"
+    },
+    {
+      "path": "esperimenti/http/kiosk-ownership-candidate.patch",
+      "mode": "100644",
+      "bytes": 829,
+      "sha256": "49483d5dde01e804d4e5eaa33d3a0470b42306759517b9d73b2ee4caaa8a0a8c",
+      "git_blob_sha1": "3d765c66a35460d4d88370faa1f92907be123f51"
+    }
+  ]
+}

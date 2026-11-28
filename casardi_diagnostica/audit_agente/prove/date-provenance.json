@@ -1,0 +1,224 @@
+{
+  "scope": "Only current cache-audit artifacts. Historical production reports and previous A1 reports are not redated.",
+  "entries": [
+    {
+      "file": "audit-environment.json",
+      "original_sha256": "cf54c7ae0b8c48eb31db7efc59d4e61744a51ac1e44534d4d4484f1fd5ac76ee",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:41:28.757639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "browser-geometry-envelope-results.json",
+      "original_sha256": "cb04534b8a718d0948ac1373cc084fb1d5f386b1da5b28f1fb8fad373df2c398",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:20:51.069639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "original_hardcoded_date": "2026-11-27",
+      "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+    },
+    {
+      "file": "canvas-embedding-results.json",
+      "original_sha256": "d2bb6d284a7425d534e0cc08dc22c69d7643e406b19b7c2c7676c0f164276f54",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:19:30.641639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "original_hardcoded_date": "2026-11-27",
+      "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+    },
+    {
+      "file": "canvas-pixel-results.json",
+      "original_sha256": "06c7a15e67e1b2f312ae9e02827002f70a110852799b4e0a96d6806b38cac3b5",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:34:03.113639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "original_hardcoded_date": "2026-11-27",
+      "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+    },
+    {
+      "file": "canvas-race-qa-first-harness-failure.json",
+      "original_sha256": "712d79be248ca37191e481e2093dc785fe27706d6c99c312ec2e479db926f6cf",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:21:41.685639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "original_hardcoded_date": "2026-11-27",
+      "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified.",
+      "adjudication": "Initial QA deliberately persistent injected toast/footer intercepted Export; preserved FAIL. Corrected harness actually rerun; see canvas-race-qa.json."
+    },
+    {
+      "file": "canvas-race-qa.json",
+      "original_sha256": "d7f54c83c3ec1a241f27b45dcbdc63b0553905e3be1ffc481fabaae396426a14",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:22:34.733639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "original_hardcoded_date": "2026-11-27",
+      "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+    },
+    {
+      "file": "canvas-resource-first-incomplete-tracking.json",
+      "original_sha256": "e3853dd69ceb5c0dbf9afa8bfeb945db672fae9fb1f637469ee9df3bcd2f0473",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:40:00.773639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "adjudication": "Initial counter omitted parser-created main Canvas; undercounts area. Retained for provenance; use corrected canvas-resource-results.json, actually rerun."
+    },
+    {
+      "file": "canvas-resource-results.json",
+      "original_sha256": "cd65178366c170f1427932941a203e2b72ae4ba1e87e61746a9d26ce2108d971",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:40:42.489640+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "canvas-timing-probe.json",
+      "original_sha256": "e13e2f51ff27442fab01392fad93b2435f919bc2cb50d5ed5a04d3f88c3e963e",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:11:26.245639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "compositor-adjudication.json",
+      "original_sha256": "d50c5605c6502f1c6a7e4f741c0b6241964f00d1211a0656802df9f5614805d2",
+      "report_file_written_at_workspace_utc": "2026-11-28T07:12:08.461639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "compositor-gesture-first-crash.json",
+      "original_sha256": "e126f837bcf4eaf3b259a412055c0654c36519dd09b3a14fe1ab03e9d583b08d",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:53:06.801639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "adjudication": "First smoke passed three photo visual checks, then the next test document crashed. Cause not established. Retained FAIL; later direct HTTP serving and per-condition browser isolation were actually rerun, not a physical-device root-cause finding."
+    },
+    {
+      "file": "compositor-gesture-results.json",
+      "original_sha256": "7326d2f259ad60ef805500ac46653af813d9d892b5a7574e75b923e575bc0a70",
+      "report_file_written_at_workspace_utc": "2026-11-28T07:06:51.201639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "adjudication": "Full run FAIL preserved: 72/72 completed headless visual assertions succeeded; headed SwiftShader page crashed during setup before any gesture. See separate PARTIAL adjudication; no GPU/device PASS inferred."
+    },
+    {
+      "file": "compositor-gesture-smoke-results.json",
+      "original_sha256": "ef72dec6d2d3096e45134a0b8eb54c35ddc27deae406341e1175711c6f3a8c01",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:54:53.709639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "adjudication": "Actually executed PASS smoke: production only, preset zero, two styles, six headless visual checks; not the full four-preset/three-variant/two-engine scope in its generic scope string."
+    },
+    {
+      "file": "contact-probe.json",
+      "original_sha256": "30285608dc76178fa30abef23978cf3dd2012daf69ace484dc798b0e7bd926e7",
+      "report_file_written_at_workspace_utc": "2026-11-28T05:54:39.393639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "final-integrity.json",
+      "original_sha256": "3d3b496feaace57b4426c3c01b5648304f24faa66e1f52d105ece94698c19012",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:35:40.753639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "original_hardcoded_date": "2026-11-27",
+      "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+    },
+    {
+      "file": "focus-probe.json",
+      "original_sha256": "a5e61d6b1bfd26423291bcbc326d061be22c5f1300fea7466db8affa25d3df00",
+      "report_file_written_at_workspace_utc": "2026-11-28T05:48:30.953640+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "font-integrity.json",
+      "original_sha256": "b56ed2247e5d7e9f056ee516a995317f6ab05fca8480b1109afbf2e007a6da1a",
+      "report_file_written_at_workspace_utc": "2026-11-28T07:17:12.869639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "geometry-envelope-input.json",
+      "original_sha256": "81cefb6a678b229e958d879b323014435d67b406e4a760a591f22feca9539c0a",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:20:49.293639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "geometry-envelope-results.json",
+      "original_sha256": "49dfdbf9ab0c9fa8ffe6c251cd4bb3162ffba49b9b7d3a7620f677c26f23df67",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:15:50.673640+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "original_hardcoded_date": "2026-11-27",
+      "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+    },
+    {
+      "file": "go-toolchain.json",
+      "original_sha256": "f3ed73150f4d7c0ccb484cc5b9b4d03d59c3cf8104ec57f14726fcf292aca18f",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:28:22.345639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "held-contact-ownership-results.json",
+      "original_sha256": "ab3edd98942ac11b71e7b431facdaafb674947713bc065cf3edd19f26513cb4a",
+      "report_file_written_at_workspace_utc": "2026-11-28T07:14:08.585639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "host-version-provenance.json",
+      "original_sha256": "d820687b3fe7c1b4fca32a7d6f10055fcf544fd99054a80029624c5a425c53aa",
+      "report_file_written_at_workspace_utc": "2026-11-28T07:06:08.765640+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "image-probe.json",
+      "original_sha256": "dbaa92ca5bec86f6b4a4ecf670c47dbc9d218556c526e1dfc060647b03688c3a",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:06:01.553639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "kiosk-ownership-results.json",
+      "original_sha256": "0e572050e7defb9c664406c8c479c67401a0f0614a37ab96cd97aa8355349b55",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:32:25.021639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "original_hardcoded_date": "2026-11-27",
+      "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+    },
+    {
+      "file": "native-embedding-edges.json",
+      "original_sha256": "9896d287adfea91a6b0bbee33ffe02a80df70ab81e1245dd19bbc434e2e9c4ee",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:31:45.313639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "original_hardcoded_date": "2026-11-27",
+      "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+    },
+    {
+      "file": "pristine-embedding-results.json",
+      "original_sha256": "8dede0c312aa6998804d736ec69123f275551b42ce9805bbae48f1d02831b860",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:04:12.441639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "original_hardcoded_date": "2026-11-27",
+      "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+    },
+    {
+      "file": "source-check.json",
+      "original_sha256": "cb32e8987b516ecdea9878bfdb08e65828992e97070beeb577a9b13c07387236",
+      "report_file_written_at_workspace_utc": "2026-11-28T06:01:58.509640+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun.",
+      "original_hardcoded_date": "2026-11-27",
+      "date_meaning": "Static calendar label, not an execution timestamp. Preserved without silently replacing it with the workspace filesystem date. Workspace-clock timestamps are separately qualified."
+    },
+    {
+      "file": "support-review.json",
+      "original_sha256": "dc818152709d0016b986cc098b5789fe4c0433790fed23188a686ab6fafd45d8",
+      "report_file_written_at_workspace_utc": "2026-11-28T07:06:08.761639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "timing-contact-ownership.json",
+      "original_sha256": "36c48570c6f355a18b8c1abb13773479ab4d2f186c79488efee4c504d5765acc",
+      "report_file_written_at_workspace_utc": "2026-11-28T07:08:30.669639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "timing-probe.json",
+      "original_sha256": "5bff3d56808ecf69b35e5a591aae4e056ad184b6dc20c47b65bd9e8709e6309d",
+      "report_file_written_at_workspace_utc": "2026-11-28T05:52:17.109639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "vendor-data-integrity.json",
+      "original_sha256": "69b5cc4a311dbdf1078e02f59737809252531539fb5e586e28157833f54b9df0",
+      "report_file_written_at_workspace_utc": "2026-11-28T07:17:12.873639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    },
+    {
+      "file": "whole-release-integrity.json",
+      "original_sha256": "30db3f18406792881c0d9e7ca8841a70464c84ed3a9a9b7b1f0ad28fa24a9991",
+      "report_file_written_at_workspace_utc": "2026-11-28T07:17:12.313639+00:00",
+      "execution_time_caveat": "Filesystem write time on the workspace clock, not the user local date or an independently recorded execution start. Annotation is not a rerun."
+    }
+  ]
+}
