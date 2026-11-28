@@ -3,6 +3,181 @@
  * non l'intera scena: ingrandirla la fa uscire dalla cornice. */
 'use strict';
 
+const CLOAK_COUNT = 12;
+const CLOAK_STEP = 170;
+
+function cloakPurple(r, g, b, a) {
+  return a && b > g + 20 && r > g + 8 && b > 45 && b < 190 && g < 95 && r < 170;
+}
+
+// Dodici fotogrammi del mantello, calcolati sui pixel già nel gioco.
+// Viso, mani, veste e piedi non vengono ridisegnati.
+function buildCloakCycle(image) {
+  const w = image.width;
+  const h = image.height;
+  const sample = document.createElement('canvas');
+  sample.width = w;
+  sample.height = h;
+  const sampleContext = sample.getContext('2d', { willReadFrequently: true });
+  sampleContext.imageSmoothingEnabled = false;
+  sampleContext.drawImage(image, 0, 0);
+  const source = sampleContext.getImageData(0, 0, w, h).data;
+  const purple = new Uint8Array(w * h);
+  for (let i = 0; i < w * h; i++) {
+    const offset = i * 4;
+    if (cloakPurple(source[offset], source[offset + 1], source[offset + 2], source[offset + 3])) purple[i] = 1;
+  }
+  const seen = new Uint8Array(w * h);
+  const panels = [];
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      const start = y * w + x;
+      if (seen[start] || !purple[start]) continue;
+      const cells = [];
+      const stack = [start];
+      seen[start] = 1;
+      let minX = x;
+      let maxX = x;
+      let minY = y;
+      let maxY = y;
+      while (stack.length) {
+        const index = stack.pop();
+        const cx = index % w;
+        const cy = (index / w) | 0;
+        cells.push(cx, cy);
+        if (cx < minX) minX = cx;
+        if (cx > maxX) maxX = cx;
+        if (cy < minY) minY = cy;
+        if (cy > maxY) maxY = cy;
+        if (cx > 0 && !seen[index - 1] && purple[index - 1]) { seen[index - 1] = 1; stack.push(index - 1); }
+        if (cx + 1 < w && !seen[index + 1] && purple[index + 1]) { seen[index + 1] = 1; stack.push(index + 1); }
+        if (cy > 0 && !seen[index - w] && purple[index - w]) { seen[index - w] = 1; stack.push(index - w); }
+        if (cy + 1 < h && !seen[index + w] && purple[index + w]) { seen[index + w] = 1; stack.push(index + w); }
+      }
+      if (minY >= 160 && maxY - minY >= 54 && maxX - minX >= 22 && cells.length >= 400) {
+        panels.push({ cells, minX, maxX, minY, maxY, right: minX + maxX > w });
+      }
+    }
+  }
+  if (!panels.length) return null;
+  const cloak = new Uint8Array(w * h);
+  panels.forEach((panel) => {
+    for (let i = 0; i < panel.cells.length; i += 2) cloak[panel.cells[i + 1] * w + panel.cells[i]] = 1;
+  });
+  const behind = new Uint8ClampedArray(source);
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      if (!cloak[y * w + x]) continue;
+      const toward = x < w / 2 ? 1 : -1;
+      let found = -1;
+      for (let step = 1; step < 32 && found < 0; step++) {
+        const nx = x + toward * step;
+        if (nx < 0 || nx >= w) break;
+        if (cloak[y * w + nx]) continue;
+        const offset = (y * w + nx) * 4;
+        if (source[offset + 3]) found = offset;
+      }
+      const dst = (y * w + x) * 4;
+      if (found < 0) {
+        behind[dst] = 236; behind[dst + 1] = 220; behind[dst + 2] = 176; behind[dst + 3] = 255;
+      } else {
+        behind[dst] = source[found];
+        behind[dst + 1] = source[found + 1];
+        behind[dst + 2] = source[found + 2];
+        behind[dst + 3] = source[found + 3];
+      }
+    }
+  }
+  const frames = [];
+  for (let phase = 0; phase < CLOAK_COUNT; phase++) {
+    const out = new Uint8ClampedArray(behind);
+    const angle = Math.PI * 2 * phase / CLOAK_COUNT;
+    const sway = Math.sin(angle);
+    const curl = Math.sin(angle * 2);
+    panels.forEach((panel) => {
+      const top = panel.minY;
+      const bot = panel.maxY;
+      const span = Math.max(1, bot - top);
+      const amp = panel.maxX - panel.minX > 28 ? 6 : 4;
+      const rows = new Map();
+      for (let i = 0; i < panel.cells.length; i += 2) {
+        const cx = panel.cells[i];
+        const cy = panel.cells[i + 1];
+        if (!rows.has(cy)) rows.set(cy, []);
+        rows.get(cy).push(cx);
+      }
+      let previous = 0;
+      const shifts = new Int16Array(h);
+      for (let y = top; y <= bot; y++) {
+        const t = (y - top) / span;
+        const fall = t < 0.12 ? 0 : ((t - 0.12) / 0.88) ** 1.4;
+        let desired = Math.round(sway * amp * fall + curl * fall * (t > 0.62 ? 1.5 : 0.4));
+        desired = Math.max(previous - 1, Math.min(previous + 1, desired));
+        shifts[y] = desired;
+        previous = desired;
+      }
+      rows.forEach((xs, y) => {
+        const dx = shifts[y];
+        const dy = y > bot - 8 && Math.abs(sway) > 0.65 ? -1 : 0;
+        const ny = y + dy;
+        if (ny < 0 || ny >= h) return;
+        xs.sort((a, b) => a - b);
+        xs.forEach((cx) => {
+          const nx = cx + dx;
+          if (nx < 0 || nx >= w) return;
+          const from = (y * w + cx) * 4;
+          const to = (ny * w + nx) * 4;
+          out[to] = source[from];
+          out[to + 1] = source[from + 1];
+          out[to + 2] = source[from + 2];
+          out[to + 3] = source[from + 3];
+        });
+        let extra = 0;
+        if (y > top + span * 0.55) {
+          extra = sway > 0.35 ? 1 : sway < -0.35 ? -1 : 0;
+          if (panel.right && curl > 0.4 && y > bot - 14) extra += 1;
+        }
+        if (extra > 0 && xs.length) {
+          const edge = panel.right ? xs[xs.length - 1] : xs[0];
+          const sign = panel.right ? 1 : -1;
+          const from = (y * w + edge) * 4;
+          for (let k = 1; k <= extra; k++) {
+            const nx = edge + dx + sign * k;
+            if (nx < 0 || nx >= w) continue;
+            const to = (ny * w + nx) * 4;
+            out[to] = source[from];
+            out[to + 1] = source[from + 1];
+            out[to + 2] = source[from + 2];
+            out[to + 3] = source[from + 3];
+          }
+        }
+      });
+    });
+    for (let y = 0; y < h; y++) {
+      for (let x = 1; x < w - 1; x++) {
+        const offset = (y * w + x) * 4;
+        if (cloakPurple(out[offset], out[offset + 1], out[offset + 2], out[offset + 3])) continue;
+        const left = offset - 4;
+        const right = offset + 4;
+        if (cloakPurple(out[left], out[left + 1], out[left + 2], out[left + 3]) && cloakPurple(out[right], out[right + 1], out[right + 2], out[right + 3])) {
+          out[offset] = out[left];
+          out[offset + 1] = out[left + 1];
+          out[offset + 2] = out[left + 2];
+          out[offset + 3] = out[left + 3];
+        }
+      }
+    }
+    const frame = document.createElement('canvas');
+    frame.width = w;
+    frame.height = h;
+    const frameContext = frame.getContext('2d');
+    frameContext.imageSmoothingEnabled = false;
+    frameContext.putImageData(new ImageData(out, w, h), 0, 0);
+    frames.push(frame);
+  }
+  return frames;
+}
+
 const PIZIA_FRAMES = {
   riposo: 'assets/pizia/riposo.png',
   battito: 'assets/pizia/battito.png',
@@ -25,6 +200,7 @@ class PiziaSprite {
     this.lastKey = '';
     this.running = true;
     this.images = {};
+    this.cloak = {};
     this.ready = false;
     canvas.width = 160;
     canvas.height = 326;
@@ -94,6 +270,7 @@ class PiziaSprite {
       const image = new Image();
       image.onload = () => {
         this.images[name] = image;
+        try { this.cloak[name] = buildCloakCycle(image); } catch (_) { this.cloak[name] = null; }
         if (--left === 0) {
           this.ready = true;
           this.render(performance.now(), true);
@@ -147,18 +324,26 @@ class PiziaSprite {
     };
   }
 
+  cloakPhase(time) {
+    if (this.reducedMotion) return 0;
+    return Math.floor(time / CLOAK_STEP) % CLOAK_COUNT;
+  }
+
   render(time, force = false) {
     const choice = this.choose(time);
-    const key = [this.state, this.mouth, choice.name, this.ready].join(':');
+    const phase = this.cloakPhase(time);
+    const key = [this.state, this.mouth, choice.name, phase, this.ready].join(':');
     if (key === this.lastKey && !force) return;
     this.lastKey = key;
     this.canvas.dataset.mouth = String(this.mouth);
     this.canvas.dataset.eyes = choice.eyes;
     this.canvas.dataset.frame = choice.name;
+    this.canvas.dataset.cloak = String(phase);
     const ctx = this.context;
     ctx.imageSmoothingEnabled = false;
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    const image = this.images[choice.name] || this.images.riposo;
+    const cycle = this.cloak[choice.name];
+    const image = (cycle && cycle[phase]) || this.images[choice.name] || this.images.riposo;
     if (!image) return;
     ctx.drawImage(image, 0, 0);
   }
